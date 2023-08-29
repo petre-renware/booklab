@@ -1,4 +1,4 @@
-
+**BookLab by RENware Software Systems**
 
 [TOC]
 
@@ -9,15 +9,17 @@
 - with (F) are marked those changes that are features in order to be copied in a RELNOTE file
 - #NOTE sote publishing on `arint.renware.eu` from `publishing` branch
 - `<PROJECT ROOT>/doc_src/` is the default starting location in a file path (if not clear from context)
+- `<APP_ROOT>/` is the application root directory, as default `booklab_app/`
 
 
 
-## 0.1 System Design and Specs
+## 0.1 First System Design
 
-### 0.1.0 #TODO-wip...
+### 0.1.0 System Overview (#TODO-wip)
 
 * wip...
 
+* ... 230829piu_a update `810-DSGN-130.02-Overview.md` with a very structural HLD Architecture
 * 230829piu_b uploaded a logo picture
 * 230829piu_a initialized directory for application `booklab_app/` as empty, just to lock application code-name
 
