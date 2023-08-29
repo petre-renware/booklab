@@ -23,7 +23,8 @@
 
 * wip...
 
-* 230829piu_h updated `...System_landscape.md` ref _Introducere_ by briefly re-iterating the general landscape from `System_overview.md`
+* 230829piu_i make navigation entry for `810-DSGN-810.02-System_Landscape.md`
+* 230829piu_h updated `810-DSGN-810.02-System_Landscape.md` ref _Introducere_ by briefly re-iterating the general landscape from `System_overview.md`
 * 230829piu_g created and initialized `810-DSGN-810.02-System_Landscape.md`
 
 

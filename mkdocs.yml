@@ -8,12 +8,13 @@ nav:
     - About: index.md
     - BookLab demo: wip.md #NOTE this will need to point to ...where application start...
     - Help:
-        - Overview: help/810-DSGN-130.02-Overview.md
-        - BookLab Manual (PDF): pdfs/print_page.html/print_page.pdf
+        - Vedere de ansamblu: help/810-DSGN-130.02-Overview.md
+        - Arhietctura: help/810-DSGN-810.02-System_Landscape.md
+        - Manual BookLab (PDF): pdfs/print_page.html/print_page.pdf
     - RENware support:
-        - Support: https://www.renware.eu/support.html
+        - Suport: https://www.renware.eu/support.html
         - Contact: https://www.renware.eu/contact.html
-        - How to buy: https://www.renware.eu/resources.html#how-to-buy-from-renware
+        - Cum cumpar: https://www.renware.eu/resources.html#how-to-buy-from-renware
 
 
 
