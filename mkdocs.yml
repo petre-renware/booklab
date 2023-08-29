@@ -1,4 +1,4 @@
-site_name: ALPHAREN CORE-Integrator
+site_name: BookLab
 site_author: 'Petre Iordanescu, RENware Software Systems, petre.iordanescu@gmail.com'
 copyright: 'Copyright (c) RENware Software Systems'
 
@@ -7,6 +7,7 @@ copyright: 'Copyright (c) RENware Software Systems'
 nav:
     - System overview:
         - About: index.md
+        - BookLab Manual (PDF): pdfs/print_page.html/print_page.pdf
     - Demo system: wip.md
     - RENware support:
         - Support: https://www.renware.eu/support.html
@@ -72,7 +73,7 @@ plugins:
     # - pdf-export #NOTE DO NOT USE this as does not render mermaid in PDF docs
     - print-site: #NOTE_IMPORTANT_#NOTE put `print-site` plug in BEFORE `pdf-with-js` in order to works the workaround wit a fake `print_page.md` that will determine generation of 'print_page.pdf' as any other page generated pdf by `pdf-with-js`; ingnore warning ` [mkdocs-print-site] 'print-site' should be defined as the *last* plugin,to ensure...`
         # add_to_navigation: true #NOTE not needed here
-        # print_page_title: 'Complete ARIntegrator Manual' #NOTE not needed here
+        # print_page_title: 'Complete BookLab Manual' #NOTE not needed here
         add_full_urls: true
         add_table_of_contents: true
     - pdf-with-js:
