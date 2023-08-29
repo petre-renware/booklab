@@ -16,10 +16,14 @@
 ## 0.1 First System Design
 
 
-### 0.1.1 System Landscape and Structure (#TODO-wip)
-
-* tbd... the directory structure for new app
 * tbd... rules how to deploy **BookLab** app in order to be used by client (what dir to copy and where - app dire, docs ref help dir...)
+
+
+
+### 0.1.1 System Landscape HLD (#TODO-wip)
+
+* tbd... the directory structure for new module: 2 dirs, UI and srv side. Just enum them and will mk doc `Sys_Landscape_DLD` for each
+* tbd... drop prefix 810-DSGN - is in name as 810 and for other dlvbs (chk for adma, euma but if need prefix them with 880...)
 
 * wip...
 
