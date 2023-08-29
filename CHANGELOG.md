@@ -18,6 +18,8 @@
 
 * wip...
 
+* 230829piu_a initialized directory for application `booklab_app/` as empty, just to lock application code-name
+
 
 
 
