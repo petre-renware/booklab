@@ -5,11 +5,11 @@ copyright: 'Copyright (c) RENware Software Systems'
 
 
 nav:
-    - System overview:
-        - About: index.md
-        - Overview: 810-DSGN-130.02-Overview.md
+    - About: index.md
+    - BookLab demo: wip.md #NOTE this will need to point to ...where application start...
+    - Help:
+        - Overview: help/810-DSGN-130.02-Overview.md
         - BookLab Manual (PDF): pdfs/print_page.html/print_page.pdf
-    - Demo system: wip.md
     - RENware support:
         - Support: https://www.renware.eu/support.html
         - Contact: https://www.renware.eu/contact.html
