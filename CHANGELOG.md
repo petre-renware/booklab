@@ -23,7 +23,7 @@
 
 * wip...
 
-* ... 230829piu_g created and initialized `810-DSGN-810.02-System_Landscape.md`
+* 230829piu_g created and initialized `810-DSGN-810.02-System_Landscape.md`
 
 
 
