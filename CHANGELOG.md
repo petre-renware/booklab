@@ -15,6 +15,12 @@
 
 ## 0.1 First System Design
 
+### 0.1.1 Application Structure (#NOTE-incoming)
+
+* ...
+
+
+
 ### 0.1.0 System Overview (#TODO-wip)
 
 * tbd... review si release ptr sys overview 
