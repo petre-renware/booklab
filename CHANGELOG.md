@@ -21,7 +21,9 @@
 * tbd... the directory structure for new app
 * tbd... rules how to deploy **BookLab** app in order to be used by client (what dir to copy and where - app dire, docs ref help dir...)
 
-* wip... (last used 230829piu_f)
+* wip...
+
+* ... 230829piu_g created and initialized `810-DSGN-810.02-System_Landscape.md`
 
 
 
