@@ -17,7 +17,15 @@
 
 ### 0.1.1 Application Structure (#TODO-wip)
 
-* ...
+* tbd... the directory structure for new app
+* tbd... rules how to deploy **BookLab** app in order to be used by client (what dir to copy and where - app dire, docs ref help dir...)
+
+
+* wip...
+
+
+
+
 
 
 
