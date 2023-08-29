@@ -21,7 +21,7 @@
 * tbd... the directory structure for new app
 * tbd... rules how to deploy **BookLab** app in order to be used by client (what dir to copy and where - app dire, docs ref help dir...)
 
-* wip...
+* wip... (last used 230829piu_f)
 
 
 
