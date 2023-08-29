@@ -120,7 +120,7 @@ plugins:
 #NOTE provide material theme
 theme:
     # language: en #NOTE FUTURE FEATURE - should first have a translation...
-    logo: pictures/arint_logo.png
+    logo: pictures/booklab_logo.png
     name: material
     features:
         - navigation.tabs # left navigation side bar, all level 1 will be shown as top navigation bar
