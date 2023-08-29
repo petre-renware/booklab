@@ -17,9 +17,9 @@
 
 ### 0.1.0 System Overview (#TODO-wip)
 
-* wip...
+* tbd... review si release ptr sys overview 
 
-* ... 230829piu_a update `810-DSGN-130.02-Overview.md` with a very structural HLD Architecture
+* 230829piu_a update `810-DSGN-130.02-Overview.md` with a very structural HLD Architecture
 * 230829piu_b uploaded a logo picture
 * 230829piu_a initialized directory for application `booklab_app/` as empty, just to lock application code-name
 
