@@ -26,19 +26,3 @@ Ce poti face mai departe:
 
 
 
-
-
-
--#FIXME THESE SHOULD BE DROPPED and keep only in product README
-* p/n: `000-0163`
-* start date: 2023-Aug-29
-
-
--#FIXME THESE SHOULD BE DROPPED after a quick review
-[Demo system](http://booklab.renware.eu)<br>
-[Vedere de ansamblu](help/130.02-Overview.md)
-
-
-
-
-
