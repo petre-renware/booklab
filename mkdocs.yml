@@ -5,7 +5,13 @@ copyright: 'Copyright (c) RENware Software Systems'
 
 
 nav:
-    - BookLab: index.md
+    - BookLab:
+        - Acasa: index.md
+        - Carte noua: http://booklab.renware.eu/newb
+        - Editare materiale: http://booklab.renware.eu/edtm
+        - Sectiuni carte: http://booklab.renware.eu/orgm
+        - Vizualizare carte: ttp://booklab.renware.eu/prvb
+        - Asamblare carte: http://booklab.renware.eu/dplb
     - Help:
         - Manuale de utilizare: help/880.30-EUMA_catalog.md
         - Manuale de configurare: help/880.30-ADMA_catalog.md
