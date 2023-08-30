@@ -23,12 +23,16 @@
 ### 0.1.1 System Landscape HLD (#TODO-wip)
 
 * tbd... the directory structure for new module: 2 dirs, UI and srv side. Just enum them and will mk doc `Sys_Landscape_DLD` for each
-* tbd... populate usr book directory with index.md and mkdocs.yml. Directory for a book will have hame and generator cfg files "imported" frpm book name, or make a map file im doc_src route for book.name --to-- dir.name 
-* tbd... create `doc_src/810-DSGN` directory & mv Landscape doc + any future design docs
+
+* tbd... populate usr book directory with index.md and mkdocs.yml. Directory for a book will have hame and generator cfg files "imported" frpm book name, or make a map file im doc_src route for book.name --to-- dir.name
+
+* tbd... update Landscape doc ref new objects created in `230830piu_e`
+
+* tbd...  mv Landscape doc + any future design docs to `doc_src/810-DSGN`
 
 * wip...
 
-* ..  230830piu_e create `doc_src/bk_tmpl` as first of directories DEDICATED TO 1 USER BOOK & prep files that will be modified latter but just to there (maybe a small `readme.txt`)
+* ..  230830piu_e create `doc_src/bk_tmpl` as first of directories DEDICATED TO 1 USER BOOK & prep files that will be modified latter but just to there including command shell ones
 * -#NOTE--- revw & publish from here ---
 * 230830piu_d reviewed new system start page (index,md file) and published (230830 h08:15)
 * 230830piu_c redesign system `index.md` as it will be the starting point of **BookLab system**
