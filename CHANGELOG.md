@@ -28,14 +28,12 @@
 
 * tbd... update Landscape doc ref new objects created in `230830piu_e`
 
-* tbd...  mv Landscape doc + any future design docs to `doc_src/810-DSGN`
-
 * wip...
 
 
 * -#NOTE--- revw & publish from here ---
 
-
+* 230830piu_i created as empty files (for future use) in ``doc_src/help/` files `880.30-EUMA_catalog.md` and `880.30-ADMA_catalog.md` and referenced them in NAVIGATION
 * 230830piu_h mv `810.02-System_Landscape.md` doc + any future design docs to `doc_src/810-DSGN`
 * 230830piu_g fixed `230830piu_e` by updating created files and adding new ones (shell cmd for creating new book in `doc_src/`)
 * 230830piu_f populated `doc_src/bk_tmpl` with `print_page.md` which is mandatory
