@@ -5,8 +5,13 @@ copyright: 'Copyright (c) RENware Software Systems'
 
 
 nav:
-    - About: index.md
-    - BookLab demo: wip.md #NOTE this will need to point to ...where application start...
+    - BookLab:
+        - Acasa: index.md
+        - Carte noua: http://booklab.renware.eu/newb
+        - Editare materiale: http://booklab.renware.eu/edtm
+        - Sectiuni carte: http://booklab.renware.eu/orgm
+        - Vizualizare carte: ttp://booklab.renware.eu/prvb
+        - Asamblare carte: http://booklab.renware.eu/dplb
     - Help:
         - Manuale de utilizare: help/880.30-EUMA_catalog.md
         - Manuale de configurare: help/880.30-ADMA_catalog.md
@@ -14,10 +19,12 @@ nav:
             - Vedere de ansamblu: help/130.02-Overview.md
             - Arhitectura: 810-DSGN/810.02-System_Landscape.md
         - Manual BookLab (PDF): pdfs/print_page.html/print_page.pdf
-    - RENware support:
+    - About:
+        - Licenta mea: wip.md #TODO tbd... este un http catre o ruta dinamica din produs
         - Suport: https://www.renware.eu/support.html
         - Contact: https://www.renware.eu/contact.html
         - Cum cumpar: https://www.renware.eu/resources.html#how-to-buy-from-renware
+        - Despre BookLab: wip.md #TODO `about.md` eventual cu README din pj root, echipa, etc, ce ar tb sa fie acolo...
 
 
 
