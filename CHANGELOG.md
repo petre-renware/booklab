@@ -24,15 +24,14 @@
 
 * tbd... the directory structure for new module: 2 dirs, UI and srv side. Just enum them and will mk doc `Sys_Landscape_DLD` for each
 
-* tbd... populate usr book directory with index.md and mkdocs.yml. Directory for a book will have hame and generator cfg files "imported" frpm book name, or make a map file im doc_src route for book.name --to-- dir.name
+* tbd... directory for a new book will have (the template `bk_tmpl/`) name and generator cfg files "imported" from book name, or make a map file im doc_src route for `book.name ---> dir.name`
 
 * tbd... update Landscape doc ref new objects created in `230830piu_e`
 
 * wip...
 
 
-* -#NOTE--- revw & publish from here ---
-
+* -#NOTE--- revw & publish up from here ---
 * 230830piu_i created as empty files (for future use) in ``doc_src/help/` files `880.30-EUMA_catalog.md` and `880.30-ADMA_catalog.md` and referenced them in NAVIGATION
 * 230830piu_h mv `810.02-System_Landscape.md` doc + any future design docs to `doc_src/810-DSGN`
 * 230830piu_g fixed `230830piu_e` by updating created files and adding new ones (shell cmd for creating new book in `doc_src/`)
