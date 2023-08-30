@@ -23,10 +23,11 @@
 ### 0.1.1 System Landscape HLD (#TODO-wip)
 
 * tbd... the directory structure for new module: 2 dirs, UI and srv side. Just enum them and will mk doc `Sys_Landscape_DLD` for each
-* tbd... drop prefix 810-DSGN - is in name as 810 and for other dlvbs (chk for adma, euma but if need prefix them with 880...)
 
 * wip...
 
+
+* 230830piu_c redesign system `index.md` as it will be the starting point of **BookLab system**
 * 230830piu_b change theme color and publish site
 * 230830piu_a drop prefix 810-DSGN - is in name as 810 and for other dlvbs (chk for adma, euma but if need prefix them with 880...):
     * [x] (1) file `810-DSGN-130.02-Overview.md`
