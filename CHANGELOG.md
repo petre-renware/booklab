@@ -30,7 +30,7 @@
 
 * wip...
 
-
+* ... 220830piu_j updated _System Overview_ ref type of usable content (product ASIS, no extension)
 * -#NOTE--- revw & publish up from here ---
 * 230830piu_i created as empty files (for future use) in ``doc_src/help/` files `880.30-EUMA_catalog.md` and `880.30-ADMA_catalog.md` and referenced them in NAVIGATION
 * 230830piu_h mv `810.02-System_Landscape.md` doc + any future design docs to `doc_src/810-DSGN`
