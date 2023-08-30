@@ -7,6 +7,6 @@
 
 
 [Demo system](http://booklab.renware.eu)<br>
-[Vedere de ansamblu](help/810-DSGN-130.02-Overview.md)
+[Vedere de ansamblu](help/130.02-Overview.md)
 
 

@@ -27,9 +27,9 @@
 
 * wip...
 
-* ... 230830piu_a drop prefix 810-DSGN - is in name as 810 and for other dlvbs (chk for adma, euma but if need prefix them with 880...):
-    * [ ] (1) file `810-DSGN-130.02-Overview.md`
-    * [ ] (2) file `810-DSGN-810.02-System_Landscape.md`
+* 230830piu_a drop prefix 810-DSGN - is in name as 810 and for other dlvbs (chk for adma, euma but if need prefix them with 880...):
+    * [x] (1) file `810-DSGN-130.02-Overview.md`
+    * [x] (2) file `810-DSGN-810.02-System_Landscape.md`
 * 230829piu_i make navigation entry for `810-DSGN-810.02-System_Landscape.md`
 * 230829piu_h updated `810-DSGN-810.02-System_Landscape.md` ref _Introducere_ by briefly re-iterating the general landscape from `System_overview.md`
 * 230829piu_g created and initialized `810-DSGN-810.02-System_Landscape.md`
