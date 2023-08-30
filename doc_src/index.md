@@ -22,7 +22,7 @@ Ce poti face mai departe:
 
 * [sa faci asamblarea finala a cartii in forma electronica](http://booklab.renware.eu/dplb) #TODO DPLB route
 
-* [sa revezi manualele acestui sistem](http://booklab.renware.eu/help)
+* [sa revezi manualele acestui sistem](https://booklab.renware.eu/help/130.02-Overview.html) #TODO create and change to a HELP INDEX doc... (catalok like)
 
 
 
