@@ -30,6 +30,7 @@
 
 * wip...
 
+* 230830piu_k updated navigation, replaced Avout entry with first pridyct page and a new about was created for "appendix" entries (contact, support, ...)
 * 220830piu_j updated _System Overview_ ref type of usable content (product ASIS, no extension)
 * -#NOTE--- revw & publish up from here ---
 * 230830piu_i created as empty files (for future use) in ``doc_src/help/` files `880.30-EUMA_catalog.md` and `880.30-ADMA_catalog.md` and referenced them in NAVIGATION
