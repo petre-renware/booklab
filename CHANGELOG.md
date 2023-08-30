@@ -32,7 +32,9 @@
 
 * wip...
 
-* ..  230830piu_e create `doc_src/bk_tmpl` as first of directories DEDICATED TO 1 USER BOOK & prep files that will be modified latter but just to there including command shell ones
+
+* 230830piu_f populated `doc_src/bk_tmpl` with `print_page.md` which is mandatory
+* 230830piu_e create `doc_src/bk_tmpl` as first of directories DEDICATED TO 1 USER BOOK & prep files that will be modified latter but just to there including command shell ones
 * -#NOTE--- revw & publish from here ---
 * 230830piu_d reviewed new system start page (index,md file) and published (230830 h08:15)
 * 230830piu_c redesign system `index.md` as it will be the starting point of **BookLab system**
