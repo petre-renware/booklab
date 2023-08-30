@@ -18,7 +18,11 @@ Ce poti face mai departe:
 
 * [sa organizari materialelor in diverse sectiuni](http://booklab.renware.eu/orgm) #TODO 0RGM route
 
-* 
+* [sa vizualizezi si sa testezi materiale realizate](http://booklab.renware.eu/prvb) #TODO PRVB route
+
+* [sa faci asamblarea finala a cartii in forma electronica](http://booklab.renware.eu/dplb) #TODO DPLB route
+
+* [sa revezi manualele acestui sistem](http://booklab.renware.eu/help)
 
 
 
