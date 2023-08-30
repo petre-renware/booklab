@@ -9,7 +9,7 @@ nav:
     - BookLab demo: wip.md #NOTE this will need to point to ...where application start...
     - Help:
         - Vedere de ansamblu: help/130.02-Overview.md
-        - Arhietctura: help/810.02-System_Landscape.md
+        - Arhitectura: help/810.02-System_Landscape.md
         - Manual BookLab (PDF): pdfs/print_page.html/print_page.pdf
     - RENware support:
         - Suport: https://www.renware.eu/support.html
@@ -131,7 +131,7 @@ theme:
         - navigation.path
         #- toc.integrate #NOTE integrates all navigation only in left nav bar
     palette:
-        primary: blue # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/ for other color options
+        primary: black # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/ for other color options
         accent: blue
     icon:
         admonition:
