@@ -26,7 +26,7 @@
 
 * wip...
 
-
+* 230830piu_d reviewed new system start page (index,md file) and published (230830 h08:15)
 * 230830piu_c redesign system `index.md` as it will be the starting point of **BookLab system**
 * 230830piu_b change theme color and publish site
 * 230830piu_a drop prefix 810-DSGN - is in name as 810 and for other dlvbs (chk for adma, euma but if need prefix them with 880...):
