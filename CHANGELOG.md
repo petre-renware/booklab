@@ -46,6 +46,8 @@
 
 * wip...
 
+* 260831piu_d renamed all user doc gen scripts with extension `.py` as intention to make them as Python code instead of OS shells (more OS agnostic)
+
 * 230831piu_d renamed files of `bk_tmpl/docs/` to `my_book/` and let a note in corresponding `mkdocs.yml.new_name`
 
 * 230831piu_c reorganized `doc_src/bk_tmpl/` directory as:
