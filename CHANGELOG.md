@@ -48,6 +48,8 @@
 
 * wip...
 
+* 230831piu_g `810.02-System_Landscape.md` section dedicated to system start
+
 * 230831piu_f:
     * [x] `810.02-System_Landscape.md` add whole project directory tree to keep what consider
     * [x] add requirements.txt in `doc_src/` to make environment after deployment
@@ -64,7 +66,6 @@
     * [x] mv `bk_tmpl/print_page.md` file to `bk_tmpl/doc_src/`
     * [x] created `bk_tmpl/doc_src/CNAME` as empty file to be filled at NEWBook operation
     * [x] upd project `mkdocs.yml` to ignore `bk_*/` dirs at project build and let them as is (ie, will be user books and part of deployed apps as are they now)
-
 * -#NOTE--- revw & publish up from here ---
 
 * 230831piu_b made a test ref HTML form in markdown and what POST is sent un submit - see commented section at beg of `index.md` (saved this note on major version TBD section)
