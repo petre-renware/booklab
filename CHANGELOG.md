@@ -41,6 +41,8 @@
 
 * tbd... update Landscape doc ref new objects created in `230830piu_e`
 
+* tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
+
 
 * wip...
 
