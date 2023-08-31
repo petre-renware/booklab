@@ -36,7 +36,8 @@
 * wip...
 
 
-* 
+* 230831piu_ reorganized `doc_src/bk_tmpl/` directory as:
+    * its own `doc_src/` & `docs/` renamed inside readme hidden files to `readme_and_keep_me.md` to have generation on their `docs/` at that book build (ie, its own `mkdocs build`)
 * -#NOTE--- revw & publish up from here ---
 
 * 230831piu_b made a test ref HTML form in markdown and what POST is sent un submit - see commented section at beg of `index.md` (saved this note on major version TBD section)
