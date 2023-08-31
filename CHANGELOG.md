@@ -20,6 +20,9 @@
 
 * tbd...cu ce faci [editarea textului markdown "clasic"](https://blog.miguelgrinberg.com/post/flask-pagedown-markdown-editor-extension-for-flask-wtf)
 
+* @IMP#NOTE@230831piu_b made a test ref HTML form in markdown and what POST is sent un submit - see commented section at beg of `index.md`
+
+
 
 
 ### 0.1.1 System Landscape HLD (#TODO-wip)
@@ -33,10 +36,16 @@
 * wip...
 
 
+* 230831piu_c reorganized `doc_src/bk_tmpl/` directory as:
+    * [x] its own `doc_src/` & `docs/` renamed inside `.readme.txt` hidden files to `readme_and_keep_me.md` to have generation on their `docs/` at that book build (ie, its own `mkdocs build`)
+    * [x] mv `bk_tmpl/index.md` file to `bk_tmpl/doc_src/`
+    * [x] mv `bk_tmpl/print_page.md` file to `bk_tmpl/doc_src/`
+    * [x] created `bk_tmpl/doc_src/CNAME` as empty file to be filled at NEWBook operation
+    * [x] upd project `mkdocs.yml` to ignore `bk_*/` dirs at project build and let them as is (ie, will be user books and part of deployed apps as are they now)
 
-* @IMP#NOTE 230831piu_b made a test ref HTML form in markdown and what POST is sent un submit - see commented section at beg of `index.md`
 * -#NOTE--- revw & publish up from here ---
 
+* 230831piu_b made a test ref HTML form in markdown and what POST is sent un submit - see commented section at beg of `index.md` (saved this note on major version TBD section)
 * 230831piu_a review all system, update links, fixed misspellings and publish
 * 230830piu_k updated navigation, replaced About entry with first product page and a new about was created for "appendix" entries (contact, support, ...)
 * 220830piu_j updated _System Overview_ ref type of usable content (product ASIS, no extension)
