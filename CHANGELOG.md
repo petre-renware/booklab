@@ -39,7 +39,8 @@
 * 230831piu_c reorganized `doc_src/bk_tmpl/` directory as:
     * [x] its own `doc_src/` & `docs/` renamed inside `.readme.txt` hidden files to `readme_and_keep_me.md` to have generation on their `docs/` at that book build (ie, its own `mkdocs build`)
     * [x] mv `bk_tmpl/index.md` file to `bk_tmpl/doc_src/`
-    * [ ] mv `bk_tmpl/print_page.md` file to `bk_tmpl/doc_src/`
+    * [x] mv `bk_tmpl/print_page.md` file to `bk_tmpl/doc_src/`
+    * [ ] created `bk_tmpl/doc_src/CNAME` as empty file to be filled at NEWBook operation
     * [ ] upd project `mkdocs.yml` to ignore `bk_*/` dirs at project build and let them as is (ie, will be user books and part of deployed apps as are they now)
 
 * -#NOTE--- revw & publish up from here ---
