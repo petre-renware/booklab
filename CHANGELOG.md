@@ -25,7 +25,7 @@
 
 ### (#NOTE-next) 0.1.2 System Landscape first HLD
 * ...DO NOT USE YET...
-
+* ...TESTUL CORECT: toate comenzi e shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea #NOTE
 
 
 
