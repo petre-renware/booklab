@@ -179,3 +179,8 @@ site_dir: './static_portal' #NOTE: [piu] this is the working directory; final is
 use_directory_urls: false # allow link between pages to work properly as static site an "callable" as `file:///...`
 
 
+# files, dirs to exclude at BookLab project creation
+exclude_docs: |
+  bk_*/
+
+
