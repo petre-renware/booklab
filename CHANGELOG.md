@@ -48,6 +48,8 @@
 
 * wip...
 
+* 230831piu_g `810.02-System_Landscape.md` section dedicated to system start
+
 * 230831piu_f:
     * [x] `810.02-System_Landscape.md` add whole project directory tree to keep what consider
     * [x] add requirements.txt in `doc_src/` to make environment after deployment
