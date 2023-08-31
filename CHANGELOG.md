@@ -37,7 +37,9 @@
 
 * tbd... directory for a new book will have (the template `bk_tmpl/`) name and generator cfg files "imported" from book name, or make a map file im doc_src route for `book.name ---> dir.name`
 
-* tbd... a master index for user space (to keep all books) makes sense? NOT TOO MUCH because this is another sys job, for ex, min.edu LMS, sys al unei edituri sau cel al managerului meu  e se ocupa de afcerea mea de scris carti ! CLEARLY BAD IDEA - root dir is the project itself... (may a new root for bk_tml .... will complicate too much)
+* tbd...#FIXME_DROP_ME a master index for user space (to keep all books) makes sense? NOT TOO MUCH because this is another sys job, for ex, min.edu LMS, sys al unei edituri sau cel al managerului meu  e se ocupa de afcerea mea de scris carti ! CLEARLY BAD IDEA - root dir is the project itself... (may a new root for bk_tml .... will complicate too much)
+
+* tbd... python command files `bkcmd_*.py` what `#!.../python3...(shebang)`` to have ? where to point ? `.wenv/Scripts/` ? `.env/bin/...`
 
 * tbd... update Landscape doc ref new objects created in `230830piu_e`
 
@@ -50,8 +52,7 @@
     * [x] `810.02-System_Landscape.md` add whole project directory tree to keep what consider
     * [x] add requirements.txt in `doc_src/` to make environment after deployment
     * [x] `mkdocs.yml` commented out `exclude_docs:` configuration up to clearing specs because it will not deploy `bk_*/` directories
-    * [x] FISIERELE (din `../bk_tmpl/`) `index.md.txt` si `print_page.md.txt` trebuiesc tinute asa. Doar cind se creaza proiect nou vor fi redenumite la `md` altfel se transforma automat in HTML la construirea insasi BookLab
-
+    * [x] FILES (from `../bk_tmpl/`) `index.md.txt` & `print_page.md.txt` should remain with this extension. Just when NEWB oper (new book) will be renamed to `.md` altfel se transforma automat in HTML la construirea insasi BookLab
 
 * 260831piu_e renamed all user command scripts with extension `.py` as intention to make them as Python code instead of OS shells (more OS agnostic)
 
