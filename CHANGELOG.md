@@ -41,7 +41,7 @@
     * [x] mv `bk_tmpl/index.md` file to `bk_tmpl/doc_src/`
     * [x] mv `bk_tmpl/print_page.md` file to `bk_tmpl/doc_src/`
     * [x] created `bk_tmpl/doc_src/CNAME` as empty file to be filled at NEWBook operation
-    * [ ] upd project `mkdocs.yml` to ignore `bk_*/` dirs at project build and let them as is (ie, will be user books and part of deployed apps as are they now)
+    * [x] upd project `mkdocs.yml` to ignore `bk_*/` dirs at project build and let them as is (ie, will be user books and part of deployed apps as are they now)
 
 * -#NOTE--- revw & publish up from here ---
 
