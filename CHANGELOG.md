@@ -32,7 +32,11 @@
 
 * wip...
 
+
+
+* @IMP#NOTE 230831piu_b made a test ref HTML form in markdown and what POST is sent un submit - see commented section at beg of `index.md`
 * -#NOTE--- revw & publish up from here ---
+
 * 230831piu_a review all system, update links, fixed misspellings and publish
 * 230830piu_k updated navigation, replaced About entry with first product page and a new about was created for "appendix" entries (contact, support, ...)
 * 220830piu_j updated _System Overview_ ref type of usable content (product ASIS, no extension)

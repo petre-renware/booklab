@@ -1,5 +1,29 @@
 ![booklab_logo](pictures/booklab_logo.png){ width="300" }
 
+
+<!-- #NOTE ***************************************************************************** TEST HTML FORM
+
+<form action="XXX_TEST_ROUTE/xxxfile">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" value="John"><br>
+
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+# Note si explicatii rezultat:
+
+    - caz 1: cu `action="/XXX_TEST_ROUTE"` ==> raspunsul a fost request catre `/XXX_TEST_ROUTE?fname=John&lname=Doe` url ABSOLUT
+*************************** #NOTE variantele ce trebuiesc alese, prima poate in cazuri speciale cind muti pe alt server ********************
+    - caz 2: cu `action="XXX_TEST_ROUTE"` ==> raspunsul a fost request catre `http://server_name.../XXX_TEST_ROUTE?fname=John&lname=Doe` url RELATIV la servername
+    - caz 3: cu `action="XXX_TEST_ROUTE/xxxfile"` ==> raspunsul a fost request catre `http://server_name.../XXX_TEST_ROUTE/xxxfile?fname=John&lname=Doe` url RELATIV la servername
+
+*********************************************************************************************************** -->
+
+
+
+
 # BookLab
 
 <small markdown>by RENware Software Systems</small>
