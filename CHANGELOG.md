@@ -17,7 +17,9 @@
 
 
 * tbd... rules how to deploy **BookLab** app in order to be used by client (what dir to copy and where - app dire, docs ref help dir...)
-* tbd... cu ce faci editarea textului markdown "clasic". poti folosi jupyter lab sa salvezi si altfel decit JSON sau poti extrage din JSON ce vrei??
+
+* tbd...cu ce faci [editarea textului markdown "clasic"](https://blog.miguelgrinberg.com/post/flask-pagedown-markdown-editor-extension-for-flask-wtf)
+
 
 
 ### 0.1.1 System Landscape HLD (#TODO-wip)
