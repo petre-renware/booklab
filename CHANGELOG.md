@@ -46,6 +46,13 @@
 
 * wip...
 
+* 230831piu_f:
+    * [x] `810.02-System_Landscape.md` add whole project directory tree to keep what consider
+    * [x] add requirements.txt in `doc_src/` to make environment after deployment
+    * [x] `mkdocs.yml` commented out `exclude_docs:` configuration up to clearing specs because it will not deploy `bk_*/` directories
+    * [x] FISIERELE (din `../bk_tmpl/`) `index.md.txt` si `print_page.md.txt` trebuiesc tinute asa. Doar cind se creaza proiect nou vor fi redenumite la `md` altfel se transforma automat in HTML la construirea insasi BookLab
+
+
 * 260831piu_e renamed all user command scripts with extension `.py` as intention to make them as Python code instead of OS shells (more OS agnostic)
 
 * 230831piu_d renamed files of `bk_tmpl/docs/` to `my_book/` and let a note in corresponding `mkdocs.yml.new_name`
