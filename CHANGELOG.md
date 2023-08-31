@@ -37,8 +37,9 @@
 
 
 * 230831piu_ reorganized `doc_src/bk_tmpl/` directory as:
-    * its own `doc_src/` & `docs/` renamed inside readme hidden files to `readme_and_keep_me.md` to have generation on their `docs/` at that book build (ie, its own `mkdocs build`)
-    * ...
+    * [ ] its own `doc_src/` & `docs/` renamed inside readme hidden files to `readme_and_keep_me.md` to have generation on their `docs/` at that book build (ie, its own `mkdocs build`)
+    * [ ] mv `bk_tmpl/index.md` file to `bk_tmpl/doc_src/`
+    * [ ] upd project `mkdocs.yml` to ignore `bk_*/` dirs at project build and let them as is (ie, will be user books and part of deployed apps as are they now)
 
 * -#NOTE--- revw & publish up from here ---
 
