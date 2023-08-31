@@ -37,7 +37,7 @@
 
 
 * 230831piu_c reorganized `doc_src/bk_tmpl/` directory as:
-    * [x] its own `doc_src/` & `docs/` renamed inside `.readme.txt` hidden files to `readme_and_keep_me.md` to have generation on their `docs/` at that book build (ie, its own `mkdocs build`)
+    * [x] its own `doc_src/` & `docs/` renamed inside `.readme.txt` hidden files to `readme_and_keep_me.txt` to have generation on their `docs/` at that book build (ie, its own `mkdocs build`)
     * [x] mv `bk_tmpl/index.md` file to `bk_tmpl/doc_src/`
     * [x] mv `bk_tmpl/print_page.md` file to `bk_tmpl/doc_src/`
     * [x] created `bk_tmpl/doc_src/CNAME` as empty file to be filled at NEWBook operation
