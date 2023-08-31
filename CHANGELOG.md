@@ -39,9 +39,10 @@
 
 * tbd... update Landscape doc ref new objects created in `230830piu_e`
 
+
 * wip...
 
-* 230831piu_s renamed files of `bk_tmpl/docs/` to `my_book/` and let a note in corresponding `mkdocs.yml.new_name`
+* 230831piu_d renamed files of `bk_tmpl/docs/` to `my_book/` and let a note in corresponding `mkdocs.yml.new_name`
 
 * 230831piu_c reorganized `doc_src/bk_tmpl/` directory as:
     * [x] its own `doc_src/` & `docs/` renamed inside `.readme.txt` hidden files to `readme_and_keep_me.txt` to have generation on their `docs/` at that book build (ie, its own `mkdocs build`)
