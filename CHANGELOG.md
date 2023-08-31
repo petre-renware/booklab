@@ -23,19 +23,25 @@
 * @IMP#NOTE@230831piu_b made a test ref HTML form in markdown and what POST is sent un submit - see commented section at beg of `index.md`
 
 
+### (#NOTE-next) 0.1.2 System Landscape first HLD
+* ...DO NOT USE YET...
 
 
-### 0.1.1 System Landscape HLD (#TODO-wip)
+
+
+### 0.1.1 System Landscape drafts (#TODO-wip)
 
 * tbd... the directory structure for new module: 2 dirs, UI and srv side. Just enum them and will mk doc `Sys_Landscape_DLD` for each
 
 * tbd... directory for a new book will have (the template `bk_tmpl/`) name and generator cfg files "imported" from book name, or make a map file im doc_src route for `book.name ---> dir.name`
 
+* tbd... a master index for user space (to keep all books) makes sense? NOT TOO MUCH because this is another sys job, for ex, min.edu LMS, sys al unei edituri sau cel al managerului meu  e se ocupa de afcerea mea de scris carti !
+
 * tbd... update Landscape doc ref new objects created in `230830piu_e`
 
 * wip...
 
-* 230831piu_c renamed files of `bk_tmpl/docs/` to `my_book/` and let a note in corresponding `mkdocs.yml.new_name`
+* 230831piu_s renamed files of `bk_tmpl/docs/` to `my_book/` and let a note in corresponding `mkdocs.yml.new_name`
 
 * 230831piu_c reorganized `doc_src/bk_tmpl/` directory as:
     * [x] its own `doc_src/` & `docs/` renamed inside `.readme.txt` hidden files to `readme_and_keep_me.txt` to have generation on their `docs/` at that book build (ie, its own `mkdocs build`)
