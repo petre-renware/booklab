@@ -37,12 +37,16 @@
 
 * tbd... directory for a new book will have (the template `bk_tmpl/`) name and generator cfg files "imported" from book name, or make a map file im doc_src route for `book.name ---> dir.name`
 
-* tbd... a master index for user space (to keep all books) makes sense? NOT TOO MUCH because this is another sys job, for ex, min.edu LMS, sys al unei edituri sau cel al managerului meu  e se ocupa de afcerea mea de scris carti !
+* tbd... a master index for user space (to keep all books) makes sense? NOT TOO MUCH because this is another sys job, for ex, min.edu LMS, sys al unei edituri sau cel al managerului meu  e se ocupa de afcerea mea de scris carti ! CLEARLY BAD IDEA - root dir is the project itself... (may a new root for bk_tml .... will complicate too much)
 
 * tbd... update Landscape doc ref new objects created in `230830piu_e`
 
+* tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
+
 
 * wip...
+
+* 260831piu_e renamed all user command scripts with extension `.py` as intention to make them as Python code instead of OS shells (more OS agnostic)
 
 * 230831piu_d renamed files of `bk_tmpl/docs/` to `my_book/` and let a note in corresponding `mkdocs.yml.new_name`
 
