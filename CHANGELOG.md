@@ -65,9 +65,9 @@
     * [x] mv `bk_tmpl/index.md` file to `bk_tmpl/doc_src/`
     * [x] mv `bk_tmpl/print_page.md` file to `bk_tmpl/doc_src/`
     * [x] created `bk_tmpl/doc_src/CNAME` as empty file to be filled at NEWBook operation
+    * [x] upd project `mkdocs.yml` to ignore `bk_*/` dirs at project build and let them as is (ie, will be user books and part of deployed apps as are they now)
 * -#NOTE--- revw & publish up from here ---
 
-    * [x] upd project `mkdocs.yml` to ignore `bk_*/` dirs at project build and let them as is (ie, will be user books and part of deployed apps as are they now)
 * 230831piu_b made a test ref HTML form in markdown and what POST is sent un submit - see commented section at beg of `index.md` (saved this note on major version TBD section)
 * 230831piu_a review all system, update links, fixed misspellings and publish
 * 230830piu_k updated navigation, replaced About entry with first product page and a new about was created for "appendix" entries (contact, support, ...)
