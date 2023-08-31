@@ -20,12 +20,14 @@
 
 * tbd...cu ce faci [editarea textului markdown "clasic"](https://blog.miguelgrinberg.com/post/flask-pagedown-markdown-editor-extension-for-flask-wtf)
 
-* @IMP#NOTE@230831piu_b made a test ref HTML form in markdown and what POST is sent un submit - see commented section at beg of `index.md`
+* @IMP#NOTE@230831piu_b HTML form in markdown and what POST is sent un submit - see commented section at beg of project `index.md`
+
 
 
 ### (#NOTE-next) 0.1.2 System Landscape first HLD
 * ...DO NOT USE YET...
-* ...TESTUL CORECT: toate comenzi e shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea #NOTE
+* ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
+* ...#NOTE mk a VM on oracle virtual box to test a final product - latter you can gen a Bootable ISO
 
 
 
