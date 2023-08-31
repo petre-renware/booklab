@@ -17,7 +17,7 @@
 
 
 * tbd... rules how to deploy **BookLab** app in order to be used by client (what dir to copy and where - app dire, docs ref help dir...)
-
+* tbd... cu ce faci editarea textului markdown "clasic". poti folosi jupyter lab sa salvezi si altfel decit JSON sau poti extrage din JSON ce vrei??
 
 
 ### 0.1.1 System Landscape HLD (#TODO-wip)
@@ -30,9 +30,10 @@
 
 * wip...
 
+* -#NOTE--- revw & publish up from here ---
+* 230831piu_a review all system, update links, fixed misspellings and publish
 * 230830piu_k updated navigation, replaced About entry with first product page and a new about was created for "appendix" entries (contact, support, ...)
 * 220830piu_j updated _System Overview_ ref type of usable content (product ASIS, no extension)
-* -#NOTE--- revw & publish up from here ---
 * 230830piu_i created as empty files (for future use) in ``doc_src/help/` files `880.30-EUMA_catalog.md` and `880.30-ADMA_catalog.md` and referenced them in NAVIGATION
 * 230830piu_h mv `810.02-System_Landscape.md` doc + any future design docs to `doc_src/810-DSGN`
 * 230830piu_g fixed `230830piu_e` by updating created files and adding new ones (shell cmd for creating new book in `doc_src/`)
