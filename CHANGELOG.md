@@ -45,6 +45,8 @@
 
 * tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
 
+* tdb... consider to move `bk_tmpl/` dir to project root - think about
+
 
 * wip...
 
