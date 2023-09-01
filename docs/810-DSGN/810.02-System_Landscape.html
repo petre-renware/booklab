@@ -291,8 +291,52 @@ div.download-btn {
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#upcoming">
-    ...UPCOMING...
+<a class="md-nav__link" href="#pornirea-si-initializarea-sistemului">
+    Pornirea si initializarea sistemului
+  </a>
+<nav aria-label="Pornirea si initializarea sistemului" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#serverul-http-static">
+    Serverul HTTP static
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#serverul-http-dinamic">
+    Serverul HTTP dinamic
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#newb-creare-carte-noua">
+    NEWB creare carte noua
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#edtm-preluare-si-editare-continut">
+    EDTM preluare si editare continut
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#orgm-organizare-structura-carte">
+    ORGM organizare structura carte
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prvb-previzualizare-si-testare-carte">
+    PRVB previzualizare si testare carte
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dplb-asamblare-publicare-carte">
+    DPLB asamblare publicare carte
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hlps-help-asistenta-si-manuale">
+    HLPS help asistenta si manuale
   </a>
 </li>
 </ul>
@@ -369,8 +413,52 @@ div.download-btn {
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#upcoming">
-    ...UPCOMING...
+<a class="md-nav__link" href="#pornirea-si-initializarea-sistemului">
+    Pornirea si initializarea sistemului
+  </a>
+<nav aria-label="Pornirea si initializarea sistemului" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#serverul-http-static">
+    Serverul HTTP static
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#serverul-http-dinamic">
+    Serverul HTTP dinamic
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#newb-creare-carte-noua">
+    NEWB creare carte noua
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#edtm-preluare-si-editare-continut">
+    EDTM preluare si editare continut
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#orgm-organizare-structura-carte">
+    ORGM organizare structura carte
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prvb-previzualizare-si-testare-carte">
+    PRVB previzualizare si testare carte
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dplb-asamblare-publicare-carte">
+    DPLB asamblare publicare carte
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hlps-help-asistenta-si-manuale">
+    HLPS help asistenta si manuale
   </a>
 </li>
 </ul>
@@ -390,7 +478,17 @@ div.download-btn {
 <ul>
 <li><a href="#arhitectura-sistemului">Arhitectura sistemului</a><ul>
 <li><a href="#introducere">Introducere</a></li>
-<li><a href="#upcoming">...UPCOMING...</a></li>
+<li><a href="#pornirea-si-initializarea-sistemului">Pornirea si initializarea sistemului</a><ul>
+<li><a href="#serverul-http-static">Serverul HTTP static</a></li>
+<li><a href="#serverul-http-dinamic">Serverul HTTP dinamic</a></li>
+</ul>
+</li>
+<li><a href="#newb-creare-carte-noua">NEWB creare carte noua</a></li>
+<li><a href="#edtm-preluare-si-editare-continut">EDTM preluare si editare continut</a></li>
+<li><a href="#orgm-organizare-structura-carte">ORGM organizare structura carte</a></li>
+<li><a href="#prvb-previzualizare-si-testare-carte">PRVB previzualizare si testare carte</a></li>
+<li><a href="#dplb-asamblare-publicare-carte">DPLB asamblare publicare carte</a></li>
+<li><a href="#hlps-help-asistenta-si-manuale">HLPS help asistenta si manuale</a></li>
 </ul>
 </li>
 </ul>
@@ -429,14 +527,104 @@ div.download-btn {
 <p class="admonition-title">Conceptele de server si client</p>
 <p>Se atrage atentia asupra tratarii corecte din punct de vedere conceptual a notiunilor de <code>`server  si</code>clent`. Chiar daca locatia de instalare a sistemului nu pare "un server cu multi cai putere", arhitectura conceptuala de client-server este pe deplin implementata cu respectarea tuturor principiilor aferente si o consitentizare a acestui lucru va permite o intelegere corecta a detaliilor tehnice ale sistemului de catre echipa tehnica de lucru.</p>
 </div>
-<h2 id="upcoming">...UPCOMING...</h2>
-<p><img alt="wip doc" src="../pictures/under_maintenance.png"/></p>
+<h2 id="pornirea-si-initializarea-sistemului">Pornirea si initializarea sistemului</h2>
+<p>Pornirea sistemului comporta doua mari componente "on top", si anume:</p>
+<ul>
+<li>
+<p><strong>serverul HTTP static</strong> acesta va deservi partea de web compusa din "fisiere" statice. Acestea reprezinta fisierele HTML aferente interfetei UI dar si celelate fisiere "auxiliare" precum: CSS-uri, JS-uri, imagini, etc</p>
+</li>
+<li>
+<p><strong>serverul HTTP dinamic</strong> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
+</li>
+</ul>
+<h3 id="serverul-http-static">Serverul HTTP static</h3>
+<p>Acesta este un server HTTP tip <em>CGI</em> ce raspunde pe portul 80 (portul clasic, implicit pentru sisteme accesabile web).</p>
+<div class="admonition info">
+<p class="admonition-title">parametrii</p>
+<ul>
+<li>port: 80</li>
+<li>nume: nume domeniu unde este publicat sistemul prefixat cu <code>booklab</code> (ca si hostname)</li>
+<li>acces: public, deschis in extern</li>
+<li>implentare: implicit <code>python http.server</code> sau <code>nginx</code>, <code>apache http</code>, etc pentru inplementari "on premises" folosind componentele clientului</li>
+</ul>
+</div>
+<h3 id="serverul-http-dinamic">Serverul HTTP dinamic</h3>
+<p>Acesta este un server HTTP tip <em>WSGI</em> ce raspunde pe portul 7111.</p>
+<div class="admonition info">
+<p class="admonition-title">parametrii</p>
+<ul>
+<li>port: 7111</li>
+<li>nume: numai <code>localhost</code></li>
+<li>acces: strict local, nedeschis</li>
+<li>implentare: implicit <code>gunicorn</code> sau <code>nginx wsgi</code>, <code>apache uwsgi</code> pentru inplementari "on premises" folosind componentele clientului</li>
+</ul>
+</div>
+<h2 id="newb-creare-carte-noua">NEWB creare carte noua</h2>
+<p>-#TODO... <img alt="wip doc" src="../pictures/under_maintenance.png"/></p>
+<h2 id="edtm-preluare-si-editare-continut">EDTM preluare si editare continut</h2>
+<p>-#TODO... <img alt="wip doc" src="../pictures/under_maintenance.png"/></p>
+<h2 id="orgm-organizare-structura-carte">ORGM organizare structura carte</h2>
+<p>-#TODO... <img alt="wip doc" src="../pictures/under_maintenance.png"/></p>
+<h2 id="prvb-previzualizare-si-testare-carte">PRVB previzualizare si testare carte</h2>
+<p>-#TODO... <img alt="wip doc" src="../pictures/under_maintenance.png"/></p>
+<h2 id="dplb-asamblare-publicare-carte">DPLB asamblare publicare carte</h2>
+<p>-#TODO... <img alt="wip doc" src="../pictures/under_maintenance.png"/></p>
+<h2 id="hlps-help-asistenta-si-manuale">HLPS help asistenta si manuale</h2>
+<p>-#TODO... <img alt="wip doc" src="../pictures/under_maintenance.png"/></p>
+<p>-#TODO_wip_for_## BookLab deployed application book template directory</p>
+<p>-#NOTE exista un doc dedicat application directory...</p>
+<p>-#NOTE: this is all tree from all project <code>docs_src/</code> - keep what you need abd clean characters (just let indents) to work <code>tree</code> extension</p>
+<div class="highlight"><pre><span></span><code>📁<span class="w"> </span>PROJECT_ROOT/
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>.gitkeep
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>bkcmd_new_book.py
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>CNAME
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>index.md
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>print_page.md
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>requirements.txt.ck_if_need_it
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>wip.md
+📄<span class="w"> </span><span class="p">|</span>
+📁<span class="w"> </span>+---810-DSGN/
+📄<span class="w"> </span><span class="p">|</span><span class="w">       </span>.gitkeep
+📄<span class="w"> </span><span class="p">|</span><span class="w">       </span><span class="m">810</span>.02-System_Landscape.md
+📄<span class="w"> </span><span class="p">|</span>
+📁<span class="w"> </span>+---bk_tmpl/
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span>.gitkeep
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span>bkcmd_gen_final_book.py
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span>bkcmd_start_book_preview.py
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span>bk_CNAME_domain
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span>mkdocs.yml.new_name
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span>
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>+---my_book/
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">       </span>readme_and_keep_me.txt
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span>
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>+---preview_book/
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">       </span>.gitkeep
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span>
+📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="se">\-</span>--raw_source_docs/
+📄<span class="w"> </span><span class="p">|</span><span class="w">           </span>CNAME
+📄<span class="w"> </span><span class="p">|</span><span class="w">           </span>index.md.txt
+📄<span class="w"> </span><span class="p">|</span><span class="w">           </span>print_page.md.txt
+📄<span class="w"> </span><span class="p">|</span><span class="w">           </span>readme_and_keep_me.txt
+📄<span class="w"> </span><span class="p">|</span>
+📁<span class="w"> </span>+---help/
+📄<span class="w"> </span><span class="p">|</span><span class="w">       </span>.gitkeep
+📄<span class="w"> </span><span class="p">|</span><span class="w">       </span><span class="m">130</span>.02-Overview.md
+📄<span class="w"> </span><span class="p">|</span><span class="w">       </span><span class="m">880</span>.30-ADMA_catalog.md
+📄<span class="w"> </span><span class="p">|</span><span class="w">       </span><span class="m">880</span>.30-EUMA_catalog.md
+📄<span class="w"> </span><span class="p">|</span>
+📁<span class="w"> </span><span class="se">\-</span>--pictures/
+├──<span class="w"> </span>📄<span class="w"> </span>booklab_logo.png
+├──<span class="w"> </span>📄<span class="w"> </span>REN_stamp_logo_transparent.fodg
+├──<span class="w"> </span>📄<span class="w"> </span>REN_stamp_logo_transparent.png
+├──<span class="w"> </span>📄<span class="w"> </span>REN_stamp_logo_transparent.svg
+└──<span class="w"> </span>📄<span class="w"> </span>under_maintenance.png
+</code></pre></div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 30, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 1, 2023</span>
 </small>
 </div>
 </article>

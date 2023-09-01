@@ -50,6 +50,7 @@
 
 * -#NOTE--- revw & publish up from here ---
 
+* 230901piu_b generate and publish new app (230901 h10:00)
 * 230901piu_a more actions:
     * [x] renamed files of `bk_tmpl/doc_src/` to `raw_source_docs/` and let a note in corresponding `mkdocs.yml.new_name` (@cmd `mkdocs build --site-dir my_book/`)
     * [x] created `bk_tmpl/preview_book/` directory that will used for temporary book generation (@cmd `mkdocs build --site-dir raw_source_docs/`)

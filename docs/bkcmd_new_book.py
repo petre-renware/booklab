@@ -7,3 +7,6 @@
 #     - depending on how designed, wr some metadata for a next open of this book
 ################
 
+# #-FIXME use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
+
+
