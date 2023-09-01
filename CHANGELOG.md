@@ -48,26 +48,25 @@
 
 * wip...
 
-* 230831piu_g `810.02-System_Landscape.md` section dedicated to system start
+* -#NOTE--- revw & publish up from here ---
 
-* 230831piu_f:
+* 230901piu_a more actions:
+    * [x] renamed files of `bk_tmpl/doc_src/` to `raw_source_docs/` and let a note in corresponding `mkdocs.yml.new_name` (@cmd `mkdocs build --site-dir my_book/`)
+    * [x] created `bk_tmpl/preview_book/` directory that will used for temporary book generation (@cmd `mkdocs build --site-dir raw_source_docs/`)
+* 230831piu_g `810.02-System_Landscape.md` section dedicated to system start
+* 230831piu_f more actions:
     * [x] `810.02-System_Landscape.md` add whole project directory tree to keep what consider
     * [x] add requirements.txt in `doc_src/` to make environment after deployment
     * [x] `mkdocs.yml` commented out `exclude_docs:` configuration up to clearing specs because it will not deploy `bk_*/` directories
     * [x] FILES (from `../bk_tmpl/`) `index.md.txt` & `print_page.md.txt` should remain with this extension. Just when NEWB oper (new book) will be renamed to `.md` altfel se transforma automat in HTML la construirea insasi BookLab
-
 * 260831piu_e renamed all user command scripts with extension `.py` as intention to make them as Python code instead of OS shells (more OS agnostic)
-
 * 230831piu_d renamed files of `bk_tmpl/docs/` to `my_book/` and let a note in corresponding `mkdocs.yml.new_name`
-
 * 230831piu_c reorganized `doc_src/bk_tmpl/` directory as:
     * [x] its own `doc_src/` & `docs/` renamed inside `.readme.txt` hidden files to `readme_and_keep_me.txt` to have generation on their `docs/` at that book build (ie, its own `mkdocs build`)
     * [x] mv `bk_tmpl/index.md` file to `bk_tmpl/doc_src/`
     * [x] mv `bk_tmpl/print_page.md` file to `bk_tmpl/doc_src/`
     * [x] created `bk_tmpl/doc_src/CNAME` as empty file to be filled at NEWBook operation
     * [x] upd project `mkdocs.yml` to ignore `bk_*/` dirs at project build and let them as is (ie, will be user books and part of deployed apps as are they now)
-* -#NOTE--- revw & publish up from here ---
-
 * 230831piu_b made a test ref HTML form in markdown and what POST is sent un submit - see commented section at beg of `index.md` (saved this note on major version TBD section)
 * 230831piu_a review all system, update links, fixed misspellings and publish
 * 230830piu_k updated navigation, replaced About entry with first product page and a new about was created for "appendix" entries (contact, support, ...)
@@ -86,9 +85,6 @@
 * 230829piu_i make navigation entry for `810-DSGN-810.02-System_Landscape.md`
 * 230829piu_h updated `810-DSGN-810.02-System_Landscape.md` ref _Introducere_ by briefly re-iterating the general landscape from `System_overview.md`
 * 230829piu_g created and initialized `810-DSGN-810.02-System_Landscape.md`
-
-
-
 
 
 
