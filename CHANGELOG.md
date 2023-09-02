@@ -40,8 +40,13 @@
 
 * wip...
 
-* ... 230902piu_e updated `810.02-System_Landscape.md` add component `books_metainfo`
+* 230902piu_e updated `810.02-System_Landscape.md`:
+    * add component BCAT catalogul cartilor (`books_metainfo/`) and summary description
+    * new doc  `810.05a-bcat_System_Process.md` ref in navigation
+    * updated all components ref to detailed docs to admonition style
+
 * 230902piu_d updated `810.02-System_Landscape.md`, section _HLPS help asistenta si manuale_
+
 * -#NOTE--- review & publish up from here ---
 
 * 230902piu_c created new components design documents as empty-wip files to be completed latter for:
