@@ -41,11 +41,11 @@
 
 * tbd... python command files `bkcmd_*.py` what `#!.../python3...(shebang)`` to have ? where to point ? `.wenv/Scripts/` ? `.env/bin/...`
 
-* tbd... update Landscape doc ref new objects created in `230830piu_e`
+* tbd... update Landscape doc ref new objects created in `230830piu_e` incl:
+    * `setup/`
+    * `books_metainfo/` with: `bk_tmpl/` moved here and `books_catalog.json` books catalog
 
 * tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
-
-* tdb... consider to  - think about
 
 
 * wip...
