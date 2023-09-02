@@ -45,13 +45,14 @@
 
 * tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
 
-* tdb... consider to move `bk_tmpl/` dir to project root - think about
+* tdb... consider to  - think about
 
 
 * wip...
 
 * -#NOTE--- review & publish up from here ---
 
+* 230902piu_b created a dir `books_metainfo/` and move move `bk_tmpl/` dir in + create an empty JSON: `books_catalog.json` for books catalog with meta data & information (@tested, generated new `docs/`)
 * 230902piu_a create `setup/` directory for first application setup
 * 230901piu_c created in `bk_tmpl/` a directory dedicated to *`mkdocs` configuration parts as `book_config_parts/`* that will be assembled in book master `bk_XXX_config.yml` (easier to `cat xxx >> bk_XXX_confif.yml`)
 * 230901piu_b generate and publish new app (230901 h10:00)
