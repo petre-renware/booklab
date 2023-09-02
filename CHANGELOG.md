@@ -28,8 +28,6 @@
 
 * ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
 
-* tbd... 
-
 * tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
 
 * tbd... update Landscape doc ref new objects created in `230830piu_e` incl:
