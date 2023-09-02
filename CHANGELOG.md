@@ -24,33 +24,36 @@
 
 
 
-### (#NOTE-next) 0.1.2 System Landscape first HLD
-* ...DO NOT USE YET...
+### 0.1.2 System Landscape first HLD (#TODO wip...)
+
 * ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
-* ...#NOTE mk a VM on oracle virtual box to test a final product - latter you can gen a Bootable ISO
 
+* tbd... 
 
-
-### 0.1.1 System Landscape drafts (#TODO-wip)
-
-* tbd... the directory structure for new module: 2 dirs, UI and srv side. Just enum them and will mk doc `Sys_Landscape_DLD` for each
-
-* tbd... directory for a new book will have (the template `bk_tmpl/`) name and generator cfg files "imported" from book name, or make a map file im doc_src route for `book.name ---> dir.name`
-
-* tbd...#FIXME_DROP_ME a master index for user space (to keep all books) makes sense? NOT TOO MUCH because this is another sys job, for ex, min.edu LMS, sys al unei edituri sau cel al managerului meu  e se ocupa de afcerea mea de scris carti ! CLEARLY BAD IDEA - root dir is the project itself... (may a new root for bk_tml .... will complicate too much)
-
-* tbd... python command files `bkcmd_*.py` what `#!.../python3...(shebang)`` to have ? where to point ? `.wenv/Scripts/` ? `.env/bin/...`
+* tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
 
 * tbd... update Landscape doc ref new objects created in `230830piu_e` incl:
     * `setup/`
     * `books_metainfo/` with: `bk_tmpl/` moved here and `books_catalog.json` books catalog
+    * #NOTE_IMP: directory structure for a module: 2 dirs: __UI__ and __SRV__ side, corresponding on static and dynamic side
 
-* tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
 
 
 * wip...
 
 * -#NOTE--- review & publish up from here ---
+
+
+
+
+
+
+
+
+
+
+
+### 0.1.1 System Landscape drafts (230902 17:45)
 
 * 230902piu_b created a dir `books_metainfo/` and move move `bk_tmpl/` dir in + create an empty JSON: `books_catalog.json` for books catalog with meta data & information (@tested, generated new `docs/`)
 * 230902piu_a create `setup/` directory for first application setup
