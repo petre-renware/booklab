@@ -22,9 +22,11 @@
 
 * @IMP#NOTE@230831piu_b HTML form in markdown and what POST is sent un submit - see commented section at beg of project `index.md`
 
+* tbd... ### 0.1.3 System Detailed Design (LLD) to fill in all components detailed doc des8gn
 
 
-### 0.1.2 System Landscape first HLD (#TODO wip...)
+
+### 0.1.2 System Landscape (HLD) (#TODO wip...)
 
 * ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
 
