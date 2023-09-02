@@ -40,6 +40,7 @@
 
 * wip...
 
+* 230902piu_d updated `810.02-System_Landscape.md`, section _HLPS help asistenta si manuale_
 * -#NOTE--- review & publish up from here ---
 
 * 230902piu_c created new components design documents as empty-wip files to be completed latter for:
