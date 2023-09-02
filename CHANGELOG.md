@@ -33,9 +33,7 @@
 * tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
 
 * tbd...wip... update Landscape doc ref new objects created in `230830piu_e` incl:
-    * `books_metainfo/` with: `bk_tmpl/` moved here and `books_catalog.json` books catalog
     * `setup/` directory
-    * `books_metainfo/` with: `bk_tmpl/` moved here and `books_catalog.json` books catalog
     * #NOTE_IMP: directory structure for a module: 2 dirs: __UI__ and __SRV__ side, corresponding on static and dynamic side
 
 
