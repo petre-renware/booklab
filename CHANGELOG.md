@@ -32,7 +32,7 @@
 
 * tbd...wip... update Landscape doc ref new objects created in `230830piu_e` incl:
     * `books_metainfo/` with: `bk_tmpl/` moved here and `books_catalog.json` books catalog
-    * `setup/`
+    * `setup/` directory
     * `books_metainfo/` with: `bk_tmpl/` moved here and `books_catalog.json` books catalog
     * #NOTE_IMP: directory structure for a module: 2 dirs: __UI__ and __SRV__ side, corresponding on static and dynamic side
 
@@ -48,7 +48,7 @@
     * orgm --> `810.05a-orgm_System_Process.md`
     * prvb --> `810.05a-prvb_System_Process.md`
     * dplb --> `810.05a-dplb_System_Process.md`
-    * **refered all of them in `Lanscape` document and in navigation (`mkdocs.yml`)
+    * refered all of them in `Lanscape` document and in navigation (`mkdocs.yml`)
 
 
 
