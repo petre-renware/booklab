@@ -40,6 +40,7 @@
 
 * wip...
 
+* 230902piu_e updated `810.02-System_Landscape.md` add component `books_metainfo`
 * 230902piu_d updated `810.02-System_Landscape.md`, section _HLPS help asistenta si manuale_
 * -#NOTE--- review & publish up from here ---
 
