@@ -22,25 +22,31 @@
 
 * @IMP#NOTE@230831piu_b HTML form in markdown and what POST is sent un submit - see commented section at beg of project `index.md`
 
+* tbd... ### 0.1.3 System Detailed Design (LLD) to fill in all components detailed doc des8gn
 
 
-### 0.1.2 System Landscape first HLD (#TODO wip...)
+
+### 0.1.2 System Landscape (HLD) (#TODO wip...)
 
 * ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
 
 * tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
 
 * tbd...wip... update Landscape doc ref new objects created in `230830piu_e` incl:
-    * `books_metainfo/` with: `bk_tmpl/` moved here and `books_catalog.json` books catalog
     * `setup/` directory
-    * `books_metainfo/` with: `bk_tmpl/` moved here and `books_catalog.json` books catalog
     * #NOTE_IMP: directory structure for a module: 2 dirs: __UI__ and __SRV__ side, corresponding on static and dynamic side
 
 
 
 * wip...
 
+* 230902piu_e updated `810.02-System_Landscape.md`:
+    * add component BCAT catalogul cartilor (`books_metainfo/`) and summary description
+    * new doc  `810.05a-bcat_System_Process.md` ref in navigation
+    * updated all components ref to detailed docs to admonition style
+
 * 230902piu_d updated `810.02-System_Landscape.md`, section _HLPS help asistenta si manuale_
+
 * -#NOTE--- review & publish up from here ---
 
 * 230902piu_c created new components design documents as empty-wip files to be completed latter for:
