@@ -1,32 +1,5 @@
-site_name: BookLab
-site_author: 'Petre Iordanescu, RENware Software Systems, petre.iordanescu@gmail.com'
-copyright: 'Copyright (c) RENware Software Systems'
 
-
-
-nav:
-    - BookLab:
-        - Acasa: index.md
-        - Carte noua: http://booklab.renware.eu/newb
-        - Editare materiale: http://booklab.renware.eu/edtm
-        - Sectiuni carte: http://booklab.renware.eu/orgm
-        - Vizualizare carte: http://booklab.renware.eu/prvb
-        - Asamblare carte: http://booklab.renware.eu/dplb
-    - Help:
-        - Manuale de utilizare: help/880.30-EUMA_catalog.md
-        - Manuale de configurare: help/880.30-ADMA_catalog.md
-        - Documentatia tehnica:
-            - Vedere de ansamblu: help/130.02-Overview.md
-            - Arhitectura: 810-DSGN/810.02-System_Landscape.md
-        - Manual BookLab (PDF): pdfs/print_page.html/print_page.pdf
-    - About:
-        - Licenta mea: wip.md #TODO tbd... este un http catre o ruta dinamica din produs
-        - Suport: https://www.renware.eu/support.html
-        - Contact: https://www.renware.eu/contact.html
-        - Cum cumpar: https://www.renware.eu/resources.html#how-to-buy-from-renware
-        - Despre BookLab: wip.md #TODO `about.md` eventual cu README din pj root, echipa, etc, ce ar tb sa fie acolo...
-
-
+#NOTE - this is an example part - section file - REVIEW ME @ FINAL
 
 
 markdown_extensions:
@@ -167,20 +140,5 @@ theme:
 
 # or can use readthedocstheme
 # theme: readthedocs
-
-
-# directory where start to search or markdown sources
-docs_dir: './doc_src'
-
-# root directory where to be generated portal
-site_dir: './static_portal' #NOTE: [piu] this is the working directory; final is in `docs/`` which is published through GitHub (chk but @ 230706 petre-dev branch)
-
-# other useful configurations
-use_directory_urls: false # allow link between pages to work properly as static site an "callable" as `file:///...`
-
-
-# files, dirs to exclude at BookLab project creation --- #NOTE#FIXME temporary commented out up to clearing specs because it will not deply `bk_*/` directories
-#exclude_docs: |
-#  bk_*/
 
 
