@@ -52,7 +52,8 @@
 
 * -#NOTE--- review & publish up from here ---
 
-* 230902piu_c created in `bk_tmpl/` a directory dedicated to *`mkdocs` configuration parts as `book_config_parts/`* that will be assembled in book master `bk_XXX_config.yml` (easier to `cat xxx >> bk_XXX_confif.yml`)
+* 230902piu_a create `setup/` directory for first application setup
+* 230901piu_c created in `bk_tmpl/` a directory dedicated to *`mkdocs` configuration parts as `book_config_parts/`* that will be assembled in book master `bk_XXX_config.yml` (easier to `cat xxx >> bk_XXX_confif.yml`)
 * 230901piu_b generate and publish new app (230901 h10:00)
 * 230901piu_a more actions:
     * [x] renamed files of `bk_tmpl/doc_src/` to `raw_source_docs/` and let a note in corresponding `mkdocs.yml.new_name` (@cmd `mkdocs build --site-dir my_book/`)
