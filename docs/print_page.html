@@ -539,6 +539,20 @@
   
   
     <li class="md-nav__item">
+      <a href="810-DSGN/810.05a-bcat_System_Process.html" class="md-nav__link">
+        catalog carti BCAT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="810-DSGN/810.05a-newb_System_Process.html" class="md-nav__link">
         proces NEWB
       </a>
@@ -1138,12 +1152,14 @@
 <li><a href="#810-dsgn-810.02-system_landscape-serverul-http-dinamic">Serverul HTTP dinamic</a></li>
 </ul>
 </li>
+<li><a href="#810-dsgn-810.02-system_landscape-bcat-catalogul-cartilor">BCAT catalogul cartilor</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-newb-creare-carte-noua">NEWB creare carte noua</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-edtm-preluare-si-editare-continut">EDTM preluare si editare continut</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-orgm-organizare-structura-carte">ORGM organizare structura carte</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-prvb-previzualizare-si-testare-carte">PRVB previzualizare si testare carte</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-dplb-asamblare-publicare-carte">DPLB asamblare publicare carte</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-hlps-help-asistenta-si-manuale">HLPS help asistenta si manuale</a></li>
+<li><a href="#810-dsgn-810.02-system_landscape-todo-section-and-work-scratches">#TODO section and work scratches</a></li>
 </ul>
 </li>
 </ul>
@@ -1154,12 +1170,14 @@
 <pre class="mermaid"><code>graph TD
     bklab([BookLab])
     newb[[NEWB \n Carte noua]]
+    bcat[[BCAT \n Catalogul \n cartilor]]
     edtm[[EDTM \n Creare Editare \n documente]]
     orgm[[ORGM \n Organizare \n documente]]
     prvm[[PRVB \n Previzualizare \n carte]]
     dplm[[DPLB \n Asamblare \n carte]]
     hlps[[HLPS \n Manuale \n aplicatie]]
 
+    bklab --- bcat
     bklab ---- newb
     bklab ---- edtm
     bklab ---- orgm
@@ -1214,34 +1232,63 @@
 <li>implentare: implicit <code>gunicorn</code> sau <code>nginx wsgi</code>, <code>apache uwsgi</code> pentru inplementari "on premises" folosind componentele clientului</li>
 </ul>
 </div>
+<h2 id="810-dsgn-810.02-system_landscape-bcat-catalogul-cartilor">BCAT catalogul cartilor</h2>
+<p>Acest modul este responsabil de catalogul (lista) cartilor si de sablonul de creare a unei carti. Astfel el contine urmatoarele elemente:</p>
+<ul>
+<li>
+<p><strong>sablonul</strong> implicit de creare a unei carti noi (si singurul in versiunea 1 a aplicatiei). Datele acestui sablon se afla in subdirectorul <code>bk_tmpl/</code>.</p>
+</li>
+<li>
+<p><strong>catalogul cartilor</strong> ce este baza de date cu informatiile de baza despre carti. Acest catalog contine informatiile necesare pentru identificarea si referentierea unei carti in aplicatie. <em>Datele detaliate</em> aferente unei carti se gasesc in directorul aferent acesteia, director al carui nume se regaseste in acest catalog. Catalogul este stocat in format <code>JSON</code> si se gaseste in fisierul <code>books_catalog.json</code>.</p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Documentul detaliat</p>
+<p><a href="#810-dsgn-810.05a-bcat_system_process"><code>810.05a-bcat_System_Process.md</code></a></p>
+</div>
 <h2 id="810-dsgn-810.02-system_landscape-newb-creare-carte-noua">NEWB creare carte noua</h2>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
-<ul>
-<li><a href="#810-dsgn-810.05a-newb_system_process">Detailed document here</a></li>
-</ul>
+<div class="admonition info">
+<p class="admonition-title">Documentul detaliat</p>
+<p><a href="#810-dsgn-810.05a-newb_system_process">810.05a-newb_System_Process.md</a></p>
+</div>
 <h2 id="810-dsgn-810.02-system_landscape-edtm-preluare-si-editare-continut">EDTM preluare si editare continut</h2>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
-<ul>
-<li><a href="#810-dsgn-810.05a-edtm_system_process">Detailed document here</a></li>
-</ul>
+<div class="admonition info">
+<p class="admonition-title">Documentul detaliat</p>
+<p><a href="#810-dsgn-810.05a-edtm_system_process"><code>810.05a-edtm_System_Process.md</code></a></p>
+</div>
 <h2 id="810-dsgn-810.02-system_landscape-orgm-organizare-structura-carte">ORGM organizare structura carte</h2>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
-<ul>
-<li><a href="#810-dsgn-810.05a-orgm_system_process">Detailed document here</a></li>
-</ul>
+<div class="admonition info">
+<p class="admonition-title">Documentul detaliat</p>
+<p><a href="#810-dsgn-810.05a-orgm_system_process"><code>810.05a-orgm_System_Process.md</code></a></p>
+</div>
 <h2 id="810-dsgn-810.02-system_landscape-prvb-previzualizare-si-testare-carte">PRVB previzualizare si testare carte</h2>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
-<ul>
-<li><a href="#810-dsgn-810.05a-prvb_system_process">Detailed document here</a></li>
-</ul>
+<div class="admonition info">
+<p class="admonition-title">Documentul detaliat</p>
+<p><a href="#810-dsgn-810.05a-prvb_system_process"><code>810.05a-prvb_System_Process.md</code></a></p>
+</div>
 <h2 id="810-dsgn-810.02-system_landscape-dplb-asamblare-publicare-carte">DPLB asamblare publicare carte</h2>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
-<ul>
-<li><a href="#810-dsgn-810.05a-dplb_system_process">Detailed document here</a></li>
-</ul>
+<div class="admonition info">
+<p class="admonition-title">Documentul detaliat</p>
+<p><a href="#810-dsgn-810.05a-dplb_system_process"><code>810.05a-dplb_System_Process.md</code></a></p>
+</div>
 <h2 id="810-dsgn-810.02-system_landscape-hlps-help-asistenta-si-manuale">HLPS help asistenta si manuale</h2>
-<p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" />
--#NOTE: what design to make here??? it exists !!! under static portal the help zone... maybe just write some words about that</p>
+<p>Manuale aplicatiei sunt de doua feluri (categorii) majore:</p>
+<ul>
+<li>
+<p><strong>Manuale de utilizare</strong>, acestea prezinta informatii pentru utilizarea curenta a aplicatiei. Catalogul acestora se poate accesa de la <a href="#help-880.30-euma_catalog"><code>&lt;SERVER NAME&gt;/help/880.30-EUMA_catalog.html</code></a>.</p>
+</li>
+<li>
+<p><strong>Manuale de configurare</strong>, acestea prezinta informatii pentru configurarea aplicatiei. Catalogul acestora se poate accesa de la <a href="#help-880.30-adma_catalog"><code>&lt;SERVER NAME&gt;/help/880.30-ADMA_catalog.html</code></a>.</p>
+</li>
+</ul>
+<p>Pentru ambele tipuri de manuale se va prezenta un <em>catalog</em> ce contine lista tuturor manualelor disponibile in acea categorie. Lista contine numele manualului, o scurta descriere (daca numele nu este suficient de elocvent) si linkul catre manualul respectiv.</p>
+<p>Manualele sunt localizate in sectiunea statica a aplicatiei (vezi si sectiunea <a href="#810-dsgn-810.02-system_landscape-serverul-http-static">"Serverul HTTP static"</a>) in directorul <em><code>docs/help/</code></em>.</p>
+<h2 id="810-dsgn-810.02-system_landscape-todo-section-and-work-scratches">#TODO section and work scratches</h2>
 <p>-#TODO_wip_for_## BookLab deployed application book template directory</p>
 <p>-#NOTE exista un doc dedicat application directory...</p>
 <p>-#NOTE: this is all tree from all project <code>docs_src/</code> - keep what you need abd clean characters (just let indents) to work <code>tree</code> extension</p>
@@ -1289,7 +1336,20 @@
 ├──<span class="w"> </span>📄<span class="w"> </span>REN_stamp_logo_transparent.png
 ├──<span class="w"> </span>📄<span class="w"> </span>REN_stamp_logo_transparent.svg
 └──<span class="w"> </span>📄<span class="w"> </span>under_maintenance.png
-</code></pre></div></section><section class="print-page" id="810-dsgn-810.05a-newb_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
+</code></pre></div></section><section class="print-page" id="810-dsgn-810.05a-bcat_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
+<small markdown><strong>BookLab System</strong><br>
+<em>(c) 2023 RENware Software Systems</em>
+</small><br><br></p>
+<h1 id="810-dsgn-810.05a-bcat_system_process-bcat-catalogul-cartilor">BCAT catalogul cartilor</h1>
+<p><strong><em>Cuprins:</em></strong></p>
+<div class="toc">
+<ul>
+<li><a href="#810-dsgn-810.05a-bcat_system_process-bcat-catalogul-cartilor">BCAT catalogul cartilor</a></li>
+</ul>
+</div>
+<hr />
+<p><img alt="wip page" src="pictures/under_maintenance.png" /></p>
+<p>-#TODO... UPCOMING...</p></section><section class="print-page" id="810-dsgn-810.05a-newb_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
 <small markdown><strong>BookLab System</strong><br>
 <em>(c) 2023 RENware Software Systems</em>
 </small><br><br></p>
