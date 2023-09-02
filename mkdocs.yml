@@ -18,6 +18,11 @@ nav:
         - Documentatia tehnica:
             - Vedere de ansamblu: help/130.02-Overview.md
             - Arhitectura: 810-DSGN/810.02-System_Landscape.md
+            - proces NEWB: 810-DSGN/810.05a-newb_System_Process.md
+            - proces EDTM: 810-DSGN/810.05a-edtm_System_Process.md
+            - proces ORGM: 810-DSGN/810.05a-orgm_System_Process.md
+            - proces PRVB: 810-DSGN/810.05a-prvb_System_Process.md
+            - proces DPLB: 810-DSGN/810.05a-dplb_System_Process.md
         - Manual BookLab (PDF): pdfs/print_page.html/print_page.pdf
     - About:
         - Licenta mea: wip.md #TODO tbd... este un http catre o ruta dinamica din produs

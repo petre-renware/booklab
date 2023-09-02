@@ -30,7 +30,8 @@
 
 * tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
 
-* tbd... update Landscape doc ref new objects created in `230830piu_e` incl:
+* tbd...wip... update Landscape doc ref new objects created in `230830piu_e` incl:
+    * `books_metainfo/` with: `bk_tmpl/` moved here and `books_catalog.json` books catalog
     * `setup/`
     * `books_metainfo/` with: `bk_tmpl/` moved here and `books_catalog.json` books catalog
     * #NOTE_IMP: directory structure for a module: 2 dirs: __UI__ and __SRV__ side, corresponding on static and dynamic side
@@ -40,6 +41,16 @@
 * wip...
 
 * -#NOTE--- review & publish up from here ---
+
+* 230902piu_c created new components design documents as empty-wip files to be completed latter for:
+    * newb --> `810.05a-newb_System_Process.md`
+    * edtm --> `810.05a-edtm_System_Process.md`
+    * orgm --> `810.05a-orgm_System_Process.md`
+    * prvb --> `810.05a-prvb_System_Process.md`
+    * dplb --> `810.05a-dplb_System_Process.md`
+    * **refered all of them in `Lanscape` document and in navigation (`mkdocs.yml`)
+
+
 
 
 
