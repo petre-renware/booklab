@@ -47,6 +47,7 @@
     * created a detailed design document `810.05a-sysInit_System_Process.md`
     * updated `810.02-System_Landscape.md`
     * referred in navigation
+    * published
 * 230902piu_f review, fix, update and publish for `230902piu_d`, `230902piu_e`
 * 230902piu_e updated `810.02-System_Landscape.md`:
     * add component BCAT catalogul cartilor (`books_metainfo/`) and summary description

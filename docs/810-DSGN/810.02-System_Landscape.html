@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Petre Iordanescu, RENware Software Systems, petre.iordanescu@gmail.com" name="author"/>
 <link href="../help/130.02-Overview.html" rel="prev"/>
-<link href="810.05a-bcat_System_Process.html" rel="next"/>
+<link href="810.05a-sysInit_System_Process.html" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.2, mkdocs-material-9.1.21" name="generator"/>
 <title>Arhitectura - BookLab</title>
@@ -291,23 +291,9 @@ div.download-btn {
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#pornirea-si-initializarea-sistemului">
-    Pornirea si initializarea sistemului
+<a class="md-nav__link" href="#sysinit-initializare-sistem">
+    sysInit Initializare sistem
   </a>
-<nav aria-label="Pornirea si initializarea sistemului" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#serverul-http-static">
-    Serverul HTTP static
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#serverul-http-dinamic">
-    Serverul HTTP dinamic
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#bcat-catalogul-cartilor">
@@ -351,6 +337,11 @@ div.download-btn {
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="810.05a-sysInit_System_Process.html">
+        proces sysInit
+      </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="810.05a-bcat_System_Process.html">
@@ -453,23 +444,9 @@ div.download-btn {
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#pornirea-si-initializarea-sistemului">
-    Pornirea si initializarea sistemului
+<a class="md-nav__link" href="#sysinit-initializare-sistem">
+    sysInit Initializare sistem
   </a>
-<nav aria-label="Pornirea si initializarea sistemului" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#serverul-http-static">
-    Serverul HTTP static
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#serverul-http-dinamic">
-    Serverul HTTP dinamic
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#bcat-catalogul-cartilor">
@@ -528,11 +505,7 @@ div.download-btn {
 <ul>
 <li><a href="#arhitectura-sistemului">Arhitectura sistemului</a><ul>
 <li><a href="#introducere">Introducere</a></li>
-<li><a href="#pornirea-si-initializarea-sistemului">Pornirea si initializarea sistemului</a><ul>
-<li><a href="#serverul-http-static">Serverul HTTP static</a></li>
-<li><a href="#serverul-http-dinamic">Serverul HTTP dinamic</a></li>
-</ul>
-</li>
+<li><a href="#sysinit-initializare-sistem">sysInit Initializare sistem</a></li>
 <li><a href="#bcat-catalogul-cartilor">BCAT catalogul cartilor</a></li>
 <li><a href="#newb-creare-carte-noua">NEWB creare carte noua</a></li>
 <li><a href="#edtm-preluare-si-editare-continut">EDTM preluare si editare continut</a></li>
@@ -557,7 +530,9 @@ div.download-btn {
     prvm[[PRVB \n Previzualizare \n carte]]
     dplm[[DPLB \n Asamblare \n carte]]
     hlps[[HLPS \n Manuale \n aplicatie]]
+    sysInit[[sysInit \n Initializare \n sistem]]
 
+    bklab --- sysInit
     bklab --- bcat
     bklab ---- newb
     bklab ---- edtm
@@ -575,13 +550,13 @@ div.download-btn {
     dplm --&gt; aprvfl
     dplm --&gt; pdfbk</code></pre>
 <blockquote>
-<p>Referitor la <em>locatia fizica a componentelor</em> se face remarca ca toate componentele sistemului ce prezinta interfata vizuala cu utilizatorul au reprezentare atit in directorul <code>doc_src/</code> pentru partea de <em>front-end</em> (client side) cit si in radacina intregului sistem pentru partea de <em>back-end</em> (server-side).</p>
+<p>Referitor la <em>locatia fizica a componentelor</em> se face remarca ca toate componentele sistemului ce prezinta interfata vizuala cu utilizatorul au reprezentare atit in directorul <code>docs/</code> pentru partea de <em>front-end</em> (client side) cit si in radacina intregului sistem pentru partea de <em>back-end</em> (server-side). <small>(Directorul <code>docs/</code> este generat prin compilarea aplicatiei in faza de devellopment din directorul <code>doc_src/</code>.)</small></p>
 </blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Conceptele de server si client</p>
 <p>Se atrage atentia asupra tratarii corecte din punct de vedere conceptual a notiunilor de <code>`server  si</code>clent`. Chiar daca locatia de instalare a sistemului nu pare "un server cu multi cai putere", arhitectura conceptuala de client-server este pe deplin implementata cu respectarea tuturor principiilor aferente si o consitentizare a acestui lucru va permite o intelegere corecta a detaliilor tehnice ale sistemului de catre echipa tehnica de lucru.</p>
 </div>
-<h2 id="pornirea-si-initializarea-sistemului">Pornirea si initializarea sistemului</h2>
+<h2 id="sysinit-initializare-sistem">sysInit Initializare sistem</h2>
 <p>Pornirea sistemului comporta doua mari componente "on top", si anume:</p>
 <ul>
 <li>
@@ -591,26 +566,12 @@ div.download-btn {
 <p><strong>serverul HTTP dinamic</strong> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
 </li>
 </ul>
-<h3 id="serverul-http-static">Serverul HTTP static</h3>
-<p>Acesta este un server HTTP tip <em>CGI</em> ce raspunde pe portul 80 (portul clasic, implicit pentru sisteme accesabile web).</p>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
-<li>port: 80</li>
-<li>nume: nume domeniu unde este publicat sistemul prefixat cu <code>booklab</code> (ca si hostname)</li>
-<li>acces: public, deschis in extern</li>
-<li>implentare: implicit <code>python http.server</code> sau <code>nginx</code>, <code>apache http</code>, etc pentru inplementari "on premises" folosind componentele clientului</li>
-</ul>
-</div>
-<h3 id="serverul-http-dinamic">Serverul HTTP dinamic</h3>
-<p>Acesta este un server HTTP tip <em>WSGI</em> ce raspunde pe portul 7111.</p>
-<div class="admonition info">
-<p class="admonition-title">parametrii</p>
-<ul>
-<li>port: 7111</li>
-<li>nume: numai <code>localhost</code></li>
-<li>acces: strict local, nedeschis</li>
-<li>implentare: implicit <code>gunicorn</code> sau <code>nginx wsgi</code>, <code>apache uwsgi</code> pentru inplementari "on premises" folosind componentele clientului</li>
+<li><em>Code-name</em>: <code>sysInit</code></li>
+<li><em>locatie</em>: <code>sysInit/</code></li>
+<li><em>Documentul descriere detaliat</em>: <a href="810.05a-sysInit_System_Process.html"><code>810.05a-sysInit_System_Process.md</code></a></li>
 </ul>
 </div>
 <h2 id="bcat-catalogul-cartilor">BCAT catalogul cartilor</h2>
@@ -723,7 +684,7 @@ div.download-btn {
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 2, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 3, 2023</span>
 </small>
 </div>
 </article>

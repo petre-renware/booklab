@@ -539,6 +539,20 @@
   
   
     <li class="md-nav__item">
+      <a href="810-DSGN/810.05a-sysInit_System_Process.html" class="md-nav__link">
+        proces sysInit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="810-DSGN/810.05a-bcat_System_Process.html" class="md-nav__link">
         catalog carti BCAT
       </a>
@@ -1147,11 +1161,7 @@
 <ul>
 <li><a href="#810-dsgn-810.02-system_landscape-arhitectura-sistemului">Arhitectura sistemului</a><ul>
 <li><a href="#810-dsgn-810.02-system_landscape-introducere">Introducere</a></li>
-<li><a href="#810-dsgn-810.02-system_landscape-pornirea-si-initializarea-sistemului">Pornirea si initializarea sistemului</a><ul>
-<li><a href="#810-dsgn-810.02-system_landscape-serverul-http-static">Serverul HTTP static</a></li>
-<li><a href="#810-dsgn-810.02-system_landscape-serverul-http-dinamic">Serverul HTTP dinamic</a></li>
-</ul>
-</li>
+<li><a href="#810-dsgn-810.02-system_landscape-sysinit-initializare-sistem">sysInit Initializare sistem</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-bcat-catalogul-cartilor">BCAT catalogul cartilor</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-newb-creare-carte-noua">NEWB creare carte noua</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-edtm-preluare-si-editare-continut">EDTM preluare si editare continut</a></li>
@@ -1176,7 +1186,9 @@
     prvm[[PRVB \n Previzualizare \n carte]]
     dplm[[DPLB \n Asamblare \n carte]]
     hlps[[HLPS \n Manuale \n aplicatie]]
+    sysInit[[sysInit \n Initializare \n sistem]]
 
+    bklab --- sysInit
     bklab --- bcat
     bklab ---- newb
     bklab ---- edtm
@@ -1194,13 +1206,13 @@
     dplm --&gt; aprvfl
     dplm --&gt; pdfbk</code></pre>
 <blockquote>
-<p>Referitor la <em>locatia fizica a componentelor</em> se face remarca ca toate componentele sistemului ce prezinta interfata vizuala cu utilizatorul au reprezentare atit in directorul <code>doc_src/</code> pentru partea de <em>front-end</em> (client side) cit si in radacina intregului sistem pentru partea de <em>back-end</em> (server-side).</p>
+<p>Referitor la <em>locatia fizica a componentelor</em> se face remarca ca toate componentele sistemului ce prezinta interfata vizuala cu utilizatorul au reprezentare atit in directorul <code>docs/</code> pentru partea de <em>front-end</em> (client side) cit si in radacina intregului sistem pentru partea de <em>back-end</em> (server-side). <small>(Directorul <code>docs/</code> este generat prin compilarea aplicatiei in faza de devellopment din directorul <code>doc_src/</code>.)</small></p>
 </blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Conceptele de server si client</p>
 <p>Se atrage atentia asupra tratarii corecte din punct de vedere conceptual a notiunilor de <code>`server  si</code>clent`. Chiar daca locatia de instalare a sistemului nu pare "un server cu multi cai putere", arhitectura conceptuala de client-server este pe deplin implementata cu respectarea tuturor principiilor aferente si o consitentizare a acestui lucru va permite o intelegere corecta a detaliilor tehnice ale sistemului de catre echipa tehnica de lucru.</p>
 </div>
-<h2 id="810-dsgn-810.02-system_landscape-pornirea-si-initializarea-sistemului">Pornirea si initializarea sistemului</h2>
+<h2 id="810-dsgn-810.02-system_landscape-sysinit-initializare-sistem">sysInit Initializare sistem</h2>
 <p>Pornirea sistemului comporta doua mari componente "on top", si anume:</p>
 <ul>
 <li>
@@ -1210,26 +1222,12 @@
 <p><strong>serverul HTTP dinamic</strong> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
 </li>
 </ul>
-<h3 id="810-dsgn-810.02-system_landscape-serverul-http-static">Serverul HTTP static</h3>
-<p>Acesta este un server HTTP tip <em>CGI</em> ce raspunde pe portul 80 (portul clasic, implicit pentru sisteme accesabile web).</p>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
-<li>port: 80</li>
-<li>nume: nume domeniu unde este publicat sistemul prefixat cu <code>booklab</code> (ca si hostname)</li>
-<li>acces: public, deschis in extern</li>
-<li>implentare: implicit <code>python http.server</code> sau <code>nginx</code>, <code>apache http</code>, etc pentru inplementari "on premises" folosind componentele clientului</li>
-</ul>
-</div>
-<h3 id="810-dsgn-810.02-system_landscape-serverul-http-dinamic">Serverul HTTP dinamic</h3>
-<p>Acesta este un server HTTP tip <em>WSGI</em> ce raspunde pe portul 7111.</p>
-<div class="admonition info">
-<p class="admonition-title">parametrii</p>
-<ul>
-<li>port: 7111</li>
-<li>nume: numai <code>localhost</code></li>
-<li>acces: strict local, nedeschis</li>
-<li>implentare: implicit <code>gunicorn</code> sau <code>nginx wsgi</code>, <code>apache uwsgi</code> pentru inplementari "on premises" folosind componentele clientului</li>
+<li><em>Code-name</em>: <code>sysInit</code></li>
+<li><em>locatie</em>: <code>sysInit/</code></li>
+<li><em>Documentul descriere detaliat</em>: <a href="#810-dsgn-810.05a-sysinit_system_process"><code>810.05a-sysInit_System_Process.md</code></a></li>
 </ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-bcat-catalogul-cartilor">BCAT catalogul cartilor</h2>
@@ -1336,7 +1334,53 @@
 ├──<span class="w"> </span>📄<span class="w"> </span>REN_stamp_logo_transparent.png
 ├──<span class="w"> </span>📄<span class="w"> </span>REN_stamp_logo_transparent.svg
 └──<span class="w"> </span>📄<span class="w"> </span>under_maintenance.png
-</code></pre></div></section><section class="print-page" id="810-dsgn-810.05a-bcat_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
+</code></pre></div></section><section class="print-page" id="810-dsgn-810.05a-sysinit_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
+<small markdown><strong>BookLab System</strong><br>
+<em>(c) 2023 RENware Software Systems</em>
+</small><br><br></p>
+<h1 id="810-dsgn-810.05a-sysinit_system_process-sysinit-initializare-sistem">sysInit Initializare sistem</h1>
+<p><strong><em>Cuprins:</em></strong></p>
+<div class="toc">
+<ul>
+<li><a href="#810-dsgn-810.05a-sysinit_system_process-sysinit-initializare-sistem">sysInit Initializare sistem</a><ul>
+<li><a href="#810-dsgn-810.05a-sysinit_system_process-serverul-http-static">Serverul HTTP static</a></li>
+<li><a href="#810-dsgn-810.05a-sysinit_system_process-serverul-http-dinamic">Serverul HTTP dinamic</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<p>Pornirea sistemului comporta doua mari componente "on top", si anume:</p>
+<ul>
+<li>
+<p><strong>serverul HTTP static</strong> acesta va deservi partea de web compusa din "fisiere" statice. Acestea reprezinta fisierele HTML aferente interfetei UI dar si celelate fisiere "auxiliare" precum: CSS-uri, JS-uri, imagini, etc</p>
+</li>
+<li>
+<p><strong>serverul HTTP dinamic</strong> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
+</li>
+</ul>
+<h2 id="810-dsgn-810.05a-sysinit_system_process-serverul-http-static">Serverul HTTP static</h2>
+<p>Acesta este un server HTTP tip <em>CGI</em> ce raspunde pe portul 80 (portul clasic, implicit pentru sisteme accesabile web).</p>
+<div class="admonition info">
+<p class="admonition-title">parametrii</p>
+<ul>
+<li><em>port</em>: 80</li>
+<li><em>nume ruta URL</em>: nume domeniu unde este publicat sistemul prefixat cu <code>booklab</code> (ca si hostname)</li>
+<li><em>acces</em>: public, deschis in extern</li>
+<li><em>implentare</em>: implicit <code>python http.server</code> sau <code>nginx</code>, <code>apache http</code>, etc pentru inplementari "on premises" folosind componentele clientului</li>
+</ul>
+</div>
+<h2 id="810-dsgn-810.05a-sysinit_system_process-serverul-http-dinamic">Serverul HTTP dinamic</h2>
+<p>Acesta este un server HTTP tip <em>WSGI</em> ce raspunde pe portul 7111.</p>
+<div class="admonition info">
+<p class="admonition-title">parametrii</p>
+<ul>
+<li><em>port</em>: 7111</li>
+<li><em>nume ruta URL</em>: numai <code>localhost</code></li>
+<li><em>acces</em>: strict local, nedeschis</li>
+<li><em>implentare</em>: implicit <code>gunicorn</code> sau <code>nginx wsgi</code>, <code>apache uwsgi</code> pentru inplementari "on premises" folosind componentele clientului</li>
+</ul>
+</div></section><section class="print-page" id="810-dsgn-810.05a-bcat_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
 <small markdown><strong>BookLab System</strong><br>
 <em>(c) 2023 RENware Software Systems</em>
 </small><br><br></p>
