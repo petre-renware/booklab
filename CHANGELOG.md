@@ -35,7 +35,7 @@
 
 * wip...
 
-* 230903piu_e application created UI files for components as `doc_src/bcat/index.md` and refered as new app menu entry in `mkdocs.yml`
+* 230903piu_e created "wip...upcoming" UI code-file for BCAT component as `doc_src/bcat/index.md` and refered as new app menu entry in `mkdocs.yml`
 
 * 230903piu_d created `componet_XXX_UI_template/index.html` as model of how will need
 to be client-side UI of each component
