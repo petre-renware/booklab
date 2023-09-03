@@ -13,20 +13,18 @@
 
 
 
-## 0.1 First System Design
+## 0.1 First System Design (FUTURE...)
 
+* tbd...cu ce faci [editarea textului markdown "clasic"](https://blog.miguelgrinberg.com/post/flask-pagedown-markdown-editor-extension-for-flask-wtf). Also Jupiter notebook PLUG IN has editor, check it
 
-* tbd... rules how to deploy **BookLab** app in order to be used by client (what dir to copy and where - app dire, docs ref help dir...)
+* @IMP#NOTE@230831piu_b HTML form in markdown and what POST is sent on submit - see commented section at beg of project `index.md`
 
-* tbd...cu ce faci [editarea textului markdown "clasic"](https://blog.miguelgrinberg.com/post/flask-pagedown-markdown-editor-extension-for-flask-wtf)
-
-* @IMP#NOTE@230831piu_b HTML form in markdown and what POST is sent un submit - see commented section at beg of project `index.md`
-
-* tbd... ### 0.1.3 System Detailed Design (LLD) to fill in all components detailed doc des8gn
+* tbd... ### 0.1.3 System Detailed Design (LLD) to fill in all components detailed doc design
+* tbd... here too, at each component _markdown_ use _Jinja raw block or simple escaping_ to allow for server 2nd processing (for ex at FormsWTF)
 
 
 
-### 0.1.2 System Landscape (HLD) (#TODO wip...)
+### 0.1.2 System Landscape (HLD) (#TODO...wip...crt)
 
 * ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
 
