@@ -9,7 +9,7 @@
 
 # Catalogul cartilor
 
-![wip page](pictures/under_maintenance.png)
+![wip page](../pictures/under_maintenance.png)
 
 ...UPCOMING...
 
