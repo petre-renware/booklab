@@ -7,6 +7,7 @@ copyright: 'Copyright (c) RENware Software Systems'
 nav:
     - BookLab:
         - Acasa: index.md
+        - Catalog carti: bcat/ #FIXME test that should direct-fwd to `http://<crt_server_name>/bcat/`
         - Carte noua: http://booklab.renware.eu/newb
         - Editare materiale: http://booklab.renware.eu/edtm
         - Sectiuni carte: http://booklab.renware.eu/orgm
