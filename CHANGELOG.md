@@ -35,10 +35,13 @@
 
 * wip...
 
+* -#FIXME_TEST_ME 230903piu_e created "wip...upcoming" UI code-file for BCAT component as `doc_src/bcat/index.md` and refered as new app menu entry in `mkdocs.yml`
+
 * 230903piu_d created `componet_XXX_UI_template/index.html` as model of how will need
 to be client-side UI of each component
 
 * 230903piu_c fixed bugs ref SERVER & CLIENT `code-name`(s) in doc `810.02-System_Landscape.md` as *it is the same* but only the `<server_name>` from URL route has different assredding ports, ie 80 for client and 7111 for server
+
 * -#NOTE--- review & publish up from here ---
 
 * 230903piu_b simple reorg of information in doc `810.02-System_Landscape.md`
