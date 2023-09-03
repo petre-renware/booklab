@@ -32,13 +32,13 @@
 
 * tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
 
-* tbd...wip... update Landscape doc ref new objects created in `230830piu_e` incl:
-    * `setup/` directory
-    * #NOTE_IMP: directory structure for a module: 2 dirs: __UI__ and __SRV__ side, corresponding on static and dynamic side
+* tbd... update Landscape doc ref new objects created in `230830piu_e` for `setup/` directory
 
 
 
 * wip...
+
+* 230903piu_b simple reorg of information in doc `810.02-System_Landscape.md`
 
 * -#NOTE--- review & publish up from here ---
 
