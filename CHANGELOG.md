@@ -32,16 +32,15 @@
 
 * tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
 
-* tbd... update Landscape doc ref new objects created in `230830piu_e` for `setup/` directory
-
+* tbd... update Landscape doc ref `setup/` directory
 
 
 * wip...
 
-* 230903piu_b simple reorg of information in doc `810.02-System_Landscape.md`
 
 * -#NOTE--- review & publish up from here ---
 
+* 230903piu_b simple reorg of information in doc `810.02-System_Landscape.md`
 * 230903piu_a create a `sysInit` component:
     * populate it with minimum files to make it usable module
     * created a detailed design document `810.05a-sysInit_System_Process.md`

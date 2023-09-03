@@ -1206,11 +1206,16 @@
     dplm --&gt; aprvfl
     dplm --&gt; pdfbk</code></pre>
 <blockquote>
-<p>Referitor la <em>locatia fizica a componentelor</em> se face remarca ca toate componentele sistemului ce prezinta interfata vizuala cu utilizatorul au reprezentare atit in directorul <code>docs/</code> pentru partea de <em>front-end</em> (client side) cit si in radacina intregului sistem pentru partea de <em>back-end</em> (server-side). <small>(Directorul <code>docs/</code> este generat prin compilarea aplicatiei in faza de devellopment din directorul <code>doc_src/</code>.)</small></p>
+<p>Referitor la <em>locatia fizica a componentelor</em> se face remarca ca toate componentele sistemului ce prezinta interfata vizuala cu utilizatorul au reprezentare atit in directorul <code>docs/</code> pentru partea de <em>front-end</em> (client side) cit si in radacina intregului sistem pentru partea de <em>back-end</em> (server-side). <small>(Directorul <code>docs/</code> este generat prin compilarea aplicatiei in faza de development din directorul <code>doc_src/</code>.)</small></p>
 </blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Conceptele de server si client</p>
-<p>Se atrage atentia asupra tratarii corecte din punct de vedere conceptual a notiunilor de <code>`server  si</code>clent`. Chiar daca locatia de instalare a sistemului nu pare "un server cu multi cai putere", arhitectura conceptuala de client-server este pe deplin implementata cu respectarea tuturor principiilor aferente si o consitentizare a acestui lucru va permite o intelegere corecta a detaliilor tehnice ale sistemului de catre echipa tehnica de lucru.</p>
+<ul>
+<li>Se atrage atentia asupra tratarii corecte din punct de vedere conceptual a notiunilor de <code>server</code>  si <code>client</code>. </li>
+<li>Chiar daca locatia de instalare a sistemului nu pare "un server cu multi cai putere", arhitectura conceptuala de client-server este pe deplin implementata cu respectarea tuturor principiilor aferente si o consitentizare a acestui lucru va permite o intelegere corecta a detaliilor tehnice ale sistemului de catre echipa tehnica de lucru.</li>
+<li>Locatiile fizice ale componentelor sunt prezentate NUMAI pentru <em>partea de SERVER</em>.</li>
+<li>Locatiile pentru <em>partea de CLIENT</em> sunt situate dupa o organizare clasica de site static incepind din directorul <code>docs/</code> iar codul este prezent in fisier <code>.html</code> (in rare cazuri pot fi mai multe dar incep cu acelasi prefix).</li>
+</ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-sysinit-initializare-sistem">sysInit Initializare sistem</h2>
 <p>Pornirea sistemului comporta doua mari componente "on top", si anume:</p>
@@ -1225,8 +1230,9 @@
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
-<li><em>Code-name</em>: <code>sysInit</code></li>
-<li><em>locatie</em>: <code>sysInit/</code></li>
+<li><em>SERVER code-name</em>: <code>sysInit</code></li>
+<li><em>CLIENT code-name</em>: -</li>
+<li><em>SERVER locatie</em>: <code>sysInit/</code></li>
 <li><em>Documentul descriere detaliat</em>: <a href="#810-dsgn-810.05a-sysinit_system_process"><code>810.05a-sysInit_System_Process.md</code></a></li>
 </ul>
 </div>
@@ -1241,38 +1247,68 @@
 </li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title">Documentul detaliat</p>
-<p><a href="#810-dsgn-810.05a-bcat_system_process"><code>810.05a-bcat_System_Process.md</code></a></p>
+<p class="admonition-title">parametrii</p>
+<ul>
+<li><em>SERVER code-name</em>: <code>books_metainfo</code></li>
+<li><em>CLIENT code-name</em>: -</li>
+<li><em>SERVER locatie</em>: <code>books_metainfo/</code></li>
+<li><em>Documentul descriere detaliat</em>: <a href="#810-dsgn-810.05a-bcat_system_process"><code>810.05a-bcat_System_Process.md</code></a></li>
+</ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-newb-creare-carte-noua">NEWB creare carte noua</h2>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
 <div class="admonition info">
-<p class="admonition-title">Documentul detaliat</p>
-<p><a href="#810-dsgn-810.05a-newb_system_process">810.05a-newb_System_Process.md</a></p>
+<p class="admonition-title">parametrii</p>
+<ul>
+<li><em>SERVER code-name</em>: <code>newb</code></li>
+<li><em>CLIENT code-name</em>: <code>newb*.html</code></li>
+<li><em>SERVER locatie</em>: <code>newb/</code></li>
+<li><em>Documentul descriere detaliat</em>:<a href="#810-dsgn-810.05a-newb_system_process">810.05a-newb_System_Process.md</a></li>
+</ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-edtm-preluare-si-editare-continut">EDTM preluare si editare continut</h2>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
 <div class="admonition info">
-<p class="admonition-title">Documentul detaliat</p>
-<p><a href="#810-dsgn-810.05a-edtm_system_process"><code>810.05a-edtm_System_Process.md</code></a></p>
+<p class="admonition-title">parametrii</p>
+<ul>
+<li><em>SERVER code-name</em>: <code>edtm</code></li>
+<li><em>CLIENT code-name</em>: <code>edtm*.html</code></li>
+<li><em>SERVER locatie</em>: <code>edtm/</code></li>
+<li><em>Documentul descriere detaliat</em>: <a href="#810-dsgn-810.05a-edtm_system_process"><code>810.05a-edtm_System_Process.md</code></a></li>
+</ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-orgm-organizare-structura-carte">ORGM organizare structura carte</h2>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
 <div class="admonition info">
-<p class="admonition-title">Documentul detaliat</p>
-<p><a href="#810-dsgn-810.05a-orgm_system_process"><code>810.05a-orgm_System_Process.md</code></a></p>
+<p class="admonition-title">parametrii</p>
+<ul>
+<li><em>SERVER code-name</em>: <code>orgm</code></li>
+<li><em>CLIENT code-name</em>: <code>orgm*.html</code></li>
+<li><em>SERVER locatie</em>: <code>orgm/</code></li>
+<li><em>Documentul descriere detaliat</em>: <a href="#810-dsgn-810.05a-orgm_system_process"><code>810.05a-orgm_System_Process.md</code></a></li>
+</ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-prvb-previzualizare-si-testare-carte">PRVB previzualizare si testare carte</h2>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
 <div class="admonition info">
-<p class="admonition-title">Documentul detaliat</p>
-<p><a href="#810-dsgn-810.05a-prvb_system_process"><code>810.05a-prvb_System_Process.md</code></a></p>
+<p class="admonition-title">parametrii</p>
+<ul>
+<li><em>SERVER code-name</em>: <code>prvb</code></li>
+<li><em>CLIENT code-name</em>: <code>prvb*.html</code></li>
+<li><em>SERVER locatie</em>: <code>prvb/</code></li>
+<li><em>Documentul descriere detaliat</em>: <a href="#810-dsgn-810.05a-prvb_system_process"><code>810.05a-prvb_System_Process.md</code></a></li>
+</ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-dplb-asamblare-publicare-carte">DPLB asamblare publicare carte</h2>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
 <div class="admonition info">
-<p class="admonition-title">Documentul detaliat</p>
-<p><a href="#810-dsgn-810.05a-dplb_system_process"><code>810.05a-dplb_System_Process.md</code></a></p>
+<p class="admonition-title">parametrii</p>
+<ul>
+<li><em>SERVER code-name</em>: <code>dplb</code></li>
+<li><em>CLIENT code-name</em>: <code>dplb*.html</code></li>
+<li><em>SERVER locatie</em>: <code>dplb/</code></li>
+<li><em>Documentul descriere detaliat</em>: <a href="#810-dsgn-810.05a-dplb_system_process"><code>810.05a-dplb_System_Process.md</code></a></li>
+</ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-hlps-help-asistenta-si-manuale">HLPS help asistenta si manuale</h2>
 <p>Manuale aplicatiei sunt de doua feluri (categorii) majore:</p>
