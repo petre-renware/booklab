@@ -8,9 +8,9 @@ I have forked plugin repo and modified mkdocs_with_pdf/drivers /headless_chrome.
 
 Diagrams in static page are still rendered by javascript lib, pngs are only for pdf generation.
 
-```
-https://gist.github.com/krukowskid/c47fc76056d1fb7b991ef628db96c96f
-```
+
+[see this `https://gist.github.com/krukowskid/c47fc76056d1fb7b991ef628db96c96f`](https://gist.github.com/krukowskid/c47fc76056d1fb7b991ef628db96c96f)
+
 
 its using mmdc so you need to install mermaid-cli
 
