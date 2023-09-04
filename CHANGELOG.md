@@ -17,21 +17,34 @@
 
 * tbd...cu ce faci [editarea textului markdown "clasic"](https://blog.miguelgrinberg.com/post/flask-pagedown-markdown-editor-extension-for-flask-wtf). Also Jupiter notebook PLUG IN has editor, check it
 
-* ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
-
-
 * #NOTE... HTML form in markdown and what POST is sent on submit - see commented section at beg of project `index.md`
 * #NOTE... here too, at each component _markdown_ use _Jinja raw block or simple escaping_ to allow for server 2nd processing (for ex at FormsWTF)
 
 
-* incoming... ### 0.1.3 System Detailed Design (LLD) BCAT component
 
 
 
+### 0.1.3 System Detailed Design (LLD) BCAT component - catalog data and client UI (wip...#TODO)
 
-### 0.1.2 System Landscape (HLD) (#TODO...wip...crt)
+* -NOTE (vezi daca faci si client UI in aceast pach...)
+
+* ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
 
 * wip...
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 0.1.2 System Landscape (HLD) (230904 20:00)
 
 * 230904piu_e updated `810.02-System_Landscape.md` with a short presentation ref `Application Software Organization (810.05b)` as distinct section
 * 230904piu_d add in doc_src file `ERR_LINUX_CHROME_PDF_FIXSOLVE.md `
@@ -62,15 +75,6 @@ to be client-side UI of each component
     * prvb --> `810.05a-prvb_System_Process.md`
     * dplb --> `810.05a-dplb_System_Process.md`
     * referred all of them in `Landscape` document and in navigation (`mkdocs.yml`)
-
-
-
-
-
-
-
-
-
 
 
 
