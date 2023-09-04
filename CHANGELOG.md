@@ -32,7 +32,7 @@
 
 * tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
 
-* tbd... update Landscape doc ref `setup/` directory THEN RELEASE ME
+* tbd... update Landscape doc ref `setup/` directory THEN RELEASE ME (but... Application Directory Organization, few words, `docs/` dir is important, setup/...)
 
 * wip...
 
