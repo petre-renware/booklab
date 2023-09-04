@@ -32,13 +32,13 @@
 
 * tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
 
-* tbd... update Landscape doc ref `setup/` directory THEN RELEASE ME (but... Application Directory Organization, few words, `docs/` dir is important, setup/...)
+* tbd... update Landscape doc ref Application Directory Organization, few words, `docs/` dir is important, setup/...)
 
 * wip...
 
-* 230904piu_c oferit o scurta explicatie referitoare la PRIMA INSTALARE a sistemului, director `setup/` in doc `810.02-System_Landscape.md` componenta `sysInit` + actualizare xxx
-* ---#NOTE-[test all up here]-#NOTE
+* -#NOTE---[test all up]---#NOTE
 
+* 230904piu_c oferit o scurta explicatie referitoare la PRIMA INSTALARE a sistemului, director `setup/` in doc `810.02-System_Landscape.md` componenta `sysInit` + actualizare doc `810.05a-sysInit_System_Process.md` cu aceleasi info
 * 230904piu_b updated `810.02-System_Landscape.md` with BCAT component
 * 230904piu_a updated all `...booklab.renware.eu.../xroute` routes to `...xroute/` in order to be agnostic to SERVER_NAME and to suppose that endpoint has a construction like `.../xroute/index.html`, ie directory containing an index.html fle
 * 230903piu_e created "wip...upcoming" UI code-file for BCAT component as `doc_src/bcat/index.md` and referred as new app menu entry in `mkdocs.yml`
