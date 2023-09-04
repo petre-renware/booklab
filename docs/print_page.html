@@ -1186,7 +1186,7 @@
 <li><a href="#810-dsgn-810.02-system_landscape-prvb-previzualizare-si-testare-carte">PRVB previzualizare si testare carte</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-dplb-asamblare-publicare-carte">DPLB asamblare publicare carte</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-hlps-help-asistenta-si-manuale">HLPS help asistenta si manuale</a></li>
-<li><a href="#810-dsgn-810.02-system_landscape-todo-section-and-work-scratches">#TODO section and work scratches</a></li>
+<li><a href="#810-dsgn-810.02-system_landscape-organizarea-aplicatiei-software">Organizarea aplicatiei software</a></li>
 </ul>
 </li>
 </ul>
@@ -1344,55 +1344,10 @@
 </ul>
 <p>Pentru ambele tipuri de manuale se va prezenta un <em>catalog</em> ce contine lista tuturor manualelor disponibile in acea categorie. Lista contine numele manualului, o scurta descriere (daca numele nu este suficient de elocvent) si linkul catre manualul respectiv.</p>
 <p>Manualele sunt localizate in sectiunea statica a aplicatiei (vezi si sectiunea <a href="#810-dsgn-810.02-system_landscape-serverul-http-static">"Serverul HTTP static"</a>) in directorul <em><code>docs/help/</code></em>.</p>
-<h2 id="810-dsgn-810.02-system_landscape-todo-section-and-work-scratches">#TODO section and work scratches</h2>
-<p>-#TODO_wip_for_## BookLab deployed application book template directory</p>
-<p>-#NOTE exista un doc dedicat application directory...</p>
-<p>-#NOTE: this is all tree from all project <code>docs_src/</code> - keep what you need abd clean characters (just let indents) to work <code>tree</code> extension</p>
-<div class="highlight"><pre><span></span><code>📁<span class="w"> </span>PROJECT_ROOT/
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>.gitkeep
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>bkcmd_new_book.py
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>CNAME
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>index.md
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>print_page.md
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>requirements.txt.ck_if_need_it
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>wip.md
-📄<span class="w"> </span><span class="p">|</span>
-📁<span class="w"> </span>+---810-DSGN/
-📄<span class="w"> </span><span class="p">|</span><span class="w">       </span>.gitkeep
-📄<span class="w"> </span><span class="p">|</span><span class="w">       </span><span class="m">810</span>.02-System_Landscape.md
-📄<span class="w"> </span><span class="p">|</span>
-📁<span class="w"> </span>+---bk_tmpl/
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span>.gitkeep
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span>bkcmd_gen_final_book.py
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span>bkcmd_start_book_preview.py
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span>bk_CNAME_domain
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">   </span>mkdocs.yml.new_name
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span>
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>+---my_book/
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">       </span>readme_and_keep_me.txt
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span>
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span>+---preview_book/
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span><span class="w">       </span>.gitkeep
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="p">|</span>
-📄<span class="w"> </span><span class="p">|</span><span class="w">   </span><span class="se">\-</span>--raw_source_docs/
-📄<span class="w"> </span><span class="p">|</span><span class="w">           </span>CNAME
-📄<span class="w"> </span><span class="p">|</span><span class="w">           </span>index.md.txt
-📄<span class="w"> </span><span class="p">|</span><span class="w">           </span>print_page.md.txt
-📄<span class="w"> </span><span class="p">|</span><span class="w">           </span>readme_and_keep_me.txt
-📄<span class="w"> </span><span class="p">|</span>
-📁<span class="w"> </span>+---help/
-📄<span class="w"> </span><span class="p">|</span><span class="w">       </span>.gitkeep
-📄<span class="w"> </span><span class="p">|</span><span class="w">       </span><span class="m">130</span>.02-Overview.md
-📄<span class="w"> </span><span class="p">|</span><span class="w">       </span><span class="m">880</span>.30-ADMA_catalog.md
-📄<span class="w"> </span><span class="p">|</span><span class="w">       </span><span class="m">880</span>.30-EUMA_catalog.md
-📄<span class="w"> </span><span class="p">|</span>
-📁<span class="w"> </span><span class="se">\-</span>--pictures/
-├──<span class="w"> </span>📄<span class="w"> </span>booklab_logo.png
-├──<span class="w"> </span>📄<span class="w"> </span>REN_stamp_logo_transparent.fodg
-├──<span class="w"> </span>📄<span class="w"> </span>REN_stamp_logo_transparent.png
-├──<span class="w"> </span>📄<span class="w"> </span>REN_stamp_logo_transparent.svg
-└──<span class="w"> </span>📄<span class="w"> </span>under_maintenance.png
-</code></pre></div></section><section class="print-page" id="810-dsgn-810.05a-sysinit_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
+<h2 id="810-dsgn-810.02-system_landscape-organizarea-aplicatiei-software">Organizarea aplicatiei software</h2>
+<p><small>Cod document metodologic: <code>810.05b Application Software Organization</code></small></p>
+<p>In principiu aplicatia (sistemul) este organizata pe principiul <em>directoarelor de fisiere</em>. Aceasta permite o "rapida" regasire si recunoastere a informatiilor necesare chiar de la nivelul sistemului de operare (fara a necesita instrumente speciale ci doar comenzile existente in sistemul de operare). De asemena o astfel de organizare este foarte apropiata de standardele clasice / originale ale aplicatiilor web.</p>
+<p>Directoarele principale ale aplicatiei sunt enumerate la fiecare componenta din arhitectura si nu necesita explicatii suplimentare fata de cele scrise deja (vezi sectiunea <a href="#810-dsgn-810.02-system_landscape-introducere">Arhitectura sistemului</a>). Detalii privind structura interna a fiecarui director aferent unei componente se regasesc in documentul de descriere detaliata aferent acelei componente. In situatii in care s-au considerat necesare diferite detelii pur specifice si "locale", in directorul componentei respective se gaseste un fisier <code>README_&lt;cod-name componenta&gt;.md</code> ce prezinta aceste lucruri. Aceste documente se adreseaza in special dezvoltarilor aplicatiei (dar nu in mod obligatoriu) iar ca exemplu de ce poate contine un astfel de fisier este prezentarea modalitatii de pregatire a mediului local pentru dezvoltare.</p></section><section class="print-page" id="810-dsgn-810.05a-sysinit_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
 <small markdown><strong>BookLab System</strong><br>
 <em>(c) 2023 RENware Software Systems</em>
 </small><br><br></p>
