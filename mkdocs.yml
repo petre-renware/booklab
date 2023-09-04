@@ -7,17 +7,25 @@ copyright: 'Copyright (c) RENware Software Systems'
 nav:
     - BookLab:
         - Acasa: index.md
-        - Carte noua: http://booklab.renware.eu/newb
-        - Editare materiale: http://booklab.renware.eu/edtm
-        - Sectiuni carte: http://booklab.renware.eu/orgm
-        - Vizualizare carte: http://booklab.renware.eu/prvb
-        - Asamblare carte: http://booklab.renware.eu/dplb
+        - Catalog carti: bcat/ #NOTE will direct-fwd to `http://<crt_server_name>/bcat/`
+        - Carte noua: newb/ #NOTE will direct-fwd to `http://<crt_server_name>/newb/`
+        - Editare materiale: edtm/ #NOTE will direct-fwd to `http://<crt_server_name>/edtm/`
+        - Sectiuni carte: orgm/ #NOTE will direct-fwd to `http://<crt_server_name>/orgm/`
+        - Previzualizare carte: prvb/ #NOTE will direct-fwd to `http://<crt_server_name>/prvb/`
+        - Asamblare carte: dplb/ #NOTE will direct-fwd to `http://<crt_server_name>/dplb/`
     - Help:
         - Manuale de utilizare: help/880.30-EUMA_catalog.md
         - Manuale de configurare: help/880.30-ADMA_catalog.md
         - Documentatia tehnica:
             - Vedere de ansamblu: help/130.02-Overview.md
             - Arhitectura: 810-DSGN/810.02-System_Landscape.md
+            - proces sysInit: 810-DSGN/810.05a-sysInit_System_Process.md
+            - catalog carti BCAT: 810-DSGN/810.05a-bcat_System_Process.md
+            - proces NEWB: 810-DSGN/810.05a-newb_System_Process.md
+            - proces EDTM: 810-DSGN/810.05a-edtm_System_Process.md
+            - proces ORGM: 810-DSGN/810.05a-orgm_System_Process.md
+            - proces PRVB: 810-DSGN/810.05a-prvb_System_Process.md
+            - proces DPLB: 810-DSGN/810.05a-dplb_System_Process.md
         - Manual BookLab (PDF): pdfs/print_page.html/print_page.pdf
     - About:
         - Licenta mea: wip.md #TODO tbd... este un http catre o ruta dinamica din produs
