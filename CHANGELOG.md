@@ -62,7 +62,7 @@ to be client-side UI of each component
     * orgm --> `810.05a-orgm_System_Process.md`
     * prvb --> `810.05a-prvb_System_Process.md`
     * dplb --> `810.05a-dplb_System_Process.md`
-    * refered all of them in `Lanscape` document and in navigation (`mkdocs.yml`)
+    * referred all of them in `Landscape` document and in navigation (`mkdocs.yml`)
 
 
 

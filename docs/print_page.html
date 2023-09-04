@@ -351,7 +351,21 @@
   
   
     <li class="md-nav__item">
-      <a href="http://booklab.renware.eu/newb" class="md-nav__link">
+      <a href="bcat/" class="md-nav__link">
+        Catalog carti
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="newb/" class="md-nav__link">
         Carte noua
       </a>
     </li>
@@ -365,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="http://booklab.renware.eu/edtm" class="md-nav__link">
+      <a href="edtm/" class="md-nav__link">
         Editare materiale
       </a>
     </li>
@@ -379,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="http://booklab.renware.eu/orgm" class="md-nav__link">
+      <a href="orgm/" class="md-nav__link">
         Sectiuni carte
       </a>
     </li>
@@ -393,8 +407,8 @@
   
   
     <li class="md-nav__item">
-      <a href="http://booklab.renware.eu/prvb" class="md-nav__link">
-        Vizualizare carte
+      <a href="prvb/" class="md-nav__link">
+        Previzualizare carte
       </a>
     </li>
   
@@ -407,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="http://booklab.renware.eu/dplb" class="md-nav__link">
+      <a href="dplb/" class="md-nav__link">
         Asamblare carte
       </a>
     </li>
@@ -919,31 +933,34 @@
 <p>Ce poti face mai departe:</p>
 <ul>
 <li>
-<p><strong><a href="http://booklab.renware.eu/newb">sa incepi o noua carte</a></strong> #TODO NEWB route</p>
+<p><strong><a href="#bcat">sa vezi catalogul cartilor tale</a></strong> #TODO BCAT route</p>
 </li>
 <li>
-<p><strong><a href="http://booklab.renware.eu/edtm">sa creezi si sa editezi continutului unui material</a></strong> #TODO EDTM route</p>
+<p><strong><a href="#newb">sa incepi o noua carte</a></strong> #TODO NEWB route</p>
 </li>
 <li>
-<p><strong><a href="http://booklab.renware.eu/orgm">sa organizezi materialele in diverse sectiuni</a></strong> #TODO 0RGM route</p>
+<p><strong><a href="#edtm">sa creezi si sa editezi continutului unui material</a></strong> #TODO EDTM route</p>
 </li>
 <li>
-<p><strong><a href="http://booklab.renware.eu/prvb">sa vizualizezi si sa testezi materiale realizate</a></strong> #TODO PRVB route</p>
+<p><strong><a href="#orgm">sa organizezi materialele in diverse sectiuni</a></strong> #TODO 0RGM route</p>
 </li>
 <li>
-<p><strong><a href="http://booklab.renware.eu/dplb">sa faci asamblarea finala a cartii in forma electronica</a></strong> #TODO DPLB route</p>
+<p><strong><a href="#prvb">sa vizualizezi si sa testezi materiale realizate</a></strong> #TODO PRVB route</p>
+</li>
+<li>
+<p><strong><a href="#dplb">sa faci asamblarea finala a cartii in forma electronica</a></strong> #TODO DPLB route</p>
 </li>
 </ul>
 <p>Daca inca nu esti sigur sau hotarit, poti sa revezi doumentatia sistemului:</p>
 <ul>
 <li>
-<p><strong><a href="https://booklab.renware.eu/help/130.02-Overview.html" target="_blank">sa citesti "Vederea de ansamblu" a BookLab</a></strong></p>
+<p><strong><a href="#help-130.02-overview" target="_blank">sa citesti "Vederea de ansamblu" a BookLab</a></strong></p>
 </li>
 <li>
-<p><strong><a href="https://booklab.renware.eu/help/880.30-EUMA_catalog.html" target="_blank">sa revezi manualele de utilizare</a></strong></p>
+<p><strong><a href="#help-880.30-euma_catalog" target="_blank">sa revezi manualele de utilizare</a></strong></p>
 </li>
 <li>
-<p><strong><a href="https://booklab.renware.eu/help/880.30-ADMA_catalog.html" target="_blank">sa revezi manualele de configurare</a></strong></p>
+<p><strong><a href="#help-880.30-adma_catalog" target="_blank">sa revezi manualele de configurare</a></strong></p>
 </li>
 </ul></section><h1 class='nav-section-title-end'>Ended: BookLab</h1>
                         <h1 class='nav-section-title' id='section-help'>
@@ -1179,17 +1196,20 @@
 <p>Arhitectura sistemului pleaca de la structura de basa a acestuia, structura redata "pe scurt" mai jos. Diagrama putin mai elaborata dar cu descrierea componentelor se gaseste in <a href="#help-130.02-overview-structura-si-componenta-booklab">documentul <code>130.02-Overview.md</code>, sectiunea "Structura si componenta BookLab"</a> ce <em>se recomanda a fi citit</em> inainte de a incepe studiul acestuia, pentru o mai buna intelegere a lui.</p>
 <pre class="mermaid"><code>graph TD
     bklab([BookLab])
-    newb[[NEWB \n Carte noua]]
+
+    sysInit[[sysInit \n Initializare \n sistem]]
+
     bcat[[BCAT \n Catalogul \n cartilor]]
+    newb[[NEWB \n Carte noua]]
     edtm[[EDTM \n Creare Editare \n documente]]
     orgm[[ORGM \n Organizare \n documente]]
     prvm[[PRVB \n Previzualizare \n carte]]
     dplm[[DPLB \n Asamblare \n carte]]
     hlps[[HLPS \n Manuale \n aplicatie]]
-    sysInit[[sysInit \n Initializare \n sistem]]
+
 
     bklab --- sysInit
-    bklab --- bcat
+    bklab ---- bcat
     bklab ---- newb
     bklab ---- edtm
     bklab ---- orgm
@@ -1214,7 +1234,8 @@
 <li>Se atrage atentia asupra tratarii corecte din punct de vedere conceptual a notiunilor de <code>server</code>  si <code>client</code>. </li>
 <li>Chiar daca locatia de instalare a sistemului nu pare "un server cu multi cai putere", arhitectura conceptuala de client-server este pe deplin implementata cu respectarea tuturor principiilor aferente si o consitentizare a acestui lucru va permite o intelegere corecta a detaliilor tehnice ale sistemului de catre echipa tehnica de lucru.</li>
 <li>Locatiile fizice ale componentelor sunt prezentate NUMAI pentru <em>partea de SERVER</em>.</li>
-<li>Locatiile pentru <em>partea de CLIENT</em> sunt situate dupa o organizare clasica de site static incepind din directorul <code>docs/</code> iar codul este prezent in fisier <code>.html</code> (in rare cazuri pot fi mai multe dar incep cu acelasi prefix).</li>
+<li>Locatiile pentru <em>partea de CLIENT</em> sunt situate dupa o organizare clasica de site static incepind din directorul <code>docs/</code> iar codul este prezent in fisier <code>*.html</code> (in rare cazuri pot fi mai multe dar incep cu acelasi prefix).</li>
+<li>In general (daca nu specifica in clar altfel) <code>code-name</code> al componentelor este acelasi atit pentru SERVER cit si pentru CLIENT. Diferentierea intre acestea se intimpla deoarece raspund servere diferite pentru porturile aferente (80 client si 4111 server). Astfel pe ruta "normala" a unei componente, de ex ptr <em>NEWB</em>: <code>http://booklab.../newb</code> va raspunde intii componenta CLIENT (prezenta sub forma unui <code>index.html</code> in directorul <code>docs/newb/</code>).</li>
 </ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-sysinit-initializare-sistem">sysInit Initializare sistem</h2>
@@ -1230,10 +1251,9 @@
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
-<li><em>SERVER code-name</em>: <code>sysInit</code></li>
-<li><em>CLIENT code-name</em>: -</li>
+<li><em>code-name</em>: <code>sysInit</code></li>
 <li><em>SERVER locatie</em>: <code>sysInit/</code></li>
-<li><em>Documentul descriere detaliat</em>: <a href="#810-dsgn-810.05a-sysinit_system_process"><code>810.05a-sysInit_System_Process.md</code></a></li>
+<li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-sysinit_system_process"><code>810.05a-sysInit_System_Process.md</code></a></li>
 </ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-bcat-catalogul-cartilor">BCAT catalogul cartilor</h2>
@@ -1249,10 +1269,10 @@
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
-<li><em>SERVER code-name</em>: <code>books_metainfo</code></li>
-<li><em>CLIENT code-name</em>: -</li>
+<li><em>code-name</em>: <code>bcat</code></li>
 <li><em>SERVER locatie</em>: <code>books_metainfo/</code></li>
-<li><em>Documentul descriere detaliat</em>: <a href="#810-dsgn-810.05a-bcat_system_process"><code>810.05a-bcat_System_Process.md</code></a></li>
+<li><em>CLIENT locatie</em>: <code>docs/bcat/index.html</code> (<code>doc_src/index.md</code> before 1-st compilation)</li>
+<li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-bcat_system_process"><code>810.05a-bcat_System_Process.md</code></a></li>
 </ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-newb-creare-carte-noua">NEWB creare carte noua</h2>
@@ -1260,10 +1280,10 @@
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
-<li><em>SERVER code-name</em>: <code>newb</code></li>
-<li><em>CLIENT code-name</em>: <code>newb*.html</code></li>
+<li><em>code-name</em>: <code>newb</code></li>
 <li><em>SERVER locatie</em>: <code>newb/</code></li>
-<li><em>Documentul descriere detaliat</em>:<a href="#810-dsgn-810.05a-newb_system_process">810.05a-newb_System_Process.md</a></li>
+<li><em>CLIENT locatie</em>: --- #FIXME nestabilit inca - update it</li>
+<li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-newb_system_process">810.05a-newb_System_Process.md</a></li>
 </ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-edtm-preluare-si-editare-continut">EDTM preluare si editare continut</h2>
@@ -1271,10 +1291,10 @@
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
-<li><em>SERVER code-name</em>: <code>edtm</code></li>
-<li><em>CLIENT code-name</em>: <code>edtm*.html</code></li>
+<li><em>code-name</em>: <code>edtm</code></li>
 <li><em>SERVER locatie</em>: <code>edtm/</code></li>
-<li><em>Documentul descriere detaliat</em>: <a href="#810-dsgn-810.05a-edtm_system_process"><code>810.05a-edtm_System_Process.md</code></a></li>
+<li><em>CLIENT locatie</em>: --- #FIXME nestabilit inca - update it</li>
+<li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-edtm_system_process"><code>810.05a-edtm_System_Process.md</code></a></li>
 </ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-orgm-organizare-structura-carte">ORGM organizare structura carte</h2>
@@ -1282,10 +1302,10 @@
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
-<li><em>SERVER code-name</em>: <code>orgm</code></li>
-<li><em>CLIENT code-name</em>: <code>orgm*.html</code></li>
+<li><em>code-name</em>: <code>orgm</code></li>
 <li><em>SERVER locatie</em>: <code>orgm/</code></li>
-<li><em>Documentul descriere detaliat</em>: <a href="#810-dsgn-810.05a-orgm_system_process"><code>810.05a-orgm_System_Process.md</code></a></li>
+<li><em>CLIENT locatie</em>: --- #FIXME nestabilit inca - update it</li>
+<li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-orgm_system_process"><code>810.05a-orgm_System_Process.md</code></a></li>
 </ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-prvb-previzualizare-si-testare-carte">PRVB previzualizare si testare carte</h2>
@@ -1293,10 +1313,10 @@
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
-<li><em>SERVER code-name</em>: <code>prvb</code></li>
-<li><em>CLIENT code-name</em>: <code>prvb*.html</code></li>
+<li><em>code-name</em>: <code>prvb</code></li>
 <li><em>SERVER locatie</em>: <code>prvb/</code></li>
-<li><em>Documentul descriere detaliat</em>: <a href="#810-dsgn-810.05a-prvb_system_process"><code>810.05a-prvb_System_Process.md</code></a></li>
+<li><em>CLIENT locatie</em>: --- #FIXME nestabilit inca - update it</li>
+<li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-prvb_system_process"><code>810.05a-prvb_System_Process.md</code></a></li>
 </ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-dplb-asamblare-publicare-carte">DPLB asamblare publicare carte</h2>
@@ -1304,10 +1324,10 @@
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
-<li><em>SERVER code-name</em>: <code>dplb</code></li>
-<li><em>CLIENT code-name</em>: <code>dplb*.html</code></li>
+<li><em>code-name</em>: <code>dplb</code></li>
 <li><em>SERVER locatie</em>: <code>dplb/</code></li>
-<li><em>Documentul descriere detaliat</em>: <a href="#810-dsgn-810.05a-dplb_system_process"><code>810.05a-dplb_System_Process.md</code></a></li>
+<li><em>CLIENT locatie</em>: --- #FIXME nestabilit inca - update it</li>
+<li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-dplb_system_process"><code>810.05a-dplb_System_Process.md</code></a></li>
 </ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-hlps-help-asistenta-si-manuale">HLPS help asistenta si manuale</h2>
@@ -1395,6 +1415,10 @@
 <p><strong>serverul HTTP dinamic</strong> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
 </li>
 </ul>
+<blockquote>
+<p>Referitor la "recunoasterea" componentelor de catre cele doua servere (pentru o instalare uzuala unde toate si totul se afla fizic pe aceiasi masina si sub aceiasi radacina a aplicatiei <em>BookLab</em>), <code>code-name</code> al componentelor fiind acelasi atit pentru SERVER cit si pentru CLIENT, <strong><em>diferentierea intre acestea se intimpla deoarece raspund servere diferite pentru porturi aferente</em></strong> (80 client si 4111 server, vezi mai jos detaliile serverelor).</p>
+<p>Astfel pe ruta "normala" a unei componente, de ex ptr <em>NEWB</em>: <code>http://booklab.../newb</code> va raspunde intii componenta CLIENT (prezenta sub forma unui <code>index.html</code> in directorul <code>docs/newb/</code>).</p>
+</blockquote>
 <h2 id="810-dsgn-810.05a-sysinit_system_process-serverul-http-static">Serverul HTTP static</h2>
 <p>Acesta este un server HTTP tip <em>CGI</em> ce raspunde pe portul 80 (portul clasic, implicit pentru sisteme accesabile web).</p>
 <div class="admonition info">
