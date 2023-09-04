@@ -17,6 +17,9 @@
 
 * tbd...cu ce faci [editarea textului markdown "clasic"](https://blog.miguelgrinberg.com/post/flask-pagedown-markdown-editor-extension-for-flask-wtf). Also Jupiter notebook PLUG IN has editor, check it
 
+* ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
+
+
 * #NOTE... HTML form in markdown and what POST is sent on submit - see commented section at beg of project `index.md`
 * #NOTE... here too, at each component _markdown_ use _Jinja raw block or simple escaping_ to allow for server 2nd processing (for ex at FormsWTF)
 
@@ -28,18 +31,11 @@
 
 ### 0.1.2 System Landscape (HLD) (#TODO...wip...crt)
 
-* ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
-
-* tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
-
-* tbd... update Landscape doc ref Application Directory Organization, few words, `docs/` dir is important, setup/...)
-
 * wip...
 
+* 230904piu_e updated `810.02-System_Landscape.md` with a short presentation ref `Application Software Organization (810.05b)` as distinct section
 * 230904piu_d add in doc_src file `ERR_LINUX_CHROME_PDF_FIXSOLVE.md `
-* -#NOTE---[test all up]---#NOTE
-
-* 230904piu_c oferit o scurta explicatie referitoare la PRIMA INSTALARE a sistemului, director `setup/` in doc `810.02-System_Landscape.md` componenta `sysInit` + actualizare doc `810.05a-sysInit_System_Process.md` cu aceleasi info
+* 230904piu_c made a short explanation ref to system FIRST INSTALL (PRIMA INSTALARE a sistemului), ref `setup/` directory in doc `810.02-System_Landscape.md` component `sysInit` + updated doc `810.05a-sysInit_System_Process.md` with same info
 * 230904piu_b updated `810.02-System_Landscape.md` with BCAT component
 * 230904piu_a updated all `...booklab.renware.eu.../xroute` routes to `...xroute/` in order to be agnostic to SERVER_NAME and to suppose that endpoint has a construction like `.../xroute/index.html`, ie directory containing an index.html fle
 * 230903piu_e created "wip...upcoming" UI code-file for BCAT component as `doc_src/bcat/index.md` and referred as new app menu entry in `mkdocs.yml`
