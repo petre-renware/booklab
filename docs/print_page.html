@@ -1248,11 +1248,13 @@
 <p><strong>serverul HTTP dinamic</strong> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
 </li>
 </ul>
+<p>De asemenea referitor la initializarea sistemului trebuie spus si ca <strong><em>prima instalare a acestuia</em></strong> se face cu o serie de programe / scripturi. Nu se intra in detalii deoarece procedura de instalare a sistemului este una cit se poate de clasica pentru instalarile executate manual pe sisteme Linux iar pentru sisteme Windows acesta este tot una clasica, cu un simplu wizard "standardizat" si care executa scrierea in toate locatiile necesare (ex Registry).</p>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
 <li><em>code-name</em>: <code>sysInit</code></li>
 <li><em>SERVER locatie</em>: <code>sysInit/</code></li>
+<li><em>locatie scriptu PRIMA INSTALARE</em>: <code>setup/</code></li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-sysinit_system_process"><code>810.05a-sysInit_System_Process.md</code></a></li>
 </ul>
 </div>
@@ -1282,7 +1284,7 @@
 <ul>
 <li><em>code-name</em>: <code>newb</code></li>
 <li><em>SERVER locatie</em>: <code>newb/</code></li>
-<li><em>CLIENT locatie</em>: --- #FIXME nestabilit inca - update it</li>
+<li><em>CLIENT locatie</em>: --- #TODO nestabilit inca - update it</li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-newb_system_process">810.05a-newb_System_Process.md</a></li>
 </ul>
 </div>
@@ -1293,7 +1295,7 @@
 <ul>
 <li><em>code-name</em>: <code>edtm</code></li>
 <li><em>SERVER locatie</em>: <code>edtm/</code></li>
-<li><em>CLIENT locatie</em>: --- #FIXME nestabilit inca - update it</li>
+<li><em>CLIENT locatie</em>: --- #TODO nestabilit inca - update it</li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-edtm_system_process"><code>810.05a-edtm_System_Process.md</code></a></li>
 </ul>
 </div>
@@ -1304,7 +1306,7 @@
 <ul>
 <li><em>code-name</em>: <code>orgm</code></li>
 <li><em>SERVER locatie</em>: <code>orgm/</code></li>
-<li><em>CLIENT locatie</em>: --- #FIXME nestabilit inca - update it</li>
+<li><em>CLIENT locatie</em>: --- #TODO nestabilit inca - update it</li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-orgm_system_process"><code>810.05a-orgm_System_Process.md</code></a></li>
 </ul>
 </div>
@@ -1315,7 +1317,7 @@
 <ul>
 <li><em>code-name</em>: <code>prvb</code></li>
 <li><em>SERVER locatie</em>: <code>prvb/</code></li>
-<li><em>CLIENT locatie</em>: --- #FIXME nestabilit inca - update it</li>
+<li><em>CLIENT locatie</em>: --- #TODO nestabilit inca - update it</li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-prvb_system_process"><code>810.05a-prvb_System_Process.md</code></a></li>
 </ul>
 </div>
@@ -1326,7 +1328,7 @@
 <ul>
 <li><em>code-name</em>: <code>dplb</code></li>
 <li><em>SERVER locatie</em>: <code>dplb/</code></li>
-<li><em>CLIENT locatie</em>: --- #FIXME nestabilit inca - update it</li>
+<li><em>CLIENT locatie</em>: --- #TODO nestabilit inca - update it</li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-dplb_system_process"><code>810.05a-dplb_System_Process.md</code></a></li>
 </ul>
 </div>
@@ -1401,6 +1403,7 @@
 <li><a href="#810-dsgn-810.05a-sysinit_system_process-sysinit-initializare-sistem">sysInit Initializare sistem</a><ul>
 <li><a href="#810-dsgn-810.05a-sysinit_system_process-serverul-http-static">Serverul HTTP static</a></li>
 <li><a href="#810-dsgn-810.05a-sysinit_system_process-serverul-http-dinamic">Serverul HTTP dinamic</a></li>
+<li><a href="#810-dsgn-810.05a-sysinit_system_process-prima-instalare-a-sistemului">Prima instalare a sistemului</a></li>
 </ul>
 </li>
 </ul>
@@ -1440,7 +1443,9 @@
 <li><em>acces</em>: strict local, nedeschis</li>
 <li><em>implentare</em>: implicit <code>gunicorn</code> sau <code>nginx wsgi</code>, <code>apache uwsgi</code> pentru inplementari "on premises" folosind componentele clientului</li>
 </ul>
-</div></section><section class="print-page" id="810-dsgn-810.05a-bcat_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
+</div>
+<h2 id="810-dsgn-810.05a-sysinit_system_process-prima-instalare-a-sistemului">Prima instalare a sistemului</h2>
+<p>Referitor la initializarea sistemului trebuie spus si ca <strong><em>prima instalare a acestuia</em></strong> se face cu o serie de programe / scripturi. Nu se intra in detalii deoarece procedura de instalare a sistemului este una cit se poate de clasica pentru instalarile executate manual pe sisteme Linux iar pentru sisteme Windows acesta este tot una clasica, cu un simplu wizard "standardizat" si care executa scrierea in toate locatiile necesare (ex Registry).</p></section><section class="print-page" id="810-dsgn-810.05a-bcat_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
 <small markdown><strong>BookLab System</strong><br>
 <em>(c) 2023 RENware Software Systems</em>
 </small><br><br></p>
