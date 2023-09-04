@@ -36,6 +36,7 @@
 
 * wip...
 
+* 230904piu_d add in doc_src file `ERR_LINUX_CHROME_PDF_FIXSOLVE.md `
 * -#NOTE---[test all up]---#NOTE
 
 * 230904piu_c oferit o scurta explicatie referitoare la PRIMA INSTALARE a sistemului, director `setup/` in doc `810.02-System_Landscape.md` componenta `sysInit` + actualizare doc `810.05a-sysInit_System_Process.md` cu aceleasi info
