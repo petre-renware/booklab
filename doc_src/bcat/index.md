@@ -2,7 +2,7 @@
 
     * page dedicated for books catalog
 
-    * for Jinja fields proccesable @ server-side use `{% raw %}` construction to remain in resulted HTML afer 1st compilation with mkdocs
+    * for Jinja fields processable @ server-side use `{% raw %} ... {% endraw %}` construction to remain in resulted HTML afer 1st compilation with mkdocs
 
  -->
 
@@ -14,7 +14,7 @@
 ...UPCOMING...
 
 
-<!-- #TODO
+<!-- #TODO plan for this page
 
 * table with all books
 * hidden col with book ID

@@ -7,12 +7,12 @@ copyright: 'Copyright (c) RENware Software Systems'
 nav:
     - BookLab:
         - Acasa: index.md
-        - Catalog carti: bcat/ #FIXME test that should direct-fwd to `http://<crt_server_name>/bcat/`
-        - Carte noua: http://booklab.renware.eu/newb
-        - Editare materiale: http://booklab.renware.eu/edtm
-        - Sectiuni carte: http://booklab.renware.eu/orgm
-        - Vizualizare carte: http://booklab.renware.eu/prvb
-        - Asamblare carte: http://booklab.renware.eu/dplb
+        - Catalog carti: bcat/ #NOTE will direct-fwd to `http://<crt_server_name>/bcat/`
+        - Carte noua: newb/ #NOTE will direct-fwd to `http://<crt_server_name>/newb/`
+        - Editare materiale: edtm/ #NOTE will direct-fwd to `http://<crt_server_name>/edtm/`
+        - Sectiuni carte: orgm/ #NOTE will direct-fwd to `http://<crt_server_name>/orgm/`
+        - Vizualizare carte: prvb/ #NOTE will direct-fwd to `http://<crt_server_name>/prvb/`
+        - Asamblare carte: dplb/ #NOTE will direct-fwd to `http://<crt_server_name>/dplb/`
     - Help:
         - Manuale de utilizare: help/880.30-EUMA_catalog.md
         - Manuale de configurare: help/880.30-ADMA_catalog.md
