@@ -55,9 +55,9 @@ Daca inca nu esti sigur sau hotarit, poti sa revezi doumentatia sistemului:
 
 * **[sa citesti "Vederea de ansamblu" a BookLab](help/130.02-Overview.md){ target="_blank" }**
 
-* **[sa revezi manualele de utilizare](help/880.30-EUMA_catalog.html){ target="_blank" }**
+* **[sa revezi manualele de utilizare](help/880.30-EUMA_catalog.md){ target="_blank" }**
 
-* **[sa revezi manualele de configurare](help/880.30-ADMA_catalog.html){ target="_blank" }**
+* **[sa revezi manualele de configurare](help/880.30-ADMA_catalog.md){ target="_blank" }**
 
 
 

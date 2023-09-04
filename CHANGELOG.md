@@ -35,8 +35,9 @@
 
 * wip...
 
-* tbd... 230904piu_b updated `810.02-System_Landscape.md` with BCAT component
+* ---#NOTE-[test all up here]-#NOTE
 
+* 230904piu_b updated `810.02-System_Landscape.md` with BCAT component
 * 230904piu_a updated all `...booklab.renware.eu.../xroute` routes to `...xroute/` in order to be agnostic to SERVER_NAME and to suppose that endpoint has a construction like `.../xroute/index.html`, ie directory containing an index.html fle
 * 230903piu_e created "wip...upcoming" UI code-file for BCAT component as `doc_src/bcat/index.md` and referred as new app menu entry in `mkdocs.yml`
 * 230903piu_d temporary created `component_XXX_UI_template/index.html` as model of how will need (WARNING: asap after use will be dropped)

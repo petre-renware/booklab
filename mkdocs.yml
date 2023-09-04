@@ -11,7 +11,7 @@ nav:
         - Carte noua: newb/ #NOTE will direct-fwd to `http://<crt_server_name>/newb/`
         - Editare materiale: edtm/ #NOTE will direct-fwd to `http://<crt_server_name>/edtm/`
         - Sectiuni carte: orgm/ #NOTE will direct-fwd to `http://<crt_server_name>/orgm/`
-        - Vizualizare carte: prvb/ #NOTE will direct-fwd to `http://<crt_server_name>/prvb/`
+        - Previzualizare carte: prvb/ #NOTE will direct-fwd to `http://<crt_server_name>/prvb/`
         - Asamblare carte: dplb/ #NOTE will direct-fwd to `http://<crt_server_name>/dplb/`
     - Help:
         - Manuale de utilizare: help/880.30-EUMA_catalog.md
