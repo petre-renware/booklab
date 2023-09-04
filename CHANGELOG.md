@@ -17,10 +17,12 @@
 
 * tbd...cu ce faci [editarea textului markdown "clasic"](https://blog.miguelgrinberg.com/post/flask-pagedown-markdown-editor-extension-for-flask-wtf). Also Jupiter notebook PLUG IN has editor, check it
 
-* @IMP#NOTE@230831piu_b HTML form in markdown and what POST is sent on submit - see commented section at beg of project `index.md`
+* #NOTE... HTML form in markdown and what POST is sent on submit - see commented section at beg of project `index.md`
+* #NOTE... here too, at each component _markdown_ use _Jinja raw block or simple escaping_ to allow for server 2nd processing (for ex at FormsWTF)
 
-* tbd... ### 0.1.3 System Detailed Design (LLD) to fill in all components detailed doc design
-* tbd... here too, at each component _markdown_ use _Jinja raw block or simple escaping_ to allow for server 2nd processing (for ex at FormsWTF)
+
+* incoming... ### 0.1.3 System Detailed Design (LLD) BCAT component
+
 
 
 
@@ -30,13 +32,11 @@
 
 * tbd... use mkdocs build with params like explained here `https://www.mkdocs.org/user-guide/cli/#mkdocs-get-deps`
 
-* tbd... update Landscape doc ref `setup/` directory
-
+* tbd... update Landscape doc ref `setup/` directory THEN RELEASE ME
 
 * wip...
 
 * ---#NOTE-[test all up here]-#NOTE
-
 * 230904piu_b updated `810.02-System_Landscape.md` with BCAT component
 * 230904piu_a updated all `...booklab.renware.eu.../xroute` routes to `...xroute/` in order to be agnostic to SERVER_NAME and to suppose that endpoint has a construction like `.../xroute/index.html`, ie directory containing an index.html fle
 * 230903piu_e created "wip...upcoming" UI code-file for BCAT component as `doc_src/bcat/index.md` and referred as new app menu entry in `mkdocs.yml`
