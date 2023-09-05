@@ -1,12 +1,12 @@
 {
-	"app_meta_info": {
-		"activated_on": "YYYY-MM-DD",
-		"version": "M.m.p"
-	},
-	"user_books": [
-		"bk_tmpl": {
-			"description": "Default template for new book"
-		},
-		"other_book_here": null
-	]
+    "data": [
+        "bk_tmpl": {
+           "id": 000000,
+            "code": "BCAT",
+            "description": "Sablonul implicit pentru o carte noua",
+            "created_date": "2023-08-01",
+            "created_by": "system",
+	    "notes": "Inregistrare obligatorie de la instalare sistem. Non editabila."
+        }
+    ]
 }
