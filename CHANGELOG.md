@@ -15,6 +15,8 @@
 
 ## 0.1 First System Design (FUTURE...)
 
+* -#NOTE@IMPORTANT at a moment __publish `booklab.renware.eu` in RENware catalog & main portal__
+
 * tbd...cu ce faci [editarea textului markdown "clasic"](https://blog.miguelgrinberg.com/post/flask-pagedown-markdown-editor-extension-for-flask-wtf). Also Jupiter notebook PLUG IN has editor, check it
 
 * #NOTE... HTML form in markdown and what POST is sent on submit - see commented section at beg of project `index.md`
