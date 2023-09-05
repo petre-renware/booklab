@@ -36,9 +36,25 @@
 
 * wip...
 
+* 230905piu_b more actions:
+    * updated structure of `books_catalog.json`
+    * installed `PysonDB` a JSON based lightweight Database for Python - testat rezultat pe `books_catalog.json` cu executabilul local (vezi mai jos) si testat si bblioteca python
+    ```
+    +----+------+------+-----------------+-------+------+--------------------------+
+    | id | code | shor |   description   | creat | crea |          notes           |
+    |    |      | t_de |                 | ed_da | ted_ |                          |
+    |    |      |  sc  |                 |  te   |  by  |                          |
+    +----+------+------+-----------------+-------+------+--------------------------+
+    | 0  | BCAT | bk_t | Sablonul implic | 2023- | syst | Inregistrare obligatorie |
+    |    |      | mpl  | it pentru o car | 08-01 |  em  |  de la instalare sistem. |
+    |    |      |      |     te noua     |       |      |      Non editabila.      |
+    +----+------+------+-----------------+-------+------+--------------------------+
+    ```
+    * publicat actualizarile din doc design detaliat BCAT
+
 * 230905piu_b split database from `books_metainfo/` in 2 dbs, one for books and one for app itself data (meta data and configurations data) && updated doc `810.05a-bcat_System_Process.md`
 
-* ---#NOTE publish all up ---
+* ---#TODO publish all up ---
 
 * 230905piu_a `810.05a-bcat_System_Process.md` creare varianta de lucru cu informatii despre sectiuni si schelet cu ce contin acestea
 
