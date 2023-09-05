@@ -34,6 +34,7 @@
 
 * wip...
 
+* 230905piu_a `810.05a-bcat_System_Process.md` creare varianta de lucru cu informatii despre sectiuni si schelet cu ce contin acestea
 
 
 
