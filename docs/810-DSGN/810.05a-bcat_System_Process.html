@@ -287,9 +287,36 @@ div.download-btn {
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          catalog carti BCAT
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="810.05a-bcat_System_Process.html">
         catalog carti BCAT
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#catalogul-cartilor-baza-de-date">
+    Catalogul cartilor - baza de date
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sablonul-pentru-o-carte-noua">
+    Sablonul pentru o carte noua
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#catalogul-cartilor-interfata-ui">
+    Catalogul cartilor - interfata UI
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="810.05a-newb_System_Process.html">
@@ -376,6 +403,27 @@ div.download-btn {
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#catalogul-cartilor-baza-de-date">
+    Catalogul cartilor - baza de date
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sablonul-pentru-o-carte-noua">
+    Sablonul pentru o carte noua
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#catalogul-cartilor-interfata-ui">
+    Catalogul cartilor - interfata UI
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -390,18 +438,53 @@ div.download-btn {
 <p><strong><em>Cuprins:</em></strong></p>
 <div class="toc">
 <ul>
-<li><a href="#bcat-catalogul-cartilor">BCAT catalogul cartilor</a></li>
+<li><a href="#bcat-catalogul-cartilor">BCAT catalogul cartilor</a><ul>
+<li><a href="#catalogul-cartilor-baza-de-date">Catalogul cartilor - baza de date</a></li>
+<li><a href="#sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</a></li>
+<li><a href="#catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <hr/>
-<p><img alt="wip page" src="../pictures/under_maintenance.png"/></p>
-<p>-#TODO... UPCOMING...</p>
+<h2 id="catalogul-cartilor-baza-de-date">Catalogul cartilor - baza de date</h2>
+<!-- #FIXME drop when finish -->
+<p><img alt="wip page" src="../pictures/under_maintenance.png" width="200"> ... UPCOMING...</img></p>
+<p>... Catalogul cartilor este baza de date ce contine ... despre toate cartile ...</p>
+<p>... Informatiile detaliate despre o carte (baza de date a unei carti) ...</p>
+<!-- #TODO... wip... tbd... -->
+<h2 id="sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</h2>
+<!-- #FIXME drop when finish -->
+<p><img alt="wip page" src="../pictures/under_maintenance.png" width="200"/> ... UPCOMING...</p>
+<p>Acesta reprezinta sablonul (template) folosit in procesul de creare a unei carti noi (proces <code>NEWB</code>). Acest sablon contine urmatoarele elemente:</p>
+<ul>
+<li>
+<p><em>sectiunile (documentele) de start ale cartii</em> - pagina de <code>index.md</code> si documentul PDF final, ambele goale dar minim necesare in inceperea cartii</p>
+</li>
+<li>
+<p><em>scripturile comenzi management carte</em> - reprezinta scripturile cu comenzile necesare pentru managementul si "operarea" acelei carti:</p>
+<ul>
+<li>generarea temporara (de lucru) a cartii pentru previzualizare</li>
+<li>generarea si asamblarea finala a cartii</li>
+<li>pornirea serverului de previzualizare (server local HTTP)</li>
+<li>monitorizarea fisierelor locale in timpul previzualizarii pentru a detectat eventuale modificari facute de utilizator</li>
+</ul>
+</li>
+<li>
+<p><em>baza de date a cartii</em> este baza de date cu detaliile unei carti, baza de date ce este referentiata din <a href="#bcat-catalogul-cartilor">catalogul cartilor</a></p>
+</li>
+</ul>
+<p>...tbd... <!-- #TODO continue with sections fro each item containing exact / concrete development level details --></p>
+<h2 id="catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</h2>
+<!-- #FIXME drop when finish -->
+<p><img alt="wip page" src="../pictures/under_maintenance.png" width="200"/> ... UPCOMING...</p>
+<!-- #TODO... wip... tbd... -->
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 2, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 5, 2023</span>
 </small>
 </div>
 </article>

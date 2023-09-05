@@ -1187,6 +1187,7 @@
 <li><a href="#810-dsgn-810.02-system_landscape-dplb-asamblare-publicare-carte">DPLB asamblare publicare carte</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-hlps-help-asistenta-si-manuale">HLPS help asistenta si manuale</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-organizarea-aplicatiei-software">Organizarea aplicatiei software</a></li>
+<li><a href="#810-dsgn-810.02-system_landscape-note">Note</a></li>
 </ul>
 </li>
 </ul>
@@ -1267,13 +1268,16 @@
 <li>
 <p><strong>catalogul cartilor</strong> ce este baza de date cu informatiile de baza despre carti. Acest catalog contine informatiile necesare pentru identificarea si referentierea unei carti in aplicatie. <em>Datele detaliate</em> aferente unei carti se gasesc in directorul aferent acesteia, director al carui nume se regaseste in acest catalog. Catalogul este stocat in format <code>JSON</code> si se gaseste in fisierul <code>books_catalog.json</code>.</p>
 </li>
+<li>
+<p><strong>interfata UI "Catalog carti"</strong> ce este interfata CLIENT-UI<sup id="fnref:1"><a class="footnote-ref" href="#810-dsgn-810.02-system_landscape-fn:1">1</a></sup> pentru managementul catalogului cartilor oferind operatii tip CRUD asupra bazei de date cu catalogul cartilor.</p>
+</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
 <li><em>code-name</em>: <code>bcat</code></li>
 <li><em>SERVER locatie</em>: <code>books_metainfo/</code></li>
-<li><em>CLIENT locatie</em>: <code>docs/bcat/index.html</code> (<code>doc_src/index.md</code> before 1-st compilation)</li>
+<li><em>CLIENT-UI locatie</em>: <code>docs/bcat/index.html</code> (<code>doc_src/index.md</code> before 1-st compilation)</li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-bcat_system_process"><code>810.05a-bcat_System_Process.md</code></a></li>
 </ul>
 </div>
@@ -1347,7 +1351,16 @@
 <h2 id="810-dsgn-810.02-system_landscape-organizarea-aplicatiei-software">Organizarea aplicatiei software</h2>
 <p><small>Cod document metodologic: <code>810.05b Application Software Organization</code></small></p>
 <p>In principiu aplicatia (sistemul) este organizata pe principiul <em>directoarelor de fisiere</em>. Aceasta permite o "rapida" regasire si recunoastere a informatiilor necesare chiar de la nivelul sistemului de operare (fara a necesita instrumente speciale ci doar comenzile existente in sistemul de operare). De asemena o astfel de organizare este foarte apropiata de standardele clasice / originale ale aplicatiilor web.</p>
-<p>Directoarele principale ale aplicatiei sunt enumerate la fiecare componenta din arhitectura si nu necesita explicatii suplimentare fata de cele scrise deja (vezi sectiunea <a href="#810-dsgn-810.02-system_landscape-introducere">Arhitectura sistemului</a>). Detalii privind structura interna a fiecarui director aferent unei componente se regasesc in documentul de descriere detaliata aferent acelei componente. In situatii in care s-au considerat necesare diferite detelii pur specifice si "locale", in directorul componentei respective se gaseste un fisier <code>README_&lt;cod-name componenta&gt;.md</code> ce prezinta aceste lucruri. Aceste documente se adreseaza in special dezvoltarilor aplicatiei (dar nu in mod obligatoriu) iar ca exemplu de ce poate contine un astfel de fisier este prezentarea modalitatii de pregatire a mediului local pentru dezvoltare.</p></section><section class="print-page" id="810-dsgn-810.05a-sysinit_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
+<p>Directoarele principale ale aplicatiei sunt enumerate la fiecare componenta din arhitectura si nu necesita explicatii suplimentare fata de cele scrise deja (vezi sectiunea <a href="#810-dsgn-810.02-system_landscape-introducere">Arhitectura sistemului</a>). Detalii privind structura interna a fiecarui director aferent unei componente se regasesc in documentul de descriere detaliata aferent acelei componente. In situatii in care s-au considerat necesare diferite detelii pur specifice si "locale", in directorul componentei respective se gaseste un fisier <code>README_&lt;cod-name componenta&gt;.md</code> ce prezinta aceste lucruri. Aceste documente se adreseaza in special dezvoltarilor aplicatiei (dar nu in mod obligatoriu) iar ca exemplu de ce poate contine un astfel de fisier este prezentarea modalitatii de pregatire a mediului local pentru dezvoltare.</p>
+<h2 id="810-dsgn-810.02-system_landscape-note">Note</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="810-dsgn-810.02-system_landscape-fn:1">
+<p>UI - desemneaza in general "Interfata Utilizator" (engl: User Interface) grafica, interactiva ce este afisata de catre browser (sau alta aplicatie GUI de acces)&#160;<a class="footnote-backref" href="#810-dsgn-810.02-system_landscape-fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></section><section class="print-page" id="810-dsgn-810.05a-sysinit_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
 <small markdown><strong>BookLab System</strong><br>
 <em>(c) 2023 RENware Software Systems</em>
 </small><br><br></p>
@@ -1408,12 +1421,48 @@
 <p><strong><em>Cuprins:</em></strong></p>
 <div class="toc">
 <ul>
-<li><a href="#810-dsgn-810.05a-bcat_system_process-bcat-catalogul-cartilor">BCAT catalogul cartilor</a></li>
+<li><a href="#810-dsgn-810.05a-bcat_system_process-bcat-catalogul-cartilor">BCAT catalogul cartilor</a><ul>
+<li><a href="#810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-baza-de-date">Catalogul cartilor - baza de date</a></li>
+<li><a href="#810-dsgn-810.05a-bcat_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</a></li>
+<li><a href="#810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <hr />
-<p><img alt="wip page" src="pictures/under_maintenance.png" /></p>
-<p>-#TODO... UPCOMING...</p></section><section class="print-page" id="810-dsgn-810.05a-newb_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
+<h2 id="810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-baza-de-date">Catalogul cartilor - baza de date</h2>
+<!-- #FIXME drop when finish -->
+<p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /> ... UPCOMING...</p>
+<p>... Catalogul cartilor este baza de date ce contine ... despre toate cartile ...</p>
+<p>... Informatiile detaliate despre o carte (baza de date a unei carti) ...</p>
+<!-- #TODO... wip... tbd... -->
+
+<h2 id="810-dsgn-810.05a-bcat_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</h2>
+<!-- #FIXME drop when finish -->
+<p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /> ... UPCOMING...</p>
+<p>Acesta reprezinta sablonul (template) folosit in procesul de creare a unei carti noi (proces <code>NEWB</code>). Acest sablon contine urmatoarele elemente:</p>
+<ul>
+<li>
+<p><em>sectiunile (documentele) de start ale cartii</em> - pagina de <code>index.md</code> si documentul PDF final, ambele goale dar minim necesare in inceperea cartii</p>
+</li>
+<li>
+<p><em>scripturile comenzi management carte</em> - reprezinta scripturile cu comenzile necesare pentru managementul si "operarea" acelei carti:</p>
+<ul>
+<li>generarea temporara (de lucru) a cartii pentru previzualizare</li>
+<li>generarea si asamblarea finala a cartii</li>
+<li>pornirea serverului de previzualizare (server local HTTP)</li>
+<li>monitorizarea fisierelor locale in timpul previzualizarii pentru a detectat eventuale modificari facute de utilizator</li>
+</ul>
+</li>
+<li>
+<p><em>baza de date a cartii</em> este baza de date cu detaliile unei carti, baza de date ce este referentiata din <a href="#810-dsgn-810.05a-bcat_system_process-bcat-catalogul-cartilor">catalogul cartilor</a></p>
+</li>
+</ul>
+<p>...tbd... <!-- #TODO continue with sections fro each item containing exact / concrete development level details --></p>
+<h2 id="810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</h2>
+<!-- #FIXME drop when finish -->
+<p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /> ... UPCOMING...</p>
+<!-- #TODO... wip... tbd... --></section><section class="print-page" id="810-dsgn-810.05a-newb_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
 <small markdown><strong>BookLab System</strong><br>
 <em>(c) 2023 RENware Software Systems</em>
 </small><br><br></p>

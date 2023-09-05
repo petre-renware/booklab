@@ -340,6 +340,11 @@ div.download-btn {
     Organizarea aplicatiei software
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#note">
+    Note
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -493,6 +498,11 @@ div.download-btn {
     Organizarea aplicatiei software
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#note">
+    Note
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -519,6 +529,7 @@ div.download-btn {
 <li><a href="#dplb-asamblare-publicare-carte">DPLB asamblare publicare carte</a></li>
 <li><a href="#hlps-help-asistenta-si-manuale">HLPS help asistenta si manuale</a></li>
 <li><a href="#organizarea-aplicatiei-software">Organizarea aplicatiei software</a></li>
+<li><a href="#note">Note</a></li>
 </ul>
 </li>
 </ul>
@@ -599,13 +610,16 @@ div.download-btn {
 <li>
 <p><strong>catalogul cartilor</strong> ce este baza de date cu informatiile de baza despre carti. Acest catalog contine informatiile necesare pentru identificarea si referentierea unei carti in aplicatie. <em>Datele detaliate</em> aferente unei carti se gasesc in directorul aferent acesteia, director al carui nume se regaseste in acest catalog. Catalogul este stocat in format <code>JSON</code> si se gaseste in fisierul <code>books_catalog.json</code>.</p>
 </li>
+<li>
+<p><strong>interfata UI "Catalog carti"</strong> ce este interfata CLIENT-UI<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> pentru managementul catalogului cartilor oferind operatii tip CRUD asupra bazei de date cu catalogul cartilor.</p>
+</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
 <li><em>code-name</em>: <code>bcat</code></li>
 <li><em>SERVER locatie</em>: <code>books_metainfo/</code></li>
-<li><em>CLIENT locatie</em>: <code>docs/bcat/index.html</code> (<code>doc_src/index.md</code> before 1-st compilation)</li>
+<li><em>CLIENT-UI locatie</em>: <code>docs/bcat/index.html</code> (<code>doc_src/index.md</code> before 1-st compilation)</li>
 <li><em>Document descriere detaliata</em>: <a href="810.05a-bcat_System_Process.html"><code>810.05a-bcat_System_Process.md</code></a></li>
 </ul>
 </div>
@@ -680,12 +694,21 @@ div.download-btn {
 <p><small>Cod document metodologic: <code>810.05b Application Software Organization</code></small></p>
 <p>In principiu aplicatia (sistemul) este organizata pe principiul <em>directoarelor de fisiere</em>. Aceasta permite o "rapida" regasire si recunoastere a informatiilor necesare chiar de la nivelul sistemului de operare (fara a necesita instrumente speciale ci doar comenzile existente in sistemul de operare). De asemena o astfel de organizare este foarte apropiata de standardele clasice / originale ale aplicatiilor web.</p>
 <p>Directoarele principale ale aplicatiei sunt enumerate la fiecare componenta din arhitectura si nu necesita explicatii suplimentare fata de cele scrise deja (vezi sectiunea <a href="#introducere">Arhitectura sistemului</a>). Detalii privind structura interna a fiecarui director aferent unei componente se regasesc in documentul de descriere detaliata aferent acelei componente. In situatii in care s-au considerat necesare diferite detelii pur specifice si "locale", in directorul componentei respective se gaseste un fisier <code>README_&lt;cod-name componenta&gt;.md</code> ce prezinta aceste lucruri. Aceste documente se adreseaza in special dezvoltarilor aplicatiei (dar nu in mod obligatoriu) iar ca exemplu de ce poate contine un astfel de fisier este prezentarea modalitatii de pregatire a mediului local pentru dezvoltare.</p>
+<h2 id="note">Note</h2>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>UI - desemneaza in general "Interfata Utilizator" (engl: User Interface) grafica, interactiva ce este afisata de catre browser (sau alta aplicatie GUI de acces) <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 4, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 5, 2023</span>
 </small>
 </div>
 </article>
