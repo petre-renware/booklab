@@ -1,3 +1,0 @@
-
-`bk_tmpl/` DIRECTORY WAS MOVED TO DIR `booklab_app/`
-

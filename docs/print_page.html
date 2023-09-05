@@ -1425,6 +1425,7 @@
 <li><a href="#810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-baza-de-date">Catalogul cartilor - baza de date</a></li>
 <li><a href="#810-dsgn-810.05a-bcat_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</a></li>
 <li><a href="#810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</a></li>
+<li><a href="#810-dsgn-810.05a-bcat_system_process-informatii-despre-aplicatie">Informatii despre aplicatie</a></li>
 </ul>
 </li>
 </ul>
@@ -1436,6 +1437,9 @@
 <p>... Catalogul cartilor este baza de date ce contine ... despre toate cartile ...</p>
 <p>... Informatiile detaliate despre o carte (baza de date a unei carti) ...</p>
 <!-- #TODO... wip... tbd... -->
+
+<p>Catalogul cartilor este localizat in directorul <strong><code>books_metainfo/</code></strong> iar informatiile sunt stocate intr-un fisier cu numele <strong><code>books_catalog.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
+<!-- #TODO... structura fisierului si key urile aferente, nume, tip, eventuale reguli -->
 
 <h2 id="810-dsgn-810.05a-bcat_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</h2>
 <!-- #FIXME drop when finish -->
@@ -1462,7 +1466,12 @@
 <h2 id="810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</h2>
 <!-- #FIXME drop when finish -->
 <p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /> ... UPCOMING...</p>
-<!-- #TODO... wip... tbd... --></section><section class="print-page" id="810-dsgn-810.05a-newb_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
+<!-- #TODO... wip... tbd... -->
+
+<h2 id="810-dsgn-810.05a-bcat_system_process-informatii-despre-aplicatie">Informatii despre aplicatie</h2>
+<p>Tot in directorul <code>books_metainfo/</code> mai exista o baza de date ce contine informatii referitoare la aplicatia (sistemul aplicational) curent utilizata, mai exact la ceea ce in termeni clasici se numeste "aplicatia instalata".</p>
+<p>Aceste informatii sunt stocate intr-un fisier cu numele <strong><code>app_info.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
+<!-- #TODO... structura fisierului si key urile aferente, nume, tip, eventuale reguli --></section><section class="print-page" id="810-dsgn-810.05a-newb_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
 <small markdown><strong>BookLab System</strong><br>
 <em>(c) 2023 RENware Software Systems</em>
 </small><br><br></p>
