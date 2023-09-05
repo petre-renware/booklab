@@ -1,12 +1,4 @@
 {
-	"app_meta_info": {
 		"activated_on": "YYYY-MM-DD",
 		"version": "M.m.p"
-	},
-	"user_books": [
-		"bk_tmpl": {
-			"description": "Default template for new book"
-		},
-		"other_book_here": null
-	]
 }
