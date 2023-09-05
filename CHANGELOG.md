@@ -36,7 +36,7 @@
 
 * wip...
 
-* ... 230905piu_b split database from `books_metainfo/` in 2 dbs, one for books and one for app itself data (meta data and configurations data) && updated doc `810.05a-bcat_System_Process.md`
+* 230905piu_b split database from `books_metainfo/` in 2 dbs, one for books and one for app itself data (meta data and configurations data) && updated doc `810.05a-bcat_System_Process.md`
 
 * ---#NOTE publish all up ---
 
