@@ -34,7 +34,17 @@
 
 * ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
 
+* tbd... finish `books_metainfo/bk_tmpl/bkcmd_start_book_preview.sh`:
+    * [ ] give it a final clean,
+    * [ ] insert _shebang `!#`_ directive
+    * [ ] make executable
+    * [ ] move it to `doc_src/` to be available to run
+
+
 * wip...
+
+
+* 230906piu_a updated command `bkcmd_start_book_preview`, created `.sh` version (in dir `books_metainfo/bk_tmpl/`) to start a _light python HTTP server_ (NOTE: python version was renamed using `bkcmd_PY_...` in name)
 
 * 230905piu_b more actions:
     * updated structure of `books_catalog.json`
