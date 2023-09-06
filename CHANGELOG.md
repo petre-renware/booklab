@@ -43,7 +43,7 @@
 
 * wip...
 
-* 230906piu_b updated `doc_src/bcat/index.md` with some intro text and skeleton for effective buttons & content
+* 230906piu_b raw update of `doc_src/bcat/index.md` with some intro text and skeleton for effective buttons, content and Jinja variable places
 
 * ---#TODO publish all up ---
 
