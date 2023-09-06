@@ -38,7 +38,7 @@
     * [ ] give it a final clean form (#NOTE consider to make both versions, Linux SHELL and Windows CMD)
     * [ ] insert _shebang `!#`_ directive
     * [ ] Linux shell version make executable
-    * [ ] move it to `doc_src/` to be available to run
+    * [ ] move it to `<BOOK ROOT>/` to be available to run IN FINAL ASSEMBLED APP (for dev project in `<PROJECT ROOT>`
 
 
 * wip...
