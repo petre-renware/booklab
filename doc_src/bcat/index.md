@@ -9,9 +9,14 @@
 
 # Catalogul cartilor
 
-![wip page](../pictures/under_maintenance.png)
+Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cartile create de dumneavoastra si stadiul acestora, sa efectuati operatii asupra lor sau sa creati o carte noua.
 
-...UPCOMING...
+
+
+
+## Lista cartilor
+
+![wip page](../pictures/under_maintenance.png) <!--#FIXME drop me when finish -->
 
 
 <!-- #TODO plan for this page
@@ -24,3 +29,19 @@
 * for opers use small icons (from material library) with link text, NOT BUTTONS as could have ugly appearance
 
 -->
+
+
+
+
+[Creare carte](newb/)
+
+{% raw %}
+
+| Id carte | Cod carte | Denumire carte | Note       | Operatii |
+| -------- | --------- | -------------- | ---------- | ------- |
+| hidde me | {{ xxx }} | (( xxx ))      | {{ xxx }} | [:material-book-edit:](edtb/) - [organizare](orgm/) - [view bk](prvb/) - [asamblare](dplb/) ... |
+
+{% endraw %}
+
+
+
