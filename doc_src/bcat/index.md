@@ -33,7 +33,7 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 
 
-[Creare carte](http://<crt_server_name>/newb/)
+[Creare carte](newb/)
 
 {% raw %}
 
