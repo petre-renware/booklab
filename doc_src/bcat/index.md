@@ -9,9 +9,20 @@
 
 # Catalogul cartilor
 
+Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cartile create de dumneavoastra si stadiul acestora, sa efectuati operatii asupra lor sau sa creati o carte noua.
+
+
+
+
+## Lista cartilor
+
+
+
+
 ![wip page](../pictures/under_maintenance.png)
 
-...UPCOMING...
+...UPCOMING... <!--#FIXME drop me when finish -->
+
 
 
 <!-- #TODO plan for this page
@@ -24,3 +35,9 @@
 * for opers use small icons (from material library) with link text, NOT BUTTONS as could have ugly appearance
 
 -->
+
+
+
+
+
+
