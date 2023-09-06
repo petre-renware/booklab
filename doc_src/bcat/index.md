@@ -16,9 +16,7 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 ## Lista cartilor
 
-![wip page](../pictures/under_maintenance.png)
-
-...UPCOMING... <!--#FIXME drop me when finish -->
+![wip page](../pictures/under_maintenance.png) <!--#FIXME drop me when finish -->
 
 
 <!-- #TODO plan for this page
@@ -32,11 +30,18 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 -->
 
+
+
+
 [Creare carte](http://<crt_server_name>/newb/)
 
-| Id carte | Cod carte | Denumire carte | Note | Operatii |
-| -------- | --------- | -------------- | ---- | ------- |
+{% raw %}
 
+| Id carte | Cod carte | Denumire carte | Note       | Operatii |
+| -------- | --------- | -------------- | ---------- | ------- |
+| hidde me | {{ xxx }} | (( xxx ))      | {{ xxx }} | [Editare icon](http://<crt_server_name>/edtb/) [...alta oper cu icon] |
+
+{% endraw %}
 
 
 
