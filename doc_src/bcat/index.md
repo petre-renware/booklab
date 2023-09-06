@@ -39,11 +39,17 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
                         * should books catalog data set in table
 
 ```pyodide
+# #NOTE attn here thet JSON is at server and should be get with a request to server `bcat`, ie something like `http://localhost:7111/bcat/get_books_catalog`
+
+# example here #FIXME drop me
+
 import micropip
 
 print("Installing cowsay...")
 await micropip.install("cowsay")
-print("done!")
+
+print("done!") # this print will appear in D9M sequence in page, so right here ==> print HTML and draw table here
+
 ```
                      #TODO ---(EOF Pyodide code) -->
 
