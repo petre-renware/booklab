@@ -42,13 +42,18 @@
 
 * tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
 
+* ---#FIXME IMPORTANT NOTE
+    * [ ] ERYTHING SHOULD BE PPRESENT UNDER `doc_src/` in order to exists in `docs/` in final BookApp kit
+    * [x] --- OR ---
+    * [ ] upd `setup/` to copy @ installation `docs/` files in prod srv WWWroot and the other files in `/opt/booklab/`
+    * [x] --- ANYWAY ---
+    * [ ] in 2nd variant what files and where will be present in case od switching to a `CGI Python` execution of code @ server side
+
 
 * wip...
-
-
 * ---#TODO publish all up ---
 
-* 230906piu_d update ``doc_src/bcat/index.md` UI page with comments ref `Pyodide` to load catalog data table
+* 230906piu_d update `doc_src/bcat/index.md` UI page with comments ref `Pyodide` to load catalog data table
 
 * 230906piu_c #NOTE_IMP_#NOTE INSTALLED CHROME (file mvd to `setup/INSTALL-CHROME-On_WSL.md` dir) and WORKS MKDOCS GENERATION ON Linux - tested and published OK/PASS
 
