@@ -35,14 +35,15 @@
 * ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
 
 * tbd... finish `books_metainfo/bk_tmpl/bkcmd_start_book_preview.sh`:
-    * [ ] give it a final clean,
+    * [ ] give it a final clean form (#NOTE consider to make both versions, Linux SHELL and Windows CMD)
     * [ ] insert _shebang `!#`_ directive
-    * [ ] make executable
+    * [ ] Linux shell version make executable
     * [ ] move it to `doc_src/` to be available to run
 
 
 * wip...
 
+* ---#TODO publish all up ---
 
 * 230906piu_a updated command `bkcmd_start_book_preview`, created `.sh` version (in dir `books_metainfo/bk_tmpl/`) to start a _light python HTTP server_ (NOTE: python version was renamed using `bkcmd_PY_...` in name)
 
@@ -63,8 +64,6 @@
     * publicat actualizarile din doc design detaliat BCAT
 
 * 230905piu_b split database from `books_metainfo/` in 2 dbs, one for books and one for app itself data (meta data and configurations data) && updated doc `810.05a-bcat_System_Process.md`
-
-* ---#TODO publish all up ---
 
 * 230905piu_a `810.05a-bcat_System_Process.md` creare varianta de lucru cu informatii despre sectiuni si schelet cu ce contin acestea
 
