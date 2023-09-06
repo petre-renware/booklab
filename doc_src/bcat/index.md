@@ -33,7 +33,7 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 -->
 
 | Id carte | Cod carte | Denumire carte | Note | Operatii |
-|----------|-----------||||
+| -------- | --------- | -------------- | ---- | ------- |
 
 
 
