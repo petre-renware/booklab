@@ -34,6 +34,8 @@
 
 * ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
 
+* tbd... drop `.wenv` after some runs (installed on 06-sep so keep up to 09-sep)
+
 * tbd... finish `books_metainfo/bk_tmpl/bkcmd_start_book_preview.sh`:
     * [ ] give it a final clean form (#NOTE consider to make both versions, Linux SHELL and Windows CMD)
     * [ ] insert _shebang `!#`_ directive
