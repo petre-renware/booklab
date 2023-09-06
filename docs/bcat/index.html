@@ -373,12 +373,23 @@ div.download-btn {
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lista-cartilor">
+    Lista cartilor
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset"><div class="download-btn"><a href="..\pdfs\bcat\index.html\index.pdf">Download PDF</a></div>
+<article class="md-content__inner md-typeset"><div class="download-btn"><a href="../pdfs/bcat/index.html/index.pdf">Download PDF</a></div>
 <!-- #NOTE
 
     * page dedicated for books catalog
@@ -387,24 +398,46 @@ div.download-btn {
 
  -->
 <h1 id="catalogul-cartilor">Catalogul cartilor</h1>
-<p><img alt="wip page" src="../pictures/under_maintenance.png"/></p>
-<p>...UPCOMING...</p>
-<!-- #TODO plan for this page
-
-* table with all books
-* hidden col with book ID
-* Read Upd Del opers on each line
-* global NEW book button
-
-* for opers use small icons (from material library) with link text, NOT BUTTONS as could have ugly appearance
-
--->
+<p>Bine ati venit la <em>Catalogul cartilor dumneavoastra</em>. Aici puteti vizualiza cartile create de dumneavoastra si stadiul acestora, sa efectuati operatii asupra lor sau sa creati o carte noua.</p>
+<h2 id="lista-cartilor">Lista cartilor</h2>
+<p><img alt="wip page" src="../pictures/under_maintenance.png"> <!--#FIXME drop me when finish --></img></p>
+<p>-#TODO plan for this page</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> @1st compile use <code>PysonDB</code> cmd line to cvt <code>.../books_catalog.json</code> to <code>csv</code> to have an initial dataset</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> JS to request <code>bcat</code> data</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> table with all books</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> hidden col with book ID</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> opers on each line</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> global NEW book button</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> for opers use small icons</li>
+</ul>
+<p><a href="newb/">Creare carte</a></p>
+<table>
+<thead>
+<tr>
+<th>Id carte</th>
+<th>Cod carte</th>
+<th>Denumire carte</th>
+<th>Note</th>
+<th>Operatii</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hidde me</td>
+<td>{{ xxx }}</td>
+<td>(( xxx ))</td>
+<td>{{ xxx }}</td>
+<td><a href="edtb/">:material-book-edit:</a> - <a href="orgm/">organizare</a> - <a href="prvb/">view bk</a> - <a href="dplb/">asamblare</a> ...</td>
+</tr>
+</tbody>
+</table>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 4, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 6, 2023</span>
 </small>
 </div>
 </article>
