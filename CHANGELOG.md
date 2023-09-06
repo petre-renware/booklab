@@ -28,9 +28,7 @@
 
 
 
-### 0.1.3 System Detailed Design (LLD) BCAT component - catalog data and client UI (wip...#TODO)
-
-* -NOTE (vezi daca faci si client UI in aceast pach...)
+### 0.1.3 System Detailed Design (LLD) & Implementation BCAT component - catalog data and client UI (wip...#TODO)
 
 * ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
 
@@ -41,6 +39,8 @@
     * [ ] insert _shebang `!#`_ directive
     * [ ] Linux shell version make executable
     * [ ] move it to `<BOOK ROOT>/` to be available to run IN FINAL ASSEMBLED APP (for dev project in `<PROJECT ROOT>`
+
+* tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
 
 
 * wip...
