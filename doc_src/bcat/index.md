@@ -39,7 +39,7 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 | Id carte | Cod carte | Denumire carte | Note       | Operatii |
 | -------- | --------- | -------------- | ---------- | ------- |
-| hidde me | {{ xxx }} | (( xxx ))      | {{ xxx }} | [:material-book-edit:](edtb/) [organizare](orgm/) [view bk](prvb/) [asamblare](dplb/) ... |
+| hidde me | {{ xxx }} | (( xxx ))      | {{ xxx }} | [:material-book-edit:](edtb/) - [organizare](orgm/) - [view bk](prvb/) - [asamblare](dplb/) ... |
 
 {% endraw %}
 
