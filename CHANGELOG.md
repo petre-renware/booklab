@@ -43,7 +43,7 @@
 * tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
 
 * ---#FIXME IMPORTANT NOTE
-    * [ ] ERYTHING SHOULD BE PPRESENT UNDER `doc_src/` in order to exists in `docs/` in final BookApp kit
+    * [ ] EVERYTHING SHOULD BE PRESENT UNDER `doc_src/` in order to exists in `docs/` in final BookApp kit
     * [x] --- OR ---
     * [ ] upd `setup/` to copy @ installation `docs/` files in prod srv WWWroot and the other files in `/opt/booklab/`
     * [x] --- ANYWAY ---
@@ -52,6 +52,13 @@
 
 * wip...
 * ---#TODO publish all up ---
+
+* 230906piu_e more actions:
+    * [x] refactored `books_metainfo/` by moving directory `bk_tmpl/` out in `<PROJECT ROOT>`
+    * [x] created a new component **`book_tmpl`** from `bk_tmpl/`
+    * [x] updated doc `810.02-System_Landscape.md`
+    * [x] created corresponding detailed design doc `810.05a-btmpl_System_Process.md`
+    * [x] created navigation entry & updated `mkdocs.yml`
 
 * 230906piu_d update `doc_src/bcat/index.md` UI page with comments ref `Pyodide` to load catalog data table
 

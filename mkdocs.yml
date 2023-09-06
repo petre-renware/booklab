@@ -20,7 +20,8 @@ nav:
             - Vedere de ansamblu: help/130.02-Overview.md
             - Arhitectura: 810-DSGN/810.02-System_Landscape.md
             - proces sysInit: 810-DSGN/810.05a-sysInit_System_Process.md
-            - catalog carti BCAT: 810-DSGN/810.05a-bcat_System_Process.md
+            - proces BCAT: 810-DSGN/810.05a-bcat_System_Process.md
+            - proces BTMPL: 810-DSGN/810.05a-btmpl_System_Process.md
             - proces NEWB: 810-DSGN/810.05a-newb_System_Process.md
             - proces EDTM: 810-DSGN/810.05a-edtm_System_Process.md
             - proces ORGM: 810-DSGN/810.05a-orgm_System_Process.md
