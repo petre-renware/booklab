@@ -25,7 +25,7 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 * [x] table with all books
 * [ ] hidden col with book ID
 * [ ] opers on each line
-* t ] global NEW book button
+* [x] global NEW book button
 * [ ] for opers use small icons
 
 
