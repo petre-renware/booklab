@@ -43,6 +43,8 @@
 
 * wip...
 
+* 230906piu_b updated `doc_src/bcat/index.md` with some intro text and skeleton for effective buttons & content
+
 * ---#TODO publish all up ---
 
 * 230906piu_a updated command `bkcmd_start_book_preview`, created `.sh` version (in dir `books_metainfo/bk_tmpl/`) to start a _light python HTTP server_ (NOTE: python version was renamed using `bkcmd_PY_...` in name)
