@@ -285,7 +285,12 @@ div.download-btn {
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-bcat_System_Process.html">
-        catalog carti BCAT
+        proces BCAT
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../810-DSGN/810.05a-btmpl_System_Process.html">
+        proces BTMPL
       </a>
 </li>
 <li class="md-nav__item">
@@ -412,6 +417,22 @@ div.download-btn {
 <li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> for opers use small icons</li>
 </ul>
 <p><a href="newb/">Creare carte</a></p>
+<!--                #TODO ---(Pyodide code)---
+                        * here code to execute Pyodide code before render table
+                        * should books catalog data set in table
+
+<div class="highlight"><pre><span></span><code># #NOTE attn here thet JSON is at server and should be get with a request to server `bcat`, ie something like `http://localhost:7111/bcat/get_books_catalog`
+
+# example here #FIXME drop me
+
+import micropip
+
+print(&quot;Installing cowsay...&quot;)
+await micropip.install(&quot;cowsay&quot;)
+
+print(&quot;done!&quot;) # this print will appear in D9M sequence in page, so right here ==&gt; print HTML and draw table here
+</code></pre></div>
+                     #TODO ---(EOF Pyodide code) -->
 <table>
 <thead>
 <tr>
