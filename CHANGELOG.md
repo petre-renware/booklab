@@ -48,6 +48,8 @@
 
 * ---#TODO publish all up ---
 
+* 230906piu_d update ``doc_src/bcat/index.md` UI page with comments ref `Pyodide` to load catalog data table
+
 * 230906piu_c #NOTE_IMP_#NOTE INSTALLED CHROME (file mvd to `setup/INSTALL-CHROME-On_WSL.md` dir) and WORKS MKDOCS GENERATION ON Linux - tested and published OK/PASS
 
 * 230906piu_b raw update of `doc_src/bcat/index.md` with some intro text and skeleton for effective buttons, content and Jinja variable places

@@ -34,6 +34,20 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 [Creare carte](newb/)
 
+<!--                #TODO ---(Pyodide code)---
+                        * here code to execute Pyodide code before render table
+                        * should books catalog data set in table
+
+```pyodide
+import micropip
+
+print("Installing cowsay...")
+await micropip.install("cowsay")
+print("done!")
+```
+                     #TODO ---(EOF Pyodide code) -->
+
+
 {% raw %}
 
 | Id carte | Cod carte | Denumire carte | Note       | Operatii |
