@@ -16,13 +16,9 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 ## Lista cartilor
 
-
-
-
 ![wip page](../pictures/under_maintenance.png)
 
 ...UPCOMING... <!--#FIXME drop me when finish -->
-
 
 
 <!-- #TODO plan for this page
@@ -36,7 +32,8 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 -->
 
-
+| Id carte | Cod carte | Denumire carte | Note | Operatii |
+|----------|-----------||||
 
 
 
