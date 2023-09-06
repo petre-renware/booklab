@@ -39,7 +39,7 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 | Id carte | Cod carte | Denumire carte | Note       | Operatii |
 | -------- | --------- | -------------- | ---------- | ------- |
-| hidde me | {{ xxx }} | (( xxx ))      | {{ xxx }} | [Editare icon](http://<crt_server_name>/edtb/) [...alta oper cu icon] |
+| hidde me | {{ xxx }} | (( xxx ))      | {{ xxx }} | [Editare icon](edtb/) [...alta oper cu icon] |
 
 {% endraw %}
 
