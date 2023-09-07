@@ -58,8 +58,12 @@
 
 * wip...
 
-* 230907piu_a created `doc_src/data_copy/` directory which is intended to keep data copies (for rendering data in UI markdown files with Pyodide or JS). There is a todo NOTE (`NOTE_BCAT_table`) that is posted for future implementation
+
 * ---#TODO review test publish all up ---
+
+* 230907piu_b updated doc `810-DSGN/810.02-System_Landscape.md` show on graphical landscape as separated the STATIC & DYNAMIC parts of app
+
+* 230907piu_a created `doc_src/data_copy/` directory which is intended to keep data copies (for rendering data in UI markdown files with Pyodide or JS). There is a todo NOTE (`NOTE_BCAT_table`) that is posted for future implementation
 
 * 230906piu_e more actions:
     * [x] refactored `books_metainfo/` by moving directory `bk_tmpl/` out in `<PROJECT ROOT>`
