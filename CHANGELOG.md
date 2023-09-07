@@ -56,7 +56,7 @@
 * ... 230907piu_c more actions:
     * [x] clean `doc_src/data_copy/` dir created on `230907piu_a`
     * [x] move `books_catalog.json` from `books_metainfo/` to `doc_src/` (`docs/` (in production after mkdocs compilation)
-    * [ ] move `app_info.json` from `books_metainfo/` to project root and drop this directory
+    * [x] move `app_info.json` from `books_metainfo/` to project root and drop this directory
     * [ ] update 810-DSGN `810.02-System_Landscape.md`
     * [ ] update 810-DSGN `810.05a-bcat_System_Process.md`
     * [ ] CHK IF NEED MORE updates
