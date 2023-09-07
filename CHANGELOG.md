@@ -47,15 +47,6 @@
     * [x] --- ANYWAY ---
     * [ ] in 2nd variant what files and where will be present in case od switching to a `CGI Python` execution of code @ server side
 
-* ---#NOTE_BCAT_table variant to load BCAT table with data
-    * ---[BASIC IDEA]--- to copy data from `books_metainfo/` to `docs/data_copy/` (attn `doc_src/data_copy/` on dev stage but production cms should use `data/`)
-    * [ ] cmd to gen CSV `pysondb converttocsv books_metainfo/books_catalog.json -t ../doc_src/data_copy/books_catalog.csv`
-    * [ ] this cmd should be run: (*) in DEV at compile time, (*) in PROD at every data change on Books Catalog (new, edit, delete)
-    * [ ] BCAT index UI page load table from CSV see: `https://squidfunk.github.io/mkdocs-material/reference/data-tables/#import-table-from-file`
-    * [x] --- OR ---(MORE plausible and appropiate to real BookLab production app)
-    * [ ] under `docs/` (in dev `doc_src/`) is located `books_metainfo/` AS UNIQUE PLACE
-    * [ ] ... as idea every `book_tmpl/` will contain its book JSON and `books_metainfo/` will be in root of `doc_src/` to be available for ALL books
-
 * tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
 
 
