@@ -28,7 +28,7 @@
 
 
 
-### 0.1.3 System Detailed Design (LLD) & Implementation BCAT component - catalog data and client UI (wip...#TODO)
+### 0.1.3 BCAT component LLD & implementation  - catalog data and client UI (wip...#TODO)
 
 * ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
 
@@ -40,8 +40,6 @@
     * [ ] Linux shell version make executable
     * [ ] move it to `<BOOK ROOT>/` to be available to run IN FINAL ASSEMBLED APP (for dev project in `<PROJECT ROOT>`
 
-* tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
-
 * ---#FIXME IMPORTANT NOTE
     * [ ] EVERYTHING SHOULD BE PRESENT UNDER `doc_src/` in order to exists in `docs/` in final BookApp kit
     * [x] --- OR ---
@@ -49,9 +47,19 @@
     * [x] --- ANYWAY ---
     * [ ] in 2nd variant what files and where will be present in case od switching to a `CGI Python` execution of code @ server side
 
+* ---#NOTE_BCAT_table variant to load BCAT table with data
+    * ---[BASIC IDEA]--- to copy data from `books_metainfo/` to `docs/data_copy/` (attn `doc_src/data_copy/` on dev stage but production cms should use `data/`)
+    * [ ] cmd to gen CSV `pysondb converttocsv books_metainfo/books_catalog.json -t ../doc_src/data_copy/books_catalog.csv`
+    * [ ] this cmd should be run: (*) in DEV at compile time, (*) in PROD at every data change on Books Catalog (new, edit, delete)
+    * [ ] BCAT index UI page load table from CSV see: `https://squidfunk.github.io/mkdocs-material/reference/data-tables/#import-table-from-file`
+
+* tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
+
 
 * wip...
-* ---#TODO publish all up ---
+
+* 230907piu_a created `doc_src/data_copy/` directory which is intended to keep data copies (for rendering data in UI markdown files with Pyodide or JS). There is a todo NOTE (`NOTE_BCAT_table`) that is posted for future implementation
+* ---#TODO review test publish all up ---
 
 * 230906piu_e more actions:
     * [x] refactored `books_metainfo/` by moving directory `bk_tmpl/` out in `<PROJECT ROOT>`
