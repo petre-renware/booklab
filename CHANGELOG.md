@@ -52,6 +52,9 @@
     * [ ] cmd to gen CSV `pysondb converttocsv books_metainfo/books_catalog.json -t ../doc_src/data_copy/books_catalog.csv`
     * [ ] this cmd should be run: (*) in DEV at compile time, (*) in PROD at every data change on Books Catalog (new, edit, delete)
     * [ ] BCAT index UI page load table from CSV see: `https://squidfunk.github.io/mkdocs-material/reference/data-tables/#import-table-from-file`
+    * [x] --- OR ---(MORE plausible and appropiate to real BookLab production app)
+    * [ ] under `docs/` (in dev `doc_src/`) is located `books_metainfo/` AS UNIQUE PLACE
+    * [ ] ... as idea every `book_tmpl/` will contain its book JSON and `books_metainfo/` will be in root of `doc_src/` to be available for ALL books
 
 * tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
 
