@@ -61,6 +61,11 @@
 
 * wip...
 
+* ... 230907piu_c more actions:
+    * [ ] move `books_catalog.json` from `books_metainfo/` to `doc_src/` (`docs/` (in production after mkdocs compilation)
+    * [ ] update 810-DSGN `810.02-System_Landscape.md`
+    * [ ] update 810-DSGN `810.05a-bcat_System_Process.md`
+    * [ ] CHK IF NEED MORE updates
 
 * ---#TODO review test publish all up ---
 
