@@ -53,7 +53,7 @@
 * wip...
 
 * ... 230907piu_c more actions:
-    * [ ] clean `doc_src/data_copy/` dir created on `230907piu_a`
+    * [x] clean `doc_src/data_copy/` dir created on `230907piu_a`
     * [x] move `books_catalog.json` from `books_metainfo/` to `doc_src/` (`docs/` (in production after mkdocs compilation)
     * [ ] update 810-DSGN `810.02-System_Landscape.md`
     * [ ] update 810-DSGN `810.05a-bcat_System_Process.md`
