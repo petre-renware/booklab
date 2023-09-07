@@ -28,7 +28,7 @@
 
 
 
-### 0.1.3 BCAT component LLD & implementation  - catalog data and client UI (wip...#TODO)
+### 0.1.3 BCAT component LLD & implementation  - books catalog data and client UI (wip...#TODO)
 
 * ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
 
@@ -39,6 +39,7 @@
     * [ ] insert _shebang `!#`_ directive
     * [ ] Linux shell version make executable
     * [ ] move it to `<BOOK ROOT>/` to be available to run IN FINAL ASSEMBLED APP (for dev project in `<PROJECT ROOT>`
+    * [ ] create in `book_tmpl/` file `book_info.json` with book info - attn really need it?
 
 * ---#FIXME IMPORTANT NOTE
     * [ ] EVERYTHING SHOULD BE PRESENT UNDER `doc_src/` in order to exists in `docs/` in final BookApp kit
@@ -47,20 +48,17 @@
     * [x] --- ANYWAY ---
     * [ ] in 2nd variant what files and where will be present in case od switching to a `CGI Python` execution of code @ server side
 
-* ---#NOTE_BCAT_table variant to load BCAT table with data
-    * ---[BASIC IDEA]--- to copy data from `books_metainfo/` to `docs/data_copy/` (attn `doc_src/data_copy/` on dev stage but production cms should use `data/`)
-    * [ ] cmd to gen CSV `pysondb converttocsv books_metainfo/books_catalog.json -t ../doc_src/data_copy/books_catalog.csv`
-    * [ ] this cmd should be run: (*) in DEV at compile time, (*) in PROD at every data change on Books Catalog (new, edit, delete)
-    * [ ] BCAT index UI page load table from CSV see: `https://squidfunk.github.io/mkdocs-material/reference/data-tables/#import-table-from-file`
-    * [x] --- OR ---(MORE plausible and appropiate to real BookLab production app)
-    * [ ] under `docs/` (in dev `doc_src/`) is located `books_metainfo/` AS UNIQUE PLACE
-    * [ ] ... as idea every `book_tmpl/` will contain its book JSON and `books_metainfo/` will be in root of `doc_src/` to be available for ALL books
-
 * tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
 
 
 * wip...
 
+* 230907piu_c more actions:
+    * [x] clean `doc_src/data_copy/` dir created on `230907piu_a`
+    * [x] move `books_catalog.json` from `books_metainfo/` to `doc_src/` (`docs/` (in production after mkdocs compilation)
+    * [x] move `app_info.json` from `books_metainfo/` to project root and drop this directory
+    * [x] update 810-DSGN `810.02-System_Landscape.md`
+    * [x] update 810-DSGN `810.05a-bcat_System_Process.md`
 
 * ---#TODO review test publish all up ---
 
