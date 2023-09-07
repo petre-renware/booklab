@@ -28,7 +28,7 @@
 
 
 
-### 0.1.3 BCAT component LLD & implementation  - catalog data and client UI (wip...#TODO)
+### 0.1.3 BCAT component LLD & implementation  - books catalog data and client UI (wip...#TODO)
 
 * ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
 
@@ -39,7 +39,7 @@
     * [ ] insert _shebang `!#`_ directive
     * [ ] Linux shell version make executable
     * [ ] move it to `<BOOK ROOT>/` to be available to run IN FINAL ASSEMBLED APP (for dev project in `<PROJECT ROOT>`
-    * [ ] create a `book_info.json` with book info - attn really need it?
+    * [ ] create in `book_tmpl/` file `book_info.json` with book info - attn really need it?
 
 * ---#FIXME IMPORTANT NOTE
     * [ ] EVERYTHING SHOULD BE PRESENT UNDER `doc_src/` in order to exists in `docs/` in final BookApp kit
