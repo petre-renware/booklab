@@ -1,8 +1,7 @@
-#!/usr/bin/bash
-
+#!/bin/bash
 #
 # starts in bck the dynamic server (**`dynbl`**)
-# 
+#
 
 
 

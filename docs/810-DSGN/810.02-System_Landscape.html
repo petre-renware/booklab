@@ -555,8 +555,8 @@ div.download-btn {
 <p>Arhitectura sistemului pleaca de la structura de basa a acestuia, structura redata "pe scurt" mai jos. Diagrama putin mai elaborata dar cu descrierea componentelor se gaseste in <a href="../help/130.02-Overview.html#structura-si-componenta-booklab">documentul <code>130.02-Overview.md</code>, sectiunea "Structura si componenta BookLab"</a> ce <em>se recomanda a fi citit</em> inainte de a incepe studiul acestuia, pentru o mai buna intelegere a lui.</p>
 <pre class="mermaid"><code>graph TD
     bklab([BookLab])
-    bklab_static([STATIC \n BookLab])
-    bklab_dynamic([DYNAMIC \n BookLab])
+    bklab_static([staticbl \n STATIC BookLab \n server])
+    bklab_dynamic([dynbl \n DYNAMIC BookLab \n server])
 
     bklab --- bklab_static
     bklab --- bklab_dynamic
@@ -600,10 +600,9 @@ div.download-btn {
 <div class="admonition warning">
 <p class="admonition-title">Conceptele de server si client</p>
 <ul>
-<li>Se atrage atentia asupra tratarii corecte din punct de vedere conceptual a notiunilor de <code>server</code>  si <code>client</code>. </li>
-<li>Chiar daca locatia de instalare a sistemului nu pare "un server cu multi cai putere", arhitectura conceptuala de client-server este pe deplin implementata cu respectarea tuturor principiilor aferente si o consitentizare a acestui lucru va permite o intelegere corecta a detaliilor tehnice ale sistemului de catre echipa tehnica de lucru.</li>
-<li>Locatiile fizice ale componentelor sunt prezentate NUMAI pentru <em>partea de SERVER</em>.</li>
-<li>Locatiile pentru <em>partea de CLIENT</em> sunt situate dupa o organizare clasica de site static incepind din directorul <code>docs/</code> iar codul este prezent in fisier <code>*.html</code> (in rare cazuri pot fi mai multe dar incep cu acelasi prefix).</li>
+<li>Se atrage atentia asupra tratarii corecte din punct de vedere conceptual a notiunilor de <code>server</code>  si <code>client</code>. Arhitectura conceptuala de client-server este pe deplin implementata cu respectarea tuturor principiilor aferente si o consitentizare a acestui lucru va permite o intelegere corecta a detaliilor tehnice ale sistemului de catre echipa tehnica de lucru.</li>
+<li>In general in toata documentatia produsului prin termenul <em>CLIENT</em> se va intelege si partea de <em>CLIENT FRONTEND</em> iar prin cea de <em>SERVER</em> si partea de <em>SERVER BACKEND</em>.</li>
+<li>Locatiile pentru <em>partea de server static</em> (componenta <strong><code>staticbl</code></strong>) sunt situate dupa o organizare clasica de site static incepind din directorul <code>docs/</code> iar codul "de start" este prezent in fisierul <code>index.html</code> (presupunind ca la utilizarea unui HTTP server anume la dorinta clientului, acesta este configurat sa functioneze asa in lipsa specificarii unui fisier in rutele URL).</li>
 <li>In general (daca nu specifica in clar altfel) <code>code-name</code> al componentelor este acelasi atit pentru SERVER cit si pentru CLIENT. Diferentierea intre acestea se intimpla deoarece raspund servere diferite pentru porturile aferente (80 client si 4111 server). Astfel pe ruta "normala" a unei componente, de ex ptr <em>NEWB</em>: <code>http://booklab.../newb</code> va raspunde intii componenta CLIENT (prezenta sub forma unui <code>index.html</code> in directorul <code>docs/newb/</code>).</li>
 </ul>
 </div>
@@ -611,10 +610,10 @@ div.download-btn {
 <p>Pornirea sistemului comporta doua mari componente "on top", si anume:</p>
 <ul>
 <li>
-<p><strong>STATIC BookLab</strong> - <strong>serverul HTTP static</strong> acesta va deservi partea de web compusa din "fisiere" statice. Acestea reprezinta fisierele HTML aferente interfetei UI dar si celelate fisiere "auxiliare" precum: CSS-uri, JS-uri, imagini, etc</p>
+<p><strong><code>staticbl</code></strong> - <strong>STATIC BookLab</strong> <em>serverul HTTP static</em> acesta va deservi partea de web compusa din "fisiere" statice. Acestea reprezinta fisierele HTML aferente interfetei UI dar si celelate fisiere "auxiliare" precum: CSS-uri, JS-uri, imagini, etc</p>
 </li>
 <li>
-<p><strong>DYNAMIC BookLab</strong> - <strong>serverul HTTP dinamic</strong> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
+<p><strong><code>dynblsrv</code></strong> - <strong>DYNAMIC BookLab</strong> <em>serverul WSGI sau CGI dinamic</em> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
 </li>
 </ul>
 <p>De asemenea referitor la initializarea sistemului trebuie spus si ca <strong><em>prima instalare a acestuia</em></strong> se face cu o serie de programe / scripturi. Nu se intra in detalii deoarece procedura de instalare a sistemului este una cit se poate de clasica pentru instalarile executate manual pe sisteme Linux iar pentru sisteme Windows acesta este tot una clasica, cu un simplu wizard "standardizat" si care executa scrierea in toate locatiile necesare (ex Registry).</p>
@@ -745,7 +744,7 @@ div.download-btn {
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 8, 2023</span>
 </small>
 </div>
 </article>
