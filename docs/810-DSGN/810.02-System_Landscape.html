@@ -564,6 +564,7 @@ div.download-btn {
     sysInit[[sysInit \n Initializare \n sistem]]
 
     bcat[[BCAT \n Catalogul \n cartilor]]
+    bcat_db[(baza de date \n Catalog Carti \n books_catalog.json)]
     book_tmpl[[BTMPL \n Sablon \n carte noua]]
     newb[[NEWB \n Carte noua]]
     edtm[[EDTM \n Creare Editare \n documente]]
@@ -583,6 +584,8 @@ div.download-btn {
     bklab_static ---- dplm
     bklab_static ---- hlps
 
+    bcat --- bcat_db
+    newb --- bcat_db
 
     cdstk[\CD carte \n electronica/]
     aprvfl[\flux aprobare \n carte electronica/]
@@ -641,7 +644,7 @@ div.download-btn {
 <p class="admonition-title">parametrii</p>
 <ul>
 <li><em>code-name</em>: <code>bcat</code></li>
-<li><em>locatie DYNAMIC BookLab</em>: <code>docs/</code> cu baza de date catalogul cartilor <code>books_catalog.json</code></li>
+<li><em>locatie DYNAMIC BookLab</em>: <code>docs/data/</code> cu baza de date catalogul cartilor <code>books_catalog.json</code></li>
 <li><em>locatie STATIC BookLab</em>: <code>docs/bcat/index.html</code> (<code>doc_src/index.md</code> before 1-st compilation)</li>
 <li><em>Document descriere detaliata</em>: <a href="810.05a-bcat_System_Process.html"><code>810.05a-bcat_System_Process.md</code></a></li>
 </ul>

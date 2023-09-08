@@ -1221,6 +1221,7 @@
     sysInit[[sysInit \n Initializare \n sistem]]
 
     bcat[[BCAT \n Catalogul \n cartilor]]
+    bcat_db[(baza de date \n Catalog Carti \n books_catalog.json)]
     book_tmpl[[BTMPL \n Sablon \n carte noua]]
     newb[[NEWB \n Carte noua]]
     edtm[[EDTM \n Creare Editare \n documente]]
@@ -1240,6 +1241,8 @@
     bklab_static ---- dplm
     bklab_static ---- hlps
 
+    bcat --- bcat_db
+    newb --- bcat_db
 
     cdstk[\CD carte \n electronica/]
     aprvfl[\flux aprobare \n carte electronica/]
@@ -1298,7 +1301,7 @@
 <p class="admonition-title">parametrii</p>
 <ul>
 <li><em>code-name</em>: <code>bcat</code></li>
-<li><em>locatie DYNAMIC BookLab</em>: <code>docs/</code> cu baza de date catalogul cartilor <code>books_catalog.json</code></li>
+<li><em>locatie DYNAMIC BookLab</em>: <code>docs/data/</code> cu baza de date catalogul cartilor <code>books_catalog.json</code></li>
 <li><em>locatie STATIC BookLab</em>: <code>docs/bcat/index.html</code> (<code>doc_src/index.md</code> before 1-st compilation)</li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-bcat_system_process"><code>810.05a-bcat_System_Process.md</code></a></li>
 </ul>
@@ -1472,7 +1475,7 @@
 <p>... Informatiile detaliate despre o carte (baza de date a unei carti) ...</p>
 <!-- #TODO... wip... tbd... -->
 
-<p>Catalogul cartilor este localizat in directorul <strong><code>docs/</code></strong><sup id="fnref:1"><a class="footnote-ref" href="#810-dsgn-810.05a-bcat_system_process-fn:1">1</a></sup> iar informatiile sunt stocate intr-un fisier cu numele <strong><code>books_catalog.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
+<p>Catalogul cartilor este localizat in directorul <strong><code>docs/data/</code></strong><sup id="fnref:1"><a class="footnote-ref" href="#810-dsgn-810.05a-bcat_system_process-fn:1">1</a></sup> iar informatiile sunt stocate intr-un fisier cu numele <strong><code>books_catalog.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
 <!-- #TODO... structura fisierului si key urile aferente, nume, tip, eventuale reguli -->
 
 <h2 id="810-dsgn-810.05a-bcat_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</h2>
@@ -1512,7 +1515,7 @@
 <hr />
 <ol>
 <li id="810-dsgn-810.05a-bcat_system_process-fn:1">
-<p>in sectiunea de(servita) de serverul HTTP static, ratiunea fiind
+<p>in sectiunea (de)servita de serverul HTTP static, ratiunea fiind
 ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" serverul dinamic (a se vedea <a href="#810-dsgn-810.02-system_landscape-sysinit-initializare-sistem">sectiunea <em>sysInit</em> din documentul <em>Landscape</em></a>)&#160;<a class="footnote-backref" href="#810-dsgn-810.05a-bcat_system_process-fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>

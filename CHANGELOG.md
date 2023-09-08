@@ -55,9 +55,11 @@
 
 * ---#TODO review test publish all up ---
 
+* 230908piu_a created in static server area (`doc_scr/` in development & `docs/` in production) and moved in `books_catalog.json` - objective: for future data improvements, ads, etc o have a dedicated directory and to keep static server root clean
+
 * 230907piu_c more actions:
     * [x] clean `doc_src/data_copy/` dir created on `230907piu_a`
-    * [x] move `books_catalog.json` from `books_metainfo/` to `doc_src/` (`docs/` (in production after mkdocs compilation)
+    * [x] move `books_catalog.json` from `books_metainfo/` to `doc_src/data/` (`docs/` in production after mkdocs compilation)
     * [x] move `app_info.json` from `books_metainfo/` to project root and drop this directory
     * [x] update 810-DSGN `810.02-System_Landscape.md`
     * [x] update 810-DSGN `810.05a-bcat_System_Process.md`
@@ -67,7 +69,7 @@
 * 230907piu_a created `doc_src/data_copy/` directory which is intended to keep data copies (for rendering data in UI markdown files with Pyodide or JS). There is a todo NOTE (`NOTE_BCAT_table`) that is posted for future implementation
 
 * 230906piu_e more actions:
-    * [x] refactored `books_metainfo/` by moving directory `bk_tmpl/` out in `<PROJECT ROOT>`
+    * [x] refactored `books_metainfo/` by moving directory `book_tmpl/` out in `<PROJECT ROOT>`
     * [x] created a new component **`book_tmpl`** from `bk_tmpl/`
     * [x] updated doc `810.02-System_Landscape.md`
     * [x] created corresponding detailed design doc `810.05a-btmpl_System_Process.md`
