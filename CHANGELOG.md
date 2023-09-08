@@ -55,6 +55,10 @@
 
 * wip...
 
+* ... 230908piu_b created in PROJECT ROOT:
+    * [ ] `start_staricbl_server.sh` that starts in bck the static server (**`staticbl`**)
+    * [ ] `start_dynbl_server.sh` that starts in bck the dynamic server (**`dynblsrv`**)
+
 * ---#TODO review test publish all up ---
 
 * 230908piu_a created in static server area (`doc_scr/` in development & `docs/` in production) and moved in `books_catalog.json` - objective: for future data improvements, ads, etc o have a dedicated directory and to keep static server root clean
