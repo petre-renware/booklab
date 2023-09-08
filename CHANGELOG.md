@@ -39,14 +39,16 @@
     * [ ] insert _shebang `!#`_ directive
     * [ ] Linux shell version make executable
     * [ ] move it to `<BOOK ROOT>/` to be available to run IN FINAL ASSEMBLED APP (for dev project in `<PROJECT ROOT>`
-    * [ ] create in `book_tmpl/` file `book_info.json` with book info - attn really need it?
 
-* ---#FIXME IMPORTANT NOTE
-    * [ ] EVERYTHING SHOULD BE PRESENT UNDER `doc_src/` in order to exists in `docs/` in final BookApp kit
-    * [x] --- OR ---
-    * [ ] upd `setup/` to copy @ installation `docs/` files in prod srv WWWroot and the other files in `/opt/booklab/`
-    * [x] --- ANYWAY ---
-    * [ ] in 2nd variant what files and where will be present in case od switching to a `CGI Python` execution of code @ server side
+* tbd... more for APP:
+    * [ ] create in `book_tmpl/` file `book_info.json` with book info - ATTN really need it?
+    * [ ] `booklab_app/` becomes the HOST for ALL new system, so keeping requirements.txt, docs (as copy of crt docs when prep to deploy or hard link), inside it the app which will be dynamic server, all start, stop, restart scripts ... #NOTE#TODO THINK about that and correlate / merge with next TBD
+    * ---#NOTE#TODO continue from prev item IMPORTANT NOTE:
+        * [ ] EVERYTHING SHOULD BE PRESENT UNDER `doc_src/` in order to exists in `docs/` in final BookApp kit
+        * [x] --- OR ---
+        * [ ] upd `setup/` to copy @ installation `docs/` files in prod srv WWWroot and the other files in `/opt/booklab/`
+        * [x] --- ANYWAY ---
+        * [ ] in 2nd variant what files and where will be present in case od switching to a `CGI Python` execution of code @ server side
 
 * tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
 
