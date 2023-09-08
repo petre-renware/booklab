@@ -57,7 +57,7 @@
 
 * ... 230908piu_b created in PROJECT ROOT:
     * [x] `start_staticbl_server.sh` that starts in bck the static server (**`staticbl`**)
-    * [x] `start_dynbl_server.sh` that starts in bck the dynamic server (**`dynblsrv`**)
+    * [x] `start_dynbl_server.sh` that starts in bck the dynamic server (**`dynbl`**)
     * [ ] updated 810-DSGN `810.02-System_Landscape.md` ref the 2 servers `code-name`(s)
 
 * ---#TODO review test publish all up ---
