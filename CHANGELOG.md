@@ -15,47 +15,20 @@
 
 ## 0.1 First System Design (FUTURE...)
 
-* -#NOTE@IMPORTANT at a moment __publish `booklab.renware.eu` in RENware catalog & main portal__
-
-* tbd...cu ce faci [editarea textului markdown "clasic"](https://blog.miguelgrinberg.com/post/flask-pagedown-markdown-editor-extension-for-flask-wtf). Also Jupiter notebook PLUG IN has editor, check it
-
-* #NOTE... HTML form in markdown and what POST is sent on submit - see commented section at beg of project `index.md`
-* #NOTE... here too, at each component _markdown_ use _Jinja raw block or simple escaping_ to allow for server 2nd processing (for ex at FormsWTF)
-
-
-
-
 
 
 
 ### 0.1.3 BCAT component LLD & implementation  - books catalog data and client UI (wip...#TODO)
 
-* ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
-
-* tbd... drop `.wenv` after some runs (installed on 06-sep so keep up to 09-sep)
-
-* tbd... finish `books_metainfo/bk_tmpl/bkcmd_start_book_preview.sh`:
-    * [ ] give it a final clean form (#NOTE consider to make both versions, Linux SHELL and Windows CMD)
-    * [ ] insert _shebang `!#`_ directive
-    * [ ] Linux shell version make executable
-    * [ ] move it to `<BOOK ROOT>/` to be available to run IN FINAL ASSEMBLED APP (for dev project in `<PROJECT ROOT>`
-
-* tbd... more for APP:
-    * [ ] create in `book_tmpl/` file `book_info.json` with book info - ATTN really need it?
-    * [ ] `booklab_app/` becomes the HOST for ALL new system, so keeping requirements.txt, docs (as copy of crt docs when prep to deploy or hard link), inside it the app which will be dynamic server, all start, stop, restart scripts ... #NOTE#TODO THINK about that and correlate / merge with next TBD
-    * ---#NOTE#TODO continue from prev item IMPORTANT NOTE:
-        * [ ] EVERYTHING SHOULD BE PRESENT UNDER `doc_src/` in order to exists in `docs/` in final BookApp kit
-        * [x] --- OR ---
-        * [ ] upd `setup/` to copy @ installation `docs/` files in prod srv WWWroot and the other files in `/opt/booklab/`
-        * [x] --- ANYWAY ---
-        * [ ] in 2nd variant what files and where will be present in case od switching to a `CGI Python` execution of code @ server side
 
 * tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
 
 
 * wip...
+
 * ---#TODO review test publish all up ---
 
+* 230909piu_a created project `ISSUES.md` and moved all open / tbd items in it
 * 230908piu_c make 230908piu_b` shell files executable (`chmod +x`) & publish app
 * 230908piu_b created in PROJECT ROOT:
     * [x] `start_staticbl_server.sh` that start in bck the static server (**`staticbl`**)
