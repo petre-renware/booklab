@@ -55,7 +55,8 @@
 
 * wip...
 
-* ... 230908piu_b created in PROJECT ROOT:
+* tbd... mk 230908piu_b` shell executable
+* 230908piu_b created in PROJECT ROOT:
     * [x] `start_staticbl_server.sh` that start in bck the static server (**`staticbl`**)
     * [x] `start_dynbl_server.sh` that start in bck the dynamic server (**`dynbl`**)
     * [x] `stop_staticbl_server.sh` that stop static server (**`staticbl`**)
