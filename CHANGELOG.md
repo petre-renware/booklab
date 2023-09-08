@@ -56,7 +56,7 @@
 * wip...
 
 * ... 230908piu_b created in PROJECT ROOT:
-    * [ ] `start_staricbl_server.sh` that starts in bck the static server (**`staticbl`**)
+    * [ ] `start_staticbl_server.sh` that starts in bck the static server (**`staticbl`**)
     * [ ] `start_dynbl_server.sh` that starts in bck the dynamic server (**`dynblsrv`**)
 
 * ---#TODO review test publish all up ---
