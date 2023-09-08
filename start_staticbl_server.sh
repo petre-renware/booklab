@@ -1,4 +1,4 @@
-!#/usr/bin/bash
+#!/usr/bin/bash
 
 #
 # starts in bck the static server (**`staticbl`**)
