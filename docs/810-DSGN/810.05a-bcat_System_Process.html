@@ -320,6 +320,11 @@ div.download-btn {
     Informatii despre aplicatie
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#note">
+    Note
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -438,6 +443,11 @@ div.download-btn {
     Informatii despre aplicatie
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#note">
+    Note
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -458,6 +468,7 @@ div.download-btn {
 <li><a href="#sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</a></li>
 <li><a href="#catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</a></li>
 <li><a href="#informatii-despre-aplicatie">Informatii despre aplicatie</a></li>
+<li><a href="#note">Note</a></li>
 </ul>
 </li>
 </ul>
@@ -469,7 +480,7 @@ div.download-btn {
 <p>... Catalogul cartilor este baza de date ce contine ... despre toate cartile ...</p>
 <p>... Informatiile detaliate despre o carte (baza de date a unei carti) ...</p>
 <!-- #TODO... wip... tbd... -->
-<p>Catalogul cartilor este localizat in directorul <strong><code>books_metainfo/</code></strong> iar informatiile sunt stocate intr-un fisier cu numele <strong><code>books_catalog.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
+<p>Catalogul cartilor este localizat in directorul <strong><code>docs/</code></strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> iar informatiile sunt stocate intr-un fisier cu numele <strong><code>books_catalog.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
 <!-- #TODO... structura fisierului si key urile aferente, nume, tip, eventuale reguli -->
 <h2 id="sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</h2>
 <!-- #FIXME drop when finish -->
@@ -498,15 +509,25 @@ div.download-btn {
 <p><img alt="wip page" src="../pictures/under_maintenance.png" width="200"/> ... UPCOMING...</p>
 <!-- #TODO... wip... tbd... -->
 <h2 id="informatii-despre-aplicatie">Informatii despre aplicatie</h2>
-<p>Tot in directorul <code>books_metainfo/</code> mai exista o baza de date ce contine informatii referitoare la aplicatia (sistemul aplicational) curent utilizata, mai exact la ceea ce in termeni clasici se numeste "aplicatia instalata".</p>
+<p>In directorul radacina a serverului dinamic exista o baza de date ce contine informatii referitoare la aplicatia (sistemul aplicational) curent utilizata, mai exact la ceea ce in termeni clasici se numeste "aplicatia instalata".</p>
 <p>Aceste informatii sunt stocate intr-un fisier cu numele <strong><code>app_info.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
 <!-- #TODO... structura fisierului si key urile aferente, nume, tip, eventuale reguli -->
+<h2 id="note">Note</h2>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>in sectiunea de(servita) de serverul HTTP static, ratiunea fiind
+ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" serverul dinamic (a se vedea <a href="810.02-System_Landscape.html#sysinit-initializare-sistem">sectiunea <em>sysInit</em> din documentul <em>Landscape</em></a>) <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 5, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2023</span>
 </small>
 </div>
 </article>
