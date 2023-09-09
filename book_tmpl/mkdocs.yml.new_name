@@ -1,0 +1,9 @@
+
+
+* -#NOTE ATTN: source documents directory will be `raw_source_docs/` so SET ACCORDINGLY its config line
+
+* -#NOTE ATTN: final assembly directory will be `my_book/` so SET ACCORDINGLY its config line (@cmd `mkdocs build --site-dir my_book/`)
+
+* -#NOTE ATTN: temporary preview dir will be `preview_book/` (@cmd `mkdocs build --site-dir preview_book/`)
+
+
