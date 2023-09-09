@@ -315,7 +315,12 @@ div.download-btn {
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="810.05a-bcat_System_Process.html">
-        catalog carti BCAT
+        proces BCAT
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="810.05a-btmpl_System_Process.html">
+        proces BTMPL
       </a>
 </li>
 <li class="md-nav__item">
@@ -429,7 +434,7 @@ div.download-btn {
 </div>
 </div>
 <div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset"><div class="download-btn"><a href="..\pdfs\810-DSGN\810.05a-sysInit_System_Process.html\810.05a-sysInit_System_Process.pdf">Download PDF</a></div>
+<article class="md-content__inner md-typeset"><div class="download-btn"><a href="../pdfs/810-DSGN/810.05a-sysInit_System_Process.html/810.05a-sysInit_System_Process.pdf">Download PDF</a></div>
 <p><img align="left" alt="booklab_logo" src="../pictures/booklab_logo.png" width="55">
 <small markdown=""><strong>BookLab System</strong><br/>
 <em>(c) 2023 RENware Software Systems</em>
@@ -450,15 +455,15 @@ div.download-btn {
 <p>Pornirea sistemului comporta doua mari componente "on top", si anume:</p>
 <ul>
 <li>
-<p><strong>serverul HTTP static</strong> acesta va deservi partea de web compusa din "fisiere" statice. Acestea reprezinta fisierele HTML aferente interfetei UI dar si celelate fisiere "auxiliare" precum: CSS-uri, JS-uri, imagini, etc</p>
+<p><strong><code>staticbl</code></strong> - <strong>STATIC BookLab</strong> <em>serverul HTTP static</em> acesta va deservi partea de web compusa din "fisiere" statice. Acestea reprezinta fisierele HTML aferente interfetei UI dar si celelate fisiere "auxiliare" precum: CSS-uri, JS-uri, imagini, etc</p>
 </li>
 <li>
-<p><strong>serverul HTTP dinamic</strong> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
+<p><strong><code>dynblsrv</code></strong> - <strong>DYNAMIC BookLab</strong> <em>serverul WSGI sau CGI dinamic</em> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
 </li>
 </ul>
 <blockquote>
 <p>Referitor la "recunoasterea" componentelor de catre cele doua servere (pentru o instalare uzuala unde toate si totul se afla fizic pe aceiasi masina si sub aceiasi radacina a aplicatiei <em>BookLab</em>), <code>code-name</code> al componentelor fiind acelasi atit pentru SERVER cit si pentru CLIENT, <strong><em>diferentierea intre acestea se intimpla deoarece raspund servere diferite pentru porturi aferente</em></strong> (80 client si 4111 server, vezi mai jos detaliile serverelor).</p>
-<p>Astfel pe ruta "normala" a unei componente, de ex ptr <em>NEWB</em>: <code>http://booklab.../newb</code> va raspunde intii componenta CLIENT (prezenta sub forma unui <code>index.html</code> in directorul <code>docs/newb/</code>).</p>
+<p>Astfel pe ruta "normala" a unei componente, de ex ptr <em>NEWB</em>: <code>http://&lt;server&gt;/newb</code> va raspunde intii componenta CLIENT (prezenta sub forma unui <code>index.html</code> in directorul <code>docs/newb/</code> <small markdown="">in mod implicit printr-un fisier <code>index.html</code></small>).</p>
 </blockquote>
 <h2 id="serverul-http-static">Serverul HTTP static</h2>
 <p>Acesta este un server HTTP tip <em>CGI</em> ce raspunde pe portul 80 (portul clasic, implicit pentru sisteme accesabile web).</p>
@@ -489,7 +494,7 @@ div.download-btn {
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 4, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 8, 2023</span>
 </small>
 </div>
 </article>

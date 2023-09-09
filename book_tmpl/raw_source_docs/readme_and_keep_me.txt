@@ -3,7 +3,8 @@ this directory will keep all raw documents of book
 
 acest director va contine toate documentele format sursa (brute) ale cartii
 
-- FISIERELE `index.md.txt` si `print_page.md.txt` trebuiesc tinute asa. Doar cind se creaza proiect nou vor fi redenumite la `md` altfel se transforma automat in HTML la construirea insasi BookLab
+- FISIERELE `index.md.txt` si `print_page.md.txt` trebuiesc tinute asa.
+- Cind se creaza proiect nou vor fi REDENUMITE la `md` altfel se transforma automat in HTML la construirea insasi BookLab
 
 
 

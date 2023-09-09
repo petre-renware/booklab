@@ -568,7 +568,21 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-bcat_System_Process.html" class="md-nav__link">
-        catalog carti BCAT
+        proces BCAT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="810-DSGN/810.05a-btmpl_System_Process.html" class="md-nav__link">
+        proces BTMPL
       </a>
     </li>
   
@@ -1180,6 +1194,7 @@
 <li><a href="#810-dsgn-810.02-system_landscape-introducere">Introducere</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-sysinit-initializare-sistem">sysInit Initializare sistem</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-bcat-catalogul-cartilor">BCAT catalogul cartilor</a></li>
+<li><a href="#810-dsgn-810.02-system_landscape-btmpl-sablon-carte-noua">BTMPL sablon carte noua</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-newb-creare-carte-noua">NEWB creare carte noua</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-edtm-preluare-si-editare-continut">EDTM preluare si editare continut</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-orgm-organizare-structura-carte">ORGM organizare structura carte</a></li>
@@ -1187,6 +1202,7 @@
 <li><a href="#810-dsgn-810.02-system_landscape-dplb-asamblare-publicare-carte">DPLB asamblare publicare carte</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-hlps-help-asistenta-si-manuale">HLPS help asistenta si manuale</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-organizarea-aplicatiei-software">Organizarea aplicatiei software</a></li>
+<li><a href="#810-dsgn-810.02-system_landscape-note">Note</a></li>
 </ul>
 </li>
 </ul>
@@ -1196,10 +1212,17 @@
 <p>Arhitectura sistemului pleaca de la structura de basa a acestuia, structura redata "pe scurt" mai jos. Diagrama putin mai elaborata dar cu descrierea componentelor se gaseste in <a href="#help-130.02-overview-structura-si-componenta-booklab">documentul <code>130.02-Overview.md</code>, sectiunea "Structura si componenta BookLab"</a> ce <em>se recomanda a fi citit</em> inainte de a incepe studiul acestuia, pentru o mai buna intelegere a lui.</p>
 <pre class="mermaid"><code>graph TD
     bklab([BookLab])
+    bklab_static([staticbl \n STATIC BookLab \n server])
+    bklab_dynamic([dynbl \n DYNAMIC BookLab \n server])
+
+    bklab --- bklab_static
+    bklab --- bklab_dynamic
 
     sysInit[[sysInit \n Initializare \n sistem]]
 
     bcat[[BCAT \n Catalogul \n cartilor]]
+    bcat_db[(baza de date \n Catalog Carti \n books_catalog.json)]
+    book_tmpl[[BTMPL \n Sablon \n carte noua]]
     newb[[NEWB \n Carte noua]]
     edtm[[EDTM \n Creare Editare \n documente]]
     orgm[[ORGM \n Organizare \n documente]]
@@ -1207,16 +1230,19 @@
     dplm[[DPLB \n Asamblare \n carte]]
     hlps[[HLPS \n Manuale \n aplicatie]]
 
+    bklab_dynamic --- sysInit
+    bklab_dynamic --- book_tmpl
 
-    bklab --- sysInit
-    bklab ---- bcat
-    bklab ---- newb
-    bklab ---- edtm
-    bklab ---- orgm
-    bklab ---- prvm
-    bklab ---- dplm
-    bklab ---- hlps
+    bklab_static ---- bcat
+    bklab_static ---- newb
+    bklab_static ---- edtm
+    bklab_static ---- orgm
+    bklab_static ---- prvm
+    bklab_static ---- dplm
+    bklab_static ---- hlps
 
+    bcat --- bcat_db
+    newb --- bcat_db
 
     cdstk[\CD carte \n electronica/]
     aprvfl[\flux aprobare \n carte electronica/]
@@ -1231,10 +1257,9 @@
 <div class="admonition warning">
 <p class="admonition-title">Conceptele de server si client</p>
 <ul>
-<li>Se atrage atentia asupra tratarii corecte din punct de vedere conceptual a notiunilor de <code>server</code>  si <code>client</code>. </li>
-<li>Chiar daca locatia de instalare a sistemului nu pare "un server cu multi cai putere", arhitectura conceptuala de client-server este pe deplin implementata cu respectarea tuturor principiilor aferente si o consitentizare a acestui lucru va permite o intelegere corecta a detaliilor tehnice ale sistemului de catre echipa tehnica de lucru.</li>
-<li>Locatiile fizice ale componentelor sunt prezentate NUMAI pentru <em>partea de SERVER</em>.</li>
-<li>Locatiile pentru <em>partea de CLIENT</em> sunt situate dupa o organizare clasica de site static incepind din directorul <code>docs/</code> iar codul este prezent in fisier <code>*.html</code> (in rare cazuri pot fi mai multe dar incep cu acelasi prefix).</li>
+<li>Se atrage atentia asupra tratarii corecte din punct de vedere conceptual a notiunilor de <code>server</code>  si <code>client</code>. Arhitectura conceptuala de client-server este pe deplin implementata cu respectarea tuturor principiilor aferente si o consitentizare a acestui lucru va permite o intelegere corecta a detaliilor tehnice ale sistemului de catre echipa tehnica de lucru.</li>
+<li>In general in toata documentatia produsului prin termenul <em>CLIENT</em> se va intelege si partea de <em>CLIENT FRONTEND</em> iar prin cea de <em>SERVER</em> si partea de <em>SERVER BACKEND</em>.</li>
+<li>Locatiile pentru <em>partea de server static</em> (componenta <strong><code>staticbl</code></strong>) sunt situate dupa o organizare clasica de site static incepind din directorul <code>docs/</code> iar codul "de start" este prezent in fisierul <code>index.html</code> (presupunind ca la utilizarea unui HTTP server anume la dorinta clientului, acesta este configurat sa functioneze asa in lipsa specificarii unui fisier in rutele URL).</li>
 <li>In general (daca nu specifica in clar altfel) <code>code-name</code> al componentelor este acelasi atit pentru SERVER cit si pentru CLIENT. Diferentierea intre acestea se intimpla deoarece raspund servere diferite pentru porturile aferente (80 client si 4111 server). Astfel pe ruta "normala" a unei componente, de ex ptr <em>NEWB</em>: <code>http://booklab.../newb</code> va raspunde intii componenta CLIENT (prezenta sub forma unui <code>index.html</code> in directorul <code>docs/newb/</code>).</li>
 </ul>
 </div>
@@ -1242,10 +1267,10 @@
 <p>Pornirea sistemului comporta doua mari componente "on top", si anume:</p>
 <ul>
 <li>
-<p><strong>serverul HTTP static</strong> acesta va deservi partea de web compusa din "fisiere" statice. Acestea reprezinta fisierele HTML aferente interfetei UI dar si celelate fisiere "auxiliare" precum: CSS-uri, JS-uri, imagini, etc</p>
+<p><strong><code>staticbl</code></strong> - <strong>STATIC BookLab</strong> <em>serverul HTTP static</em> acesta va deservi partea de web compusa din "fisiere" statice. Acestea reprezinta fisierele HTML aferente interfetei UI dar si celelate fisiere "auxiliare" precum: CSS-uri, JS-uri, imagini, etc</p>
 </li>
 <li>
-<p><strong>serverul HTTP dinamic</strong> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
+<p><strong><code>dynblsrv</code></strong> - <strong>DYNAMIC BookLab</strong> <em>serverul WSGI sau CGI dinamic</em> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
 </li>
 </ul>
 <p>De asemenea referitor la initializarea sistemului trebuie spus si ca <strong><em>prima instalare a acestuia</em></strong> se face cu o serie de programe / scripturi. Nu se intra in detalii deoarece procedura de instalare a sistemului este una cit se poate de clasica pentru instalarile executate manual pe sisteme Linux iar pentru sisteme Windows acesta este tot una clasica, cu un simplu wizard "standardizat" si care executa scrierea in toate locatiile necesare (ex Registry).</p>
@@ -1253,8 +1278,8 @@
 <p class="admonition-title">parametrii</p>
 <ul>
 <li><em>code-name</em>: <code>sysInit</code></li>
-<li><em>SERVER locatie</em>: <code>sysInit/</code></li>
-<li><em>locatie scriptu PRIMA INSTALARE</em>: <code>setup/</code></li>
+<li><em>locatie DYNAMIC BookLab</em>: <code>sysInit/</code></li>
+<li><em>locatie script PRIMA INSTALARE</em>: <code>setup/</code></li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-sysinit_system_process"><code>810.05a-sysInit_System_Process.md</code></a></li>
 </ul>
 </div>
@@ -1267,14 +1292,28 @@
 <li>
 <p><strong>catalogul cartilor</strong> ce este baza de date cu informatiile de baza despre carti. Acest catalog contine informatiile necesare pentru identificarea si referentierea unei carti in aplicatie. <em>Datele detaliate</em> aferente unei carti se gasesc in directorul aferent acesteia, director al carui nume se regaseste in acest catalog. Catalogul este stocat in format <code>JSON</code> si se gaseste in fisierul <code>books_catalog.json</code>.</p>
 </li>
+<li>
+<p><strong>interfata UI "Catalog carti"</strong> ce este interfata CLIENT-UI<sup id="fnref:1"><a class="footnote-ref" href="#810-dsgn-810.02-system_landscape-fn:1">1</a></sup> pentru managementul catalogului cartilor oferind operatii tip CRUD asupra bazei de date cu catalogul cartilor.</p>
+</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
 <li><em>code-name</em>: <code>bcat</code></li>
-<li><em>SERVER locatie</em>: <code>books_metainfo/</code></li>
-<li><em>CLIENT locatie</em>: <code>docs/bcat/index.html</code> (<code>doc_src/index.md</code> before 1-st compilation)</li>
+<li><em>locatie DYNAMIC BookLab</em>: <code>docs/data/</code> cu baza de date catalogul cartilor <code>books_catalog.json</code></li>
+<li><em>locatie STATIC BookLab</em>: <code>docs/bcat/index.html</code> (<code>doc_src/index.md</code> before 1-st compilation)</li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-bcat_system_process"><code>810.05a-bcat_System_Process.md</code></a></li>
+</ul>
+</div>
+<h2 id="810-dsgn-810.02-system_landscape-btmpl-sablon-carte-noua">BTMPL sablon carte noua</h2>
+<p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
+<div class="admonition info">
+<p class="admonition-title">parametrii</p>
+<ul>
+<li><em>code-name</em>: <code>book_tmpl</code></li>
+<li><em>locatie DYNAMIC BookLab</em>: <code>book_tmpl/</code></li>
+<li><em>locatie STATIC BookLab</em>: ...nestabilit inca... <!-- #TODO... de stabilit clar si concret  --></li>
+<li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-btmpl_system_process">810.05a-btmpl_System_Process.md</a></li>
 </ul>
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-newb-creare-carte-noua">NEWB creare carte noua</h2>
@@ -1283,8 +1322,8 @@
 <p class="admonition-title">parametrii</p>
 <ul>
 <li><em>code-name</em>: <code>newb</code></li>
-<li><em>SERVER locatie</em>: <code>newb/</code></li>
-<li><em>CLIENT locatie</em>: --- #TODO nestabilit inca - update it</li>
+<li><em>locatie DYNAMIC BookLab</em>: <code>newb/</code></li>
+<li><em>locatie STATIC BookLab</em>: ...nestabilit inca... <!-- #TODO... de stabilit clar si concret  --></li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-newb_system_process">810.05a-newb_System_Process.md</a></li>
 </ul>
 </div>
@@ -1294,8 +1333,8 @@
 <p class="admonition-title">parametrii</p>
 <ul>
 <li><em>code-name</em>: <code>edtm</code></li>
-<li><em>SERVER locatie</em>: <code>edtm/</code></li>
-<li><em>CLIENT locatie</em>: --- #TODO nestabilit inca - update it</li>
+<li><em>locatie DYNAMIC BookLab</em>: <code>edtm/</code></li>
+<li><em>locatie STATIC BookLab</em>: ...nestabilit inca... <!-- #TODO... de stabilit clar si concret  --></li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-edtm_system_process"><code>810.05a-edtm_System_Process.md</code></a></li>
 </ul>
 </div>
@@ -1305,8 +1344,8 @@
 <p class="admonition-title">parametrii</p>
 <ul>
 <li><em>code-name</em>: <code>orgm</code></li>
-<li><em>SERVER locatie</em>: <code>orgm/</code></li>
-<li><em>CLIENT locatie</em>: --- #TODO nestabilit inca - update it</li>
+<li><em>locatie DYNAMIC BookLab</em>: <code>orgm/</code></li>
+<li><em>locatie STATIC BookLab</em>: ...nestabilit inca... <!-- #TODO... de stabilit clar si concret  --></li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-orgm_system_process"><code>810.05a-orgm_System_Process.md</code></a></li>
 </ul>
 </div>
@@ -1316,8 +1355,8 @@
 <p class="admonition-title">parametrii</p>
 <ul>
 <li><em>code-name</em>: <code>prvb</code></li>
-<li><em>SERVER locatie</em>: <code>prvb/</code></li>
-<li><em>CLIENT locatie</em>: --- #TODO nestabilit inca - update it</li>
+<li><em>locatie DYNAMIC BookLab</em>: <code>prvb/</code></li>
+<li><em>locatie STATIC BookLab</em>: ...nestabilit inca... <!-- #TODO... de stabilit clar si concret  --></li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-prvb_system_process"><code>810.05a-prvb_System_Process.md</code></a></li>
 </ul>
 </div>
@@ -1327,8 +1366,8 @@
 <p class="admonition-title">parametrii</p>
 <ul>
 <li><em>code-name</em>: <code>dplb</code></li>
-<li><em>SERVER locatie</em>: <code>dplb/</code></li>
-<li><em>CLIENT locatie</em>: --- #TODO nestabilit inca - update it</li>
+<li><em>locatie DYNAMIC BookLab</em>: <code>dplb/</code></li>
+<li><em>locatie STATIC BookLab</em>: ...nestabilit inca... <!-- #TODO... de stabilit clar si concret  --></li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-dplb_system_process"><code>810.05a-dplb_System_Process.md</code></a></li>
 </ul>
 </div>
@@ -1347,7 +1386,16 @@
 <h2 id="810-dsgn-810.02-system_landscape-organizarea-aplicatiei-software">Organizarea aplicatiei software</h2>
 <p><small>Cod document metodologic: <code>810.05b Application Software Organization</code></small></p>
 <p>In principiu aplicatia (sistemul) este organizata pe principiul <em>directoarelor de fisiere</em>. Aceasta permite o "rapida" regasire si recunoastere a informatiilor necesare chiar de la nivelul sistemului de operare (fara a necesita instrumente speciale ci doar comenzile existente in sistemul de operare). De asemena o astfel de organizare este foarte apropiata de standardele clasice / originale ale aplicatiilor web.</p>
-<p>Directoarele principale ale aplicatiei sunt enumerate la fiecare componenta din arhitectura si nu necesita explicatii suplimentare fata de cele scrise deja (vezi sectiunea <a href="#810-dsgn-810.02-system_landscape-introducere">Arhitectura sistemului</a>). Detalii privind structura interna a fiecarui director aferent unei componente se regasesc in documentul de descriere detaliata aferent acelei componente. In situatii in care s-au considerat necesare diferite detelii pur specifice si "locale", in directorul componentei respective se gaseste un fisier <code>README_&lt;cod-name componenta&gt;.md</code> ce prezinta aceste lucruri. Aceste documente se adreseaza in special dezvoltarilor aplicatiei (dar nu in mod obligatoriu) iar ca exemplu de ce poate contine un astfel de fisier este prezentarea modalitatii de pregatire a mediului local pentru dezvoltare.</p></section><section class="print-page" id="810-dsgn-810.05a-sysinit_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
+<p>Directoarele principale ale aplicatiei sunt enumerate la fiecare componenta din arhitectura si nu necesita explicatii suplimentare fata de cele scrise deja (vezi sectiunea <a href="#810-dsgn-810.02-system_landscape-introducere">Arhitectura sistemului</a>). Detalii privind structura interna a fiecarui director aferent unei componente se regasesc in documentul de descriere detaliata aferent acelei componente. In situatii in care s-au considerat necesare diferite detelii pur specifice si "locale", in directorul componentei respective se gaseste un fisier <code>README_&lt;cod-name componenta&gt;.md</code> ce prezinta aceste lucruri. Aceste documente se adreseaza in special dezvoltarilor aplicatiei (dar nu in mod obligatoriu) iar ca exemplu de ce poate contine un astfel de fisier este prezentarea modalitatii de pregatire a mediului local pentru dezvoltare.</p>
+<h2 id="810-dsgn-810.02-system_landscape-note">Note</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="810-dsgn-810.02-system_landscape-fn:1">
+<p>UI - desemneaza in general "Interfata Utilizator" (engl: User Interface) grafica, interactiva ce este afisata de catre browser (sau alta aplicatie GUI de acces)&#160;<a class="footnote-backref" href="#810-dsgn-810.02-system_landscape-fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></section><section class="print-page" id="810-dsgn-810.05a-sysinit_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
 <small markdown><strong>BookLab System</strong><br>
 <em>(c) 2023 RENware Software Systems</em>
 </small><br><br></p>
@@ -1367,15 +1415,15 @@
 <p>Pornirea sistemului comporta doua mari componente "on top", si anume:</p>
 <ul>
 <li>
-<p><strong>serverul HTTP static</strong> acesta va deservi partea de web compusa din "fisiere" statice. Acestea reprezinta fisierele HTML aferente interfetei UI dar si celelate fisiere "auxiliare" precum: CSS-uri, JS-uri, imagini, etc</p>
+<p><strong><code>staticbl</code></strong> - <strong>STATIC BookLab</strong> <em>serverul HTTP static</em> acesta va deservi partea de web compusa din "fisiere" statice. Acestea reprezinta fisierele HTML aferente interfetei UI dar si celelate fisiere "auxiliare" precum: CSS-uri, JS-uri, imagini, etc</p>
 </li>
 <li>
-<p><strong>serverul HTTP dinamic</strong> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
+<p><strong><code>dynblsrv</code></strong> - <strong>DYNAMIC BookLab</strong> <em>serverul WSGI sau CGI dinamic</em> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
 </li>
 </ul>
 <blockquote>
 <p>Referitor la "recunoasterea" componentelor de catre cele doua servere (pentru o instalare uzuala unde toate si totul se afla fizic pe aceiasi masina si sub aceiasi radacina a aplicatiei <em>BookLab</em>), <code>code-name</code> al componentelor fiind acelasi atit pentru SERVER cit si pentru CLIENT, <strong><em>diferentierea intre acestea se intimpla deoarece raspund servere diferite pentru porturi aferente</em></strong> (80 client si 4111 server, vezi mai jos detaliile serverelor).</p>
-<p>Astfel pe ruta "normala" a unei componente, de ex ptr <em>NEWB</em>: <code>http://booklab.../newb</code> va raspunde intii componenta CLIENT (prezenta sub forma unui <code>index.html</code> in directorul <code>docs/newb/</code>).</p>
+<p>Astfel pe ruta "normala" a unei componente, de ex ptr <em>NEWB</em>: <code>http://&lt;server&gt;/newb</code> va raspunde intii componenta CLIENT (prezenta sub forma unui <code>index.html</code> in directorul <code>docs/newb/</code> <small markdown>in mod implicit printr-un fisier <code>index.html</code></small>).</p>
 </blockquote>
 <h2 id="810-dsgn-810.05a-sysinit_system_process-serverul-http-static">Serverul HTTP static</h2>
 <p>Acesta este un server HTTP tip <em>CGI</em> ce raspunde pe portul 80 (portul clasic, implicit pentru sisteme accesabile web).</p>
@@ -1408,7 +1456,77 @@
 <p><strong><em>Cuprins:</em></strong></p>
 <div class="toc">
 <ul>
-<li><a href="#810-dsgn-810.05a-bcat_system_process-bcat-catalogul-cartilor">BCAT catalogul cartilor</a></li>
+<li><a href="#810-dsgn-810.05a-bcat_system_process-bcat-catalogul-cartilor">BCAT catalogul cartilor</a><ul>
+<li><a href="#810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-baza-de-date">Catalogul cartilor - baza de date</a></li>
+<li><a href="#810-dsgn-810.05a-bcat_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</a></li>
+<li><a href="#810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</a></li>
+<li><a href="#810-dsgn-810.05a-bcat_system_process-informatii-despre-aplicatie">Informatii despre aplicatie</a></li>
+<li><a href="#810-dsgn-810.05a-bcat_system_process-note">Note</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-baza-de-date">Catalogul cartilor - baza de date</h2>
+<!-- #FIXME drop when finish -->
+<p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /> ... UPCOMING...</p>
+<p>... Catalogul cartilor este baza de date ce contine ... despre toate cartile ...</p>
+<p>... Informatiile detaliate despre o carte (baza de date a unei carti) ...</p>
+<!-- #TODO... wip... tbd... -->
+
+<p>Catalogul cartilor este localizat in directorul <strong><code>docs/data/</code></strong><sup id="fnref:1"><a class="footnote-ref" href="#810-dsgn-810.05a-bcat_system_process-fn:1">1</a></sup> iar informatiile sunt stocate intr-un fisier cu numele <strong><code>books_catalog.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
+<!-- #TODO... structura fisierului si key urile aferente, nume, tip, eventuale reguli -->
+
+<h2 id="810-dsgn-810.05a-bcat_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</h2>
+<!-- #FIXME drop when finish -->
+<p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /> ... UPCOMING...</p>
+<p>Acesta reprezinta sablonul (template) folosit in procesul de creare a unei carti noi (proces <code>NEWB</code>). Acest sablon contine urmatoarele elemente:</p>
+<ul>
+<li>
+<p><em>sectiunile (documentele) de start ale cartii</em> - pagina de <code>index.md</code> si documentul PDF final, ambele goale dar minim necesare in inceperea cartii</p>
+</li>
+<li>
+<p><em>scripturile comenzi management carte</em> - reprezinta scripturile cu comenzile necesare pentru managementul si "operarea" acelei carti:</p>
+<ul>
+<li>generarea temporara (de lucru) a cartii pentru previzualizare</li>
+<li>generarea si asamblarea finala a cartii</li>
+<li>pornirea serverului de previzualizare (server local HTTP)</li>
+<li>monitorizarea fisierelor locale in timpul previzualizarii pentru a detectat eventuale modificari facute de utilizator</li>
+</ul>
+</li>
+<li>
+<p><em>baza de date a cartii</em> este baza de date cu detaliile unei carti, baza de date ce este referentiata din <a href="#810-dsgn-810.05a-bcat_system_process-bcat-catalogul-cartilor">catalogul cartilor</a></p>
+</li>
+</ul>
+<p>...tbd... <!-- #TODO continue with sections fro each item containing exact / concrete development level details --></p>
+<h2 id="810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</h2>
+<!-- #FIXME drop when finish -->
+<p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /> ... UPCOMING...</p>
+<!-- #TODO... wip... tbd... -->
+
+<h2 id="810-dsgn-810.05a-bcat_system_process-informatii-despre-aplicatie">Informatii despre aplicatie</h2>
+<p>In directorul radacina a serverului dinamic exista o baza de date ce contine informatii referitoare la aplicatia (sistemul aplicational) curent utilizata, mai exact la ceea ce in termeni clasici se numeste "aplicatia instalata".</p>
+<p>Aceste informatii sunt stocate intr-un fisier cu numele <strong><code>app_info.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
+<!-- #TODO... structura fisierului si key urile aferente, nume, tip, eventuale reguli -->
+
+<h2 id="810-dsgn-810.05a-bcat_system_process-note">Note</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="810-dsgn-810.05a-bcat_system_process-fn:1">
+<p>in sectiunea (de)servita de serverul HTTP static, ratiunea fiind
+ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" serverul dinamic (a se vedea <a href="#810-dsgn-810.02-system_landscape-sysinit-initializare-sistem">sectiunea <em>sysInit</em> din documentul <em>Landscape</em></a>)&#160;<a class="footnote-backref" href="#810-dsgn-810.05a-bcat_system_process-fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></section><section class="print-page" id="810-dsgn-810.05a-btmpl_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
+<small markdown><strong>BookLab System</strong><br>
+<em>(c) 2023 RENware Software Systems</em>
+</small><br><br></p>
+<h1 id="810-dsgn-810.05a-btmpl_system_process-btmpl-sablon-carte-noua">BTMPL sablon carte noua</h1>
+<p><strong><em>Cuprins:</em></strong></p>
+<div class="toc">
+<ul>
+<li><a href="#810-dsgn-810.05a-btmpl_system_process-btmpl-sablon-carte-noua">BTMPL sablon carte noua</a></li>
 </ul>
 </div>
 <hr />
