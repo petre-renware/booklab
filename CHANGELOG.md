@@ -18,7 +18,26 @@
 
 
 
-### 0.1.3 BCAT component LLD & implementation  - books catalog data and client UI (wip...#TODO)
+
+### 0.1.4 BCAT  (wip...#TODO)
+
+
+* tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
+
+
+* wip...
+
+* ---#TODO review test publish all up ---
+
+
+
+
+
+
+
+
+
+### 0.1.3 BCAT LLD & implementation  - books catalog data and client UI (wip...#TODO)
 
 
 * tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
@@ -88,14 +107,6 @@
 * 230905piu_b split database from `books_metainfo/` in 2 dbs, one for books and one for app itself data (meta data and configurations data) && updated doc `810.05a-bcat_System_Process.md`
 
 * 230905piu_a `810.05a-bcat_System_Process.md` creare varianta de lucru cu informatii despre sectiuni si schelet cu ce contin acestea
-
-
-
-
-
-
-
-
 
 
 
