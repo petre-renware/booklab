@@ -28,8 +28,12 @@
 
 * ---#TODO review test publish all up ---
 
+* 230909piu_b load BCAT table with `mkdocs-table-reader-plugin` (installed & requirements.txt updated) and plugin `table-reader` (mkdocs.yml updated). PUBLISHED site
+
 * 230909piu_a created project `ISSUES.md` and moved all open / tbd items in it
-* 230908piu_c make 230908piu_b` shell files executable (`chmod +x`) & publish app
+
+* 230908piu_c make 230908piu_b` shell files executable `chmod +x` & publish app
+
 * 230908piu_b created in PROJECT ROOT:
     * [x] `start_staticbl_server.sh` that start in bck the static server (**`staticbl`**)
     * [x] `start_dynbl_server.sh` that start in bck the dynamic server (**`dynbl`**)

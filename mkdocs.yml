@@ -88,10 +88,11 @@ extra_javascript:
 plugins:
     - search
     - include-markdown
+    - table-reader #NOTE used for staic tables rendering from various sources (CSV, JSON, etc as available in Pandas)
     - macros #NOTE use external jinja variables and macros (see `https://mkdocs-macros-plugin.readthedocs.io/en/latest/`)
     - markdown-exec #NOTE Python execution inside markdown files (execution at build time, "compilation like" NOT dynamically NOT JavaScript)
     - git-revision-date-localized
-    # - pdf-export #NOTE DO NOT USE this as does not render mermaid in PDF docs
+    # - pdf-export  #NOTE DO NOT USE this as does not render mermaid in PDF docs
     - print-site: #NOTE_IMPORTANT_#NOTE put `print-site` plug in BEFORE `pdf-with-js` in order to works the workaround wit a fake `print_page.md` that will determine generation of 'print_page.pdf' as any other page generated pdf by `pdf-with-js`; ingnore warning ` [mkdocs-print-site] 'print-site' should be defined as the *last* plugin,to ensure...`
         # add_to_navigation: true #NOTE not needed here
         # print_page_title: 'Complete BookLab Manual' #NOTE not needed here

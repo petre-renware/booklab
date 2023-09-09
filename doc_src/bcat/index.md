@@ -18,7 +18,8 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 ![wip page](../pictures/under_maintenance.png) <!--#FIXME drop me when finish -->
 
--#TODO plan for this page
+
+<!-- -#TODO plan for this page
 
 * [ ] @1st compile use `PysonDB` cmd line to cvt `.../books_catalog.json` to `csv` to have an initial dataset
 * [ ] JS to request `bcat` data
@@ -28,21 +29,23 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 * [x] global NEW book button
 * [ ] for opers use small icons
 
+---(page plan) -->
 
 
 
 
-[Creare carte](newb/)
 
-<!--                #TODO ---(Pyodide code)---
-                        * here code to execute Pyodide code before render table
-                        * should books catalog data set in table
+[Creare carte](newb/) <!--  buton ce trebyyie sa fie inainte de tabel cu lista carti -->
+
+
+
+
+<!--#TODO --- Pyodide code ---
+    * should display books catalog data set in table
+    * #NOTE attn the JSON with data is at server and should be get with a request to server `bcat`, ie something like `http://localhost:7111/bcat/get_books_catalog`
+---(Pyodide code) --
 
 ```pyodide
-# #NOTE attn here thet JSON is at server and should be get with a request to server `bcat`, ie something like `http://localhost:7111/bcat/get_books_catalog`
-
-# example here #FIXME drop me
-
 import micropip
 
 print("Installing cowsay...")
@@ -51,8 +54,26 @@ await micropip.install("cowsay")
 print("done!") # this print will appear in D9M sequence in page, so right here ==> print HTML and draw table here
 
 ```
-                     #TODO ---(EOF Pyodide code) -->
 
+
+<!-- #NOTE does not help too much - is static execuyed only at mkdocs build compilation...
+```python exec="on"
+print("***Hello Python - See a random number here***")
+import random
+num = random.random()
+print(num)
+```
+-->
+
+
+### Varianta citita static, la compilare din books_catalog. json**
+
+{{ read_json('../data/books_catalog.json', orient='records') }} <!--#NOTE current dire tory is bcat/ here so need go up 1 level to access data/ -->
+
+
+
+
+### Varianta ce va fi citita dinamic la run time si doar variabile Jinja
 
 {% raw %}
 
@@ -61,6 +82,5 @@ print("done!") # this print will appear in D9M sequence in page, so right here =
 | hidde me | {{ xxx }} | {{ xxx }}      | {{ xxx }}  | [edit](edtb/) - [organizare](orgm/) - [view bk](prvb/) - [asamblare](dplb/) ... |
 
 {% endraw %}
-
 
 
