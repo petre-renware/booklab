@@ -13,7 +13,7 @@
 
 
 
-## 0.1 First System Design (FUTURE...)
+## 0.1 First System Design (...)
 
 
 
