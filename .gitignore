@@ -68,8 +68,6 @@ instance/
 # Scrapy stuff:
 .scrapy
 
-# Sphinx documentation
-docs/_build/
 
 # PyBuilder
 target/
@@ -104,15 +102,6 @@ wenv/
 env.bak/
 venv.bak/
 
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
 
 # mypy
 .mypy_cache/
@@ -125,8 +114,7 @@ dmypy.json
 # temporary files
 tmp/
 
-
-
+# VS Code files
 .vscode
 .vscode/
 
