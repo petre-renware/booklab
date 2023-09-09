@@ -13,20 +13,32 @@
 
 
 
-## 0.1 First System Design (FUTURE...)
+## 0.1 First System Design (...)
 
 
 
 
-### 0.1.3 BCAT component LLD & implementation  - books catalog data and client UI (wip...#TODO)
+
+### 0.1.4 BCAT ... (wip...#TODO)
+
+* tbd... `bcat/index.md` fix the Pyodide section (it's only chance to exec in JS as long as github http srv don't allow CGI)
+
+* wip... ( )
+
+* ---#NOTE review and publish all up
+* ... last used item 230909piu_b
 
 
-* tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
 
 
-* wip...
 
-* ---#TODO review test publish all up ---
+
+
+
+
+
+
+### 0.1.3 BCAT & books catalog data - first raw sketch (230909 h04:00)
 
 * 230909piu_b load BCAT table with `mkdocs-table-reader-plugin` (installed & requirements.txt updated) and plugin `table-reader` (mkdocs.yml updated). PUBLISHED site
 
@@ -88,14 +100,6 @@
 * 230905piu_b split database from `books_metainfo/` in 2 dbs, one for books and one for app itself data (meta data and configurations data) && updated doc `810.05a-bcat_System_Process.md`
 
 * 230905piu_a `810.05a-bcat_System_Process.md` creare varianta de lucru cu informatii despre sectiuni si schelet cu ce contin acestea
-
-
-
-
-
-
-
-
 
 
 
