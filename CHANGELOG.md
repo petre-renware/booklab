@@ -25,6 +25,10 @@
 
 * wip...
 
+* 230909piu_f more actions:
+    * [x] some clarification ref `PRVB` process ref HTTP server that will serve the book for preview ==> this should run on a port DIFFERENT than 80 which is reserved for main application
+    * [x] cleared the pair of `(start)(stop)_(static)(dyn)_server.sh` and let just one pair for _start_ & _stop_ the same BookLab HTTP server (just one with CGI option) ==> `start_booklab_server.sh` & `stop_booklab_server.sh`
+
 * ---#NOTE review and publish all up
 
 * 230909piu_e more actions:

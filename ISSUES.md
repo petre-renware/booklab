@@ -22,7 +22,7 @@
 * ...#NOTE TESTUL CORECT: toate comenzile shell merg din directorul fiecarei carti (`bk_tmpl/` acum), individual pentru acea carte si numai pentru ea
 
 
-* tbd... create in `book_tmpl/` file `book_info.json` with book info - ATTN really need it?
+* tbd... create in `doc_src/book_tmpl/` file `book_info.json` with book info - ATTN really need it?
 
 * tbd... drop `.wenv` after some runs (installed on 06-sep so keep up to 09-sep)
 
