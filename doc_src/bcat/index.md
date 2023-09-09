@@ -43,8 +43,9 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 <!--#TODO --- Pyodide code ---
     * should display books catalog data set in table
     * #NOTE attn the JSON with data is at server and should be get with a request to server `bcat`, ie something like `http://localhost:7111/bcat/get_books_catalog`
----(Pyodide code) --
+---(Pyodide code) -->
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
 ```pyodide
 import micropip
 
@@ -56,7 +57,7 @@ print("done!") # this print will appear in D9M sequence in page, so right here =
 ```
 
 
-<!-- #NOTE does not help too much - is static execuyed only at mkdocs build compilation...
+<!-- #NOTE does not help too much - is static executed only at mkdocs build compilation...
 ```python exec="on"
 print("***Hello Python - See a random number here***")
 import random

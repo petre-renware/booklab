@@ -458,7 +458,7 @@ div.download-btn {
 <p><strong><code>staticbl</code></strong> - <strong>STATIC BookLab</strong> <em>serverul HTTP static</em> acesta va deservi partea de web compusa din "fisiere" statice. Acestea reprezinta fisierele HTML aferente interfetei UI dar si celelate fisiere "auxiliare" precum: CSS-uri, JS-uri, imagini, etc</p>
 </li>
 <li>
-<p><strong><code>dynblsrv</code></strong> - <strong>DYNAMIC BookLab</strong> <em>serverul WSGI sau CGI dinamic</em> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
+<p><strong><code>dynblsrv</code></strong> - <strong>DYNAMIC BookLab</strong> <em>serverul CGI dinamic</em> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
 </li>
 </ul>
 <blockquote>
@@ -470,21 +470,23 @@ div.download-btn {
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
+<li><em>obiectiv</em>: servirea de HTML catre client-side</li>
 <li><em>port</em>: 80</li>
 <li><em>nume ruta URL</em>: nume domeniu unde este publicat sistemul prefixat cu <code>booklab</code> (ca si hostname)</li>
 <li><em>acces</em>: public, deschis in extern</li>
-<li><em>implentare</em>: implicit <code>python http.server</code> sau <code>nginx</code>, <code>apache http</code>, etc pentru inplementari "on premises" folosind componentele clientului</li>
+<li><em>implentare</em>: implicit <code>python http.server</code> sau <code>nginx</code>, <code>apache http</code></li>
 </ul>
 </div>
 <h2 id="serverul-http-dinamic">Serverul HTTP dinamic</h2>
-<p>Acesta este un server HTTP tip <em>WSGI</em> ce raspunde pe portul 7111.</p>
+<p>Acesta este acelasi server dar avind optiunea <strong>CGI</strong> activata cu <em>capabilitatea de a rula scripturi Python</em></p>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
-<li><em>port</em>: 7111</li>
+<li><em>obiectiv</em>: rularea de scripturi Python server-side</li>
+<li><em>port</em>: 80</li>
 <li><em>nume ruta URL</em>: numai <code>localhost</code></li>
-<li><em>acces</em>: strict local, nedeschis</li>
-<li><em>implentare</em>: implicit <code>gunicorn</code> sau <code>nginx wsgi</code>, <code>apache uwsgi</code> pentru inplementari "on premises" folosind componentele clientului</li>
+<li><em>acces</em>: public, deschis in extern (dar ruleaza numai din directorul <code>/cgi-bin</code> protejat la scriere si nu orice script "injectat")</li>
+<li><em>implentare</em>: implicit <code>python http.server</code> sau <code>nginx</code>, <code>apache http</code> cu <strong>CGI activat</strong></li>
 </ul>
 </div>
 <h2 id="prima-instalare-a-sistemului">Prima instalare a sistemului</h2>
@@ -494,7 +496,7 @@ div.download-btn {
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 8, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 9, 2023</span>
 </small>
 </div>
 </article>

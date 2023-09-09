@@ -1270,7 +1270,7 @@
 <p><strong><code>staticbl</code></strong> - <strong>STATIC BookLab</strong> <em>serverul HTTP static</em> acesta va deservi partea de web compusa din "fisiere" statice. Acestea reprezinta fisierele HTML aferente interfetei UI dar si celelate fisiere "auxiliare" precum: CSS-uri, JS-uri, imagini, etc</p>
 </li>
 <li>
-<p><strong><code>dynblsrv</code></strong> - <strong>DYNAMIC BookLab</strong> <em>serverul WSGI sau CGI dinamic</em> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
+<p><strong><code>dynblsrv</code></strong> - <strong>DYNAMIC BookLab</strong> <em>serverul CGI dinamic</em> ce permite rularea de scripturi Python server-side si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
 </li>
 </ul>
 <p>De asemenea referitor la initializarea sistemului trebuie spus si ca <strong><em>prima instalare a acestuia</em></strong> se face cu o serie de programe / scripturi. Nu se intra in detalii deoarece procedura de instalare a sistemului este una cit se poate de clasica pentru instalarile executate manual pe sisteme Linux iar pentru sisteme Windows acesta este tot una clasica, cu un simplu wizard "standardizat" si care executa scrierea in toate locatiile necesare (ex Registry).</p>
@@ -1311,7 +1311,7 @@
 <p class="admonition-title">parametrii</p>
 <ul>
 <li><em>code-name</em>: <code>book_tmpl</code></li>
-<li><em>locatie DYNAMIC BookLab</em>: <code>book_tmpl/</code></li>
+<li><em>locatie DYNAMIC BookLab</em>: <code>docs/book_tmpl/</code></li>
 <li><em>locatie STATIC BookLab</em>: ...nestabilit inca... <!-- #TODO... de stabilit clar si concret  --></li>
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-btmpl_system_process">810.05a-btmpl_System_Process.md</a></li>
 </ul>
@@ -1418,7 +1418,7 @@
 <p><strong><code>staticbl</code></strong> - <strong>STATIC BookLab</strong> <em>serverul HTTP static</em> acesta va deservi partea de web compusa din "fisiere" statice. Acestea reprezinta fisierele HTML aferente interfetei UI dar si celelate fisiere "auxiliare" precum: CSS-uri, JS-uri, imagini, etc</p>
 </li>
 <li>
-<p><strong><code>dynblsrv</code></strong> - <strong>DYNAMIC BookLab</strong> <em>serverul WSGI sau CGI dinamic</em> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
+<p><strong><code>dynblsrv</code></strong> - <strong>DYNAMIC BookLab</strong> <em>serverul CGI dinamic</em> ce opereaza in "background" (adica nu prezinta o interfata UI) si deserveste componentele care executa operatiile necesare (de ex create carte noua). Acest server este cunoscut si sub numele de <code>BookLab API</code></p>
 </li>
 </ul>
 <blockquote>
@@ -1430,21 +1430,23 @@
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
+<li><em>obiectiv</em>: servirea de HTML catre client-side</li>
 <li><em>port</em>: 80</li>
 <li><em>nume ruta URL</em>: nume domeniu unde este publicat sistemul prefixat cu <code>booklab</code> (ca si hostname)</li>
 <li><em>acces</em>: public, deschis in extern</li>
-<li><em>implentare</em>: implicit <code>python http.server</code> sau <code>nginx</code>, <code>apache http</code>, etc pentru inplementari "on premises" folosind componentele clientului</li>
+<li><em>implentare</em>: implicit <code>python http.server</code> sau <code>nginx</code>, <code>apache http</code></li>
 </ul>
 </div>
 <h2 id="810-dsgn-810.05a-sysinit_system_process-serverul-http-dinamic">Serverul HTTP dinamic</h2>
-<p>Acesta este un server HTTP tip <em>WSGI</em> ce raspunde pe portul 7111.</p>
+<p>Acesta este acelasi server dar avind optiunea <strong>CGI</strong> activata cu <em>capabilitatea de a rula scripturi Python</em></p>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
-<li><em>port</em>: 7111</li>
+<li><em>obiectiv</em>: rularea de scripturi Python server-side</li>
+<li><em>port</em>: 80</li>
 <li><em>nume ruta URL</em>: numai <code>localhost</code></li>
-<li><em>acces</em>: strict local, nedeschis</li>
-<li><em>implentare</em>: implicit <code>gunicorn</code> sau <code>nginx wsgi</code>, <code>apache uwsgi</code> pentru inplementari "on premises" folosind componentele clientului</li>
+<li><em>acces</em>: public, deschis in extern (dar ruleaza numai din directorul <code>/cgi-bin</code> protejat la scriere si nu orice script "injectat")</li>
+<li><em>implentare</em>: implicit <code>python http.server</code> sau <code>nginx</code>, <code>apache http</code> cu <strong>CGI activat</strong></li>
 </ul>
 </div>
 <h2 id="810-dsgn-810.05a-sysinit_system_process-prima-instalare-a-sistemului">Prima instalare a sistemului</h2>

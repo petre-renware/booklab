@@ -13,20 +13,30 @@
 
 
 
-## 0.1 First System Design (...)
+## 0.2 First System Design (...)
 
 
 
 
 
-### 0.1.4 BCAT ... (wip...#TODO)
+### 0.2.1 BCAT ... (wip...#TODO)
 
 * tbd... `bcat/index.md` fix the Pyodide section (it's only chance to exec in JS as long as github http srv don't allow CGI)
 
-* wip... ( )
+* wip...
 
 * ---#NOTE review and publish all up
-* ... last used item 230909piu_b
+
+* 230909piu_e more actions:
+    * [x] refactored `book_tmpl/` directory moved under `doc_src/` (`docs/` in production)
+    * [x] updated DSGN documents: `810.02-System_Landscape.md` & `810.05a-sysInit_System_Process.md`
+    * [x] created directory `doc_src/cgi-bin/` (`docs/cgi-bin/` in production) for Python scripts to be run on server-side
+
+* 230909piu_d test `bcat/index.md` Pyodide run in markdown for what is generated as HTML page - FACTS:
+    * no script to run `pyodide` include neither in header or in other place
+    * pyodice section is almost like any block code - something is not correct initialized for plugin (remeber, files and python execution fences work)
+
+* 230909piu_c save 0.1.3 tag and last site built zip rename to 0.1.3
 
 
 
@@ -37,6 +47,9 @@
 
 
 
+-#FIXME to archive
+
+## 0.1 First System Design
 
 ### 0.1.3 BCAT & books catalog data - first raw sketch (230909 h04:00)
 

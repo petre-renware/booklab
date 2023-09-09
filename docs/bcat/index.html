@@ -435,20 +435,18 @@ div.download-btn {
 <!--#TODO --- Pyodide code ---
     * should display books catalog data set in table
     * #NOTE attn the JSON with data is at server and should be get with a request to server `bcat`, ie something like `http://localhost:7111/bcat/get_books_catalog`
----(Pyodide code) --
-
+---(Pyodide code) -->
+<script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js" type="text/javascript"></script>
 <div class="highlight"><pre><span></span><code>import micropip
 
-print(&quot;Installing cowsay...&quot;)
-await micropip.install(&quot;cowsay&quot;)
+print("Installing cowsay...")
+await micropip.install("cowsay")
 
-print(&quot;done!&quot;) # this print will appear in D9M sequence in page, so right here ==&gt; print HTML and draw table here
+print("done!") # this print will appear in D9M sequence in page, so right here ==&gt; print HTML and draw table here
 </code></pre></div>
-
-
-<!-- #NOTE does not help too much - is static execuyed only at mkdocs build compilation...
+<!-- #NOTE does not help too much - is static executed only at mkdocs build compilation...
 <p><strong><em>Hello Python - See a random number here</em></strong>
-0.7855641498966578</p>
+0.28003947603138724</p>
 -->
 <h3 id="varianta-citita-static-la-compilare-din-books_catalog-json">Varianta citita static, la compilare din books_catalog. json**</h3>
 <table>
@@ -501,7 +499,7 @@ print(&quot;done!&quot;) # this print will appear in D9M sequence in page, so ri
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 8, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 9, 2023</span>
 </small>
 </div>
 </article>
