@@ -16,12 +16,21 @@
 ## 0.2 First System Design (...)
 
 
+* tbd... after mk run python scripts as CGI, rlse 0.2 then focus on Jupiter
+ 
 
 
 
 ### 0.2.1 BCAT ... (wip...#TODO)
 
-* tbd... `bcat/index.md` fix the Pyodide section (it's only chance to exec in JS as long as github http srv don't allow CGI)
+* tbd... still need it? `bcat/index.md` fix the Pyodide section (it's only chance to exec in JS as long as github http srv don't allow CGI)
+
+* tbd... new structure with python as CGI:
+    * main python file will be `cgi-bin/<component_name>.py`
+    * `index.html` file remain and redirect to python (imp to keep riut callind w/o file name)
+    * the component template file `<component_name>.md` with raw Jinja to remain in HTML and to be rendered by python script
+    * python script, ways to render component html: (1) load it as string, render and print it (including apllication type as in examples), (2) set template dir in `../<component_name>` (one dir over `cgi-bin/`)
+    * file to render should be always `<component_name>.html`
 
 * wip...
 
