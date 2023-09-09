@@ -19,13 +19,13 @@
 
 
 
-### 0.1.4 BCAT  (wip...#TODO)
+### 0.1.4 BCAT ... (wip...#TODO)
 
 
 * tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
 
 
-* wip...
+* wip... (last used item 230909piu_b)
 
 * ---#TODO review test publish all up ---
 
@@ -37,15 +37,7 @@
 
 
 
-### 0.1.3 BCAT LLD & implementation  - books catalog data and client UI (wip...#TODO)
-
-
-* tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
-
-
-* wip...
-
-* ---#TODO review test publish all up ---
+### 0.1.3 BCAT & books catalog data - first raw sketch (230909 h04:00)
 
 * 230909piu_b load BCAT table with `mkdocs-table-reader-plugin` (installed & requirements.txt updated) and plugin `table-reader` (mkdocs.yml updated). PUBLISHED site
 
