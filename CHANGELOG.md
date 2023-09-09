@@ -21,13 +21,14 @@
 
 ### 0.1.4 BCAT ... (wip...#TODO)
 
+* tbd... `bcat/index.md` fix the Pyodide section (it's only chance to exec in JS as long as github http srv don't allow CGI)
 
-* tbd... test @real-run the Pyodide loader proposed in `230906piu_d`
+* wip... ( )
+
+* ---#NOTE review and publish all up
+* ... last used item 230909piu_b
 
 
-* wip... (last used item 230909piu_b)
-
-* ---#TODO review test publish all up ---
 
 
 
