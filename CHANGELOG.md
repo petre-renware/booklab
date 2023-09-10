@@ -27,6 +27,7 @@
 
 * tbd... new structure with python as CGI:
     * main python file will be `cgi-bin/<component_name>.py`
+    -#TODO ref item `230910piu_a` conclusion ***try the directory as `cgi-bin/` + `<component_name>/` + `file...`*** to see if behavior is like it would be in that directory to use a consistent scheme of traversing dirs to access date a and isolate component python scripts
     * `index.html` file remain and redirect to python (imp to keep route calling w/o file name)
     * the component template file `<component_name>.md` with raw Jinja to remain in HTML and to be rendered by python script
     * python script, ways to render component html: (1) load it as string, render and print it (including application type as in examples), (2) set template dir in `../<component_name>` (one dir over `cgi-bin/`)
