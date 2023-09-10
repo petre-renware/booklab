@@ -39,7 +39,8 @@
 
 * wip...
 
-* ...230910piu_c `RMAP.001-item.2` BCAT `index.html` file remain and _redirect_ to python (helps to keep route calling w/o file name for future WSGI full compatibility)
+* ...230910piu_c RMAP.001:
+    * [x] item.2 BCAT `index.html` file remain and _redirect_ to python (helps to keep route calling w/o file name for future WSGI full compatibility)
 
 * ---#NOTE review and publish all up
 
