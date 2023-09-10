@@ -35,12 +35,15 @@
     * [ ] 5. file to render should be always `docs/<component_name>/<component_name>.html`
     * [ ] 6. update DSGN documentation (`810.02-System_Landscape.md`)
 
+* tbd... `bcat.md` books catalog which need to be rewritten with a Jinja for loop to render all books
+
 
 
 * wip...
 
 * ...230910piu_c RMAP.001:
     * [x] 2. BCAT `index.html` file remain and _redirect_ to `cgi-bin/bcat/bcat.py` (helps to keep route calling w/o file name for future WSGI full compatibility)
+    * [x] old `index.md` renamed to `bcat.md` and becomes (final html from `docs/`) subject of Jinja rendering (for books catalog which need to be rewritten with a Jinja for loop to render all books)
 
 * ---#NOTE review and publish all up
 
