@@ -36,7 +36,7 @@
 
 * ---#NOTE review and publish all up
 
-* 230910piu_a created `cgi-bin/whoami.py` to test CGI scripts running. Use that script as start template in scripting.
+* 230910piu_a created `cgi-bin/whoami.py` to test CGI scripts running. Use that script as start template in scripting. Test cmd `localhost:8000/cgi-bin/whoami.py`.
     >**IMPORTANT CONCLUSION:** current directory at script level is HTTP server root directory == **`docs/`**
 
 * 230909piu_f more actions:
