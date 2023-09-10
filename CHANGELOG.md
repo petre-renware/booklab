@@ -25,19 +25,21 @@
 
 * tbd... still need it? `bcat/index.md` fix the Pyodide section (it's only chance to exec in JS as long as github http srv don't allow CGI)
 
-* tbd... new structure with python as CGI:
-    * [ ] main python file will be `cgi-bin/<component_name>/<component_name>.py` (_CONCLUSION_: `<crt_directory>` is HTTP server root `docs/`)
-    * [ ] `index.html` file remain and _redirect_ to python (helps to keep route calling w/o file name for future WSGI full compatibility)
-    * [ ] the component template file `<component_name>.md` with raw Jinja to remain in HTML and to be rendered by python script
-    * [ ] python script, ways to render component html:
-        * (1) load it as string, render and print it (including application type as in examples)
-        * (2) set template dir in `<crt_directory>/<component_name>` (remember, current dir is the HTTP server root)
-    * [ ] file to render should be always `docs/<component_name>/<component_name>.html`
-    * [ ] update DSGN documentation (`810.02-System_Landscape.md`)
+* tbd...mv.me.to.ROADMAP... RMAP.001 - BCAT start for a new structure with python as CGI:
+    * [ ] 1. main python file will be `cgi-bin/<component_name>/<component_name>.py` (_CONCLUSION_: `<crt_directory>` is HTTP server root `docs/`)
+    * [x] 2. `index.html` file remain and _redirect_ to python (helps to keep route calling w/o file name for future WSGI full compatibility)
+    * [ ] 3. the component template file `<component_name>.md` with raw Jinja to remain in HTML and to be rendered by python script
+    * [ ] 4. python script, ways to render component html:
+        * (4.1) load it as string, render and print it (including application type as in examples)
+        * (4.2) set template dir in `<crt_directory>/<component_name>` (remember, current dir is the HTTP server root)
+    * [ ] 5. file to render should be always `docs/<component_name>/<component_name>.html`
+    * [ ] 6. update DSGN documentation (`810.02-System_Landscape.md`)
 
 
 
 * wip...
+
+* ...230910piu_c `RMAP.001-item.2` BCAT `index.html` file remain and _redirect_ to python (helps to keep route calling w/o file name for future WSGI full compatibility)
 
 * ---#NOTE review and publish all up
 
