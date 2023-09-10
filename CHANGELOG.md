@@ -44,6 +44,7 @@
 * 230910piu_c RMAP.001:
     * [x] 2. BCAT `index.html` file remain and _redirect_ to `cgi-bin/bcat/bcat.py` (helps to keep route calling w/o file name for future WSGI full compatibility)
     * [x] 3. old `index.md` renamed to `bcat.md` (RMAP spec: the component template file `<component_name>.md` with raw Jinja to remain in markdown and becomes HTML (after mkdoc compile) as subject to be rendered by python script
+    * [x] 4. partial, made a plan in `cgi.../bcat.py`
 
 * ---#NOTE review and publish all up
 
