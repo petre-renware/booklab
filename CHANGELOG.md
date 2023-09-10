@@ -26,16 +26,18 @@
 * tbd... still need it? `bcat/index.md` fix the Pyodide section (it's only chance to exec in JS as long as github http srv don't allow CGI)
 
 * tbd... new structure with python as CGI:
-    * main python file will be `cgi-bin/<component_name>.py`
-    -#TODO ref item `230910piu_a` conclusion ***try the directory as `cgi-bin/` + `<component_name>/` + `file...`*** to see if behavior is like it would be in that directory to use a consistent scheme of traversing dirs to access date a and isolate component python scripts
-    * `index.html` file remain and redirect to python (imp to keep route calling w/o file name)
-    * the component template file `<component_name>.md` with raw Jinja to remain in HTML and to be rendered by python script
-    * python script, ways to render component html: (1) load it as string, render and print it (including application type as in examples), (2) set template dir in `../<component_name>` (one dir over `cgi-bin/`)
-    * file to render should be always `<component_name>.html`
+    * [ ] main python file will be `cgi-bin/<component_name>/<component_name>.py` (crt directory is HTTP server root `docs/`)
+    * [ ] `index.html` file remain and redirect to python (imp to keep route calling w/o file name)
+    * [ ] the component template file `<component_name>.md` with raw Jinja to remain in HTML and to be rendered by python script
+    * [ ] python script, ways to render component html: (1) load it as string, render and print it (including application type as in examples), (2) set template dir in `../<component_name>` (one dir over `cgi-bin/`)
+    * [ ] file to render should be always `<component_name>.html`
+    * [ ] update DSGN documentation (`810.02-System_Landscape.md`)
 
 * wip...
 
 * ---#NOTE review and publish all up
+
+* 230910piu_b created `cgi-bin/bcat/test.py` as copy fo `cgi-bin/whoami.py` to test crt dir when use subdirs, also initialized as python modules (`__init__.py`) and  created a `cgi-bin/bl_lib.py` to accommodate various misc general python objects ==> *CONCLUSION*: crt dir is the same, the HTTP server root `static_portal/` in test - publish this version
 
 * 230910piu_a created `cgi-bin/whoami.py` to test CGI scripts running. Use that script as start template in scripting. Test cmd `localhost:8000/cgi-bin/whoami.py`.
     >**IMPORTANT CONCLUSION:** current directory at script level is HTTP server root directory == **`docs/`**
