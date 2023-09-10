@@ -26,7 +26,7 @@
 * tbd... still need it? `bcat/index.md` fix the Pyodide section (it's only chance to exec in JS as long as github http srv don't allow CGI)
 
 * tbd...mv.me.to.ROADMAP... RMAP.001 - BCAT start for a new structure with python as CGI:
-    * [ ] 1. main python file will be `cgi-bin/<component_name>/<component_name>.py` (_CONCLUSION_: `<crt_directory>` is HTTP server root `docs/`)
+    * [x] 1. main python file will be `cgi-bin/<component_name>/<component_name>.py` (_CONCLUSION_: `<crt_directory>` is HTTP server root `docs/`)
     * [x] 2. `index.html` file remain and _redirect_ to python (helps to keep route calling w/o file name for future WSGI full compatibility)
     * [x] 3. the component template file `<component_name>.md` with raw Jinja to remain in markdown and becomes HTML (after mkdoc compile) as subject to be rendered by python script
     * [ ] #TODO 4. python script to render template, ways to render component html:
@@ -41,7 +41,7 @@
 
 * wip...
 
-* ...230910piu_c RMAP.001:
+* 230910piu_c RMAP.001:
     * [x] 2. BCAT `index.html` file remain and _redirect_ to `cgi-bin/bcat/bcat.py` (helps to keep route calling w/o file name for future WSGI full compatibility)
     * [x] 3. old `index.md` renamed to `bcat.md` (RMAP spec: the component template file `<component_name>.md` with raw Jinja to remain in markdown and becomes HTML (after mkdoc compile) as subject to be rendered by python script
 
