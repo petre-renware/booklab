@@ -19,19 +19,21 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 ![wip page](../pictures/under_maintenance.png) <!--#FIXME drop me when finish -->
 
 
-<!-- -#TODO plan for this page
-
----(page plan) -->
-
-
-
-
 
 [Creare carte](newb/) <!-- #FIXME_DROP_ME buton ce trebuie sa fie inainte de tabel cu lista carti -->
 
+
 ### Varianta citita static, la compilare din books_catalog. json**
 
+<!-- #FIXME
+- see json changed structure for pysondb
+- Use a copy instead
+- Drop me after compare data test
+-------------->
+ 
 {{ read_json('../data/books_catalog.json', orient='records') }} <!--#NOTE current dire tory is bcat/ here so need go up 1 level to access data/ -->
+
+
 
 
 
