@@ -6,7 +6,7 @@
 # CHANGELOG
 
 - For version code structure meaning see SDEVEN methodology document
-- with (F) are marked those changes that are features in order to be copied in a RELNOTE file
+- with _(F)_ are marked those changes that are features in order to be copied in a RELNOTE file and with _(B)_ bug fixes from versions released
 - #NOTE sote publishing on `arint.renware.eu` from `publishing` branch
 - `<PROJECT ROOT>/doc_src/` is the default starting location in a file path (if not clear from context)
 - `<APP_ROOT>/` is the application root directory, as default `booklab_app/`
@@ -34,6 +34,8 @@
 * wip...
 
 * ---#NOTE review and publish all up
+
+* 230911piu_b fixed BCAT `bcat/index.md` redirect URL to be agnostic to server & port (set to a relative path to `url='../cgi-bin/bcat/bcat.py'`)
 
 * 230911piu_a (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog first attempt, combined `bcat/index.html`` redirect to `cgi-bin/bcat/bcat.py` ==> PASS
 
