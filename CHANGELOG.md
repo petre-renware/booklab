@@ -28,10 +28,11 @@
 
 * wip...  (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
 
+* tbd... update BCAT `810-DSGN/810.05a-bcat_System_Process` to show (link or in doc ?) the template doc (`doc_src/bcat/bcat.md`) ...OPTIONAL put this item on RMAO.001
 
 
 * wip...
-* 
+
 * ---#NOTE review and publish all up
 
 * 230911piu_a (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog first attempt, combined `bcat/index.html`` redirect to `cgi-bin/bcat/bcat.py` ==> PASS
