@@ -23,9 +23,6 @@
 
 ### 0.2.1 BCAT ... (wip...#TODO)
 
-* tbd... still need it? `bcat/index.md` fix the Pyodide section (it's only chance to exec in JS as long as github http srv don't allow CGI)
-
-
 * wip...  (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
 
 * tbd... update BCAT `810-DSGN/810.05a-bcat_System_Process` to show (link or in doc ?) the template doc (`doc_src/bcat/bcat.md`) ...OPTIONAL put this item on RMAO.001
@@ -39,12 +36,12 @@
 
 * 230911piu_a (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog first attempt, combined `bcat/index.html`` redirect to `cgi-bin/bcat/bcat.py` ==> PASS
 
-* 230910piu_c wk to RMAP.001:
+* 230910piu_c work to RMAP.001:
     * [x] 2. BCAT `index.html` file remain and _redirect_ to `cgi-bin/bcat/bcat.py` (helps to keep route calling w/o file name for future WSGI full compatibility)
     * [x] 3. old `index.md` renamed to `bcat.md` (RMAP spec: the component template file `<component_name>.md` with raw Jinja to remain in markdown and becomes HTML (after mkdoc compile) as subject to be rendered by python script
     * [x] 4. partial, made a plan in `cgi.../bcat.py`
 
-* 230910piu_b created `cgi-bin/bcat/test.py` as copy fo `cgi-bin/whoami.py` to test crt dir when use subdirs, also initialized as python modules (`__init__.py`) and  created a `cgi-bin/bl_lib.py` to accommodate various misc general python objects ==> *CONCLUSION*: crt dir is the same, the HTTP server root `static_portal/` in test - publish this version
+* 230910piu_b created `cgi-bin/bcat/test.py` as copy fo `cgi-bin/whoami.py` to test crt dir when use subdirs, also initialized as python modules (`__init__.py`) and  created a `cgi-bin/libutil/bl_lib.py` to accommodate various misc general python objects ==> *CONCLUSION*: crt dir is the same, the HTTP server root `static_portal/` in test - publish this version
 
 * 230910piu_a created `cgi-bin/whoami.py` to test CGI scripts running. Use that script as start template in scripting. Test cmd `localhost:8000/cgi-bin/whoami.py`.
     >**IMPORTANT CONCLUSION:** current directory at script level is HTTP server root directory == **`docs/`**
