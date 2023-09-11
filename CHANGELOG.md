@@ -26,11 +26,13 @@
 * tbd... still need it? `bcat/index.md` fix the Pyodide section (it's only chance to exec in JS as long as github http srv don't allow CGI)
 
 
-* tbd... ___RMAP.001 item 4___ BCAT start for a new structure with python as CGI`bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
+* wip...  (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
 
 
 
 * wip...
+
+* 230911piu_a (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog first attempt, combined `bcat/index.html`` redirect to `cgi-bin/bcat/bcat.py` ==> PASS
 
 * 230910piu_c RMAP.001:
     * [x] 2. BCAT `index.html` file remain and _redirect_ to `cgi-bin/bcat/bcat.py` (helps to keep route calling w/o file name for future WSGI full compatibility)

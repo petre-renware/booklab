@@ -5,5 +5,5 @@
 #   - named to be able to kill it
 #
 
-
-
+# commend:
+sudo python3 -m http.server 80 --cgi

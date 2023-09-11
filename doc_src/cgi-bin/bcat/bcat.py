@@ -48,7 +48,7 @@ print()
 
 #FIXME drop this after use knowledge
 
-print("<!doctype html><title>Hello</title><h2>BookLab - BCAT component</h2>")
+print("<!doctype html><p>BookLab BCAT component in loading...</p>")
 
 
 print(f"<p>my code-name: {my_name}</p>")
