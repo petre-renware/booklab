@@ -21,51 +21,13 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 <!-- -#TODO plan for this page
 
-* [ ] @1st compile use `PysonDB` cmd line to cvt `.../books_catalog.json` to `csv` to have an initial dataset
-* [ ] JS to request `bcat` data
-* [x] table with all books
-* [ ] hidden col with book ID
-* [ ] opers on each line
-* [x] global NEW book button
-* [ ] for opers use small icons
-
 ---(page plan) -->
 
 
 
 
 
-[Creare carte](newb/) <!--  buton ce trebyyie sa fie inainte de tabel cu lista carti -->
-
-
-
-
-<!--#TODO --- Pyodide code ---
-    * should display books catalog data set in table
-    * #NOTE attn the JSON with data is at server and should be get with a request to server `bcat`, ie something like `http://localhost:7111/bcat/get_books_catalog`
----(Pyodide code) -->
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
-```pyodide
-import micropip
-
-print("Installing cowsay...")
-await micropip.install("cowsay")
-
-print("done!") # this print will appear in D9M sequence in page, so right here ==> print HTML and draw table here
-
-```
-
-
-<!-- #NOTE does not help too much - is static executed only at mkdocs build compilation...
-```python exec="on"
-print("***Hello Python - See a random number here***")
-import random
-num = random.random()
-print(num)
-```
--->
-
+[Creare carte](newb/) <!-- #FIXME_DROP_ME buton ce trebuie sa fie inainte de tabel cu lista carti -->
 
 ### Varianta citita static, la compilare din books_catalog. json**
 
@@ -80,7 +42,23 @@ print(num)
 
 | Id carte | Cod carte | Denumire carte | Note       | Operatii |
 | -------- | --------- | -------------- | ---------- | ------- |
-| hidde me | {{ xxx }} | {{ xxx }}      | {{ xxx }}  | [edit](edtb/) - [organizare](orgm/) - [view bk](prvb/) - [asamblare](dplb/) ... |
+
+<!--#TODO
+
+- Jinja for loop to display all sent rows
+
+- in first version ignore buttons which need to be links to an api routes with book id from st column
+
+------ end of #TODO plan-->
+
+
+{% for line_data in bcat_data %}
+
+| hidde me | {{ line_data["xxx"] }} | {{ line_data["xxx"] }}      | {{ line_data["xxx"] }}  | [edit](edtb/) - [organizare](orgm/) - [view bk](prvb/) - [asamblare](dplb/) ... |
+
+{% endfor %}
+
+
 
 {% endraw %}
 
