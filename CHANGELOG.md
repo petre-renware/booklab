@@ -25,17 +25,8 @@
 
 * tbd... still need it? `bcat/index.md` fix the Pyodide section (it's only chance to exec in JS as long as github http srv don't allow CGI)
 
-* tbd...mv.me.to.ROADMAP... RMAP.001 - BCAT start for a new structure with python as CGI:
-    * [x] 1. main python file will be `cgi-bin/<component_name>/<component_name>.py` (_CONCLUSION_: `<crt_directory>` is HTTP server root `docs/`)
-    * [x] 2. `index.html` file remain and _redirect_ to python (helps to keep route calling w/o file name for future WSGI full compatibility)
-    * [x] 3. the component template file `<component_name>.md` with raw Jinja to remain in markdown and becomes HTML (after mkdoc compile) as subject to be rendered by python script
-    * [ ] #TODO 4. python script to render template, ways to render component html:
-        * (4.1) load it as string, render and print it (including application type as in examples)
-        * (4.2) set template dir in `<crt_directory>/<component_name>` (remember, current dir is the HTTP server root)
-    * [ ] 5. file to render should be always `docs/<component_name>/<component_name>.html`
-    * [ ] 6. update DSGN documentation (`810.02-System_Landscape.md`)
 
-* tbd... `bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
+* tbd... ___RMAP.001 item 4___ BCAT start for a new structure with python as CGI`bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
 
 
 
