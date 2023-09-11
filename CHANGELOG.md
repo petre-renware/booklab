@@ -30,11 +30,13 @@
 
 * wip...
 
+* ... 290911piu_c (RMAO.001 item x) BCAT template (bcat/bcat.md) sketch and notes ref how make the table rows loop
+
 * 230911piu_b fixed BCAT `bcat/index.md` redirect URL to be agnostic to server & port (set to a relative path to `url='../cgi-bin/bcat/bcat.py'`)
 
 * ---#NOTE review and publish all up
 
-* 230911piu_a (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog first attempt, combined `bcat/index.html`` redirect to `cgi-bin/bcat/bcat.py` ==> PASS
+* 230911piu_a (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog first attempt, combined `bcat/index.html` redirect to `cgi-bin/bcat/bcat.py` ==> PASS
 
 * 230910piu_c work to RMAP.001:
     * [x] 2. BCAT `index.html` file remain and _redirect_ to `cgi-bin/bcat/bcat.py` (helps to keep route calling w/o file name for future WSGI full compatibility)
