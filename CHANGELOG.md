@@ -91,7 +91,6 @@
 
 # Archived CHANGELOGs
 
-* [0.1 First System Design](version_history
-/CHANGELOG_v0.1.md)
+* [0.1 First System Design](version_history/CHANGELOG_v0.1.md)
 
 
