@@ -20,7 +20,8 @@
     * [x] 1. main python file will be `cgi-bin/<component_name>/<component_name>.py` (_CONCLUSION_: `<crt_directory>` is HTTP server root `docs/`)
     * [x] 2. `index.html` file remain and _redirect_ to python (helps to keep route calling w/o file name for future WSGI full compatibility)
     * [x] 3. the template file `<component_name>.md` with raw Jinja to remain in markdown and becomes HTML (after mkdoc compile) as subject to be rendered by python script
-    * [x] 3.a update template file `<component_name>.md` Jinja code
+    * [wip...] 3.a update template file `<component_name>.md` Jinja code
+    * [wip...] 3.b open & load `bcat_catalog.json` database
     * [ ] 4. python script to render template, ways to render component html:
         * (4.1) load it as string, render and print it (including application type as in examples)
         * (4.2) set template dir in `<crt_directory>/<component_name>` (remember, current dir is the HTTP server root)
