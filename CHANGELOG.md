@@ -30,7 +30,7 @@
     * install the same requirements.txt as project root to be able to "mkdocs build" books
     * (-->230912piu_d) keep requirements.txt in `doc_src/` ...
     * (-->230912piu_d) and make subject of app deployment (in setup/ ?)
-    * ___python Shebang___: `#!../pyenv/bin/python3` (don't warry in Windows, anyway doesn't matter the Shebang)
+    * ___python Shebang___: `#!../pyenv/bin/python3` (don't wary in Windows, anyway doesn't matter the Shebang)
     * for pj purposes let this env to go to git...
 
 

@@ -27,7 +27,7 @@ cgitb.enable() # this activate displaying errs on HTML page and log them...
 # HTTP header section
 print("Content-Type: text/html\n")
 print()
-print("<!doctype html><p>BookLab BCAT component in loading...</p>") #NOTE: this message could not appear for all HTTP servers; anyway will be replaced at final
+print("<!doctype html><p>BookLab BCAT component in loading...</p>") #FIXME: this message is for debbuging; anyway will be replaced at final
 
 
 #FIXME drop this after use knowledge
