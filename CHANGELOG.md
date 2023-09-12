@@ -23,20 +23,13 @@
 
 ### 0.2.1 BCAT setup a Python CGI running environment (wip...#TODO)
 
-* wip.@.290911piu_c...  (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
+* tbd... continue of 290911piu_c ref (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
 
-* #NOTE...SEEMS ITS READY...SO CAN BE DROPPED after a short chk on laptop for correct run...#NOTE_end  BCAT python script open database file raise error `ERROR: ModuleNotFoundError: No module named 'pysondb'` (for dtls see `230912piu_a`) ***#NOTE how solve***:
-    * (-->230912piu_d) install in doc_src/ an env for HTTP srv CGI part ==> __`<http srv root/venv>`__ (attn not hidden & start in doc_src/)
-    * install the same requirements.txt as project root to be able to "mkdocs build" books
-    * (-->230912piu_d) keep requirements.txt in `doc_src/` ...
-    * (-->230912piu_d) and make subject of app deployment (in setup/ ?)
-    * (-->230912piu_d) _python Shebang_: `#!../pyenv/bin/python3` (don't wary in Windows, anyway doesn't matter the Shebang)
-    * (-->230912piu_d) NO-IT-WILL-BE-CREATED-ON-SETUP & on dev will be manually copied ORIGINAL was: "for pj purposes let this env to go to git..."
+* tbd... #NOTE... CONSIDER TO REALEASE RHIS 0.2.1 VERSION FOR "BCAT setup a Python CGI running environment"
 
 * wip...
-* #NOTE... CONSIDER TO REALEASE RHIS 0.2.1 VERSION FOR "BCAT setup a Python CGI running environment"
 
-* ... 230912piu_e fix small bugs, comments. Archive 1.0 Changelog
+* 230912piu_e fix small bugs, comments. Archive 1.0 Changelog
 
 * 230912piu_d more items:
     * installed in doc_src/ an env for HTTP srv CGI part ==> __`<http srv root/pyenv>`__ (attn not hidden & start in doc_src/)
