@@ -3,7 +3,7 @@
 [TOC]
 
 
-# CHANGELOG of v0.1
+# CHANGELOG of 0.1 First System Design
 
 - For version code structure meaning see SDEVEN methodology document
 - with _(F)_ are marked those changes that are features in order to be copied in a RELNOTE file and with _(B)_ bug fixes from versions released
