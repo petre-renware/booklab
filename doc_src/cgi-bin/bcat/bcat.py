@@ -38,7 +38,7 @@ print(f"<p>current directory: {my_crt_dir}</p>") #NOTE: DE RETINUT aici a afista
 
 
 
-''' # #TODO plan
+''' # #TODO plan **** WORKS PERFECTLY - 10xAva - GO AHEAD ...
 
 - `bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
 - (DONE) remake `path(my_crt_dir, "data/books_catalog.json)` to be opened with `pysondb` (meaning "data" key) ATTN actual table loading in bcat.md will not work anymore so mk a copy for temporary use
