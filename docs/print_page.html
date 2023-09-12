@@ -1451,77 +1451,11 @@
 </ul>
 </div>
 <h2 id="810-dsgn-810.05a-sysinit_system_process-prima-instalare-a-sistemului">Prima instalare a sistemului</h2>
-<p>Referitor la initializarea sistemului trebuie spus si ca <strong><em>prima instalare a acestuia</em></strong> se face cu o serie de programe / scripturi. Nu se intra in detalii deoarece procedura de instalare a sistemului este una cit se poate de clasica pentru instalarile executate manual pe sisteme Linux iar pentru sisteme Windows acesta este tot una clasica, cu un simplu wizard "standardizat" si care executa scrierea in toate locatiile necesare (ex Registry).</p></section><section class="print-page" id="810-dsgn-810.05a-bcat_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
-<small markdown><strong>BookLab System</strong><br>
-<em>(c) 2023 RENware Software Systems</em>
-</small><br><br></p>
-<h1 id="810-dsgn-810.05a-bcat_system_process-bcat-catalogul-cartilor">BCAT catalogul cartilor</h1>
-<p><strong><em>Cuprins:</em></strong></p>
-<div class="toc">
-<ul>
-<li><a href="#810-dsgn-810.05a-bcat_system_process-bcat-catalogul-cartilor">BCAT catalogul cartilor</a><ul>
-<li><a href="#810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-baza-de-date">Catalogul cartilor - baza de date</a></li>
-<li><a href="#810-dsgn-810.05a-bcat_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</a></li>
-<li><a href="#810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</a></li>
-<li><a href="#810-dsgn-810.05a-bcat_system_process-informatii-despre-aplicatie">Informatii despre aplicatie</a></li>
-<li><a href="#810-dsgn-810.05a-bcat_system_process-note">Note</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<hr />
-<h2 id="810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-baza-de-date">Catalogul cartilor - baza de date</h2>
-<!-- #FIXME drop when finish -->
-<p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /> ... UPCOMING...</p>
-<p>... Catalogul cartilor este baza de date ce contine ... despre toate cartile ...</p>
-<p>... Informatiile detaliate despre o carte (baza de date a unei carti) ...</p>
-<!-- #TODO... wip... tbd... -->
-
-<p>Catalogul cartilor este localizat in directorul <strong><code>docs/data/</code></strong><sup id="fnref:1"><a class="footnote-ref" href="#810-dsgn-810.05a-bcat_system_process-fn:1">1</a></sup> iar informatiile sunt stocate intr-un fisier cu numele <strong><code>books_catalog.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
-<!-- #TODO... structura fisierului si key urile aferente, nume, tip, eventuale reguli -->
-
-<h2 id="810-dsgn-810.05a-bcat_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</h2>
-<!-- #FIXME drop when finish -->
-<p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /> ... UPCOMING...</p>
-<p>Acesta reprezinta sablonul (template) folosit in procesul de creare a unei carti noi (proces <code>NEWB</code>). Acest sablon contine urmatoarele elemente:</p>
-<ul>
-<li>
-<p><em>sectiunile (documentele) de start ale cartii</em> - pagina de <code>index.md</code> si documentul PDF final, ambele goale dar minim necesare in inceperea cartii</p>
-</li>
-<li>
-<p><em>scripturile comenzi management carte</em> - reprezinta scripturile cu comenzile necesare pentru managementul si "operarea" acelei carti:</p>
-<ul>
-<li>generarea temporara (de lucru) a cartii pentru previzualizare</li>
-<li>generarea si asamblarea finala a cartii</li>
-<li>pornirea serverului de previzualizare (server local HTTP)</li>
-<li>monitorizarea fisierelor locale in timpul previzualizarii pentru a detectat eventuale modificari facute de utilizator</li>
-</ul>
-</li>
-<li>
-<p><em>baza de date a cartii</em> este baza de date cu detaliile unei carti, baza de date ce este referentiata din <a href="#810-dsgn-810.05a-bcat_system_process-bcat-catalogul-cartilor">catalogul cartilor</a></p>
-</li>
-</ul>
-<p>...tbd... <!-- #TODO continue with sections fro each item containing exact / concrete development level details --></p>
-<h2 id="810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</h2>
-<!-- #FIXME drop when finish -->
-<p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /> ... UPCOMING...</p>
-<!-- #TODO... wip... tbd... -->
-
-<h2 id="810-dsgn-810.05a-bcat_system_process-informatii-despre-aplicatie">Informatii despre aplicatie</h2>
-<p>In directorul radacina a serverului dinamic exista o baza de date ce contine informatii referitoare la aplicatia (sistemul aplicational) curent utilizata, mai exact la ceea ce in termeni clasici se numeste "aplicatia instalata".</p>
-<p>Aceste informatii sunt stocate intr-un fisier cu numele <strong><code>app_info.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
-<!-- #TODO... structura fisierului si key urile aferente, nume, tip, eventuale reguli -->
-
-<h2 id="810-dsgn-810.05a-bcat_system_process-note">Note</h2>
-<div class="footnote">
-<hr />
-<ol>
-<li id="810-dsgn-810.05a-bcat_system_process-fn:1">
-<p>in sectiunea (de)servita de serverul HTTP static, ratiunea fiind
-ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" serverul dinamic (a se vedea <a href="#810-dsgn-810.02-system_landscape-sysinit-initializare-sistem">sectiunea <em>sysInit</em> din documentul <em>Landscape</em></a>)&#160;<a class="footnote-backref" href="#810-dsgn-810.05a-bcat_system_process-fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div></section><section class="print-page" id="810-dsgn-810.05a-btmpl_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
+<p>Referitor la initializarea sistemului trebuie spus si ca <strong><em>prima instalare a acestuia</em></strong> se face cu o serie de programe / scripturi. Nu se intra in detalii deoarece procedura de instalare a sistemului este una cit se poate de clasica pentru instalarile executate manual pe sisteme Linux iar pentru sisteme Windows acesta este tot una clasica, cu un simplu wizard "standardizat" si care executa scrierea in toate locatiile necesare (ex Registry).</p></section><section class="print-page" id="810-dsgn-810.05a-bcat_system_process"><h1 id="810-dsgn-810.05a-bcat_system_process-macro-syntax-error"><em>Macro Syntax Error</em></h1>
+<p><em>File</em>: <code>810-DSGN/810.05a-bcat_System_Process.md</code></p>
+<p><em>Line 75 in Markdown file:</em> <strong>Missing end of raw directive</strong>
+<div class="highlight"><pre><span></span><code>The fie in format [<span class="nt">markown format be accesed here</span>](<span class="na">../bcat/bcat.md</span>). Should remark that it contains some Jinja portions that are potected at 1st compilation by including them in sections {% raw %} <span class="sb">`{% raw %}`</span> {% raw %} - this Jinja portions will be evaluated and rendered at execution (run time) running specific code.
+</code></pre></div></p></section><section class="print-page" id="810-dsgn-810.05a-btmpl_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
 <small markdown><strong>BookLab System</strong><br>
 <em>(c) 2023 RENware Software Systems</em>
 </small><br><br></p>
