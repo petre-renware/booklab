@@ -32,6 +32,8 @@
 
 * ---#NOTE review and publish all up
 
+* 230912piu_c fixed `raw - endraw` Jinja section in DSGN `810.05a-bcat_System_Process.md` document
+
 * 230912piu_b update BCAT `810-DSGN/810.05a-bcat_System_Process` to show (link or in doc ?) the template doc (`doc_src/bcat/bcat.md`) ...OPTIONAL put this item on RMAO.001
 
 * 230912piu_a **BUGS2FIX** (RMAP.001 item 3.b) BCAT python script open database file raise error `ERROR: ModuleNotFoundError: No module named 'pysondb'` and changing the shebang to `../../.env/bin/python3` raise `[Errno 2] No such file or directory: '/mnt/d/_T0_PROJECTS/0000-0163 BookLab/830-DEV/static_portal/cgi-bin/bcat/bcat.py'` && publish to have on git in `docs/`
