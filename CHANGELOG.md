@@ -26,16 +26,21 @@
 * wip.@.290911piu_c...  (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
 
 * tbd... BCAT python script open database file raise error `ERROR: ModuleNotFoundError: No module named 'pysondb'` (for dtls see `230912piu_a`) ***#NOTE how solve***:
-    * install in doc_src/ an env for HTTP srv CGI part ==> __`<http srv root/venv>`__ (attn not hidden & start in doc_src/)
+    * (-->230912piu_d) install in doc_src/ an env for HTTP srv CGI part ==> __`<http srv root/venv>`__ (attn not hidden & start in doc_src/)
     * install the same requirements.txt as project root to be able to "mkdocs build" books
-    * keep requirements.txt in doc_src/ and make subject of app deployment (in setup/ ?)
-    * ___python Shebang___: `#!../venv/bin/python3` (don't warry in Windows, anyway doesn't matter the Shebang)
+    * (-->230912piu_d) keep requirements.txt in `doc_src/` ...
+    * (-->230912piu_d) and make subject of app deployment (in setup/ ?)
+    * ___python Shebang___: `#!../pyenv/bin/python3` (don't warry in Windows, anyway doesn't matter the Shebang)
     * for pj purposes let this env to go to git...
 
 
 * wip...
 
 * ---#NOTE review and publish all up
+
+* 230912piu_d more items:
+    * installed in doc_src/ an env for HTTP srv CGI part ==> __`<http srv root/pyenv>`__ (attn not hidden & start in doc_src/)
+    * created `setup/booklab_install.sh` for sys install and put some important comments ref TODOs when you start its development
 
 * 230912piu_c fixed `raw - endraw` Jinja section in DSGN `810.05a-bcat_System_Process.md` document
 

@@ -25,13 +25,12 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 ### Varianta citita static, la compilare din books_catalog. json**
 
-<!-- #FIXME
-- see json changed structure for pysondb
-- Use a copy instead
+<!-- #FIXME differnet format by Pandas & PysonDB
+- done by making a copy in accepted format by Pandas
 - Drop me after compare data test
 -------------->
- 
-{{ read_json('../data/books_catalog.json', orient='records') }} <!--#NOTE current dire tory is bcat/ here so need go up 1 level to access data/ -->
+
+{{ read_json('../data/books_catalog_pandas_version.json', orient='records') }} <!--#NOTE current dire tory is bcat/ here so need go up 1 level to access data/ -->
 
 
 
