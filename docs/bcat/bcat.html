@@ -420,35 +420,13 @@ div.download-btn {
 <p>Bine ati venit la <em>Catalogul cartilor dumneavoastra</em>. Aici puteti vizualiza cartile create de dumneavoastra si stadiul acestora, sa efectuati operatii asupra lor sau sa creati o carte noua.</p>
 <h2 id="lista-cartilor">Lista cartilor</h2>
 <p><img alt="wip page" src="../pictures/under_maintenance.png"> <!--#FIXME drop me when finish --></img></p>
-<!-- -#TODO plan for this page
-
-* [ ] @1st compile use `PysonDB` cmd line to cvt `.../books_catalog.json` to `csv` to have an initial dataset
-* [ ] JS to request `bcat` data
-* [x] table with all books
-* [ ] hidden col with book ID
-* [ ] opers on each line
-* [x] global NEW book button
-* [ ] for opers use small icons
-
----(page plan) -->
-<p><a href="newb/">Creare carte</a> <!--  buton ce trebyyie sa fie inainte de tabel cu lista carti --></p>
-<!--#TODO --- Pyodide code ---
-    * should display books catalog data set in table
-    * #NOTE attn the JSON with data is at server and should be get with a request to server `bcat`, ie something like `http://localhost:7111/bcat/get_books_catalog`
----(Pyodide code) -->
-<script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js" type="text/javascript"></script>
-<div class="highlight"><pre><span></span><code>import micropip
-
-print("Installing cowsay...")
-await micropip.install("cowsay")
-
-print("done!") # this print will appear in D9M sequence in page, so right here ==&gt; print HTML and draw table here
-</code></pre></div>
-<!-- #NOTE does not help too much - is static executed only at mkdocs build compilation...
-<p><strong><em>Hello Python - See a random number here</em></strong>
-0.10150135573093477</p>
--->
+<p><a href="newb/">Creare carte</a> <!-- #FIXME_DROP_ME buton ce trebuie sa fie inainte de tabel cu lista carti --></p>
 <h3 id="varianta-citita-static-la-compilare-din-books_catalog-json">Varianta citita static, la compilare din books_catalog. json**</h3>
+<!-- #FIXME
+- see json changed structure for pysondb
+- Use a copy instead
+- Drop me after compare data test
+-------------->
 <table>
 <thead>
 <tr>
@@ -486,20 +464,30 @@ print("done!") # this print will appear in D9M sequence in page, so right here =
 </thead>
 <tbody>
 <tr>
-<td>hidde me</td>
-<td>{{ xxx }}</td>
-<td>{{ xxx }}</td>
-<td>{{ xxx }}</td>
-<td><a href="edtb/">edit</a> - <a href="orgm/">organizare</a> - <a href="prvb/">view bk</a> - <a href="dplb/">asamblare</a> ...</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<!--#TODO
+
+- Jinja for loop to display all sent rows
+
+- in first version ignore buttons which need to be links to an api routes with book id from st column
+
+------ end of #TODO plan-->
+<p>{% for line_data in bcat_data %}</p>
+<p>| hidde me | {{ line_data["xxx"] }} | {{ line_data["xxx"] }}      | {{ line_data["xxx"] }}  | <a href="edtb/">edit</a> - <a href="orgm/">organizare</a> - <a href="prvb/">view bk</a> - <a href="dplb/">asamblare</a> ... |</p>
+<p>{% endfor %}</p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 10, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 11, 2023</span>
 </small>
 </div>
 </article>
