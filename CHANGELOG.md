@@ -36,6 +36,8 @@
 * wip...
 * #NOTE... CONSIDER TO REALEASE RHIS 0.2.1 VERSION FOR "BCAT setup a Python CGI running environment"
 
+* ... 230912piu_e fix small bugs, comments. Archive 1.0 Changelog
+
 * 230912piu_d more items:
     * installed in doc_src/ an env for HTTP srv CGI part ==> __`<http srv root/pyenv>`__ (attn not hidden & start in doc_src/)
     * created `setup/booklab_install.sh` for sys install and put some important comments ref TODOs when you start its development
