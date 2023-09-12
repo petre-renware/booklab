@@ -1,6 +1,5 @@
-#!../../.env/bin/python3 #FIXME normal ca nu exista unmediu `venv` in directorul HTTP server root !!!
-# -#NOTE in real environment will not have this problem anymore...
-# ----#NOTE-wip.to.change #!/usr/bin/python3
+#!pyenv/bin/python3
+# #NOTE - clearly works - but create the `pyenv/` and up it to the git OR wvery time create it from `requirements.txt`
 
 #-----------------------------------------------------------
 #
@@ -15,10 +14,7 @@ import os
 # import cgi #NOT this or next one? or both?
 import cgitb
 
-import pysondb #NOTE ck if can be used with a dbs as string...
-
-#NOTE the JSON file is obtained by mk a request to `data/books_catalog.json` which return a response obtainable as resp.get_json() - see requests or urllib(3) module ref how to get json from response (or cosana)
-
+import pysondb
 
 
 
@@ -27,37 +23,40 @@ my_crt_dir = os.getcwd()
 cgitb.enable() # this activate displaying errs on HTML page and log them...
 
 
+
 # HTTP header section
 print("Content-Type: text/html\n")
 print()
-print("<!doctype html><p>BookLab BCAT component in loading...</p>") #NOTE: this message could not appear for all HTTP servers; anyway will be replaced at final
+print("<!doctype html><p>BookLab BCAT component in loading...</p>") #FIXME: this message is for debbuging; anyway will be replaced at final
 
-#TODO drop this after use knowledge
+
+#FIXME drop this after use knowledge
 #print(f"<p>my code-name: {my_name}</p>")
 print(f"<p>current directory: {my_crt_dir}</p>") #NOTE: DE RETINUT aici a afista dir crt ca ".../static_portal/" deci nu cgi-bin
 
 
 
-''' # #TODO plan
+
+
+''' # #TODO plan **** WORKS PERFECTLY - 10xAva - GO AHEAD ...
 
 - `bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
-
-- remake `path(my_crt_dir, "data/books_catalog.json)` to be opened with `pysondb` (meaning "data" key) ATTN actual table loading in bcat.md will not work anymore so mk a copy for temporary use
-
-- TRY THIS: get all recs of (key `"data"` but psyondb already did...) #FIXME - ERROR: ModuleNotFoundError: No module named 'pysondb'
-- OR DO: request to `data/books_catalog.json`
-
+- (DONE) remake `path(my_crt_dir, "data/books_catalog.json)` to be opened with `pysondb` (meaning "data" key) ATTN actual table loading in bcat.md will not work anymore so mk a copy for temporary use
+- (DONE) get all recs of (key `"data"` but psyondb already did...)
 - get file `/bcat/bcat.html` and  Jinja render it
-
 - print the file content (will be avlb in STDIN and get of http server)
 
 '''
 
-# open database
-#FIXME - ERROR: ModuleNotFoundError: No module named 'pysondb' - #NOTE see shebang how to solve it...
+# construct database full absolute path file name and open it
 dbs_file = os.path.join(my_crt_dir, "data/books_catalog.json")
-print(f"<p>--------------- database to open {dbs_file} </p>")
-books_catalog_dbs = pysondb.db.getDb(dbs_file)
+print(f"<p>--- database to open {dbs_file} </p>")
+bcat_dbs = pysondb.db.getDb(dbs_file)
+print(f"<p>---Data base opened. Here the JSON information: </p>")
+
+bcat_records = bcat_dbs.getAll()
+print(f"<p>{bcat_records} </p>") #FIXME this is a test printe all records
+
 
 
 

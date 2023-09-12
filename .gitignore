@@ -104,7 +104,6 @@ venv.bak/
 
 # #NOTE BookLabb application environments
 doc_src/pyenv/
-static_portal/pyenv/
 docs/pyenv/
 
 
