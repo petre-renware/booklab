@@ -1,5 +1,6 @@
-#!../../.env/bin/python3 #FIXME [Errno 2] No such file or directory: '/mnt/d/_T0_PROJECTS/0000-0163 BookLab/830-DEV/static_portal/cgi-bin/bcat/bcat.py'
-#----#NOTE-wip.to.change #!/usr/bin/python3
+#!../../.env/bin/python3 #FIXME normal ca nu exista unmediu `venv` in directorul HTTP server root !!!
+# -#NOTE in real environment will not have this problem anymore...
+# ----#NOTE-wip.to.change #!/usr/bin/python3
 
 #-----------------------------------------------------------
 #
@@ -53,7 +54,7 @@ print(f"<p>current directory: {my_crt_dir}</p>") #NOTE: DE RETINUT aici a afista
 '''
 
 # open database
-#FIXME - ERROR: ModuleNotFoundError: No module named 'pysondb'
+#FIXME - ERROR: ModuleNotFoundError: No module named 'pysondb' - #NOTE see shebang how to solve it...
 dbs_file = os.path.join(my_crt_dir, "data/books_catalog.json")
 print(f"<p>--------------- database to open {dbs_file} </p>")
 books_catalog_dbs = pysondb.db.getDb(dbs_file)
