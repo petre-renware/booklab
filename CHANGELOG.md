@@ -31,6 +31,8 @@
 
 * wip...
 
+* 230913piu_b reorganized left navigation for HELP zone
+
 * 230913piu_a made Linux executables (`chmod +x`) all required `*.sh` & `*.py` files
 
 * 230912piu_e fix small bugs, comments. Archive 1.0 Changelog
