@@ -27,6 +27,8 @@
 
 * wip...
 
+* ... 230913piu_d (RMAP.001 item 3.a): BCAT CGI `bcat.md` books catalog set Jinja received variable & update `810.05a-bcat_System_Process.md` section "Catalogul cartilor - interfata UI"
+
 * 230913piu_c updated `810.05a-bcat_System_Process.md` described _Books Catalog_ database (`/data/books_catalog.json`): keys, types and rules
 
 * -----#NOTE review & publish up recs ---
