@@ -25,7 +25,7 @@
     * [ ] 4. python script to render template, ways to render component html:
         * (4.1) load it as string, render and print it (including application type as in examples)
         * (4.2) set template dir in `<crt_directory>/<component_name>` (remember, current dir is the HTTP server root)
-    * [ ] 5. file to render should be always `docs/<component_name>/<component_name>.html`
+    * [x] 5. file to render should be always `docs/<component_name>/<component_name>.html`
     * [ ] 6. update DSGN documentation (`810.02-System_Landscape.md`)
 * **Recommendations:** -
 * **Known dependencies:** -

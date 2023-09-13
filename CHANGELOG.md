@@ -19,17 +19,26 @@
 * tbd... after mk run python scripts as CGI, rlse 0.2 then focus on Jupiter
 
 
-
-
-### 0.2.1 BCAT setup a Python CGI running environment (wip...#TODO)
+### 0.2.2 BCAT page
 
 * tbd... continue of 290911piu_c ref (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
 
-* tbd... #NOTE... CONSIDER TO REALEASE THIS 0.2.1 VERSION FOR "BCAT setup a Python CGI running environment"
-
-
-
 * wip...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 0.2.1 BCAT setup a Python CGI running environment (230913 07:30)
 
 * 230913piu_b reorganized left navigation for HELP zone
 
