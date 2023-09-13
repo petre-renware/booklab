@@ -27,6 +27,8 @@
 
 * wip...
 
+* ... 230913piu_ cleanup project of no more needed files, obsolete todo(s), comments in docs, etc
+
 * -----#NOTE review & publish up recs ---
 
 * 230913piu_e reviewed & updated `cgi-bin/bcat/bcat.py` with a comment regarding info retrieved from JSON file (exactly how looks like @ print)
