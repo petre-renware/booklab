@@ -56,9 +56,12 @@ print(f"<p>---Data base opened. Here the JSON information: </p>")
 
 bcat_records = bcat_dbs.getAll()
 print(f"<p>{bcat_records} </p>") #FIXME this is a test printe all records
-
-
-
+if not (type(bcat_records) == type(list())):
+  bcat_records = list().append(bcat_records) # make it list if is not (possible case for 1 record)
+bcat_data = bcat_records # this variable should be send in Jinja rendering process
+#TODO ...nxt actions...
+#TODO here to render as Jinja template. WHO: `docs/bcat/bcat.html`
+#TODO and just print it after (to go to STDOUT)
 
 
 
