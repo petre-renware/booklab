@@ -24,9 +24,13 @@
 * tbd... (RMAP.001 item 3.a): BCAT CGI `bcat.md` books catalog set Jinja variables in `for loop` to render all books
 * tbd... (RMAP.001 item 4): BCAT CGI script to prepare Jinja variables and render template `bcat/bcat.html` (!!! NOT MD)
 
+
 * wip...
 
 * 230913piu_c updated `810.05a-bcat_System_Process.md` described _Books Catalog_ database (`/data/books_catalog.json`): keys, types and rules
+
+* -----#NOTE review & publish up recs ---
+
 
 
 
