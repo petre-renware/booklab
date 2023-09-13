@@ -8,13 +8,10 @@
 #-----------------------------------------------------------
 
 import os
-
-# import urllib3 #TODO install it or use urllib which is built in
-
-# import cgi #NOT this or next one? or both?
+import cgi
 import cgitb
-
 import pysondb
+# import urllib3 #TODO if need it install it or use urllib which is built in
 
 
 
