@@ -25,9 +25,13 @@
 
 * tbd... continue of 290911piu_c ref (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
 
-* tbd... #NOTE... CONSIDER TO REALEASE RHIS 0.2.1 VERSION FOR "BCAT setup a Python CGI running environment"
+* tbd... #NOTE... CONSIDER TO REALEASE THIS 0.2.1 VERSION FOR "BCAT setup a Python CGI running environment"
+
+
 
 * wip...
+
+* 230913piu_a made Linux executables (`chmod +x`) all required `*.sh` & `*.py` files
 
 * 230912piu_e fix small bugs, comments. Archive 1.0 Changelog
 
