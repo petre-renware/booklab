@@ -53,6 +53,7 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 ------ end of #TODO plan-->
 
 
+<!-- #FIXME mai sunt coloane de adaugat la tabel -->
 {% for line_data in bcat_data %}
 
 | hidde me | {{ line_data["xxx"] }} | {{ line_data["xxx"] }}      | {{ line_data["xxx"] }}  | [edit](edtb/) - [organizare](orgm/) - [view bk](prvb/) - [asamblare](dplb/) ... |
