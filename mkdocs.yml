@@ -14,10 +14,10 @@ nav:
         - Previzualizare carte: prvb/ #NOTE will direct-fwd to `http://<crt_server_name>/prvb/`
         - Asamblare carte: dplb/ #NOTE will direct-fwd to `http://<crt_server_name>/dplb/`
     - Help:
+        - Vedere de ansamblu: help/130.02-Overview.md
         - Manuale de utilizare: help/880.30-EUMA_catalog.md
         - Manuale de configurare: help/880.30-ADMA_catalog.md
         - Documentatia tehnica:
-            - Vedere de ansamblu: help/130.02-Overview.md
             - Arhitectura: 810-DSGN/810.02-System_Landscape.md
             - proces sysInit: 810-DSGN/810.05a-sysInit_System_Process.md
             - proces BCAT: 810-DSGN/810.05a-bcat_System_Process.md
@@ -189,8 +189,8 @@ site_dir: './static_portal' #NOTE: [piu] this is the working directory; final is
 use_directory_urls: false # allow link between pages to work properly as static site an "callable" as `file:///...`
 
 
-# files, dirs to exclude at BookLab project creation --- #NOTE#FIXME temporary commented out up to clearing specs because it will not deply `bk_*/` directories
-#exclude_docs: |
-#  bk_*/
+#NOTE dirs to exclude at BookLab project creation
+exclude_docs: |
+  pyenv/
 
 
