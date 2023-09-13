@@ -56,9 +56,25 @@ print(f"<p>---Data base opened. Here the JSON information: </p>")
 
 bcat_records = bcat_dbs.getAll()
 print(f"<p>{bcat_records} </p>") #FIXME this is a test printe all records
+if not (type(bcat_records) == type(list())):
+    bcat_records = list().append(bcat_records) # make it list if is not (possible case for 1 record)
+bcat_data = bcat_records # this variable should be send in Jinja rendering process . NOT NEEDED but will be assigned to in calling render function. JUST TO REMEMBER...
+#TODO ...nxt actions...
+#TODO here to render as Jinja template. WHO: `docs/bcat/bcat.html`
+#TODO and just print it after (to go to STDOUT)
 
-
-
+''' #NOTE retrieved data from JSON file
+  [
+      {
+          'id': 0, 'code': 'BCAT',
+          'short_desc': 'bk_tmpl', 
+          'description': 'Sablonul implicit pentru o carte noua', 
+          'created_date': '2023-08-01', 
+          'created_by': 'system', 
+          'notes': 'Inregistrare obligatorie de la instalare sistem. Non editabila.'
+      }
+  ]
+'''
 
 
 

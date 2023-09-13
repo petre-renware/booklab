@@ -454,7 +454,7 @@ div.download-btn {
 </div>
 </div>
 <div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset"><div class="download-btn"><a href="../pdfs/810-DSGN/810.05a-bcat_System_Process.html/810.05a-bcat_System_Process.pdf">Download PDF</a></div>
+<article class="md-content__inner md-typeset"><div class="download-btn"><a href="..\pdfs\810-DSGN\810.05a-bcat_System_Process.html\810.05a-bcat_System_Process.pdf">Download PDF</a></div>
 <p><img align="left" alt="booklab_logo" src="../pictures/booklab_logo.png" width="55">
 <small markdown=""><strong>BookLab System</strong><br/>
 <em>(c) 2023 RENware Software Systems</em>
@@ -475,16 +475,48 @@ div.download-btn {
 </div>
 <hr/>
 <h2 id="catalogul-cartilor-baza-de-date">Catalogul cartilor - baza de date</h2>
-<!-- #FIXME drop when finish -->
-<p><img alt="wip page" src="../pictures/under_maintenance.png" width="200"> ... UPCOMING...</img></p>
-<p>... Catalogul cartilor este baza de date ce contine ... despre toate cartile ...</p>
-<p>... Informatiile detaliate despre o carte (baza de date a unei carti) ...</p>
-<!-- #TODO... wip... tbd... -->
+<p>Catalogul cartilor (Books Catalog) este baza de date ce contine informatii despre toate cartile ce sunt gestionate de sistemul BookLab. Aceasta baza de date este in format JSON.</p>
+<p>Structura bazei de date este urmatoarea:</p>
+<div class="highlight"><pre><span></span><code>{
+    "data": [
+        {
+            "id": int,
+            "code": "str",
+            "short_desc": "str",
+            "description": "str",
+            "created_date": "str",
+            "created_by": "str",
+            "notes": "str"
+        }
+    ]
+}
+</code></pre></div>
+<p>Structura JSON reprezentind cartile efective este o lista (array) cu inregistrarile cartilor, lista ce este valoarea cheii <code>"data"</code>.Cu alte cuvinte inregistratea cu informatiile aferente unei carti are urmatoarea structura:</p>
+<div class="highlight"><pre><span></span><code>{
+    "id": int,
+    "code": "str",
+    "short_desc": "str",
+    "description": "str",
+    "created_date": "YYYY-MM-DD",
+    "created_by": "str",
+    "notes": "str"
+}
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note referitoare la chei</p>
+<ul>
+<li><code>id</code> este cheia unica (PK) a cartii ca intreg generat automat de sistem</li>
+<li><code>code</code> este o cheie (AK) ce permite cautarea unei carti dupa un cod alfanumeric ("humanized code"); acesta informatie de obicei folosita ca si cod al cartii</li>
+<li><code>short_desc</code> este o descrire sumara a cartii; aceasta descriere este de obicei folosita ca titlu si in zonele de "header", "footer" ale sectiunilor cartii</li>
+<li><code>description</code> este o descriere larga a cartii, de obicei reprezentind o detaliere a titlului</li>
+<li><code>notes</code> permite inregistrarea libera a orine informatii doreste utilizatorul referitor la acea carte</li>
+<li>cheile <code>createed_*</code> sunt intretinute de sistem si permit un audit sumar al cartii: "cine a creat cartea si cind"</li>
+</ul>
+</div>
 <p>Catalogul cartilor este localizat in directorul <strong><code>docs/data/</code></strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> iar informatiile sunt stocate intr-un fisier cu numele <strong><code>books_catalog.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
-<!-- #TODO... structura fisierului si key urile aferente, nume, tip, eventuale reguli -->
 <h2 id="sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</h2>
 <!-- #FIXME drop when finish -->
-<p><img alt="wip page" src="../pictures/under_maintenance.png" width="200"/> ... UPCOMING...</p>
+<p><img alt="wip page" src="../pictures/under_maintenance.png" width="200"> ... UPCOMING...</img></p>
 <p>Acesta reprezinta sablonul (template) folosit in procesul de creare a unei carti noi (proces <code>NEWB</code>). Acest sablon contine urmatoarele elemente:</p>
 <ul>
 <li>
@@ -500,7 +532,7 @@ div.download-btn {
 </ul>
 </li>
 <li>
-<p><em>baza de date a cartii</em> este baza de date cu detaliile unei carti, baza de date ce este referentiata din <a href="#bcat-catalogul-cartilor">catalogul cartilor</a></p>
+<p><em>baza de date a cartii</em> este baza de date cu detaliile unei carti, baza de date ce este referentiata din <a href="#catalogul-cartilor-baza-de-date">sectiunes catalogul cartilor</a>. Continutul brut al <a href="../data/books_catalog.json">bazei de date cu catalogul cartilor</a></p>
 </li>
 </ul>
 <p>...tbd... <!-- #TODO continue with sections fro each item containing exact / concrete development level details --></p>
@@ -509,9 +541,12 @@ div.download-btn {
 <p>Aceste informatii sunt stocate intr-un fisier cu numele <strong><code>app_info.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
 <!-- #TODO... structura fisierului si key urile aferente, nume, tip, eventuale reguli -->
 <h2 id="catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</h2>
-<p>The file in format <a href="../bcat/bcat.html">markown format be accesed here</a>. Should remark that it contains some Jinja portions that are potected at 1st compilation by including them in Jinja sections <code>raw - endraw</code> - these Jinja portions will be evaluated and rendered at execution (run time) running specific code.</p>
+<p>Fisierul template in format <a href="../bcat/bcat.html">markown format poate fi accesat aici</a>.</p>
+<p><small markdown=""></small></p>
 <blockquote>
-<p>These portion refers the <code>books_catalog</code> database for list of books</p>
+<p>Din punct de vedere al <strong><em>proiectului BookLab si nu al produsului BookLab rezultat</em></strong>, trebuie remarcat ca sablonul contine portiuni cu structuri Jinja  e sunt "protejate" la prima compilare prin includerea lor in sectiuni Jinja tip <code>raw - endraw</code> astfel incit se vor regasi ca atare in fiserul HTML rezultat astfel incit sa fie avaluate corespunzator la executie (run time).
+</p>
+<p>Datele utilizate in template si ce vor fi randate Jinja sunt transmise prin intermediul variabilei <code>bcat_data</code>.</p>
 </blockquote>
 <h2 id="note">Note</h2>
 <div class="footnote">
@@ -528,7 +563,7 @@ ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" 
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 13, 2023</span>
 </small>
 </div>
 </article>

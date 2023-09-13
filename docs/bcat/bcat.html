@@ -408,7 +408,7 @@ div.download-btn {
 </div>
 </div>
 <div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset"><div class="download-btn"><a href="../pdfs/bcat/bcat.html/bcat.pdf">Download PDF</a></div>
+<article class="md-content__inner md-typeset"><div class="download-btn"><a href="..\pdfs\bcat\bcat.html\bcat.pdf">Download PDF</a></div>
 <!-- #NOTE
 
     * page dedicated for books catalog
@@ -478,6 +478,7 @@ div.download-btn {
 - in first version ignore buttons which need to be links to an api routes with book id from st column
 
 ------ end of #TODO plan-->
+<!-- #FIXME mai sunt coloane de adaugat la tabel -->
 <p>{% for line_data in bcat_data %}</p>
 <p>| hidde me | {{ line_data["xxx"] }} | {{ line_data["xxx"] }}      | {{ line_data["xxx"] }}  | <a href="edtb/">edit</a> - <a href="orgm/">organizare</a> - <a href="prvb/">view bk</a> - <a href="dplb/">asamblare</a> ... |</p>
 <p>{% endfor %}</p>
@@ -486,7 +487,7 @@ div.download-btn {
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 13, 2023</span>
 </small>
 </div>
 </article>
