@@ -19,11 +19,17 @@
 * tbd... after mk run python scripts as CGI, rlse 0.2 then focus on Jupiter
 
 
-### 0.2.2 BCAT page
+### 0.2.2 BCAT page (wip...)
 
-* tbd... continue of 290911piu_c ref (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
+* tbd... (RMAP.001 item 3.a): BCAT CGI `bcat.md` books catalog set Jinja variables in `for loop` to render all books
+* tbd... (RMAP.001 item 4): BCAT CGI script to prepare Jinja variables and render template `bcat/bcat.html` (!!! NOT MD)
 
 * wip...
+
+
+
+
+
 
 
 
