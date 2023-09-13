@@ -9,7 +9,7 @@
 - with _(F)_ are marked those changes that are features in order to be copied in a RELNOTE file and with _(B)_ bug fixes from versions released
 - #NOTE sote publishing on `arint.renware.eu` from `publishing` branch
 - `<PROJECT ROOT>/doc_src/` is the default starting location in a file path (if not clear from context)
-- `<APP_ROOT>/` is the application root directory, as default `booklab_app/`
+- `<WEB_ROOT>/` is the HTTP server root directory, as default `docs/` and supposed if no other parent is specified
 
 
 
@@ -26,6 +26,7 @@
 
 * wip...
 
+* 230913piu_c updated `810.05a-bcat_System_Process.md` described _Books Catalog_ database (`/data/books_catalog.json`): keys, types and rules
 
 
 
