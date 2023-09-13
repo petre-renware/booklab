@@ -27,7 +27,7 @@
 
 * wip...
 
-* ... 230913piu_ cleanup project of no more needed files, obsolete todo(s), comments in docs, etc
+* 230913piu_f cleanup project of no more needed files, obsolete todo(s), comments in docs && moved `app_info.json` to `doc_src/data/` and updated `810.05a-bcat_System_Process.md`
 
 * -----#NOTE review & publish up recs ---
 
