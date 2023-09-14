@@ -21,7 +21,6 @@
 
 ### 0.2.2 BCAT page (wip...)
 
-* tbd... 
 * tbd... (RMAP.001 item 4): BCAT CGI script to prepare Jinja variables and render template `bcat/bcat.html` (!!! NOT MD)
 
 
