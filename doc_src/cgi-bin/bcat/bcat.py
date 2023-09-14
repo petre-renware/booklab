@@ -56,17 +56,23 @@ bcat_records = bcat_dbs.getAll()
 print(f"<p>{bcat_records} </p>") #FIXME this is a test printe all records
 if not (type(bcat_records) == type(list())):
     bcat_records = list().append(bcat_records) # make it list if is not (possible case for 1 record)
+
 #FIXME_test_drop_me bcat_data = bcat_records # this variable should be send in Jinja rendering process . NOT NEEDED but will be assigned to in calling render function. JUST TO REMEMBER...
-#TODO ...nxt actions...
 #TODO here to render as Jinja template. WHO: `docs/bcat/bcat.html`
 #TODO and just print it after (to go to STDOUT)
 
-jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader("bcat/"))
-bcat_tmpl = jinja_env.get_template("bcat.html")
+templates_root = os.path.join(my_crt_dir, ".")
+jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(templates_root))
+
+bcat_tmpl = jinja_env.get_template("bcat/bcat.html")
 print('<p>A executat *** jinja_env.get_template("bcat.html")</p>')  #FIXME_test_drop_me - OK IT'S PRINTED
-print(f"<p>bcat_tmpl: {bcat_tmpl}</p>") #FIXME prints nothing (probably None) #FIXME_test_drop_me
+print("<p>CONTROL PRINT 1: bcat_tmpl: " + str(bcat_tmpl) + "</p>") #FIXME prints nothing (probably None) #FIXME_test_drop_me
+
+#FIXME_#FIXME - de aici nu mai merge nimic (#NOTE numai la rulare ca CGI) din ceea ce primite spre tiparire si pare ca se termina cu: `code 404, message File not found`
+
+print('<p>CONTROL: --- inainte a de efectua RENDER ---</p>') #FIXME_test_drop_me
 content = bcat_tmpl.render(bcat_data=bcat_records) #FIXME NOT EXECUTED see next statement
-print('<p>A executat *** bcat_tmpl.render(bcat_data=bcat_records)</p>') #FIXME NOT PRINTED #FIXME_test_drop_me
+print('<p>CONTROL PRINT 2: A executat *** bcat_tmpl.render(bcat_data=bcat_records)</p>') #FIXME NOT PRINTED #FIXME_test_drop_me
 # print(content) #FIXME err: Error code explanation: HTTPStatus.NOT_FOUND - Nothing matches the given URI
 
 
