@@ -26,6 +26,7 @@
 
 * wip...
 
+* 230914piu_c FIXED BCAT script (`cgi-bin/bcat/bcat.py`) shows data but need to redesign all markdown template (`doc_src/bcat/bcat.md`) as it looks very ugly... 
 * 230914piu_b ___WITH ERRORS - see code___ (RMAP.001 item 4): BCAT CGI script to prepare Jinja variables and render template `bcat/bcat.html`
 
 * -----#NOTE review & publish up recs ---
