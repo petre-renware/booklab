@@ -63,11 +63,12 @@ bcat_data = bcat_records # this variable should be send in Jinja rendering proce
 ''' #NOTE retrieved data from JSON file
   [
       {
-          'id': 0, 'code': 'BCAT',
-          'short_desc': 'bk_tmpl', 
-          'description': 'Sablonul implicit pentru o carte noua', 
-          'created_date': '2023-08-01', 
-          'created_by': 'system', 
+          'id': 0,
+          'code': 'BCAT',
+          'short_desc': 'bk_tmpl',
+          'description': 'Sablonul implicit pentru o carte noua',
+          'created_date': '2023-08-01',
+          'created_by': 'system',
           'notes': 'Inregistrare obligatorie de la instalare sistem. Non editabila.'
       }
   ]

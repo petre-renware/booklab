@@ -19,44 +19,25 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 ![wip page](../pictures/under_maintenance.png) <!--#FIXME drop me when finish -->
 
 
+[Creare carte](newb/) <!-- #NOTE this button naturally stay here, before books table -->
 
-[Creare carte](newb/) <!-- #FIXME_DROP_ME buton ce trebuie sa fie inainte de tabel cu lista carti -->
-
-
-### Varianta citita static, la compilare din books_catalog. json**
-
-<!-- #FIXME differnet format by Pandas & PysonDB
-- done by making a copy in accepted format by Pandas
-- Drop me after compare data test
--------------->
-
-{{ read_json('../data/books_catalog_pandas_version.json', orient='records') }} <!--#NOTE current dire tory is bcat/ here so need go up 1 level to access data/ -->
-
-
-
-
-
-
-### Varianta ce va fi citita dinamic la run time si doar variabile Jinja
 
 {% raw %}
 
-| Id carte | Cod carte | Denumire carte | Note       | Operatii |
-| -------- | --------- | -------------- | ---------- | ------- |
+| ID  | Cod | Titlu scurt | Titlu lung | Note | creata de | data creare | actiuni |
+| --- | --- | ----------- | ---------- | ---- | --------- | ----------- | ------- |
+
+
 
 <!--#TODO
-
 - Jinja for loop to display all sent rows
-
-- in first version ignore buttons which need to be links to an api routes with book id from st column
-
+- in first version ignore actions which need to be links to an api routes with book id from st column
 ------ end of #TODO plan-->
 
 
-<!-- #FIXME mai sunt coloane de adaugat la tabel -->
 {% for line_data in bcat_data %}
 
-| hidde me | {{ line_data["xxx"] }} | {{ line_data["xxx"] }}      | {{ line_data["xxx"] }}  | [edit](edtb/) - [organizare](orgm/) - [view bk](prvb/) - [asamblare](dplb/) ... |
+| {{ line_data["id"] }} | {{ line_data["code" ] }} | {{ line_data["short_desc"] }} | {{ line_data["description"] }} | {{ line_data["notes"] }} | {{ line_data["created_by"] }} | {{ line_data["created_date"] }} | [edit](edtb/) - [organizare](orgm/) - [vizualizare](prvb/) - [asamblare](dplb/) |
 
 {% endfor %}
 
@@ -65,3 +46,9 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 {% endraw %}
 
 
+
+
+
+### Varianta citita static - SECTIUNE CE VA DISPARE DUPA FINALIZARE COD <!--#FIXME this section will de dropped - kept just to compare -->
+
+{{ read_json('../data/books_catalog_pandas_version.json', orient='records') }} <!--#FIXME this section will de dropped - kept just to compare -->
