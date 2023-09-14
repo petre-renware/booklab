@@ -26,7 +26,10 @@
 
 * wip...
 
-* 230914piu_b __RECOMPILE mkdocs & TRY AGAIN -- WITH ERRS__ - see code (RMAP.001 item 4): BCAT CGI script to prepare Jinja variables and render template `bcat/bcat.html`
+* 230914piu_b
+  * #TODO chk, nu a produs nimic in HTML. Tot ce a fost raw-endraw LIPSESTE CA JINJA ... coloana actions pare a fi ca si continut-linkurile (lin 434 in HTML)
+  * __RECOMPILE mkdocs & TRY AGAIN -- WITH ERRS__ - see code
+  * (RMAP.001 item 4): BCAT CGI script to prepare Jinja variables and render template `bcat/bcat.html`
 
 * -----#NOTE review & publish up recs ---
 
