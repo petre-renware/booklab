@@ -515,7 +515,7 @@ div.download-btn {
 </div>
 <p>Catalogul cartilor este localizat in directorul <strong><code>docs/data/</code></strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> iar informatiile sunt stocate intr-un fisier cu numele <strong><code>books_catalog.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
 <h2 id="sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</h2>
-<!-- #FIXME drop when finish -->
+<!-- #TODO consider to make it a dedicated document #FIXME drop when finish -->
 <p><img alt="wip page" src="../pictures/under_maintenance.png" width="200"> ... UPCOMING...</img></p>
 <p>Acesta reprezinta sablonul (template) folosit in procesul de creare a unei carti noi (proces <code>NEWB</code>). Acest sablon contine urmatoarele elemente:</p>
 <ul>
@@ -535,11 +535,16 @@ div.download-btn {
 <p><em>baza de date a cartii</em> este baza de date cu detaliile unei carti, baza de date ce este referentiata din <a href="#catalogul-cartilor-baza-de-date">sectiunes catalogul cartilor</a>. Continutul brut al <a href="../data/books_catalog.json">bazei de date cu catalogul cartilor</a></p>
 </li>
 </ul>
-<p>...tbd... <!-- #TODO continue with sections fro each item containing exact / concrete development level details --></p>
+<p>...tbd... <!-- #TODO continue with sections fro each item what exactly contains + efective development details --></p>
 <h2 id="informatii-despre-aplicatie">Informatii despre aplicatie</h2>
-<p>In directorul radacina a serverului dinamic exista o baza de date ce contine informatii referitoare la aplicatia (sistemul aplicational) curent utilizata, mai exact la ceea ce in termeni clasici se numeste "aplicatia instalata".</p>
+<p>In directorul <strong><code>docs/data/</code></strong><sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> se gaseste un fisier ce contine informatii referitoare la aplicatia (sistemul aplicational) curent utilizata, mai exact la ceea ce in termeni clasici se numeste "aplicatia instalata".</p>
 <p>Aceste informatii sunt stocate intr-un fisier cu numele <strong><code>app_info.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
-<!-- #TODO... structura fisierului si key urile aferente, nume, tip, eventuale reguli -->
+<p>Informatiile despre aplicatie sunt referitoare la versiunea acesteia si data la care a fost activata:</p>
+<div class="highlight"><pre><span></span><code>{
+    "activated_on": "YYYY-MM-DD",
+    "version": "M.m.p"
+}
+</code></pre></div>
 <h2 id="catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</h2>
 <p>Fisierul template in format <a href="../bcat/bcat.html">markown format poate fi accesat aici</a>.</p>
 <p><small markdown=""></small></p>
@@ -554,7 +559,7 @@ div.download-btn {
 <ol>
 <li id="fn:1">
 <p>in sectiunea (de)servita de serverul HTTP static, ratiunea fiind
-ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" serverul dinamic (a se vedea <a href="810.02-System_Landscape.html#sysinit-initializare-sistem">sectiunea <em>sysInit</em> din documentul <em>Landscape</em></a>) <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" serverul dinamic (a se vedea <a href="810.02-System_Landscape.html#sysinit-initializare-sistem">sectiunea <em>sysInit</em> din documentul <em>Landscape</em></a>) <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 </ol>
 </div>
@@ -563,7 +568,7 @@ ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" 
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2023</span>
 </small>
 </div>
 </article>

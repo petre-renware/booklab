@@ -390,13 +390,8 @@ div.download-btn {
 <nav aria-label="Lista cartilor" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#varianta-citita-static-la-compilare-din-books_catalog-json">
-    Varianta citita static, la compilare din books_catalog. json**
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#varianta-ce-va-fi-citita-dinamic-la-run-time-si-doar-variabile-jinja">
-    Varianta ce va fi citita dinamic la run time si doar variabile Jinja
+<a class="md-nav__link" href="#varianta-citita-static-sectiune-ce-va-dispare-dupa-finalizare-cod">
+    Varianta citita static - SECTIUNE CE VA DISPARE DUPA FINALIZARE COD 
   </a>
 </li>
 </ul>
@@ -420,12 +415,41 @@ div.download-btn {
 <p>Bine ati venit la <em>Catalogul cartilor dumneavoastra</em>. Aici puteti vizualiza cartile create de dumneavoastra si stadiul acestora, sa efectuati operatii asupra lor sau sa creati o carte noua.</p>
 <h2 id="lista-cartilor">Lista cartilor</h2>
 <p><img alt="wip page" src="../pictures/under_maintenance.png"> <!--#FIXME drop me when finish --></img></p>
-<p><a href="newb/">Creare carte</a> <!-- #FIXME_DROP_ME buton ce trebuie sa fie inainte de tabel cu lista carti --></p>
-<h3 id="varianta-citita-static-la-compilare-din-books_catalog-json">Varianta citita static, la compilare din books_catalog. json**</h3>
-<!-- #FIXME differnet format by Pandas & PysonDB
-- done by making a copy in accepted format by Pandas
-- Drop me after compare data test
--------------->
+<p><a href="newb/">Creare carte</a> <!-- #NOTE this button naturally stay here, before books table --></p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Cod</th>
+<th>Titlu scurt</th>
+<th>Titlu lung</th>
+<th>Note</th>
+<th>creata de</th>
+<th>data creare</th>
+<th>actiuni</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!--#TODO
+- Jinja for loop to display all sent rows
+- in first version ignore actions which need to be links to an api routes with book id from st column
+------ end of #TODO plan-->
+<p>{% for line_data in bcat_data %}</p>
+<p>| {{ line_data["id"] }} | {{ line_data["code" ] }} | {{ line_data["short_desc"] }} | {{ line_data["description"] }} | {{ line_data["notes"] }} | {{ line_data["created_by"] }} | {{ line_data["created_date"] }} | <a href="edtb/">edit</a> - <a href="orgm/">organizare</a> - <a href="prvb/">vizualizare</a> - <a href="dplb/">asamblare</a> |</p>
+<p>{% endfor %}</p>
+<h3 id="varianta-citita-static-sectiune-ce-va-dispare-dupa-finalizare-cod">Varianta citita static - SECTIUNE CE VA DISPARE DUPA FINALIZARE COD <!--#FIXME this section will de dropped - kept just to compare --></h3>
 <table>
 <thead>
 <tr>
@@ -450,44 +474,12 @@ div.download-btn {
 </tr>
 </tbody>
 </table>
-<h3 id="varianta-ce-va-fi-citita-dinamic-la-run-time-si-doar-variabile-jinja">Varianta ce va fi citita dinamic la run time si doar variabile Jinja</h3>
-<table>
-<thead>
-<tr>
-<th>Id carte</th>
-<th>Cod carte</th>
-<th>Denumire carte</th>
-<th>Note</th>
-<th>Operatii</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<!--#TODO
-
-- Jinja for loop to display all sent rows
-
-- in first version ignore buttons which need to be links to an api routes with book id from st column
-
------- end of #TODO plan-->
-<!-- #FIXME mai sunt coloane de adaugat la tabel -->
-<p>{% for line_data in bcat_data %}</p>
-<p>| hidde me | {{ line_data["xxx"] }} | {{ line_data["xxx"] }}      | {{ line_data["xxx"] }}  | <a href="edtb/">edit</a> - <a href="orgm/">organizare</a> - <a href="prvb/">view bk</a> - <a href="dplb/">asamblare</a> ... |</p>
-<p>{% endfor %}</p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2023</span>
 </small>
 </div>
 </article>
