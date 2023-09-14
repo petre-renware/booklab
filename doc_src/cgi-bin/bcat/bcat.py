@@ -63,11 +63,11 @@ if not (type(bcat_records) == type(list())):
 
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader("bcat/"))
 bcat_tmpl = jinja_env.get_template("bcat.html")
-print('<p>A executat *** jinja_env.get_template("bcat.html")</p>') #NOTE OK IT'S PRINTED #FIXME_test_drop_me
-print(f"<p>bcat_tmpl: {bcat_tmpl}</p>") #FIXME_test_drop_me #NOTE prints nothing (probably None)
+print('<p>A executat *** jinja_env.get_template("bcat.html")</p>')  #FIXME_test_drop_me - OK IT'S PRINTED
+print(f"<p>bcat_tmpl: {bcat_tmpl}</p>") #FIXME prints nothing (probably None) #FIXME_test_drop_me
 content = bcat_tmpl.render(bcat_data=bcat_records) #FIXME NOT EXECUTED see next statement
 print('<p>A executat *** bcat_tmpl.render(bcat_data=bcat_records)</p>') #FIXME NOT PRINTED #FIXME_test_drop_me
-# print(content) #FIXME_test_drop_me err: Error code explanation: HTTPStatus.NOT_FOUND - Nothing matches the given URI
+# print(content) #FIXME err: Error code explanation: HTTPStatus.NOT_FOUND - Nothing matches the given URI
 
 
 ''' #NOTE retrieved data from JSON file
