@@ -21,7 +21,7 @@
 
 ### 0.2.2 BCAT page (wip...)
 
-* tbd... (RMAP.001 item 3.a): BCAT CGI `bcat.md` books catalog set Jinja variables in `for loop` to render all books
+* tbd... 
 * tbd... (RMAP.001 item 4): BCAT CGI script to prepare Jinja variables and render template `bcat/bcat.html` (!!! NOT MD)
 
 
@@ -29,7 +29,7 @@
 
 * -----#NOTE review & publish up recs ---
 
-* 230914piu_a reviewed & updated: CODE (`cgi-bin/bcat/bcat.py`) & TEMPLATE (`doc_src/bcat/bcat.md`)
+* 230914piu_a reviewed & updated: CODE (`cgi-bin/bcat/bcat.py`) & (RMAP.001 item 3.a): BCAT TEMPLATE (`doc_src/bcat/bcat.md`) books catalog set Jinja variables in `for loop` to render all books
 
 * 230913piu_f cleanup project of no more needed files, obsolete todo(s), comments in docs && moved `app_info.json` to `doc_src/data/` and updated `810.05a-bcat_System_Process.md`
 
