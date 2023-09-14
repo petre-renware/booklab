@@ -26,6 +26,8 @@
 
 * wip...
 
+* 230914piu_b __PARTIAL WITH ERRS__ - see code (RMAP.001 item 4): BCAT CGI script to prepare Jinja variables and render template `bcat/bcat.html`
+
 * -----#NOTE review & publish up recs ---
 
 * 230914piu_a reviewed & updated:

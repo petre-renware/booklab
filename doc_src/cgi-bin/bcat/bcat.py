@@ -11,6 +11,7 @@ import os
 import cgi
 import cgitb
 import pysondb
+import jinja2
 # import urllib3 #TODO if need it install it or use urllib which is built in
 
 
@@ -55,10 +56,19 @@ bcat_records = bcat_dbs.getAll()
 print(f"<p>{bcat_records} </p>") #FIXME this is a test printe all records
 if not (type(bcat_records) == type(list())):
     bcat_records = list().append(bcat_records) # make it list if is not (possible case for 1 record)
-bcat_data = bcat_records # this variable should be send in Jinja rendering process . NOT NEEDED but will be assigned to in calling render function. JUST TO REMEMBER...
+#FIXME_test_drop_me bcat_data = bcat_records # this variable should be send in Jinja rendering process . NOT NEEDED but will be assigned to in calling render function. JUST TO REMEMBER...
 #TODO ...nxt actions...
 #TODO here to render as Jinja template. WHO: `docs/bcat/bcat.html`
 #TODO and just print it after (to go to STDOUT)
+
+jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader("bcat/"))
+bcat_tmpl = jinja_env.get_template("bcat.html")
+print('<p>A executat *** jinja_env.get_template("bcat.html")</p>') #NOTE OK IT'S PRINTED #FIXME_test_drop_me
+print(f"<p>bcat_tmpl: {bcat_tmpl}</p>") #FIXME_test_drop_me #NOTE prints nothing (probably None)
+content = bcat_tmpl.render(bcat_data=bcat_records) #FIXME NOT EXECUTED see next statement
+print('<p>A executat *** bcat_tmpl.render(bcat_data=bcat_records)</p>') #FIXME NOT PRINTED #FIXME_test_drop_me
+# print(content) #FIXME_test_drop_me err: Error code explanation: HTTPStatus.NOT_FOUND - Nothing matches the given URI
+
 
 ''' #NOTE retrieved data from JSON file
   [
