@@ -35,9 +35,9 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 ------ end of #TODO plan-->
 
 
-{% for line_data in bcat_data %}
+{% for book in bcat_data %}
 
-| {{ line_data.id }} | {{ line_data.code }} | {{ line_data.short_desc }} | {{ line_data.description }} | {{ line_data.notes }} | {{ line_data.created_by }} | {{ line_data.created_date }} | [edit](edtb/) - [organizare](orgm/) - [vizualizare](prvb/) - [asamblare](dplb/) |
+| {{ book.id }} | {{ book.code }} | {{ book.short_desc }} | {{ book.description }} | {{ book.notes }} | {{ book.created_by }} | {{ book.created_date }} | [edit](edtb/) - [organizare](orgm/) - [vizualizare](prvb/) - [asamblare](dplb/) |
 
 {% endfor %}
 
