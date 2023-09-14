@@ -26,10 +26,7 @@
 
 * wip...
 
-* 230914piu_b
-  * #TODO chk, nu a produs nimic in HTML. Tot ce este raw-endraw este un alt table... (lin >445 in HTML) +++  __incearca sa le afisezi lista sau fa te able din html si nu markdown__...
-  * ___RECOMPILE mkdocs & TRY AGAIN -- WITH ERRS___ - see code
-  * (RMAP.001 item 4): BCAT CGI script to prepare Jinja variables and render template `bcat/bcat.html`
+* 230914piu_b ___WITH ERRORS - see code___ (RMAP.001 item 4): BCAT CGI script to prepare Jinja variables and render template `bcat/bcat.html`
 
 * -----#NOTE review & publish up recs ---
 

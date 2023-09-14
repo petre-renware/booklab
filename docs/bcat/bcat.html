@@ -387,15 +387,6 @@ div.download-btn {
 <a class="md-nav__link" href="#lista-cartilor">
     Lista cartilor
   </a>
-<nav aria-label="Lista cartilor" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#varianta-citita-static-sectiune-ce-va-dispare-dupa-finalizare-cod">
-    Varianta citita static - SECTIUNE CE VA DISPARE DUPA FINALIZARE COD 
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -446,34 +437,10 @@ div.download-btn {
 - Jinja for loop to display all sent rows
 - in first version ignore actions which need to be links to an api routes with book id from st column
 ------ end of #TODO plan-->
-<p>{% for line_data in bcat_data %}</p>
-<p>| {{ line_data["id"] }} | {{ line_data["code" ] }} | {{ line_data["short_desc"] }} | {{ line_data["description"] }} | {{ line_data["notes"] }} | {{ line_data["created_by"] }} | {{ line_data["created_date"] }} | <a href="edtb/">edit</a> - <a href="orgm/">organizare</a> - <a href="prvb/">vizualizare</a> - <a href="dplb/">asamblare</a> |</p>
+<p>{% for book in bcat_data %}</p>
+<p>| {{ book.id }} | {{ book.code }} | {{ book.short_desc }} | {{ book.description }} | {{ book.notes }} | {{ book.created_by }} | {{ book.created_date }} | <a href="edtb/">edit</a> - <a href="orgm/">organizare</a> - <a href="prvb/">vizualizare</a> - <a href="dplb/">asamblare</a> |</p>
 <p>{% endfor %}</p>
-<h3 id="varianta-citita-static-sectiune-ce-va-dispare-dupa-finalizare-cod">Varianta citita static - SECTIUNE CE VA DISPARE DUPA FINALIZARE COD <!--#FIXME this section will de dropped - kept just to compare --></h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">id</th>
-<th style="text-align: left;">code</th>
-<th style="text-align: left;">short_desc</th>
-<th style="text-align: left;">description</th>
-<th style="text-align: left;">created_date</th>
-<th style="text-align: left;">created_by</th>
-<th style="text-align: left;">notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">BCAT</td>
-<td style="text-align: left;">bk_tmpl</td>
-<td style="text-align: left;">Sablonul implicit pentru o carte noua</td>
-<td style="text-align: left;">2023-08-01</td>
-<td style="text-align: left;">system</td>
-<td style="text-align: left;">Inregistrare obligatorie de la instalare sistem. Non editabila.</td>
-</tr>
-</tbody>
-</table>
+<!-- -->
 <hr/>
 <div class="md-source-file">
 <small>

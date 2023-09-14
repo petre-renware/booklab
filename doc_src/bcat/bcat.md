@@ -48,7 +48,9 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 
 
+<!-- {#
+### Varianta citita static - SECTIUNE CE VA DISPARE DUPA FINALIZARE COD //#FIXME this section will de dropped - kept just to compare
 
-### Varianta citita static - SECTIUNE CE VA DISPARE DUPA FINALIZARE COD <!--#FIXME this section will de dropped - kept just to compare -->
+{{ read_json('../data/books_catalog_pandas_version.json', orient='records') }} //#FIXME this section will de dropped - kept just to compare
 
-{{ read_json('../data/books_catalog_pandas_version.json', orient='records') }} <!--#FIXME this section will de dropped - kept just to compare -->
+#}  -->
