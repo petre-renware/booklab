@@ -25,12 +25,12 @@ cgitb.enable() # this activate displaying errs on HTML page and log them...
 # HTTP header section
 print("Content-Type: text/html\n")
 print()
-print("<!doctype html><p>BookLab BCAT component in loading...</p>") #FIXME: this message is for debbuging; anyway will be replaced at final
+#print("<!doctype html><p>BookLab BCAT component in loading...</p>") #FIXME: this message is for debbuging; anyway will be replaced at final
 
 
 #FIXME drop this after use knowledge
 #print(f"<p>my code-name: {my_name}</p>")
-print(f"<p>current directory: {my_crt_dir}</p>") #NOTE: DE RETINUT aici a afista dir crt ca ".../static_portal/" deci nu cgi-bin
+#print(f"<p>current directory: {my_crt_dir}</p>") #NOTE: DE RETINUT aici a afista dir crt ca ".../static_portal/" deci nu cgi-bin
 
 
 
@@ -48,12 +48,12 @@ print(f"<p>current directory: {my_crt_dir}</p>") #NOTE: DE RETINUT aici a afista
 
 # construct database full absolute path file name and open it
 dbs_file = os.path.join(my_crt_dir, "data/books_catalog.json")
-print(f"<p>--- database to open {dbs_file} </p>")
+#print(f"<p>--- database to open {dbs_file} </p>")
 bcat_dbs = pysondb.db.getDb(dbs_file)
-print(f"<p>---Data base opened. Here the JSON information: </p>")
+#print(f"<p>---Data base opened. Here the JSON information: </p>")
 
 bcat_records = bcat_dbs.getAll()
-print(f"<p>{bcat_records} </p>") #FIXME this is a test printe all records
+#print(f"<p>{bcat_records} </p>") #FIXME this is a test printe all records
 if not (type(bcat_records) == type(list())):
     bcat_records = list().append(bcat_records) # make it list if is not (possible case for 1 record)
 
@@ -66,7 +66,7 @@ with open(os.path.join(templates_root + "bcat/bcat.html")) as f: # read file and
     c = f.read()
 bcat_tmpl = jinja2.Template(c) # load read file content as template
 #print('<p>A executat *** jinja_env.get_template("bcat.html")</p>')  #FIXME_test_drop_me - OK IT'S PRINTED
-print("<p>CONTROL PRINT 1 bcat_tmpl: " + str(bcat_tmpl) + "</p>") #FIXME prints nothing (probably None) #FIXME_test_drop_me
+#print("<p>CONTROL PRINT 1 bcat_tmpl: " + str(bcat_tmpl) + "</p>") #FIXME prints nothing (probably None) #FIXME_test_drop_me
 
 
 
@@ -79,9 +79,9 @@ print("<p>CONTROL PRINT 1 bcat_tmpl: " + str(bcat_tmpl) + "</p>") #FIXME prints 
 
 
 
-print('<p>CONTROL: --- inainte a de efectua RENDER ---</p>') #FIXME_test_drop_me
+#print('<p>CONTROL: --- inainte a de efectua RENDER ---</p>') #FIXME_test_drop_me
 content = bcat_tmpl.render(bcat_data=bcat_records) #FIXME NOT EXECUTED see next statement
-print('<p>CONTROL PRINT 2: A executat *** bcat_tmpl.render(bcat_data=bcat_records)</p>') #FIXME NOT PRINTED #FIXME_test_drop_me
+#print('<p>CONTROL PRINT 2: A executat *** bcat_tmpl.render(bcat_data=bcat_records)</p>') #FIXME NOT PRINTED #FIXME_test_drop_me
 print(content) #FIXME err: Error code explanation: HTTPStatus.NOT_FOUND - Nothing matches the given URI
 
 
