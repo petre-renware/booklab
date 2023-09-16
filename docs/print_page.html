@@ -1223,8 +1223,9 @@
     bklab_static([staticbl \n STATIC BookLab \n server])
     bklab_dynamic([dynbl \n DYNAMIC BookLab \n server])
 
-    bklab --- bklab_static
-    bklab --- bklab_dynamic
+    bklab ---- bklab_static
+    bklab ---- bklab_dynamic
+    bklab --- sysInit
 
     sysInit[[sysInit \n Initializare \n sistem]]
 
@@ -1237,17 +1238,18 @@
     prvm[[PRVB \n Previzualizare \n carte]]
     dplm[[DPLB \n Asamblare \n carte]]
     hlps[[HLPS \n Manuale \n aplicatie]]
+    jinja_tmplts[[Sabloane UI \\n format Jinja]]
 
-    bklab_dynamic --- sysInit
-    bklab_dynamic --- book_tmpl
+    bklab_static --- hlps
+    bklab_static --- jinja_tmplts
 
-    bklab_static ---- bcat
-    bklab_static ---- newb
-    bklab_static ---- edtm
-    bklab_static ---- orgm
-    bklab_static ---- prvm
-    bklab_static ---- dplm
-    bklab_static ---- hlps
+    bklab_dynamic ---- book_tmpl
+    bklab_dynamic ---- bcat
+    bklab_dynamic ---- newb
+    bklab_dynamic ---- edtm
+    bklab_dynamic ---- orgm
+    bklab_dynamic ---- prvm
+    bklab_dynamic ---- dplm
 
     bcat --- bcat_db
     newb --- bcat_db
@@ -1295,9 +1297,6 @@
 <p>Acest modul este responsabil de catalogul (lista) cartilor si de sablonul de creare a unei carti. Astfel el contine urmatoarele elemente:</p>
 <ul>
 <li>
-<p><strong>sablonul</strong> implicit de creare a unei carti noi (si singurul in versiunea 1 a aplicatiei). Datele acestui sablon se afla in subdirectorul <code>bk_tmpl/</code>.</p>
-</li>
-<li>
 <p><strong>catalogul cartilor</strong> ce este baza de date cu informatiile de baza despre carti. Acest catalog contine informatiile necesare pentru identificarea si referentierea unei carti in aplicatie. <em>Datele detaliate</em> aferente unei carti se gasesc in directorul aferent acesteia, director al carui nume se regaseste in acest catalog. Catalogul este stocat in format <code>JSON</code> si se gaseste in fisierul <code>books_catalog.json</code>.</p>
 </li>
 <li>
@@ -1315,6 +1314,7 @@
 </div>
 <h2 id="810-dsgn-810.02-system_landscape-btmpl-sablon-carte-noua">BTMPL sablon carte noua</h2>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
+<p>Aceasta componenta refera <strong>sablonul</strong> implicit de creare a unei carti noi (si singurul in versiunea 1 a aplicatiei). Fisierele asociate acestui sablon se afla in subdirectorul <code>book_tmpl/</code>.</p>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
@@ -1469,7 +1469,6 @@
 <ul>
 <li><a href="#810-dsgn-810.05a-bcat_system_process-bcat-catalogul-cartilor">BCAT catalogul cartilor</a><ul>
 <li><a href="#810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-baza-de-date">Catalogul cartilor - baza de date</a></li>
-<li><a href="#810-dsgn-810.05a-bcat_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</a></li>
 <li><a href="#810-dsgn-810.05a-bcat_system_process-informatii-despre-aplicatie">Informatii despre aplicatie</a></li>
 <li><a href="#810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</a></li>
 <li><a href="#810-dsgn-810.05a-bcat_system_process-note">Note</a></li>
@@ -1479,18 +1478,87 @@
 </div>
 <hr />
 <h2 id="810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-baza-de-date">Catalogul cartilor - baza de date</h2>
-<!-- #FIXME drop when finish -->
-<p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /> ... UPCOMING...</p>
-<p>... Catalogul cartilor este baza de date ce contine ... despre toate cartile ...</p>
-<p>... Informatiile detaliate despre o carte (baza de date a unei carti) ...</p>
-<!-- #TODO... wip... tbd... -->
-
+<p>Catalogul cartilor (Books Catalog) este baza de date ce contine informatii despre toate cartile ce sunt gestionate de sistemul BookLab. Aceasta baza de date este in format JSON.</p>
+<p>Structura bazei de date este urmatoarea:</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: int,
+            &quot;code&quot;: &quot;str&quot;,
+            &quot;short_desc&quot;: &quot;str&quot;,
+            &quot;description&quot;: &quot;str&quot;,
+            &quot;created_date&quot;: &quot;str&quot;,
+            &quot;created_by&quot;: &quot;str&quot;,
+            &quot;notes&quot;: &quot;str&quot;
+        }
+    ]
+}
+</code></pre></div>
+<p>Structura JSON reprezentind cartile efective este o lista (array) cu inregistrarile cartilor, lista ce este valoarea cheii <code>"data"</code>.Cu alte cuvinte inregistratea cu informatiile aferente unei carti are urmatoarea structura:</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;id&quot;: int,
+    &quot;code&quot;: &quot;str&quot;,
+    &quot;short_desc&quot;: &quot;str&quot;,
+    &quot;description&quot;: &quot;str&quot;,
+    &quot;created_date&quot;: &quot;YYYY-MM-DD&quot;,
+    &quot;created_by&quot;: &quot;str&quot;,
+    &quot;notes&quot;: &quot;str&quot;
+}
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note referitoare la chei</p>
+<ul>
+<li><code>id</code> este cheia unica (PK) a cartii ca intreg generat automat de sistem</li>
+<li><code>code</code> este o cheie (AK) ce permite cautarea unei carti dupa un cod alfanumeric ("humanized code"); acesta informatie de obicei folosita ca si cod al cartii</li>
+<li><code>short_desc</code> este o descrire sumara a cartii; aceasta descriere este de obicei folosita ca titlu si in zonele de "header", "footer" ale sectiunilor cartii</li>
+<li><code>description</code> este o descriere larga a cartii, de obicei reprezentind o detaliere a titlului</li>
+<li><code>notes</code> permite inregistrarea libera a orine informatii doreste utilizatorul referitor la acea carte</li>
+<li>cheile <code>createed_*</code> sunt intretinute de sistem si permit un audit sumar al cartii: "cine a creat cartea si cind"</li>
+</ul>
+</div>
 <p>Catalogul cartilor este localizat in directorul <strong><code>docs/data/</code></strong><sup id="fnref:1"><a class="footnote-ref" href="#810-dsgn-810.05a-bcat_system_process-fn:1">1</a></sup> iar informatiile sunt stocate intr-un fisier cu numele <strong><code>books_catalog.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
-<!-- #TODO... structura fisierului si key urile aferente, nume, tip, eventuale reguli -->
-
-<h2 id="810-dsgn-810.05a-bcat_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</h2>
-<!-- #FIXME drop when finish -->
-<p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /> ... UPCOMING...</p>
+<h2 id="810-dsgn-810.05a-bcat_system_process-informatii-despre-aplicatie">Informatii despre aplicatie</h2>
+<p>In directorul <strong><code>docs/data/</code></strong><sup id="fnref2:1"><a class="footnote-ref" href="#810-dsgn-810.05a-bcat_system_process-fn:1">1</a></sup> se gaseste un fisier ce contine informatii referitoare la aplicatia (sistemul aplicational) curent utilizata, mai exact la ceea ce in termeni clasici se numeste "aplicatia instalata".</p>
+<p>Aceste informatii sunt stocate intr-un fisier cu numele <strong><code>app_info.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
+<p>Informatiile despre aplicatie sunt referitoare la versiunea acesteia si data la care a fost activata:</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;activated_on&quot;: &quot;YYYY-MM-DD&quot;,
+    &quot;version&quot;: &quot;M.m.p&quot;
+}
+</code></pre></div>
+<h2 id="810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</h2>
+<p>Fisierul template in format <a href="#bcat-bcat">markown format poate fi accesat aici</a>.</p>
+<p><small markdown></p>
+<blockquote>
+<p>Din punct de vedere al <strong><em>proiectului BookLab si nu al produsului BookLab rezultat</em></strong>, trebuie remarcat ca sablonul contine portiuni cu structuri Jinja  e sunt "protejate" la prima compilare prin includerea lor in sectiuni Jinja tip <code>raw - endraw</code> astfel incit se vor regasi ca atare in fiserul HTML rezultat astfel incit sa fie avaluate corespunzator la executie (run time).
+</small></p>
+<p>Datele utilizate in template si ce vor fi randate Jinja sunt transmise prin intermediul variabilei <code>bcat_data</code>.</p>
+</blockquote>
+<h2 id="810-dsgn-810.05a-bcat_system_process-note">Note</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="810-dsgn-810.05a-bcat_system_process-fn:1">
+<p>in sectiunea (de)servita de serverul HTTP static, ratiunea fiind
+ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" serverul dinamic (a se vedea <a href="#810-dsgn-810.02-system_landscape-sysinit-initializare-sistem">sectiunea <em>sysInit</em> din documentul <em>Landscape</em></a>)&#160;<a class="footnote-backref" href="#810-dsgn-810.05a-bcat_system_process-fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#810-dsgn-810.05a-bcat_system_process-fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></section><section class="print-page" id="810-dsgn-810.05a-btmpl_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
+<small markdown><strong>BookLab System</strong><br>
+<em>(c) 2023 RENware Software Systems</em>
+</small><br><br></p>
+<h1 id="810-dsgn-810.05a-btmpl_system_process-btmpl-sablon-carte-noua">BTMPL sablon carte noua</h1>
+<p><strong><em>Cuprins:</em></strong></p>
+<div class="toc">
+<ul>
+<li><a href="#810-dsgn-810.05a-btmpl_system_process-btmpl-sablon-carte-noua">BTMPL sablon carte noua</a><ul>
+<li><a href="#810-dsgn-810.05a-btmpl_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="810-dsgn-810.05a-btmpl_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</h2>
 <p>Acesta reprezinta sablonul (template) folosit in procesul de creare a unei carti noi (proces <code>NEWB</code>). Acest sablon contine urmatoarele elemente:</p>
 <ul>
 <li>
@@ -1506,43 +1574,13 @@
 </ul>
 </li>
 <li>
-<p><em>baza de date a cartii</em> este baza de date cu detaliile unei carti, baza de date ce este referentiata din <a href="#810-dsgn-810.05a-bcat_system_process-bcat-catalogul-cartilor">catalogul cartilor</a></p>
+<p><em>baza de date a cartii</em> este baza de date cu detaliile unei carti, baza de date ce este referentiata din <a href="#810-dsgn-810.05a-btmpl_system_process-catalogul-cartilor-baza-de-date">sectiunes catalogul cartilor</a>. Continutul brut al <a href="data/books_catalog.json">bazei de date cu catalogul cartilor</a></p>
 </li>
 </ul>
-<p>...tbd... <!-- #TODO continue with sections fro each item containing exact / concrete development level details --></p>
-<h2 id="810-dsgn-810.05a-bcat_system_process-informatii-despre-aplicatie">Informatii despre aplicatie</h2>
-<p>In directorul radacina a serverului dinamic exista o baza de date ce contine informatii referitoare la aplicatia (sistemul aplicational) curent utilizata, mai exact la ceea ce in termeni clasici se numeste "aplicatia instalata".</p>
-<p>Aceste informatii sunt stocate intr-un fisier cu numele <strong><code>app_info.json</code></strong> si sunt in format <code>JSON</code> standard. Ele pot fi accesate si manipulate prin intermediul oricarei biblioteci dedicata manipularii darelor si fisierelor format <code>JSON</code>.</p>
-<!-- #TODO... structura fisierului si key urile aferente, nume, tip, eventuale reguli -->
+<!-- #TODO continue with sections fro each item what exactly contains + efective development details -->
 
-<h2 id="810-dsgn-810.05a-bcat_system_process-catalogul-cartilor-interfata-ui">Catalogul cartilor - interfata UI</h2>
-<p>The file in format <a href="#bcat-bcat">markown format be accesed here</a>. Should remark that it contains some Jinja portions that are potected at 1st compilation by including them in Jinja sections <code>raw - endraw</code> - these Jinja portions will be evaluated and rendered at execution (run time) running specific code.</p>
-<blockquote>
-<p>These portion refers the <code>books_catalog</code> database for list of books</p>
-</blockquote>
-<h2 id="810-dsgn-810.05a-bcat_system_process-note">Note</h2>
-<div class="footnote">
-<hr />
-<ol>
-<li id="810-dsgn-810.05a-bcat_system_process-fn:1">
-<p>in sectiunea (de)servita de serverul HTTP static, ratiunea fiind
-ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" serverul dinamic (a se vedea <a href="#810-dsgn-810.02-system_landscape-sysinit-initializare-sistem">sectiunea <em>sysInit</em> din documentul <em>Landscape</em></a>)&#160;<a class="footnote-backref" href="#810-dsgn-810.05a-bcat_system_process-fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div></section><section class="print-page" id="810-dsgn-810.05a-btmpl_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
-<small markdown><strong>BookLab System</strong><br>
-<em>(c) 2023 RENware Software Systems</em>
-</small><br><br></p>
-<h1 id="810-dsgn-810.05a-btmpl_system_process-btmpl-sablon-carte-noua">BTMPL sablon carte noua</h1>
-<p><strong><em>Cuprins:</em></strong></p>
-<div class="toc">
-<ul>
-<li><a href="#810-dsgn-810.05a-btmpl_system_process-btmpl-sablon-carte-noua">BTMPL sablon carte noua</a></li>
-</ul>
-</div>
-<hr />
-<p><img alt="wip page" src="pictures/under_maintenance.png" /></p>
-<p>-#TODO... UPCOMING...</p></section><section class="print-page" id="810-dsgn-810.05a-newb_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
+<p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /></p>
+<p>-#TODO... UPCOMING with detailed information...</p></section><section class="print-page" id="810-dsgn-810.05a-newb_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
 <small markdown><strong>BookLab System</strong><br>
 <em>(c) 2023 RENware Software Systems</em>
 </small><br><br></p>

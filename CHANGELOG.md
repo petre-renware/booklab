@@ -9,19 +9,21 @@
 - with _(F)_ are marked those changes that are features in order to be copied in a RELNOTE file and with _(B)_ bug fixes from versions released
 - #NOTE sote publishing on `arint.renware.eu` from `publishing` branch
 - `<PROJECT ROOT>/doc_src/` is the default starting location in a file path (if not clear from context)
-- `<APP_ROOT>/` is the application root directory, as default `booklab_app/`
+- `<WEB_ROOT>/` is the HTTP server root directory, as default `docs/` and supposed if no other parent is specified
 
 
 
 ## 0.2 First System Design (...)
 
 
-* tbd... after mk run python scripts as CGI, rlse 0.2 then focus on Jupiter
+* tbd... after BTMPL release 0.2 then focus on Jupiter
 
 
-### 0.2.2 BCAT page
 
-* tbd... continue of 290911piu_c ref (RMAP.001 item 4): BCAT CGI `bcat.md` books catalog which need to be rewritten with a Jinja *`for loop`* to render all books
+
+### 0.2.3 BTMPL Book Template 1st design (wip...)
+
+* tbd... review TMPL ref where to locate scripts for A BOOK operations: __PRVB preview__, __DPLB assembly__, __ORGM structure__
 
 * wip...
 
@@ -33,7 +35,36 @@
 
 
 
+### 0.2.2 BCAT Books Catalog version that only show (230916 h06:00)
 
+* 230916piu_a BCAT markdown template - actions column FIXED links that are not correct generated from markdown to html - fixed `<tbody>` element, dropped all `<table>` tag indentation to avoid generation of _code block_
+
+* 230915piu_b more action:
+    * [x] BCAT DSGN doc `810.05a-bcat_System_Process.md`- MOVE book template section && 810-DSGN/Landscape mv BCAT in its doc: __exists a dedicated module == BTMPL__
+    * [x] BTMPL DSGN DOC `doc_src/810-DSGN/810.05a-btmpl_System_Process.md` updated with info from BCAT
+    * [x] in Landscape, components DIAGRAM doc put BCAT under dynamic server
+
+* 230915piu_a `bcat.md` template solve catalog table problem because was spitted in 2 different sections by Jinja statements
+
+* 230914piu_e moved `cgi-bin/bcat/bcat.py` to `cgi-bin/` to be at exact 1 level under www-root as tem0late `bcat/bcat.md` to right address CSS ad JS scripts referred as relative paths to `../assets/...`
+
+* 230914piu_d (RMAP.001 item 4): BCAT CGI script to prepare Jinja variables and render template `bcat/bcat.html` (!!! NOT MD)
+
+* 230914piu_c FIXED BCAT script (`cgi-bin/bcat/bcat.py`) shows data but need to redesign all markdown template (`doc_src/bcat/bcat.md`) as it looks very ugly... 
+
+* 230914piu_b ___WITH ERRORS - see code___ (RMAP.001 item 4): BCAT CGI script to prepare Jinja variables and render template `bcat/bcat.html`
+
+* 230914piu_a reviewed & updated:
+    * CODE (`cgi-bin/bcat/bcat.py`)
+    * BCAT template (`doc_src/bcat/bcat.md`) books catalog set Jinja variables in `for loop` to render all books (closed RMAP.001 item 3.a)
+
+* 230913piu_f cleanup project of no more needed files, obsolete todo(s), comments in docs && moved `app_info.json` to `doc_src/data/` and updated `810.05a-bcat_System_Process.md`
+
+* 230913piu_e reviewed & updated `cgi-bin/bcat/bcat.py` with a comment regarding info retrieved from JSON file (exactly how looks like @ print)
+
+* 230913piu_d (RMAP.001 item 3.a): BCAT CGI `bcat.md` books catalog set Jinja received variable & update `810.05a-bcat_System_Process.md` section "Catalogul cartilor - interfata UI"
+
+* 230913piu_c updated `810.05a-bcat_System_Process.md` described _Books Catalog_ database (`/data/books_catalog.json`): keys, types and rules
 
 
 

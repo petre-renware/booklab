@@ -6,4 +6,4 @@
 #
 
 # commend:
-sudo python3 -m http.server 80 --cgi
+sudo python3 -m http.server 80 --directory docs/ --cgi

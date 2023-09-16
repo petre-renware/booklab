@@ -524,7 +524,7 @@ div.download-btn {
 </div>
 </div>
 <div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset"><div class="download-btn"><a href="../pdfs/810-DSGN/810.02-System_Landscape.html/810.02-System_Landscape.pdf">Download PDF</a></div>
+<article class="md-content__inner md-typeset"><div class="download-btn"><a href="..\pdfs\810-DSGN\810.02-System_Landscape.html\810.02-System_Landscape.pdf">Download PDF</a></div>
 <p><img align="left" alt="booklab_logo" src="../pictures/booklab_logo.png" width="55">
 <small markdown=""><strong>BookLab System</strong><br/>
 <em>(c) 2023 RENware Software Systems</em>
@@ -558,8 +558,9 @@ div.download-btn {
     bklab_static([staticbl \n STATIC BookLab \n server])
     bklab_dynamic([dynbl \n DYNAMIC BookLab \n server])
 
-    bklab --- bklab_static
-    bklab --- bklab_dynamic
+    bklab ---- bklab_static
+    bklab ---- bklab_dynamic
+    bklab --- sysInit
 
     sysInit[[sysInit \n Initializare \n sistem]]
 
@@ -572,17 +573,18 @@ div.download-btn {
     prvm[[PRVB \n Previzualizare \n carte]]
     dplm[[DPLB \n Asamblare \n carte]]
     hlps[[HLPS \n Manuale \n aplicatie]]
+    jinja_tmplts[[Sabloane UI \\n format Jinja]]
 
-    bklab_dynamic --- sysInit
-    bklab_dynamic --- book_tmpl
+    bklab_static --- hlps
+    bklab_static --- jinja_tmplts
 
-    bklab_static ---- bcat
-    bklab_static ---- newb
-    bklab_static ---- edtm
-    bklab_static ---- orgm
-    bklab_static ---- prvm
-    bklab_static ---- dplm
-    bklab_static ---- hlps
+    bklab_dynamic ---- book_tmpl
+    bklab_dynamic ---- bcat
+    bklab_dynamic ---- newb
+    bklab_dynamic ---- edtm
+    bklab_dynamic ---- orgm
+    bklab_dynamic ---- prvm
+    bklab_dynamic ---- dplm
 
     bcat --- bcat_db
     newb --- bcat_db
@@ -630,9 +632,6 @@ div.download-btn {
 <p>Acest modul este responsabil de catalogul (lista) cartilor si de sablonul de creare a unei carti. Astfel el contine urmatoarele elemente:</p>
 <ul>
 <li>
-<p><strong>sablonul</strong> implicit de creare a unei carti noi (si singurul in versiunea 1 a aplicatiei). Datele acestui sablon se afla in subdirectorul <code>bk_tmpl/</code>.</p>
-</li>
-<li>
 <p><strong>catalogul cartilor</strong> ce este baza de date cu informatiile de baza despre carti. Acest catalog contine informatiile necesare pentru identificarea si referentierea unei carti in aplicatie. <em>Datele detaliate</em> aferente unei carti se gasesc in directorul aferent acesteia, director al carui nume se regaseste in acest catalog. Catalogul este stocat in format <code>JSON</code> si se gaseste in fisierul <code>books_catalog.json</code>.</p>
 </li>
 <li>
@@ -650,6 +649,7 @@ div.download-btn {
 </div>
 <h2 id="btmpl-sablon-carte-noua">BTMPL sablon carte noua</h2>
 <p>-#TODO... <img alt="wip doc" src="../pictures/under_maintenance.png" width="200"/></p>
+<p>Aceasta componenta refera <strong>sablonul</strong> implicit de creare a unei carti noi (si singurul in versiunea 1 a aplicatiei). Fisierele asociate acestui sablon se afla in subdirectorul <code>book_tmpl/</code>.</p>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
 <ul>
@@ -745,7 +745,7 @@ div.download-btn {
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 15, 2023</span>
 </small>
 </div>
 </article>

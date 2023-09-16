@@ -16,51 +16,47 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 ## Lista cartilor
 
-![wip page](../pictures/under_maintenance.png) <!--#FIXME drop me when finish -->
 
+[Creare carte](newb/) <!-- #NOTE action for new book -->
 
-
-[Creare carte](newb/) <!-- #FIXME_DROP_ME buton ce trebuie sa fie inainte de tabel cu lista carti -->
-
-
-### Varianta citita static, la compilare din books_catalog. json**
-
-<!-- #FIXME differnet format by Pandas & PysonDB
-- done by making a copy in accepted format by Pandas
-- Drop me after compare data test
--------------->
-
-{{ read_json('../data/books_catalog_pandas_version.json', orient='records') }} <!--#NOTE current dire tory is bcat/ here so need go up 1 level to access data/ -->
-
-
-
-
-
-
-### Varianta ce va fi citita dinamic la run time si doar variabile Jinja
 
 {% raw %}
 
-| Id carte | Cod carte | Denumire carte | Note       | Operatii |
-| -------- | --------- | -------------- | ---------- | ------- |
-
-<!--#TODO
-
-- Jinja for loop to display all sent rows
-
-- in first version ignore buttons which need to be links to an api routes with book id from st column
-
------- end of #TODO plan-->
-
-
-{% for line_data in bcat_data %}
-
-| hidde me | {{ line_data["xxx"] }} | {{ line_data["xxx"] }}      | {{ line_data["xxx"] }}  | [edit](edtb/) - [organizare](orgm/) - [view bk](prvb/) - [asamblare](dplb/) ... |
-
+<table markdown>
+<thead markdown>
+<tr markdown>
+<th>ID</th>
+<th>Cod</th>
+<th>Titlu scurt</th>
+<th>Titlu lung</th>
+<th>Note</th>
+<th>creata de</th>
+<th>data creare</th>
+<th>actiuni</th>
+</tr>
+</thead>
+<tbody markdown>
+{% for book in bcat_data %}
+<tr markdown>
+<td markdown>{{ book.id }}</td>
+<td markdown>{{ book.code }}</td>
+<td markdown>{{ book.short_desc }}</td>
+<td markdown>{{ book.description }}</td>
+<td markdown>{{ book.notes }}</td>
+<td markdown>{{ book.created_by }}</td>
+<td markdown>{{ book.created_date }}</td>
+<td markdown> <!-- #NOTE actions for edit, organize, assembly book -->
+    [editare](edtb/) - [organizare](orgm/) - [vizualizare](prvb/) - [asamblare](dplb/)
+</td>
+</tr>
 {% endfor %}
-
-
+</tbody>
+</table>
 
 {% endraw %}
+
+
+
+
 
 
