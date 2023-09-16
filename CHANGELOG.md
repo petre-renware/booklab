@@ -29,11 +29,11 @@
 
 * tbd... update `help/880.30-BCAT_usage.md` ref BCAT usage manual
 * tbd... update `mkdocs.yml` make entry for `help/880.30-BCAT_usage.md`
-* tbd... 
+
 
 * wip...
 
-* ... 230916piu_c updated `880.30-EUMA_catalog.md` make entry for `help/880.30-BCAT_usage.md`
+* 230916piu_c updated `880.30-EUMA_catalog.md` make entry for `help/880.30-BCAT_usage.md`
 
 * 230916piu_b updated `bcat/bcat.md` make a simpple link @ top of page ref `help/880.30-BCAT_usage.md`
 
