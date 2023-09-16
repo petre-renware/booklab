@@ -21,9 +21,16 @@
 
 
 
-### 0.2.3 BTMPL Book Template 1st design (wip...)
+-#TODO ### 0.2.4 BTMPL Book Template 1st design (incoming soon...)
 
 * tbd... review TMPL ref where to locate scripts for A BOOK operations: __PRVB preview__, __DPLB assembly__, __ORGM structure__
+
+### 0.2.3 HELP Update BCAT documentation (wip...)
+
+* tbd... update `help/880.30-BCAT_usage.md` ref BCAT usage manual
+* tbd... update `mkdocs.yml` make entry for `help/880.30-BCAT_usage.md`
+* tbd... update `880.30-EUMA_catalog.md` make entry for `help/880.30-BCAT_usage.md`
+* tbd... update `bcat/bcat.md` make a simpple link @ top of page ref `help/880.30-BCAT_usage.md`
 
 * wip...
 
