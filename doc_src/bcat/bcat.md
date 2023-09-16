@@ -9,7 +9,7 @@
 
 # Catalogul cartilor
 
-Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cartile create de dumneavoastra si stadiul acestora, sa efectuati operatii asupra lor sau sa creati o carte noua. [Aici putei accesa manualul acestei functionalitati](../help/880.30-BCAT_usage.md).
+Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cartile create de dumneavoastra si stadiul acestora, sa efectuati operatii asupra lor sau sa creati o carte noua. [Aici puteti accesa manualul acestei functionalitati](../help/880.30-BCAT_usage.md).
 
 
 
