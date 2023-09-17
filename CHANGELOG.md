@@ -27,17 +27,18 @@
 
 ### 0.2.3 HELP Update BCAT documentation (wip...)
 
-* tbd... update `help/880.30-BCAT_usage.md` ref BCAT usage manual
-* tbd... update `mkdocs.yml` make entry for `help/880.30-BCAT_usage.md`
+* tbd... updated `help/880.30-BCAT_usage.md` ref BCAT usage manual (very brief & minimum info at this stage)
 
 
 * wip...
 
-* 230916piu_c updated `880.30-EUMA_catalog.md` make entry for `help/880.30-BCAT_usage.md`
-
-* 230916piu_b updated `bcat/bcat.md` make a simpple link @ top of page ref `help/880.30-BCAT_usage.md`
-
 * --- #NOTE Review & publish all up ---
+
+* 230917piu_a updated `mkdocs.yml` make entry for `help/880.30-BCAT_usage.md`
+* 230916piu_c updated `880.30-EUMA_catalog.md` make entry for `help/880.30-BCAT_usage.md`
+* 230916piu_b updated `bcat/bcat.md` make a simple link @ top of page ref `help/880.30-BCAT_usage.md`
+
+
 
 
 
