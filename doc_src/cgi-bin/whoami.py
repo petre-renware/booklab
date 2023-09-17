@@ -1,4 +1,4 @@
-#!/usr/bin/python3 #TODO change for BookLab python environment
+#!pyenv/bin/python3
 
 #-----------------------------------------------------------
 #
