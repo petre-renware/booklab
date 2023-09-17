@@ -25,28 +25,30 @@
 
 * tbd... review TMPL ref where to locate scripts for A BOOK operations: __PRVB preview__, __DPLB assembly__, __ORGM structure__
 
-### 0.2.3 HELP Update BCAT documentation (wip...)
-
 * tbd... chk & release
-
-* 230917piu_b updated `help/880.30-BCAT_usage.md` ref BCAT usage manual (very brief & minimum info at this stage)
-
 * --- #NOTE Review & publish all up ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 0.2.3 HELP Update BCAT documentation (wip...)
 
 * 230917piu_a updated `mkdocs.yml` make entry for `help/880.30-BCAT_usage.md`
 * 230916piu_c updated `880.30-EUMA_catalog.md` make entry for `help/880.30-BCAT_usage.md`
 * 230916piu_b updated `bcat/bcat.md` make a simple link @ top of page ref `help/880.30-BCAT_usage.md`
-
-
-
-
-
-
-
-
-
-
-
 
 
 
