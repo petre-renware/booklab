@@ -20,7 +20,8 @@ my_crt_dir = os.getcwd()
 cgitb.enable() # this activate displaying errs on HTML page and log them...
 
 
-#-------------
+
+#
 # #NOTE: HTTP header section for HTML content
 print("Content-Type: text/html\n")
 print()
@@ -54,72 +55,60 @@ Set-Cookie: String
 
 
 
-#NOTE ------------
+#
+# #NOTE OS Environment variables
 
 """
 CONTENT_TYPE
+* The data type of the content. Used when the client is sending attached content to the server. For example, file upload.
 
-The data type of the content. Used when the client is sending attached content to the server. For example, file upload.
 
-2	
 CONTENT_LENGTH
+* The length of the query information. It is available only for POST requests.
 
-The length of the query information. It is available only for POST requests.
 
-3	
 HTTP_COOKIE
+* Returns the set cookies in the form of key & value pair.
 
-Returns the set cookies in the form of key & value pair.
 
-4	
 HTTP_USER_AGENT
+* The User-Agent request-header field contains information about the user agent originating the request. It is name of the web browser.
 
-The User-Agent request-header field contains information about the user agent originating the request. It is name of the web browser.
 
-5	
 PATH_INFO
+* The path for the CGI script.
 
-The path for the CGI script.
 
-6	
 QUERY_STRING
+* The URL-encoded information that is sent with GET method request.
 
-The URL-encoded information that is sent with GET method request.
 
-7	
 REMOTE_ADDR
+* The IP address of the remote host making the request. This is useful logging or for authentication.
 
-The IP address of the remote host making the request. This is useful logging or for authentication.
 
-8	
 REMOTE_HOST
+* The fully qualified name of the host making the request. If this information is not available, then REMOTE_ADDR can be used to get IR address.
 
-The fully qualified name of the host making the request. If this information is not available, then REMOTE_ADDR can be used to get IR address.
 
-9	
 REQUEST_METHOD
+* The method used to make the request. The most common methods are GET and POST.
 
-The method used to make the request. The most common methods are GET and POST.
 
-10	
 SCRIPT_FILENAME
+* The full path to the CGI script.
 
-The full path to the CGI script.
 
-11	
 SCRIPT_NAME
+* The name of the CGI script.
 
-The name of the CGI script.
 
-12	
 SERVER_NAME
+* The server's hostname or IP Address
 
-The server's hostname or IP Address
 
-13	
 SERVER_SOFTWARE
-
-The name and version of the software the server is running.
+* The name and version of the software the server is running.
 """
 
 
