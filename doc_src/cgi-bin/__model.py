@@ -27,25 +27,27 @@ print("Content-Type: text/html\n")
 print()
 
 """ #NOTE other HTTP header items
------- Content-type: String
+
+Content-type: String
 * A MIME string defining the format of the file being returned. Example is Content-type:text/html
 
------- Expires: Date
+
+Expires: Date
 * The date the information becomes invalid. It is used by the browser to decide when a page needs to be refreshed. A valid date string is in the format 01 Jan 1998 12:00:00 GMT.
 
-------
+
 Location: URL
 * The URL that is returned instead of the URL requested. You can use this field to redirect a request to any file.
 
-------
+
 Last-modified: Date
 * The date of last modification of the resource.
 
-------
+
 Content-length: N
 * The length, in bytes, of the data being returned. The browser uses this value to report the estimated download time for a file.
 
-------
+
 Set-Cookie: String
 * Set the cookie passed through the string
 """
@@ -54,9 +56,10 @@ Set-Cookie: String
 
 
 #
-# #NOTE OS Environment variables
+# #NOTE read OS Environment variables
 
-"""
+
+""" #NOTE OS all environment variables
 CONTENT_TYPE
 * The data type of the content. Used when the client is sending attached content to the server. For example, file upload.
 
