@@ -53,8 +53,8 @@ Set-Cookie: String
 #
 # #NOTE read OS Environment variables
 print ("<p>Environment</p><\br>");
-for param in os.environ.keys(): # keys() contains all ENV variables
-   print ("<b>%20s</b>: %s<\br>" % (param, os.environ[param])) # os.environ[key_...] contain the value of that ENV variable
+for param in os.environ.keys(): # os.environ dictionary: keys() contains all ENV variables
+   print ("<b>%20s</b>: %s<\br>" % (param, os.environ[param])) # in dictionary os.environ[key_...] contain the value of that ENV variable
 
 """ #NOTE OS all environment variables
 
