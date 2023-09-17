@@ -21,7 +21,7 @@
 
 
 
--#TODO ### 0.2.4 BTMPL Book Template 1st design (incoming soon...)
+### 0.2.4 BTMPL Book Template 1st design (incoming soon...)
 
 * tbd... review TMPL ref where to locate scripts for A BOOK operations: __PRVB preview__, __DPLB assembly__, __ORGM structure__
 
