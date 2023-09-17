@@ -23,10 +23,14 @@
 
 ### 0.2.4 BTMPL Book Template 1st design (incoming soon...)
 
-* tbd... review TMPL ref where to locate scripts for A BOOK operations: __PRVB preview__, __DPLB assembly__, __ORGM structure__
+* tbd... review TMPL ref where to identify scripts for A BOOK operations: __PRVB preview__, __DPLB assembly__, __ORGM structure__ combine with -->
+    * tbd... all executables, except NEWB corresponding, muat accept as parameter the **Book IDENTIFIER**
 
-* tbd... chk & release
-* --- #NOTE Review & publish all up ---
+* tbd.. mv all executables to `cgi-bin/`
+
+
+* wip
+* --- #NOTE Review & publish all up --
 
 
 
