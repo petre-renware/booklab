@@ -27,10 +27,9 @@
 
 ### 0.2.3 HELP Update BCAT documentation (wip...)
 
-* tbd... updated `help/880.30-BCAT_usage.md` ref BCAT usage manual (very brief & minimum info at this stage)
+* tbd... chk & release
 
-
-* wip...
+* 230914piu_b updated `help/880.30-BCAT_usage.md` ref BCAT usage manual (very brief & minimum info at this stage)
 
 * --- #NOTE Review & publish all up ---
 
