@@ -52,8 +52,7 @@ Set-Cookie: String
 
 #
 # #NOTE read OS Environment variables
-print ("Content-type: text/html\r\n\r\n");
-print ("<font size=+1>Environment</font><\br>");
+print ("<p>Environment</p><\br>");
 for param in os.environ.keys():
    print ("<b>%20s</b>: %s<\br>" % (param, os.environ[param]))
 
