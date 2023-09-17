@@ -33,9 +33,9 @@
 * --- #NOTE Review & publish all up --
 
 * ... 230918piu_a python template for CGI purposes ==> `cgi-bin/cgi-tmpl.py` basically containing:
-    * write HHTP header for different MIME types
-    * accessing ENV useful variables
-    * setting a Jinja environmet
+    * write _HHTP header_ for different MIME types
+    * accessing _ENV useful variables_
+    * setting a _Jinja environmet_
 
 
 
