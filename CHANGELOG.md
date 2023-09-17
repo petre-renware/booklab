@@ -29,7 +29,7 @@
 
 * tbd... chk & release
 
-* 230914piu_b updated `help/880.30-BCAT_usage.md` ref BCAT usage manual (very brief & minimum info at this stage)
+* 230917piu_b updated `help/880.30-BCAT_usage.md` ref BCAT usage manual (very brief & minimum info at this stage)
 
 * --- #NOTE Review & publish all up ---
 
