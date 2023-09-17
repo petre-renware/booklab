@@ -20,9 +20,19 @@ my_crt_dir = os.getcwd()
 cgitb.enable() # this activate displaying errs on HTML page and log them...
 
 
+#NOTE ------------
 # HTTP header section for HTML content
 print("Content-Type: text/html\n")
 print()
+
+
+#NOTE ------------
+
+
+#NOTE ------------
+
+
+#NOTE ------------
 
 
 
