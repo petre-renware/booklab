@@ -27,12 +27,10 @@ print("Content-Type: text/html\n")
 print()
 
 """ #NOTE other HTTP header items
-------
-Content-type: String
+------ Content-type: String
 * A MIME string defining the format of the file being returned. Example is Content-type:text/html
 
-------
-Expires: Date
+------ Expires: Date
 * The date the information becomes invalid. It is used by the browser to decide when a page needs to be refreshed. A valid date string is in the format 01 Jan 1998 12:00:00 GMT.
 
 ------
