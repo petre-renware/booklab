@@ -28,32 +28,26 @@ print()
 """ #NOTE other HTTP header items
 ------
 Content-type: String
-
 * A MIME string defining the format of the file being returned. Example is Content-type:text/html
 
 ------
 Expires: Date
-
 * The date the information becomes invalid. It is used by the browser to decide when a page needs to be refreshed. A valid date string is in the format 01 Jan 1998 12:00:00 GMT.
 
 ------
 Location: URL
-
 * The URL that is returned instead of the URL requested. You can use this field to redirect a request to any file.
 
 ------
 Last-modified: Date
-
 * The date of last modification of the resource.
 
 ------
 Content-length: N
-
 * The length, in bytes, of the data being returned. The browser uses this value to report the estimated download time for a file.
 
 ------
 Set-Cookie: String
-
 * Set the cookie passed through the string
 """
 
