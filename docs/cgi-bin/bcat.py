@@ -27,9 +27,7 @@ print()
 
 # construct database full absolute path file name and open it
 dbs_file = os.path.join(my_crt_dir, "data/books_catalog.json")
-#print(f"<p>--- database to open {dbs_file} </p>")
 bcat_dbs = pysondb.db.getDb(dbs_file)
-#print(f"<p>---Data base opened. Here the JSON information: </p>")
 
 bcat_records = bcat_dbs.getAll()
 if not (type(bcat_records) == type(list())):

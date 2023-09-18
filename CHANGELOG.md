@@ -31,11 +31,14 @@
 
 * wip
 
+* --- #NOTE Review & publish all up --
+
+* 230918piu_b review & update `cgi-bin/__model.py`. Publish
 * 230918piu_a python template for CGI purposes ==> `cgi-bin/__model.py` basically containing:
-    * write _HHTP header_ for different MIME types
+    * write _HTTP header_ for different MIME types
     * accessing _ENV useful variables_
 
-* --- #NOTE Review & publish all up --
+
 
 
 
