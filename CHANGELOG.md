@@ -34,6 +34,7 @@
 
 * --- #NOTE Review & publish all up --
 
+* 230918piu_c adjust CGI python model file, rename to `cgi-bin/python_model.py` and set how get b00k_catalog.json database and query parameters
 * 230918piu_b review & update `cgi-bin/__model.py`. Publish
 * 230918piu_a python template for CGI purposes ==> `cgi-bin/__model.py` basically containing:
     * write _HTTP header_ for different MIME types
