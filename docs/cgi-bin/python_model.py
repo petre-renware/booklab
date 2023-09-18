@@ -9,8 +9,7 @@
 
 
 import os
-import cgi
-import cgitb
+import cgi, cgitb
 import pysondb
 import jinja2
 
@@ -50,9 +49,50 @@ Set-Cookie: String
 
 
 
+
+
+
+
+
+
+#
+# #NOTE construct database full absolute path file name and open it
+dbs_file = os.path.join(my_crt_dir, "data/books_catalog.json")
+bcat_dbs = pysondb.db.getDb(dbs_file)
+
+bcat_records = bcat_dbs.getAll()
+if not (type(bcat_records) == type(list())):
+    bcat_records = list().append(bcat_records) # make it list if is not (possible case for 1 record)
+
+
+
+
+
+
+
+
+#
+# #NOTE Getting query parameters
+#           - example for parameters `first_name` & `last_name`
+#           - request URL: `.../cgi-bin/python_model.py?first_name=Malhar&last_name=Lathkar`
+# Create instance of FieldStorage
+query_data = cgi.FieldStorage()
+# Get data from fields
+first_name = query_data.getvalue('first_name')
+last_name = query_data.getvalue('last_name')
+print(f"<p><b>First name</b> = {first_name}</p>")
+print(f"<p><b>Last name</b> = {last_name}</p>")
+
+
+
+
+
+
+
+
 #
 # #NOTE read OS Environment variables
-print ("<h1>Environment</h1><\br>");
+print ("<h1>Environment</h1>");
 for param in os.environ.keys(): # os.environ dictionary: keys() contains all ENV variables
    print ("<p><b>%20s</b>: %s</p>" % (param, os.environ[param])) # in dictionary os.environ[key_...] contain the value of that ENV variable
 
