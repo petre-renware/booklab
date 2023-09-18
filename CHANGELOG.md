@@ -21,12 +21,13 @@
 
 
 
-### 0.2.4 BTMPL Book Template 1st design (incoming soon...)
+### 0.2.4 BTMPL Book Template 1st design (#TODO_wip...)
 
-* tbd... review TMPL ref where to identify scripts for A BOOK operations: __PRVB preview__, __DPLB assembly__, __ORGM structure__ combine with -->
-    * tbd... all executables, except NEWB corresponding, muat accept as parameter the **Book IDENTIFIER**
-
-* tbd.. mv all executables to `cgi-bin/`
+* tbd.. mv all executables to `cgi-bin/` --- LOOP these:
+    * [ ] 0. check for a NAMING RULE of all command scripts: __`bkcmd_...`__ seems reasonable - check to be consistent
+    * [ ] 1. review TMPL ref where to identify scripts for A BOOK operations: _PRVB preview_, _DPLB assembly_, _ORGM structure_, ...
+    * [ ] 2. all executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
+    * [ ] 3. move to `cgi-bin/`
 
 
 * wip
