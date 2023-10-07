@@ -3,8 +3,8 @@
         {
             "id": 0,
             "code": "BCAT",
-            "short_desc": "bk_tmpl",
-            "description": "Sablonul implicit pentru o carte noua",
+            "short_desc": "Numele cartii (si al site-ului daca se publica in internet)",
+            "description": "Denumirea lunga a cartii asa cum va apare pe coperta",
             "copyright": "Copyright - Informatia ref detinatorul drepturilor de autor",
             "site_author": "Autorul cartii",
             "created_date": "2023-08-01",
