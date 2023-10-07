@@ -15,7 +15,7 @@ import jinja2
 
 
 my_name = __name__
-my_crt_dir = os.getcwd()
+my_crt_dir = os.getcwd() # normally this should be the site root directory (in production `docs/` & in dev `doc_src/`)
 cgitb.enable() # this activate displaying errs on HTML page and log them...
 
 

@@ -445,7 +445,7 @@ div.download-btn {
 <h1 id="catalogul-cartilor">Catalogul cartilor</h1>
 <p>Bine ati venit la <em>Catalogul cartilor dumneavoastra</em>. Aici puteti vizualiza cartile create de dumneavoastra si stadiul acestora, sa efectuati operatii asupra lor sau sa creati o carte noua.</p>
 <h2 id="lista-cartilor">Lista cartilor</h2>
-<p><a href="newb/">Creare carte</a> <!-- #NOTE action for new book --></p>
+<p><a href="newb/">Creare carte</a> <code>&lt;!-- #NOTE action for new book --&gt;</code></p>
 <table>
 <thead>
 <tr>
@@ -453,6 +453,8 @@ div.download-btn {
 <th>Cod</th>
 <th>Titlu scurt</th>
 <th>Titlu lung</th>
+<th>Copyright</th>
+<th>Autorul cartii</th>
 <th>Note</th>
 <th>creata de</th>
 <th>data creare</th>
@@ -466,6 +468,8 @@ div.download-btn {
 <td>{{ book.code }}</td>
 <td>{{ book.short_desc }}</td>
 <td>{{ book.description }}</td>
+<td>{{ book.copyright }}</td>
+<td>{{ book.site_author }}</td>
 <td>{{ book.notes }}</td>
 <td>{{ book.created_by }}</td>
 <td>{{ book.created_date }}</td>
@@ -476,13 +480,13 @@ div.download-btn {
 <p>{% endfor %}</p>
 </tbody>
 </table>
-<h2 class="md-button" id="help"><a href="../help/880.30-BCAT_usage.html">Help</a></h2>
+<h2 id="help"><a href="../help/880.30-BCAT_usage.html">Help</a></h2>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 17, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 7, 2023</span>
 </small>
 </div>
 </article>
