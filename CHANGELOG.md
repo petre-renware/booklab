@@ -13,15 +13,18 @@
 
 
 
-## 0.2 First System Design (...)
-
+## 0.2 First System Design (...wip...)
 
 * tbd... after BTMPL release 0.2 then focus on Jupiter
 
 
 
 
-### 0.2.4 BTMPL Book Template 1st design (#TODO_wip...)
+
+
+
+
+### 0.2.4 BTMPL Book Template 1st design (...wip...)
 
 * tbd.. mv all executables to `cgi-bin/` --- LOOP these:
     * [ ] 0. check for a NAMING RULE of all command scripts: __`bkcmd_...`__ && __Python__ (for query params) seems reasonable - check to be consistent
@@ -29,9 +32,12 @@
     * [ ] 2. all executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
     * [ ] 3. move to `cgi-bin/`
 
-* tbd... updated `doc_src/data/books_catalog.json` add at book level `copyright`, `site_name`, `site_author`, information intended to be used in **book mkdocs.yml** build process
+* tbd... to publish info introduced by `231007piu_b`
+
 
 * wip
+
+* 231007piu_b updated `doc_src/data/books_catalog.json` add at book level `copyright`, `site_name`, `site_author`, information intended to be used in **book mkdocs.yml** build process
 
 * --- #NOTE Review & publish all up --
 
