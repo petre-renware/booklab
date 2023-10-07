@@ -6,7 +6,6 @@
             "short_desc": "bk_tmpl",
             "description": "Sablonul implicit pentru o carte noua",
             "copyright": "Copyright - Informatia ref detinatorul drepturilor de autor",
-            "site_name": "Numele cartii",
             "site_author": "Autorul cartii",
             "created_date": "2023-08-01",
             "created_by": "system",

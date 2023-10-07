@@ -6,19 +6,13 @@
 
  -->
 
-
 # Catalogul cartilor
 
 Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cartile create de dumneavoastra si stadiul acestora, sa efectuati operatii asupra lor sau sa creati o carte noua.
 
-
-
-
 ## Lista cartilor
 
-
-[Creare carte](newb/) <!-- #NOTE action for new book -->
-
+[Creare carte](newb/) `<!-- #NOTE action for new book -->`
 
 {% raw %}
 
@@ -29,6 +23,8 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 <th>Cod</th>
 <th>Titlu scurt</th>
 <th>Titlu lung</th>
+<th>Copyright</th>
+<th>Autorul cartii</th>
 <th>Note</th>
 <th>creata de</th>
 <th>data creare</th>
@@ -42,6 +38,8 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 <td markdown>{{ book.code }}</td>
 <td markdown>{{ book.short_desc }}</td>
 <td markdown>{{ book.description }}</td>
+<td markdown>{{ book.copyright }}</td>
+<td markdown>{{ book.site_author }}</td>
 <td markdown>{{ book.notes }}</td>
 <td markdown>{{ book.created_by }}</td>
 <td markdown>{{ book.created_date }}</td>
@@ -55,12 +53,4 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 {% endraw %}
 
-
-
-
-
-
-
-## [Help](../help/880.30-BCAT_usage.md) { .md-button }
-
-
+## [Help](../help/880.30-BCAT_usage.md)

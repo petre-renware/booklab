@@ -37,14 +37,16 @@
 
 * wip
 
-* 231007piu_b updated `doc_src/data/books_catalog.json` add at book level `copyright`, `site_name`, `site_author`, information intended to be used in **book mkdocs.yml** build process
 
 * --- #NOTE Review & publish all up --
+
+* 231007piu_b updated `doc_src/data/books_catalog.json` add at book level `copyright`, `site_author`, information intended to be used in **book mkdocs.yml** build process
 
 * 231007piu_a more items:
     * updated `doc_src/make_env.sh` to make executable `*.sh` and `*.py` files
     * created and initialized `doc_src/libutil/` directory for general project specific reusable modules (used in CGI scripts execution)
     * published this updated version
+
 * 231005piu_b updated `doc_src/` and `doc_src/cgi-bin/` made in git all `*.py, *.sh` files as EXECUTABLES
 * 231005piu_a updated `doc_src/make_env.sh` with commented commands to make `*.py, *.sh` files as _Linux executables_ (for `CGI` purposes)
 * 230918piu_c adjust CGI python model file, rename to `cgi-bin/python_model.py` and set how get b00k_catalog.json database and query parameters
