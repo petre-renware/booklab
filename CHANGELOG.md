@@ -26,14 +26,16 @@
 
 ### 0.2.4 BTMPL Book Template 1st design (...wip...)
 
+* tbd... have enough information in JSON data to construct `book_tnpl/book_config_parts/cfg_01_head_yml_section.yml`:
+    * site_name == short_desc
+    * site_author == site_author
+    * copyright == copyright
+
 * tbd.. mv all executables to `cgi-bin/` --- LOOP these:
     * [ ] 0. check for a NAMING RULE of all command scripts: __`bkcmd_...`__ && __Python__ (for query params) seems reasonable - check to be consistent
     * [ ] 1. review TMPL ref where to identify scripts for A BOOK operations: _PRVB preview_, _DPLB assembly_, _ORGM structure_, ...
     * [ ] 2. all executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
     * [ ] 3. move to `cgi-bin/`
-
-* tbd... to publish info introduced by `231007piu_b`
-
 
 * wip
 
