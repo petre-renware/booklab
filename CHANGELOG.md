@@ -29,6 +29,7 @@
     * [ ] 2. all executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
     * [ ] 3. move to `cgi-bin/`
 
+* tbd... updated `doc_src/data/books_catalog.json` add at book level `copyright`, `site_name`, `site_author`, information intended to be used in **book mkdocs.yml** build process
 
 * wip
 
