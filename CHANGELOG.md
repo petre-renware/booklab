@@ -8,7 +8,7 @@
 - For version code structure meaning see SDEVEN methodology document
 - with _(F)_ are marked those changes that are features in order to be copied in a RELNOTE file and with _(B)_ bug fixes from versions released
 - #NOTE sote publishing on `arint.renware.eu` from `publishing` branch
-- `<PROJECT ROOT>/doc_src/` is the default starting location in a file path (if not clear from context)
+- `<PROJECT ROOT>/doc_src/` is the default starting location in a file path (if not clear from context) (**ATTN** - in production environment is `docs/`)
 - `<WEB_ROOT>/` is the HTTP server root directory, as default `docs/` and supposed if no other parent is specified
 
 
@@ -34,6 +34,10 @@
 
 * --- #NOTE Review & publish all up --
 
+* 231007piu_a more items:
+    * updated `doc_src/make_env.sh` to make executable `*.sh` and `*.py` files
+    * created and initialized `doc_src/libutil/` directory for general project specific reusable modules (used in CGI scripts execution)
+    * published this updated version
 * 231005piu_b updated `doc_src/` and `doc_src/cgi-bin/` made in git all `*.py, *.sh` files as EXECUTABLES
 * 231005piu_a updated `doc_src/make_env.sh` with commented commands to make `*.py, *.sh` files as _Linux executables_ (for `CGI` purposes)
 * 230918piu_c adjust CGI python model file, rename to `cgi-bin/python_model.py` and set how get b00k_catalog.json database and query parameters
