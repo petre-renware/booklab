@@ -39,6 +39,9 @@
 
 * wip
 
+* 231008piu_a more items:
+    * updated system overview doc with examples / references of BookLab usage
+    * created a script for book configuration file (`mkdocs.yml`) assembly ==> ...
 
 * --- #NOTE Review & publish all up --
 
