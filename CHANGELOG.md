@@ -37,13 +37,14 @@
     * [ ] 2. all executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
     * [ ] 3. move to `cgi-bin/`
 
-* wip
+
+* wip...
+
+* --- #NOTE Review & publish all up --
 
 * 231008piu_b created a script for book configuration file (`mkdocs.yml`) assembly ==> `doc_src/book_tmpl/book_config_parts/assembly_cfg_file.sh`
 
 * 231008piu_a updated system overview doc with examples / references of BookLab usage
-
-* --- #NOTE Review & publish all up --
 
 * 231007piu_b updated `doc_src/data/books_catalog.json` add at book level `copyright`, `site_author`, information intended to be used in **book mkdocs.yml** build process
 
