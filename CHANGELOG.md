@@ -39,7 +39,7 @@
 
 * wip
 
-* 231008piu_b created a script for book configuration file (`mkdocs.yml`) assembly ==> ...
+* 231008piu_b created a script for book configuration file (`mkdocs.yml`) assembly ==> `doc_src/book_tmpl/book_config_parts/assembly_cfg_file.sh`
 
 * 231008piu_a updated system overview doc with examples / references of BookLab usage
 
