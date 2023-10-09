@@ -32,13 +32,15 @@
     * copyright == copyright
 
 * tbd.. mv all executables to `cgi-bin/` --- LOOP these:
-    * [x] 0. NAMING RULE of all command book manipulation scripts: __`bkcmd_...`__
+    * [x] 0. 
     * [ ] 1. review TMPL ref where to identify scripts for A BOOK operations: _PRVB preview_, _DPLB assembly_, _ORGM structure_, ...
     * [ ] 2. all executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
     * [ ] 3. move to `cgi-bin/`
 
 
 * wip...
+
+* 231009piu_a NAMING RULE of all command book manipulation scripts: __all scripts prefixed with `bkcmd_...`__
 
 * --- #NOTE Review & publish all up --
 
