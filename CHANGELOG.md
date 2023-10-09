@@ -17,6 +17,7 @@
 
 * tbd... after BTMPL release 0.2 then focus on Jupiter
 
+* tbd... try to execute book manipulation scripts from a Jupiter notebook (as part of application interface)
 
 
 
@@ -32,8 +33,6 @@
     * copyright == copyright
 
 * tbd.. all CGI executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
-
-* tbd... move all book scripts from book template dor to CGI dir
 
 
 * wip...
