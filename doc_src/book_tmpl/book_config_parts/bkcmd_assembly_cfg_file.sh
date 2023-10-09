@@ -3,8 +3,14 @@
 #
 # script to assembly mkdocs configuration file from parts
 #
+# - author: Petre Iordanescu, RENware Software Systems, petre.iordanescu@gmail.com
+# - location: <a book directory>/book_config_parts/assembly_cfg_file.sh
+#
 
 
+# change directory in location where this script is located
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+cd $SCRIPT_DIR
 
 
 # assembly files

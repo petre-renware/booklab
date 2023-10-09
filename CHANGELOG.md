@@ -26,23 +26,23 @@
 
 ### 0.2.4 BTMPL Book Template 1st design (...wip...)
 
-* tbd... have enough information in JSON data to construct `book_tnpl/book_config_parts/cfg_01_head_yml_section.yml`:
+* tbd... now have enough information in JSON data to construct `book_tnpl/book_config_parts/cfg_01_head_yml_section.yml`:
     * site_name == short_desc
     * site_author == site_author
     * copyright == copyright
 
-* tbd.. mv all executables to `cgi-bin/` --- LOOP these:
-    * [ ] 0. check for a NAMING RULE of all command scripts: __`bkcmd_...`__ && __Python__ (for query params) seems reasonable - check to be consistent
-    * [ ] 1. review TMPL ref where to identify scripts for A BOOK operations: _PRVB preview_, _DPLB assembly_, _ORGM structure_, ...
-    * [ ] 2. all executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
-    * [ ] 3. move to `cgi-bin/`
+* tbd.. all CGI executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
+
+* tbd... move all book scripts from book template dor to CGI dir
 
 
 * wip...
 
-* --- #NOTE Review & publish all up --
+* 231009piu_a NAMING RULE of all command book manipulation scripts: __all scripts prefixed with `bkcmd_...`__
 
-* 231008piu_b created a script for book configuration file (`mkdocs.yml`) assembly ==> `doc_src/book_tmpl/book_config_parts/assembly_cfg_file.sh`
+* --- #TODO test, review & publish upper me ---
+
+* 231008piu_b created a script for book configuration file (`mkdocs.yml`) assembly ==> `doc_src/book_tmpl/book_config_parts/bkcmd_assembly_cfg_file.sh`
 
 * 231008piu_a updated system overview doc with examples / references of BookLab usage
 
