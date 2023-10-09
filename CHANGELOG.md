@@ -17,6 +17,7 @@
 
 * tbd... after BTMPL release 0.2 then focus on Jupiter
 
+* tbd... try to execute book manipulation scripts from a Jupiter notebook (as part of application interface)
 
 
 
@@ -30,15 +31,16 @@
     * site_name == short_desc
     * site_author == site_author
     * copyright == copyright
+    * -#TODO THINK WHERE TO PLACE TGIS FUNCTION
 
 * tbd.. all CGI executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
-
-* tbd... move all book scripts from book template dor to CGI dir
 
 
 * wip...
 
 * --- #TODO test, review & publish upper me ---
+
+* 231009piu_e moved `bkcmd_new_book.py` from `doc_src/` to `cgi-bin/` and updated its shebang line
 
 * 231009piu_d updated `doc_src/cgi-bin/bash_model.sh` with a command to get last launched process PID
 
