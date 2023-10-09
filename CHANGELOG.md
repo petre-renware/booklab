@@ -38,9 +38,11 @@
 
 * wip...
 
-* 231009piu_a NAMING RULE of all command book manipulation scripts: __all scripts prefixed with `bkcmd_...`__
-
 * --- #TODO test, review & publish upper me ---
+
+* 231009piu_b created `cgi-bin/bash_model.sh` as model usable for bash scripts, containing reusable general code parts
+
+* 231009piu_a NAMING RULE of all command book manipulation scripts: __all scripts prefixed with `bkcmd_...`__
 
 * 231008piu_b created a script for book configuration file (`mkdocs.yml`) assembly ==> `doc_src/book_tmpl/book_config_parts/bkcmd_assembly_cfg_file.sh`
 
