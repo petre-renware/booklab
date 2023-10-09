@@ -40,6 +40,8 @@
 
 * --- #TODO test, review & publish upper me ---
 
+* 231009piu_c reviewed & closed book configuration file assembler (`doc_src/book_tmpl/book_config_parts/bkcmd_assembly_cfg_file.sh`) & cleaned book tepmplate directory and files
+
 * 231009piu_b created `cgi-bin/bash_model.sh` as model usable for bash scripts, containing reusable general code parts
 
 * 231009piu_a NAMING RULE of all command book manipulation scripts: __all scripts prefixed with `bkcmd_...`__

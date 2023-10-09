@@ -10,8 +10,7 @@
 
 
 # change directory in location where this script is located
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-cd $SCRIPT_DIR #NOTE ... comment this code if is not required to change current location to those weher script is located
+cd "$(dirname "${BASH_SOURCE[0]}")" #NOTE ... comment this code if is not required to change current location to those weher script is located
 
 
 #NOTE ... continue from here
