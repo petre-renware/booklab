@@ -13,5 +13,11 @@
 cd "$(dirname "${BASH_SOURCE[0]}")" #NOTE ... comment this code if is not required to change current location to those weher script is located
 
 
+# kill las launched process:  `kill "$!"`
+# show last process PID: `echo "$!"`
+# kill "$!"
+
+
+
 #NOTE ... continue from here
 
