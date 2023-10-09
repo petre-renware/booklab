@@ -40,6 +40,8 @@
 
 * --- #TODO test, review & publish upper me ---
 
+* 231009piu_d updated `doc_src/cgi-bin/bash_model.sh` with a command to get last launched process PID
+
 * 231009piu_c reviewed & closed book configuration file assembler (`doc_src/book_tmpl/book_config_parts/bkcmd_assembly_cfg_file.sh`) & cleaned book tepmplate directory and files
 
 * 231009piu_b created `cgi-bin/bash_model.sh` as model usable for bash scripts, containing reusable general code parts
