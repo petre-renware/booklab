@@ -31,6 +31,7 @@
     * site_name == short_desc
     * site_author == site_author
     * copyright == copyright
+    * -#TODO THINK WHERE TO PLACE TGIS FUNCTION
 
 * tbd.. all CGI executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
 
@@ -38,6 +39,8 @@
 * wip...
 
 * --- #TODO test, review & publish upper me ---
+
+* 231009piu_e moved `bkcmd_new_book.py` from `doc_src/` to `cgi-bin/` and updated its shebang line
 
 * 231009piu_d updated `doc_src/cgi-bin/bash_model.sh` with a command to get last launched process PID
 
