@@ -42,7 +42,7 @@
 
 * 231009piu_a NAMING RULE of all command book manipulation scripts: __all scripts prefixed with `bkcmd_...`__
 
-* --- #NOTE Review & publish all up --
+* --- #TODO test, review & publish upper me ---
 
 * 231008piu_b created a script for book configuration file (`mkdocs.yml`) assembly ==> `doc_src/book_tmpl/book_config_parts/bkcmd_assembly_cfg_file.sh`
 
