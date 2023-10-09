@@ -24,7 +24,7 @@ cat cfg_04_dirs_yml_section.yml >> tmp_config.yml
 
 # copy file to destination
 echo "Move assembled file to destination..."
-mv -f tmp_config.yml ../mkdocs.yml
+mv -f tmp_config.yml ../book_mkdocs.yml
 
 
 # give a message of finish & exit script
