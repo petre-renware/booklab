@@ -32,7 +32,7 @@
     * copyright == copyright
 
 * tbd.. mv all executables to `cgi-bin/` --- LOOP these:
-    * [ ] 0. check for a NAMING RULE of all command scripts: __`bkcmd_...`__ && __Python__ (for query params) seems reasonable - check to be consistent
+    * [x] 0. NAMING RULE of all command book manipulation scripts: __`bkcmd_...`__
     * [ ] 1. review TMPL ref where to identify scripts for A BOOK operations: _PRVB preview_, _DPLB assembly_, _ORGM structure_, ...
     * [ ] 2. all executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
     * [ ] 3. move to `cgi-bin/`
@@ -42,7 +42,7 @@
 
 * --- #NOTE Review & publish all up --
 
-* 231008piu_b created a script for book configuration file (`mkdocs.yml`) assembly ==> `doc_src/book_tmpl/book_config_parts/assembly_cfg_file.sh`
+* 231008piu_b created a script for book configuration file (`mkdocs.yml`) assembly ==> `doc_src/book_tmpl/book_config_parts/bkcmd_assembly_cfg_file.sh`
 
 * 231008piu_a updated system overview doc with examples / references of BookLab usage
 
