@@ -13,7 +13,7 @@
 
 
 
-## 0.2 First System Design (...wip...)
+## 0.2 Raw version of BCAT (book catalog) and BTMPL (book template) (...wip...)
 
 * tbd... after BTMPL release 0.2 then focus on Jupiter
 
