@@ -31,14 +31,15 @@
 
 * tbd.. all CGI executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
 
-* tbd... now have enough information to construct Jinja template in `book_tmpl/book_config_parts/cfg_01_head_yml_section.yml`. JSON data map:
-    * YAML site_name == JSON short_desc
-    * YAML site_author == JSON site_author
-    * YAML copyright == JSON copyright
 
 * wip...
 
 * --- #TODO test, review & publish upper me ---
+
+* 231010piu_b construct Jinja template for `book_tmpl/book_config_parts/cfg_01_head_yml_section.yml`. JSON data map:
+    * YAML site_name == JSON short_desc
+    * YAML site_author == JSON site_author
+    * YAML copyright == JSON copyright
 
 * 231010piu_a updated `data/book_catalog.json` set` "code": "BTMPL"` for template record (ID = 0)
 
