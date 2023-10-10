@@ -27,18 +27,20 @@
 
 ### 0.2.4 BTMPL Book Template 1st design (...wip...)
 
-* tbd... now have enough information in JSON data to construct `book_tnpl/book_config_parts/cfg_01_head_yml_section.yml`:
-    * site_name == short_desc
-    * site_author == site_author
-    * copyright == copyright
-    * -#TODO THINK WHERE TO PLACE TGIS FUNCTION
+* -tbd... think where to place Book YAML CONFIG BUILDING functionality: (1) assembly then (2) Jinja render
 
 * tbd.. all CGI executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
 
+* tbd... now have enough information to construct Jinja template in `book_tmpl/book_config_parts/cfg_01_head_yml_section.yml`. JSON data map:
+    * YAML site_name == JSON short_desc
+    * YAML site_author == JSON site_author
+    * YAML copyright == JSON copyright
 
 * wip...
 
 * --- #TODO test, review & publish upper me ---
+
+* 231010piu_a updated `data/book_catalog.json` set` "code": "BTMPL"` for template record (ID = 0)
 
 * 231009piu_e moved `bkcmd_new_book.py` from `doc_src/` to `cgi-bin/` and updated its shebang line
 
