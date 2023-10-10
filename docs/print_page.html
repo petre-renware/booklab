@@ -1647,6 +1647,7 @@ ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" 
 <ul>
 <li><a href="#810-dsgn-810.05a-btmpl_system_process-btmpl-sablon-carte-noua">BTMPL sablon carte noua</a><ul>
 <li><a href="#810-dsgn-810.05a-btmpl_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</a></li>
+<li><a href="#810-dsgn-810.05a-btmpl_system_process-sectiunea-head-informatii-generale-si-copyright">Sectiunea "HEAD" informatii generale si copyright</a></li>
 </ul>
 </li>
 </ul>
@@ -1671,6 +1672,17 @@ ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" 
 <p><em>baza de date a cartii</em> este baza de date cu detaliile unei carti, baza de date ce este referentiata din <a href="#810-dsgn-810.05a-btmpl_system_process-catalogul-cartilor-baza-de-date">sectiunes catalogul cartilor</a>. Continutul brut al <a href="data/books_catalog.json">bazei de date cu catalogul cartilor</a></p>
 </li>
 </ul>
+<h2 id="810-dsgn-810.05a-btmpl_system_process-sectiunea-head-informatii-generale-si-copyright">Sectiunea "HEAD" informatii generale si copyright</h2>
+<p>Aceasta sectiune contine partea de informatii generale despre caret (nume, autor) si informatia referitoare la copyright-ul cartii (ce va apare in subsolul acesteia). Aceste informatii sunt prezenta unor cimpuri Jinja ce vor fi acualizate la generarea cartii efective.</p>
+<div class="admonition info">
+<p class="admonition-title">Informatiile tip sablon Jinja din fisierul de configurare</p>
+<p>Aceste informatii sunt prezentate mai jos si de asemenea se indica si cheia din fisierul de date JSON aferente:</p>
+<ul>
+<li><code>{{ book.short_desc }}</code> == JSON short_desc</li>
+<li><code>{{ book.site_author }}</code> == JSON site_author</li>
+<li><code>{{ book.copyright }}</code> == JSON copyright</li>
+</ul>
+</div>
 <!-- #TODO continue with sections fro each item what exactly contains + efective development details -->
 
 <p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /></p>
