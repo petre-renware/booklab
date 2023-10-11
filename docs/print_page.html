@@ -1679,10 +1679,10 @@ ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" 
 <blockquote>
 <p><strong>LOCALIZARE:</strong> <code>&lt;book_directory&gt;/book_config_parts/cfg_01_head_yml_section.yml</code></p>
 </blockquote>
-<p>Aceasta sectiune contine partea de informatii generale despre caret (nume, autor) si informatia referitoare la copyright-ul cartii (ce va apare in subsolul acesteia). Aceste informatii sunt prezenta unor cimpuri Jinja ce vor fi acualizate la generarea cartii efective.</p>
+<p>Aceasta sectiune contine partea de informatii generale despre carte (nume, autor) si informatia referitoare la copyright-ul cartii (ce va apare in subsolul acesteia). Aceste informatii sunt sub forma unor cimpuri Jinja ce vor fi actualizate (rendering) la generarea cartii efective.</p>
 <div class="admonition info">
 <p class="admonition-title">Informatiile tip sablon Jinja din fisierul de configurare</p>
-<p>Aceste informatii sunt prezentate mai jos si de asemenea se indica si cheia din fisierul de date JSON aferente:</p>
+<p>Aceste informatii sunt prezentate mai jos.Se indica si cheia din fisierul de date JSON aferente:</p>
 <ul>
 <li><code>{{ book.short_desc }}</code> == JSON short_desc</li>
 <li><code>{{ book.site_author }}</code> == JSON site_author</li>
@@ -1693,24 +1693,32 @@ ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" 
 <blockquote>
 <p><strong>LOCALIZARE:</strong> <code>&lt;book_directory&gt;/book_config_parts/cfg_02_nav_yml_section.yml</code></p>
 </blockquote>
+<p>Aceasta sectiune contine elementele de navigare ce vor apare in <code>navigation bar(s) - top, left si right</code>:</p>
+<ul>
+<li>denumirile ce vor apare in meniuri si fisierele PDF</li>
+<li>link-urile catre documentele (paginile) chemate sau catre alte site-uri (URL-uri externe)</li>
+<li>ordinea de afisare a acestora atit in meniu cit si cuprinsul in documentele PDF asamblate</li>
+</ul>
 <!-- #TODO describe efective details -->
-<p>Aceasta sectiune contine...</p>
+
 <p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /></p>
 <p>-#TODO... UPCOMING with detailed information...</p>
 <h2 id="810-dsgn-810.05a-btmpl_system_process-sectiunea-extensions-extensiile-si-modulele-python">Sectiunea "EXTENSIONS" (extensiile si modulele Python)</h2>
 <blockquote>
 <p><strong>LOCALIZARE:</strong> <code>&lt;book_directory&gt;/book_config_parts/cfg_03_extension_yml_section.yml</code></p>
 </blockquote>
+<p>Aceasta sectiune contine partea de module / extensii Python necesare pentru renderingul fisierelor <code>markdown</code> (diverse extensii si add-on-uri la formatul markdoen standard).</p>
 <!-- #TODO describe efective details -->
-<p>Aceasta sectiune contine...</p>
+
 <p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /></p>
 <p>-#TODO... UPCOMING with detailed information...</p>
 <h2 id="810-dsgn-810.05a-btmpl_system_process-sectiunea-work-directories-directoarele-de-lucru">Sectiunea "WORK DIRECTORIES" (directoarele de lucru)</h2>
 <blockquote>
 <p><strong>LOCALIZARE:</strong> <code>&lt;book_directory&gt;/book_config_parts/cfg_04_dirs_yml_section.yml</code></p>
 </blockquote>
+<p>Aceasta sectiune contine numele directoarelor de lucru ale "sistemului <code>mkdocs</code>" cele mai importante fiind directorul de generare temporara (pentru verificare) si directorul de generare si asamblare finala site carte si PDF "bun de tipar"</p>
 <!-- #TODO describe efective details -->
-<p>Aceasta sectiune contine...</p>
+
 <p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /></p>
 <p>-#TODO... UPCOMING with detailed information...</p></section><section class="print-page" id="810-dsgn-810.05a-newb_system_process"><p><img align="left" alt="booklab_logo" src="pictures/booklab_logo.png" width="55" />
 <small markdown><strong>BookLab System</strong><br>
