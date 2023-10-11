@@ -36,6 +36,8 @@
 
 * --- #TODO test, review & publish upper me ---
 
+* 231011piu_a updated `/doc_src/810-DSGN/810.05a-btmpl_System_Process.md` created empty-wip heading2-sections for all book config file "parts" with intention to describe latter but to be present as doc index and visible that "exists"
+
 * 231010piu_c updated `doc_src/810-DSGN/810.05a-btmpl_System_Process.md` re Jinja codes inserted in `doc_src/book_tmpl/book_config_parts/cfg_01_head_yml_section.yml`
 
 * 231010piu_b construct Jinja template for `book_tmpl/book_config_parts/cfg_01_head_yml_section.yml`. JSON data map:
