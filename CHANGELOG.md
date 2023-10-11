@@ -27,10 +27,12 @@
 
 ### 0.2.4 BTMPL Book Template 1st design (...wip...)
 
-* -tbd... think where to place Book YAML CONFIG BUILDING functionality: (1) assembly then (2) Jinja render
-
 * tbd.. all CGI executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
 
+* tbd... create book CONFIG BUILDING as `.../book_config_parts/bkcmd_render_cfg_file.py` and call it from `bkcmd_assembly_cfg_file.sh` before moving assembled file (the shebang will be `#!../../pyenv/bin/...`
+
+* -#NOTE_1st_tbd... rename `bkk_tmpl/` directory as **`bk_<book_code>`** where `<book_code>` is `code` key from `data/books_catalog.json` 
+* tbd... `.../book_config_parts/bkcmd_render_cfg_file.py` receive as param the **`<book_code>`** obtained from directory name (see prev issue)
 
 * wip...
 
