@@ -41,6 +41,8 @@
 
 * --- #TODO test, review & publish upper me ---
 
+* 231012piu_a updated `setup/INSTALL....md` files and cleaned procedures, prepared to be transferred in system install script
+
 * 231011piu_b review, fixed and updated `doc_src/810-DSGN/810.05a-btmpl_System_Process.md`
 
 * 231011piu_a updated `/doc_src/810-DSGN/810.05a-btmpl_System_Process.md` created empty-wip heading2-sections for all book config file "parts" with intention to describe latter but to be present as doc index and visible that "exists"

@@ -1,28 +1,5 @@
-# Setup Chrome WSL
+# Setup Chrome Driver on WSL
 
-
-
-## Installing Chrome
-
-```
-sudo apt-get update
-
-sudo apt-get install -y curl unzip xvfb libxi6 libgconf-2-4 libatk-bridge2.0-0
-
-sudo apt install libnss3-dev libatk1.0-0 libatk-bridge2.0-0 libcups2 libgbm1 libpangocairo-1.0-0 libgtk-3-0
-
-
-
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
-
-```
-
--#FIXME here to clean all created files and dir(s) or work directly on tmp/ directory
-
-Check:
-
-`google-chrome --version`
 
 
 ## Installing ChromeDriver
