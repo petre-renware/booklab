@@ -636,7 +636,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-sysInit_System_Process.html" class="md-nav__link">
-        proces sysInit
+        proces Initializare sistem (sysInit)
       </a>
     </li>
   
@@ -650,7 +650,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-bcat_System_Process.html" class="md-nav__link">
-        proces BCAT
+        proces Catalog Carti (BCAT)
       </a>
     </li>
   
@@ -664,7 +664,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-btmpl_System_Process.html" class="md-nav__link">
-        proces BTMPL
+        proces Sablon Carti (TMPL)
       </a>
     </li>
   
@@ -678,7 +678,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-newb_System_Process.html" class="md-nav__link">
-        proces NEWB
+        proces Carte Noua (NEWB)
       </a>
     </li>
   
@@ -692,7 +692,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-edtm_System_Process.html" class="md-nav__link">
-        proces EDTM
+        proces Editare Carte (EDTM)
       </a>
     </li>
   
@@ -706,7 +706,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-orgm_System_Process.html" class="md-nav__link">
-        proces ORGM
+        proces Organizare Carte (ORGM)
       </a>
     </li>
   
@@ -720,7 +720,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-prvb_System_Process.html" class="md-nav__link">
-        proces PRVB
+        proces Previzualizare Carte (PRVB)
       </a>
     </li>
   
@@ -734,7 +734,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-dplb_System_Process.html" class="md-nav__link">
-        proces DPLB
+        proces Generare Carte (DPLB)
       </a>
     </li>
   
@@ -1296,7 +1296,7 @@
 <li><a href="#810-dsgn-810.02-system_landscape-introducere">Introducere</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-sysinit-initializare-sistem">sysInit Initializare sistem</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-bcat-catalogul-cartilor">BCAT catalogul cartilor</a></li>
-<li><a href="#810-dsgn-810.02-system_landscape-btmpl-sablon-carte-noua">BTMPL sablon carte noua</a></li>
+<li><a href="#810-dsgn-810.02-system_landscape-tmpl-sablon-carte-noua">TMPL sablon carte noua</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-newb-creare-carte-noua">NEWB creare carte noua</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-edtm-preluare-si-editare-continut">EDTM preluare si editare continut</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-orgm-organizare-structura-carte">ORGM organizare structura carte</a></li>
@@ -1325,7 +1325,7 @@
 
     bcat[[BCAT \n Catalogul \n cartilor]]
     bcat_db[(baza de date \n Catalog Carti \n books_catalog.json)]
-    book_tmpl[[BTMPL \n Sablon \n carte noua]]
+    book_tmpl[[TMPL \n Sablon \n carte noua]]
     newb[[NEWB \n Carte noua]]
     edtm[[EDTM \n Creare Editare \n documente]]
     orgm[[ORGM \n Organizare \n documente]]
@@ -1406,7 +1406,7 @@
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-bcat_system_process"><code>810.05a-bcat_System_Process.md</code></a></li>
 </ul>
 </div>
-<h2 id="810-dsgn-810.02-system_landscape-btmpl-sablon-carte-noua">BTMPL sablon carte noua</h2>
+<h2 id="810-dsgn-810.02-system_landscape-tmpl-sablon-carte-noua">TMPL sablon carte noua</h2>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
 <p>Aceasta componenta refera <strong>sablonul</strong> implicit de creare a unei carti noi (si singurul in versiunea 1 a aplicatiei). Fisierele asociate acestui sablon se afla in subdirectorul <code>book_tmpl/</code>.</p>
 <div class="admonition info">
@@ -1641,11 +1641,11 @@ ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" 
 <small markdown><strong>BookLab System</strong><br>
 <em>(c) 2023 RENware Software Systems</em>
 </small><br><br></p>
-<h1 id="810-dsgn-810.05a-btmpl_system_process-btmpl-sablon-carte-noua">BTMPL sablon carte noua</h1>
+<h1 id="810-dsgn-810.05a-btmpl_system_process-tmpl-sablon-carte-noua">TMPL sablon carte noua</h1>
 <p><strong><em>Cuprins:</em></strong></p>
 <div class="toc">
 <ul>
-<li><a href="#810-dsgn-810.05a-btmpl_system_process-btmpl-sablon-carte-noua">BTMPL sablon carte noua</a><ul>
+<li><a href="#810-dsgn-810.05a-btmpl_system_process-tmpl-sablon-carte-noua">TMPL sablon carte noua</a><ul>
 <li><a href="#810-dsgn-810.05a-btmpl_system_process-sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</a></li>
 <li><a href="#810-dsgn-810.05a-btmpl_system_process-sectiunea-head-informatii-generale-si-copyright">Sectiunea "HEAD" (informatii generale si copyright)</a></li>
 <li><a href="#810-dsgn-810.05a-btmpl_system_process-sectiunea-navigation-strutura-meniu-navigare">Sectiunea "NAVIGATION" (strutura meniu navigare)</a></li>
@@ -1675,6 +1675,15 @@ ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" 
 <p><em>baza de date a cartii</em> este baza de date cu detaliile unei carti, baza de date ce este referentiata din <a href="#810-dsgn-810.05a-btmpl_system_process-catalogul-cartilor-baza-de-date">sectiunes catalogul cartilor</a>. Continutul brut al <a href="data/books_catalog.json">bazei de date cu catalogul cartilor</a></p>
 </li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Localizarea modulului</p>
+<p>Acest modul este localizat in directorul <code>book_&lt;cod_carte&gt;</code> numele acestuia construit in felul urmator:</p>
+<ul>
+<li>prefixul <code>book_</code> este un sir de caractere constant</li>
+<li>sufixul <code>&lt;cod_carte&gt;</code> este reprezentat de atributul (cheia) <code>"code"</code> din baza de date de carti (<code>data/books_catalog.json</code>) iar <strong>case-ul = majuscule, minuscule</strong> NU CONTEAZA - se va considera (coverti) intodeauna la minuscule (lowercase)</li>
+</ul>
+<p>Acest director va fi numit generic <strong><code>&lt;book_directory&gt;</code></strong> in materiale / documentatie.</p>
+</div>
 <h2 id="810-dsgn-810.05a-btmpl_system_process-sectiunea-head-informatii-generale-si-copyright">Sectiunea "HEAD" (informatii generale si copyright)</h2>
 <blockquote>
 <p><strong>LOCALIZARE:</strong> <code>&lt;book_directory&gt;/book_config_parts/cfg_01_head_yml_section.yml</code></p>

@@ -13,9 +13,9 @@
 
 
 
-## 0.2 Raw version of BCAT (book catalog) and BTMPL (book template) (...wip...)
+## 0.2 Raw version of BCAT (book catalog) and TMPL (book template) (...wip...)
 
-* tbd... after BTMPL release 0.2 then focus on Jupiter
+* tbd... after TMPL release 0.2 then focus on Jupiter
 
 * tbd... try to execute book manipulation scripts from a Jupiter notebook (as part of application interface)
 
@@ -25,21 +25,21 @@
 
 
 
-### 0.2.4 BTMPL Book Template 1st design (...wip...)
+### 0.2.4 TMPL Book Template 1st design (...wip...)
 
 * tbd.. all CGI executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
 
 * tbd... create book CONFIG BUILDING as `.../book_config_parts/bkcmd_render_cfg_file.py` and call it from `bkcmd_assembly_cfg_file.sh` before moving assembled file (the shebang will be `#!../../pyenv/bin/...`
 
-* tbd... `.../book_config_parts/bkcmd_render_cfg_file.py` receive **`<book_code>`** as param obtained from DIRECTORY NAME (see issue #NOTE_1st_tbd) and cvt to SMALL CASE
-
-* -#NOTE_1st_tbd... update `data/books_catalog.json`, changed the code for template book as `tmpl` (instead of `BTMPL`) ___#TODO!!!-checked_OK_NO_DEPENDENCIES_exists
+* tbd... `.../book_config_parts/bkcmd_render_cfg_file.py` receive **`<book_code>`** as param obtained from DIRECTORY NAME (see issue `231012piu_b`) and cvt to SMALL CASE
 
 
 
 * wip...
 
 * --- #TODO test, review & publish upper me ---
+
+* 231012piu_b update `data/books_catalog.json`, changed the code for template book as `tmpl` (instead of `BTMPL`)
 
 * 231012piu_a updated `setup/INSTALL....md` files and cleaned procedures, prepared to be transferred in system install script
 
@@ -54,7 +54,7 @@
     * YAML `{{ book.site_author }}` == JSON site_author
     * YAML `{{ book.copyright }}` == JSON copyright
 
-* 231010piu_a updated `data/book_catalog.json` set` "code": "BTMPL"` for template record (ID = 0)
+* 231010piu_a updated `data/book_catalog.json` set` "code": "TMPL"` for template record (ID = 0)
 
 * 231009piu_e moved `bkcmd_new_book.py` from `doc_src/` to `cgi-bin/` and updated its shebang line
 
@@ -121,7 +121,7 @@
 
 * 230915piu_b more action:
     * [x] BCAT DSGN doc `810.05a-bcat_System_Process.md`- MOVE book template section && 810-DSGN/Landscape mv BCAT in its doc: __exists a dedicated module == BTMPL__
-    * [x] BTMPL DSGN DOC `doc_src/810-DSGN/810.05a-btmpl_System_Process.md` updated with info from BCAT
+    * [x] TMPL DSGN DOC `doc_src/810-DSGN/810.05a-btmpl_System_Process.md` updated with info from BCAT
     * [x] in Landscape, components DIAGRAM doc put BCAT under dynamic server
 
 * 230915piu_a `bcat.md` template solve catalog table problem because was spitted in 2 different sections by Jinja statements

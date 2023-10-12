@@ -2,7 +2,7 @@
     "data": [
         {
             "id": 0,
-            "code": "BTMPL",
+            "code": "tmpl",
             "short_desc": "Numele cartii (si al site-ului daca se publica in internet)",
             "description": "Denumirea lunga a cartii asa cum va apare pe coperta",
             "copyright": "Copyright - Informatia ref detinatorul drepturilor de autor",
@@ -13,3 +13,7 @@
         }
     ]
 }
+
+
+
+
