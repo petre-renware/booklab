@@ -35,9 +35,11 @@
 
 * wip...
 
+* ... 231013piu_b updated `<PROJECT_ROOT>/810-DSGN/810.05a-btmpl_System_Process.md` ref book template commands (`bkcmd_...` files) and directories
+
 * --- #TODO test, review & publish upper me ---
 
-* 231013piu_a moved `<WEB_ROOT>/book_tmpl/book_config_parts/bkcmd_assembly_cfg_file.sh` to `<WEB_ROOT>/book_tmpl/bkcmd_assembly_cfg_file.sh`
+* 231013piu_a moved `<PROJECT_ROOT>/book_tmpl/book_config_parts/bkcmd_assembly_cfg_file.sh` to `<PROJECT_ROOT>/book_tmpl/bkcmd_assembly_cfg_file.sh`
 
 * 231012piu_b update `data/books_catalog.json`, changed the code for template book as `tmpl` (instead of `BTMPL`)
 
