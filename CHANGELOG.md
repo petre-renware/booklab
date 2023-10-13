@@ -29,15 +29,20 @@
 
 * tbd.. all CGI executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
 
-* tbd... create book CONFIG BUILDING as `.../book_config_parts/bkcmd_render_cfg_file.py` and call it from `bkcmd_assembly_cfg_file.sh` before moving assembled file (the shebang will be `#!../../pyenv/bin/...`) with ___param obtained from DIRECTORY NAME___ (see issue `231012piu_b`) and cvt to SMALL CASE
+* tbd... finish to update `<PROJECT_ROOT>/810-DSGN/810.05a-btmpl_System_Process.md` ref book template commands (`bkcmd_...` files) and directories
+
+
+* tbd... create `bkcmd_render_cfg_file.py` and call it from `bkcmd_assembly_cfg_file.sh` before moving assembled file (the shebang will be `#!../../pyenv/bin/...`) with ___param obtained from DIRECTORY NAME___ (see issue `231012piu_b`) and cvt to SMALL CASE
 
 
 
 * wip...
 
+* 231013piu_b partial updated `<PROJECT_ROOT>/810-DSGN/810.05a-btmpl_System_Process.md` ref book template commands (`bkcmd_...` files) and directories
+
 * --- #TODO test, review & publish upper me ---
 
-* 231013piu_a moved `<WEB_ROOT>/book_tmpl/book_config_parts/bkcmd_assembly_cfg_file.sh` to `<WEB_ROOT>/book_tmpl/bkcmd_assembly_cfg_file.sh`
+* 231013piu_a moved `<PROJECT_ROOT>/book_tmpl/book_config_parts/bkcmd_assembly_cfg_file.sh` to `<PROJECT_ROOT>/book_tmpl/bkcmd_assembly_cfg_file.sh`
 
 * 231012piu_b update `data/books_catalog.json`, changed the code for template book as `tmpl` (instead of `BTMPL`)
 
