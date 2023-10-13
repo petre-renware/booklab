@@ -9,7 +9,7 @@
 
 
 # change directory in location where this script is located
-cd "$(dirname "${BASH_SOURCE[0]}")"
+cd "$(dirname "${BASH_SOURCE[0]}")/book_config_parts"
 
 
 # assembly files
@@ -29,4 +29,11 @@ mv -f tmp_config.yml ../book_mkdocs.yml
 
 # give a message of finish & exit script
 echo "Finished book configuration file assembly..."
+
+
+# #TODO here you can call the python script to Jinja render the resulted YAML file
+cd .. # do not call rendering Python script before changing directory one level up
+
+
+
 
