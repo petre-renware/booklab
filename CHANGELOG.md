@@ -29,9 +29,7 @@
 
 * tbd.. all CGI executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
 
-* tbd... create book CONFIG BUILDING as `.../book_config_parts/bkcmd_render_cfg_file.py` and call it from `bkcmd_assembly_cfg_file.sh` before moving assembled file (the shebang will be `#!../../pyenv/bin/...`)
-
-* tbd... `.../book_config_parts/bkcmd_render_cfg_file.py` receive **`<book_code>`** as param obtained from DIRECTORY NAME (see issue `231012piu_b`) and cvt to SMALL CASE
+* tbd... create book CONFIG BUILDING as `.../book_config_parts/bkcmd_render_cfg_file.py` and call it from `bkcmd_assembly_cfg_file.sh` before moving assembled file (the shebang will be `#!../../pyenv/bin/...`) with ___param obtained from DIRECTORY NAME___ (see issue `231012piu_b`) and cvt to SMALL CASE
 
 
 
@@ -39,7 +37,7 @@
 
 * --- #TODO test, review & publish upper me ---
 
-* 230113piu_a moved `<WEB_ROOT>/book_tmpl/book_config_parts/bkcmd_assembly_cfg_file.sh` to `<WEB_ROOT>/book_tmpl/bkcmd_assembly_cfg_file.sh`
+* 231013piu_a moved `<WEB_ROOT>/book_tmpl/book_config_parts/bkcmd_assembly_cfg_file.sh` to `<WEB_ROOT>/book_tmpl/bkcmd_assembly_cfg_file.sh`
 
 * 231012piu_b update `data/books_catalog.json`, changed the code for template book as `tmpl` (instead of `BTMPL`)
 
