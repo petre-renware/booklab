@@ -346,6 +346,22 @@ div.download-btn {
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#scripturile-executabile-pentru-carte">
+    Scripturile executabile pentru carte
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#directoarele-de-lucru">
+    Directoarele de lucru
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fisierul-de-configurare-a-cartii">
+    Fisierul de configurare a cartii
+  </a>
+<nav aria-label="Fisierul de configurare a cartii" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sectiunea-head-informatii-generale-si-copyright">
     Sectiunea "HEAD" (informatii generale si copyright)
   </a>
@@ -363,6 +379,14 @@ div.download-btn {
 <li class="md-nav__item">
 <a class="md-nav__link" href="#sectiunea-work-directories-directoarele-de-lucru">
     Sectiunea "WORK DIRECTORIES" (directoarele de lucru)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alte-fisiere">
+    Alte fisiere
   </a>
 </li>
 </ul>
@@ -464,6 +488,22 @@ div.download-btn {
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#scripturile-executabile-pentru-carte">
+    Scripturile executabile pentru carte
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#directoarele-de-lucru">
+    Directoarele de lucru
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fisierul-de-configurare-a-cartii">
+    Fisierul de configurare a cartii
+  </a>
+<nav aria-label="Fisierul de configurare a cartii" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sectiunea-head-informatii-generale-si-copyright">
     Sectiunea "HEAD" (informatii generale si copyright)
   </a>
@@ -485,6 +525,14 @@ div.download-btn {
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alte-fisiere">
+    Alte fisiere
+  </a>
+</li>
+</ul>
+</nav>
 </div>
 </div>
 </div>
@@ -500,10 +548,16 @@ div.download-btn {
 <ul>
 <li><a href="#tmpl-sablon-carte-noua">TMPL sablon carte noua</a><ul>
 <li><a href="#sablonul-pentru-o-carte-noua">Sablonul pentru o carte noua</a></li>
+<li><a href="#scripturile-executabile-pentru-carte">Scripturile executabile pentru carte</a></li>
+<li><a href="#directoarele-de-lucru">Directoarele de lucru</a></li>
+<li><a href="#fisierul-de-configurare-a-cartii">Fisierul de configurare a cartii</a><ul>
 <li><a href="#sectiunea-head-informatii-generale-si-copyright">Sectiunea "HEAD" (informatii generale si copyright)</a></li>
 <li><a href="#sectiunea-navigation-strutura-meniu-navigare">Sectiunea "NAVIGATION" (strutura meniu navigare)</a></li>
 <li><a href="#sectiunea-extensions-extensiile-si-modulele-python">Sectiunea "EXTENSIONS" (extensiile si modulele Python)</a></li>
 <li><a href="#sectiunea-work-directories-directoarele-de-lucru">Sectiunea "WORK DIRECTORIES" (directoarele de lucru)</a></li>
+</ul>
+</li>
+<li><a href="#alte-fisiere">Alte fisiere</a></li>
 </ul>
 </li>
 </ul>
@@ -525,7 +579,7 @@ div.download-btn {
 </ul>
 </li>
 <li>
-<p><em>baza de date a cartii</em> este baza de date cu detaliile unei carti, baza de date ce este referentiata din <a href="#catalogul-cartilor-baza-de-date">sectiunes catalogul cartilor</a>. Continutul brut al <a href="../data/books_catalog.json">bazei de date cu catalogul cartilor</a></p>
+<p><em>baza de date a cartii</em> este baza de date cu detaliile unei carti, baza de date ce este referentiata din <a href="#catalogul-cartilor-baza-de-date">sectiunea catalogul cartilor</a>. Continutul brut al <a href="../data/books_catalog.json">bazei de date cu catalogul cartilor</a></p>
 </li>
 </ul>
 <div class="admonition info">
@@ -537,7 +591,47 @@ div.download-btn {
 </ul>
 <p>Acest director va fi numit generic <strong><code>&lt;book_directory&gt;</code></strong> in materiale / documentatie.</p>
 </div>
-<h2 id="sectiunea-head-informatii-generale-si-copyright">Sectiunea "HEAD" (informatii generale si copyright)</h2>
+<h2 id="scripturile-executabile-pentru-carte">Scripturile executabile pentru carte</h2>
+<p>Aceasta sectiune enumera si descrie sumar fisierele ce contin scripturile (comenzile) executabile aferente unei carti. Aceste comenzi sunt aceleasi pentru orice carte (motiv pentru care se gasesc in sablonul de carte).</p>
+<p>Fiecare script (comanda) poate primi ca paramtru de intrare (si daca il primeste este <em>pozitional si primul</em>) <strong>identificatorul cartii sub forma atributului / cheii <code>code</code></strong> din baza de date cu carti (<code>&lt;PROJECT_ROOT&gt;/data/books_catalog.json</code>).</p>
+<p>Fisierele ce contin comenzi executabile sunt <em>localizate in radacinta sablonului</em> si au <em>numele</em> de forma <strong><code>bkcmd_...</code></strong> iar <em>extensia</em> corespunzatoare limbajului de programare in care sunt scrise (py, sh, etc). Toate aceste fisiere subt direct executabile (<code>chmod +x</code>) respecta conventia <code>Bash Linux</code> referitoare la <em>prima linie respectiv "shebang" (<code>#!</code>)</em>.</p>
+<p>Lista fisierelor cu comenzi executabile (listare in ordine alfanumerica):</p>
+<dl>
+<dt><strong><code>bkcmd_assembly_cfg_file.sh</code></strong></dt>
+<dd>asambleaza fisierul de configurare a cartii din partile componente, <a href="#fisierul-de-configurare-a-cartii">vezi sectiunea "Fisierul de configurare a cartii"</a></dd>
+<dt><strong><code>bkcmd_gen_final_book.py</code></strong></dt>
+<dd>-#TODO...</dd>
+<dt><strong><code>bkcmd_start_book_preview.py</code></strong></dt>
+<dd>-#TODO...</dd>
+<dt>tbd... <strong><code>bkcmd_start_book_preview.sh</code></strong></dt>
+<dd>-#TODO...</dd>
+<dt><strong><code>#TODO another script here...</code></strong></dt>
+<dd>-#TODO...</dd>
+</dl>
+<!-- #FIXME - drop image when finish -->
+<p><img alt="wip page" src="../pictures/under_maintenance.png" width="200">
+-#TODO... TO BE CONTINUED...</img></p>
+<h2 id="directoarele-de-lucru">Directoarele de lucru</h2>
+<p>Sablonul cartii contine urmatoarele directoare (ordine alfanumerica):</p>
+<ul>
+<li>
+<p><strong><code>&lt;directory_root&gt;</code></strong> - contine <a href="#scripturile-executabile-pentru-carte">scripturile executabile aferente cartii</a> si <a href="#fisierul-de-configurare-a-cartii">fisierul de configurare a acesteia</a></p>
+</li>
+<li>
+<p><strong><code>book_config_parts</code></strong> - contine parti (sectiuni) din fisierul de configurare a cartii ce permit o mai usoara modificare a sectiunilor - acestea vor fi asamblate intr-un singur fisier (<code>book_mkdocs.yml</code>)</p>
+</li>
+<li>
+<p><strong><code>my_book</code></strong> - va contine cartea final generata sub forma de site static utilizabil ca atare (prin copiere in directorul "<code>www root</code>" al serverului HTTP)</p>
+</li>
+<li>
+<p><strong><code>preview_book</code></strong> - contine generari temporare ale cartiii asamblate si este utilizat in scop de <em>pre-vizualizare</em> a cartii in timpul lucrului la aceasta - ca optiune, directorul este monitorizat de serverul HTTP local de prevzualizare astfel incit modificarile in "sursa cartii" sa fie prezentate live</p>
+</li>
+<li>
+<p><strong><code>raw_source_docs</code></strong> - contine fisierele "sursa" a cartii (in principiu fisiere Markdown si Jupiter Notebook)</p>
+</li>
+</ul>
+<h2 id="fisierul-de-configurare-a-cartii">Fisierul de configurare a cartii</h2>
+<h3 id="sectiunea-head-informatii-generale-si-copyright">Sectiunea "HEAD" (informatii generale si copyright)</h3>
 <blockquote>
 <p><strong>LOCALIZARE:</strong> <code>&lt;book_directory&gt;/book_config_parts/cfg_01_head_yml_section.yml</code></p>
 </blockquote>
@@ -551,7 +645,7 @@ div.download-btn {
 <li><code>{{ book.copyright }}</code> == JSON copyright</li>
 </ul>
 </div>
-<h2 id="sectiunea-navigation-strutura-meniu-navigare">Sectiunea "NAVIGATION" (strutura meniu navigare)</h2>
+<h3 id="sectiunea-navigation-strutura-meniu-navigare">Sectiunea "NAVIGATION" (strutura meniu navigare)</h3>
 <blockquote>
 <p><strong>LOCALIZARE:</strong> <code>&lt;book_directory&gt;/book_config_parts/cfg_02_nav_yml_section.yml</code></p>
 </blockquote>
@@ -564,7 +658,7 @@ div.download-btn {
 <!-- #TODO describe efective details -->
 <p><img alt="wip page" src="../pictures/under_maintenance.png" width="200"/></p>
 <p>-#TODO... UPCOMING with detailed information...</p>
-<h2 id="sectiunea-extensions-extensiile-si-modulele-python">Sectiunea "EXTENSIONS" (extensiile si modulele Python)</h2>
+<h3 id="sectiunea-extensions-extensiile-si-modulele-python">Sectiunea "EXTENSIONS" (extensiile si modulele Python)</h3>
 <blockquote>
 <p><strong>LOCALIZARE:</strong> <code>&lt;book_directory&gt;/book_config_parts/cfg_03_extension_yml_section.yml</code></p>
 </blockquote>
@@ -572,7 +666,7 @@ div.download-btn {
 <!-- #TODO describe efective details -->
 <p><img alt="wip page" src="../pictures/under_maintenance.png" width="200"/></p>
 <p>-#TODO... UPCOMING with detailed information...</p>
-<h2 id="sectiunea-work-directories-directoarele-de-lucru">Sectiunea "WORK DIRECTORIES" (directoarele de lucru)</h2>
+<h3 id="sectiunea-work-directories-directoarele-de-lucru">Sectiunea "WORK DIRECTORIES" (directoarele de lucru)</h3>
 <blockquote>
 <p><strong>LOCALIZARE:</strong> <code>&lt;book_directory&gt;/book_config_parts/cfg_04_dirs_yml_section.yml</code></p>
 </blockquote>
@@ -580,12 +674,20 @@ div.download-btn {
 <!-- #TODO describe efective details -->
 <p><img alt="wip page" src="../pictures/under_maintenance.png" width="200"/></p>
 <p>-#TODO... UPCOMING with detailed information...</p>
+<h2 id="alte-fisiere">Alte fisiere</h2>
+<p>In directorul ce contine sablonul cartii se mai gasesc urmatoarele fisiere:</p>
+<ul>
+<li>CNAME ...#TODO</li>
+<li>...#TODO</li>
+</ul>
+<p><img alt="wip page" src="../pictures/under_maintenance.png" width="200"/></p>
+<p>-#TODO... UPCOMING...</p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 14, 2023</span>
 </small>
 </div>
 </article>
