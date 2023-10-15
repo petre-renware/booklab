@@ -24,7 +24,7 @@ splitted_my_crt_dir = my_crt_dir.split(os.sep) # split directory path in its par
 book_directory_name = splitted_my_crt_dir[-1] # get last list entry as being the book name where intend to obtain the book code (book dir name format: book_<code>)
 print(f"SPLITED PATH: {splitted_my_crt_dir}") #FIXME drop me - debug purpose
 print(f"BOOK NAME: {book_directory_name}") #FIXME drop me - debug purpose
-
+#TODO ----- # book_directory_name IS OK - not retain the <code> from it / FORMAT IS:  "book_<code>"
 
 
 
