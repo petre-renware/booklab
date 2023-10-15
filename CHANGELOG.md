@@ -32,13 +32,15 @@
     * let `markdown` attribute only where really need markdown rendering
     * try `bootstrap for mkdocs` extension  for "nice" buttons or material icons
 
-* tbd... create `bkcmd_render_cfg_file.py` and call it from `bkcmd_assembly_cfg_file.sh` before moving assembled file (the shebang will be `#!../../pyenv/bin/...`) with ___param obtained from DIRECTORY NAME___ (see issue `231012piu_b`) and cvt to SMALL CASE
+
 
 
 
 * wip...
 
 * --- #TODO test, review & publish upper me ---
+
+* -#TODO ...wip__231015piu_b created `bkcmd_render_cfg_file.py` and call it from `bkcmd_assembly_cfg_file.sh` before moving assembled file (the shebang will be `#!../pyenv/bin/python3`) with ___param obtained from DIRECTORY NAME___ (see issue `231012piu_b`) and cvt to SMALL CASE
 
 * 231015piu_a review and, update and close for future maintenance `810-DSGN/810.05a-btmpl_System_Process.md`
 
