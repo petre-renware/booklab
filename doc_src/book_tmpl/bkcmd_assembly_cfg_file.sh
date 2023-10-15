@@ -11,7 +11,7 @@
 # change directory in location where this script is located
 cd "$(dirname "${BASH_SOURCE[0]}")/book_config_parts"
 
-# ****************************** FROM HERE YOU ARE IN `book_tmpl/book_config_parts/` directory
+# ****************************** FROM HERE YOU ARE IN `book_<book_code>/book_config_parts/` directory
 
 # assembly files
 echo "Start to assembly configuration file..."
@@ -32,7 +32,7 @@ mv -f tmp_config.yml ../book_mkdocs.yml #TODO_#FIXME_just_simple_NOT_REQUIRED_in
 echo "Finished book configuration file assembly..."
 cd ..
 
-# ****************************** FROM HERE YOU ARE BACK IN `book_tmpl/` directory
+# ****************************** FROM HERE YOU ARE BACK IN `book_<book_code>/` directory
 
 # here you can call the python script to Jinja render the resulted YAML file
 echo "Start book configuration file rendering"
