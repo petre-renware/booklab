@@ -2,7 +2,7 @@
 
 #=============================================================
 # Script to render `book_mkdocs.yml` file
-#   - this code is normally called from assembling script (bkcmd_assembly_cfg_file.sh)
+#   - this code SHOULD be called from assembling script (bkcmd_assembly_cfg_file.sh)
 #   - this code is NOT DESIGNED TO BE CALLED directly by http request
 #-----------------------------------------
 # Author: Petre Iordanescu, (c) RENware Softwre Sytems
@@ -19,12 +19,14 @@ my_name = __name__
 my_crt_dir = os.getcwd() # normally this should be the site root directory (in production `docs/` & in dev `doc_src/`)
 
 # obtain book code from current directory name
-print(f"DIRECTOR: {my_crt_dir}") #FIXME drop me - debug purpose
+print(f"MY_CRT_DIR: {my_crt_dir}") #FIXME drop me - debug purpose
+print(f"MY_NAME: {my_name}") #FIXME drop me - debug purpose
 splitted_my_crt_dir = my_crt_dir.split(os.sep) # split directory path in its parts
 book_directory_name = splitted_my_crt_dir[-1] # get last list entry as being the book name where intend to obtain the book code (book dir name format: book_<code>)
 print(f"SPLITED PATH: {splitted_my_crt_dir}") #FIXME drop me - debug purpose
 print(f"BOOK NAME: {book_directory_name}") #FIXME drop me - debug purpose
-#TODO ----- # book_directory_name IS OK - not retain the <code> from it / FORMAT IS:  "book_<code>"
+#TODO ----- #... continue when rdy | PAY ATTN, ONLY CALL IT FROM bkcmd_assembly_....sh
+# #TODO - eventual redenumeste acest script la ceva care sa induca ideea de neapelabil DIRECT
 
 
 
