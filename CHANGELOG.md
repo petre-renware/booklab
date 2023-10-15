@@ -28,7 +28,9 @@
 ### 0.2.4 TMPL Book Template 1st design (...wip...)
 
 * tbd.. all CGI executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
-
+* tbd... update `bcat.md`, clean the `table HTML` section:
+    * let `markdown` attribute only where really need markdown rendering
+    * try `bootstrap for mkdocs` extension  for "nice" buttons or material icons
 
 * tbd... create `bkcmd_render_cfg_file.py` and call it from `bkcmd_assembly_cfg_file.sh` before moving assembled file (the shebang will be `#!../../pyenv/bin/...`) with ___param obtained from DIRECTORY NAME___ (see issue `231012piu_b`) and cvt to SMALL CASE
 
@@ -38,7 +40,9 @@
 
 * --- #TODO test, review & publish upper me ---
 
-* 231014piu_a updated `<PROJECT_ROOT>/810-DSGN/810.05a-btmpl_System_Process.md` ref book template commands (`bkcmd_...` files) and directories
+* 231015piu_a review and, update and close for future maintenance `810-DSGN/810.05a-btmpl_System_Process.md`
+
+* 231014piu_a updated `810-DSGN/810.05a-btmpl_System_Process.md` ref book template commands (`bkcmd_...` files) and directories
 
 * 231013piu_a moved `<PROJECT_ROOT>/book_tmpl/book_config_parts/bkcmd_assembly_cfg_file.sh` to `<PROJECT_ROOT>/book_tmpl/bkcmd_assembly_cfg_file.sh`
 
@@ -46,11 +50,11 @@
 
 * 231012piu_a updated `setup/INSTALL....md` files and cleaned procedures, prepared to be transferred in system install script
 
-* 231011piu_b review, fixed and updated `doc_src/810-DSGN/810.05a-btmpl_System_Process.md`
+* 231011piu_b review, fixed and updated `810-DSGN/810.05a-btmpl_System_Process.md`
 
-* 231011piu_a updated `/doc_src/810-DSGN/810.05a-btmpl_System_Process.md` created empty-wip heading2-sections for all book config file "parts" with intention to describe latter but to be present as doc index and visible that "exists"
+* 231011piu_a updated `810-DSGN/810.05a-btmpl_System_Process.md` created empty-wip heading2-sections for all book config file "parts" with intention to describe latter but to be present as doc index and visible that "exists"
 
-* 231010piu_c updated `doc_src/810-DSGN/810.05a-btmpl_System_Process.md` ref Jinja codes inserted in `doc_src/book_tmpl/book_config_parts/cfg_01_head_yml_section.yml`
+* 231010piu_c updated `810-DSGN/810.05a-btmpl_System_Process.md` ref Jinja codes inserted in `doc_src/book_tmpl/book_config_parts/cfg_01_head_yml_section.yml`
 
 * 231010piu_b construct Jinja template for `book_tmpl/book_config_parts/cfg_01_head_yml_section.yml`. JSON data map:
     * YAML `{{ book.short_desc }}` == JSON short_desc

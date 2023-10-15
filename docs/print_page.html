@@ -1692,24 +1692,26 @@ ca sa fie accesibila la requesturi din acesta catre el insusi fara a "tranzita" 
 </div>
 <h2 id="810-dsgn-810.05a-btmpl_system_process-scripturile-executabile-pentru-carte">Scripturile executabile pentru carte</h2>
 <p>Aceasta sectiune enumera si descrie sumar fisierele ce contin scripturile (comenzile) executabile aferente unei carti. Aceste comenzi sunt aceleasi pentru orice carte (motiv pentru care se gasesc in sablonul de carte).</p>
-<p>Fiecare script (comanda) poate primi ca paramtru de intrare (si daca il primeste este <em>pozitional si primul</em>) <strong>identificatorul cartii sub forma atributului / cheii <code>code</code></strong> din baza de date cu carti (<code>&lt;PROJECT_ROOT&gt;/data/books_catalog.json</code>).</p>
-<p>Fisierele ce contin comenzi executabile sunt <em>localizate in radacinta sablonului</em> si au <em>numele</em> de forma <strong><code>bkcmd_...</code></strong> iar <em>extensia</em> corespunzatoare limbajului de programare in care sunt scrise (py, sh, etc). Toate aceste fisiere subt direct executabile (<code>chmod +x</code>) respecta conventia <code>Bash Linux</code> referitoare la <em>prima linie respectiv "shebang" (<code>#!</code>)</em>.</p>
+<p>Fiecare script (comanda) poate primi ca parametru de intrare (si daca il primeste este <em>pozitional si primul</em>) <strong>identificatorul cartii sub forma atributului / cheii <code>code</code></strong> din baza de date cu carti (<code>&lt;PROJECT_ROOT&gt;/data/books_catalog.json</code>).</p>
+<p>Fisierele ce contin comenzi executabile sunt <em>localizate in radacinta sablonului</em> si au <em>numele</em> de forma <strong><code>bkcmd_...</code></strong> iar <em>extensia</em> corespunzatoare limbajului de programare in care sunt scrise (py, sh, etc). Toate aceste fisiere subt direct executabile (<code>chmod +x</code>) si respecta conventia <code>Bash Linux</code> referitoare la <em>prima linie respectiv "shebang" (<code>#!</code>)</em>.</p>
 <p>Lista fisierelor cu comenzi executabile (listare in ordine alfanumerica):</p>
 <dl>
 <dt><strong><code>bkcmd_assembly_cfg_file.sh</code></strong></dt>
 <dd>asambleaza fisierul de configurare a cartii din partile componente, <a href="#810-dsgn-810.05a-btmpl_system_process-fisierul-de-configurare-a-cartii">vezi sectiunea "Fisierul de configurare a cartii"</a></dd>
 <dt><strong><code>bkcmd_gen_final_book.py</code></strong></dt>
-<dd>-#TODO...</dd>
+<dd>wip...tbd... <!---#TODO...--></dd>
 <dt><strong><code>bkcmd_start_book_preview.py</code></strong></dt>
-<dd>-#TODO...</dd>
-<dt>tbd... <strong><code>bkcmd_start_book_preview.sh</code></strong></dt>
-<dd>-#TODO...</dd>
-<dt><strong><code>#TODO another script here...</code></strong></dt>
-<dd>-#TODO...</dd>
+<dd>wip...tbd... <!---#TODO...--></dd>
+<dt><strong><code>bkcmd_start_book_preview.sh</code></strong></dt>
+<dd>wip...tbd... <!---#TODO...--></dd>
 </dl>
+<!--
+**`#TODO another script here...`**
+: -#TODO...
+-->
+
 <!-- #FIXME - drop image when finish -->
-<p><img alt="wip page" src="pictures/under_maintenance.png" width="200" />
--#TODO... TO BE CONTINUED...</p>
+<p><img alt="wip page" src="pictures/under_maintenance.png" width="200" /> ...UPCOMING new scripts...</p>
 <h2 id="810-dsgn-810.05a-btmpl_system_process-directoarele-de-lucru">Directoarele de lucru</h2>
 <p>Sablonul cartii contine urmatoarele directoare (ordine alfanumerica):</p>
 <ul>
