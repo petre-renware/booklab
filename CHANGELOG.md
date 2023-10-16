@@ -27,12 +27,16 @@
 
 ### 0.2.4 TMPL Book Template 1st design (...wip...)
 
-* tbd.. all CGI executables must accept as parameter the **Book IDENTIFIER** (_except NEWB corresponding operation_)
 * tbd... update `bcat.md`, clean the `table HTML` section:
     * let `markdown` attribute only where really need markdown rendering
     * try `bootstrap for mkdocs` extension  for "nice" buttons or material icons
 
+* tbd... finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml`)
 
+* tbd... update `810-DSGN/810.02-System_Landscape.md`:
+    * redefine actual architecture as containing components-modules (NOT processes) - _new section "Componentele si modulele sistemului"_
+    * rename in `mkdocs.yml` all "proces" by "modul"
+    * design processes as separated chapter with USER LEVEL processes (more diagrams and simple description of objective) - _new section "Procesele sistemului"_
 
 
 
