@@ -1,10 +1,9 @@
-#!../pyenv/bin/python3
+#!pyenv/bin/python3
 
 #=============================================================
 # Script to render `book_mkdocs.yml` file
-#   - this code SHOULD BE CALLED FROM ASSEMBLING SCRIPT (bkcmd_assembly_cfg_file.sh) which is called from HTTP server <wwww_root>
-#       - alternative, there is no problem if is called from a book directory, BUT IS NOT RECOMMENDED
-#       - keep in server <www_root> which is the only path guaranteed for any HTTP server with CGI option running
+#   - this code SHOULD BE CALLED from HTTP server <wwww_root>
+#       #NOTE this requirement reason: to guarantee right Python interpretor usage and because <www_root> is the only directory guranteed by any HTTP server)
 #   - this code is NOT DESIGNED TO BE CALLED directly by http request
 #-----------------------------------------
 # Author: Petre Iordanescu, (c) RENware Softwre Sytems
@@ -19,19 +18,23 @@ import jinja2
 
 my_name = __file__ # use `__file__` attribute which guarantees the full pth-and-name of current python file (ATTN if is in a library !)
 my_crt_dir = os.getcwd() # normally this should be the site root directory (in production `docs/` & in dev `doc_src/`)
+my_file_real_path = os.path.dirname(os.path.realpath(my_name))
+
+
 
 # obtain book code from current directory name
-print(f"MY_CRT_DIR: {my_crt_dir}") #FIXME drop me - debug purpose
-print(f"MY_NAME: {my_name}") #FIXME drop me - debug purpose
-splitted_my_crt_dir = my_crt_dir.split(os.sep) # split directory path in its parts
-book_directory_name = splitted_my_crt_dir[-1] # get last list entry as being the book name where intend to obtain the book code (book dir name format: book_<code>)
-print(f"SPLITED PATH: {splitted_my_crt_dir}") #FIXME drop me - debug purpose
-print(f"BOOK NAME: {book_directory_name}") #FIXME drop me - debug purpose
-
-# #TODO ----- #... continue when rdy | PAY ATTN, ONLY CALL IT FROM bkcmd_assembly_....sh
-# #TODO - eventual redenumeste acest script la ceva care sa induca ideea de neapelabil DIRECT
+splitted_my_real_dir = my_file_real_path.split(os.sep) # split directory path in its parts
+book_directory_name = splitted_my_real_dir[-1] # get last list entry as being the book name where intend to obtain the book code (book dir name format: book_<code>)
+book_database_code = book_directory_name[5:] # keep only characters after `book_`, sufix name of directory ((book dir name format: book_<code>))
 
 
+# print(f"MY_REAL_DIR: {my_file_real_path}") #FIXME drop me - debug purpose
+# print(f"MY_NAME: {my_name}") #FIXME drop me - debug purpose
+# print(f"SPLITED PATH: {splitted_my_real_dir}") #FIXME drop me - debug purpose
+# print(f"BOOK NAME: {book_directory_name}") #FIXME drop me - debug purpose
+print(f"BOOK CODE: {book_database_code}") #FIXME drop me - debug purpose
+
+#TODO - continue from here...
 
 '''
 # construct database full absolute path file name and open it
