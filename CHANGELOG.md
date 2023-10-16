@@ -38,13 +38,12 @@
 
 * wip...
 
-* ...231016piu_a update `810-DSGN/810.02-System_Landscape.md`:
-    * redefine actual architecture as containing components-modules (NOT processes) - _new section "Componentele si modulele sistemului"_
-    * rename in `mkdocs.yml` all "proces" by "modul"
-    * design processes as separated chapter with USER LEVEL processes (more diagrams and simple description of objective) - _new section "Procesele sistemului"_
-
-
 * --- #TODO test, review & publish upper me ---
+
+* 231016piu_a update `810-DSGN/810.02-System_Landscape.md`:
+    * [x] redefine actual architecture as containing components-modules (NOT processes) - _new section "Componentele si modulele sistemului"_
+    * [x] rename in `mkdocs.yml` all "proces" by "modul"
+    * [x] design processes as separated chapter with USER LEVEL processes (more diagrams and simple description of objective) - _new section "Procesele sistemului"_
 
 * 231015piu_b created first sketch `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml`)
 
