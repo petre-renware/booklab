@@ -40,7 +40,7 @@
 
 * --- #TODO test, review & publish upper me ---
 
-* -#TODO...wip_231015piu_b created `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml`)
+* 231015piu_b created first sketch `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml`)
 
 * 231015piu_a review and, update and close for future maintenance `810-DSGN/810.05a-btmpl_System_Process.md`
 
