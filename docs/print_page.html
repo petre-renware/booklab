@@ -622,7 +622,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.02-System_Landscape.html" class="md-nav__link">
-        Arhitectura
+        Arhitectura sistemului
       </a>
     </li>
   
@@ -636,7 +636,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-sysInit_System_Process.html" class="md-nav__link">
-        proces Initializare sistem (sysInit)
+        modul Initializare sistem (sysInit)
       </a>
     </li>
   
@@ -650,7 +650,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-bcat_System_Process.html" class="md-nav__link">
-        proces Catalog Carti (BCAT)
+        modul Catalog Carti (BCAT)
       </a>
     </li>
   
@@ -664,7 +664,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-btmpl_System_Process.html" class="md-nav__link">
-        proces Sablon Carti (TMPL)
+        modul Sablon Carti (TMPL)
       </a>
     </li>
   
@@ -678,7 +678,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-newb_System_Process.html" class="md-nav__link">
-        proces Carte Noua (NEWB)
+        modul Carte Noua (NEWB)
       </a>
     </li>
   
@@ -692,7 +692,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-edtm_System_Process.html" class="md-nav__link">
-        proces Editare Carte (EDTM)
+        modul Editare Carte (EDTM)
       </a>
     </li>
   
@@ -706,7 +706,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-orgm_System_Process.html" class="md-nav__link">
-        proces Organizare Carte (ORGM)
+        modul Organizare Carte (ORGM)
       </a>
     </li>
   
@@ -720,7 +720,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-prvb_System_Process.html" class="md-nav__link">
-        proces Previzualizare Carte (PRVB)
+        modul Previzualizare Carte (PRVB)
       </a>
     </li>
   
@@ -734,7 +734,7 @@
   
     <li class="md-nav__item">
       <a href="810-DSGN/810.05a-dplb_System_Process.html" class="md-nav__link">
-        proces Generare Carte (DPLB)
+        modul Generare Carte (DPLB)
       </a>
     </li>
   
@@ -1294,6 +1294,11 @@
 <ul>
 <li><a href="#810-dsgn-810.02-system_landscape-arhitectura-sistemului">Arhitectura sistemului</a><ul>
 <li><a href="#810-dsgn-810.02-system_landscape-introducere">Introducere</a></li>
+<li><a href="#810-dsgn-810.02-system_landscape-procesele-sistemului">Procesele sistemului</a><ul>
+<li><a href="#810-dsgn-810.02-system_landscape-corelarea-proceselor-cu-componentele-sistemului">Corelarea proceselor cu componentele sistemului</a></li>
+</ul>
+</li>
+<li><a href="#810-dsgn-810.02-system_landscape-componentele-si-modulele-sistemului">Componentele si modulele sistemului</a><ul>
 <li><a href="#810-dsgn-810.02-system_landscape-sysinit-initializare-sistem">sysInit Initializare sistem</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-bcat-catalogul-cartilor">BCAT catalogul cartilor</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-tmpl-sablon-carte-noua">TMPL sablon carte noua</a></li>
@@ -1303,6 +1308,8 @@
 <li><a href="#810-dsgn-810.02-system_landscape-prvb-previzualizare-si-testare-carte">PRVB previzualizare si testare carte</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-dplb-asamblare-publicare-carte">DPLB asamblare publicare carte</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-hlps-help-asistenta-si-manuale">HLPS help asistenta si manuale</a></li>
+</ul>
+</li>
 <li><a href="#810-dsgn-810.02-system_landscape-organizarea-aplicatiei-software">Organizarea aplicatiei software</a></li>
 <li><a href="#810-dsgn-810.02-system_landscape-note">Note</a></li>
 </ul>
@@ -1311,7 +1318,109 @@
 </div>
 <hr />
 <h2 id="810-dsgn-810.02-system_landscape-introducere">Introducere</h2>
-<p>Arhitectura sistemului pleaca de la structura de basa a acestuia, structura redata "pe scurt" mai jos. Diagrama putin mai elaborata dar cu descrierea componentelor se gaseste in <a href="#help-130.02-overview-structura-si-componenta-booklab">documentul <code>130.02-Overview.md</code>, sectiunea "Structura si componenta BookLab"</a> ce <em>se recomanda a fi citit</em> inainte de a incepe studiul acestuia, pentru o mai buna intelegere a lui.</p>
+<div class="admonition note">
+<p class="admonition-title">Arhitectura sistemului prezinta in sectiunile urmatoare</p>
+<ul>
+<li>descrierea proceselelor sistemului</li>
+<li>descrierea componentelor sistemului (numite de multe ori module cu intelegere sinonima)</li>
+<li>o scurta decsriere referitoare la organizarea aplicatiei software</li>
+</ul>
+</div>
+<h2 id="810-dsgn-810.02-system_landscape-procesele-sistemului">Procesele sistemului</h2>
+<div class="admonition note">
+<p class="admonition-title">Procesele sistemului</p>
+<ul>
+<li>Procese administrative:<ul>
+<li>Carte noua (<em>cod-name</em>: <code>NEWB</code>)</li>
+<li>Organizare carte (<em>cod-name</em>: <code>ORGM</code>)</li>
+<li>Asamblare carte (<em>cod-name</em>: <code>DPLB</code>)</li>
+</ul>
+</li>
+<li>Procese de realizare:<ul>
+<li>Editare carte (<em>cod-name</em>: <code>EDTM</code>)</li>
+<li>Previzualizare carte (<em>cod-name</em>: <code>PRVB</code>)</li>
+</ul>
+</li>
+</ul>
+</div>
+<p><em>Procesele administrative</em> permit crearea si organizarea unei carti iar <em>procesele de realizare</em> permit realizare / editarea unei carti.</p>
+<blockquote>
+<p>NOTA: O descriere sumara a proceselelor sistemului se gaseste si in <a href="#help-130.02-overview-structura-si-componenta-booklab">documentul <code>130.02-Overview.md</code>, sectiunea "Structura si componenta BookLab"</a>.</p>
+</blockquote>
+<h3 id="810-dsgn-810.02-system_landscape-corelarea-proceselor-cu-componentele-sistemului">Corelarea proceselor cu componentele sistemului</h3>
+<p>In continuare se prezinta o matrice privind utilizarea componentelor (modulelor) sistemului de catre procesele enumerate anterior:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Componenta</th>
+<th style="text-align: center;">Carte<br>noua</th>
+<th style="text-align: center;">Organizare<br>carte</th>
+<th style="text-align: center;">Asamblare<br>carte</th>
+<th style="text-align: center;">Editare<br>carte</th>
+<th style="text-align: center;">Previzualizare<br>carte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>BCAT</code></td>
+<td style="text-align: center;">&#10004;</td>
+<td style="text-align: center;">&#10004;</td>
+<td style="text-align: center;">&#10004;</td>
+<td style="text-align: center;">&#10004;</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>TMPL</code></td>
+<td style="text-align: center;">&#10004;</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>NEWB</code></td>
+<td style="text-align: center;">&#10004;</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>EDTM</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">&#10004;</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ORGM</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">&#10004;</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PRVB</code></td>
+<td style="text-align: center;">&#10004;</td>
+<td style="text-align: center;">&#10004;</td>
+<td style="text-align: center;">&#10004;</td>
+<td style="text-align: center;">&#10004;</td>
+<td style="text-align: center;">&#10004;</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DPLB</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">&#10004;</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="810-dsgn-810.02-system_landscape-componentele-si-modulele-sistemului">Componentele si modulele sistemului</h2>
+<p>Diagrama urmatoare reda modulele / componentele sistemului. Acestea sunt folosite de catre <a href="#810-dsgn-810.02-system_landscape-procesele-sistemului">procesele acestuia</a>. (Diagrama putin mai elaborata dar cu descrierea componentelor se gaseste in <a href="#help-130.02-overview-structura-si-componenta-booklab">documentul <code>130.02-Overview.md</code>, sectiunea "Structura si componenta BookLab"</a> ce <em>se recomanda a fi citit</em> inainte de a incepe studiul acestuia, pentru o mai buna intelegere a lui.)</p>
 <pre class="mermaid"><code>graph TD
     bklab([BookLab])
     bklab_static([staticbl \n STATIC BookLab \n server])
@@ -1367,7 +1476,7 @@
 <li>In general (daca nu specifica in clar altfel) <code>code-name</code> al componentelor este acelasi atit pentru SERVER cit si pentru CLIENT. Diferentierea intre acestea se intimpla deoarece raspund servere diferite pentru porturile aferente (80 client si 4111 server). Astfel pe ruta "normala" a unei componente, de ex ptr <em>NEWB</em>: <code>http://booklab.../newb</code> va raspunde intii componenta CLIENT (prezenta sub forma unui <code>index.html</code> in directorul <code>docs/newb/</code>).</li>
 </ul>
 </div>
-<h2 id="810-dsgn-810.02-system_landscape-sysinit-initializare-sistem">sysInit Initializare sistem</h2>
+<h3 id="810-dsgn-810.02-system_landscape-sysinit-initializare-sistem">sysInit Initializare sistem</h3>
 <p>Pornirea sistemului comporta doua mari componente "on top", si anume:</p>
 <ul>
 <li>
@@ -1387,7 +1496,7 @@
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-sysinit_system_process"><code>810.05a-sysInit_System_Process.md</code></a></li>
 </ul>
 </div>
-<h2 id="810-dsgn-810.02-system_landscape-bcat-catalogul-cartilor">BCAT catalogul cartilor</h2>
+<h3 id="810-dsgn-810.02-system_landscape-bcat-catalogul-cartilor">BCAT catalogul cartilor</h3>
 <p>Acest modul este responsabil de catalogul (lista) cartilor si de sablonul de creare a unei carti. Astfel el contine urmatoarele elemente:</p>
 <ul>
 <li>
@@ -1406,7 +1515,7 @@
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-bcat_system_process"><code>810.05a-bcat_System_Process.md</code></a></li>
 </ul>
 </div>
-<h2 id="810-dsgn-810.02-system_landscape-tmpl-sablon-carte-noua">TMPL sablon carte noua</h2>
+<h3 id="810-dsgn-810.02-system_landscape-tmpl-sablon-carte-noua">TMPL sablon carte noua</h3>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
 <p>Aceasta componenta refera <strong>sablonul</strong> implicit de creare a unei carti noi (si singurul in versiunea 1 a aplicatiei). Fisierele asociate acestui sablon se afla in subdirectorul <code>book_tmpl/</code>.</p>
 <div class="admonition info">
@@ -1418,7 +1527,7 @@
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-btmpl_system_process">810.05a-btmpl_System_Process.md</a></li>
 </ul>
 </div>
-<h2 id="810-dsgn-810.02-system_landscape-newb-creare-carte-noua">NEWB creare carte noua</h2>
+<h3 id="810-dsgn-810.02-system_landscape-newb-creare-carte-noua">NEWB creare carte noua</h3>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
@@ -1429,7 +1538,7 @@
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-newb_system_process">810.05a-newb_System_Process.md</a></li>
 </ul>
 </div>
-<h2 id="810-dsgn-810.02-system_landscape-edtm-preluare-si-editare-continut">EDTM preluare si editare continut</h2>
+<h3 id="810-dsgn-810.02-system_landscape-edtm-preluare-si-editare-continut">EDTM preluare si editare continut</h3>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
@@ -1440,7 +1549,7 @@
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-edtm_system_process"><code>810.05a-edtm_System_Process.md</code></a></li>
 </ul>
 </div>
-<h2 id="810-dsgn-810.02-system_landscape-orgm-organizare-structura-carte">ORGM organizare structura carte</h2>
+<h3 id="810-dsgn-810.02-system_landscape-orgm-organizare-structura-carte">ORGM organizare structura carte</h3>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
@@ -1451,7 +1560,7 @@
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-orgm_system_process"><code>810.05a-orgm_System_Process.md</code></a></li>
 </ul>
 </div>
-<h2 id="810-dsgn-810.02-system_landscape-prvb-previzualizare-si-testare-carte">PRVB previzualizare si testare carte</h2>
+<h3 id="810-dsgn-810.02-system_landscape-prvb-previzualizare-si-testare-carte">PRVB previzualizare si testare carte</h3>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
@@ -1463,7 +1572,7 @@
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-prvb_system_process"><code>810.05a-prvb_System_Process.md</code></a></li>
 </ul>
 </div>
-<h2 id="810-dsgn-810.02-system_landscape-dplb-asamblare-publicare-carte">DPLB asamblare publicare carte</h2>
+<h3 id="810-dsgn-810.02-system_landscape-dplb-asamblare-publicare-carte">DPLB asamblare publicare carte</h3>
 <p>-#TODO... <img alt="wip doc" src="pictures/under_maintenance.png" width="200" /></p>
 <div class="admonition info">
 <p class="admonition-title">parametrii</p>
@@ -1474,7 +1583,7 @@
 <li><em>Document descriere detaliata</em>: <a href="#810-dsgn-810.05a-dplb_system_process"><code>810.05a-dplb_System_Process.md</code></a></li>
 </ul>
 </div>
-<h2 id="810-dsgn-810.02-system_landscape-hlps-help-asistenta-si-manuale">HLPS help asistenta si manuale</h2>
+<h3 id="810-dsgn-810.02-system_landscape-hlps-help-asistenta-si-manuale">HLPS help asistenta si manuale</h3>
 <p>Manuale aplicatiei sunt de doua feluri (categorii) majore:</p>
 <ul>
 <li>
