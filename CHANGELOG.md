@@ -19,21 +19,17 @@
 
 * tbd... try to execute book manipulation scripts from a Jupiter notebook (as part of application interface)
 
-
-
-
-
-
-
-### 0.2.4 TMPL Book Template 1st design (...wip...)
-
 * tbd... update `bcat.md`, clean the `table HTML` section:
     * let `markdown` attribute only where really need markdown rendering
     * try `bootstrap for mkdocs` extension  for "nice" buttons or material icons
 
+
+
+
+
+### 0.2.4 TMPL Book Template new commands (`bkcmd_...`)
+
 * tbd... finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml`)
-
-
 
 
 * wip...
