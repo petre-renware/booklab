@@ -36,6 +36,12 @@
 
 * --- #TODO test, review & publish upper me ---
 
+* 231017piu_a updated `cgi-bin/python_model.py` with variables regarding *real module file path*, now it has:
+    * **my_name**           - ref module FILE name, ie the module name as usable in `import ...` statements
+    * **my_module_name**    - ref simple module name, in ost cases used to see if "you are `__main__`"
+    * **my_crt_dir**        - normally this should be the site root directory (in production `docs/` & in dev `doc_src/`)
+    * **my_file_real_path** - which is the real path of python module (where electively stored)
+
 * 231016piu_a update `810-DSGN/810.02-System_Landscape.md`:
     * [x] redefine actual architecture as containing components-modules (NOT processes) - _new section "Componentele si modulele sistemului"_
     * [x] rename in `mkdocs.yml` all "proces" by "modul"

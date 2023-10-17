@@ -21,7 +21,6 @@ my_crt_dir = os.getcwd() # normally this should be the site root directory (in p
 my_file_real_path = os.path.dirname(os.path.realpath(my_name))
 
 
-
 # obtain book code from current directory name
 splitted_my_real_dir = my_file_real_path.split(os.sep) # split directory path in its parts
 book_directory_name = splitted_my_real_dir[-1] # get last list entry as being the book name where intend to obtain the book code (book dir name format: book_<code>)
