@@ -27,12 +27,11 @@
 
 
 
-### 0.2.4 TMPL Book Template new commands (`bkcmd_...`)
+### 0.2.4 TMPL Book Template new commands (`bkcmd_...`) (#TODO-close-me-after-231017piu_a)
 
-* tbd... finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml`)
-
-
-* wip...
+* #NOTE_wip... 231017piu_a finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml`)
+    * #NOTE in TEST lines 40 - 41,
+    * #NOTE see comment line 44 how get data by query
 
 * --- #TODO test, review & publish upper me ---
 
