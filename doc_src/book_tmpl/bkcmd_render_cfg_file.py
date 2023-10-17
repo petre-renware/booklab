@@ -33,13 +33,12 @@ book_database_code = book_directory_name[5:] # keep only characters after `book_
 # print(f"BOOK NAME: {book_directory_name}") #FIXME drop me - debug purpose
 print(f"BOOK CODE: {book_database_code}") #FIXME drop me - debug purpose
 
-#TODO - continue from here... & test the if find database...
-
 
 # construct database full absolute path file name and open it
 dbs_file = os.path.join(my_crt_dir, "data/books_catalog.json")
 bcat_dbs = pysondb.db.getDb(dbs_file)
 
+#TODO - CONNECTION to DBS OK-PASS, so continue from here...
 '''#TODO_#NOTE code to get from JSON only the record you want:
 getBy({“key_you_want_to_test”: value you want to test for”})
 '''
