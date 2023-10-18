@@ -31,7 +31,7 @@
 
 #### RELEASE NOTES
 
-Features:
+***Features:***
 
 * assembly book configuration - command `bkcmd_assembly_cfg_file.sh`
 * render book configuration - command `bkcmd_render_cfg_file.py`
