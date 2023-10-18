@@ -36,14 +36,15 @@
 * assembly book configuration - command `bkcmd_assembly_cfg_file.sh`
 * render book configuration - command `bkcmd_render_cfg_file.py`
 
-#### CHANGELOG
+#### CHANGE records
 
 * #NOTE_wip... 231018piu_a finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml`)
     * [x] 231017 connection to JSON database tested - PASS
     * [x] 231018 get the book code already obtained in variable `book_database_code`
     * [ ] render the file `book_mkdocs.yml` with information obtained in `bcat_records`
     * [ ] clean up the code ref all debugging code (kkep as commented for furthe references)
-    * where to find help: `https://pysondb.github.io/pysonDB/get`
+    * help for query dbs: `https://pysondb.github.io/pysonDB/get`
+    * help for BCAT dropdw with commands: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
 
 * --- #TODO test, review & publish upper me ---
 
