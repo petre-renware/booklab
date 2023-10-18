@@ -31,7 +31,9 @@
 
 * #NOTE_wip... 231018piu_a finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml`)
     * [x] 231017 connection to JSON database tested - PASS
-    * get the book code already obtained in variable `book_database_code` #NOTE see comment line 43 how get data by query
+    * [x] 231018 get the book code already obtained in variable `book_database_code`
+    * [ ] render the file `book_mkdocs.yml` with information obtained in `bcat_records`
+    * [ ] clean up the code ref all debugging code (kkep as commented for furthe references)
     * where to find help: `https://pysondb.github.io/pysonDB/get`
 
 * --- #TODO test, review & publish upper me ---
