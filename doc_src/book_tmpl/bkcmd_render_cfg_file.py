@@ -62,9 +62,14 @@ with open(os.path.join(templates_root + "book_mkdocs.yml")) as f: # read file an
     c = f.read()
 bcat_jinja_tmpl = jinja2.Template(c) # load read file content as template
 content = bcat_jinja_tmpl.render(bcat_data=bcat_records)
+
 #FIXME here need to save back the rendered string (`content`) in the same file as the read one, so
 #FIXME_CHANGE_WR_FILE_BACK_INSTEAD_PRINT ... write(content) --> `book_mkdocs.yml`
 #FIXME_replace_with...write(content) --> `book_mkdocs.yml`... print(content)
+
+#FIXME ...RESULTING...
+with open(os.path.join(templates_root + "book_mkdocs.yml")) as f: # read file and load its content as template
+    c = f.write()
 
 '''
 
