@@ -34,7 +34,7 @@
 * assembly book configuration - command `bkcmd_assembly_cfg_file.sh`
 * render book configuration - command `bkcmd_render_cfg_file.py`
 
-**CHANGELOG**
+**CHANGELOG records**
 
 * #NOTE_wip... 231018piu_a finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml`)
     * [x] 231017 connection to JSON database tested - PASS
@@ -129,7 +129,7 @@
 
 
 
-### 0.2.3 HELP Update BCAT documentation (wip...)
+### 0.2.3 HELP Update BCAT documentation (230917 h11:00)
 
 * 230917piu_a updated `mkdocs.yml` make entry for `help/880.30-BCAT_usage.md`
 
