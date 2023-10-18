@@ -44,7 +44,7 @@
     * [ ] render the file `book_mkdocs.yml` with information obtained in `bcat_records`
     * [ ] clean up the code ref all debugging code (kkep as commented for furthe references)
     * help for query dbs: `https://pysondb.github.io/pysonDB/get`
-    * help for BCAT dropdw with commands: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
+    * help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
 
 * --- #TODO test, review & publish upper me ---
 
