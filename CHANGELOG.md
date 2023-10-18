@@ -27,13 +27,12 @@
 
 
 
-### 0.2.4 (#TODO-close-me-after-231017piu_a)
+### 0.2.4 TMPL Book Template (#TODO-close-me-after-231017piu_a)
 
 **FEATURES**
 
-* TMPL Book Template
-    * assembly book configuration - command `bkcmd_assembly_cfg_file.sh`
-    * render book configuration - command `bkcmd_render_cfg_file.py`
+* assembly book configuration - command `bkcmd_assembly_cfg_file.sh`
+* render book configuration - command `bkcmd_render_cfg_file.py`
 
 **CHANGELOG**
 
