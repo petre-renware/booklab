@@ -27,7 +27,16 @@
 
 
 
-### 0.2.4 TMPL Book Template new commands (`bkcmd_...`) (#TODO-close-me-after-231017piu_a)
+### 0.2.4 TMPL Book Template (#TODO-close-me-after-231017piu_a)
+
+#### RELEASE NOTES
+
+***Features:***
+
+* assembly book configuration - command `bkcmd_assembly_cfg_file.sh`
+* render book configuration - command `bkcmd_render_cfg_file.py`
+
+#### CHANGELOG
 
 * #NOTE_wip... 231018piu_a finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml`)
     * [x] 231017 connection to JSON database tested - PASS
@@ -96,9 +105,13 @@
     * published this updated version
 
 * 231005piu_b updated `doc_src/` and `doc_src/cgi-bin/` made in git all `*.py, *.sh` files as EXECUTABLES
+
 * 231005piu_a updated `doc_src/make_env.sh` with commented commands to make `*.py, *.sh` files as _Linux executables_ (for `CGI` purposes)
+
 * 230918piu_c adjust CGI python model file, rename to `cgi-bin/python_model.py` and set how get b00k_catalog.json database and query parameters
+
 * 230918piu_b review & update `cgi-bin/__model.py`. Publish
+
 * 230918piu_a python template for CGI purposes ==> `cgi-bin/__model.py` basically containing:
     * write _HTTP header_ for different MIME types
     * accessing _ENV useful variables_
@@ -122,7 +135,7 @@
 
 
 
-### 0.2.3 HELP Update BCAT documentation (wip...)
+### 0.2.3 HELP Update BCAT documentation (230917 h11:00)
 
 * 230917piu_a updated `mkdocs.yml` make entry for `help/880.30-BCAT_usage.md`
 
