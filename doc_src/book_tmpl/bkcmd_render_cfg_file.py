@@ -68,7 +68,7 @@ content = bcat_jinja_tmpl.render(bcat_data=bcat_records)
 #FIXME_replace_with...write(content) --> `book_mkdocs.yml`... print(content)
 
 #FIXME ...RESULTING...
-with open(os.path.join(templates_root + "book_mkdocs.yml")) as f: # read file and load its content as template
+with open(os.path.join(templates_root + "book_mkdocs.yml"), "w") as f: # (over)write file and load its content as template
     c = f.write()
 
 '''
