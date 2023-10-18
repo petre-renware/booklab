@@ -27,7 +27,14 @@
 
 
 
-### 0.2.4 TMPL Book Template new commands (`bkcmd_...`) (#TODO-close-me-after-231017piu_a)
+### 0.2.4 TMPL Book Template assembly and render book configuration (#TODO-close-me-after-231017piu_a)
+
+**FEATURES**
+
+* assembly book configuration - command `bkcmd_assembly_cfg_file.sh`
+* render book configuration - command `bkcmd_render_cfg_file.py`
+
+**CHANGELOG**
 
 * #NOTE_wip... 231018piu_a finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml`)
     * [x] 231017 connection to JSON database tested - PASS
