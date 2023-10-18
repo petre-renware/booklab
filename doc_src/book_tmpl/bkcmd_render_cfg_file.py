@@ -42,6 +42,8 @@ print(f"DBS CONNECTION: {dbs_con}") #FIXME drop me - debug purpose
 # to get from JSON only the record you want:
 search_criteria = dict(code = book_database_code)
 bcat_records = dbs_con.getByQuery(search_criteria) # will return a list with all recorsd but allways keep only the first one as `code` key is UNIQUE
+if not (type(bcat_records) == type(list())):
+    bcat_records = list().append(bcat_records) # make it list if is not (possible case for 1 record)
 if len(bcat_records) < 1: # if no records found then this ERROR is because somebody manually-edited the JSON dbs or changed the book directory name
     print(f"***ERROR (module bkcmd_render_cfg_file.py) no record found for key={book_database_code}. This ERROR could happen because somebody manually-edited the JSON dbs or changed the book directory name")
     exit(1)
@@ -55,16 +57,20 @@ print(f"QUERY RESULT: {bcat_records}") #FIXME drop me - debug purpose
 
 #TODO - continue from here...
 '''
-bcat_records = dbs_con.getAll()
-if not (type(bcat_records) == type(list())):
-    bcat_records = list().append(bcat_records) # make it list if is not (possible case for 1 record)
-
-templates_root = os.path.join(my_crt_dir, "")
-with open(os.path.join(templates_root + "bcat/bcat.html")) as f: # read file and load its content as template
+templates_root = os.path.join(my_file_real_path, "") # directory where the file is that need to be renderend (book_mkdocs.yml)
+with open(os.path.join(templates_root + "book_mkdocs.yml")) as f: # read file and load its content as template #NOTE here maybe consider original file as *.yml.tmpl and saved one as *.yml (also chg in ...assembly...sh)
     c = f.read()
 bcat_jinja_tmpl = jinja2.Template(c) # load read file content as template
 content = bcat_jinja_tmpl.render(bcat_data=bcat_records)
-print(content)
+
+#FIXME here need to save back the rendered string (`content`) in the same file as the read one, so
+#FIXME_CHANGE_WR_FILE_BACK_INSTEAD_PRINT ... write(content) --> `book_mkdocs.yml`
+#FIXME_replace_with...write(content) --> `book_mkdocs.yml`... print(content)
+
+#FIXME ...RESULTING... #NOTE here maybe consider original file as *.yml.tmpl and saved one as *.yml (also chg in ...assembly...sh) 
+with open(os.path.join(templates_root + "book_mkdocs.yml"), "w") as f: # overwrite file and save rendered content
+    f.write(content)
+    f.close()
 
 '''
 
