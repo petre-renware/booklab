@@ -69,7 +69,8 @@ content = bcat_jinja_tmpl.render(bcat_data=bcat_records)
 
 #FIXME ...RESULTING...
 with open(os.path.join(templates_root + "book_mkdocs.yml"), "w") as f: # (over)write file and load its content as template
-    c = f.write()
+    f.write(c)
+    f.close()
 
 '''
 
