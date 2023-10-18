@@ -10,7 +10,6 @@
 #=============================================================
 
 
-
 import os
 import pysondb
 import jinja2
@@ -36,15 +35,27 @@ print(f"BOOK CODE: {book_database_code}") #FIXME drop me - debug purpose
 
 # construct database full absolute path file name and open it
 dbs_file = os.path.join(my_crt_dir, "data/books_catalog.json")
-bcat_dbs = pysondb.db.getDb(dbs_file)
+dbs_con = pysondb.db.getDb(dbs_file)
+print(f"DBS CONNECTION: {dbs_con}") #FIXME drop me - debug purpose
 
-#TODO - CONNECTION to DBS OK-PASS, so continue from here...
-'''#TODO_#NOTE code to get from JSON only the record you want:
-getBy({“key_you_want_to_test”: value you want to test for”})
-'''
 
+# to get from JSON only the record you want:
+search_criteria = dict(code = book_database_code)
+bcat_records = dbs_con.getByQuery(search_criteria) # will return a list with all recorsd but allways keep only the first one as `code` key is UNIQUE
+if len(bcat_records) < 1: # if no records found then this ERROR is because somebody manually-edited the JSON dbs or changed the book directory name
+    print(f"***ERROR (module bkcmd_render_cfg_file.py) no record found for key={book_database_code}. This ERROR could happen because somebody manually-edited the JSON dbs or changed the book directory name")
+    exit(1)
+bcat_records = bcat_records[0] # keep only the first one as `code` key is UNIQUE
+print(f"QUERY RESULT: {bcat_records}") #FIXME drop me - debug purpose
+
+
+
+
+
+
+#TODO - continue from here...
 '''
-bcat_records = bcat_dbs.getAll()
+bcat_records = dbs_con.getAll()
 if not (type(bcat_records) == type(list())):
     bcat_records = list().append(bcat_records) # make it list if is not (possible case for 1 record)
 
