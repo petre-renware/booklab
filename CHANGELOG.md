@@ -27,7 +27,7 @@
 
 
 
-### 0.2.4 TMPL Book Template assembly and render book configuration (#TODO-close-me-after-231017piu_a)
+### 0.2.4 (#TODO-close-me-after-231017piu_a)
 
 **FEATURES**
 
