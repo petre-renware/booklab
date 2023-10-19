@@ -52,6 +52,9 @@
     * help for query dbs: `https://pysondb.github.io/pysonDB/get`
     * help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
 
+-#FIXME AI GRESIT LOCUL DE UPDATE A DOC DESIGN `...TMPL...` ref descriere 2 pasi assembly - ai pus in ___"Sectiunea "HEAD" (informatii generale si copyright)"___ DAR NU ACOLO TREBUIA. ERA CORECT ANTERIOR si updateul trebuia mai la inceputul fisierelui unde descrii in general asamblarea fisierului de config... (cauta unde... si schimba la loc in sectiunea modificata ... before `231019piu_b` baga un temp new branch din acel commit !!!). Multumesc.
+
+
 * --- #TODO test, review & publish upper me ---
 
 * 231019piu_b update doc `810.05a-btmpl_System_Process.md` ref command `bkcmd_render_cfg_file.py`
