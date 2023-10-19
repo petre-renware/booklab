@@ -38,10 +38,12 @@
 
 #### CHANGE records
 
-* #NOTE_wip... 231018piu_a finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml`)
+* #NOTE_wip... 231018piu_a finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml.tmpl`)
     * [x] 231017 connection to JSON database tested - PASS
     * [x] 231018 get the book code already obtained in variable `book_database_code`
-    * [ ] render the file `book_mkdocs.yml` with information obtained in variables: `bcat_records` and rendered in `content`
+    * [x] 231019_a render the file `book_mkdocs.yml.tmpl` with information obtained in variables: `bcat_records` and rendered in `content`
+    * [ ] write out rendered file as `book_mkdocs.yml`
+    * [ ] elete `book_mkdocs.yml.tmpl` file
     * [ ] clean up the code ref all debugging code (keep as commented for further references)
     * help for query dbs: `https://pysondb.github.io/pysonDB/get`
     * help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
