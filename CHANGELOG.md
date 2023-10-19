@@ -45,6 +45,7 @@
     * [x] 231018 get the book code already obtained in variable `book_database_code`
     * [x] 231019_a render the file `book_mkdocs.yml.tmpl` with information obtained in variables: `bcat_records` and rendered in `content`
     * [x] 231019_b write out rendered file as `book_mkdocs.yml`
+    * [x] update TMPL tech documentation - DONE, see issue `231019piu_b`
     * [ ] delete `book_mkdocs.yml.tmpl` file
     * [ ] clean up the code ref all debugging code (keep as commented for further references) and work config files `book_mkdocs.yml.*`
     * help for query dbs: `https://pysondb.github.io/pysonDB/get`
