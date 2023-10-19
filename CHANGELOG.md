@@ -46,8 +46,9 @@
     * [x] 231019_a render the file `book_mkdocs.yml.tmpl` with information obtained in variables: `bcat_records` and rendered in `content`
     * [x] 231019_b write out rendered file as `book_mkdocs.yml`
     * [x] update TMPL tech documentation - DONE, see issue `231019piu_b`
-    * [ ] delete `book_mkdocs.yml.tmpl` file
+    * [ ] delete `book_mkdocs.yml.tmpl` file ??? REALLY WANT TO DO IT HERE ???
     * [ ] clean up the code ref all debugging code (keep as commented for further references) and work config files `book_mkdocs.yml.*`
+    * [ ] see if needed to upd 810-DSGN landscape doc, section "TMPL sablon carte noua"
     * help for query dbs: `https://pysondb.github.io/pysonDB/get`
     * help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
 
