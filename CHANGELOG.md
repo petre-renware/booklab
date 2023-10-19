@@ -41,12 +41,14 @@
 * #NOTE_wip... 231018piu_a finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml`)
     * [x] 231017 connection to JSON database tested - PASS
     * [x] 231018 get the book code already obtained in variable `book_database_code`
-    * [ ] render the file `book_mkdocs.yml` with information obtained in `bcat_records`
-    * [ ] clean up the code ref all debugging code (kkep as commented for furthe references)
+    * [ ] render the file `book_mkdocs.yml` with information obtained in variables: `bcat_records` and rendered in `content`
+    * [ ] clean up the code ref all debugging code (keep as commented for further references)
     * help for query dbs: `https://pysondb.github.io/pysonDB/get`
     * help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
 
 * --- #TODO test, review & publish upper me ---
+
+* 231019piu_a updated `bkcmd_assembly_cfg_file.sh` to generate assembled file with extension `.tmpl` to differentiate of final YAML rendered file
 
 * 231017piu_a updated `cgi-bin/python_model.py` with variables regarding *real module file path*, now it has:
     * **my_name**           - ref module FILE name, ie the module name as usable in `import ...` statements

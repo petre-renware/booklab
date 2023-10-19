@@ -15,17 +15,17 @@ cd "$(dirname "${BASH_SOURCE[0]}")/book_config_parts"
 
 # assembly files
 echo "Start to assembly configuration file..."
-rm tmp_config.yml
-touch tmp_config.yml
-cat cfg_01_head_yml_section.yml >> tmp_config.yml
-cat cfg_02_nav_yml_section.yml >> tmp_config.yml
-cat cfg_03_extension_yml_section.yml >> tmp_config.yml
-cat cfg_04_dirs_yml_section.yml >> tmp_config.yml
+rm tmp_config.yml.tmpl
+touch tmp_config.yml.tmpl
+cat cfg_01_head_yml_section.yml >> tmp_config.yml.tmpl
+cat cfg_02_nav_yml_section.yml >> tmp_config.yml.tmpl
+cat cfg_03_extension_yml_section.yml >> tmp_config.yml.tmpl
+cat cfg_04_dirs_yml_section.yml >> tmp_config.yml.tmpl
 
 
 # copy file to destination
 echo "Move assembled file to destination..."
-mv -f tmp_config.yml ../book_mkdocs.yml
+mv -f tmp_config.yml.tmpl ../book_mkdocs.yml.tmpl
 
 
 # give a message of finish & exit script
