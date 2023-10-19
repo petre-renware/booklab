@@ -55,22 +55,31 @@ print(f"QUERY RESULT: {bcat_records}") #FIXME drop me - debug purpose
 
 
 
-#TODO - continue from here...
-'''
+
+
 templates_root = os.path.join(my_file_real_path, "") # directory where the file is that need to be renderend (book_mkdocs.yml)
-with open(os.path.join(templates_root + "book_mkdocs.yml")) as f: # read file and load its content as template #NOTE here maybe consider original file as *.yml.tmpl and saved one as *.yml (also chg in ...assembly...sh)
+source_config_file = os.path.join(templates_root + "book_mkdocs.yml.tmpl")
+#TODO here to check if `source_config_file` exists
+with open(source_config_file) as f: # read template file and load its content for render
     c = f.read()
 bcat_jinja_tmpl = jinja2.Template(c) # load read file content as template
-content = bcat_jinja_tmpl.render(bcat_data=bcat_records)
+content = bcat_jinja_tmpl.render(book=bcat_records)
+# print(f"CONTENT of renedered file: {content}") #FIXME drop me - debug purpose
 
+
+
+#TODO - continue from here...
+
+'''
 #FIXME here need to save back the rendered string (`content`) in the same file as the read one, so
 #FIXME_CHANGE_WR_FILE_BACK_INSTEAD_PRINT ... write(content) --> `book_mkdocs.yml`
 #FIXME_replace_with...write(content) --> `book_mkdocs.yml`... print(content)
 
-#FIXME ...RESULTING... #NOTE here maybe consider original file as *.yml.tmpl and saved one as *.yml (also chg in ...assembly...sh) 
+#TODO ...RESULTING...
 with open(os.path.join(templates_root + "book_mkdocs.yml"), "w") as f: # overwrite file and save rendered content
     f.write(content)
     f.close()
 
+#TODO remove file book_mkdocs.yml.tmpl
 '''
 
