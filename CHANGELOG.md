@@ -42,9 +42,9 @@
     * [x] 231017 connection to JSON database tested - PASS
     * [x] 231018 get the book code already obtained in variable `book_database_code`
     * [x] 231019_a render the file `book_mkdocs.yml.tmpl` with information obtained in variables: `bcat_records` and rendered in `content`
-    * [ ] write out rendered file as `book_mkdocs.yml`
-    * [ ] elete `book_mkdocs.yml.tmpl` file
-    * [ ] clean up the code ref all debugging code (keep as commented for further references)
+    * [x] 231019_b write out rendered file as `book_mkdocs.yml`
+    * [ ] delete `book_mkdocs.yml.tmpl` file
+    * [ ] clean up the code ref all debugging code (keep as commented for further references) and work config files `book_mkdocs.yml.*`
     * help for query dbs: `https://pysondb.github.io/pysonDB/get`
     * help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
 

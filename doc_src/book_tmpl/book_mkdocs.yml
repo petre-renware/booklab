@@ -1,8 +1,8 @@
 #NOTE HEAD SECTION - this is a generated section
 
-site_name: {{ book.short_desc }}
-site_author: {{ book.site_author }}
-copyright: {{ book.copyright }}
+site_name: Numele cartii (si al site-ului daca se publica in internet)
+site_author: Autorul cartii
+copyright: Copyright - Informatia ref detinatorul drepturilor de autor
 
 
 
@@ -174,5 +174,4 @@ use_directory_urls: false # allow link between pages to work properly as static 
 # files, dirs to exclude at BookLab project creation --- #NOTE#FIXME temporary commented out up to clearing specs because it will not deply `bk_*/` directories
 #exclude_docs: |
 #  bk_*/
-
 
