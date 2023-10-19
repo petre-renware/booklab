@@ -602,7 +602,7 @@ div.download-btn {
 <dt><strong><code>bkcmd_gen_final_book.py</code></strong></dt>
 <dd>wip...tbd... <!---#TODO...--></dd>
 <dt><strong><code>bkcmd_render_cfg_file.py</code></strong></dt>
-<dd>randeaza (<em>engl: rendering</em>) fisierul de configurare a cartii (<code>book_mkdocs.yml</code>) transformin toate cimpurile <em>Jinja</em> in valorile finale aduse din baza de date a cartii</dd>
+<dd>randeaza (<em>engl: rendering</em>) fisierul de configurare a cartii (<code>book_mkdocs.yml.tmpl</code>) transformind toate cimpurile <em>Jinja</em> in valorile finale aduse din baza de date a cartii rezultind fisierul <strong><code>book_mkdocs.yml</code></strong></dd>
 <dt><strong><code>bkcmd_start_book_preview.py</code></strong></dt>
 <dd>wip...tbd... <!---#TODO...--></dd>
 <dt><strong><code>bkcmd_start_book_preview.sh</code></strong></dt>
@@ -635,9 +635,20 @@ div.download-btn {
 </ul>
 <h2 id="fisierul-de-configurare-a-cartii">Fisierul de configurare a cartii</h2>
 <h3 id="sectiunea-head-informatii-generale-si-copyright">Sectiunea "HEAD" (informatii generale si copyright)</h3>
-<blockquote>
-<p><strong>LOCALIZARE:</strong> <code>&lt;book_directory&gt;/book_config_parts/cfg_01_head_yml_section.yml</code></p>
-</blockquote>
+<div class="admonition info">
+<p class="admonition-title">LOCALIZARE</p>
+<p>Procesul de generare a fisierului de configurare comporta 2 faze:</p>
+<ul>
+<li>asamblarea fisierului din partile componente si crearea unui fisier care este o forma intermediara de "template <code>Jinja</code>". Acesta contine coduri <code>Jinja</code> ce vor fi inlocuite mai triziu cu valorile reale din baza de date (pe masura ce sunt disponibile)</li>
+<li>randarea fisierului intermediar "template <code>Jinja</code>" si obtinerea fisierului de configurare FINAL cu informatiile reale</li>
+<li>cei doi pasi ai procesului sunt reprezentati de comenzi diferite astfel incit pot fi utilizate independent in functie de necesitati</li>
+<li><strong>Localizarea fisierelor</strong><ul>
+<li><em>fisierul FINAL de configurare</em>: <code>&lt;book_directory&gt;/book_config_parts/cfg_01_head_yml_section.yml</code></li>
+<li><em>fisierul temporar de configurare</em>: <code>&lt;book_directory&gt;/book_config_parts/cfg_01_head_yml_section.yml.tmpl</code></li>
+</ul>
+</li>
+</ul>
+</div>
 <p>Aceasta sectiune contine partea de informatii generale despre carte (nume, autor) si informatia referitoare la copyright-ul cartii (ce va apare in subsolul acesteia). Aceste informatii sunt sub forma unor cimpuri Jinja ce vor fi actualizate (rendering) la generarea cartii efective.</p>
 <div class="admonition info">
 <p class="admonition-title">Informatiile tip sablon Jinja din fisierul de configurare</p>

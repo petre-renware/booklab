@@ -38,7 +38,9 @@
 
 #### CHANGE records
 
-* #NOTE_wip... 231018piu_a finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml.tmpl`)
+
+
+* #NOTE_wip... 231019piu_c finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml.tmpl`)
     * [x] 231017 connection to JSON database tested - PASS
     * [x] 231018 get the book code already obtained in variable `book_database_code`
     * [x] 231019_a render the file `book_mkdocs.yml.tmpl` with information obtained in variables: `bcat_records` and rendered in `content`
@@ -49,6 +51,8 @@
     * help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
 
 * --- #TODO test, review & publish upper me ---
+
+* 231019piu_b update doc `810.05a-btmpl_System_Process.md` ref command `bkcmd_render_cfg_file.py`
 
 * 231019piu_a updated `bkcmd_assembly_cfg_file.sh` to generate assembled file with extension `.tmpl` to differentiate of final YAML rendered file
 

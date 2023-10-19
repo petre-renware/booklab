@@ -14,8 +14,16 @@ import pysondb
 import jinja2
 
 
-my_name = __name__
+my_module_name = __name__ # the module name
+my_name = __file__ # use `__file__` attribute which guarantees the full pth-and-name of current python file (ATTN if is in a library !)
 my_crt_dir = os.getcwd() # normally this should be the site root directory (in production `docs/` & in dev `doc_src/`)
+my_file_real_path = os.path.dirname(os.path.realpath(my_name))
+
+# obtain book code from current directory name
+splitted_my_real_dir = my_file_real_path.split(os.sep) # split directory path in its parts
+book_directory_name = splitted_my_real_dir[-1] # get last list entry as being the book name where intend to obtain the book code (book dir name format: book_<code>)
+book_database_code = book_directory_name[5:] # keep only characters after `book_`, sufix name of directory ((book dir name format: book_<code>))
+
 cgitb.enable() # this activate displaying errs on HTML page and log them...
 
 
