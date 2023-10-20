@@ -49,8 +49,10 @@
     * [ ] delete `book_mkdocs.yml.tmpl` file ??? REALLY WANT TO DO IT HERE ???
     * [ ] clean up the code ref all debugging code (keep as commented for further references) and work config files `book_mkdocs.yml.*`
     * [ ] see if needed to upd 810-DSGN landscape doc, section "TMPL sablon carte noua"
-    * help for query dbs: `https://pysondb.github.io/pysonDB/get`
-    * help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
+    * [ ] upd _EUMA_ new manual "Structura si cuprinsul cartii" && _ADMA_ new manual "fisierul de configurare a cartii"
+
+* tbd... new dir under book source docs for `assets/`
+* tbd... help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
 
 
 * --- #TODO test, review & publish upper me ---
