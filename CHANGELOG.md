@@ -38,9 +38,15 @@
 
 #### CHANGE records
 
+* tbd... new dir under book source docs for `assets/`
+* tbd... help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
+* tbd... upd _EUMA_ new manual "Structura si cuprinsul cartii" && _ADMA_ new manual "fisierul de configurare a cartii"
 
+* --- #TODO test, review & publish upper me ---
 
-* #NOTE_wip... 231020piu_a finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml.tmpl`)
+* 231020piu_b updated `810.02-System_Landscape.md`, review, clean and close section "TMPL sablon carte noua"
+
+* 231020piu_a finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml.tmpl`)
     * [x] 231017 connection to JSON database tested - PASS
     * [x] 231018 get the book code already obtained in variable `book_database_code`
     * [x] 231019_a render the file `book_mkdocs.yml.tmpl` with information obtained in variables: `bcat_records` and rendered in `content`
@@ -48,14 +54,7 @@
     * [x] update TMPL tech documentation - DONE, see issue `231019piu_b`
     * [x] 231020_b delete `book_mkdocs.yml.tmpl` file
     * [x] 231020_c clean up the code ref all debugging code (keep as commented for further references) and work config files `book_mkdocs.yml.*`
-    * [ ] see if needed to upd 810-DSGN landscape doc, section "TMPL sablon carte noua"
-    * [ ] upd _EUMA_ new manual "Structura si cuprinsul cartii" && _ADMA_ new manual "fisierul de configurare a cartii"
-
-* tbd... new dir under book source docs for `assets/`
-* tbd... help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
-
-
-* --- #TODO test, review & publish upper me ---
+    * [x] updated `810.02-System_Landscape.md` - DONE, see issue `231020piu_a`
 
 * 231019piu_b update doc `810.05a-btmpl_System_Process.md` ref command `bkcmd_render_cfg_file.py`
 
