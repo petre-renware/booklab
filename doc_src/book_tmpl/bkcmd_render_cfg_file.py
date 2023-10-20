@@ -3,7 +3,7 @@
 #=============================================================
 # Script to render `book_mkdocs.yml` file
 #   - this code SHOULD BE CALLED from HTTP server <wwww_root>
-#       #NOTE this requirement reason: to guarantee right Python interpretor usage and because <www_root> is the only directory guranteed by any HTTP server)
+#     (this requirement reason: to guarantee right Python interpretor usage and because <www_root> is the only directory guranteed by any HTTP server)
 #   - this code is NOT DESIGNED TO BE CALLED directly by http request
 #-----------------------------------------
 # Author: Petre Iordanescu, (c) RENware Softwre Sytems
@@ -26,20 +26,20 @@ book_directory_name = splitted_my_real_dir[-1] # get last list entry as being th
 book_database_code = book_directory_name[5:] # keep only characters after `book_`, sufix name of directory ((book dir name format: book_<code>))
 
 
-# print(f"MY_REAL_DIR: {my_file_real_path}") #FIXME drop me - debug purpose
-# print(f"MY_NAME: {my_name}") #FIXME drop me - debug purpose
-# print(f"SPLITED PATH: {splitted_my_real_dir}") #FIXME drop me - debug purpose
-# print(f"BOOK NAME: {book_directory_name}") #FIXME drop me - debug purpose
-# print(f"BOOK CODE: {book_database_code}") #FIXME drop me - debug purpose
+# print(f"MY_REAL_DIR: {my_file_real_path}") #NOTE for debug purpose
+# print(f"MY_NAME: {my_name}") #NOTE for debug purpose
+# print(f"SPLITED PATH: {splitted_my_real_dir}") #NOTE for debug purpose
+# print(f"BOOK NAME: {book_directory_name}") #NOTE for debug purpose
+# print(f"BOOK CODE: {book_database_code}") #NOTE for debug purpose
 
 
 # construct database full absolute path file name and open it
 dbs_file = os.path.join(my_crt_dir, "data/books_catalog.json")
 dbs_con = pysondb.db.getDb(dbs_file)
-# print(f"DBS CONNECTION: {dbs_con}") #FIXME drop me - debug purpose
+# print(f"DBS CONNECTION: {dbs_con}") #NOTE for debug purpose
 
 
-# to get from JSON only the record you want:
+# get from JSON only the required record (for in subject foudnd book code)
 search_criteria = dict(code = book_database_code)
 bcat_records = dbs_con.getByQuery(search_criteria) # will return a list with all recorsd but allways keep only the first one as `code` key is UNIQUE
 if not (type(bcat_records) == type(list())):
@@ -48,31 +48,38 @@ if len(bcat_records) < 1: # if no records found then this ERROR is because someb
     print(f"***ERROR [module bkcmd_render_cfg_file.py] no record found for key={book_database_code}. This ERROR could happen because somebody manually-edited the JSON dbs or changed the book directory name")
     exit(1)
 bcat_records = bcat_records[0] # keep only the first one as `code` key is UNIQUE
-# print(f"QUERY RESULT: {bcat_records}") #FIXME drop me - debug purpose
+# print(f"QUERY RESULT: {bcat_records}") #NOTE for debug purpose
 
 
 templates_root = os.path.join(my_file_real_path, "") # directory where the file is that need to be renderend (book_mkdocs.yml)
-source_config_file = os.path.join(templates_root + "book_mkdocs.yml.tmpl")
+source_config_file = os.path.join(templates_root + "book_mkdocs.yml.tmpl") # source file (JINJA)
+destination_config_file = os.path.join(templates_root + "book_mkdocs.yml") # destination file (YAML)
+
+
+# render template source file
 if not os.path.isfile(source_config_file):
     print(f"***ERROR [module bkcmd_render_cfg_file.py] template configuration file {source_config_file} not exits. This ERROR could happen the assembly operation was not executed before rendering.")
     exit(1)
-
-
 with open(source_config_file) as f: # read template file and load its content for render
     c = f.read()
 bcat_jinja_tmpl = jinja2.Template(c) # load read file content as template
 content = bcat_jinja_tmpl.render(book=bcat_records)
-# print(f"CONTENT of renedered file: {content}") #FIXME drop me - debug purpose
+# print(f"CONTENT of renedered file: {content}") #NOTE for debug purpose
 
 
-destination_config_file = os.path.join(templates_root + "book_mkdocs.yml")
+# save / write destination file
 with open(destination_config_file, "w") as f: # overwrite file and save rendered content
     f.write(content)
     f.close()
 
 
+# delete / drop source file
+os.remove(source_config_file)
 
-#TODO remove file book_mkdocs.yml.tmpl
 
-print(f"Configuration file was written in {destination_config_file}")
+# print a message and gracefully exit
+print(f"Configuration file {destination_config_file} was written.")
+exit(0)
+
+
 

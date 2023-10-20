@@ -40,14 +40,14 @@
 
 
 
-* #NOTE_wip... 231019piu_c finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml.tmpl`)
+* #NOTE_wip... 231020piu_a finish `bkcmd_render_cfg_file.py` to render book YAML configuration file ('...book_dir.../book_mkdocs.yml.tmpl`)
     * [x] 231017 connection to JSON database tested - PASS
     * [x] 231018 get the book code already obtained in variable `book_database_code`
     * [x] 231019_a render the file `book_mkdocs.yml.tmpl` with information obtained in variables: `bcat_records` and rendered in `content`
     * [x] 231019_b write out rendered file as `book_mkdocs.yml`
     * [x] update TMPL tech documentation - DONE, see issue `231019piu_b`
-    * [ ] delete `book_mkdocs.yml.tmpl` file ??? REALLY WANT TO DO IT HERE ???
-    * [ ] clean up the code ref all debugging code (keep as commented for further references) and work config files `book_mkdocs.yml.*`
+    * [x] 231020_b delete `book_mkdocs.yml.tmpl` file
+    * [x] 231020_c clean up the code ref all debugging code (keep as commented for further references) and work config files `book_mkdocs.yml.*`
     * [ ] see if needed to upd 810-DSGN landscape doc, section "TMPL sablon carte noua"
     * [ ] upd _EUMA_ new manual "Structura si cuprinsul cartii" && _ADMA_ new manual "fisierul de configurare a cartii"
 
