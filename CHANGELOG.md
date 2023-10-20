@@ -22,27 +22,20 @@
 * tbd... update `bcat.md`, clean the `table HTML` section:
     * let `markdown` attribute only where really need markdown rendering
     * try `bootstrap for mkdocs` extension  for "nice" buttons or material icons
+    * help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
 
 
 
 
 
-### 0.2.4 TMPL Book Template (#TODO-close-me-after-231017piu_a)
 
-#### RELEASE NOTES
 
-***Features:***
 
-* assembly book configuration - command `bkcmd_assembly_cfg_file.sh`
-* render book configuration - command `bkcmd_render_cfg_file.py`
 
-#### CHANGE records
 
-* tbd... new dir under book source docs for `assets/`
-* tbd... help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
-* tbd... upd _EUMA_ new manual "Structura si cuprinsul cartii" && _ADMA_ new manual "fisierul de configurare a cartii"
+### 0.2.4 TMPL Book Template assembly & render (231020 h07:30)
 
-* --- #TODO test, review & publish upper me ---
+* 231020piu_c upd _ADMA_ new manual "fisierul de configurare a cartii"
 
 * 231020piu_b updated `810.02-System_Landscape.md`, review, clean and close section "TMPL sablon carte noua"
 

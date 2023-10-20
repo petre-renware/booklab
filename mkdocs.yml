@@ -22,6 +22,7 @@ nav:
             #NOTE - add here EUMA manuals as needed
         - Manuale de configurare:
             - Indexul manuale ADMA: help/880.30-ADMA_catalog.md
+            - Fisierul de configurare a cartii: help/880.30-TMPL_usage.md
             #NOTE - add here ADMA manuals as needed
         #
         - Documentatia tehnica:
