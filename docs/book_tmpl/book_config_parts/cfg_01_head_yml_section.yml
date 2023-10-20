@@ -1,7 +1,9 @@
-#NOTE - this is an example part - section file - REVIEW ME @ FINAL
+#NOTE HEAD SECTION - this is a generated section
 
-site_name: BookLab
-site_author: 'Petre Iordanescu, RENware Software Systems, petre.iordanescu@gmail.com'
-copyright: 'Copyright (c) RENware Software Systems'
+site_name: {{ book.short_desc }}
+site_author: {{ book.site_author }}
+copyright: {{ book.copyright }}
+
+
 
 

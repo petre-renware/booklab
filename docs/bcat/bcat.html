@@ -293,6 +293,11 @@ div.download-btn {
         Indexul manuale ADMA
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../help/880.30-TMPL_usage.html">
+        Fisierul de configurare a cartii
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -310,47 +315,47 @@ div.download-btn {
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.02-System_Landscape.html">
-        Arhitectura
+        Arhitectura sistemului
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-sysInit_System_Process.html">
-        proces sysInit
+        modul Initializare sistem (sysInit)
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-bcat_System_Process.html">
-        proces BCAT
+        modul Catalog Carti (BCAT)
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-btmpl_System_Process.html">
-        proces BTMPL
+        modul Sablon Carti (TMPL)
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-newb_System_Process.html">
-        proces NEWB
+        modul Carte Noua (NEWB)
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-edtm_System_Process.html">
-        proces EDTM
+        modul Editare Carte (EDTM)
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-orgm_System_Process.html">
-        proces ORGM
+        modul Organizare Carte (ORGM)
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-prvb_System_Process.html">
-        proces PRVB
+        modul Previzualizare Carte (PRVB)
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-dplb_System_Process.html">
-        proces DPLB
+        modul Generare Carte (DPLB)
       </a>
 </li>
 </ul>
@@ -445,7 +450,7 @@ div.download-btn {
 <h1 id="catalogul-cartilor">Catalogul cartilor</h1>
 <p>Bine ati venit la <em>Catalogul cartilor dumneavoastra</em>. Aici puteti vizualiza cartile create de dumneavoastra si stadiul acestora, sa efectuati operatii asupra lor sau sa creati o carte noua.</p>
 <h2 id="lista-cartilor">Lista cartilor</h2>
-<p><a href="newb/">Creare carte</a> <!-- #NOTE action for new book --></p>
+<p><a href="newb/">Creare carte</a> <code>&lt;!-- #NOTE action for new book --&gt;</code></p>
 <table>
 <thead>
 <tr>
@@ -453,6 +458,8 @@ div.download-btn {
 <th>Cod</th>
 <th>Titlu scurt</th>
 <th>Titlu lung</th>
+<th>Copyright</th>
+<th>Autorul cartii</th>
 <th>Note</th>
 <th>creata de</th>
 <th>data creare</th>
@@ -466,6 +473,8 @@ div.download-btn {
 <td>{{ book.code }}</td>
 <td>{{ book.short_desc }}</td>
 <td>{{ book.description }}</td>
+<td>{{ book.copyright }}</td>
+<td>{{ book.site_author }}</td>
 <td>{{ book.notes }}</td>
 <td>{{ book.created_by }}</td>
 <td>{{ book.created_date }}</td>
@@ -476,13 +485,13 @@ div.download-btn {
 <p>{% endfor %}</p>
 </tbody>
 </table>
-<h2 class="md-button" id="help"><a href="../help/880.30-BCAT_usage.html">Help</a></h2>
+<h2 id="help"><a href="../help/880.30-BCAT_usage.html">Help</a></h2>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 17, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 7, 2023</span>
 </small>
 </div>
 </article>

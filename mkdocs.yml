@@ -22,18 +22,19 @@ nav:
             #NOTE - add here EUMA manuals as needed
         - Manuale de configurare:
             - Indexul manuale ADMA: help/880.30-ADMA_catalog.md
+            - Fisierul de configurare a cartii: help/880.30-TMPL_usage.md
             #NOTE - add here ADMA manuals as needed
         #
         - Documentatia tehnica:
-            - Arhitectura: 810-DSGN/810.02-System_Landscape.md
-            - proces sysInit: 810-DSGN/810.05a-sysInit_System_Process.md
-            - proces BCAT: 810-DSGN/810.05a-bcat_System_Process.md
-            - proces BTMPL: 810-DSGN/810.05a-btmpl_System_Process.md
-            - proces NEWB: 810-DSGN/810.05a-newb_System_Process.md
-            - proces EDTM: 810-DSGN/810.05a-edtm_System_Process.md
-            - proces ORGM: 810-DSGN/810.05a-orgm_System_Process.md
-            - proces PRVB: 810-DSGN/810.05a-prvb_System_Process.md
-            - proces DPLB: 810-DSGN/810.05a-dplb_System_Process.md
+            - Arhitectura sistemului: 810-DSGN/810.02-System_Landscape.md
+            - modul Initializare sistem (sysInit): 810-DSGN/810.05a-sysInit_System_Process.md
+            - modul Catalog Carti (BCAT): 810-DSGN/810.05a-bcat_System_Process.md
+            - modul Sablon Carti (TMPL): 810-DSGN/810.05a-btmpl_System_Process.md
+            - modul Carte Noua (NEWB): 810-DSGN/810.05a-newb_System_Process.md
+            - modul Editare Carte (EDTM): 810-DSGN/810.05a-edtm_System_Process.md
+            - modul Organizare Carte (ORGM): 810-DSGN/810.05a-orgm_System_Process.md
+            - modul Previzualizare Carte (PRVB): 810-DSGN/810.05a-prvb_System_Process.md
+            - modul Generare Carte (DPLB): 810-DSGN/810.05a-dplb_System_Process.md
         - Manual BookLab (PDF): pdfs/print_page.html/print_page.pdf
     - About:
         - Licenta mea: wip.md #TODO tbd... este un http catre o ruta dinamica din produs

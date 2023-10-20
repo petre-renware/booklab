@@ -293,6 +293,11 @@ div.download-btn {
         Indexul manuale ADMA
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../help/880.30-TMPL_usage.html">
+        Fisierul de configurare a cartii
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -310,47 +315,47 @@ div.download-btn {
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.02-System_Landscape.html">
-        Arhitectura
+        Arhitectura sistemului
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-sysInit_System_Process.html">
-        proces sysInit
+        modul Initializare sistem (sysInit)
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-bcat_System_Process.html">
-        proces BCAT
+        modul Catalog Carti (BCAT)
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-btmpl_System_Process.html">
-        proces BTMPL
+        modul Sablon Carti (TMPL)
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-newb_System_Process.html">
-        proces NEWB
+        modul Carte Noua (NEWB)
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-edtm_System_Process.html">
-        proces EDTM
+        modul Editare Carte (EDTM)
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-orgm_System_Process.html">
-        proces ORGM
+        modul Organizare Carte (ORGM)
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-prvb_System_Process.html">
-        proces PRVB
+        modul Previzualizare Carte (PRVB)
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../810-DSGN/810.05a-dplb_System_Process.html">
-        proces DPLB
+        modul Generare Carte (DPLB)
       </a>
 </li>
 </ul>
@@ -497,9 +502,9 @@ div.download-btn {
 <h2 id="possible-quick-dev-solutions">Possible quick-dev solutions</h2>
 <h3 id="1-let-pysondb-format-and-convert-before-load-table-with-table-reader">1. let PysonDB format and convert before load table with <code>table-reader</code></h3>
 <ul>
-<li>before execute <code>| data                                                                                                                                                                                                                                         |
-|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| {'id': 0, 'code': 'BCAT', 'short_desc': 'bk_tmpl', 'description': 'Sablonul implicit pentru o carte noua', 'created_date': '2023-08-01', 'created_by': 'system', 'notes': 'Inregistrare obligatorie de la instalare sistem. Non editabila.'} |</code></li>
+<li>before execute <code>| data                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| {'id': 0, 'code': 'tmpl', 'short_desc': 'Numele cartii (si al site-ului daca se publica in internet)', 'description': 'Denumirea lunga a cartii asa cum va apare pe coperta', 'copyright': 'Copyright - Informatia ref detinatorul drepturilor de autor', 'site_author': 'Autorul cartii', 'created_date': '2023-08-01', 'created_by': 'system', 'notes': 'Inregistrare obligatorie de la instalare sistem. Non editabila.'} |</code></li>
 <li>insert a python static code to extract from PysonDB format just key <code>"data"</code> and<ul>
 <li>return its value to <code>read_json()</code> function instead reading from file</li>
 <li>or create a temporary file with this string saved and use it in <code>read_json()</code> function</li>

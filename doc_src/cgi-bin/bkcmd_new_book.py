@@ -1,6 +1,16 @@
-################
+#!pyenv/bin/python3
+
+#=============================================================
+# Script to render NEWB page with book data to create
+#-----------------------------------------
+# Author: Petre Iordanescu, (c) RENware Softwre Sytems
+#=============================================================
+
+
+
+#TODO plan
 #
-# 0. this code is subject of CGI NEWB
+# 0. this code is subject of (CGI) NEWB command
 #     - remark that this file is agnostic of book template and stay in doc_src/
 # --------------
 # 1. create a new directory for the new book - this will act as a sandbox for all new book
