@@ -16,9 +16,9 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 {% raw %}
 
-<table markdown>
-<thead markdown>
-<tr markdown>
+<table markdown="1">
+<thead markdown="1">
+<tr markdown="1">
 <th>ID</th>
 <th>Cod</th>
 <th>Titlu scurt</th>
@@ -31,20 +31,20 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 <th>actiuni</th>
 </tr>
 </thead>
-<tbody markdown>
+<tbody markdown="1">
 {% for book in bcat_data %}
-<tr markdown>
-<td markdown>{{ book.id }}</td>
-<td markdown>{{ book.code }}</td>
-<td markdown>{{ book.short_desc }}</td>
-<td markdown>{{ book.description }}</td>
-<td markdown>{{ book.copyright }}</td>
-<td markdown>{{ book.site_author }}</td>
-<td markdown>{{ book.notes }}</td>
-<td markdown>{{ book.created_by }}</td>
-<td markdown>{{ book.created_date }}</td>
-<td markdown> <!-- #NOTE actions for edit, organize, assembly book -->
-    [editare](edtb/) - [organizare](orgm/) - [vizualizare](prvb/) - [asamblare](dplb/)
+<tr markdown="1">
+<td markdown="1">{{ book.id }}</td>
+<td markdown="1">{{ book.code }}</td>
+<td markdown="1">{{ book.short_desc }}</td>
+<td markdown="1">{{ book.description }}</td>
+<td markdown="1">{{ book.copyright }}</td>
+<td markdown="1">{{ book.site_author }}</td>
+<td markdown="1">{{ book.notes }}</td>
+<td markdown="1">{{ book.created_by }}</td>
+<td markdown="1">{{ book.created_date }}</td>
+<td markdown="1"> <!-- #NOTE actions for edit, organize, assembly book -->
+    [editare](edtm/) - [organizare](orgm/) - [vizualizare](prvb/) - [asamblare](dplb/)
 </td>
 </tr>
 {% endfor %}

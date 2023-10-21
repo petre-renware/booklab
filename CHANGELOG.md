@@ -28,11 +28,12 @@
 * tbd... init TMPL with a start `idex.md` file && maybe 1, 2 examples markdown as "starter samples"
 
 * tbd... update `bcat.md`, clean the `table HTML` section:
-    * let `markdown` attribute only where really need markdown rendering
-    * try `bootstrap for mkdocs` extension  for "nice" buttons or material icons
-    * help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
+    * DOES NOT WORK. DO NKT WASTE TIME ANYMORE... let `markdown` attribute only where really need markdown rendering
+    * group commands in a dropdown: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
 
+* wip...
 
+* 231021piu_a small fixes in 'bcat.md` (also tried to let `markdown` attribute only where really need markdown rendering and doesn't work)
 
 
 
