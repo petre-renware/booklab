@@ -13,11 +13,19 @@
 
 
 
-## 0.3 #TODO BCAT extent book command center (...wip...)
+## 0.3 -#NOTE is just a commercial name, "a group of releases..." - DO NOT TAG IT ANYMORE
+
+## 0.3.1 #TODO BCAT extent book command center (...wip...)
 
 * tbd... after TMPL release 0.2 then focus on Jupiter
 
 * tbd... try to execute book manipulation scripts from a Jupiter notebook (as part of application interface)
+
+* tbd... new command:
+    * VIEW CONFIG FILE (to display `book_mkdocs.yml`)
+    * SHOW STATUS of assembly (what did in `0.2.4`), check if exists `book_mkdocs.yml.tmpl` that meaning `bkcmd_assembly...sh` was xecuted but not `bkcmd_render...py`
+
+* tbd... init TMPL with a start `idex.md` file && maybe 1, 2 examples markdown as "starter samples"
 
 * tbd... update `bcat.md`, clean the `table HTML` section:
     * let `markdown` attribute only where really need markdown rendering
