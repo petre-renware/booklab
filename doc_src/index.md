@@ -1,7 +1,7 @@
 ![booklab_logo](pictures/booklab_logo.png){ width="300" }
 
 
-<!-- #NOTE ***************************************************************************** TEST HTML FORM
+<!-- #NOTE -- TEST HTML FORM ------------------------------------------------
 ---pui un div cu markdown ? Better...
 <form action="XXX_TEST_ROUTE/xxxfile">
   <label for="fname">First name:</label>
@@ -22,7 +22,7 @@
 
     - caz 3: cu `action="XXX_TEST_ROUTE/xxxfile"` ==> raspunsul a fost request catre `http://server_name.../XXX_TEST_ROUTE/xxxfile?fname=John&lname=Doe` url RELATIV la servername
 
-*********************************************************************************************************** -->
+------------------------------------------------------------------------->
 
 
 
