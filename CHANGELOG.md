@@ -21,25 +21,21 @@
 
 * tbd... try to execute book manipulation scripts from a Jupiter notebook (as part of application interface)
 
-* tbd... new command:
-    * VIEW CONFIG FILE (to display `book_mkdocs.yml`)
-    * SHOW STATUS of assembly (what did in `0.2.4`), check if exists `book_mkdocs.yml.tmpl` that meaning `bkcmd_assembly...sh` was xecuted but not `bkcmd_render...py`
-
 * tbd... init TMPL with a start `idex.md` file && maybe 1, 2 examples markdown as "starter samples"
 
-* tbd... update `bcat.md`, clean the `table HTML` section:
-    * drop `markdown` attribute and ise normal link HTML tags.
-    #NOTE please do not forget that ***commands need to add Jinja fields*** to render @ execution & add to URL query parameters with ***`book code`***
-    #NOTE generated HTML is:
-   ```
-   <td> <!-- #NOTE actions for edit, organize, assembly book -->
-   <a href="edtb/">editare</a> - <a href="orgm/">organizare</a> - <a href="prvb/">vizualizare</a> - <a href="dplb/">asamblare</a>
-   </td>
-   ```
-   * group commands in a dropdown: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
+* tbd... ref command "Verificare" (code-name `bstatus`):
+    * [ ] VIEW CONFIG FILE (to display `book_mkdocs.yml`)
+    * [ ] SHOW STATUS of assembly (what did in `0.2.4`), check if exists `book_mkdocs.yml.tmpl` that meaning `bkcmd_assembly...sh` was xecuted but not `bkcmd_render...py`
+    * [ ] update 810-DSGN with `bstatus` component
+
+* tbd... group commands in a dropdown: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
 
 
 * wip...
+
+* 231022piu_a update `bcat.md`
+    * [x] clean the `table HTML` section, drop `markdown` attribute and use normal link HTML tags
+    * [x] add new command "Verificare" (code-name `bstatus`)
 
 * 231021piu_a small fixes in 'bcat.md` (also tried to let `markdown` attribute only where really need markdown rendering and doesn't work)
 

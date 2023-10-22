@@ -14,43 +14,51 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 [Creare carte](newb/) `<!-- #NOTE action for new book -->`
 
-{% raw %}
 
-<table markdown="1">
-<thead markdown="1">
-<tr markdown="1">
-<th>ID</th>
-<th>Cod</th>
-<th>Titlu scurt</th>
-<th>Titlu lung</th>
-<th>Copyright</th>
-<th>Autorul cartii</th>
-<th>Note</th>
-<th>creata de</th>
-<th>data creare</th>
-<th>actiuni</th>
-</tr>
-</thead>
-<tbody markdown="1">
-{% for book in bcat_data %}
-<tr markdown="1">
-<td markdown="1">{{ book.id }}</td>
-<td markdown="1">{{ book.code }}</td>
-<td markdown="1">{{ book.short_desc }}</td>
-<td markdown="1">{{ book.description }}</td>
-<td markdown="1">{{ book.copyright }}</td>
-<td markdown="1">{{ book.site_author }}</td>
-<td markdown="1">{{ book.notes }}</td>
-<td markdown="1">{{ book.created_by }}</td>
-<td markdown="1">{{ book.created_date }}</td>
-<td markdown="1"> <!-- #NOTE actions for edit, organize, assembly book -->
-    [editare](edtm/) - [organizare](orgm/) - [vizualizare](prvb/) - [asamblare](dplb/)
-</td>
-</tr>
-{% endfor %}
-</tbody>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Cod</th>
+            <th>Titlu scurt</th>
+            <th>Titlu lung</th>
+            <th>Copyright</th>
+            <th>Autorul cartii</th>
+            <th>Note</th>
+            <th>creata de</th>
+            <th>data creare</th>
+            <th>actiuni</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% raw %}
+        {% for book in bcat_data %}
+        <tr>
+            <td>{{ book.id }}</td>
+            <td>{{ book.code }}</td>
+            <td>{{ book.short_desc }}</td>
+            <td>{{ book.description }}</td>
+            <td>{{ book.copyright }}</td>
+            <td>{{ book.site_author }}</td>
+            <td>{{ book.notes }}</td>
+            <td>{{ book.created_by }}</td>
+            <td>{{ book.created_date }}</td>
+            <td> <!-- #NOTE actions for edit, organize, assembly book -->
+                <a href="/bstatus?code={{ book.code }}">stare</a> &#x2022;
+                <a href="/edtb?code={{ book.code }}">editare</a> &#x2022;
+                <a href="/orgm?code={{ book.code }}">organizare</a> &#x2022;
+                <a href="/prvb?code={{ book.code }}">vizualizare</a> &#x2022;
+                <a href="/dplb?code={{ book.code }}">asamblare</a>
+            </td>
+        </tr>
+        {% endfor %}
+        {% endraw %}
+    </tbody>
 </table>
 
-{% endraw %}
+
+
+
 
 ## [Help](../help/880.30-BCAT_usage.md)
