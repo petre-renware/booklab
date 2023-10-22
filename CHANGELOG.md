@@ -15,13 +15,15 @@
 
 ## 0.3 -#NOTE is just a commercial name, "a group of releases..." - DO NOT TAG IT ANYMORE
 
-## 0.3.1 #TODO BCAT extent book command center (...wip...)
-
-* tbd... after TMPL release 0.2 then focus on Jupiter
-
+* tbd... #TODO-ASAP__focus on Jupiter__
 * tbd... try to execute book manipulation scripts from a Jupiter notebook (as part of application interface)
 
-* tbd... init TMPL with a start `idex.md` file && maybe 1, 2 examples markdown as "starter samples"
+
+
+
+## 0.3.1 #TODO BCAT extent book command center (...wip...)
+
+* tbd... init TMPL with a start `index.md` file && maybe 1, 2 examples markdown as "starter samples"
 
 * tbd... ref command "Verificare" (code-name `bstatus`):
     * [ ] VIEW CONFIG FILE (to display `book_mkdocs.yml`)
