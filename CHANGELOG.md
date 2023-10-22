@@ -28,13 +28,17 @@
 * tbd... init TMPL with a start `idex.md` file && maybe 1, 2 examples markdown as "starter samples"
 
 * tbd... update `bcat.md`, clean the `table HTML` section:
-    * drop `markdown` attribute and ise normal link HTML tags. Generated HTML is:
-```
-<td> <!-- #NOTE actions for edit, organize, assembly book -->
-<a href="edtb/">editare</a> - <a href="orgm/">organizare</a> - <a href="prvb/">vizualizare</a> - <a href="dplb/">asamblare</a>
-</td>
-```
-    * group commands in a dropdown: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
+    * drop `markdown` attribute and ise normal link HTML tags.
+    #NOTE please do not forget that ***commands need to add NOT ESCAPED Jinja fields*** to transform to query parameters with ***`book code`***
+    #NOTE generated HTML is:
+   ```
+   <td> <!-- #NOTE actions for edit, organize, assembly book -->
+   <a href="edtb/">editare</a> - <a href="orgm/">organizare</a> - <a href="prvb/">vizualizare</a> - <a href="dplb/">asamblare</a>
+   </td>
+   ```
+   * 
+   * group commands in a dropdown: `https://www.w3schools.com/howto/howto_css_dropdown.asp` 
+    
 
 * wip...
 
