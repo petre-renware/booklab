@@ -13,18 +13,49 @@
 
 
 
-## 0.3 #TODO BCAT extent book command center (...wip...)
+## 0.3 -#NOTE is just a commercial name, "a group of releases..." - DO NOT TAG IT ANYMORE
 
-* tbd... after TMPL release 0.2 then focus on Jupiter
 
+
+
+
+
+
+
+
+
+
+### 0.3.2 #TODO BCAT extend book command center (...wip...)
+
+* tbd... #TODO-ASAP__focus on Jupiter__
 * tbd... try to execute book manipulation scripts from a Jupiter notebook (as part of application interface)
+* tbd... init TMPL with a start `index.md` file && maybe 1, 2 examples markdown as "starter samples"
 
-* tbd... update `bcat.md`, clean the `table HTML` section:
-    * let `markdown` attribute only where really need markdown rendering
-    * try `bootstrap for mkdocs` extension  for "nice" buttons or material icons
-    * help for BCAT dropdown with commands + cmd *VIEW CONFIG FILE*: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
+* tbd... ref command "Verificare" (code-name `bstatus`):
+    * [ ] VIEW CONFIG FILE (to display `book_mkdocs.yml`)
+    * [ ] SHOW STATUS of assembly (what did in `0.2.4`), check if exists `book_mkdocs.yml.tmpl` that meaning `bkcmd_assembly...sh` was xecuted but not `bkcmd_render...py`
+    * [ ] update 810-DSGN with `bstatus` component
+
+* wip... (lst used 231023piu_b)
 
 
+
+
+
+
+
+
+### 0.3.1 BCAT group commands (231023 h07:00)
+
+* 231023piu_b updated `RELNOTE.md` and published site
+
+* 231023piu_a group commands in a dropdown
+
+* 231022piu_a update `bcat.md`
+    * [x] clean the `table HTML` section, drop `markdown` attribute and use normal link HTML tags
+    * [x] add new command "Verificare" (status check / code-name `bstatus`)
+
+* 231021piu_a small fixes in 'bcat.md`
 
 
 
