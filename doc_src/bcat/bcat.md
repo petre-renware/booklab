@@ -12,9 +12,10 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 ## Lista cartilor
 
-[Creare carte](newb/) `<!-- #NOTE action for new book -->`
+[Creare carte](newb/) <!--#NOTE action for new book -->
 
 
+{% include './bcat.css' %} <!--#NOTE contains dropdown commands button CSS -->
 
 <table>
     <thead>
@@ -45,11 +46,16 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
             <td>{{ book.created_by }}</td>
             <td>{{ book.created_date }}</td>
             <td> <!-- #NOTE actions for edit, organize, assembly book -->
-                <a href="/bstatus?code={{ book.code }}">stare</a> &#x2022;
-                <a href="/edtb?code={{ book.code }}">editare</a> &#x2022;
-                <a href="/orgm?code={{ book.code }}">organizare</a> &#x2022;
-                <a href="/prvb?code={{ book.code }}">vizualizare</a> &#x2022;
-                <a href="/dplb?code={{ book.code }}">asamblare</a>
+                <div class="dropdown">
+                    <button onclick="activateDropdown()" class="dropbtn">OP &#x2BC6;</button>
+                    <div id="bkcommandsDropdown" class="dropdown-content">
+                        <a href="/bstatus?code={{ book.code }}">Starea cartii</a>
+                        <a href="/edtb?code={{ book.code }}">Editare materiale</a>
+                        <a href="/orgm?code={{ book.code }}">Sectiuni carte</a>
+                        <a href="/prvb?code={{ book.code }}">Pre-Vizualizare carte</a>
+                        <a href="/dplb?code={{ book.code }}">Asamblare carte</a>
+                    </div>
+                </div>
             </td>
         </tr>
         {% endfor %}
@@ -58,7 +64,14 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 </table>
 
 
-
-
-
 ## [Help](../help/880.30-BCAT_usage.md)
+
+
+
+
+
+
+
+{% include './bcat.js' %} <!--#NOTE contains dropdown commands button JS -->
+
+

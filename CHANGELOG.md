@@ -30,16 +30,18 @@
     * [ ] SHOW STATUS of assembly (what did in `0.2.4`), check if exists `book_mkdocs.yml.tmpl` that meaning `bkcmd_assembly...sh` was xecuted but not `bkcmd_render...py`
     * [ ] update 810-DSGN with `bstatus` component
 
-* tbd... group commands in a dropdown: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
+
 
 
 * wip...
+
+* ...231023piu_a group commands in a dropdown: `https://www.w3schools.com/howto/howto_css_dropdown.asp`
 
 * 231022piu_a update `bcat.md`
     * [x] clean the `table HTML` section, drop `markdown` attribute and use normal link HTML tags
     * [x] add new command "Verificare" (code-name `bstatus`)
 
-* 231021piu_a small fixes in 'bcat.md` (also tried to let `markdown` attribute only where really need markdown rendering and doesn't work)
+* 231021piu_a small fixes in 'bcat.md`
 
 
 
