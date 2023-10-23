@@ -5,6 +5,41 @@
 
 # Release notes
 
+!!! warning "Future directions disclaimer"
+    <small markdown>Future directions listed are just with title as intentions. The exact Implementation dates are not guaranteed. For a more clear picture of ROADMAP intentions, please contact the support call center.</small>
+
+
+
+
+## version 0.3
+
+### Features
+
+* ...#TODO new features here
+* 0.3.1 add new command "Verificare" (status check / code-name `bstatus`)
+* 0.3.1 group commands in a dropdown
+
+### Fixed bugs
+
+*  n/a
+
+### Known issues
+
+* n/a*
+
+### Future directions
+
+* n/a
+
+
+
+
+
+
+
+
+
+
 
 ## version 0.2
 
@@ -20,15 +55,11 @@
 
 *  n/a
 
-
 ### Known issues
 
 * n/a*
 
 ### Future directions
-
-!!! warning "Disclaimer"
-    <small markdown>Future directions listed here are just with title as intentions. The exact Implementation dates are not guaranteed. For a more clear picture of ROADMAP intentions, please contact the support call center.</small>
 
 * n/a
 
