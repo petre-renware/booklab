@@ -96,6 +96,7 @@ extra_javascript:
 plugins:
     - search
     - include-markdown
+#    - same-dir  # plug in to access md files from own yaml root
     - table-reader #NOTE used for staic tables rendering from various sources (CSV, JSON, etc as available in Pandas)
     - macros #NOTE use external jinja variables and macros (see `https://mkdocs-macros-plugin.readthedocs.io/en/latest/`)
     - markdown-exec #NOTE Python execution inside markdown files (execution at build time, "compilation like" NOT dynamically NOT JavaScript)
