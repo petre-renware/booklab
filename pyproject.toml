@@ -1,7 +1,7 @@
 [project]
 name = "booklab"
 version = "0.1.0"
-description = "Default template for PDM package"
+description = "A books manager. For any kind of documentation can dream about."
 authors = [
     {name = "Pwtre Iordanescu", email = "petre.iordanescu@gmail.com"},
 ]
@@ -97,7 +97,7 @@ dependencies = [
     "zipp==3.16.2",
     "zopfli==0.2.2",
 ]
-requires-python = "==3.8.*"
+requires-python = ">=3.8"
 readme = "README.md"
 license = {text = "MIT"}
 
