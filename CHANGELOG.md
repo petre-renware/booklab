@@ -36,6 +36,7 @@
     * [ ] SHOW STATUS of assembly (what did in `0.2.4`), check if exists `book_mkdocs.yml.tmpl` that meaning `bkcmd_assembly...sh` was xecuted but not `bkcmd_render...py`
     * [ ] update 810-DSGN with `bstatus` component
 
+* 250821 copied KSON databases from old cgi-bin to new booklab dirs
 * 250821 update project structure to python std. created basic init, main, version python files with empty content to be updated
 * 250820 switched project on PDM management
 
