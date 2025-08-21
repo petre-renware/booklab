@@ -36,7 +36,8 @@
     * [ ] SHOW STATUS of assembly (what did in `0.2.4`), check if exists `book_mkdocs.yml.tmpl` that meaning `bkcmd_assembly...sh` was xecuted but not `bkcmd_render...py`
     * [ ] update 810-DSGN with `bstatus` component
 
-* wip... (lst used 231023piu_b)
+* tbd... update project structure to python std
+* 250820 switched project on PDM management
 
 
 

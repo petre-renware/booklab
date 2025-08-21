@@ -5,6 +5,11 @@ description = "A books manager. For any kind of documentation can dream about."
 authors = [
     {name = "Pwtre Iordanescu", email = "petre.iordanescu@gmail.com"},
 ]
+requires-python = "<3.13,>=3.10"
+readme = "README.md"
+license = {text = "GNU"}
+
+
 dependencies = [
     "async-generator==1.10",
     "attrs==23.1.0",
@@ -97,10 +102,8 @@ dependencies = [
     "zipp==3.16.2",
     "zopfli==0.2.2",
 ]
-requires-python = "<3.13,>=3.10"
-readme = "README.md"
-license = {text = "MIT"}
 
 
 [tool.pdm]
 distribution = false
+
