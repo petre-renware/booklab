@@ -105,5 +105,11 @@ dependencies = [
 
 
 [tool.pdm]
-distribution = false
+distribution = true
+
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
 
