@@ -1,0 +1,6 @@
+NOTES ref some temp wip directories in package strycture
+
+- `cgi-bin/` contains python files used in old CGI architecture
+- `sysInit/` contains accordind to my old std module used to initialize the whole system packages & modules
+
+

@@ -41,6 +41,7 @@
 ### 0.3.dev2 Restructure and clean project for PDM package management
 
 * ...wip
+* 250822 moved old `cgi-bin/` directoey to reuse code
 * 250822 wip cleaning old pj structure and move to new one all intended to keep or reuse
 * 250821 copied KSON databases from old cgi-bin to new booklab dirs
 * 250821 update project structure to python std. created basic init, main, version python files with empty content to be updated
