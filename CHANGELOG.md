@@ -25,7 +25,7 @@
 
 
 
-### 0.3.dev2 #TODO BCAT extend book command center (...wip...)
+### ... #TODO BCAT extend book command center (...wip...)
 
 * tbd... #TODO-ASAP__focus on Jupiter__
 * tbd... try to execute book manipulation scripts from a Jupiter notebook (as part of application interface)
@@ -36,6 +36,12 @@
     * [ ] SHOW STATUS of assembly (what did in `0.2.4`), check if exists `book_mkdocs.yml.tmpl` that meaning `bkcmd_assembly...sh` was xecuted but not `bkcmd_render...py`
     * [ ] update 810-DSGN with `bstatus` component
 
+
+
+### 0.3.dev2 Restructure and clean project for PDM package management
+
+* ...wip
+* 250822 wip cleaning old pj structure and move to new one all intended to keep or reuse
 * 250821 copied KSON databases from old cgi-bin to new booklab dirs
 * 250821 update project structure to python std. created basic init, main, version python files with empty content to be updated
 * 250820 switched project on PDM management
