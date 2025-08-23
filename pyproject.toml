@@ -1,6 +1,6 @@
 [project]
 name = "booklab"
-version = "0.1.0"
+version = "0.3dev2"  # this should be changed to auto from booklab package __init__.__version__
 description = "A books manager. For any kind of documentation can dream about."
 authors = [
     {name = "Petre Iordanescu", email = "petre.iordanescu@gmail.com"},

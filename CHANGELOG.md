@@ -29,9 +29,10 @@
 
 
 
-### 0.3.dev2 Restructure and clean project for PDM package management
+### 0.3dev2 Restructure and clean project for PDM package management
 
 * ...wip
+* 250823 clraned root project dorectory of not usable now files
 * 250823 copied from old CFI model the route-directory `.../bcat/` for Jinja templates
 * 250822 updated pyproject.toml with PDM backend
 * 250822 copied from old CGI model various useful files (requirements.txt, py templates, ...) to /src/.../old-misc-files/
