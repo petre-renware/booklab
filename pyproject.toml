@@ -1,6 +1,6 @@
 [project]
 name = "booklab"
-version = "0.3.dev2"  # this should be changed to auto from booklab package __init__.__version__
+dynamic = ["version"]
 description = "A books manager. For any kind of documentation can dream about."
 authors = [
     {name = "Petre Iordanescu", email = "petre.iordanescu@gmail.com"},
@@ -8,7 +8,6 @@ authors = [
 requires-python = "<3.13,>=3.10"
 readme = "README.md"
 license = {text = "GNU"}
-
 
 dependencies = [
     "async-generator==1.10",
@@ -106,6 +105,11 @@ dependencies = [
 
 [tool.pdm]
 distribution = true
+
+
+[tool.pdm.version]
+source = "file"
+path = "src/booklab/__init__.py"
 
 
 [build-system]

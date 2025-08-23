@@ -32,6 +32,7 @@
 ### 0.3.dev2 Restructure and clean project for PDM package management
 
 * ...wip
+* 250823 updated `pyproject.toml` to get version from booklab package __init.py__.__version__
 * 250823 clraned root project dorectory of not usable now files
 * 250823 copied from old CFI model the route-directory `.../bcat/` for Jinja templates
 * 250822 updated pyproject.toml with PDM backend
