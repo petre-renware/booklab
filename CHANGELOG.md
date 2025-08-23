@@ -32,7 +32,7 @@
 
 ### 0.3a1 Create raw version of booklab package
 
-* ...
+* wip...
 * 250823 release 0.3.dev2 into development branch and update version
 
 

@@ -103,13 +103,16 @@ dependencies = [
 ]
 
 
+
 [tool.pdm]
 distribution = true
+
 
 
 [tool.pdm.version]
 source = "file"
 path = "src/booklab/__init__.py"
+
 
 
 [build-system]
