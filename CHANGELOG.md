@@ -33,7 +33,7 @@
 ### 0.3a1 Create raw version of booklab package
 
 * wip...
-* 250823 created in `.../booklabd/` templates directory for Flask/Quart rendering with files as symlinks to static site from `docs/` (genetated by mkdocs)
+* 250823 created  `.../booklabd/templates` directory for Flask/Quart rendering with files as symlinks to static site from `docs/` (genetated by mkdocs)
 * 250823 release 0.3.dev2 into development branch and update version to 0.3a1
 
 
