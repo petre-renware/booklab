@@ -16,7 +16,7 @@
 
 
 
-### ... #TODO BCAT extend book command center (...wip...)
+## 0.3  ... #TODO BCAT extend book command center (...wip...)
 
 * tbd... #TODO-ASAP__focus on Jupiter__
 * tbd... try to execute book manipulation scripts from a Jupiter notebook (as part of application interface)
@@ -29,9 +29,17 @@
 
 
 
-### 0.3.dev2 Restructure and clean project for PDM package management
 
-* ...wip
+### 0.3a1 Create raw version of booklab package
+
+* ...
+* 250823 release 0.3.dev2 into development branch and update version
+
+
+
+
+### 0.3.dev2 Restructure and clean project for PDM package managemen
+
 * 250823 updated `pyproject.toml` to get version from booklab package __init.py__.__version__
 * 250823 clraned root project dorectory of not usable now files
 * 250823 copied from old CFI model the route-directory `.../bcat/` for Jinja templates
@@ -53,18 +61,11 @@
 ### 0.3.1 BCAT group commands (231023 h07:00)
 
 * 231023piu_b updated `RELNOTE.md` and published site
-
 * 231023piu_a group commands in a dropdown
-
 * 231022piu_a update `bcat.md`
     * [x] clean the `table HTML` section, drop `markdown` attribute and use normal link HTML tags
     * [x] add new command "Verificare" (status check / code-name `bstatus`)
-
 * 231021piu_a small fixes in 'bcat.md`
-
-
-
-
 
 
 
