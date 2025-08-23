@@ -29,7 +29,7 @@
 
 
 
-### 0.3dev2 Restructure and clean project for PDM package management
+### 0.3.dev2 Restructure and clean project for PDM package management
 
 * ...wip
 * 250823 clraned root project dorectory of not usable now files
