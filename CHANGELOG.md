@@ -39,7 +39,7 @@
 
 
 
-## [0.3.dev2] Restructure and clean project for PDM package managemen
+## [0.3.dev2] Restructure and clean project for PDM package management (250823 h16:00)
 
 * 250823 updated `pyproject.toml` to get version from booklab package __init.py__.__version__
 * 250823 clraned root project dorectory of not usable now files
