@@ -30,12 +30,25 @@
 
 
 
-## ...wip [0.3a1] Create raw version of booklab package
 
-* wip...
+
+## [... 0.3a2] First booklabd as Flask/Quart app to serve test routes
+
+* ..wip
+* 250824 upd version and import req packages for Flask and old CGI structure (to access JSON files as a database)
+
+
+
+
+
+
+## [0.3a1] Create raw structure of booklab package (230824 h18:15)
+
 * 250824 created basic Flask dirs in `.../booklabd/`
 * 250823 created  `.../booklabd/templates` directory for Flask/Quart rendering with files as symlinks to static site from `docs/` (genetated by mkdocs)
 * 250823 release 0.3.dev2 into development branch and update version to 0.3a1
+
+
 
 
 
@@ -52,8 +65,6 @@
 * 250821 copied KSON databases from old cgi-bin to new booklab dirs
 * 250821 update project structure to python std. created basic init, main, version python files with empty content to be updated
 * 250820 switched project on PDM management
-
-
 
 
 
