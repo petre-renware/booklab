@@ -16,7 +16,7 @@
 
 
 
-## 0.3  ... #TODO BCAT extend book command center (...wip...)
+## ... #TODO [unreleased] BCAT extend book command center (...wip...)
 
 * tbd... #TODO-ASAP__focus on Jupiter__
 * tbd... try to execute book manipulation scripts from a Jupiter notebook (as part of application interface)
@@ -30,7 +30,7 @@
 
 
 
-### 0.3a1 Create raw version of booklab package
+## ...wip [0.3a1] Create raw version of booklab package
 
 * wip...
 * 250823 created  `.../booklabd/templates` directory for Flask/Quart rendering with files as symlinks to static site from `docs/` (genetated by mkdocs)
@@ -39,7 +39,7 @@
 
 
 
-### 0.3.dev2 Restructure and clean project for PDM package managemen
+## [0.3.dev2] Restructure and clean project for PDM package managemen
 
 * 250823 updated `pyproject.toml` to get version from booklab package __init.py__.__version__
 * 250823 clraned root project dorectory of not usable now files
@@ -59,7 +59,7 @@
 
 
 
-### 0.3.1 BCAT group commands (231023 h07:00)
+## [0.3.1] BCAT group commands (231023 h07:00)
 
 * 231023piu_b updated `RELNOTE.md` and published site
 * 231023piu_a group commands in a dropdown
