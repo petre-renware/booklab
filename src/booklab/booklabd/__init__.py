@@ -14,6 +14,7 @@ from app_init import init_app
 # create web application object
 api_app = init_app(
     __name__
+    # ... set templates and static directories
 )
 print(f"*** booklabd.__init__.py *** Created api_app var as {api_app}")
 
