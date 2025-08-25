@@ -36,6 +36,7 @@
 
 * ...tbd a test route for /api/bcat/ to write sone data in books catalog
 * ...tbd init the 2 db objects
+* 250825 tested pypeoject.toml PDM run script `build_doc` created to generate booklab technical documentation
 * 250825 booklabd created `api_app` web app object in __init.py__. Impoeted `routes.py` where tested web app object addressibg = OK. tbd: d3fine routes
 * 250825 improved pyprojects.toml with automation tools. NEED TEST, let commented
 * 240825 created booklabd.app_init.py

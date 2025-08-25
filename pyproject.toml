@@ -102,6 +102,7 @@ dependencies = [
     "zopfli==0.2.2",
     "flask>=3.1.2",
     "werkzeug>=3.1.3",
+    "pydoc-markdown>=4.8.2",
 ]
 
 
@@ -111,16 +112,8 @@ dependencies = [
 # ...ISSUES:
 #    1. address correct modules
 #    2. produce specs doc in a right place, addresable from `<pjroott>/docs/...`
-# ...ck.me... build_doc = { shell = "pydoc-markdown -I booklab >doc/810.05a-booklab_DLD_specs.md" }  # build API Reference doc (`xl2roefact/doc/810.05a-xl2roefact_DLD_specs.md`). NOTE: to render a TOC use pydoc option `--render-toc`
+build_doc = {shell = "pydoc-markdown -I booklab >./src/booklab/doc/810.05a-booklab_DLD_specs.md"}  # build API Reference doc. NOTE: to render a TOC use pydoc option `--render-toc`
 build_site = {shell = "mkdocs build"}  # run `mkdocs` to build site with parameters defined in `mkdocs.yml`
-
-
-[project.scripts]  #TODO ... nxt cmd should be checked if
-# 1. address correct pack crim pj root (maybe start with src.)
-# 2. can be called from project root after installing package
-# ...ck.me... booklab = "booklab.booklab-cli.app_cli:main"
-
-
 
 
 [tool.pdm]
