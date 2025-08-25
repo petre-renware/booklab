@@ -9,7 +9,7 @@ Created; 21-Aug-2025
 """
 
 
-from app_init import init_app
+from .app_init import init_app
 
 global api_app
 

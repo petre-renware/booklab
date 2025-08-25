@@ -10,19 +10,12 @@ from flask import Flask
 
 
 def init_app(
-    app_name: str
+    app_nam: str
 ) -> Flask:
     """Create Flask application object and return it
 
-    Args:
-
-        `app_name`: name of web application objwcr
-
-    Return:
-
-        web application object
     """
-    app = Flask(app_name)
+    app = Flask(__name__)
     return app
 
 # ... this should be moved in main __init.py__ import routes
