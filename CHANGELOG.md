@@ -35,6 +35,7 @@
 ## [... 0.3a2] First booklabd as Flask/Quart app to serve test routes
 
 * ..wip
+* 250825 created booklabd.app_init.py
 * 250824 upd version and import req packages for Flask and old CGI structure (to access JSON files as a database)
 
 
