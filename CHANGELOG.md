@@ -16,7 +16,7 @@
 
 
 
-## 0.3  ... #TODO BCAT extend book command center (...wip...)
+## ... #TODO [unreleased] BCAT extend book command center (...wip...)
 
 * tbd... #TODO-ASAP__focus on Jupiter__
 * tbd... try to execute book manipulation scripts from a Jupiter notebook (as part of application interface)
@@ -30,15 +30,37 @@
 
 
 
-### 0.3a1 Create raw version of booklab package
-
-* wip...
-* 250823 release 0.3.dev2 into development branch and update version
 
 
+## [... 0.4] First booklabd as Flask web app to serve `/api/.../` routes
+### |... 0.4b1] create `db...` ovjects and a test `/api/bcat` route
+* ...tbd a test route for /api/bcat/ to write sone data in books catalog
+* ...tbd init the 2 db objects
+* ...tbd api_app set `templates` & `static` dirs to point to `<PJ-ROOT>/docs/`
+### [0.4a1] create basic Flask structure
+* 250825 tested pyproject.toml PDM run script `build_doc` created to generate booklab technical documentation
+* 250825 booklabd created `api_app` web app object in __init.py__. Impoeted `routes.py` where tested web app object addressibg = OK. tbd: d3fine routes
+* 250825 improved pyprojects.toml with automation tools. NEED TEST, let commented
+* 240825 created booklabd.app_init.py
+* 250824 upd version and import req packages for Flask and old CGI structure (to access JSON files as a database)
 
 
-### 0.3.dev2 Restructure and clean project for PDM package managemen
+
+
+
+
+## [0.3a1] Create raw structure of booklab package (230824 h18:15)
+
+* 250824 created basic Flask dirs in `.../booklabd/`
+* 250823 created  `.../booklabd/templates` directory for Flask/Quart rendering with files as symlinks to static site from `docs/` (genetated by mkdocs)
+* 250823 release 0.3.dev2 into development branch and update version to 0.3a1
+
+
+
+
+
+
+## [0.3.dev2] Restructure and clean project for PDM package management (250823 h16:00)
 
 * 250823 updated `pyproject.toml` to get version from booklab package __init.py__.__version__
 * 250823 clraned root project dorectory of not usable now files
@@ -56,9 +78,7 @@
 
 
 
-
-
-### 0.3.1 BCAT group commands (231023 h07:00)
+## [0.3.1] BCAT group commands (231023 h07:00)
 
 * 231023piu_b updated `RELNOTE.md` and published site
 * 231023piu_a group commands in a dropdown

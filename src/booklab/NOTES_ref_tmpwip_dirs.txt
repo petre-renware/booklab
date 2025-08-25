@@ -1,8 +1,8 @@
 NOTES ref some temp wip directories in package strycture
 
+- `data/` keep JSON darabaae files coming from CGI arch but still good and reusable AS-IS
 - `old-misc-files/cgi-bin/` contains python files used in old CGI architecture
 - `old-misc-files/bcat/` ia rhe old directory-route content with Jinja template, CSS, JS and index.html redirection
-- `sysInit/` contains accordind to my old std module used to initialize the whole system packages & modules
 - `old-misc-files/`contains various misc filess for development of booklabd API
     requirements.txt used in old CGI models is also present here
 
