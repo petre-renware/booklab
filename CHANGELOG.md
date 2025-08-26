@@ -33,11 +33,15 @@
 
 
 ## [... 0.4] First booklabd as Flask web app to serve `/api/.../` routes
-### |... 0.4b1] create `db...` ovjects and a test `/api/bcat` route
+* ...tbd upd site with a chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
+### |0.4b1] - wip...
+Create `db...` objects and a test `/api/bcat` route:
 * ...tbd a test route for /api/bcat/ to write sone data in books catalog
 * ...tbd init the 2 db objects
 * ...tbd api_app set `templates` & `static` dirs to point to `<PJ-ROOT>/docs/`
-### [0.4a1] create basic Flask structure
+* 250826 booklabd/routes.py created a route for /api/bcat/. Run OK. Need test efective route exec in browser
+### [0.4a1] - 25-aug-25
+Create basic Flask structure:
 * 250825 tested pyproject.toml PDM run script `build_doc` created to generate booklab technical documentation
 * 250825 booklabd created `api_app` web app object in __init.py__. Impoeted `routes.py` where tested web app object addressibg = OK. tbd: d3fine routes
 * 250825 improved pyprojects.toml with automation tools. NEED TEST, let commented
