@@ -9,19 +9,24 @@ from flask import Flask
 
 
 def init_app(
-    app_name: str
+    app_name: str,
+    template_dir: str
 ) -> Flask:
     """Create Flask application object and return it
 
     Args:
 
         `app_name`: name of web application objwcr
+        `template_dir`: directory used by Flask app to render Jinja templates
 
     Return:
 
         web application object
     """
-    app = Flask(app_name)
+    app = Flask(
+        app_name,
+        template_folder = template_dir
+    )
     return app
 
 # ... this should be moved in main __init.py__ import routes

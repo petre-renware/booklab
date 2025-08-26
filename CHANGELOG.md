@@ -38,7 +38,7 @@
 Create `db...` objects and a test `/api/bcat` route:
 * ...tbd a test route for /api/bcat/ to write sone data in books catalog
 * ...tbd init the 2 db objects
-* ...tbd api_app set `templates` & `static` dirs to point to `<PJ-ROOT>/docs/`
+* 250826-c api_app set `templates` dir to point to `<PJ-ROOT>/docs/`
 * 250826-b started booklab/booklabd-run.py intended to run web application. TESTED.OK address of `api_app` object
 * 250826-a booklabd/routes.py created a route for /api/bcat/. Run OK. Need test efective route exec in browser
 ### [0.4a1] - 25.aug.2025
