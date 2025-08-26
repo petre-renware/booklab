@@ -6,7 +6,7 @@ Important variables:
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 Created: 250825
 """
-from __init__ import api_app
+from booklab.booklabd import api_app
 
 
 # ...nxt dbg lin. drop it

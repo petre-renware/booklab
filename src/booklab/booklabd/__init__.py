@@ -8,7 +8,7 @@ Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 Created; 21-Aug-2025
 """
 
-from app_init import init_app
+from booklab.booklabd.app_init import init_app
 
 
 # create web application object
@@ -23,7 +23,7 @@ db_system = ...
 db_books = ...
 
 # get routes
-import routes
+import booklab.booklabd.routes
 
 
 
