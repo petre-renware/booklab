@@ -40,7 +40,7 @@ Create `db...` objects and a test `/api/bcat` route:
 * ...tbd init the 2 db objects
 * ...tbd api_app set `templates` & `static` dirs to point to `<PJ-ROOT>/docs/`
 * 250826 booklabd/routes.py created a route for /api/bcat/. Run OK. Need test efective route exec in browser
-### [0.4a1] - 25-aug-25
+### [0.4a1] - 25.aug.2025
 Create basic Flask structure:
 * 250825 tested pyproject.toml PDM run script `build_doc` created to generate booklab technical documentation
 * 250825 booklabd created `api_app` web app object in __init.py__. Impoeted `routes.py` where tested web app object addressibg = OK. tbd: d3fine routes
@@ -53,8 +53,8 @@ Create basic Flask structure:
 
 
 
-## [0.3a1] Create raw structure of booklab package (230824 h18:15)
-
+## [0.3a1] - 24.aug.2025
+Create raw structure of booklab package:
 * 250824 created basic Flask dirs in `.../booklabd/`
 * 250823 created  `.../booklabd/templates` directory for Flask/Quart rendering with files as symlinks to static site from `docs/` (genetated by mkdocs)
 * 250823 release 0.3.dev2 into development branch and update version to 0.3a1
@@ -64,8 +64,8 @@ Create basic Flask structure:
 
 
 
-## [0.3.dev2] Restructure and clean project for PDM package management (250823 h16:00)
-
+## [0.3.dev2] - 23.aug.2025
+Restructure and clean project for PDM package management:
 * 250823 updated `pyproject.toml` to get version from booklab package __init.py__.__version__
 * 250823 clraned root project dorectory of not usable now files
 * 250823 copied from old CFI model the route-directory `.../bcat/` for Jinja templates
