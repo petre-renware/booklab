@@ -16,7 +16,7 @@ template_location = os.path.abspath("../../../docs")
 # create web application object
 api_app = init_app(
     __name__,
-    template_dir = template_location
+    static_site_dir = template_location
     # ... set static directories
 )
 print(f"*** booklabd.__init__.py *** Created api_app var as {api_app} with template dir to {template_location}")

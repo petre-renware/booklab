@@ -10,14 +10,14 @@ from flask import Flask
 
 def init_app(
     app_name: str,
-    template_dir: str
+    static_site_dir: str
 ) -> Flask:
     """Create Flask application object and return it
 
     Args:
 
         `app_name`: name of web application objwcr
-        `template_dir`: directory used by Flask app to render Jinja templates
+        `static_site_dir`: directory used by Flask app to render Jinja templates
 
     Return:
 
@@ -25,8 +25,10 @@ def init_app(
     """
     app = Flask(
         app_name,
-        template_folder = template_dir
+        template_folder = static_site_dir,
+        static_folder = static_site_dir
     )
     return app
 
-# ... this should be moved in main __init.py__ import routes
+
+
