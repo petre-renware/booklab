@@ -5,10 +5,12 @@ Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 Created at: 250826
 """
 
-from booklab.booklabd import api_app
 
 
-# test. drop me after all clear and saved in mind ..;
-print(f"***booklabd-run.py*** imported api_app is {api_app}")
+#...drop.me from booklab.booklabd import api_app
+
+gunicorn -b 0.0.0.0:5003 -u app booklab.booklabd:api_app
+
+
 
 
