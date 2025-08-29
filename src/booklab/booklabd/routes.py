@@ -14,7 +14,7 @@ print(f"*** booklabd.routes.py *** here is api_app variable {api_app}")
 
 
 '''
-@api_app.route("/api/bcat")
+@api_app.route("/api/bcat/")
 def api_bcat():
     """ ...wip...to be upd to my std (google std)
     """
