@@ -103,6 +103,7 @@ dependencies = [
     "flask>=3.1.2",
     "werkzeug>=3.1.3",
     "pydoc-markdown>=4.8.2",
+    "gunicorn>=23.0.0",
 ]
 
 
@@ -114,6 +115,8 @@ dependencies = [
 #    2. produce specs doc in a right place, addresable from `<pjroott>/docs/...`
 build_doc = {shell = "pydoc-markdown -I booklab >./src/booklab/doc/810.05a-booklab_DLD_specs.md"}  # build API Reference doc. NOTE: to render a TOC use pydoc option `--render-toc`
 build_site = {shell = "mkdocs build"}  # run `mkdocs` to build site with parameters defined in `mkdocs.yml`
+bklab_srv = {shell = "src/booklab/booklabd-run.sh"}  # run booklabd server
+
 
 
 [tool.pdm]

@@ -21,7 +21,6 @@
 * tbd... #TODO-ASAP__focus on Jupiter__
 * tbd... try to execute book manipulation scripts from a Jupiter notebook (as part of application interface)
 * tbd... init TMPL with a start `index.md` file && maybe 1, 2 examples markdown as "starter samples"
-
 * tbd... ref command "Verificare" (code-name `bstatus`):
     * [ ] VIEW CONFIG FILE (to display `book_mkdocs.yml`)
     * [ ] SHOW STATUS of assembly (what did in `0.2.4`), check if exists `book_mkdocs.yml.tmpl` that meaning `bkcmd_assembly...sh` was xecuted but not `bkcmd_render...py`
@@ -32,12 +31,44 @@
 
 
 
-## [... 0.4] First booklabd as Flask web app to serve `/api/.../` routes
-### |... 0.4b1] create `db...` ovjects and a test `/api/bcat` route
+
+
+## [... 0.4] - ...
+First booklabd as Flask web app to serve `/api/.../` routes
+* ...tbd upd site with a chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
+
+
+
+
+## |... 0.4b2] - ...
+Create `db...` objects and a test `/api/bcat` route:
+
 * ...tbd a test route for /api/bcat/ to write sone data in books catalog
-* ...tbd init the 2 db objects
-* ...tbd api_app set `templates` & `static` dirs to point to `<PJ-ROOT>/docs/`
-### [0.4a1] create basic Flask structure
+* ...tbd init the `db` objects to JSON databases (.../booklabd/data/)
+
+
+
+
+## [0.4b1] - 29.aug.2025
+Update Flask structure to be able to have exposed basic objects (app, db, ...l and to be served by gunicorn as daemin:
+
+* 250829-d cleaned and update `booklabd` code. Prep route `/api/bcat/` with a sample test return
+* 250829-c updated `booklab/booklabd-run.sh` to listen on `port 8000` and to reload when app files changes
+* 250829-b made `bklab_srv` PDM script to start booklabd server. TEST.OK
+* 250829-a updated `booklab/booklabd-run.sh` to allow exec as daemon if arg#1 id "d"
+* 250828-a created `booklab/booklabd-run.sh` to start booklad web server on _port 5003_
+* 250827-a installed `gunicorn` as pj depedency. TEST run from pj root with obj `booklab.booklabd:api_app` TEST.PASS
+* 250826-d booklabd.api_app set `static_folder` to same as tenplates (booklab static site ref <PJ-ROOT>/docs/)
+* 250826-c booklabd.api_app set `templates` dir to point to `<PJ-ROOT>/docs/`
+* 250826-b started booklab/booklabd-run.py intended to run web application. TESTED.OK address of `api_app` object
+* 250826-a booklabd/routes.py created a route for /api/bcat/. Run OK. Need test efective route exec in browser
+
+
+
+
+## [0.4a1] - 25.aug.2025
+Create basic Flask structure:
+
 * 250825 tested pyproject.toml PDM run script `build_doc` created to generate booklab technical documentation
 * 250825 booklabd created `api_app` web app object in __init.py__. Impoeted `routes.py` where tested web app object addressibg = OK. tbd: d3fine routes
 * 250825 improved pyprojects.toml with automation tools. NEED TEST, let commented
@@ -47,9 +78,8 @@
 
 
 
-
-
-## [0.3a1] Create raw structure of booklab package (230824 h18:15)
+## [0.3a1] - 24.aug.2025
+Create raw structure of booklab package:
 
 * 250824 created basic Flask dirs in `.../booklabd/`
 * 250823 created  `.../booklabd/templates` directory for Flask/Quart rendering with files as symlinks to static site from `docs/` (genetated by mkdocs)
@@ -58,9 +88,8 @@
 
 
 
-
-
-## [0.3.dev2] Restructure and clean project for PDM package management (250823 h16:00)
+## [0.3.dev2] - 23.aug.2025
+Restructure and clean project for PDM package management:
 
 * 250823 updated `pyproject.toml` to get version from booklab package __init.py__.__version__
 * 250823 clraned root project dorectory of not usable now files
@@ -72,8 +101,6 @@
 * 250821 copied KSON databases from old cgi-bin to new booklab dirs
 * 250821 update project structure to python std. created basic init, main, version python files with empty content to be updated
 * 250820 switched project on PDM management
-
-
 
 
 

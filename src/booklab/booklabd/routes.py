@@ -6,12 +6,22 @@ Important variables:
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 Created: 250825
 """
-
-import booklab.booklabd as bkd
-
-# BOTE: `bkd.api_app` can be used from here
-
+from booklab.booklabd import api_app
 
 
 # ...nxt dbg lin. drop it
-print(f"*** booklabd.routes.py *** here is api_app variable {bkd.api_app}")
+print(f"*** booklabd.routes.py *** here is api_app variable {api_app}")
+
+
+
+@api_app.route("/api/bcat/")
+def api_bcat():
+    """ ...wip...
+    CODE HERE IS A TEST. NEED TB UPDATED TO cgi-bin varsion, but first need create `db` objects
+    to be upd to my std (google std)
+    """
+    return "This is a test of /api/bcat/ route"
+
+
+
+
