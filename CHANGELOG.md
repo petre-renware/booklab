@@ -38,6 +38,7 @@
 Create `db...` objects and a test `/api/bcat` route:
 * ...tbd a test route for /api/bcat/ to write sone data in books catalog
 * ...tbd init the `db` objects to JSON databases (.../booklabd/data/)
+* 250829-d cleand and update `booklabd` code. Prep route `/api/bcat/` with a sample test return
 * 250829-c updated `booklab/booklabd-run.sh` to listenon `port 8000` and to reload when app files changes
 * 250829-b made `bklab_srv` PDM script to start booklabd server. TEST.OK
 * 250829-a updated `booklab/booklabd-run.sh` to allow exec as daemon if arg#1 id "d"
