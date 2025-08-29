@@ -1,16 +1,19 @@
-"""**boolabd-run** run web / http booklabd server
-wip...more details here ??? ...
-
-Author: Petre Iordanescu (petre.iordanescu@gmail.com)
-Created at: 250826
-"""
+# **boolabd-run** run web / http booklabd server
+#
+# Author: Petre Iordanescu (petre.iordanescu@gmail.com)
+# Updated at: 250829
 
 
 
-#...drop.me from booklab.booklabd import api_app
+# run gunicorn to serve web api app. Arg #1 state:
+# if == "d" then run as daemon
+# if anything else or missing run once for tests
 
-gunicorn -b 0.0.0.0:5003 -u app booklab.booklabd:api_app
-
+if [ $1 = "d" ]; then
+    gunicorn -b 0.0.0.0:5003 -u app -D booklab.booklabd:api_app
+else
+    gunicorn -b 0.0.0.0:5003 -u app booklab.booklabd:api_app
+fi
 
 
 

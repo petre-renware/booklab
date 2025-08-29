@@ -38,7 +38,8 @@
 Create `db...` objects and a test `/api/bcat` route:
 * ...tbd a test route for /api/bcat/ to write sone data in books catalog
 * ...tbd init the `db` objects to JSON databases (.../booklabd/data/)
-* 250828-a created `booklab/booklabd-rub.sh` to start booklad web server on _port 5003_
+* 250829-a updated `booklab/booklabd-run.sh` to allow exec as daemon if arg#1 id "d"
+* 250828-a created `booklab/booklabd-run.sh` to start booklad web server on _port 5003_
 * 250827-a installed `gunicorn` as pj depedency. TEST run from pj root with obj `booklab.booklabd:api_app` TEST.PASS
 * 250826-d booklabd.api_app set `static_folder` to same as tenplates (booklab static site ref <PJ-ROOT>/docs/)
 * 250826-c booklabd.api_app set `templates` dir to point to `<PJ-ROOT>/docs/`
