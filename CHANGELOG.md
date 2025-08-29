@@ -34,11 +34,13 @@
 
 ## [... 0.4] First booklabd as Flask web app to serve `/api/.../` routes
 * ...tbd upd site with a chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
-### |0.4b1] - wip...
+### |... 0.4b2] - ...
 Create `db...` objects and a test `/api/bcat` route:
 * ...tbd a test route for /api/bcat/ to write sone data in books catalog
 * ...tbd init the `db` objects to JSON databases (.../booklabd/data/)
-* 250829-c updated `booklab/booklabd-run.sh` to listenon `port 8000` and to reload when app files changes
+### [0.4b1] - 29.aug.2025
+* 250829-d cleaned and update `booklabd` code. Prep route `/api/bcat/` with a sample test return
+* 250829-c updated `booklab/booklabd-run.sh` to listen on `port 8000` and to reload when app files changes
 * 250829-b made `bklab_srv` PDM script to start booklabd server. TEST.OK
 * 250829-a updated `booklab/booklabd-run.sh` to allow exec as daemon if arg#1 id "d"
 * 250828-a created `booklab/booklabd-run.sh` to start booklad web server on _port 5003_
@@ -47,6 +49,7 @@ Create `db...` objects and a test `/api/bcat` route:
 * 250826-c booklabd.api_app set `templates` dir to point to `<PJ-ROOT>/docs/`
 * 250826-b started booklab/booklabd-run.py intended to run web application. TESTED.OK address of `api_app` object
 * 250826-a booklabd/routes.py created a route for /api/bcat/. Run OK. Need test efective route exec in browser
+
 ### [0.4a1] - 25.aug.2025
 Create basic Flask structure:
 * 250825 tested pyproject.toml PDM run script `build_doc` created to generate booklab technical documentation
@@ -58,15 +61,11 @@ Create basic Flask structure:
 
 
 
-
-
 ## [0.3a1] - 24.aug.2025
 Create raw structure of booklab package:
 * 250824 created basic Flask dirs in `.../booklabd/`
 * 250823 created  `.../booklabd/templates` directory for Flask/Quart rendering with files as symlinks to static site from `docs/` (genetated by mkdocs)
 * 250823 release 0.3.dev2 into development branch and update version to 0.3a1
-
-
 
 
 

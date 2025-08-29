@@ -13,13 +13,15 @@ from booklab.booklabd import api_app
 print(f"*** booklabd.routes.py *** here is api_app variable {api_app}")
 
 
-'''
+
 @api_app.route("/api/bcat/")
 def api_bcat():
-    """ ...wip...to be upd to my std (google std)
+    """ ...wip...
+    CODE HERE IS A TEST. NEED TB UPDATED TO cgi-bin varsion, but first need create `db` objects
+    to be upd to my std (google std)
     """
     return "This is a test of /api/bcat/ route"
-'''
+
 
 
 

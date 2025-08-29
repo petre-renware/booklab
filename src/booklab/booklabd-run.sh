@@ -9,7 +9,7 @@
 #   if == "d" then run as daemon
 #   if anything else or missing run once for tests
 # gunicor is run with option to reload app when any of its files changes
-if [ $1 = "d" ]; then
+if [ $1 = "d" ]: then
     gunicorn --reload -u app -D booklab.booklabd:api_app
 else
     gunicorn --reload -u app booklab.booklabd:api_app
