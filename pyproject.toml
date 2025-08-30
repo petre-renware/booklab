@@ -108,6 +108,17 @@ dependencies = [
 
 
 
+
+[tool.pdm.dev-dependencies]  # dependencies used in develeopment stage. NOTE: Attn these are NOT transfered in built package
+dev = [
+# does not work
+#    "-e file:///$[PROJECT_ROOT]/src/booklab"
+]
+
+
+
+
+
 [tool.pdm.scripts]  # reference: `https://pdm-project.org/latest/usage/scripts/`
 # this cmd build the technical doc of booklab package & modules
 # ...ISSUES:
@@ -117,13 +128,15 @@ build_doc = {shell = "pydoc-markdown -I booklab >./src/booklab/doc/810.05a-bookl
 build_site = {shell = "mkdocs build"}  # run `mkdocs` to build site with parameters defined in `mkdocs.yml`
 bklab_srv = {shell = "src/booklab/booklabd-run.sh"}  # run booklabd server
 #
-# [project.scripts]
+[project.scripts]
 #
 # this does not wk because PDM require to install
 # booklab pack as editable script which means somethink like
 # `pdm add -e ./sub-package --dev`
 #
 # run_srv = "src/booklab/booklabd-run.sh"
+
+
 
 
 [tool.pdm]
