@@ -45,7 +45,7 @@ Create `db...` objects and a test `/api/bcat` route:
 
 * ...tbd a test route for /api/bcat/ to write sone data in books catalog
 * ...tbd init the `db` objects to JSON databases (.../booklabd/data/)
-* ...still.wip 250831-a config for for gunicorn in serving `booklabd` server web app
+* 250831-a config for for gunicorn in serving `booklabd` server web app. file is symlinked to project root to be correct executed with pdm run as tool script
 
 
 
