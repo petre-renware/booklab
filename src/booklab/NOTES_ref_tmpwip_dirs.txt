@@ -4,5 +4,7 @@ NOTES ref some temp wip directories in package strycture
 - `old-misc-files/cgi-bin/` contains python files used in old CGI architecture
 - `old-misc-files/bcat/` ia rhe old directory-route content with Jinja template, CSS, JS and index.html redirection
 - `old-misc-files/`contains various misc filess for development of booklabd API
-    requirements.txt used in old CGI models is also present here
+  - requirements.txt used in old CGI models is also present here
+
+- `conf/` containing configuration files for booklab components including non-python-app-code ones like gunicorn, nginx, ...
 
