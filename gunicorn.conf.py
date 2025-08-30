@@ -1,1 +1,1 @@
-./src/booklab/gunicorn.conf.py
+./src/booklab/conf/gunicorn.conf.py
