@@ -13,6 +13,7 @@ import os
 import pysondb
 # booklab package imports
 from booklab.booklabd.app_init import init_app
+from booklab.booklabd.db_init import init_db
 from booklab import PACKAGE_ROOT
 from booklab import CONF_ROOT
 from booklab import DATA_ROOT
@@ -26,18 +27,13 @@ api_app = init_app(
 )
 # 4dbg... print(f"*** booklabd.__init__ Created {api_app=} with {template_location=}")
 
-# ...wip.opiss.230831-c create database object by opening JSON files 
-bks_catalog_file = os.path.join(DATA_ROOT, "books_catalog.json")
-db_books = pysondb.db.getDb(bks_catalog_file)
-print(f"*** booklabd__init__ created object {db_books=}")
-db_system = ...
-#  the other db is app_info.json
-# 4dbg... print(f"*** booklabd.__init__ imported {PACKAGE_ROOT=} {DATA_ROOT=} {CONF_ROOT=}")
+# create database object by opening JSON files
+db_books, db_system = init_db()
+print(f"*** booklabd__init__ created objects {db_books=} and {db_system=}")
 
 
 # get routes
 import booklab.booklabd.routes
-
 
 
 
