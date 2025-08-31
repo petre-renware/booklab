@@ -29,7 +29,7 @@ api_app = init_app(
 
 # create database object by opening JSON files
 db_books, db_system = init_db()
-print(f"*** booklabd__init__ created objects {db_books=} and {db_system=}")
+# 4dbg... print(f"*** booklabd__init__ created objects {db_books=} and {db_system=}")
 
 
 # get routes

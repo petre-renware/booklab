@@ -21,7 +21,8 @@ def init_db() -> tuple[pysondb]:
     # ...tbd review and update code ...
     bks_catalog_file = os.path.join(DATA_ROOT, "books_catalog.json")
     db_books = pysondb.db.getDb(bks_catalog_file)
-    print(f"*** booklabd.init_db created object {db_books=}")
+
+    # bks_sysinfo_fioe = ...
     db_system = None  # ...#TODO tbd@250831
     #  the other db is app_info.json 4dbg... 
     # print(f"*** booklabd.__init__ imported 
