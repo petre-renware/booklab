@@ -2,7 +2,7 @@
 [TOC]
 
 
-# Issue ref JSON format
+# README JSON format
 
 Ref database: `books_catalog.json`
 
