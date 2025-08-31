@@ -9,6 +9,7 @@ import pysondb
 import os
 from booklab import DATA_ROOT
 
+
 def init_db(
     app_name: str
 ) -> tuple[pysondb]:
@@ -23,17 +24,17 @@ def init_db(
         (db_books, db_system) tuple `pysondb` object
     """
 
-# ...tbd review and update code ...
-bks_catalog_file = os.path.join(DATA_ROOT, "books_catalog.json")
-db_books = pysondb.db.getDb(bks_catalog_file)
-print(f"*** booklabd__init__ created object {db_books=}")
-db_system = ...
-#  the other db is app_info.json 4dbg... 
-# print(f"*** booklabd.__init__ imported 
-# {PACKAGE_ROOT=} {DATA_ROOT=} 
-# {CONF_ROOT=}")
+    # ...tbd review and update code ...
+    bks_catalog_file = os.path.join(DATA_ROOT, "books_catalog.json")
+    db_books = pysondb.db.getDb(bks_catalog_file)
+    print(f"*** booklabd.init_db created object {db_books=}")
+    db_system = ...
+    #  the other db is app_info.json 4dbg... 
+    # print(f"*** booklabd.__init__ imported 
+    # {PACKAGE_ROOT=} {DATA_ROOT=} 
+    # {CONF_ROOT=}")
 
-return (db_books, db_system)
+    return (db_books, db_system)
 
 
 
