@@ -22,12 +22,12 @@ api_app = init_app(
     __name__,
     static_site_dir = template_location
 )
-print(f"*** booklabd.__init__ *** Created api_app var as {api_app} with template dir to {template_location}")
+print(f"*** booklabd.__init__ *** Created {api_app=} with {template_location=}")
 
 # ...#TODO create database object by opening JSON files 
 db_system = ...
 db_books = ...
-print(f"*** booklab.__init__ imported {PACKAGE_ROOT=} {DATA_ROOT=} {CONF_ROOT=}")
+print(f"*** booklabd.__init__ imported {PACKAGE_ROOT=} {DATA_ROOT=} {CONF_ROOT=}")
 
 
 # get routes
