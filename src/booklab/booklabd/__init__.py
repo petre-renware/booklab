@@ -22,12 +22,15 @@ api_app = init_app(
     __name__,
     static_site_dir = template_location
 )
-print(f"*** booklabd.__init__ *** Created {api_app=} with {template_location=}")
+# 4dbg... print(f"*** booklabd.__init__ *** Created {api_app=} with {template_location=}")
 
-# ...#TODO create database object by opening JSON files 
-db_system = ...
+# ...wip.opiss.230831-c create database object by opening JSON files 
+# dbs_file = os.path.join(my_crt_dir, "data/books_catalog.json")
 db_books = ...
-print(f"*** booklabd.__init__ imported {PACKAGE_ROOT=} {DATA_ROOT=} {CONF_ROOT=}")
+bcat_dbs = pysondb.db.getDb(dbs_file)
+db_system = ...
+#  the other db is app_info.json
+# 4dbg... print(f"*** booklabd.__init__ imported {PACKAGE_ROOT=} {DATA_ROOT=} {CONF_ROOT=}")
 
 
 # get routes
