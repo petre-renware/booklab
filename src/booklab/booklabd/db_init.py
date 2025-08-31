@@ -7,33 +7,33 @@ Created: Sep.2025
 
 import pysondb
 import os
-
+from booklab import DATA_ROOT
 
 def init_db(
     app_name: str
-) -> object:
-    """Create Flask application object and return it
+) -> tuple[pysondb]:
+    """Create db_books, db_system objects and return them as tuple
 
     Args:
 
         `app_name`: name of web application objwcr
-        `static_site_dir`: directory used by Flask app to render Jinja templates
 
     Return:
 
-        web application object
+        (db_books, db_system) tuple `pysondb` object
     """
 
-bks_catalog_file = os.path.join(DATA_ROOT, 
-"books_catalog.json") db_books = 
-pysondb.db.getDb(bks_catalog_file) 
-print(f"*** booklabd__init__ created object 
-{db_books=}") db_system = ...
+# ...tbd review and update code ...
+bks_catalog_file = os.path.join(DATA_ROOT, "books_catalog.json")
+db_books = pysondb.db.getDb(bks_catalog_file)
+print(f"*** booklabd__init__ created object {db_books=}")
+db_system = ...
 #  the other db is app_info.json 4dbg... 
 # print(f"*** booklabd.__init__ imported 
 # {PACKAGE_ROOT=} {DATA_ROOT=} 
 # {CONF_ROOT=}")
 
+return (db_books, db_system)
 
 
 
