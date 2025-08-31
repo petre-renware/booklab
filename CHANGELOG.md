@@ -41,6 +41,7 @@ Create database (aka `db*`) objects for JSON files and a test `/api/bcat` route:
 
 * ...tbd a test route for /api/bcat/ to write sone data in books catalog
 * ...wip 250831-c init the `db` objects to JSON databases:
+    * `init_db.py` module and ref it in `__init__.py`
     * `db_books` for booklab.DATA_ROOT --> books_catalog.json
     * ...tbd booklab.DATA_ROOT --> app_info.json
 * 250831-b `booklab.booklabd.__init__` imported working directories (created in prev change)
