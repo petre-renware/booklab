@@ -6,13 +6,12 @@ Important variables:
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 Created: 250825
 """
+
 from booklab.booklabd import api_app
+from booklab.booklabd import db_books, db_system
 
 
-# ...nxt dbg lin. drop it
-print(f"*** booklabd.routes.py *** here is api_app variable {api_app}")
-
-
+# 4dbg... print(f"*** booklabd.routes.py *** here is api_app variable {api_app}")
 
 @api_app.route("/api/bcat/")
 def api_bcat():
