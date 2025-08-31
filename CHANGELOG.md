@@ -40,7 +40,7 @@ First booklabd as Flask web app to serve `/api/.../` routes
 Create database (aka `db*`) objects for JSON files and a test `/api/bcat` route:
 
 * ...tbd a test route for /api/bcat/ to write sone data in books catalog
-* ...tbd init the `db` objects to JSON databases (.../booklabd/data/)
+* ...230831-c init the `db` objects to JSON databases (dir `booklab.DATA_ROOT`)
 * 250831-b `booklab.booklabd.__init__` imported working directories (created in prev change)
 * 250831-a `booklab.__init__` create constants: PACKAGE _ROOT, DATA_ROOT, CONF_ROOT
 * 250830-b make gunicorn config python module in `booklab.conf` module (as new one)
