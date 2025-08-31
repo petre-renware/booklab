@@ -29,10 +29,6 @@
 
 
 
-
-
-
-
 ## [... 0.4] - ...
 First booklabd as Flask web app to serve `/api/.../` routes
 * ...tbd upd site with a chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
@@ -41,10 +37,16 @@ First booklabd as Flask web app to serve `/api/.../` routes
 
 
 ## |... 0.4b2] - ...
-Create `db...` objects and a test `/api/bcat` route:
+Create database (aka `db*`) objects for JSON files and a test `/api/bcat` route:
 
 * ...tbd a test route for /api/bcat/ to write sone data in books catalog
-* ...tbd init the `db` objects to JSON databases (.../booklabd/data/)
+* ...wip 230831-c init the `db` objects to JSON databases:
+    * booklab.DATA_ROOT --> books_catalog.json
+    * booklab.DATA_ROOT --> app_info.json
+* 250831-b `booklab.booklabd.__init__` imported working directories (created in prev change)
+* 250831-a `booklab.__init__` create constants: PACKAGE _ROOT, DATA_ROOT, CONF_ROOT
+* 250830-b make gunicorn config python module in `booklab.conf` module (as new one)
+* 250830-a config for for gunicorn in serving `booklabd` server web app. file is symlinked to project root to be correct executed with pdm run as tool script
 
 
 

@@ -1,3 +1,4 @@
+
 """ booklabd - Booklab API server module
 Main functionalities:
 - operate JSON database file
@@ -8,8 +9,11 @@ Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 Created; 21-Aug-2025
 """
 
-from booklab.booklabd.app_init import init_app
 import os
+from booklab.booklabd.app_init import init_app
+from booklab import PACKAGE_ROOT
+from booklab import CONF_ROOT
+from booklab import DATA_ROOT
 
 
 template_location = os.path.abspath("../../../docs")
@@ -18,11 +22,16 @@ api_app = init_app(
     __name__,
     static_site_dir = template_location
 )
-print(f"*** booklabd.__init__.py *** Created api_app var as {api_app} with template dir to {template_location}")
+# 4dbg... print(f"*** booklabd.__init__ *** Created {api_app=} with {template_location=}")
 
-# ...#TODO create database object by opening JSON files 
-db_system = ...
+# ...wip.opiss.230831-c create database object by opening JSON files 
+# dbs_file = os.path.join(my_crt_dir, "data/books_catalog.json")
 db_books = ...
+bcat_dbs = pysondb.db.getDb(dbs_file)
+db_system = ...
+#  the other db is app_info.json
+# 4dbg... print(f"*** booklabd.__init__ imported {PACKAGE_ROOT=} {DATA_ROOT=} {CONF_ROOT=}")
+
 
 # get routes
 import booklab.booklabd.routes
