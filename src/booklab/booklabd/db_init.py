@@ -1,16 +1,17 @@
-"""**app_init** module that initialize `booklabd` application
-This module is designed to initialize the main web application object `api_app`.
+"""**db_init** module that initialize `booklabd` database (more JSON files)
+This module is designed to initialize database objects `db_books` and `db_system`.
 
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
+Created: Sep.2025
 """
 
-from flask import Flask
+import pysondb
+import os
 
 
-def init_app(
-    app_name: str,
-    static_site_dir: str
-) -> Flask:
+def init_db(
+    app_name: str
+) -> object:
     """Create Flask application object and return it
 
     Args:
@@ -22,12 +23,17 @@ def init_app(
 
         web application object
     """
-    app = Flask(
-        app_name,
-        template_folder = static_site_dir,
-        static_folder = static_site_dir
-    )
-    return app
+
+bks_catalog_file = os.path.join(DATA_ROOT, 
+"books_catalog.json") db_books = 
+pysondb.db.getDb(bks_catalog_file) 
+print(f"*** booklabd__init__ created object 
+{db_books=}") db_system = ...
+#  the other db is app_info.json 4dbg... 
+# print(f"*** booklabd.__init__ imported 
+# {PACKAGE_ROOT=} {DATA_ROOT=} 
+# {CONF_ROOT=}")
+
 
 
 
