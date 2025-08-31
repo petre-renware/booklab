@@ -19,13 +19,11 @@ __version__ = "0.4b2"
 
 # get current directory absolute path and construct all work/refered paths
 PACKAGE_ROOT = pathlib.Path(__file__).parent.resolve()
-DATA_ROOT = PACKAGE_ROOT.joinpath("data")  # database files directory
-CONF_ROOT = PACKAGE_ROOT.joinpath("conf")  # config files directory
+DATA_ROOT = "...tb get..."  # database files directory
+CONF_ROOT = "...tb get..."  # config files directory
 
-# test & debug print ... TO BE REMOVED @ RELEASE
-print("*** PACKAGE_ROOT dir: ", PACKAGE_ROOT)
-print("*** DATA_ROOT dir: ", DATA_ROOT)
-print("*** CONF_ROIT dir: ", CONF_ROOT)
+# test & debug print
+print(f"*** PACKAGE_ROOT dir is {PACKAGE_ROOT} ")
 
 
 

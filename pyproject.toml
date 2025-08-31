@@ -104,6 +104,7 @@ dependencies = [
     "werkzeug>=3.1.3",
     "pydoc-markdown>=4.8.2",
     "gunicorn>=23.0.0",
+    "pathlib>=1.0.1",
 ]
 
 
@@ -128,17 +129,6 @@ build_doc = {shell = "pydoc-markdown -I booklab >./src/booklab/doc/810.05a-bookl
 build_site = {shell = "mkdocs build"}  # run `mkdocs` to build site with parameters defined in `mkdocs.yml`
 bklab_srv = {shell = "src/booklab/booklabd-run.sh"}  # run booklabd server
 #
-[project.scripts]
-#
-# this does not wk because PDM require to install
-# booklab pack as editable script which means somethink like
-# `pdm add -e ./sub-package --dev`
-#
-# run_srv = "src/booklab/booklabd-run.sh"
-
-
-
-
 [tool.pdm]
 distribution = true
 
