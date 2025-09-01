@@ -9,7 +9,9 @@ from flask import Flask
 
 def init_app(
     app_name: str,
-    static_site_dir: str
+    static_site_dir: str,
+    templates_dir: str,
+    pjroot_location: str
 ) -> Flask:
     """Create Flask application object and return it
 
@@ -17,6 +19,8 @@ def init_app(
 
         `app_name`: name of web application objwcr
         `static_site_dir`: directory used by Flask app to render Jinja templates
+        `templates_dir`: directory name where templates are to becfound (will be add by Flask to pjroot_location)
+        `pjroot_location`: project root directory
 
     Return:
 
@@ -24,8 +28,9 @@ def init_app(
     """
     app = Flask(
         app_name,
-        template_folder = static_site_dir,
-        static_folder = static_site_dir
+        template_folder = templates_dir,
+        static_folder = static_site_dir,
+        root_path = pjroot_location
     )
     return app
 

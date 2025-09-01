@@ -20,18 +20,20 @@ from booklab import CONF_ROOT
 from booklab import DATA_ROOT
 
 
-template_location = os.path.abspath("../../../docs")
+static_location = os.path.abspath("../../../docs/")
+pjroot_location = os.path.abspath("../../../")
+templates_dir = os.path.abspath("docs")
 # create web application object
 api_app = init_app(
     __name__,
-    static_site_dir = template_location
+    static_site_dir = static_location,
+    templates_dir = templates_dir,
+    pjroot_location = pjroot_location
 )
 
-# 4dbg... print(f"*** booklabd.__init__ Created {api_app=} with {template_location=}")
 
 # create database object by opening JSON files
 db_books, db_system = init_db()
-# 4dbg... print(f"*** booklabd__init__ created objects {db_books=} and {db_system=}")
 
 
 # get routes
