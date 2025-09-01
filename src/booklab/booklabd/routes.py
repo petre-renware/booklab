@@ -25,12 +25,8 @@ def api_bcat():
     bcat_records = db_books.getAll()
     if not (type(bcat_records) == type(list())):
         bcat_records = list().append(bcat_records)  # make it list if is not (when just 1 record)
-    #...4dbg str_bcat_records = f"{bcat_records=}"  # 4dbg...
 
-    #... #TODO render template as nxt line
-    # Fkask_render_template_function_w.params (bcat_data=bcat_records)
-
-    #..;4dbg ret_str = "bcat records is:<br>" + str_bcat_records  # 4dbg
+    # render docs/bcat/bcat.html template
     ret_str = render_template(
         "bcat/bcat.html",
         bcat_data = bcat_records
