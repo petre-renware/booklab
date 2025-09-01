@@ -19,6 +19,20 @@ def api_bcat():
     CODE HERE IS A TEST. NEED TB UPDATED TO cgi-bin varsion, but first need create `db` objects
     to be upd to my std (google std)
     """
+
+
+    ''' code extracted from cgi-bin version
+    bcat_records = db_books.getAll()
+    if not (type(bcat_records) == type(list())):
+        bcat_records = list().append(bcat_records)  # make it list if is not (when just 1 record)
+    # here was read "bcat/bcat.html"
+    #   to create Jina template instance
+    #   then render it
+    content = Fkask_render_template_function_w.params (bcat_data=bcat_records)
+    print(content)
+    '''
+
+    
     return "This is a test of /api/bcat/ route"
 
 
