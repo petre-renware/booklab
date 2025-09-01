@@ -22,9 +22,11 @@ PACKAGE_ROOT = pathlib.Path(__file__).parent.resolve()
 DATA_ROOT = PACKAGE_ROOT.joinpath("data")  # database files directory
 CONF_ROOT = PACKAGE_ROOT.joinpath("conf")  # config files directory
 
+
 # 4dbg... print("*** PACKAGE_ROOT dir: ", PACKAGE_ROOT)
 # 4dbg... print("*** DATA_ROOT dir: ", DATA_ROOT)
 # 4dbg... print("*** CONF_ROIT dir: ", CONF_ROOT)
+
 
 
 
