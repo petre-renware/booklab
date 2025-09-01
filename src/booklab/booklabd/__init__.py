@@ -21,13 +21,16 @@ from booklab import DATA_ROOT
 
 
 template_location = os.path.abspath("../../../docs/")
+pjroot_location = os.path.abspath("../../../")
+
 # create web application object
 api_app = init_app(
     __name__,
-    static_site_dir = template_location
+    static_site_dir = template_location,
+    pjroot_location = pjroot_location
 )
 
-print(f"*** booklabd.__init__ Created {api_app=} with {template_location=}")
+# 4dbg print(f"*** booklabd.__init__ Created {api_app=} with TEMPLATE LOCATION {template_location=} and ROOT LOCATION {pjroot_location=}")
 
 # create database object by opening JSON files
 db_books, db_system = init_db()

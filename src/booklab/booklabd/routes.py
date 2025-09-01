@@ -14,7 +14,7 @@ from booklab.booklabd import db_books, db_system
 
 @api_app.route("/api/bcat/")
 def api_bcat():
-    """**api_bca** serveve route `/api/bcat`
+    """**api_bcat** serve route `/api/bcat/`
     _NOTE:_ as exposed through nginx on this server the requestable route is `/bcat` (/api/ part is add by nginx)
 
     Author: Petre Iordanescu (petre.iordanescu@gmail.com)
@@ -33,7 +33,7 @@ def api_bcat():
     #..;4dbg ret_str = "bcat records is:<br>" + str_bcat_records  # 4dbg
     ret_str = render_template(
         "bcat/bcat.html",
-        bcat_data=bcat_records
+        bcat_data = bcat_records
     )
     return ret_str
 

@@ -30,21 +30,18 @@
 
 
 
-## [... 0.4r1] - ...
-First booklabd as Flask web app to serve `/api/.../` routes
-
+## [... 0.4r] - ...
+First booklabd as Flask web app to serve `/api/.../` routes:
 * ...tbd upd site with a chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
 * ...wip 250901-c booklabd.templates render bcat
-  - w.err "template not found"
-  - add dir `.../booklabd/templates/doce/` as symlink to static site (aka docs)`
-* 250901-b update version #
+    - @250901 still err "template not found"
+* 250901-b update version string and set Flask root directory as project dir (to be able to address docs/ dir as template dir)
 
 
 
 
 ## |0.4b2] - 01.sep.2025
 Create database (aka `db*`) objects for JSON files and a test `/api/bcat` route:
-
 * 250901-a a test route for /api/bcat/ to write sone data in books catalog
 * 250831-c init the `db` objects to JSON databases:
     * `init_db.py` module and ref it in `__init__.py`
@@ -60,7 +57,6 @@ Create database (aka `db*`) objects for JSON files and a test `/api/bcat` route:
 
 ## [0.4b1] - 29.aug.2025
 Update Flask structure to be able to have exposed basic objects (app, db, ...l and to be served by gunicorn as daemin:
-
 * 250829-d cleaned and update `booklabd` code. Prep route `/api/bcat/` with a sample test return
 * 250829-c updated `booklab/booklabd-run.sh` to listen on `port 8000` and to reload when app files changes
 * 250829-b made `bklab_srv` PDM script to start booklabd server. TEST.OK
@@ -77,7 +73,6 @@ Update Flask structure to be able to have exposed basic objects (app, db, ...l a
 
 ## [0.4a1] - 25.aug.2025
 Create basic Flask structure:
-
 * 250825 tested pyproject.toml PDM run script `build_doc` created to generate booklab technical documentation
 * 250825 booklabd created `api_app` web app object in __init.py__. Impoeted `routes.py` where tested web app object addressibg = OK. tbd: d3fine routes
 * 250825 improved pyprojects.toml with automation tools. NEED TEST, let commented
@@ -89,7 +84,6 @@ Create basic Flask structure:
 
 ## [0.3a1] - 24.aug.2025
 Create raw structure of booklab package:
-
 * 250824 created basic Flask dirs in `.../booklabd/`
 * 250823 created  `.../booklabd/templates` directory for Flask/Quart rendering with files as symlinks to static site from `docs/` (genetated by mkdocs)
 * 250823 release 0.3.dev2 into development branch and update version to 0.3a1
@@ -99,7 +93,6 @@ Create raw structure of booklab package:
 
 ## [0.3.dev2] - 23.aug.2025
 Restructure and clean project for PDM package management:
-
 * 250823 updated `pyproject.toml` to get version from booklab package __init.py__.__version__
 * 250823 clraned root project dorectory of not usable now files
 * 250823 copied from old CFI model the route-directory `.../bcat/` for Jinja templates
@@ -122,8 +115,6 @@ Restructure and clean project for PDM package management:
     * [x] clean the `table HTML` section, drop `markdown` attribute and use normal link HTML tags
     * [x] add new command "Verificare" (status check / code-name `bstatus`)
 * 231021piu_a small fixes in 'bcat.md`
-
-
 
 
 
