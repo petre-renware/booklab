@@ -29,17 +29,18 @@
 
 
 
-## [... 0.4] - ...
+## [... 0.4r1] - ...
 First booklabd as Flask web app to serve `/api/.../` routes
 * ...tbd upd site with a chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
+* ...tbd update version #
 
 
 
 
-## |... 0.4b2] - ...
+## |0.4b2] - 01.sep.2025
 Create database (aka `db*`) objects for JSON files and a test `/api/bcat` route:
 
-* ...wip 250901-a a test route for /api/bcat/ to write sone data in books catalog
+* 250901-a a test route for /api/bcat/ to write sone data in books catalog
 * 250831-c init the `db` objects to JSON databases:
     * `init_db.py` module and ref it in `__init__.py`
     * `db_books` for booklab.DATA_ROOT --> books_catalog.json
