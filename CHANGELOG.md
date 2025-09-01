@@ -34,7 +34,9 @@
 First booklabd as Flask web app to serve `/api/.../` routes
 
 * ...tbd upd site with a chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
-* ...tbd update version #
+* ...wip 250901-c booklabd.templates render bcat
+  - w.err "template not found"
+* 250901-b update version #
 
 
 
