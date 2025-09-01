@@ -31,11 +31,10 @@
 
 
 ## [... 0.4r1] - ...
-
 First booklabd as Flask web app to serve `/api/.../` routes
+
 * ...tbd upd site with a chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
 * ...tbd update version #
-
 
 
 
