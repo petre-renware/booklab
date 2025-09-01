@@ -39,7 +39,7 @@ First booklabd as Flask web app to serve `/api/.../` routes
 ## |... 0.4b2] - ...
 Create database (aka `db*`) objects for JSON files and a test `/api/bcat` route:
 
-* ...tbd a test route for /api/bcat/ to write sone data in books catalog
+* ...wip 250901-a a test route for /api/bcat/ to write sone data in books catalog
 * 250831-c init the `db` objects to JSON databases:
     * `init_db.py` module and ref it in `__init__.py`
     * `db_books` for booklab.DATA_ROOT --> books_catalog.json
