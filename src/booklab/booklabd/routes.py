@@ -21,10 +21,12 @@ def api_bcat():
     """
 
 
-    ''' code extracted from cgi-bin version
+    # code extracted from cgi-bin version
     bcat_records = db_books.getAll()
     if not (type(bcat_records) == type(list())):
         bcat_records = list().append(bcat_records)  # make it list if is not (when just 1 record)
+    print(f"{bcat_records=}")  # 4dbg...
+    '''
     # here was read "bcat/bcat.html"
     #   to create Jina template instance
     #   then render it
@@ -32,7 +34,7 @@ def api_bcat():
     print(content)
     '''
 
-    
+
     return "This is a test of /api/bcat/ route"
 
 
