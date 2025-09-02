@@ -107,8 +107,8 @@ Restructure and clean project for PDM package management:
 
 
 
-## [0.3.1] BCAT group commands (231023 h07:00)
-
+## [0.3.1] - 03.oct.2023 h07:00
+BCAT group commands:
 * 231023piu_b updated `RELNOTE.md` and published site
 * 231023piu_a group commands in a dropdown
 * 231022piu_a update `bcat.md`
