@@ -46,6 +46,11 @@ def static_site(any_path: str):
     # redirect to static site
     ...
 
+
+    # where to go: `/apisite/bcat`
+    # where come from: `/docs/...<path type>...`
+
+
     return redirect("/booklab/devsite/" + any_path)
 #    return str(any_path)  #...4dbg purposes. tb drppped
 
