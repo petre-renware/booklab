@@ -19,8 +19,8 @@ def init_app(
 
         `app_name`: name of web application objwcr
         `static_site_dir`: directory used by Flask app to render Jinja templates
-        `templates_dir`: directory name where templates are to becfound (will be add by Flask to pjroot_location)
-        `pjroot_location`: project root directory
+        `templates_dir`: directory name where templates are to becfound (relative to pjroot_location)
+        `pjroot_location`: project root directory (relative to pjroot_location)
 
     Return:
 

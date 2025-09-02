@@ -34,5 +34,21 @@ def api_bcat():
     return ret_str
 
 
+@api_app.route('/docs/<any_path>')
+def static_site(any_path: str):
+    """**static_site** serve routes of static sote `/docs/...`
+
+    Author: Petre Iordanescu (petre.iordanescu@gmail.com)
+    Last update: Sep.2025
+    """
+
+    # redirect to static site
+    ...
+
+    return str(any_path)  #...4dbg purposes. tb drppped
+
+
+
+
 
 
