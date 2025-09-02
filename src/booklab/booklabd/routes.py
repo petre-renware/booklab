@@ -35,7 +35,7 @@ def api_bcat():
     return ret_str
 
 
-@api_app.route('/api/docs/<any_path>')
+@api_app.route('/api/docs/<path:any_path>')
 def static_site(any_path: str):
     """**static_site** serve routes of static sote `/docs/...`
 
@@ -52,8 +52,8 @@ def static_site(any_path: str):
     # pay ATTN that api followed by "any" will interract with others /api/
     # maybe try just root path, meaning /
 
-    return redirect("/booklab/devsite/" + any_path)
-#    return str(any_path)  #...4dbg purposes. tb drppped
+    # return redirect("/booklab/devsite/" + any_path)
+    return str(any_path)  #...4dbg purposes. tb drppped
 
 
 
