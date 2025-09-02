@@ -48,8 +48,9 @@ def static_site(any_path: str):
 
 
     # where to go: `/apisite/bcat`
-    # where come from: `/docs/...<path type>...`
-
+    # where come from: `/api/...<path type>...`
+    # pay ATTN that api followed by "any" will interract with others /api/
+    # maybe try just root path, meaning /
 
     return redirect("/booklab/devsite/" + any_path)
 #    return str(any_path)  #...4dbg purposes. tb drppped
