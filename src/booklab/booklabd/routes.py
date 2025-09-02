@@ -8,6 +8,7 @@ Created: 250825
 """
 
 from flask import render_template
+from flask import redirect
 from booklab.booklabd import api_app
 from booklab.booklabd import db_books, db_system
 
@@ -45,7 +46,8 @@ def static_site(any_path: str):
     # redirect to static site
     ...
 
-    return str(any_path)  #...4dbg purposes. tb drppped
+    return redirect("/booklab/devsite/" + any_path)
+#    return str(any_path)  #...4dbg purposes. tb drppped
 
 
 
