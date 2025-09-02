@@ -33,7 +33,8 @@
 ## [... 0.4r] - ...
 First booklabd as Flask web app to serve `/api/.../` routes:
 * ...tbd upd site with a chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
-* ...tbd upd bcat/index.html to redirect to booklabd route
+* ...wip 250902-b upd bcat/index.html to redirect to booklabd route
+    still need improved. acces page OK but cannot acces ok others page from here and is not right rendered (icons ...).
 * 250902-a clean project files
 * 250901-c booklabd.templates render bcat
 * 250901-b update version string and set Flask root directory as project dir (to be able to address docs/ dir as template dir)
