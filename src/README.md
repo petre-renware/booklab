@@ -6,6 +6,7 @@ Booklab is composed from the following sub-packages:
 * **booklab-cli** which is a command line application used to manage system
 * **data** which contains the system database basically as JSON files
 * **conf** which contains various configuration files used by system components including infrastructure ones like WSGI web server (gunicorn), proxy server (nginx)
+* **doc** which contains techical system documentation (developer and administrator level)
 * **docs** (note 1) is the generated HTML static site
 * **doc-src** (note 1) is the static site raw source as Markdown files
 
