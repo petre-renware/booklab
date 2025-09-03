@@ -15,7 +15,7 @@ Last update: aug.2025
 import pathlib
 
 # Booklab system version
-from __version__ import __version__
+from booklab.__version__ import __version__
 
 # get current directory absolute path and construct all work/refered paths
 PACKAGE_ROOT = pathlib.Path(__file__).parent.resolve()
