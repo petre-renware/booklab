@@ -10,16 +10,9 @@ Created: 250825
 from flask import render_template
 from flask import redirect
 from flask import url_for
-
+from flask import app_context
 from booklab.booklabd import api_app
 from booklab.booklabd import db_books, db_system
-
-
-@api_app.route("/teststatic/")
-def teststatic():
-    static_url = url_for("static", _external = True)
-    ret_str = f"{static_url=}"
-    return ret_str
 
 
 @api_app.route("/api/bcat/")
@@ -45,7 +38,7 @@ def api_bcat():
 
 
 # @api_app.route('/api/docs/<path:any_path>')
-'''
+"""
 @api_app.route('/<path:any_path>')
 def static_site(any_path: str):
     """**static_site** serve routes of static sote `/docs/...`
@@ -65,7 +58,7 @@ def static_site(any_path: str):
 
     # return redirect("/booklab/devsite/" + any_path)
     return str(any_path)  #...4dbg purposes. tb drppped
-'''
+"""
 
 
 
