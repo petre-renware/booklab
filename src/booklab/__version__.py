@@ -1,4 +1,4 @@
 
 
-__version__ = "0.4r"
+__version__ = "0.4b3"
 
