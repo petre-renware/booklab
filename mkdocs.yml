@@ -1,5 +1,5 @@
 site_name: BookLab
-site_author: 'Petre Iordanescu, RENware Software Systems, petre.iordanescu@gmail.com'
+site_author: 'Petre Iordanescu (petre.iordanescu@gmail.com)'
 copyright: 'Copyright (c) RENware Software Systems'
 
 
@@ -71,7 +71,6 @@ markdown_extensions:
 
 
 extra:
-    arint_version: "0.1"
 #  alternate: #NOTE language options - FUTURE FEATURE - should first have a translation...
 #    - name: English
 #      link: /
@@ -109,42 +108,6 @@ plugins:
         add_table_of_contents: true
     - pdf-with-js:
         enable: true
-        #NOTE - all next are examples...
-        #author: #NOTE defaulted from site_author item
-        #copyright: #NOTE defaulted from copyright item
-        #cover: false
-        #back_cover: true
-        #cover_title: TITLE TEXT
-        #cover_subtitle: SUBTITLE TEXT
-        #custom_template_path: TEMPLATES PATH
-        #
-        #toc_title: TOC TITLE TEXT
-        #heading_shift: false
-        #toc_level: 3
-        #ordered_chapter_level: 2
-        #excludes_children:
-        #    - 'release-notes/:upgrading'
-        #    - 'release-notes/:changelog'
-        #
-        #exclude_pages:
-        #    - 'bugs/'
-        #    - 'appendix/contribute/'
-        #convert_iframe:
-        #    - src: IFRAME SRC
-        #      img: POSTER IMAGE URL
-        #      text: ALTERNATE TEXT
-        #    - src: ...
-        #two_columns_level: 3
-        #
-        #render_js: true
-        #headless_chrome_path: headless-chromium
-        #
-        #output_path: any-place/document.pdf
-        #enabled_if_env: ENABLE_PDF_EXPORT
-        #
-        #debug_html: true
-        #show_anchors: true
-        #verbose: true
 
 
 
@@ -192,7 +155,7 @@ theme:
 docs_dir: './doc_src'
 
 # root directory where to be generated portal
-site_dir: './static_portal' #NOTE: [piu] this is the working directory; final is in `docs/`` which is published through GitHub (chk but @ 230706 petre-dev branch)
+site_dir: './docs' #NOTE: [piu] this is the working directory; final is in `docs/`` which is published through GitHub (chk but @ 230706 petre-dev branch)
 
 # other useful configurations
 use_directory_urls: false # allow link between pages to work properly as static site an "callable" as `file:///...`

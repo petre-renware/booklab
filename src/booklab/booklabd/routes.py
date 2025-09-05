@@ -4,21 +4,30 @@ Important variables:
     - `bkd.api_app` - web application object (aka Flask.app)
 
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
-Created: 250825
 """
 
 from flask import render_template
+from flask import redirect
+from flask import url_for
+# booklab imports
 from booklab.booklabd import api_app
 from booklab.booklabd import db_books, db_system
+
+
+@api_app.route("/")
+def site_root():
+    """**site_route** serve the root of Booklab applixarion.
+    """
+    ret_str = render_template(
+        "index.html"
+    )
+    return ret_str
 
 
 @api_app.route("/api/bcat/")
 def api_bcat():
     """**api_bcat** serve route `/api/bcat/`
     _NOTE:_ as exposed through nginx on this server the requestable route is `/bcat` (/api/ part is add by nginx)
-
-    Author: Petre Iordanescu (petre.iordanescu@gmail.com)
-    Last update: Sep.2025
     """
 
     # get list of book records ad list even 1rec
@@ -32,6 +41,34 @@ def api_bcat():
         bcat_data = bcat_records
     )
     return ret_str
+
+
+
+
+
+# 4dbg test drop me asap
+'''
+@api_app.route('/<path:any_path>')
+def static_site(any_path: str):
+    """**static_site** serve routes of static sote `/docs/...`
+
+    Author: Petre Iordanescu (petre.iordanescu@gmail.com)
+    Last update: Sep.2025
+    """
+
+    # redirect to static site
+    ...
+
+
+    # where to go: `/apisite/bcat`
+    # where come from: `/api/...<path type>...`
+    # pay ATTN that api followed by "any" will interract with others /api/
+    # maybe try just root path, meaning /
+
+    # return redirect("/booklab/devsite/" + any_path)
+    return str(any_path)  #...4dbg purposes. tb drppped
+'''
+
 
 
 

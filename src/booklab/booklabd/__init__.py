@@ -20,13 +20,13 @@ from booklab import CONF_ROOT
 from booklab import DATA_ROOT
 
 
-static_location = os.path.abspath("../../../docs/")
 pjroot_location = os.path.abspath("../../../")
+static_dir = os.path.abspath("docs")
 templates_dir = os.path.abspath("docs")
 # create web application object
 api_app = init_app(
     __name__,
-    static_site_dir = static_location,
+    static_site_dir = static_dir,
     templates_dir = templates_dir,
     pjroot_location = pjroot_location
 )

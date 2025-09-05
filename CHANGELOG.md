@@ -32,8 +32,13 @@
 
 ## [... 0.4r] - ...
 First booklabd as Flask web app to serve `/api/.../` routes:
+* ...tbd UPD VERSION
 * ...tbd upd site with a chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
-* ...tbd upd bcat/index.html to redirect to booklabd route
+* ..wip 250905-a upd booklabd app to right access static site when addressed from booklabd (ex when access menu from /api/bcat page)
+* [0.4b3] 250904-b booklabd create index route "/" to server static site as being. TEST.OK except CSS theme rendering
+* 250904-a upd nginx conf with prixy params to be used for a clean proxy (not "hiding" source info)
+* 250902-b upd bcat/index.html to redirect to booklabd route
+* 250902-a clean project files
 * 250901-c booklabd.templates render bcat
 * 250901-b update version string and set Flask root directory as project dir (to be able to address docs/ dir as template dir)
 
@@ -107,8 +112,8 @@ Restructure and clean project for PDM package management:
 
 
 
-## [0.3.1] BCAT group commands (231023 h07:00)
-
+## [0.3.1] - 03.oct.2023
+BCAT group commands:
 * 231023piu_b updated `RELNOTE.md` and published site
 * 231023piu_a group commands in a dropdown
 * 231022piu_a update `bcat.md`
@@ -119,16 +124,16 @@ Restructure and clean project for PDM package management:
 
 
 
+## [0.2] - sep.2023
+First version of BCAT (book catalog) and TMPL (book template)
 
 
 
 
-# Archived CHANGELOGs
-
-* [0.2 First version of BCAT (book catalog) and TMPL (book template)](version_history/CHANGELOG_v0.2.md)
-* [0.1 First System Design](version_history/CHANGELOG_v0.1.md)
+## [0.1] - aug.2023
+First System Design
 
 
-# [Release Notes](RELNOTE.md)
+
 
 
