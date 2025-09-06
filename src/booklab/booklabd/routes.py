@@ -30,7 +30,7 @@ def api_bcat():
 
     # render docs/bcat/bcat.html template
     rendered_str = render_template(
-        "bcat/bcat.html",
+        "bcat/bcat_template.html",
         bcat_data = bcat_records
     )
     # #TODO write rendered_str to file
