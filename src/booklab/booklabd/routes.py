@@ -9,6 +9,7 @@ Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 from flask import render_template
 from flask import redirect
 from flask import url_for
+from flask import make_response
 # booklab imports
 from booklab.booklabd import api_app
 from booklab.booklabd import db_books, db_system
@@ -26,10 +27,14 @@ def api_bcat():
         bcat_records = list().append(bcat_records)  # make it list if is not (when just 1 record)
 
     # render docs/bcat/bcat.html template
-    ret_str = render_template(
+    rendered_str = render_template(
         "bcat/bcat.html",
         bcat_data = bcat_records
     )
+
+    ret_str = make_response(rendered_str)
+    ret_str.location = "/docs/bcat/"
+    ret_str.status = 200
 
     #TODO ...tbd here need to prepare a response object and return it
     # ... which will asure a return like CGI old varian which was functional integrated with static site
