@@ -21,8 +21,8 @@ from booklab import DATA_ROOT
 
 
 pjroot_location = os.path.abspath("../../../")
-static_dir = os.path.abspath("docs")
-templates_dir = os.path.abspath("docs")
+static_dir = "docs"
+templates_dir = "docs"
 # create web application object
 api_app = init_app(
     __name__,
