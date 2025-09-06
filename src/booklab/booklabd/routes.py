@@ -6,13 +6,16 @@ Important variables:
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
 
+import os
 from flask import render_template
 from flask import redirect
 from flask import url_for
 from flask import make_response
 # booklab imports
 from booklab.booklabd import api_app
-from booklab.booklabd import db_books, db_system
+from booklab.booklabd import db_books
+from booklab.booklabd import db_system
+from booklab.booklabd import pjroot_location
 
 
 @api_app.route("/api/bcat/")
@@ -28,20 +31,17 @@ def api_bcat():
 
     # render docs/bcat/bcat.html template
     rendered_str = render_template(
-        "bcat/bcat.html",
+        "bcat/bcat_template.html",
         bcat_data = bcat_records
     )
-
-    ret_str = make_response(rendered_str)
-    ret_str.location = "/docs/bcat/"
-    ret_str.status = 200
-
-    #TODO ...tbd here need to prepare a response object and return it
-    # ... which will asure a return like CGI old varian which was functional integrated with static site
-    # ... need to modify response created by render_template to ret like CGI did. See:
-    # `https://flask.palletsprojects.com/en/stable/quickstart/#about-responses `
-
-    return ret_str
+    #... #TODO need to be updated to a right file addressing, relativ to install directory
+    file_to_write = os.path.join(
+        "/projects/booklab/",
+        "docs/bcat/bcat.html"
+    )
+    with open(file_to_write, "w") as file:
+        file.write(rendered_str)
+    return redirect("/docs/bcat/bcat.html")  # ? use /booklab/ ???
 
 
 @api_app.route('/<path:any_path>')
@@ -56,17 +56,10 @@ def static_site(any_path: str):
     Return from this function is done by `send_from_directory` Flask function which will do a "return like from static site" with right renderind on client browser.
     """
 
-    # ..;tbd filter "any_path" of string "api/"
-    ...
-
-    # .;;tbd prep send_from_directory parametrs
-    ...
-
-    return str(any_path)  #...4dbg purposes. tb drppped
-    # return send_from_directory(f'templates/bridge/{p2
-
-    # ...tbd see TODO from /api/bcat/ route
-
+    s1 = f"Received path is: {any_path} \n"
+    s2 = "tbd... wip nit yet finished code..."  # url_for('static')
+    s2 = f"URL for static is: {s2}"
+    return str(s1 + s2)
 
 
 
