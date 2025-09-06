@@ -33,6 +33,9 @@ def api_bcat():
 
     #TODO ...tbd here need to prepare a response object and return it
     # ... which will asure a return like CGI old varian which was functional integrated with static site
+    # ... need to modify response created by render_template to ret like CGI did. See:
+    # `https://flask.palletsprojects.com/en/stable/quickstart/#about-responses `
+
     return ret_str
 
 
