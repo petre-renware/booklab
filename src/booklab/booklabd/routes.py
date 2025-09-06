@@ -14,16 +14,6 @@ from booklab.booklabd import api_app
 from booklab.booklabd import db_books, db_system
 
 
-@api_app.route("/")
-def site_root():
-    """**site_route** serve the root of Booklab applixarion.
-    """
-    ret_str = render_template(
-        "index.html"
-    )
-    return ret_str
-
-
 @api_app.route("/api/bcat/")
 def api_bcat():
     """**api_bcat** serve route `/api/bcat/`
@@ -40,34 +30,35 @@ def api_bcat():
         "bcat/bcat.html",
         bcat_data = bcat_records
     )
+
+    #TODO ...tbd here need to prepare a response object and return it
+    # ... which will asure a return like CGI old varian which was functional integrated with static site
     return ret_str
 
 
-
-
-
-# 4dbg test drop me asap
-'''
 @api_app.route('/<path:any_path>')
 def static_site(any_path: str):
     """**static_site** serve routes of static sote `/docs/...`
+    This function serve Booklab static site from booklabd server. 
+    This is provided to assure a right integration between pure _static site component_ which is the main entry in Booklab application and
+    and _dynamic site (api) component_ which deserve those pages the need to write on server (usually database files) - non GET routes which are starting with `/api/...` explicitelly defined in this component (routes.py file).
 
-    Author: Petre Iordanescu (petre.iordanescu@gmail.com)
-    Last update: Sep.2025
+    Sometimes, when a page is called after `/api/xxz/` route returning, the string "api/" will remain in route so it will _need to be remived_ before sending file type of return.
+
+    Return from this function is done by `send_from_directory` Flask function which will do a "return like from static site" with right renderind on client browser.
     """
 
-    # redirect to static site
+    # ..;tbd filter "any_path" of string "api/"
     ...
 
+    # .;;tbd prep send_from_directory parametrs
+    ...
 
-    # where to go: `/apisite/bcat`
-    # where come from: `/api/...<path type>...`
-    # pay ATTN that api followed by "any" will interract with others /api/
-    # maybe try just root path, meaning /
-
-    # return redirect("/booklab/devsite/" + any_path)
     return str(any_path)  #...4dbg purposes. tb drppped
-'''
+    # return send_from_directory(f'templates/bridge/{p2
+
+    # ...tbd see TODO from /api/bcat/ route
+
 
 
 
