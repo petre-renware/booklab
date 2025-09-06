@@ -37,7 +37,7 @@ def api_bcat():
     # #TODO write rendered_str to file
     # .../docs/bcat/bcat.html
     file_to_write = os.path.join(pjroot_location, "docs/bcat/bcat.html")
-    with open(file_to_write, "a") as file:
+    with open(file_to_write, "w") as file:
         file.write(rendered_str)
     return redirect("/docs/bcat/bcat.html")  # ? use /booklab/ ???
 
