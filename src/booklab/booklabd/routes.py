@@ -31,17 +31,9 @@ def api_bcat():
         "bcat/bcat.html",
         bcat_data = bcat_records
     )
-
-    ret_str = make_response(rendered_str)
-    ret_str.location = "/docs/bcat/"
-    ret_str.status = 200
-
-    #TODO ...tbd here need to prepare a response object and return it
-    # ... which will asure a return like CGI old varian which was functional integrated with static site
-    # ... need to modify response created by render_template to ret like CGI did. See:
-    # `https://flask.palletsprojects.com/en/stable/quickstart/#about-responses `
-
-    return ret_str
+    # #TODO write rendered_str to file
+    # .../docs/bcat/bcat.html 
+    return redirect("/docs/bcat/bcat.html")  # ? use /booklab/ ???
 
 
 @api_app.route('/<path:any_path>')
