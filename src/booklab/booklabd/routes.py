@@ -56,17 +56,10 @@ def static_site(any_path: str):
     Return from this function is done by `send_from_directory` Flask function which will do a "return like from static site" with right renderind on client browser.
     """
 
-    # ..;tbd filter "any_path" of string "api/"
-    ...
-
-    # .;;tbd prep send_from_directory parametrs
-    ...
-
-    return str(any_path)  #...4dbg purposes. tb drppped
-    # return send_from_directory(f'templates/bridge/{p2
-
-    # ...tbd see TODO from /api/bcat/ route
-
+    s1 = f"Received path is: {any_path} \n"
+    s2 = url_for("static")
+    s2 = f"URL for static is: {s2}"
+    return str(s1 + s2)
 
 
 
