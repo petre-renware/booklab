@@ -12,7 +12,8 @@ from flask import url_for
 from flask import make_response
 # booklab imports
 from booklab.booklabd import api_app
-from booklab.booklabd import db_books, db_system
+from booklab.booklabd import db_books
+from booklab.booklabd import db_system
 
 
 @api_app.route("/api/bcat/")
@@ -32,7 +33,10 @@ def api_bcat():
         bcat_data = bcat_records
     )
     # #TODO write rendered_str to file
-    # .../docs/bcat/bcat.html 
+    # .../docs/bcat/bcat.html
+    file_to_write = None  # os.path.join(constanta ptr docs, "bcat.html")
+    with open(file_to_write, "a") as file:
+        file.write("Your text here")
     return redirect("/docs/bcat/bcat.html")  # ? use /booklab/ ???
 
 
