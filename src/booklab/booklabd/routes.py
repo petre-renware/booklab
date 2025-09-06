@@ -14,6 +14,7 @@ from flask import make_response
 from booklab.booklabd import api_app
 from booklab.booklabd import db_books
 from booklab.booklabd import db_system
+from booklab.booklabd import pjroot_location
 
 
 @api_app.route("/api/bcat/")
@@ -34,7 +35,7 @@ def api_bcat():
     )
     # #TODO write rendered_str to file
     # .../docs/bcat/bcat.html
-    file_to_write = None  # os.path.join(constanta ptr docs, "bcat.html")
+    file_to_write = os.path.join(pjroot_location, "docs/bcat/bcat.html")
     with open(file_to_write, "a") as file:
         file.write("Your text here")
     return redirect("/docs/bcat/bcat.html")  # ? use /booklab/ ???
