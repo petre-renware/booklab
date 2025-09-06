@@ -57,7 +57,10 @@ def static_site(any_path: str):
     """
 
     s1 = f"Received path is: {any_path} \n"
-    s2 = url_for("static", "bcat/bcat_template.html")
+    try:
+        s2 = "with.param.static" + url_for("static")
+    except:
+        s2 = "with.param.docs" + url_for("docs")
     s2 = f"URL for static is: {s2}"
     return str(s1 + s2)
 
