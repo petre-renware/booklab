@@ -6,6 +6,7 @@ Important variables:
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
 
+import os
 from flask import render_template
 from flask import redirect
 from flask import url_for
