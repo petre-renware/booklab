@@ -41,7 +41,8 @@ def api_bcat():
     )
     with open(file_to_write, "w") as file:
         file.write(rendered_str)
-    return redirect("/docs/bcat/bcat.html")  # ? use /booklab/ ???
+    #... #TODO set Flasx proxy middleware to eliminate need fir /booklab/ in route
+    return redirect("/booklab/docs/bcat/bcat.html")
 
 
 @api_app.route('/<path:any_path>')
