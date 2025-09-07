@@ -59,7 +59,7 @@ def static_site(any_path: str):
     """
 
     s1 = f"Received path is: {any_path} \n"
-    s2 = "tbd... wip nit yet finished code..."  # url_for('static')
+    s2 =  url_for('static')
     s2 = f"URL for static is: {s2}"
     return str(s1 + s2)
 

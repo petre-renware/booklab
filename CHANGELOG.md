@@ -33,8 +33,9 @@
 ## [... 0.4r] - ...
 First booklabd as Flask web app to serve `/api/.../` routes:
 * ...tbd UPD VERSION
-* ...tbd upd site with a chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
-* ...wip [0.4b5] configure Flask proxy middleware to eliminate need of `/booklab/` specify in module URL redirections
+* ...tbd upd site with a note/chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
+* [0.4b5] 250907 configure Flask proxy middleware to eliminate need of `/booklab/` specify in module URL redirections:
+    - closed as not acceptable. let code as comment in `booklabd.app_init.py`. need to determine where specify # of proxies
 * [0.4b4] 250905-a upd booklabd app to right access static site when addressed from booklabd (ex when access menu from /api/bcat page)
 * [0.4b3] 250904-b booklabd create index route "/" to server static site as being. TEST.OK except CSS theme rendering
 * 250904-a upd nginx conf with prixy params to be used for a clean proxy (not "hiding" source info)
