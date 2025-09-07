@@ -13,6 +13,7 @@ Last update: aug.2025
 """
 
 import pathlib
+import os
 
 # Booklab system version
 from .__version__ import __version__
@@ -21,11 +22,15 @@ from .__version__ import __version__
 PACKAGE_ROOT = pathlib.Path(__file__).parent.resolve()
 DATA_ROOT = PACKAGE_ROOT.joinpath("data")  # database files directory
 CONF_ROOT = PACKAGE_ROOT.joinpath("conf")  # config files directory
+PROJECT_ROOT = PACKAGE_ROOT.parent.resolve().parent.resolve()
 
 
 # 4dbg... print("*** PACKAGE_ROOT dir: ", PACKAGE_ROOT)
 # 4dbg... print("*** DATA_ROOT dir: ", DATA_ROOT)
 # 4dbg... print("*** CONF_ROIT dir: ", CONF_ROOT)
+# 4dbg... print("*** PROJECT_ROOT dir: ", PROJECT_ROOT)
+
+
 
 
 

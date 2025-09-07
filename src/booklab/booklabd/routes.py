@@ -12,6 +12,7 @@ from flask import redirect
 from flask import url_for
 from flask import make_response
 # booklab imports
+from booklab.booklabd import PROJECT_ROOT
 from booklab.booklabd import api_app
 from booklab.booklabd import db_books
 from booklab.booklabd import db_system
@@ -34,9 +35,9 @@ def api_bcat():
         "bcat/bcat_template.html",
         bcat_data = bcat_records
     )
-    #... #TODO need to be updated to a right file addressing, relativ to install directory
+
     file_to_write = os.path.join(
-        "/projects/booklab/",
+        PROJECT_ROOT,
         "docs/bcat/bcat.html"
     )
     with open(file_to_write, "w") as file:
