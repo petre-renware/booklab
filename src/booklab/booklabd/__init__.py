@@ -15,12 +15,13 @@ import pysondb
 # booklab package imports
 from booklab.booklabd.app_init import init_app
 from booklab.booklabd.db_init import init_db
+from booklab import PROJECT_ROOT
 from booklab import PACKAGE_ROOT
 from booklab import CONF_ROOT
 from booklab import DATA_ROOT
 
 
-pjroot_location = os.path.abspath("../../../")
+pjroot_location = os.path.abspath(PROJECT_ROOT)
 static_dir = os.path.abspath("docs")
 templates_dir = os.path.abspath("docs")
 # create web application object

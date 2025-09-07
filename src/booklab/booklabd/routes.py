@@ -6,22 +6,17 @@ Important variables:
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
 
+import os
 from flask import render_template
 from flask import redirect
 from flask import url_for
+from flask import make_response
 # booklab imports
+from booklab.booklabd import PROJECT_ROOT
 from booklab.booklabd import api_app
-from booklab.booklabd import db_books, db_system
-
-
-@api_app.route("/")
-def site_root():
-    """**site_route** serve the root of Booklab applixarion.
-    """
-    ret_str = render_template(
-        "index.html"
-    )
-    return ret_str
+from booklab.booklabd import db_books
+from booklab.booklabd import db_system
+from booklab.booklabd import pjroot_location
 
 
 @api_app.route("/api/bcat/")
@@ -36,38 +31,37 @@ def api_bcat():
         bcat_records = list().append(bcat_records)  # make it list if is not (when just 1 record)
 
     # render docs/bcat/bcat.html template
-    ret_str = render_template(
-        "bcat/bcat.html",
+    rendered_str = render_template(
+        "bcat/bcat_template.html",
         bcat_data = bcat_records
     )
-    return ret_str
+
+    file_to_write = os.path.join(
+        PROJECT_ROOT,
+        "docs/bcat/bcat.html"
+    )
+    with open(file_to_write, "w") as file:
+        file.write(rendered_str)
+    #... #TODO set Flasx proxy middleware to eliminate need fir /booklab/ in route
+    return redirect("/booklab/docs/bcat/bcat.html")
 
 
-
-
-
-# 4dbg test drop me asap
-'''
 @api_app.route('/<path:any_path>')
 def static_site(any_path: str):
     """**static_site** serve routes of static sote `/docs/...`
+    This function serve Booklab static site from booklabd server. 
+    This is provided to assure a right integration between pure _static site component_ which is the main entry in Booklab application and
+    and _dynamic site (api) component_ which deserve those pages the need to write on server (usually database files) - non GET routes which are starting with `/api/...` explicitelly defined in this component (routes.py file).
 
-    Author: Petre Iordanescu (petre.iordanescu@gmail.com)
-    Last update: Sep.2025
+    Sometimes, when a page is called after `/api/xxz/` route returning, the string "api/" will remain in route so it will _need to be remived_ before sending file type of return.
+
+    Return from this function is done by `send_from_directory` Flask function which will do a "return like from static site" with right renderind on client browser.
     """
 
-    # redirect to static site
-    ...
-
-
-    # where to go: `/apisite/bcat`
-    # where come from: `/api/...<path type>...`
-    # pay ATTN that api followed by "any" will interract with others /api/
-    # maybe try just root path, meaning /
-
-    # return redirect("/booklab/devsite/" + any_path)
-    return str(any_path)  #...4dbg purposes. tb drppped
-'''
+    s1 = f"Received path is: {any_path} \n"
+    s2 = "tbd... wip nit yet finished code..."  # url_for('static')
+    s2 = f"URL for static is: {s2}"
+    return str(s1 + s2)
 
 
 

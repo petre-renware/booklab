@@ -516,55 +516,31 @@ div.download-btn {
 </thead>
 <tbody>
 
-        
+        {% for book in bcat_data %}
         <tr>
-<td>0</td>
-<td>tmpl</td>
-<td>Numele cartii (si al site-ului daca se publica in internet)</td>
-<td>Denumirea lunga a cartii asa cum va apare pe coperta</td>
-<td>Copyright - Informatia ref detinatorul drepturilor de autor</td>
-<td>Autorul cartii</td>
-<td>Inregistrare obligatorie de la instalare sistem. Non editabila.</td>
-<td>system</td>
-<td>2023-08-01</td>
+<td>{{ book.id }}</td>
+<td>{{ book.code }}</td>
+<td>{{ book.short_desc }}</td>
+<td>{{ book.description }}</td>
+<td>{{ book.copyright }}</td>
+<td>{{ book.site_author }}</td>
+<td>{{ book.notes }}</td>
+<td>{{ book.created_by }}</td>
+<td>{{ book.created_date }}</td>
 <td> <!-- #NOTE actions for edit, organize, assembly book -->
 <div class="dropdown">
 <button class="dropbtn" onclick="activateDropdown()">OP ⯆</button>
 <div class="dropdown-content" id="bkcommandsDropdown">
-<a href="/bstatus?code=tmpl">Starea cartii</a>
-<a href="/edtb?code=tmpl">Editare materiale</a>
-<a href="/orgm?code=tmpl">Sectiuni carte</a>
-<a href="/prvb?code=tmpl">Pre-Vizualizare carte</a>
-<a href="/dplb?code=tmpl">Asamblare carte</a>
+<a href="/bstatus?code={{ book.code }}">Starea cartii</a>
+<a href="/edtb?code={{ book.code }}">Editare materiale</a>
+<a href="/orgm?code={{ book.code }}">Sectiuni carte</a>
+<a href="/prvb?code={{ book.code }}">Pre-Vizualizare carte</a>
+<a href="/dplb?code={{ book.code }}">Asamblare carte</a>
 </div>
 </div>
 </td>
 </tr>
-        
-        <tr>
-<td>1</td>
-<td>TEST</td>
-<td>short_desc - test record #FIXME to drop</td>
-<td>description - test record #FIXME to drop</td>
-<td>copyright - test record #FIXME to drop</td>
-<td>author - test record #FIXME to drop</td>
-<td>notes - test record #FIXME to drop</td>
-<td>petre</td>
-<td>1900-08-01</td>
-<td> <!-- #NOTE actions for edit, organize, assembly book -->
-<div class="dropdown">
-<button class="dropbtn" onclick="activateDropdown()">OP ⯆</button>
-<div class="dropdown-content" id="bkcommandsDropdown">
-<a href="/bstatus?code=TEST">Starea cartii</a>
-<a href="/edtb?code=TEST">Editare materiale</a>
-<a href="/orgm?code=TEST">Sectiuni carte</a>
-<a href="/prvb?code=TEST">Pre-Vizualizare carte</a>
-<a href="/dplb?code=TEST">Asamblare carte</a>
-</div>
-</div>
-</td>
-</tr>
-        
+        {% endfor %}
 
     </tbody>
 </table>
