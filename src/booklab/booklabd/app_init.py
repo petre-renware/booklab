@@ -5,6 +5,7 @@ Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
 
 from flask import Flask
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 
 def init_app(
@@ -32,6 +33,14 @@ def init_app(
         static_folder = static_site_dir,
         root_path = pjroot_location
     )
+
+    ''' #TODO this code enable Flask Proxy middlware
+    app.wsgi_app = ProxyFix(
+        app.wsgi_app,
+        x_for=1, x_proto=1, x_host=1, x_prefix=1
+    )
+    '''
+
     return app
 
 

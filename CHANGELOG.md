@@ -34,7 +34,7 @@
 First booklabd as Flask web app to serve `/api/.../` routes:
 * ...tbd UPD VERSION
 * ...tbd upd site with a chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
-* ...tbd configure Flask proxy middleware to eliminate need of /booklab/ specify in moduke URL redirections
+* ...wip [0.4b5] configure Flask proxy middleware to eliminate need of `/booklab/` specify in module URL redirections
 * [0.4b4] 250905-a upd booklabd app to right access static site when addressed from booklabd (ex when access menu from /api/bcat page)
 * [0.4b3] 250904-b booklabd create index route "/" to server static site as being. TEST.OK except CSS theme rendering
 * 250904-a upd nginx conf with prixy params to be used for a clean proxy (not "hiding" source info)
