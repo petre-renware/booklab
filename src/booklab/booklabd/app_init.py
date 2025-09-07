@@ -5,6 +5,7 @@ Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
 
 from flask import Flask
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 
 def init_app(
@@ -32,6 +33,18 @@ def init_app(
         static_folder = static_site_dir,
         root_path = pjroot_location
     )
+
+    ''' DOESN'T WK. PROBABLY ARE MORE THAN 1 PROXIES. 1 on local maxhine and 1 on proxy host
+    # this code enable Flask Proxy middlware
+    app.wsgi_app = ProxyFix(
+        app.wsgi_app,
+        x_for=1,
+        x_proto=1,
+        x_host=1,
+        x_prefix=1
+    )
+    '''
+
     return app
 
 
