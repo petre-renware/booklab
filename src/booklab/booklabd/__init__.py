@@ -26,7 +26,7 @@ static_dir = os.path.abspath("docs")
 templates_dir = os.path.abspath("docs")
 # create web application object
 api_app = init_app(
-    __name__,
+    "booklabd",  # name set as this module, ie "booklabd"
     static_site_dir = static_dir,
     templates_dir = templates_dir,
     pjroot_location = pjroot_location
