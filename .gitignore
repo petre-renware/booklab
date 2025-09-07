@@ -80,7 +80,7 @@ profile_default/
 ipython_config.py
 
 # pyenv
-.python-version
+# .python-version
 
 # celery beat schedule file
 celerybeat-schedule
@@ -125,7 +125,7 @@ tmp/
 
 
 # static generated portal should not be in git, but just build locally
-static_portal/
+# static_portal/
 
 
 
