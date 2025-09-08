@@ -11,6 +11,8 @@ from flask import render_template
 from flask import redirect
 from flask import url_for
 from flask import make_response
+from flask import request
+from flask import send_from_directory
 # booklab imports
 from booklab.booklabd import PROJECT_ROOT
 from booklab.booklabd import api_app
@@ -19,9 +21,24 @@ from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
 
 
+@api_app.route("/")
+def static_site():
+    """**app_index** serve the application main / root index from static site (ie, `docs/index.html`)
+    """
+    #... #TODO implement like api_bcat() or using send_from_directory
+    #... #TODO also get the request.root_url to determine path behind booklabd app (as 250906 is "/booklab/" coming fron host nginx proxy)
+    src_dir = os.path.join(
+        PROJECT_ROOT,
+        "/docs/"
+    )
+    send_from_directory(src_dir, "index.html")
+    return
+
+
 @api_app.route("/api/bcat/")
 def api_bcat():
     """**api_bcat** serve route `/api/bcat/`
+
     _NOTE:_ as exposed through nginx on this server the requestable route is `/bcat` (/api/ part is add by nginx)
     """
 
@@ -47,8 +64,9 @@ def api_bcat():
 
 
 @api_app.route('/<path:any_path>')
-def static_site(any_path: str):
+def test(any_path: str):
     """**static_site** serve routes of static sote `/docs/...`
+
     This function serve Booklab static site from booklabd server. 
     This is provided to assure a right integration between pure _static site component_ which is the main entry in Booklab application and
     and _dynamic site (api) component_ which deserve those pages the need to write on server (usually database files) - non GET routes which are starting with `/api/...` explicitelly defined in this component (routes.py file).
@@ -59,7 +77,7 @@ def static_site(any_path: str):
     """
 
     s1 = f"Received path is: {any_path} \n"
-    s2 =  url_for('static')
+    s2 = "not yet get  url_for"  # url_for('static')
     s2 = f"URL for static is: {s2}"
     return str(s1 + s2)
 
