@@ -12,6 +12,7 @@ from flask import redirect
 from flask import url_for
 from flask import make_response
 from flask import request
+from flask import send_from_directory
 # booklab imports
 from booklab.booklabd import PROJECT_ROOT
 from booklab.booklabd import api_app
@@ -21,12 +22,17 @@ from booklab.booklabd import pjroot_location
 
 
 @api_app.route("/")
-def app_index():
+def static_site():
     """**app_index** serve the application main / root index from static site (ie, `docs/index.html`)
     """
     #... #TODO implement like api_bcat() or using send_from_directory
     #... #TODO also get the request.root_url to determine path behind booklabd app (as 250906 is "/booklab/" coming fron host nginx proxy)
-    pass
+    src_dir = os.path.join(
+        PROJECT_ROOT,
+        "/docs/"
+    )
+    send_from_directory(src_dir, "index.html")
+    return
 
 
 @api_app.route("/api/bcat/")
@@ -58,7 +64,7 @@ def api_bcat():
 
 
 @api_app.route('/<path:any_path>')
-def static_site(any_path: str):
+def test(any_path: str):
     """**static_site** serve routes of static sote `/docs/...`
 
     This function serve Booklab static site from booklabd server. 

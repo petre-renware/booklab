@@ -21,7 +21,8 @@ First booklabd as Flask web app to serve `/api/.../` routes:
 * tbd... UPD VERSION
 * tbd... upd site with a note/chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
 * tbd... upd site /bcat/bcat_template.md dropdown in table mk unique its ID with book_code because is the same button regardless of table row
-* ...wip [0.4b6] 250908 booklabd.routes.py create `/` route to be able to access booklab app also with simple / not obly by /docs/
+* ...wip [0.4b7] 250908 booklabd.routes.py create `/` route to be able to access booklab app also with simple / not obly by /docs/
+* [0.4b6] 250908 booklabd created route "/" for static site root to avoid "/docs/" =ath but dosn't work because is set by host proxy ...
 * [0.4b5] 250907 configure Flask proxy middleware to eliminate need of `/booklab/` specify in module URL redirections:
     - closed as not acceptable. let code as comment in `booklabd.app_init.py`. need to determine where specify # of proxies
 * [0.4b4] 250905-a upd booklabd app to right access static site when addressed from booklabd (ex when access menu from /api/bcat page)

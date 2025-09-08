@@ -24,6 +24,7 @@ from booklab import DATA_ROOT
 pjroot_location = os.path.abspath(PROJECT_ROOT)
 static_dir = os.path.abspath("docs")
 templates_dir = os.path.abspath("docs")
+#... #TODO create api_app.config["..."] for all directory constants
 # create web application object
 api_app = init_app(
     "booklabd",  # name set as this module, ie "booklabd"
