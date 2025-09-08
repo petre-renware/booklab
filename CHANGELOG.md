@@ -5,21 +5,8 @@
 
 # CHANGELOG
 
-- For version code structure meaning see SDEVEN methodology document
-- with _(F)_ are marked those changes that are features in order to be copied in a RELNOTE file and with _(B)_ bug fixes from versions released
-- #NOTE sote publishing on `arint.renware.eu` from `publishing` branch
-- `<PROJECT ROOT>/doc_src/` is the default starting location in a file path (if not clear from context) (**ATTN** - in production environment is `docs/`)
-- `<WEB_ROOT>/` is the HTTP server root directory, as default `docs/` and supposed if no other parent is specified
-
-
-
-
-
-
 ## ... #TODO [unreleased] BCAT extend book command center (...wip...)
-
 * tbd... #TODO-ASAP__focus on Jupiter__
-* tbd... try to execute book manipulation scripts from a Jupiter notebook (as part of application interface)
 * tbd... init TMPL with a start `index.md` file && maybe 1, 2 examples markdown as "starter samples"
 * tbd... ref command "Verificare" (code-name `bstatus`):
     * [ ] VIEW CONFIG FILE (to display `book_mkdocs.yml`)
@@ -29,12 +16,11 @@
 
 
 
-
-## [... 0.4r] - ...
+## ...wip [0.4r] - unreleased...
 First booklabd as Flask web app to serve `/api/.../` routes:
-* ...tbd UPD VERSION
-* ...tbd upd site with a note/chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
-
+* tbd... UPD VERSION
+* tbd... upd site with a note/chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
+* tbd... upd site /bcat/bcat_template.md dropdown in table mk unique its ID with book_code because is the same button regardless of table row
 * ...wip [0.4b6] 250908 booklabd.routes.py create `/` route to be able to access booklab app also with simple / not obly by /docs/
 * [0.4b5] 250907 configure Flask proxy middleware to eliminate need of `/booklab/` specify in module URL redirections:
     - closed as not acceptable. let code as comment in `booklabd.app_init.py`. need to determine where specify # of proxies
