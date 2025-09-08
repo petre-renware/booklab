@@ -48,7 +48,7 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
             <td> <!-- #NOTE actions for edit, organize, assembly book -->
                 <div class="dropdown">
                     <button onclick="activateDropdown()" class="dropbtn">OP &#x2BC6;</button>
-                    <div id="bkcommandsDropdown" class="dropdown-content">
+                    <div id="IDcmds-{{ book.code }}" class="dropdown-content">
                         <a href="/bstatus?code={{ book.code }}">Starea cartii</a>
                         <a href="/edtb?code={{ book.code }}">Editare materiale</a>
                         <a href="/orgm?code={{ book.code }}">Sectiuni carte</a>
