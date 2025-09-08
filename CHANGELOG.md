@@ -20,16 +20,14 @@
 First booklabd as Flask web app to serve `/api/.../` routes:
 * tbd... UPD VERSION
 * tbd... upd site with a note/chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
-
-...wip nxt. run PDM install. tst app. then dropbthis lin & commit
 * [0.4b10] upd site /bcat/bcat_template.md dropdown in table mk unique its ID with book_code because is the same button regardless of table row
-
+    - closed as NOT acceptable. Need future review and mkdocs upd config to be able to run w/o errors
 * [0.4b9] make gunicorn to save PID & make command `k` to kill it ++ cmd `s` to show gunicorn processes pid
 * [0.4b8] 250908 booklab.__init__.py create api_app.config[...] for all directory constants
 * [0.4b7] 250908 booklabd.routes.py create `/` route to be able to access booklab app also with simple / not obly by /docs/
 * [0.4b6] 250908 booklabd created route "/" for static site root to avoid "/docs/" =ath but dosn't work because is set by host proxy ...
 * [0.4b5] 250907 configure Flask proxy middleware to eliminate need of `/booklab/` specify in module URL redirections:
-    - closed as not acceptable. let code as comment in `booklabd.app_init.py`. need to determine where specify # of proxies
+    - closed as NOT acceptable. let code as comment in `booklabd.app_init.py`. need to determine where specify # of proxies
 * [0.4b4] 250905-a upd booklabd app to right access static site when addressed from booklabd (ex when access menu from /api/bcat page)
 * [0.4b3] 250904-b booklabd create index route "/" to server static site as being. TEST.OK except CSS theme rendering
 * 250904-a upd nginx conf with prixy params to be used for a clean proxy (not "hiding" source info)
