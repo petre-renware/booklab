@@ -23,6 +23,7 @@ PACKAGE_ROOT = pathlib.Path(__file__).parent.resolve()
 DATA_ROOT = PACKAGE_ROOT.joinpath("data")  # database files directory
 CONF_ROOT = PACKAGE_ROOT.joinpath("conf")  # config files directory
 PROJECT_ROOT = PACKAGE_ROOT.parent.resolve().parent.resolve()
+STATIC_SITE_ROOT = PROJECT_ROOT.joinpath("docs")
 
 
 # 4dbg... print("*** PACKAGE_ROOT dir: ", PACKAGE_ROOT)
