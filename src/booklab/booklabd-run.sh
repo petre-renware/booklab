@@ -17,7 +17,9 @@
 #
 
 case $1 in
-d) gunicorn -c gunicorn.conf.py -D;;
+d) gunicorn -c gunicorn.conf.py -p gunicorn.PID -D;;
+k) kill `cat gunicorn.PID`;;
+s) ps -A | grep gunicorn;;
 *) gunicorn -c gunicorn.conf.py;;
 esac
 

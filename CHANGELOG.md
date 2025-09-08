@@ -20,9 +20,8 @@
 First booklabd as Flask web app to serve `/api/.../` routes:
 * tbd... UPD VERSION
 * tbd... upd site with a note/chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
-* tbd... upd site /bcat/bcat_template.md dropdown in table mk unique its ID with book_code because is the same button regardless of table row
-* tbd... make gunicorn to save PID & make command to kill it
-      - #NOTE: in booklabd/how_kill_guni...txt find how kill it
+* ...wip [0.4b10] upd site /bcat/bcat_template.md dropdown in table mk unique its ID with book_code because is the same button regardless of table row
+* [0.4b9] make gunicorn to save PID & make command `k` to kill it ++ cmd `s` to show gunicorn processes pid
 * [0.4b8] 250908 booklab.__init__.py create api_app.config[...] for all directory constants
 * [0.4b7] 250908 booklabd.routes.py create `/` route to be able to access booklab app also with simple / not obly by /docs/
 * [0.4b6] 250908 booklabd created route "/" for static site root to avoid "/docs/" =ath but dosn't work because is set by host proxy ...
