@@ -19,7 +19,7 @@ from booklab import PROJECT_ROOT
 from booklab import PACKAGE_ROOT
 from booklab import CONF_ROOT
 from booklab import DATA_ROOT
-
+from booklab import STATIC_SITE_ROOT
 
 pjroot_location = os.path.abspath(PROJECT_ROOT)
 static_dir = os.path.abspath("docs")
