@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:12ee84e021edc860a27dd063758efeba5bef1e4adfb9bcb853e2b90d60619053"
+content_hash = "sha256:8319a23301845acd5849f4e1d3effdf5cb6dbfed5535a8cca508544b6eab3cdf"
 
 [[metadata.targets]]
 requires_python = ">=3.10,<3.13"
@@ -898,52 +898,6 @@ groups = ["default"]
 files = [
     {file = "mkdocs_material_extensions-1.1.1-py3-none-any.whl", hash = "sha256:e41d9f38e4798b6617ad98ca8f7f1157b1e4385ac1459ca1e4ea219b556df945"},
     {file = "mkdocs_material_extensions-1.1.1.tar.gz", hash = "sha256:9c003da71e2cc2493d910237448c672e00cefc800d3d6ae93d2fc69979e3bd93"},
-]
-
-[[package]]
-name = "mkdocs-pdf-export-plugin"
-version = "0.5.10"
-requires_python = ">=3.5"
-summary = "An MkDocs plugin to export content pages as PDF files"
-groups = ["default"]
-dependencies = [
-    "beautifulsoup4>=4.6.3",
-    "mkdocs>=0.17",
-    "weasyprint>=0.44",
-]
-files = [
-    {file = "mkdocs-pdf-export-plugin-0.5.10.tar.gz", hash = "sha256:77ba89ebea6f565286fb04360e3d9810567e27302383c9e2b6fa386f8ecca7d9"},
-    {file = "mkdocs_pdf_export_plugin-0.5.10-py3-none-any.whl", hash = "sha256:e6e58f8bdedb300423336b00ea1846516f471b529ea85cb7f254fa2a2ee577d8"},
-]
-
-[[package]]
-name = "mkdocs-pdf-with-js-plugin"
-version = "0.1.3"
-requires_python = ">=3.4"
-summary = "A MkDocs plugin that exports your documentation as PDF with rendered JavaScript content."
-groups = ["default"]
-dependencies = [
-    "beautifulsoup4",
-    "mkdocs>=1.0.4",
-    "selenium",
-]
-files = [
-    {file = "mkdocs-pdf-with-js-plugin-0.1.3.tar.gz", hash = "sha256:1dc39c6548e2aaf120a6c81494c000b0a7e419e8676d57985e35aa6aebadebcc"},
-    {file = "mkdocs_pdf_with_js_plugin-0.1.3-py3-none-any.whl", hash = "sha256:12814fcdebb24bb686e81f01a184eebbc07ca7ea143b21b9ad9d5cfa2822e700"},
-]
-
-[[package]]
-name = "mkdocs-print-site-plugin"
-version = "2.3.5"
-requires_python = ">=3.6"
-summary = "MkDocs plugin that combines all pages into one, allowing for easy export to PDF and standalone HTML."
-groups = ["default"]
-dependencies = [
-    "mkdocs-material>=7.3.0",
-]
-files = [
-    {file = "mkdocs-print-site-plugin-2.3.5.tar.gz", hash = "sha256:f7a1e8b67092547273cf2da9a7cbf6e179c86c65c3ef5af293e5bb78323d645c"},
-    {file = "mkdocs_print_site_plugin-2.3.5-py3-none-any.whl", hash = "sha256:0340561a1a0fd99c2a0966f6f5ca8b8d208a0c199049a8f936d3c20ccccf435c"},
 ]
 
 [[package]]
