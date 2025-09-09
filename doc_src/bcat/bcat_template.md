@@ -1,9 +1,6 @@
 <!-- #NOTE
-
     * page dedicated for books catalog
-
     * for Jinja fields processable @ server-side use `{% raw %} ... {% endraw %}` construction to remain in resulted HTML afer 1st compilation with mkdocs
-
  -->
 
 # Catalogul cartilor
@@ -46,16 +43,11 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
             <td>{{ book.created_by }}</td>
             <td>{{ book.created_date }}</td>
             <td> <!-- #NOTE actions for edit, organize, assembly book -->
-                <div class="dropdown">
-                    <button onclick="activateDropdown()" class="dropbtn">OP &#x2BC6;</button>
-                    <div id="IDcmds-{{ book.code }}" class="dropdown-content">
-                        <a href="/bstatus?code={{ book.code }}">Starea cartii</a>
-                        <a href="/edtb?code={{ book.code }}">Editare materiale</a>
-                        <a href="/orgm?code={{ book.code }}">Sectiuni carte</a>
-                        <a href="/prvb?code={{ book.code }}">Pre-Vizualizare carte</a>
-                        <a href="/dplb?code={{ book.code }}">Asamblare carte</a>
-                    </div>
-                </div>
+                <a href="bstatus/?code={{ book.code }}">Starea cartii</a><br/>
+                <a href="edtb/?code={{ book.code }}">Editare materiale</a><br/>
+                <a href="orgm/?code={{ book.code }}">Sectiuni carte</a><br/>
+                <a href="prvb/?code={{ book.code }}">Pre-Vizualizare carte</a><br/>
+                <a href="dplb/?code={{ book.code }}">Asamblare carte</a>
             </td>
         </tr>
         {% endfor %}
@@ -68,10 +60,5 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 
 
-
-
-
-
-{% include './bcat.js' %} <!--#NOTE contains dropdown commands button JS -->
 
 

@@ -20,9 +20,9 @@
 First booklabd as Flask web app to serve `/api/.../` routes:
 * tbd... UPD VERSION
 * tbd... upd site with a note/chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
-* bug2fix... ref [0.4b10] need to update docs/bcat/bcat.js that control in tabke dropdown which ID was changed and is refered in JS.
-    - HINT: to search for ElementByID using wildcards because new ID contains book code being: `IDcmds-{{ book.code }}`
-* [0.4b11] fixed mkdocs to run and dropped PDF creation for pages
+* [0.4b12] 250909-c bugfix ref [0.4b10] need to update docs/bcat/bcat.js that control in table dropdown. Drop it and replace with a simple links list
+- 250909-b cleaned project
+* [0.4b11] 250909-a fixed mkdocs to run and dropped PDF creation for pages
 * [0.4b10] upd site /bcat/bcat_template.md dropdown in table mk unique its ID with book_code because is the same button regardless of table row
     - closed as NOT acceptable. Need future review and mkdocs upd config to be able to run w/o errors
 * [0.4b9] make gunicorn to save PID & make command `k` to kill it ++ cmd `s` to show gunicorn processes pid
