@@ -62,8 +62,3 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 
 
-
-
-{% include './bcat.js' %} <!--#NOTE contains dropdown commands button JS -->
-
-
