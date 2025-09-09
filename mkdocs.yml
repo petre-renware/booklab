@@ -5,14 +5,13 @@ copyright: 'Copyright (c) RENware Software Systems'
 
 
 nav:
-    - BookLab:
-        - Acasa: index.md
-        - Catalog carti: bcat/ #NOTE will direct-fwd to `http://<crt_server_name>/bcat/`
-        - Carte noua: newb/ #NOTE will direct-fwd to `http://<crt_server_name>/newb/`
-        - Editare materiale: edtm/ #NOTE will direct-fwd to `http://<crt_server_name>/edtm/`
-        - Sectiuni carte: orgm/ #NOTE will direct-fwd to `http://<crt_server_name>/orgm/`
-        - Previzualizare carte: prvb/ #NOTE will direct-fwd to `http://<crt_server_name>/prvb/`
-        - Asamblare carte: dplb/ #NOTE will direct-fwd to `http://<crt_server_name>/dplb/`
+    - Acasa: index.md
+    - Catalog carti: bcat/ #NOTE will direct-fwd to `http://<crt_server_name>/bcat/`
+    - Carte noua: newb/ #NOTE will direct-fwd to `http://<crt_server_name>/newb/`
+    - Editare materiale: edtm/ #NOTE will direct-fwd to `http://<crt_server_name>/edtm/`
+    - Sectiuni carte: orgm/ #NOTE will direct-fwd to `http://<crt_server_name>/orgm/`
+    - Previzualizare carte: prvb/ #NOTE will direct-fwd to `http://<crt_server_name>/prvb/`
+    - Asamblare carte: dplb/ #NOTE will direct-fwd to `http://<crt_server_name>/dplb/`
     - Help:
         - Vedere de ansamblu: help/130.02-Overview.md
         #
@@ -23,8 +22,6 @@ nav:
         - Manuale de configurare:
             - Indexul manuale ADMA: help/880.30-ADMA_catalog.md
             - Fisierul de configurare a cartii: help/880.30-TMPL_usage.md
-            #NOTE - add here ADMA manuals as needed
-        #
         - Documentatia tehnica:
             - Arhitectura sistemului: 810-DSGN/810.02-System_Landscape.md
             - modul Initializare sistem (sysInit): 810-DSGN/810.05a-sysInit_System_Process.md
@@ -35,7 +32,6 @@ nav:
             - modul Organizare Carte (ORGM): 810-DSGN/810.05a-orgm_System_Process.md
             - modul Previzualizare Carte (PRVB): 810-DSGN/810.05a-prvb_System_Process.md
             - modul Generare Carte (DPLB): 810-DSGN/810.05a-dplb_System_Process.md
-        - Manual BookLab (PDF): pdfs/print_page.html/print_page.pdf
     - About:
         - Licenta mea: wip.md #TODO tbd... este un http catre o ruta dinamica din produs
         - Suport: https://www.renware.eu/support.html
@@ -101,13 +97,13 @@ plugins:
     - markdown-exec #NOTE Python execution inside markdown files (execution at build time, "compilation like" NOT dynamically NOT JavaScript)
     - git-revision-date-localized
     # - pdf-export  #NOTE DO NOT USE this as does not render mermaid in PDF docs
-    - print-site: #NOTE_IMPORTANT_#NOTE put `print-site` plug in BEFORE `pdf-with-js` in order to works the workaround wit a fake `print_page.md` that will determine generation of 'print_page.pdf' as any other page generated pdf by `pdf-with-js`; ingnore warning ` [mkdocs-print-site] 'print-site' should be defined as the *last* plugin,to ensure...`
+#    - print-site: #NOTE_IMPORTANT_#NOTE put `print-site` plug in BEFORE `pdf-with-js` in order to works the workaround wit a fake `print_page.md` that will determine generation of 'print_page.pdf' as any other page generated pdf by `pdf-with-js`; ingnore warning ` [mkdocs-print-site] 'print-site' should be defined as the *last* plugin,to ensure...`
         # add_to_navigation: true #NOTE not needed here
         # print_page_title: 'Complete BookLab Manual' #NOTE not needed here
-        add_full_urls: true
-        add_table_of_contents: true
-    - pdf-with-js:
-        enable: true
+#        add_full_urls: true
+#        add_table_of_contents: true
+#    - pdf-with-js:
+#        enable: true
 
 
 
