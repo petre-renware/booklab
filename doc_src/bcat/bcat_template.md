@@ -43,7 +43,7 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
             <td>{{ book.created_by }}</td>
             <td>{{ book.created_date }}</td>
             <td> <!-- #NOTE actions for edit, organize, assembly book -->
-                <!--<div class="dropdown">
+                <!-- <div class="dropdown">
                     <button onclick="activateDropdown()" class="dropbtn">OP &#x2BC6;</button>
                     <div id="IDcmds-{{ book.code }}" class="dropdown-content"> -->
                         <a href="/bstatus?code={{ book.code }}">Starea cartii</a>
