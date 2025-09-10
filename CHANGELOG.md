@@ -20,6 +20,8 @@
 First booklabd as Flask web app to serve `/api/.../` routes:
 * tbd... UPD VERSION
 * tbd... upd site with a note/chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
+* tbd... static site: create all book-operations directories with index.html like /bcat/index.html but with meta redirect commented but presenting WIP-worker-picture
+* [0.4b13] 250910-a static site: left nav keep as operations only "Catalog carti" and "Creare carte"
 * [0.4b12] 250909-c bugfix ref [0.4b10] need to update docs/bcat/bcat.js that control in table dropdown. Drop it and replace with a simple links list
 - 250909-b cleaned project
 * [0.4b11] 250909-a fixed mkdocs to run and dropped PDF creation for pages
