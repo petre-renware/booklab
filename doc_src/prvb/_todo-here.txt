@@ -1,0 +1,9 @@
+TODOs when start work here:
+- copy files from /bcat
+- update their names to reflect this dir operation
+- in the same way update their content 
+- keep in mind that booklabd routes should acceot patameter <book_code>
+
+- !! `index.html` existent can be dropped...
+    it served as "fake" to keep dir and to address it from other pages before finish work
+
