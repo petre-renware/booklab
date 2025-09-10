@@ -9,7 +9,7 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 ## Lista cartilor
 
-[Creare carte](newb/) <!--#NOTE action for new book -->
+[Creare carte](../newb/) <!--#NOTE action for new book -->
 
 
 {% include './bcat.css' %} <!--#NOTE contains dropdown commands button CSS -->
@@ -43,11 +43,11 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
             <td>{{ book.created_by }}</td>
             <td>{{ book.created_date }}</td>
             <td> <!-- #NOTE actions for edit, organize, assembly book -->
-                <a href="bstatus/?code={{ book.code }}">Starea cartii</a><br/>
-                <a href="edtb/?code={{ book.code }}">Editare materiale</a><br/>
-                <a href="orgm/?code={{ book.code }}">Sectiuni carte</a><br/>
-                <a href="prvb/?code={{ book.code }}">Pre-Vizualizare carte</a><br/>
-                <a href="dplb/?code={{ book.code }}">Asamblare carte</a>
+                <a href="../bstatus/?code={{ book.code }}">Starea cartii</a><br/>
+                <a href="../edtb/?code={{ book.code }}">Editare materiale</a><br/>
+                <a href="../orgm/?code={{ book.code }}">Sectiuni carte</a><br/>
+                <a href="../prvb/?code={{ book.code }}">Pre-Vizualizare carte</a><br/>
+                <a href="../dplb/?code={{ book.code }}">Asamblare carte</a>
             </td>
         </tr>
         {% endfor %}
