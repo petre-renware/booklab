@@ -13,7 +13,7 @@ __pycache__/
 # dynamically generated files at run-time
 run/
 *.PID
-#docs/bcat/bcat.html
+docs/bcat/bcat.html
 
 
 # Distribution / packaging
