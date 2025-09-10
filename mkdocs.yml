@@ -8,17 +8,17 @@ nav:
     - Acasa: index.md
     - Catalog carti: bcat/ #NOTE will direct-fwd to `http://<crt_server_name>/bcat/`
     - Carte noua: newb/ #NOTE will direct-fwd to `http://<crt_server_name>/newb/`
-    - Editare materiale: edtm/ #NOTE will direct-fwd to `http://<crt_server_name>/edtm/`
-    - Sectiuni carte: orgm/ #NOTE will direct-fwd to `http://<crt_server_name>/orgm/`
-    - Previzualizare carte: prvb/ #NOTE will direct-fwd to `http://<crt_server_name>/prvb/`
-    - Asamblare carte: dplb/ #NOTE will direct-fwd to `http://<crt_server_name>/dplb/`
+# petrei@250910 folliwing commented sections are no nore accessed from main menu but only from "Catalog carti" page
+#    - Editare materiale: edtm/ #NOTE will direct-fwd to `http://<crt_server_name>/edtm/`
+#    - Sectiuni carte: orgm/ #NOTE will direct-fwd to `http://<crt_server_name>/orgm/`
+#    - Previzualizare carte: prvb/ #NOTE will direct-fwd to `http://<crt_server_name>/prvb/`
+#    - Asamblare carte: dplb/ #NOTE will direct-fwd to `http://<crt_server_name>/dplb/`
     - Help:
         - Vedere de ansamblu: help/130.02-Overview.md
-        #
         - Manuale de utilizare:
             - Indexul manuale EUMA: help/880.30-EUMA_catalog.md
-            - Catalog carti: help/880.30-BCAT_usage.md
-            #NOTE - add here EUMA manuals as needed
+            - Catalogul manualelor: help/880.30-BCAT_usage.md
+            #NOTE - add here EUMA manuals piece-by-piece when they are finished
         - Manuale de configurare:
             - Indexul manuale ADMA: help/880.30-ADMA_catalog.md
             - Fisierul de configurare a cartii: help/880.30-TMPL_usage.md
