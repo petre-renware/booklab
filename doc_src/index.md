@@ -14,7 +14,7 @@
 
 # Note si explicatii rezultat:
 
-    - caz 0: util acces **`booklab_app`**: `<form method="POST" action="http://localhost:5000">` unde 5000 este portul ales
+    - caz 0: util acces **`booklab_app`**: `<form method="POST" action="http://localhost:8000">` unde 8000 este portul ales
 
     - caz 1: cu `action="/XXX_TEST_ROUTE"` ==> raspunsul a fost request catre `/XXX_TEST_ROUTE?fname=John&lname=Doe` url ABSOLUT
 
@@ -42,7 +42,7 @@ Ce poti face mai departe:
 
 * **[sa incepi o noua carte](newb/)** #TODO NEWB route
 
-* **[sa creezi si sa editezi continutului unui material](edtm/)** #TODO EDTM route
+* **[sa creezi si sa editezi continutului unui material](edtb/)** #TODO EDTM route
 
 * **[sa organizezi materialele in diverse sectiuni](orgm/)** #TODO 0RGM route
 
