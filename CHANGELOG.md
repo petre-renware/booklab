@@ -18,8 +18,11 @@
 
 ## ...wip [0.4] - unreleased...
 First booklabd as Flask web app to serve `/api/.../` routes:
-* tbd... UPD VERSION
-* tbd... upd site with a note/chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
+* tbd... upd version, build all, publish & roolut to master, drop dev branches
+* ...wip [0.4rc2] 250911-b
+    * ... static site: upd with a note/chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
+    * ... booklabd: make all opers `/api/xxx/` routes showing `wip.md` page and comment to get querry parameters
+    * ... static stite: copy custom CSS from bcat/ to all book ops dir-pages
 * [0.4rc0] 250911-a on static site:
     * all book opers except bcat & newb make index auto redirect to bcat (duplicate index.html from .../bcat/)
     * upd root page ref to ops keep only /bcat/ and /new/
