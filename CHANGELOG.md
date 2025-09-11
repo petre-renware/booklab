@@ -22,7 +22,8 @@ First booklabd as Flask web app to serve `/api/.../` routes:
 * ...wip [0.4rc1] 250911-b
     * ... static site: upd with a note/chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
     * ... booklabd: make all opers `/api/xxx/` routes showing `wip.md` page and comment to get querry parameters
-    * static site: `bcat_template.md` upd all ops refs with full booklabd addressing (http.../api/..)
+    * ... static site: `bcat_template.md` upd all ops refs with full booklabd addressing (http.../api/..)
+    * ... all ops dirs uncomment `index.html` meta tag
     * static stite: copy custom CSS from bcat/ to all book ops dir-pages
 * [0.4rc0] 250911-a on static site:
     * all book opers except bcat & newb make index auto redirect to bcat (duplicate index.html from .../bcat/)
