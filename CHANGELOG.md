@@ -16,10 +16,13 @@
 
 
 
-## ...wip [0.4rc] - unreleased...
+## ...wip [0.4] - unreleased...
 First booklabd as Flask web app to serve `/api/.../` routes:
 * tbd... UPD VERSION
 * tbd... upd site with a note/chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
+* [0.4rc0] 250911-a on static site:
+    * all book opers except bcat & newb make index auto redirect to bcat (duplicate index.html from .../bcat/)
+    * upd root page ref to ops keep only /bcat/ and /new/
 * [0.4b14] 250910-b static site: create all book-operations directories with a fake index.html copy from /bcat/index.html and a "_todo...txt" file to mark that need updated
 * 250910-a cleaned project
 * [0.4b13] 250910-a static site: left nav keep as operations only "Catalog carti" and "Creare carte"
