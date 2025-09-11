@@ -19,6 +19,7 @@
 ## ...wip [0.4] - unreleased...
 First booklabd as Flask web app to serve `/api/.../` routes:
 * tbd... upd version, build all, publish & roolut to master, drop dev branches
+* tbd... [0.4rc2] booklabd index route, keep that w.<any_path> and for param as "" (blank) go to docs/index otherwise display act msg except url_for to see what user tried to access
 * ...wip [0.4rc1] 250911-b
     * ... static site: upd with a note/chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
     * ... booklabd: make all opers `/api/xxx/` routes showing `wip.md` page and comment to get querry parameters
