@@ -43,6 +43,7 @@ def api_bcat():
     """
 
     # get list of book records ad list even 1rec
+    bcat_records = None
     bcat_records = db_books.getAll()
     if not (type(bcat_records) == type(list())):
         bcat_records = list().append(bcat_records)  # make it list if is not (when just 1 record)
