@@ -119,6 +119,12 @@ dev = [
 
 
 
+[project.urls]
+Homepage = "https://https://booklab.renware.eu"
+Devpage = "http://dev.renware.eu/booklab/"
+
+
+
 
 [tool.pdm.scripts]  # reference: `https://pdm-project.org/latest/usage/scripts/`
 # this cmd build the technical doc of booklab package & modules

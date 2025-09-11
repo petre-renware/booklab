@@ -12,7 +12,7 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 [Creare carte](../newb/index.html) <!--#NOTE action for new book -->
 
 
-{% include './bcat.css' %} <!--#NOTE contains dropdown commands button CSS -->
+{% include './local-page.css' %} <!--#NOTE contains dropdown commands button CSS -->
 
 <table>
     <thead>
