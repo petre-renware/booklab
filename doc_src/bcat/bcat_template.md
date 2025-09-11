@@ -42,14 +42,12 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
             <td>{{ book.notes }}</td>
             <td>{{ book.created_by }}</td>
             <td>{{ book.created_date }}</td>
-            <td> <!-- #NOTE actions for edit, organize, assembly book -->
-<!-- wip here ref calling booklabd -->
+            <td>
                 <a href="../bstatus/index.html?code={{ book.code }}">Starea cartii</a><br/>
-
-                <a href="/booklab/api/edtb?code={{ book.code }}">Editare materiale</a><br/>
-                <a href="/booklab/api/orgm?code={{ book.code }}">Sectiuni carte</a><br/>
-                <a href="/booklab/api/prvb?code={{ book.code }}">Pre-Vizualizare carte</a><br/>
-                <a href="/booklab/api/dplb?code={{ book.code }}">Asamblare carte</a>
+                <a href="../edtb/index.html?code={{ book.code }}">Editare materiale</a><br/>
+                <a href="../api/orgm/index.html?code={{ book.code }}">Sectiuni carte</a><br/>
+                <a href="../api/prvb/index.html?code={{ book.code }}">Pre-Vizualizare carte</a><br/>
+                <a href="../api/dplb/index.html?code={{ book.code }}">Asamblare carte</a>
             </td>
         </tr>
         {% endfor %}
