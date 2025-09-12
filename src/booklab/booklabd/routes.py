@@ -21,7 +21,7 @@ from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
 
 
-'''
+'''  #TODO drop this section when finish copy from it
 @api_app.route("/")
 def static_site():
     """**app_index** serve the application main / root index from static site (ie, `docs/index.html`)
@@ -63,7 +63,8 @@ def api_bcat():
     return redirect("/booklab/docs/bcat/bcat.html")
 
 
-@api_app.route('/<path:any_path>')
+@api_app.route("/")
+@api_app.route("/<path:any_path>")
 def test(any_path: str = "") -> str:
     """**static_site** serve routes of static sote `/docs/...`
 
@@ -75,7 +76,7 @@ def test(any_path: str = "") -> str:
     - if "" or None then the static site will be addressed
     - for any other value that will be shown in a small HTML foe debugging purposrs
     """
-    if any_path or any_path == "":
+    if any_path and any_path != "":
         s1 = f"Received path is: <b>{any_path}<b/> \n"
         s2 = ""  # kept fo show query params
         return str(s1 + s2)
