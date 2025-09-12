@@ -1,7 +1,7 @@
 """**routes** module desined to assure exposion of all `booklabd` interface as HTTP routes
 
 Important variables:
-    - `bkd.api_app` - web application object (aka Flask.app)
+    - `booklab.boolabd.api_app` - web application object (aka Flask.app)
 
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
@@ -21,6 +21,7 @@ from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
 
 
+'''
 @api_app.route("/")
 def static_site():
     """**app_index** serve the application main / root index from static site (ie, `docs/index.html`)
@@ -31,6 +32,7 @@ def static_site():
     )
     send_from_directory(src_dir, "index.html")
     return
+'''
 
 
 @api_app.route("/api/bcat/")
@@ -62,7 +64,7 @@ def api_bcat():
 
 
 @api_app.route('/<path:any_path>')
-def test(any_path: str) -> str:
+def test(any_path: str = "") -> str:
     """**static_site** serve routes of static sote `/docs/...`
 
     This function serve Booklab static site from booklabd server. 
@@ -79,11 +81,14 @@ def test(any_path: str) -> str:
         return str(s1 + s2)
     else:
         #... here will come code from route / then drop it
-        ...
-        pass
-
-
-
+        #4dbg... return("in proceessing REQUEST FOR ROOT. Not implemented yet")
+        src_dir = os.path.join(
+            PROJECT_ROOT,
+            "/docs/"
+        )
+        send_from_directory(src_dir, "index.html")
+        return
+    return
 
 
 
