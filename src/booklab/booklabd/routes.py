@@ -72,15 +72,27 @@ def test(any_path: str):
     This is provided to assure a right integration between pure _static site component_ which is the main entry in Booklab application and
     and _dynamic site (api) component_ which deserve those pages the need to write on server (usually database files) - non GET routes which are starting with `/api/...` explicitelly defined in this component (routes.py file).
 
-    Sometimes, when a page is called after `/api/xxz/` route returning, the string "api/" will remain in route so it will _need to be remived_ before sending file type of return.
-
-    Return from this function is done by `send_from_directory` Flask function which will do a "return like from static site" with right renderind on client browser.
+    Return from this function vary depending on `any_path` value:
+    - if "" or None then the static site will be addressed
+    - for any other value that will be shown in a small HTML foe debugging purposrs
     """
 
-    s1 = f"Received path is: {any_path} \n"
-    s2 = "not yet get  url_for"  # url_for('static')
-    s2 = f"URL for static is: {s2}"
-    return str(s1 + s2)
+    if any_path or any_path == "":
+        s1 = f"Received path is: {any_path} \n"
+        s2 = ""  # kept for any other dbg future purposrs
+        s2 = f"called URL is: <b>{s2}</b>"
+        return str(s1 + s2)
+    else:
+        #... here will come code from route / then drop it
+        ...
+        pass
+
+
+
+
+
+
+
 
 
 
