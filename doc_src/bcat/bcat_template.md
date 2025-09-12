@@ -45,9 +45,9 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
             <td>
                 <a href="../bstatus/index.html?code={{ book.code }}">Starea cartii</a><br/>
                 <a href="../edtb/index.html?code={{ book.code }}">Editare materiale</a><br/>
-                <a href="../api/orgm/index.html?code={{ book.code }}">Sectiuni carte</a><br/>
-                <a href="../api/prvb/index.html?code={{ book.code }}">Pre-Vizualizare carte</a><br/>
-                <a href="../api/dplb/index.html?code={{ book.code }}">Asamblare carte</a>
+                <a href="../orgm/index.html?code={{ book.code }}">Sectiuni carte</a><br/>
+                <a href="../prvb/index.html?code={{ book.code }}">Pre-Vizualizare carte</a><br/>
+                <a href="../dplb/index.html?code={{ book.code }}">Asamblare carte</a>
             </td>
         </tr>
         {% endfor %}

@@ -39,10 +39,6 @@ Ce poti face mai departe:
 
 * **[sa vezi catalogul cartilor tale](bcat/)**
 * **[sa incepi o noua carte](newb/)**
-* **[sa creezi si sa editezi continutului unui material](edtb/)**
-* **[sa organizezi materialele in diverse sectiuni](orgm/)**
-* **[sa vizualizezi si sa testezi materiale realizate](prvb/)**
-* **[sa faci asamblarea finala a cartii in forma electronica](dplb/)**
 
 Daca inca nu esti sigur sau hotarit, poti sa revezi doumentatia sistemului:
 
