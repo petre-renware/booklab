@@ -25,8 +25,6 @@ from booklab.booklabd import pjroot_location
 def static_site():
     """**app_index** serve the application main / root index from static site (ie, `docs/index.html`)
     """
-    #... #TODO implement like api_bcat() or using send_from_directory
-    #... #TODO also get the request.root_url to determine path behind booklabd app (as 250906 is "/booklab/" coming fron host nginx proxy)
     src_dir = os.path.join(
         PROJECT_ROOT,
         "/docs/"
@@ -41,7 +39,6 @@ def api_bcat():
 
     _NOTE:_ as exposed through nginx on this server the requestable route is `/bcat` (/api/ part is add by nginx)
     """
-
     # get list of book records ad list even 1rec
     bcat_records = None
     bcat_records = db_books.getAll()
@@ -65,7 +62,7 @@ def api_bcat():
 
 
 @api_app.route('/<path:any_path>')
-def test(any_path: str):
+def test(any_path: str) -> str:
     """**static_site** serve routes of static sote `/docs/...`
 
     This function serve Booklab static site from booklabd server. 
@@ -76,11 +73,9 @@ def test(any_path: str):
     - if "" or None then the static site will be addressed
     - for any other value that will be shown in a small HTML foe debugging purposrs
     """
-
     if any_path or any_path == "":
-        s1 = f"Received path is: {any_path} \n"
-        s2 = ""  # kept for any other dbg future purposrs
-        s2 = f"called URL is: <b>{s2}</b>"
+        s1 = f"Received path is: <b>{any_path}<b/> \n"
+        s2 = ""  # kept fo show query params
         return str(s1 + s2)
     else:
         #... here will come code from route / then drop it
