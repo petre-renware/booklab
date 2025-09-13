@@ -21,20 +21,6 @@ from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
 
 
-'''  #TODO drop this section when finish copy from it
-@api_app.route("/")
-def static_site():
-    """**app_index** serve the application main / root index from static site (ie, `docs/index.html`)
-    """
-    src_dir = os.path.join(
-        PROJECT_ROOT,
-        "/docs/"
-    )
-    send_from_directory(src_dir, "index.html")
-    return
-'''
-
-
 @api_app.route("/api/bcat/")
 def api_bcat():
     """**api_bcat** serve route `/api/bcat/`
@@ -60,12 +46,13 @@ def api_bcat():
     with open(file_to_write, "w") as file:
         file.write(rendered_str)
     #... #TODO set Flasx proxy middleware to eliminate need fir /booklab/ in route
+    #... #TODO chd in send_from_directory
     return redirect("/booklab/docs/bcat/bcat.html")
 
 
 @api_app.route("/")
 @api_app.route("/<path:any_path>")
-def test(any_path: str = "") -> str:
+def test(any_path: str = ...) -> str:
     """**static_site** serve routes of static sote `/docs/...`
 
     This function serve Booklab static site from booklabd server. 
@@ -76,19 +63,17 @@ def test(any_path: str = "") -> str:
     - if "" or None then the static site will be addressed
     - for any other value that will be shown in a small HTML foe debugging purposrs
     """
-    if any_path and any_path != "":
-        s1 = f"Received path is: <b>{any_path}<b/> \n"
-        s2 = ""  # kept fo show query params
-        return str(s1 + s2)
+    if any_path and any_path is not ...:
+        s1 = f"Received path is: <b>{any_path}<b/> <br/>"
+        s2 = f"Server name is {api_app.config['SERVER_NAME']} <br/>"
+        s3 = ""  # kept fo show query params
+        return str(s1 + s2 + s3)
     else:
-        #... here will come code from route / then drop it
-        #4dbg... return("in proceessing REQUEST FOR ROOT. Not implemented yet")
         src_dir = os.path.join(
             PROJECT_ROOT,
             "/docs/"
         )
-        send_from_directory(src_dir, "index.html")
-        return
+        return send_from_directory(src_dir, "index.html")
     return
 
 
