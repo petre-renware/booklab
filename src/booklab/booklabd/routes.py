@@ -13,6 +13,7 @@ from flask import url_for
 from flask import make_response
 from flask import request
 from flask import send_from_directory
+from flask import abort
 # booklab imports
 from booklab.booklabd import PROJECT_ROOT
 from booklab.booklabd import api_app
@@ -38,7 +39,6 @@ def api_bcat():
         "bcat/bcat_template.html",
         bcat_data = bcat_records
     )
-
     file_to_write = os.path.join(
         PROJECT_ROOT,
         "docs/bcat/bcat.html"
@@ -47,7 +47,7 @@ def api_bcat():
         file.write(rendered_str)
     #... #TODO set Flasx proxy middleware to eliminate need fir /booklab/ in route
     #... #TODO chd in send_from_directory
-    return redirect("/booklab/docs/bcat/bcat.html")
+    return render_template("bcat/bcat.html")
 
 
 @api_app.route("/")
@@ -63,18 +63,14 @@ def test(any_path: str = ...) -> str:
     - if "" or None then the static site will be addressed
     - for any other value that will be shown in a small HTML foe debugging purposrs
     """
-    if any_path and any_path is not ...:
+    if any_path is not ...:
         s1 = f"Received path is: <b>{any_path}<b/> <br/>"
         s2 = f"Server name is {api_app.config['SERVER_NAME']} <br/>"
         s3 = ""  # kept fo show query params
         return str(s1 + s2 + s3)
-    else:
-        src_dir = os.path.join(
-            PROJECT_ROOT,
-            "/docs/"
-        )
-        return send_from_directory(src_dir, "index.html")
-    return
+    if any_path is ...:
+        return render_template("index.html")
+    abort(404)
 
 
 
