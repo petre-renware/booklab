@@ -45,9 +45,7 @@ def api_bcat():
     )
     with open(file_to_write, "w") as file:
         file.write(rendered_str)
-    #... #TODO set Flasx proxy middleware to eliminate need fir /booklab/ in route
-    #... #TODO chd in send_from_directory
-    return render_template("bcat/bcat.html")
+    return redirect("/booklab/docs/bcat/bcat.html")
 
 
 @api_app.route("/")
@@ -69,7 +67,7 @@ def test(any_path: str = ...) -> str:
         s3 = ""  # kept fo show query params
         return str(s1 + s2 + s3)
     if any_path is ...:
-        return render_template("index.html")
+        return redirect("/booklab/docs/index.html")
     abort(404)
 
 
