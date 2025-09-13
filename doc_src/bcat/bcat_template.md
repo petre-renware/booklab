@@ -9,7 +9,7 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 ## Lista cartilor
 
-[Creare carte](../newb/index.html) <!--#NOTE action for new book -->
+[Creare carte](http://localhost:8000/api/newb/) <!--#NOTE action for new book -->
 
 
 {% include './local-page.css' %} <!--#NOTE contains dropdown commands button CSS -->
@@ -43,11 +43,11 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
             <td>{{ book.created_by }}</td>
             <td>{{ book.created_date }}</td>
             <td>
-                <a href="../bstatus/index.html?code={{ book.code }}">Starea cartii</a><br/>
-                <a href="../edtb/index.html?code={{ book.code }}">Editare materiale</a><br/>
-                <a href="../orgm/index.html?code={{ book.code }}">Sectiuni carte</a><br/>
-                <a href="../prvb/index.html?code={{ book.code }}">Pre-Vizualizare carte</a><br/>
-                <a href="../dplb/index.html?code={{ book.code }}">Asamblare carte</a>
+                <a href="http://localhost:8000/bstatus?code={{ book.code }}">Starea cartii</a><br/>
+                <a href="http://localhost:8000/api/edtb?code={{ book.code }}">Editare materiale</a><br/>
+                <a href="http://localhost:8000/api/orgm?code={{ book.code }}">Sectiuni carte</a><br/>
+                <a href="http://localhost:8000/api/prvb?code={{ book.code }}">Pre-Vizualizare carte</a><br/>
+                <a href="http://localhost:8000/api/dplb?code={{ book.code }}">Asamblare carte</a>
             </td>
         </tr>
         {% endfor %}
