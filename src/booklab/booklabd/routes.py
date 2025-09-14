@@ -23,7 +23,8 @@ from booklab.booklabd import pjroot_location
 
 
 #TODO /api/newb/
-
+#!!!#NOTE pay att to routes where should receive query params
+#   to NOT END WITH /
 
 @api_app.route("/api/edtb")
 def api_edtb():
