@@ -22,11 +22,28 @@ from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
 
 
+#TODO /api/newb/
+
+
+@api_app.route("/api/edtb/")
+def api_edtb():
+    """**api_edtb** serve creation of new book functionality.
+    """
+    book_code = request.args.get("code")
+    ret_str = f"Request for book with code <b>{book_code}<b/><br/>"
+    #TODO  here should integrate wip static page
+    return ret_str
+
+#TODO rest oj api routes for:
+#...  bstatus, edtb, ...
+
+
+
+
+
 @api_app.route("/api/bcat/")
 def api_bcat():
-    """**api_bcat** serve route `/api/bcat/`
-
-    _NOTE:_ as exposed through nginx on this server the requestable route is `/bcat` (/api/ part is add by nginx)
+    """**api_bcat** serve accessing books catalog functionality.
     """
     # get list of book records ad list even 1rec
     bcat_records = None

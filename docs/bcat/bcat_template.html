@@ -846,7 +846,7 @@
 <h1 id="catalogul-cartilor">Catalogul cartilor</h1>
 <p>Bine ati venit la <em>Catalogul cartilor dumneavoastra</em>. Aici puteti vizualiza cartile create de dumneavoastra si stadiul acestora, sa efectuati operatii asupra lor sau sa creati o carte noua.</p>
 <h2 id="lista-cartilor">Lista cartilor</h2>
-<p><a href="../newb/index.html">Creare carte</a> <!--#NOTE action for new book --></p>
+<p><a href="http://localhost:8000/api/newb/">Creare carte</a> <!--#NOTE action for new book --></p>
 <!-- #NOTE dropdown commands button CSS -->
 <style>
 /* Dropdown Button */
@@ -926,11 +926,11 @@
             <td>{{ book.created_by }}</td>
             <td>{{ book.created_date }}</td>
             <td>
-                <a href="../bstatus/index.html?code={{ book.code }}">Starea cartii</a><br/>
-                <a href="../edtb/index.html?code={{ book.code }}">Editare materiale</a><br/>
-                <a href="../orgm/index.html?code={{ book.code }}">Sectiuni carte</a><br/>
-                <a href="../prvb/index.html?code={{ book.code }}">Pre-Vizualizare carte</a><br/>
-                <a href="../dplb/index.html?code={{ book.code }}">Asamblare carte</a>
+                <a href="http://localhost:8000/bstatus/?code={{ book.code }}">Starea cartii</a><br/>
+                <a href="http://localhost:8000/api/edtb/?code={{ book.code }}">Editare materiale</a><br/>
+                <a href="http://localhost:8000/api/orgm/?code={{ book.code }}">Sectiuni carte</a><br/>
+                <a href="http://localhost:8000/api/prvb/?code={{ book.code }}">Pre-Vizualizare carte</a><br/>
+                <a href="http://localhost:8000/api/dplb/?code={{ book.code }}">Asamblare carte</a>
             </td>
         </tr>
         {% endfor %}
@@ -945,7 +945,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 11, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 13, 2025</span>
       
     
   </small>
