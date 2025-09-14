@@ -11,7 +11,6 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 [Creare carte](/booklab/api/newb/) <!--#NOTE action for new book -->
 
-
 {% include './local-page.css' %} <!--#NOTE contains dropdown commands button CSS -->
 
 <table>
