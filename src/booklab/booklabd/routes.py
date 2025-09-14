@@ -12,7 +12,7 @@ from flask import redirect
 from flask import url_for
 from flask import make_response
 from flask import request
-from flask import send_from_directory
+from flask import request
 from flask import abort
 # booklab imports
 from booklab.booklabd import PROJECT_ROOT
@@ -64,8 +64,9 @@ def test(any_path: str = ...) -> str:
     if any_path is not ...:
         s1 = f"Received path is: <b>{any_path}<b/> <br/>"
         s2 = f"Server name is {api_app.config['SERVER_NAME']} <br/>"
-        s3 = ""  # kept fo show query params
-        return str(s1 + s2 + s3)
+        s3 = f"External request location are:<br/> <b>{request.script_root=} <br/> {request.url_root=}<b/> <br/>"
+        s4 = ""  # kept fo show query params
+        return str(s1 + s2 + s3 + s4)
     if any_path is ...:
         return redirect("/booklab/docs/index.html")
     abort(404)
