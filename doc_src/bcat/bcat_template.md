@@ -9,7 +9,7 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 ## Lista cartilor
 
-[Creare carte](http://localhost:8000/api/newb/) <!--#NOTE action for new book -->
+[Creare carte](/booklab/api/newb/) <!--#NOTE action for new book -->
 
 
 {% include './local-page.css' %} <!--#NOTE contains dropdown commands button CSS -->
