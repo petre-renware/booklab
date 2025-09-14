@@ -23,7 +23,7 @@ First booklabd as Flask web app to serve `/api/.../` routes:
 
 * ...wip [0.4rc3] 250914...
     * ... booklabd: make all opers `/api/xxx/` routes showing `wip.md` page and comment to get querry parameters
-    * ... upd `bcat_template.md` to send book code as route-part like `/api/req-op/<book code here>/` because query params are not preserved by static site at redirection with <a> tag
+    * ... booklabd: route /<any_params> show query params 
 * [0.4rc2] 250913
     * booklabd index route, keep that w.<any_path> and for param as "" (blank) go to docs/index otherwise display act msg except url_for to see what user tried to access
     * booklabd-run.sh improved operating interface / commands follow POSIX specs
