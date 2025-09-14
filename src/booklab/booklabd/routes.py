@@ -25,12 +25,12 @@ from booklab.booklabd import pjroot_location
 #TODO /api/newb/
 
 
-@api_app.route("/api/edtb/")
+@api_app.route("/api/edtb")
 def api_edtb():
     """**api_edtb** serve creation of new book functionality.
     """
     book_code = request.args.get("code")
-    ret_str = f"Request for book with code <b>{book_code}<b/><br/>"
+    ret_str = f"Request for book with code <b>{book_code}</b><br>"
     #TODO  here should integrate wip static page
     return ret_str
 
@@ -66,7 +66,7 @@ def api_bcat():
 
 
 @api_app.route("/")
-@api_app.route("/<path:any_path>")
+@api_app.route("/<path:any_path>/")
 def test(any_path: str = ...) -> str:
     """**static_site** serve routes of static sote `/docs/...`
 
@@ -80,9 +80,9 @@ def test(any_path: str = ...) -> str:
     """
     if any_path is not ...:
         s1 = f"Received path is: <b>{any_path}<b/> <br/>"
-        s2 = f"Server name is {api_app.config['SERVER_NAME']} <br/>"
-        s3 = f"External request location are:<br/><b>{request.script_root=}<b/><br/><b>{request.url_root=}<b/> <br/>"
-        s4 = f"Code param is <b>{request.args.get('code')}<b/>"
+        s2 = f"Server name is {api_app.config['SERVER_NAME']} <br>"
+        s3 = f"External request location are:<br/><b>{request.script_root=}</b><br><b>{request.url_root=}</b> <br>"
+        s4 = f"Code param is <b>{request.args.get('code')}</b>"
         return str(s1 + s2 + s3 + s4)
     if any_path is ...:
         return redirect("/booklab/docs/index.html")
