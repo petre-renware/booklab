@@ -36,7 +36,7 @@ def api_newb():
 
 @api_app.route("/api/bstatus")
 def api_bstatus():
-    """**api_bstatus** serve creation of bstatus book functionality.
+    """**api_bstatus** serve bstatus book functionality.
     Query paraneters: book code
     """
     book_code = request.args.get("code")
@@ -48,7 +48,7 @@ def api_bstatus():
 
 @api_app.route("/api/edtb")
 def api_edtb():
-    """**api_edtb** serve creation of edit book functionality.
+    """**api_edtb** serve edtb functionality.
     Query paraneters: book code
     """
     book_code = request.args.get("code")
@@ -60,7 +60,7 @@ def api_edtb():
 
 @api_app.route("/api/orgm")
 def api_orgm():
-    """**api_orgm** serve creation of orgm book functionality.
+    """**api_orgm** serve  orgm book functionality.
     Query paraneters: book code
     """
     book_code = request.args.get("code")
@@ -72,7 +72,7 @@ def api_orgm():
 
 @api_app.route("/api/prvb")
 def api_prvb():
-    """**api_prvb** serve creation of prvb book functionality.
+    """**api_prvb** serve prvb book functionality.
     Query paraneters: book code
     """
     book_code = request.args.get("code")
@@ -82,11 +82,16 @@ def api_prvb():
     return ret_str
 
 
-#TODO rest oj api routes for:
-#...  dplb
-
-
-
+@api_app.route("/api/dplb")
+def api_dplb():
+    """**api_dplb** serve dplb book functionality.
+    Query paraneters: book code
+    """
+    book_code = request.args.get("code")
+    ret_str = f"Page for <b>dplb</b><br>"
+    ret_str += f"Request for book with code <b>{book_code}</b><br>"
+    #TODO  here should integrate wip static page
+    return ret_str
 
 
 @api_app.route("/api/bcat/")
