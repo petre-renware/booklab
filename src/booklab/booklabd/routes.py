@@ -22,21 +22,56 @@ from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
 
 
-#TODO /api/newb/
-#!!!#NOTE pay att to routes where should receive query params
-#   to NOT END WITH /
-
-@api_app.route("/api/edtb")
-def api_edtb():
-    """**api_edtb** serve creation of new book functionality.
+@api_app.route("/api/newb/")
+def api_newb():
+    """**api_newb** serve creation of newb book functionality.
+    Query paraneters: none
     """
     book_code = request.args.get("code")
-    ret_str = f"Request for book with code <b>{book_code}</b><br>"
+    ret_str = f"<b>Page for newb</b><br>"
+    ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO  here should integrate wip static page
     return ret_str
 
+
+@api_app.route("/api/bstatus")
+def api_bstatus():
+    """**api_bstatus** serve creation of bstatus book functionality.
+    Query paraneters: book code
+    """
+    book_code = request.args.get("code")
+    ret_str = f"<b>Page for bstatus</b><br>"
+    ret_str += f"Request for book with code <b>{book_code}</b><br>"
+    #TODO  here should integrate wip static page
+    return ret_str
+
+
+@api_app.route("/api/edtb")
+def api_edtb():
+    """**api_edtb** serve creation of edit book functionality.
+    Query paraneters: book code
+    """
+    book_code = request.args.get("code")
+    ret_str = f"<b>Page for edtb</b><br>"
+    ret_str += f"Request for book with code <b>{book_code}</b><br>"
+    #TODO  here should integrate wip static page
+    return ret_str
+
+
+@api_app.route("/api/orgm")
+def api_orgm():
+    """**api_orgm** serve creation of orgm book functionality.
+    Query paraneters: book code
+    """
+    book_code = request.args.get("code")
+    ret_str = f"<b>Page for orgm</b><br>"
+    ret_str += f"Request for book with code <b>{book_code}</b><br>"
+    #TODO  here should integrate wip static page
+    return ret_str
+
+
 #TODO rest oj api routes for:
-#...  bstatus, edtb, ...
+#...  prvb, dplb
 
 
 
