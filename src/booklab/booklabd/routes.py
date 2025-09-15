@@ -28,7 +28,7 @@ def api_newb():
     Query paraneters: none
     """
     book_code = request.args.get("code")
-    ret_str = f"<b>Page for newb</b><br>"
+    ret_str = f"Page for <b>newb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO  here should integrate wip static page
     return ret_str
@@ -40,7 +40,7 @@ def api_bstatus():
     Query paraneters: book code
     """
     book_code = request.args.get("code")
-    ret_str = f"<b>Page for bstatus</b><br>"
+    ret_str = f"Page for <b>bstatus</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO  here should integrate wip static page
     return ret_str
@@ -52,7 +52,7 @@ def api_edtb():
     Query paraneters: book code
     """
     book_code = request.args.get("code")
-    ret_str = f"<b>Page for edtb</b><br>"
+    ret_str = f"Page for <b>edtb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO  here should integrate wip static page
     return ret_str
@@ -64,14 +64,26 @@ def api_orgm():
     Query paraneters: book code
     """
     book_code = request.args.get("code")
-    ret_str = f"<b>Page for orgm</b><br>"
+    ret_str = f"Page for <b>orgm</b><br>"
+    ret_str += f"Request for book with code <b>{book_code}</b><br>"
+    #TODO  here should integrate wip static page
+    return ret_str
+
+
+@api_app.route("/api/prvb")
+def api_prvb():
+    """**api_prvb** serve creation of prvb book functionality.
+    Query paraneters: book code
+    """
+    book_code = request.args.get("code")
+    ret_str = f"Page for <b>prvb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO  here should integrate wip static page
     return ret_str
 
 
 #TODO rest oj api routes for:
-#...  prvb, dplb
+#...  dplb
 
 
 
