@@ -12,7 +12,7 @@ from flask import redirect
 from flask import url_for
 from flask import make_response
 from flask import request
-from flask import send_from_directory
+from flask import request
 from flask import abort
 # booklab imports
 from booklab.booklabd import PROJECT_ROOT
@@ -22,11 +22,81 @@ from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
 
 
+@api_app.route("/api/newb/")
+def api_newb():
+    """**api_newb** serve creation of newb book functionality.
+    Query paraneters: none
+    """
+    book_code = request.args.get("code")
+    ret_str = f"Page for <b>newb</b><br>"
+    ret_str += f"Request for book with code <b>{book_code}</b><br>"
+    #TODO  here should integrate wip static page
+    return ret_str
+
+
+@api_app.route("/api/bstatus")
+def api_bstatus():
+    """**api_bstatus** serve bstatus book functionality.
+    Query paraneters: book code
+    """
+    book_code = request.args.get("code")
+    ret_str = f"Page for <b>bstatus</b><br>"
+    ret_str += f"Request for book with code <b>{book_code}</b><br>"
+    #TODO  here should integrate wip static page
+    return ret_str
+
+
+@api_app.route("/api/edtb")
+def api_edtb():
+    """**api_edtb** serve edtb functionality.
+    Query paraneters: book code
+    """
+    book_code = request.args.get("code")
+    ret_str = f"Page for <b>edtb</b><br>"
+    ret_str += f"Request for book with code <b>{book_code}</b><br>"
+    #TODO  here should integrate wip static page
+    return ret_str
+
+
+@api_app.route("/api/orgm")
+def api_orgm():
+    """**api_orgm** serve  orgm book functionality.
+    Query paraneters: book code
+    """
+    book_code = request.args.get("code")
+    ret_str = f"Page for <b>orgm</b><br>"
+    ret_str += f"Request for book with code <b>{book_code}</b><br>"
+    #TODO  here should integrate wip static page
+    return ret_str
+
+
+@api_app.route("/api/prvb")
+def api_prvb():
+    """**api_prvb** serve prvb book functionality.
+    Query paraneters: book code
+    """
+    book_code = request.args.get("code")
+    ret_str = f"Page for <b>prvb</b><br>"
+    ret_str += f"Request for book with code <b>{book_code}</b><br>"
+    #TODO  here should integrate wip static page
+    return ret_str
+
+
+@api_app.route("/api/dplb")
+def api_dplb():
+    """**api_dplb** serve dplb book functionality.
+    Query paraneters: book code
+    """
+    book_code = request.args.get("code")
+    ret_str = f"Page for <b>dplb</b><br>"
+    ret_str += f"Request for book with code <b>{book_code}</b><br>"
+    #TODO  here should integrate wip static page
+    return ret_str
+
+
 @api_app.route("/api/bcat/")
 def api_bcat():
-    """**api_bcat** serve route `/api/bcat/`
-
-    _NOTE:_ as exposed through nginx on this server the requestable route is `/bcat` (/api/ part is add by nginx)
+    """**api_bcat** serve accessing books catalog functionality.
     """
     # get list of book records ad list even 1rec
     bcat_records = None
@@ -49,7 +119,7 @@ def api_bcat():
 
 
 @api_app.route("/")
-@api_app.route("/<path:any_path>")
+@api_app.route("/<path:any_path>/")
 def test(any_path: str = ...) -> str:
     """**static_site** serve routes of static sote `/docs/...`
 
@@ -62,17 +132,14 @@ def test(any_path: str = ...) -> str:
     - for any other value that will be shown in a small HTML foe debugging purposrs
     """
     if any_path is not ...:
-        s1 = f"Received path is: <b>{any_path}<b/> <br/>"
-        s2 = f"Server name is {api_app.config['SERVER_NAME']} <br/>"
-        s3 = ""  # kept fo show query params
-        return str(s1 + s2 + s3)
+        s1 = f"Received path is: <b>{any_path}</b> <br>"
+        s2 = f"Server name is <b>{api_app.config['SERVER_NAME']}</b> <br>"
+        s3 = f"External request location are:<br/><b>{request.script_root=}</b><br><b>{request.url_root=}</b> <br>"
+        s4 = f"Code param is <b>{request.args.get('code')}</b>"
+        return str(s1 + s2 + s3 + s4)
     if any_path is ...:
         return redirect("/booklab/docs/index.html")
     abort(404)
-
-
-
-
 
 
 
