@@ -34,7 +34,7 @@ def api_newb():
     return ret_str
 
 
-@api_app.route("/api/bstatus")
+@api_app.route("/api/bstatus/")
 def api_bstatus():
     """**api_bstatus** serve bstatus book functionality.
     Query paraneters: book code
@@ -46,7 +46,7 @@ def api_bstatus():
     return ret_str
 
 
-@api_app.route("/api/edtb")
+@api_app.route("/api/edtb/")
 def api_edtb():
     """**api_edtb** serve edtb functionality.
     Query paraneters: book code
@@ -58,7 +58,7 @@ def api_edtb():
     return ret_str
 
 
-@api_app.route("/api/orgm")
+@api_app.route("/api/orgm/")
 def api_orgm():
     """**api_orgm** serve  orgm book functionality.
     Query paraneters: book code
@@ -70,7 +70,7 @@ def api_orgm():
     return ret_str
 
 
-@api_app.route("/api/prvb")
+@api_app.route("/api/prvb/")
 def api_prvb():
     """**api_prvb** serve prvb book functionality.
     Query paraneters: book code
@@ -82,7 +82,7 @@ def api_prvb():
     return ret_str
 
 
-@api_app.route("/api/dplb")
+@api_app.route("/api/dplb/")
 def api_dplb():
     """**api_dplb** serve dplb book functionality.
     Query paraneters: book code
