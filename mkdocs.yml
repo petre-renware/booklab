@@ -1,30 +1,27 @@
 site_name: BookLab
-site_author: 'Petre Iordanescu, RENware Software Systems, petre.iordanescu@gmail.com'
+site_author: 'Petre Iordanescu (petre.iordanescu@gmail.com)'
 copyright: 'Copyright (c) RENware Software Systems'
 
 
 
 nav:
-    - BookLab:
-        - Acasa: index.md
-        - Catalog carti: bcat/ #NOTE will direct-fwd to `http://<crt_server_name>/bcat/`
-        - Carte noua: newb/ #NOTE will direct-fwd to `http://<crt_server_name>/newb/`
-        - Editare materiale: edtm/ #NOTE will direct-fwd to `http://<crt_server_name>/edtm/`
-        - Sectiuni carte: orgm/ #NOTE will direct-fwd to `http://<crt_server_name>/orgm/`
-        - Previzualizare carte: prvb/ #NOTE will direct-fwd to `http://<crt_server_name>/prvb/`
-        - Asamblare carte: dplb/ #NOTE will direct-fwd to `http://<crt_server_name>/dplb/`
+    - Acasa: index.md
+    - Catalog carti: bcat/ #NOTE will direct-fwd to `http://<crt_server_name>/bcat/`
+    - Carte noua: newb/ #NOTE will direct-fwd to `http://<crt_server_name>/newb/`
+# petrei@250910 folliwing commented sections are no nore accessed from main menu but only from "Catalog carti" page
+#    - Editare materiale: edtm/ #NOTE will direct-fwd to `http://<crt_server_name>/edtm/`
+#    - Sectiuni carte: orgm/ #NOTE will direct-fwd to `http://<crt_server_name>/orgm/`
+#    - Previzualizare carte: prvb/ #NOTE will direct-fwd to `http://<crt_server_name>/prvb/`
+#    - Asamblare carte: dplb/ #NOTE will direct-fwd to `http://<crt_server_name>/dplb/`
     - Help:
         - Vedere de ansamblu: help/130.02-Overview.md
-        #
         - Manuale de utilizare:
             - Indexul manuale EUMA: help/880.30-EUMA_catalog.md
-            - Catalog carti: help/880.30-BCAT_usage.md
-            #NOTE - add here EUMA manuals as needed
+            - Catalogul manualelor: help/880.30-BCAT_usage.md
+            #NOTE - add here EUMA manuals piece-by-piece when they are finished
         - Manuale de configurare:
             - Indexul manuale ADMA: help/880.30-ADMA_catalog.md
             - Fisierul de configurare a cartii: help/880.30-TMPL_usage.md
-            #NOTE - add here ADMA manuals as needed
-        #
         - Documentatia tehnica:
             - Arhitectura sistemului: 810-DSGN/810.02-System_Landscape.md
             - modul Initializare sistem (sysInit): 810-DSGN/810.05a-sysInit_System_Process.md
@@ -35,7 +32,7 @@ nav:
             - modul Organizare Carte (ORGM): 810-DSGN/810.05a-orgm_System_Process.md
             - modul Previzualizare Carte (PRVB): 810-DSGN/810.05a-prvb_System_Process.md
             - modul Generare Carte (DPLB): 810-DSGN/810.05a-dplb_System_Process.md
-        - Manual BookLab (PDF): pdfs/print_page.html/print_page.pdf
+            - Doc tehnica detaliata: 810-DSGN/810.05a-booklab_DLD_specs.md
     - About:
         - Licenta mea: wip.md #TODO tbd... este un http catre o ruta dinamica din produs
         - Suport: https://www.renware.eu/support.html
@@ -70,8 +67,7 @@ markdown_extensions:
 
 
 
-extra:
-    arint_version: "0.1"
+# extra:
 #  alternate: #NOTE language options - FUTURE FEATURE - should first have a translation...
 #    - name: English
 #      link: /
@@ -102,49 +98,13 @@ plugins:
     - markdown-exec #NOTE Python execution inside markdown files (execution at build time, "compilation like" NOT dynamically NOT JavaScript)
     - git-revision-date-localized
     # - pdf-export  #NOTE DO NOT USE this as does not render mermaid in PDF docs
-    - print-site: #NOTE_IMPORTANT_#NOTE put `print-site` plug in BEFORE `pdf-with-js` in order to works the workaround wit a fake `print_page.md` that will determine generation of 'print_page.pdf' as any other page generated pdf by `pdf-with-js`; ingnore warning ` [mkdocs-print-site] 'print-site' should be defined as the *last* plugin,to ensure...`
+#    - print-site: #NOTE_IMPORTANT_#NOTE put `print-site` plug in BEFORE `pdf-with-js` in order to works the workaround wit a fake `print_page.md` that will determine generation of 'print_page.pdf' as any other page generated pdf by `pdf-with-js`; ingnore warning ` [mkdocs-print-site] 'print-site' should be defined as the *last* plugin,to ensure...`
         # add_to_navigation: true #NOTE not needed here
         # print_page_title: 'Complete BookLab Manual' #NOTE not needed here
-        add_full_urls: true
-        add_table_of_contents: true
-    - pdf-with-js:
-        enable: true
-        #NOTE - all next are examples...
-        #author: #NOTE defaulted from site_author item
-        #copyright: #NOTE defaulted from copyright item
-        #cover: false
-        #back_cover: true
-        #cover_title: TITLE TEXT
-        #cover_subtitle: SUBTITLE TEXT
-        #custom_template_path: TEMPLATES PATH
-        #
-        #toc_title: TOC TITLE TEXT
-        #heading_shift: false
-        #toc_level: 3
-        #ordered_chapter_level: 2
-        #excludes_children:
-        #    - 'release-notes/:upgrading'
-        #    - 'release-notes/:changelog'
-        #
-        #exclude_pages:
-        #    - 'bugs/'
-        #    - 'appendix/contribute/'
-        #convert_iframe:
-        #    - src: IFRAME SRC
-        #      img: POSTER IMAGE URL
-        #      text: ALTERNATE TEXT
-        #    - src: ...
-        #two_columns_level: 3
-        #
-        #render_js: true
-        #headless_chrome_path: headless-chromium
-        #
-        #output_path: any-place/document.pdf
-        #enabled_if_env: ENABLE_PDF_EXPORT
-        #
-        #debug_html: true
-        #show_anchors: true
-        #verbose: true
+#        add_full_urls: true
+#        add_table_of_contents: true
+#    - pdf-with-js:
+#        enable: true
 
 
 
@@ -192,7 +152,7 @@ theme:
 docs_dir: './doc_src'
 
 # root directory where to be generated portal
-site_dir: './static_portal' #NOTE: [piu] this is the working directory; final is in `docs/`` which is published through GitHub (chk but @ 230706 petre-dev branch)
+site_dir: './docs'
 
 # other useful configurations
 use_directory_urls: false # allow link between pages to work properly as static site an "callable" as `file:///...`

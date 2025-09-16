@@ -9,18 +9,24 @@ __pycache__/
 # C extensions
 *.so
 
+
+# dynamically generated files at run-time
+*.PID
+docs/bcat/bcat.html
+
+
 # Distribution / packaging
 .Python
 build/
 develop-eggs/
-dist/
+# dist/
 downloads/
 eggs/
 .eggs/
 lib/
 lib64/
 parts/
-sdist/
+# sdist/
 var/
 wheels/
 share/python-wheels/
@@ -80,7 +86,7 @@ profile_default/
 ipython_config.py
 
 # pyenv
-.python-version
+# .python-version
 
 # celery beat schedule file
 celerybeat-schedule
@@ -125,7 +131,7 @@ tmp/
 
 
 # static generated portal should not be in git, but just build locally
-static_portal/
+# static_portal/
 
 
 
