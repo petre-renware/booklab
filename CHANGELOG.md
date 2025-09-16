@@ -16,16 +16,16 @@
 
 
 
-## ...wip [0.4] - unreleased...
+## ...wip [0.4] - 16.sep.2025
 First booklabd as Flask web app to serve `/api/.../` routes:
-* tbd... to release:
+* 250916 release:
     - upd version
     - cleanup project root dir
     - build tech doc
     - build package whl
-    - ... update this version-head date and status
-    - ... publish
+    - update this version-head date and status
     - ... roolut to master, drop dev branches
+    - ... publish
 
 * [0.4rc4] 250916 static site: upd with a note/chapter ref "Demo public site" where explain that public site contains data from more users and respect them managing only your data
 * [0.4rc3] 250915 FIRST OPS DRAFT: booklabd make all opers `/api/xxx/` routes showing `code` query param and `wip.md` page and comment to get querry parameters
