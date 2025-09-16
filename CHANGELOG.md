@@ -21,7 +21,8 @@ First booklabd as Flask web app to serve `/api/.../` routes:
 * tbd... to release:
     - upd version
     - cleanup project root dir
-    - ... build all
+    - build tech doc
+    - build package whl
     - ... update this version-head date and status
     - ... publish
     - ... roolut to master, drop dev branches
