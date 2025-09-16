@@ -1,4 +1,5 @@
 """**db_init** module that initialize `booklabd` database (more JSON files)
+
 This module is designed to initialize database objects `db_books` and `db_system`.
 
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)

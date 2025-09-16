@@ -11,7 +11,17 @@
 * tbd... ref command "Verificare" (code-name `bstatus`):
     * [ ] VIEW CONFIG FILE (to display `book_mkdocs.yml`)
     * [ ] SHOW STATUS of assembly (what did in `0.2.4`), check if exists `book_mkdocs.yml.tmpl` that meaning `bkcmd_assembly...sh` was xecuted but not `bkcmd_render...py`
-    * [ ] update 810-DSGN with `bstatus` component
+
+
+
+
+
+## ... [0.5] - unreleased
+* tbd... bstatus functionality
+* tbd... [xxx]
+    * ... refactor bstatus to bstat
+    * ... update 810-DSGN with `bstatus` component
+* ...wip [0.5b0] init 0.5 version
 
 
 
