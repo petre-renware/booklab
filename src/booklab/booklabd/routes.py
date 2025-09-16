@@ -1,7 +1,8 @@
-"""**routes** module desined to assure exposion of all `booklabd` interface as HTTP routes
+"""module desined to assure exposion of all `booklabd` interface as HTTP routes
 
 Important variables:
-    - `booklab.boolabd.api_app` - web application object (aka Flask.app)
+
+- `booklab.boolabd.api_app`: web application object (aka Flask.app)
 
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
@@ -24,7 +25,8 @@ from booklab.booklabd import pjroot_location
 
 @api_app.route("/api/newb/")
 def api_newb():
-    """**api_newb** serve creation of newb book functionality.
+    """serve **newb** book functionality.
+
     Query paraneters: none
     """
     book_code = request.args.get("code")
@@ -36,7 +38,8 @@ def api_newb():
 
 @api_app.route("/api/bstatus/")
 def api_bstatus():
-    """**api_bstatus** serve bstatus book functionality.
+    """serve **bstatus** book functionality.
+
     Query paraneters: book code
     """
     book_code = request.args.get("code")
@@ -48,7 +51,8 @@ def api_bstatus():
 
 @api_app.route("/api/edtb/")
 def api_edtb():
-    """**api_edtb** serve edtb functionality.
+    """serve **edtb** book functionality.
+
     Query paraneters: book code
     """
     book_code = request.args.get("code")
@@ -60,7 +64,8 @@ def api_edtb():
 
 @api_app.route("/api/orgm/")
 def api_orgm():
-    """**api_orgm** serve  orgm book functionality.
+    """serve  **orgm** book functionality.
+
     Query paraneters: book code
     """
     book_code = request.args.get("code")
@@ -72,7 +77,8 @@ def api_orgm():
 
 @api_app.route("/api/prvb/")
 def api_prvb():
-    """**api_prvb** serve prvb book functionality.
+    """serve **prvb** book functionality.
+
     Query paraneters: book code
     """
     book_code = request.args.get("code")
@@ -84,7 +90,8 @@ def api_prvb():
 
 @api_app.route("/api/dplb/")
 def api_dplb():
-    """**api_dplb** serve dplb book functionality.
+    """serve **dplb** book functionality.
+
     Query paraneters: book code
     """
     book_code = request.args.get("code")
@@ -96,7 +103,7 @@ def api_dplb():
 
 @api_app.route("/api/bcat/")
 def api_bcat():
-    """**api_bcat** serve accessing books catalog functionality.
+    """serve accessing books catalog, **bcat** functionality.
     """
     # get list of book records ad list even 1rec
     bcat_records = None
@@ -121,13 +128,14 @@ def api_bcat():
 @api_app.route("/")
 @api_app.route("/<path:any_path>/")
 def test(any_path: str = ...) -> str:
-    """**static_site** serve routes of static sote `/docs/...`
+    """serve routes of static site `/docs/...`
 
     This function serve Booklab static site from booklabd server. 
     This is provided to assure a right integration between pure _static site component_ which is the main entry in Booklab application and
     and _dynamic site (api) component_ which deserve those pages the need to write on server (usually database files) - non GET routes which are starting with `/api/...` explicitelly defined in this component (routes.py file).
 
     Return from this function vary depending on `any_path` value:
+
     - if "" or None then the static site will be addressed
     - for any other value that will be shown in a small HTML foe debugging purposrs
     """

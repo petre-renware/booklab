@@ -17,7 +17,7 @@
     
     
       
-        <title>Bcat - BookLab</title>
+        <title>Bcat template - BookLab</title>
       
     
     
@@ -107,6 +107,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#catalogul-cartilor" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -137,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bcat
+              Bcat template
             
           </span>
         </div>
@@ -809,6 +814,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lista-cartilor" class="md-nav__link">
+    Lista cartilor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    Help
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -823,13 +852,126 @@
                   
 
 
-  <h1>Bcat</h1>
+<!-- #NOTE
+    * page dedicated for books catalog
+    * for Jinja fields processable @ server-side use ` ... ` construction to remain in resulted HTML afer 1st compilation with mkdocs
+ -->
 
-<p>*** DO NOT DROP ME !!!</p>
-<p>This file serve just as refrence @ compilation tine.
-It will be dynamically replaced in running 
-bu rendering ./<code>bcat_template.html</code> and providing 
-right content combined with database data.</p>
+<h1 id="catalogul-cartilor">Catalogul cartilor</h1>
+<p>Bine ati venit la <em>Catalogul cartilor dumneavoastra</em>. Aici puteti vizualiza cartile create de dumneavoastra si stadiul acestora, sa efectuati operatii asupra lor sau sa creati o carte noua.</p>
+<h2 id="lista-cartilor">Lista cartilor</h2>
+<p><a href="/booklab/api/newb/">Creare carte</a> <!--#NOTE action for new book --></p>
+<!-- #NOTE dropdown commands button CSS -->
+<style>
+/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+</style>
+
+<!--#NOTE contains dropdown commands button CSS -->
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Cod</th>
+            <th>Titlu scurt</th>
+            <th>Titlu lung</th>
+            <th>Copyright</th>
+            <th>Autorul cartii</th>
+            <th>Note</th>
+            <th>creata de</th>
+            <th>data creare</th>
+            <th>actiuni</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        
+        <tr>
+            <td>0</td>
+            <td>tmpl</td>
+            <td>Numele cartii (si al site-ului daca se publica in internet)</td>
+            <td>Denumirea lunga a cartii asa cum va apare pe coperta</td>
+            <td>Copyright - Informatia ref detinatorul drepturilor de autor</td>
+            <td>Autorul cartii</td>
+            <td>Inregistrare obligatorie de la instalare sistem. Non editabila.</td>
+            <td>system</td>
+            <td>2023-08-01</td>
+            <td>
+                <a href="/booklab/api/bstatus/?code=tmpl">Starea cartii</a><br>
+                <a href="/booklab/api/edtb/?code=tmpl">Editare materiale</a><br>
+                <a href="/booklab/api/orgm/?code=tmpl">Sectiuni carte</a><br>
+                <a href="/booklab/api/prvb/?code=tmpl">Pre-Vizualizare carte</a><br>
+                <a href="/booklab/api/dplb/?code=tmpl">Asamblare carte</a>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>TEST</td>
+            <td>short_desc - test record #FIXME to drop</td>
+            <td>description - test record #FIXME to drop</td>
+            <td>copyright - test record #FIXME to drop</td>
+            <td>author - test record #FIXME to drop</td>
+            <td>notes - test record #FIXME to drop</td>
+            <td>petre</td>
+            <td>1900-08-01</td>
+            <td>
+                <a href="/booklab/api/bstatus/?code=TEST">Starea cartii</a><br>
+                <a href="/booklab/api/edtb/?code=TEST">Editare materiale</a><br>
+                <a href="/booklab/api/orgm/?code=TEST">Sectiuni carte</a><br>
+                <a href="/booklab/api/prvb/?code=TEST">Pre-Vizualizare carte</a><br>
+                <a href="/booklab/api/dplb/?code=TEST">Asamblare carte</a>
+            </td>
+        </tr>
+        
+
+    </tbody>
+</table>
+
+<h2 id="help"><a href="../help/880.30-BCAT_usage.html">Help</a></h2>
 
   <hr>
 <div class="md-source-file">

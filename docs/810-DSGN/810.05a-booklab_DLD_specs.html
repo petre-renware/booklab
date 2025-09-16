@@ -913,15 +913,18 @@
 <p><a id="booklab"></a></p>
 <h1 id="booklab">booklab</h1>
 <p><strong>booklab</strong> main python package for Booklab system</p>
-<p>Consists of the following basic modules:
-- <code>booklab-cli</code> which is a CLI application to manage system
-- <code>booklabd</code> designed to serve <code>/api/.../</code> system routes that need database write access
-Despite these Python modules, there are other directories in package, the most relevant being:
-- <code>data/</code> containing the system data in JSON files
-- <code>conf/</code> containing configuration files for different system components including infrastructure ones like gunicorn or nginx
-- <code>doc/</code> containing system usage documentation (aka api interface)</p>
-<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)
-Last update: aug.2025</p>
+<p>Consists of the following basic modules:</p>
+<ul>
+<li><code>booklab-cli</code> which is a CLI application to manage system</li>
+<li><code>booklabd</code> designed to serve <code>/api/.../</code> system routes that need database write access</li>
+</ul>
+<p>Despite these Python modules, there are other directories in package, the most relevant being:</p>
+<ul>
+<li><code>data/</code> containing the system data in JSON files</li>
+<li><code>conf/</code> containing configuration files for different system components including infrastructure ones like gunicorn or nginx</li>
+<li><code>doc/</code> containing system usage documentation (aka api interface)</li>
+</ul>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.DATA_ROOT"></a></p>
 <h4 id="data_root">DATA_ROOT</h4>
 <p>database files directory</p>
@@ -932,12 +935,13 @@ Last update: aug.2025</p>
 <h1 id="booklabgunicornconf">booklab.gunicorn.conf</h1>
 <p><a id="booklab.conf"></a></p>
 <h1 id="booklabconf">booklab.conf</h1>
-<p><strong>conf</strong> - configurations module
-Various booklab system components configuration files.
-- <em>Note 1:</em> files wirh <code>.py</code> extension are considered Python files and can be imported accordingly as longas they are Python-code correct.
-- <em>Note 2:</em> all files from here are assumed to be <em>text files</em>. Any deviation from this rule is assumed to be treated accordingly in code.</p>
-<p>Author; Petre Iordanescu (petre.iordanescu@gmail.com)
-Created; Aug.2025</p>
+<p><strong>conf</strong> - configurations module</p>
+<p>Various booklab system components configuration files.</p>
+<ul>
+<li><em>Note 1:</em> files wirh <code>.py</code> extension are considered Python files and can be imported accordingly as longas they are Python-code correct.</li>
+<li><em>Note 2:</em> all files from here are assumed to be <em>text files</em>. Any deviation from this rule is assumed to be treated accordingly in code.</li>
+</ul>
+<p>Author; Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.conf.gunicorn.gunicorn.conf"></a></p>
 <h1 id="booklabconfgunicorngunicornconf">booklab.conf.gunicorn.gunicorn.conf</h1>
 <p><a id="booklab.booklab-cli"></a></p>
@@ -954,71 +958,75 @@ Created; Aug.2025</p>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.booklabd.routes"></a></p>
 <h1 id="booklabbooklabdroutes">booklab.booklabd.routes</h1>
-<p><strong>routes</strong> module desined to assure exposion of all <code>booklabd</code> interface as HTTP routes</p>
-<p>Important variables:
-    - <code>booklab.boolabd.api_app</code> - web application object (aka Flask.app)</p>
+<p>module desined to assure exposion of all <code>booklabd</code> interface as HTTP routes</p>
+<p>Important variables:</p>
+<ul>
+<li><code>booklab.boolabd.api_app</code>: web application object (aka Flask.app)</li>
+</ul>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.booklabd.routes.api_newb"></a></p>
 <h4 id="api_newb">api_newb</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/newb/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_newb</span><span class="p">()</span>
 </code></pre></div>
-<p><strong>api_newb</strong> serve creation of newb book functionality.
-Query paraneters: none</p>
+<p>serve <strong>newb</strong> book functionality.</p>
+<p>Query paraneters: none</p>
 <p><a id="booklab.booklabd.routes.api_bstatus"></a></p>
 <h4 id="api_bstatus">api_bstatus</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/bstatus/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_bstatus</span><span class="p">()</span>
 </code></pre></div>
-<p><strong>api_bstatus</strong> serve bstatus book functionality.
-Query paraneters: book code</p>
+<p>serve <strong>bstatus</strong> book functionality.</p>
+<p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_edtb"></a></p>
 <h4 id="api_edtb">api_edtb</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/edtb/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_edtb</span><span class="p">()</span>
 </code></pre></div>
-<p><strong>api_edtb</strong> serve edtb functionality.
-Query paraneters: book code</p>
+<p>serve <strong>edtb</strong> book functionality.</p>
+<p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_orgm"></a></p>
 <h4 id="api_orgm">api_orgm</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/orgm/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_orgm</span><span class="p">()</span>
 </code></pre></div>
-<p><strong>api_orgm</strong> serve  orgm book functionality.
-Query paraneters: book code</p>
+<p>serve  <strong>orgm</strong> book functionality.</p>
+<p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_prvb"></a></p>
 <h4 id="api_prvb">api_prvb</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/prvb/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_prvb</span><span class="p">()</span>
 </code></pre></div>
-<p><strong>api_prvb</strong> serve prvb book functionality.
-Query paraneters: book code</p>
+<p>serve <strong>prvb</strong> book functionality.</p>
+<p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_dplb"></a></p>
 <h4 id="api_dplb">api_dplb</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/dplb/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_dplb</span><span class="p">()</span>
 </code></pre></div>
-<p><strong>api_dplb</strong> serve dplb book functionality.
-Query paraneters: book code</p>
+<p>serve <strong>dplb</strong> book functionality.</p>
+<p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_bcat"></a></p>
 <h4 id="api_bcat">api_bcat</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/bcat/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_bcat</span><span class="p">()</span>
 </code></pre></div>
-<p><strong>api_bcat</strong> serve accessing books catalog functionality.</p>
+<p>serve accessing books catalog, <strong>bcat</strong> functionality.</p>
 <p><a id="booklab.booklabd.routes.test"></a></p>
 <h4 id="test">test</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
 <span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&lt;path:any_path&gt;/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">any_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
-<p><strong>static_site</strong> serve routes of static sote <code>/docs/...</code></p>
+<p>serve routes of static site <code>/docs/...</code></p>
 <p>This function serve Booklab static site from booklabd server. 
 This is provided to assure a right integration between pure <em>static site component</em> which is the main entry in Booklab application and
 and <em>dynamic site (api) component</em> which deserve those pages the need to write on server (usually database files) - non GET routes which are starting with <code>/api/...</code> explicitelly defined in this component (routes.py file).</p>
-<p>Return from this function vary depending on <code>any_path</code> value:
-- if "" or None then the static site will be addressed
-- for any other value that will be shown in a small HTML foe debugging purposrs</p>
+<p>Return from this function vary depending on <code>any_path</code> value:</p>
+<ul>
+<li>if "" or None then the static site will be addressed</li>
+<li>for any other value that will be shown in a small HTML foe debugging purposrs</li>
+</ul>
 <p><a id="booklab.booklabd.app_init"></a></p>
 <h1 id="booklabbooklabdapp_init">booklab.booklabd.app_init</h1>
 <p><strong>app_init</strong> module that initialize <code>booklabd</code> application</p>

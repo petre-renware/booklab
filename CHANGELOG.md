@@ -20,8 +20,9 @@
 * tbd... bstatus functionality
 * tbd... [xxx]
     * ... refactor bstatus to bstat
-    * ... update 810-DSGN with `bstatus` component
-* ...wip [0.5b0] init 0.5 version
+    * update 810-DSGN with `bstatus` component
+* [0.5.dev1] 250916 clean prj docstrings and dirs & files
+* [0.5.dev0] 250916 init 0.5 version
 
 
 
