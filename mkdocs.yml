@@ -32,6 +32,7 @@ nav:
             - modul Organizare Carte (ORGM): 810-DSGN/810.05a-orgm_System_Process.md
             - modul Previzualizare Carte (PRVB): 810-DSGN/810.05a-prvb_System_Process.md
             - modul Generare Carte (DPLB): 810-DSGN/810.05a-dplb_System_Process.md
+            - Doc tehnica detaliata: 810-DSGN/810.05a-booklab_DLD_specs.md
     - About:
         - Licenta mea: wip.md #TODO tbd... este un http catre o ruta dinamica din produs
         - Suport: https://www.renware.eu/support.html
