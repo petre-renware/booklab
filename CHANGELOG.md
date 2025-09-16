@@ -21,6 +21,7 @@
 * tbd... [xxx]
     * ... refactor bstatus to bstat
     * update 810-DSGN with `bstatus` component
+* [0.5.dev2] 250916 update `books_catalog.json` with data requured by `bstatus` functionality
 * [0.5.dev1] 250916 clean prj docstrings and dirs & files
 * [0.5.dev0] 250916 init 0.5 version
 
