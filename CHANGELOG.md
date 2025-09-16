@@ -7,20 +7,18 @@
 
 ## ... #TODO [unreleased] BCAT extend book command center (...wip...)
 * tbd... #TODO-ASAP__focus on Jupiter__
-* tbd... init TMPL with a start `index.md` file && maybe 1, 2 examples markdown as "starter samples"
 * tbd... ref command "Verificare" (code-name `bstatus`):
-    * [ ] VIEW CONFIG FILE (to display `book_mkdocs.yml`)
-    * [ ] SHOW STATUS of assembly (what did in `0.2.4`), check if exists `book_mkdocs.yml.tmpl` that meaning `bkcmd_assembly...sh` was xecuted but not `bkcmd_render...py`
 
 
 
 
 
 ## ... [0.5] - unreleased
+`bstatus` functionality
 * tbd... bstatus functionality
-* tbd... [xxx]
-    * ... refactor bstatus to bstat
-    * update 810-DSGN with `bstatus` component
+* [0.5a0] 250917
+    * clean all technical documentation and modules docstring
+    * update 810-DSGN with `bstatus` component and change text CGI with WSGI
 * [0.5.dev2] 250916 update `books_catalog.json` with data requured by `bstatus` functionality
 * [0.5.dev1] 250916 clean prj docstrings and dirs & files
 * [0.5.dev0] 250916 init 0.5 version

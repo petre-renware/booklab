@@ -922,7 +922,7 @@
 <ul>
 <li><code>data/</code> containing the system data in JSON files</li>
 <li><code>conf/</code> containing configuration files for different system components including infrastructure ones like gunicorn or nginx</li>
-<li><code>doc/</code> containing system usage documentation (aka api interface)</li>
+<li><code>doc-techical/</code> containing system usage documentation (aka api interface)</li>
 </ul>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.DATA_ROOT"></a></p>
@@ -933,24 +933,34 @@
 <p>config files directory</p>
 <p><a id="booklab.gunicorn.conf"></a></p>
 <h1 id="booklabgunicornconf">booklab.gunicorn.conf</h1>
+<p>Configuration file for gunicorn in serving <code>booklabd</code> server application</p>
+<p>This is a Python file that will be executed by gunicorn at run-time.
+As consequence declare all assignements as valid Python code.</p>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.conf"></a></p>
 <h1 id="booklabconf">booklab.conf</h1>
-<p><strong>conf</strong> - configurations module</p>
-<p>Various booklab system components configuration files.</p>
+<p>Cnfigurations component contains various system components configuration files:</p>
 <ul>
-<li><em>Note 1:</em> files wirh <code>.py</code> extension are considered Python files and can be imported accordingly as longas they are Python-code correct.</li>
-<li><em>Note 2:</em> all files from here are assumed to be <em>text files</em>. Any deviation from this rule is assumed to be treated accordingly in code.</li>
+<li><code>gunicorn</code> WSGI web server</li>
+<li><code>nginx</code> local proxy HTTP</li>
+</ul>
+<p>Notes / remarks:</p>
+<ul>
+<li>files wirh <code>.py</code> extension are considered Python files and can be imported accordingly as longas they are valid Python-code.</li>
+<li>all files from here are assumed to be <em>text files</em>. Any deviation from this rule is assumed to be treated accordingly in code.</li>
 </ul>
 <p>Author; Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.conf.gunicorn.gunicorn.conf"></a></p>
 <h1 id="booklabconfgunicorngunicornconf">booklab.conf.gunicorn.gunicorn.conf</h1>
+<p>Configuration file for gunicorn in serving <code>booklabd</code> server application</p>
+<p>This is a Python file that will be executed by gunicorn at run-time.
+As consequence declare all assignements as valid Python code.</p>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.booklab-cli"></a></p>
 <h1 id="booklabbooklab-cli">booklab.booklab-cli</h1>
-<p><strong>booklab_cli</strong> - CLI module
-CLI module to assure system operatins as command line.</p>
-<p>Architecture; Linux standard (POSIX) CLI
-Author; Petre Iordanescu (petre.iordanescu@gmail.com)
-Created; Aug.2025</p>
+<p>CLI module to assure system operatins as command line.</p>
+<p>Architecture; Linux standard (POSIX) CLI</p>
+<p>Author; Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.__version__"></a></p>
 <h1 id="booklab__version__">booklab.__version__</h1>
 <p><strong><strong>version</strong>.py</strong> module that contains Booklab aplication version number.</p>
@@ -1051,17 +1061,15 @@ and <em>dynamic site (api) component</em> which deserve those pages the need to 
 <h1 id="booklabbooklabd">booklab.booklabd</h1>
 <p>booklabd - Booklab API server module</p>
 <p>Main functionalities:
-* operate JSON database file
-* provide necessary http routes</p>
-<p>Architecture; HTTP REST
-Author: Petre Iordanescu (petre.iordanescu@gmail.com)
-Created; 21-Aug-2025</p>
+* operate &amp; manage JSON database file
+* provide necessary http API routes fir book functionalities that need write &amp; dynamic (run-time) behavior</p>
+<p>Architecture; HTTP WSGI</p>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.booklabd.db_init"></a></p>
 <h1 id="booklabbooklabddb_init">booklab.booklabd.db_init</h1>
-<p><strong>db_init</strong> module that initialize <code>booklabd</code> database (more JSON files)</p>
+<p>Module that initialize <code>booklabd</code> database (more JSON files)</p>
 <p>This module is designed to initialize database objects <code>db_books</code> and <code>db_system</code>.</p>
-<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)
-Created: Sep.2025</p>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.booklabd.db_init.init_db"></a></p>
 <h4 id="init_db">init_db</h4>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">init_db</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">pysondb</span><span class="p">]</span>
@@ -1069,81 +1077,6 @@ Created: Sep.2025</p>
 <p>Create db_books, db_system objects and return them as tuple</p>
 <p><strong>Returns</strong>:</p>
 <p><code>(db_books, db_system)</code> tuple of pysondb object</p>
-<p><a id="booklab.old-misc-files.book_tmpl.bkcmd_gen_final_book"></a></p>
-<h1 id="booklabold-misc-filesbook_tmplbkcmd_gen_final_book">booklab.old-misc-files.book_tmpl.bkcmd_gen_final_book</h1>
-<p><a id="booklab.old-misc-files.book_tmpl.bkcmd_start_book_preview"></a></p>
-<h1 id="booklabold-misc-filesbook_tmplbkcmd_start_book_preview">booklab.old-misc-files.book_tmpl.bkcmd_start_book_preview</h1>
-<p><a id="booklab.old-misc-files.book_tmpl"></a></p>
-<h1 id="booklabold-misc-filesbook_tmpl">booklab.old-misc-files.book_tmpl</h1>
-<p><a id="booklab.old-misc-files.book_tmpl.bkcmd_render_cfg_file"></a></p>
-<h1 id="booklabold-misc-filesbook_tmplbkcmd_render_cfg_file">booklab.old-misc-files.book_tmpl.bkcmd_render_cfg_file</h1>
-<p><a id="booklab.old-misc-files.book_tmpl.bkcmd_render_cfg_file.my_name"></a></p>
-<h4 id="my_name">my_name</h4>
-<p>use <code>__file__</code> attribute which guarantees the full pth-and-name of current python file (ATTN if is in a library !)</p>
-<p><a id="booklab.old-misc-files.book_tmpl.bkcmd_render_cfg_file.my_crt_dir"></a></p>
-<h4 id="my_crt_dir">my_crt_dir</h4>
-<p>normally this should be the site root directory (in production <code>docs/</code> &amp; in dev <code>doc_src/</code>)</p>
-<p><a id="booklab.old-misc-files.book_tmpl.bkcmd_render_cfg_file.splitted_my_real_dir"></a></p>
-<h4 id="splitted_my_real_dir">splitted_my_real_dir</h4>
-<p>split directory path in its parts</p>
-<p><a id="booklab.old-misc-files.book_tmpl.bkcmd_render_cfg_file.book_directory_name"></a></p>
-<h4 id="book_directory_name">book_directory_name</h4>
-<p>get last list entry as being the book name where intend to obtain the book code (book dir name format: book_<code>)</p>
-<p><a id="booklab.old-misc-files.book_tmpl.bkcmd_render_cfg_file.book_database_code"></a></p>
-<h4 id="book_database_code">book_database_code</h4>
-<p>keep only characters after <code>book_</code>, sufix name of directory ((book dir name format: book_<code>))</p>
-<p><a id="booklab.old-misc-files.book_tmpl.bkcmd_render_cfg_file.bcat_records"></a></p>
-<h4 id="bcat_records">bcat_records</h4>
-<p>will return a list with all recorsd but allways keep only the first one as <code>code</code> key is UNIQUE</p>
-<p><a id="booklab.old-misc-files.book_tmpl.bkcmd_render_cfg_file.bcat_records"></a></p>
-<h4 id="bcat_records_1">bcat_records</h4>
-<p>keep only the first one as <code>code</code> key is UNIQUE</p>
-<p><a id="booklab.old-misc-files.book_tmpl.bkcmd_render_cfg_file.templates_root"></a></p>
-<h4 id="templates_root">templates_root</h4>
-<p>directory where the file is that need to be renderend (book_mkdocs.yml)</p>
-<p><a id="booklab.old-misc-files.book_tmpl.bkcmd_render_cfg_file.source_config_file"></a></p>
-<h4 id="source_config_file">source_config_file</h4>
-<p>source file (JINJA)</p>
-<p><a id="booklab.old-misc-files.book_tmpl.bkcmd_render_cfg_file.destination_config_file"></a></p>
-<h4 id="destination_config_file">destination_config_file</h4>
-<p>destination file (YAML)</p>
-<p><a id="booklab.old-misc-files.book_tmpl.bkcmd_render_cfg_file.bcat_jinja_tmpl"></a></p>
-<h4 id="bcat_jinja_tmpl">bcat_jinja_tmpl</h4>
-<p>load read file content as template</p>
-<p><a id="booklab.old-misc-files.cgi-bin.bcat"></a></p>
-<h1 id="booklabold-misc-filescgi-binbcat">booklab.old-misc-files.cgi-bin.bcat</h1>
-<p><a id="booklab.old-misc-files.cgi-bin.bcat.my_crt_dir"></a></p>
-<h4 id="my_crt_dir_1">my_crt_dir</h4>
-<p>normally this should be the site root directory (in production <code>docs/</code> &amp; in dev <code>doc_src/</code>)</p>
-<p><a id="booklab.old-misc-files.cgi-bin.bcat.bcat_jinja_tmpl"></a></p>
-<h4 id="bcat_jinja_tmpl_1">bcat_jinja_tmpl</h4>
-<p>load read file content as template</p>
-<p><a id="booklab.old-misc-files.cgi-bin"></a></p>
-<h1 id="booklabold-misc-filescgi-bin">booklab.old-misc-files.cgi-bin</h1>
-<p><a id="booklab.old-misc-files.cgi-bin.bkcmd_new_book"></a></p>
-<h1 id="booklabold-misc-filescgi-binbkcmd_new_book">booklab.old-misc-files.cgi-bin.bkcmd_new_book</h1>
-<p><a id="booklab.old-misc-files.cgi-bin.python_model"></a></p>
-<h1 id="booklabold-misc-filescgi-binpython_model">booklab.old-misc-files.cgi-bin.python_model</h1>
-<p><a id="booklab.old-misc-files.cgi-bin.python_model.my_module_name"></a></p>
-<h4 id="my_module_name">my_module_name</h4>
-<p>the module name</p>
-<p><a id="booklab.old-misc-files.cgi-bin.python_model.my_name"></a></p>
-<h4 id="my_name_1">my_name</h4>
-<p>use <code>__file__</code> attribute which guarantees the full pth-and-name of current python file (ATTN if is in a library !)</p>
-<p><a id="booklab.old-misc-files.cgi-bin.python_model.my_crt_dir"></a></p>
-<h4 id="my_crt_dir_2">my_crt_dir</h4>
-<p>normally this should be the site root directory (in production <code>docs/</code> &amp; in dev <code>doc_src/</code>)</p>
-<p><a id="booklab.old-misc-files.cgi-bin.python_model.splitted_my_real_dir"></a></p>
-<h4 id="splitted_my_real_dir_1">splitted_my_real_dir</h4>
-<p>split directory path in its parts</p>
-<p><a id="booklab.old-misc-files.cgi-bin.python_model.book_directory_name"></a></p>
-<h4 id="book_directory_name_1">book_directory_name</h4>
-<p>get last list entry as being the book name where intend to obtain the book code (book dir name format: book_<code>)</p>
-<p><a id="booklab.old-misc-files.cgi-bin.python_model.book_database_code"></a></p>
-<h4 id="book_database_code_1">book_database_code</h4>
-<p>keep only characters after <code>book_</code>, sufix name of directory ((book dir name format: book_<code>))</p>
-<p><a id="booklab.old-misc-files.cgi-bin.whoami"></a></p>
-<h1 id="booklabold-misc-filescgi-binwhoami">booklab.old-misc-files.cgi-bin.whoami</h1>
 <p><a id="booklab.__main__"></a></p>
 <h1 id="booklab__main__">booklab.__main__</h1>
 <p>... wip ...

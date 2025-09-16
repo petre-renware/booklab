@@ -2,12 +2,12 @@
 """ booklabd - Booklab API server module
 
 Main functionalities:
-* operate JSON database file
-* provide necessary http routes
+* operate & manage JSON database file
+* provide necessary http API routes fir book functionalities that need write & dynamic (run-time) behavior
 
-Architecture; HTTP REST
+Architecture; HTTP WSGI
+
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
-Created; 21-Aug-2025
 """
 
 # general imports
