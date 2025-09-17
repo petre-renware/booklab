@@ -18,7 +18,7 @@ Implement `bstatus` functionality
 * tbd... bstatus functionality
 * tbd... insert data/book_catalog.json in design document (see 0.5a0)
 * tbd... render it as a first proof of concept and test 
-* [0.5a2] 250917 create `booklab.lib` module for Booklab app general purpose functions
+* [0.5a2] 250917 create `booklab.bklib` module for Booklab app general purpose functions
 * [0.5a1] 250917
     * bcat/bcat_template.md -copy-to-> bstatus_bstat_template.md
     * update page header and explana in text
