@@ -19,7 +19,7 @@ Implement `bstatus` functionality
 * tbd... insert data/book_catalog.json in design document (see 0.5a0)
 * ...wip [0.5a1] 250917... 
     * bcat/bcat_template.md -copy-to-> bstatus_bstat_template.md
-    * ... update page header and explana in text
+    * update page header and explana in text
     * ... render it as a first proof of concept and test 
 * [0.5a0] 250917
     * clean all technical documentation and modules docstring
