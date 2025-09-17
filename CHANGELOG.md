@@ -14,8 +14,11 @@
 
 
 ## ... [0.5] - unreleased
-`bstatus` functionality
+Implement `bstatus` functionality
 * tbd... bstatus functionality
+* tbd... insert data/book_catalog.json in design document (see 0.5a0)
+* tbd... bcat/bcat1template.md -copy-to-> bstatus_bstat_template.md and updatw page header and explanain text. 
+    Render it as a first proof of concept and test 
 * [0.5a0] 250917
     * clean all technical documentation and modules docstring
     * update 810-DSGN with `bstatus` component and change text CGI with WSGI

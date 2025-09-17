@@ -2,7 +2,7 @@
     "data": [
         {
             "id": 0,
-            "code": "tmpl",
+            "code": "TMPLT",
             "short_desc": "Numele cartii (si al site-ului daca se publica in internet)",
             "description": "Denumirea lunga a cartii asa cum va apare pe coperta",
             "copyright": "Copyright - Informatia ref detinatorul drepturilor de autor",
@@ -18,14 +18,14 @@
         },
         {
             "id": 1,
-            "code": "TEST",
-            "short_desc": "short_desc - test record",
-            "description": "description - test record",
-            "copyright": "copyright - test record",
-            "site_author": "author - test record",
-            "notes": "notes - test record",
+            "code": "example",
+            "short_desc": "short_desc - example record",
+            "description": "description - example record",
+            "copyright": "copyright - example record",
+            "site_author": "author - example record",
+            "notes": "notes - example record",
             "created_date": "1900-08-01",
-            "created_by": "petre",
+            "created_by": "me-my-name-here",
             "status": {
                 "location_dir": null,
                 "closed": null,
