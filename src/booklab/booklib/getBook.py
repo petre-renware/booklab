@@ -5,7 +5,7 @@ import pysondb
 def getBook(
     db: pysondb,
     book_code: str
-) -> list[dict] | None:
+) -> dict | None:
     """
     Check for a given book code:
 
@@ -16,10 +16,15 @@ def getBook(
 
     Return:
 
-    list of dictionary wiyh found record
+    * `dict(pysondb)` with found record
+    * `None` if any condition is not met
     """
-    pass  # code from here ...
-
-
-
+    if not book_code or not isinstance(book_code, str):
+        return None # exit because not satisfying basic requirements
+    # check to see if record exists and if then just select first got
+    bk_rec = None
+    bk_rec = db.getBy({"code":book_code})
+    if bk_rec and isinstance(bk_rec, list):
+        return bk_rec[0]
+    return None
 

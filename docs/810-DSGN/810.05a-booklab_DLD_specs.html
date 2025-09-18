@@ -960,7 +960,7 @@ As consequence declare all assignements as valid Python code.</p>
 <h1 id="booklabbooklibgetbook">booklab.booklib.getBook</h1>
 <p><a id="booklab.booklib.getBook.getBook"></a></p>
 <h4 id="getbook">getBook</h4>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">getBook</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">getBook</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span>
 </code></pre></div>
 <p>Check for a given book code:</p>
 <ul>
@@ -970,7 +970,10 @@ As consequence declare all assignements as valid Python code.</p>
 <li>if not any condition return None</li>
 </ul>
 <p><strong>Returns</strong>:</p>
-<p>list of dictionary wiyh found record</p>
+<ul>
+<li><code>dict(pysondb)</code> with found record</li>
+<li><code>None</code> if any condition is not met</li>
+</ul>
 <p><a id="booklab.booklib"></a></p>
 <h1 id="booklabbooklib">booklab.booklib</h1>
 <p>Module aimed for <code>booklab</code> general purpose functions usable across all its (sub)modules.</p>
