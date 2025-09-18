@@ -15,7 +15,7 @@ import os
 import pysondb
 # booklab package imports
 from booklab.booklabd.app_init import init_app
-from booklab.booklabd.db_init import init_db
+from booklab.booklib.db_init import init_db
 from booklab import PROJECT_ROOT
 from booklab import PACKAGE_ROOT
 from booklab import CONF_ROOT

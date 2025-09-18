@@ -988,6 +988,18 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 </li>
 </ul>
 <p>Author: Petre Iordanescu (petre.iordanescu@gnail.com)</p>
+<p><a id="booklab.booklib.db_init"></a></p>
+<h1 id="booklabbooklibdb_init">booklab.booklib.db_init</h1>
+<p>Module that initialize <code>booklabd</code> database (more JSON files)</p>
+<p>This module is designed to initialize database objects <code>db_books</code> and <code>db_system</code>.</p>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.booklib.db_init.init_db"></a></p>
+<h4 id="init_db">init_db</h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">init_db</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">pysondb</span><span class="p">]</span>
+</code></pre></div>
+<p>Create db_books, db_system objects and return them as tuple</p>
+<p><strong>Returns</strong>:</p>
+<p><code>(db_books, db_system)</code> tuple of pysondb object</p>
 <p><a id="booklab.booklab-cli"></a></p>
 <h1 id="booklabbooklab-cli">booklab.booklab-cli</h1>
 <p>CLI module to assure system operatins as command line.</p>
@@ -1097,18 +1109,6 @@ and <em>dynamic site (api) component</em> which deserve those pages the need to 
 * provide necessary http API routes fir book functionalities that need write &amp; dynamic (run-time) behavior</p>
 <p>Architecture; HTTP WSGI</p>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
-<p><a id="booklab.booklabd.db_init"></a></p>
-<h1 id="booklabbooklabddb_init">booklab.booklabd.db_init</h1>
-<p>Module that initialize <code>booklabd</code> database (more JSON files)</p>
-<p>This module is designed to initialize database objects <code>db_books</code> and <code>db_system</code>.</p>
-<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
-<p><a id="booklab.booklabd.db_init.init_db"></a></p>
-<h4 id="init_db">init_db</h4>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">init_db</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">pysondb</span><span class="p">]</span>
-</code></pre></div>
-<p>Create db_books, db_system objects and return them as tuple</p>
-<p><strong>Returns</strong>:</p>
-<p><code>(db_books, db_system)</code> tuple of pysondb object</p>
 <p><a id="booklab.__main__"></a></p>
 <h1 id="booklab__main__">booklab.__main__</h1>
 <p>... wip ...
@@ -1126,7 +1126,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 17, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 18, 2025</span>
       
     
   </small>
