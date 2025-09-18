@@ -21,6 +21,8 @@ from booklab.booklabd import api_app
 from booklab.booklabd import db_books
 from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
+from booklab.booklib import getBook
+
 
 
 @api_app.route("/api/newb/")
