@@ -21,7 +21,7 @@ from booklab.booklabd import api_app
 from booklab.booklabd import db_books
 from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
-from booklab.booklib import getBook
+from booklab.booklib.getBook import getBook
 
 
 
@@ -53,7 +53,7 @@ def api_bstatus():
     if not book_data:
         abort(404, description = "Book not found")
     else:
-        ret_str = f"Book {book_code} data is <br>{book_date}"
+        ret_str = f"Book {book_code} data is <br>{book_data}"
     #TODO ... render bstatus/bstatus_template.html
     return ret_str
 
