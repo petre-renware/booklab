@@ -956,13 +956,23 @@ As consequence declare all assignements as valid Python code.</p>
 <p>This is a Python file that will be executed by gunicorn at run-time.
 As consequence declare all assignements as valid Python code.</p>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
-<p><a id="booklab.booklab-cli"></a></p>
-<h1 id="booklabbooklab-cli">booklab.booklab-cli</h1>
-<p>CLI module to assure system operatins as command line.</p>
-<p>Architecture; Linux standard (POSIX) CLI</p>
-<p>Author; Petre Iordanescu (petre.iordanescu@gmail.com)</p>
-<p><a id="booklab.bklib"></a></p>
-<h1 id="booklabbklib">booklab.bklib</h1>
+<p><a id="booklab.booklib.getBook"></a></p>
+<h1 id="booklabbooklibgetbook">booklab.booklib.getBook</h1>
+<p><a id="booklab.booklib.getBook.getBook"></a></p>
+<h4 id="getbook">getBook</h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">getBook</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Check for a given book code:</p>
+<ul>
+<li>test if book code is not None</li>
+<li>test if book code exists in database and is exactly 1 record</li>
+<li>if both conditions return that record as List[Dict]</li>
+<li>if not any condition return None</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>list of dictionary wiyh found record</p>
+<p><a id="booklab.booklib"></a></p>
+<h1 id="booklabbooklib">booklab.booklib</h1>
 <p>Module aimed for <code>booklab</code> general purpose functions usable across all its (sub)modules.</p>
 <p><strong>Notes</strong>:</p>
 <ul>
@@ -978,6 +988,11 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 </li>
 </ul>
 <p>Author: Petre Iordanescu (petre.iordanescu@gnail.com)</p>
+<p><a id="booklab.booklab-cli"></a></p>
+<h1 id="booklabbooklab-cli">booklab.booklab-cli</h1>
+<p>CLI module to assure system operatins as command line.</p>
+<p>Architecture; Linux standard (POSIX) CLI</p>
+<p>Author; Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.__version__"></a></p>
 <h1 id="booklab__version__">booklab.__version__</h1>
 <p><strong><strong>version</strong>.py</strong> module that contains Booklab aplication version number.</p>
