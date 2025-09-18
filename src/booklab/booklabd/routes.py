@@ -44,10 +44,17 @@ def api_bstatus():
 
     Query paraneters: book code
     """
+    ret_str = "nothing to say..."
     book_code = request.args.get("code")
-    ret_str = f"Page for <b>bstatus</b><br>"
-    ret_str += f"Request for book with code <b>{book_code}</b><br>"
-    #TODO  here should integrate wip static page
+    book_data = getBook(
+        db_books,
+        book_code
+    )
+    if not book_data:
+        abort(404, description = "Book not found")
+    else:
+        ret_str = f"Book {book_code} data is <br>{book_date}"
+    #TODO ... render bstatus/bstatus_template.html
     return ret_str
 
 
