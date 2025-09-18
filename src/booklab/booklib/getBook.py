@@ -19,11 +19,12 @@ def getBook(
     * `dict(pysondb)` with found record
     * `None` if any condition is not met
     """
-    if not book_code or not isinstance{book_code, str):
+    if not book_code or not isinstance(book_code, str):
         return None # exit because not satisfying basic requirements
     # check to see if record exists and if then just select first got
+    bk_rec = None
     bk_rec = db.getBy({"code":book_code})
-    if isinstance(bk_rec, list) and len(bk_rec > 0):
+    if bk_rec and isinstance(bk_rec, list):
         return bk_rec[0]
     return None
 
