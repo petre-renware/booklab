@@ -18,6 +18,11 @@ Implement `bstatus` functionality
 * tbd... bstatus functionality
 * tbd... insert data/book_catalog.json in design document (see 0.5a0)
 * tbd... render it as a first proof of concept and test 
+* wip... [0.5a3] create lib function `getBook(bk_code)` that:
+    * test if book code is not None
+    * test if book code exists in database and is exactly 1 record
+    * if both conditions return that record as List[Dict]
+    * if not any condition retirn None
 * [0.5a2] 250917 create `booklab.booklib` module for Booklab app general purpose functions
 * [0.5a1] 250917
     * bcat/bcat_template.md -copy-to-> bstatus_bstat_template.md
