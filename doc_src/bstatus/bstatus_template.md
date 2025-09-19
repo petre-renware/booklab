@@ -6,6 +6,17 @@
 Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *{{ book_data.code }}*).
 
 
+## Datele de baza
+
+* _Titlu:_ {{ book_data.short_desc }}
+* _Descriere:_ {{ book_data.description }}
+* _Copyright:_ {{ book_data.copyright }}
+* _Autor:_ {{ book_data.site_author }}
+* _Note:_ {{ book_data.notes }}
+* _..:more..._
+
+
+
 ### TOATE INFO:
 {{ book_data }}
 

@@ -824,16 +824,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#datele-de-baza" class="md-nav__link">
+    Datele de baza
+  </a>
+  
+    <nav class="md-nav" aria-label="Datele de baza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#toate-info" class="md-nav__link">
     TOATE INFO:
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#todo-things" class="md-nav__link">
     TODO things
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -868,6 +881,15 @@
 
 <h1 id="detalii-despre-carte">Detalii despre carte</h1>
 <p>Aici puteti consulta detaliile cartii <strong>{{ book_data.short_desc }}</strong> (cod <em>{{ book_data.code }}</em>).</p>
+<h2 id="datele-de-baza">Datele de baza</h2>
+<ul>
+<li><em>Titlu:</em> {{ book_data.short_desc }}</li>
+<li><em>Descriere:</em> {{ book_data.description }}</li>
+<li><em>Copyright:</em> {{ book_data.copyright }}</li>
+<li><em>Autor:</em> {{ book_data.site_author }}</li>
+<li><em>Note:</em> {{ book_data.notes }}</li>
+<li><em>..:more...</em></li>
+</ul>
 <h3 id="toate-info">TOATE INFO:</h3>
 <p>{{ book_data }}</p>
 <h3 id="todo-things">TODO things</h3>
