@@ -58,7 +58,7 @@ def api_bstatus():
     # render bstatus template and write it as html served from static site menu
     rendered_str = render_template(
         "bstatus/bstatus_template.html",
-        bcat_data = book_data # tbd... here need to change bcat_data to book_data which is more clear !!|
+        book_data = book_data
     )
     file_to_write = os.path.join(
         PROJECT_ROOT,
