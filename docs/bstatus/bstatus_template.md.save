@@ -13,15 +13,27 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *{{ bo
 * _Copyright:_ {{ book_data.copyright }}
 * _Autor:_ {{ book_data.site_author }}
 * _Note:_ {{ book_data.notes }}
+* _..:more..._
+
+
+
+### TOATE INFO:
+{{ book_data }}
+
+
+### TODO things
+* ... de adus coloanele din tavelul BCAT +
 * ... alte info gen:
 * numar pagini
-* locatia de stocare relativ la /docs/my_books/ 
+* locatia de stocare relativ la /docs (web root)
 * ...etc...
 
 
 
 
-## Optiuni suplimentare
+
+
+## Optiuni carte
 
 <!-- {% include './local-page.css' %} -->
 
@@ -42,9 +54,6 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *{{ bo
 ## [Help](../help/880.30-BSTATUS_usage.md)
 
 
-
-### TOATE INFO:- ptr debug & de sters
-{{ book_data }}
 
 
 
