@@ -54,7 +54,6 @@ def api_bstatus():
         abort(404, description = "Book not found")
     else:
         ret_str = f"Book {book_code} data is <br>{book_data}"
-    #TODO... here to work ...
     # render bstatus template and write it as html served from static site menu
     rendered_str = render_template(
         "bstatus/bstatus_template.html",
@@ -67,7 +66,6 @@ def api_bstatus():
     with open(file_to_write, "w") as file:
         file.write(rendered_str)
     return redirect("/booklab/docs/bstatus/bstatus.html")
-    #4dbg...2drop..: return ret_str
 
 
 @api_app.route("/api/edtb/")
@@ -131,7 +129,6 @@ def api_bcat():
     bcat_records = db_books.getAll()
     if not (type(bcat_records) == type(list())):
         bcat_records = list().append(bcat_records)  # make it list if is not (when just 1 record)
-
     # render bcat template and write it as html served from static site menus
     rendered_str = render_template(
         "bcat/bcat_template.html",
