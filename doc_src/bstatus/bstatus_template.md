@@ -3,10 +3,13 @@
 
 {% raw %}
 
-Aici puteti consulta detaliile cartii
+Aici puteti consulta detaliile cartii **{{ book_data.code }}**.
 
- **{{ book_data }}**.
+### TOATE INFO:
+{{ book_data }}
 
+
+### TODO things
 * ... de adus coloanele din tavelul BCAT +
 * ... alte info gen:
 * numar pagini
@@ -36,11 +39,10 @@ Petre@250917: comented to keep good parts &update it
 {% include './local-page.css' %}
 
 
-                <a href="/booklab/api/bstatus/?code={{ book_data.book.code }}">* Starea cartii</a><br>
-                <a href="/booklab/api/edtb/?code={{ book_data.book.code }}">* Editare materiale</a><br>
-                <a href="/booklab/api/orgm/?code={{ book_data.book.code }}">* Sectiuni carte</a><br>
-                <a href="/booklab/api/prvb/?code={{ book_data.book.code }}">* Vizualizare carte</a><br>
-                <a href="/booklab/api/dplb/?code={{ book_data.book.code }}">* Asamblare carte</a>
+<a href="/booklab/api/edtb/?code={{ book_data.code }}">* Editare materiale</a><br>
+<a href="/booklab/api/orgm/?code={{ book_data.code }}">* Sectiuni carte</a><br>
+<a href="/booklab/api/prvb/?code={{ book_data.code }}">* Vizualizare carte</a><br>
+<a href="/booklab/api/dplb/?code={{ book_data.code }}">* Asamblare carte</a>
 
 ___END OF PETRE COMMENT 
 -->
