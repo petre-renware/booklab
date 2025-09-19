@@ -12,8 +12,9 @@ __pycache__/
 
 # dynamically generated files at run-time
 *.PID
-*.json.lock  # JSON database manipulation lock records files (these are created and make sense only at run-time)
+*.json.lock
 docs/bcat/bcat.html
+docs/bstatus/bstatus.html
 
 
 # Distribution / packaging

@@ -824,6 +824,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#toate-info" class="md-nav__link">
+    TOATE INFO:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo-things" class="md-nav__link">
+    TODO things
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#lista-cartilor" class="md-nav__link">
     Lista cartilor
   </a>
@@ -853,8 +867,10 @@
 
 
 <h1 id="detalii-despre-carte">Detalii despre carte</h1>
-<p>Aici puteti consulta detaliile cartii</p>
-<p><strong>{{ book_data }}</strong>.</p>
+<p>Aici puteti consulta detaliile cartii <strong>{{ book_data.code }}</strong>.</p>
+<h3 id="toate-info">TOATE INFO:</h3>
+<p>{{ book_data }}</p>
+<h3 id="todo-things">TODO things</h3>
 <ul>
 <li>... de adus coloanele din tavelul BCAT +</li>
 <li>... alte info gen:</li>
@@ -915,12 +931,10 @@
 .show {display:block;}
 </style>
 
-<pre><code>            &lt;a href="/booklab/api/bstatus/?code={{ book_data.book.code }}"&gt;* Starea cartii&lt;/a&gt;&lt;br&gt;
-            &lt;a href="/booklab/api/edtb/?code={{ book_data.book.code }}"&gt;* Editare materiale&lt;/a&gt;&lt;br&gt;
-            &lt;a href="/booklab/api/orgm/?code={{ book_data.book.code }}"&gt;* Sectiuni carte&lt;/a&gt;&lt;br&gt;
-            &lt;a href="/booklab/api/prvb/?code={{ book_data.book.code }}"&gt;* Vizualizare carte&lt;/a&gt;&lt;br&gt;
-            &lt;a href="/booklab/api/dplb/?code={{ book_data.book.code }}"&gt;* Asamblare carte&lt;/a&gt;
-</code></pre>
+<p><a href="/booklab/api/edtb/?code={{ book_data.code }}"><em> Editare materiale</a><br>
+<a href="/booklab/api/orgm/?code={{ book_data.code }}"></em> Sectiuni carte</a><br>
+<a href="/booklab/api/prvb/?code={{ book_data.code }}"><em> Vizualizare carte</a><br>
+<a href="/booklab/api/dplb/?code={{ book_data.code }}"></em> Asamblare carte</a></p>
 <p>___END OF PETRE COMMENT 
 --&gt;</p>
 <h2 id="help"><a href="../help/880.30-BSTATUS_usage.md">Help</a></h2>
