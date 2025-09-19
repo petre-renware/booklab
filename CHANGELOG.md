@@ -17,7 +17,8 @@
 Implement `bstatus` functionality
 * tbd... bstatus functionality
 * tbd... insert data/book_catalog.json in design document (see 0.5a0)
-* tbd... update bstatus_template to a presentable firm of information
+
+* ...wip [0.5b3] ... update bstatus_template to a presentable firm of information
 * [0.5b2] 250919 render bstatus_tenplate.md as a first proof of concept and test
 * [0.5b1] create lib function `getBook(bk_code)`
 * [0.5b0] `booklab` refactor: move db_init.py from module `booklabd` to module `booklib`

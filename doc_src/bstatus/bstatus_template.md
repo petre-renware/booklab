@@ -3,7 +3,8 @@
 
 {% raw %}
 
-Aici puteti consulta detaliile cartii **{{ book_data.code }}**.
+Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *{{ book_data.code }}*).
+
 
 ### TOATE INFO:
 {{ book_data }}
