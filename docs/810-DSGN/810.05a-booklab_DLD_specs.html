@@ -956,6 +956,23 @@ As consequence declare all assignements as valid Python code.</p>
 <p>This is a Python file that will be executed by gunicorn at run-time.
 As consequence declare all assignements as valid Python code.</p>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.conf.booklab_ext_url"></a></p>
+<h1 id="booklabconfbooklab_ext_url">booklab.conf.booklab_ext_url</h1>
+<p>This Python file contains external access URL information.
+By external access is understood all URL parts necessary to expose Booklab application:</p>
+<ul>
+<li>EXT_SERVER - the external exposed server name (example: "booklab.mydomain.ro")</li>
+<li>EXT_PORT - the external exposed server port; defaults to "80" if unspecified (example: "5002")</li>
+<li>EXT_PATH - the external exposed URL configured start locations through a LAN main proxy (example: "/booklab/" for a complete external URL like http://booklab.mydomain.ro:5002/booklab/)</li>
+</ul>
+<p><em>NOTE: all information are of string type</em></p>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.conf.booklab_ext_url.EXT_SERVER"></a></p>
+<h4 id="ext_server">EXT_SERVER</h4>
+<p>blank preserve source</p>
+<p><a id="booklab.conf.booklab_ext_url.EXT_PORT"></a></p>
+<h4 id="ext_port">EXT_PORT</h4>
+<p>blank preserve source</p>
 <p><a id="booklab.booklib.getBook"></a></p>
 <h1 id="booklabbooklibgetbook">booklab.booklib.getBook</h1>
 <p><a id="booklab.booklib.getBook.getBook"></a></p>
