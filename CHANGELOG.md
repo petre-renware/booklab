@@ -21,6 +21,7 @@ Implement `bstatus` functionality
 * ...wip [0.5b3] ...
     * ... update bstatus_template to a presentable firm of information
     * import external URLs at booklab.__init__.py level
+    * construct a FULL_EXT_URL from parts
     * create booklab-config-file  `.../booklab/conf/booklab_ext_url.py` for external access URL parts
 * [0.5b2] 250919 render bstatus_tenplate.md as a first proof of concept and test
 * [0.5b1] create lib function `getBook(bk_code)`
