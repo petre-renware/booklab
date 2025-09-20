@@ -17,20 +17,20 @@
 #
 
 case $1 in
-    d|-d|--daemon)
+    -d|--daemon)
         echo Start gunicorn as daemon... Running PIDs are:
         gunicorn -c gunicorn.conf.py -p ./run/gunicorn.PID -D
         ps -A | grep gunicorn
         ;;
-    k|-k|--kill)
+    -k|--kill)
         echo Stop gunicorn...
         kill `cat ./run/gunicorn.PID`
         ;;
-    s|-s|--status)
+    -s|--status)
         echo PIDs of gunicorn running proceses:
         ps -A | grep gunicorn
         ;;
-    r|-r|--restart)
+    -r|--restart)
         echo Stop gunicorn...
         kill `cat ./run/gunicorn.PID`
         sleep 1
