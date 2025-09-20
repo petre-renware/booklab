@@ -11,8 +11,8 @@ _NOTE: all information are of string type_
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
 
-EXT_SERVER = "dev.renware.eu"
-EXT_PORT = "80"
-EXT_PATH = "/booklab/"
+EXT_SERVER = ""  # blank preserve source
+EXT_PORT = ""  # blank preserve source
+EXT_PATH = "booklab/"
 
 

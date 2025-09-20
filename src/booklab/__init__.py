@@ -18,7 +18,12 @@ import pathlib
 import os
 
 from .__version__ import __version__
+from .conf import booklab_ext_url
 
+
+EXT_SERVER = booklab_ext_url.EXT_SERVER
+EXT_PORT = booklab_ext_url.EXT_PORT
+EXT_PATH = booklab_ext_url.EXT_PATH
 PACKAGE_ROOT = pathlib.Path(__file__).parent.resolve()
 DATA_ROOT = PACKAGE_ROOT.joinpath("data")  # database files directory
 CONF_ROOT = PACKAGE_ROOT.joinpath("conf")  # config files directory
