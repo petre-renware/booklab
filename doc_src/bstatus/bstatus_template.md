@@ -3,53 +3,50 @@
 
 {% raw %}
 
-Aici puteti consulta detaliile cartii **{{ book_data.code }}**.
-
-### TOATE INFO:
-{{ book_data }}
+Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *{{ book_data.code }}*).
 
 
-### TODO things
-* ... de adus coloanele din tavelul BCAT +
-* ... alte info gen:
-* numar pagini
-* locatia de stocare relativ la /docs (web root)
-* ...etc...
+## Date generale
 
-SI PUI SI BUTOANE CU ALTE OPERATII din cele posibile din BCAT
+* Titlu: {{ book_data.short_desc }}
+* Descriere: {{ book_data.description }}
+* Copyright: {{ book_data.copyright }}
+* Autor: {{ book_data.site_author }}
+* Note: {{ book_data.notes }}
+* Creata de: {{ book_data.created_by }}
+* Creata la data: {{ book_data.created_date }}
 
+## Date de stare curenta
 
+* Ultima actualizare: {{book_data.status.last_update_date}}
+* Ultima generare carte: {{book_data.status.last_build_date}}
+* Locatia stocare: {{book_data.status.location_dir}}
+* Locatia publicare: {{book_data.status.published_location}}
+* Carte inchisa editarii: {{book_data.status.closed}}
 
+## Date volumetrice
 
-
-
-
-
-
-
-<<!--
-
-Petre@250917: comented to keep good parts &update it
-
-
-## Lista cartilor
-
-[Creare carte](/booklab/api/newb/)
-
-{% include './local-page.css' %}
+* Numar pagini fizice (fisiere): ...urmeaza... 
+* Numar pagini logice (intrari in meniu): ...urmeaza...
+* Numar fisiere poze: ...urmeaza...
 
 
-<a href="/booklab/api/edtb/?code={{ book_data.code }}">* Editare materiale</a><br>
-<a href="/booklab/api/orgm/?code={{ book_data.code }}">* Sectiuni carte</a><br>
-<a href="/booklab/api/prvb/?code={{ book_data.code }}">* Vizualizare carte</a><br>
-<a href="/booklab/api/dplb/?code={{ book_data.code }}">* Asamblare carte</a>
+## Optiuni suplimentare
 
-___END OF PETRE COMMENT 
--->
+<!-- {% include './local-page.css' %} -->
+
+<a href="/booklab/api/newb/"><button>Creare carte</button></a>
+
+<a href="/booklab/api/edtb/?code={{ book_data.code }}"><button>Editare materiale</button></a>
+
+<a href="/booklab/api/orgm/?code={{ book_data.code }}"><button>Sectiuni carte</button></a>
+
+<a href="/booklab/api/prvb/?code={{ book_data.code }}"><button>Vizualizare carte</button></a>
+
+<a href="/booklab/api/dplb/?code={{ book_data.code }}"><button>Asamblare carte</button></a>
+
 
 ## [Help](../help/880.30-BSTATUS_usage.md)
-
-
 
 
 

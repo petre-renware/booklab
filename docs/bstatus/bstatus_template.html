@@ -824,22 +824,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#toate-info" class="md-nav__link">
-    TOATE INFO:
+  <a href="#date-generale" class="md-nav__link">
+    Date generale
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#todo-things" class="md-nav__link">
-    TODO things
+  <a href="#date-de-stare-curenta" class="md-nav__link">
+    Date de stare curenta
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lista-cartilor" class="md-nav__link">
-    Lista cartilor
+  <a href="#date-volumetrice" class="md-nav__link">
+    Date volumetrice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optiuni-suplimentare" class="md-nav__link">
+    Optiuni suplimentare
   </a>
   
 </li>
@@ -867,76 +874,90 @@
 
 
 <h1 id="detalii-despre-carte">Detalii despre carte</h1>
-<p>Aici puteti consulta detaliile cartii <strong>{{ book_data.code }}</strong>.</p>
-<h3 id="toate-info">TOATE INFO:</h3>
-<p>{{ book_data }}</p>
-<h3 id="todo-things">TODO things</h3>
+<p>Aici puteti consulta detaliile cartii <strong>{{ book_data.short_desc }}</strong> (cod <em>{{ book_data.code }}</em>).</p>
+<h2 id="date-generale">Date generale</h2>
 <ul>
-<li>... de adus coloanele din tavelul BCAT +</li>
-<li>... alte info gen:</li>
-<li>numar pagini</li>
-<li>locatia de stocare relativ la /docs (web root)</li>
-<li>...etc...</li>
+<li>Titlu: {{ book_data.short_desc }}</li>
+<li>Descriere: {{ book_data.description }}</li>
+<li>Copyright: {{ book_data.copyright }}</li>
+<li>Autor: {{ book_data.site_author }}</li>
+<li>Note: {{ book_data.notes }}</li>
+<li>Creata de: {{ book_data.created_by }}</li>
+<li>Creata la data: {{ book_data.created_date }}</li>
 </ul>
-<p>SI PUI SI BUTOANE CU ALTE OPERATII din cele posibile din BCAT</p>
-<p>&lt;&lt;!--</p>
-<p>Petre@250917: comented to keep good parts &amp;update it</p>
-<h2 id="lista-cartilor">Lista cartilor</h2>
-<p><a href="/booklab/api/newb/">Creare carte</a></p>
-<!-- #NOTE dropdown commands button CSS -->
-<style>
-/* Dropdown Button */
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
+<h2 id="date-de-stare-curenta">Date de stare curenta</h2>
+<ul>
+<li>Ultima actualizare: {{book_data.status.last_update_date}}</li>
+<li>Ultima generare carte: {{book_data.status.last_build_date}}</li>
+<li>Locatia stocare: {{book_data.status.location_dir}}</li>
+<li>Locatia publicare: {{book_data.status.published_location}}</li>
+<li>Carte inchisa editarii: {{book_data.status.closed}}</li>
+</ul>
+<h2 id="date-volumetrice">Date volumetrice</h2>
+<ul>
+<li>Numar pagini fizice (fisiere): ...urmeaza... </li>
+<li>Numar pagini logice (intrari in meniu): ...urmeaza...</li>
+<li>Numar fisiere poze: ...urmeaza...</li>
+</ul>
+<h2 id="optiuni-suplimentare">Optiuni suplimentare</h2>
+<!-- 
+<!-- 
+<!-- <!-- #NOTE dropdown commands button CSS -->
+<!-- <style>
+<!-- /* Dropdown Button */
+<!-- .dropbtn {
+<!--   background-color: #3498DB;
+<!--   color: white;
+<!--   padding: 16px;
+<!--   font-size: 16px;
+<!--   border: none;
+<!--   cursor: pointer;
+<!-- }
+<!-- 
+<!-- /* Dropdown button on hover & focus */
+<!-- .dropbtn:hover, .dropbtn:focus {
+<!--   background-color: #2980B9;
+<!-- }
+<!-- 
+<!-- /* The container <div> - needed to position the dropdown content */
+<!-- .dropdown {
+<!--   position: relative;
+<!--   display: inline-block;
+<!-- }
+<!-- 
+<!-- /* Dropdown Content (Hidden by Default) */
+<!-- .dropdown-content {
+<!--   display: none;
+<!--   position: absolute;
+<!--   background-color: #f1f1f1;
+<!--   min-width: 160px;
+<!--   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+<!--   z-index: 1;
+<!-- }
+<!-- 
+<!-- /* Links inside the dropdown */
+<!-- .dropdown-content a {
+<!--   color: black;
+<!--   padding: 12px 16px;
+<!--   text-decoration: none;
+<!--   display: block;
+<!-- }
+<!-- 
+<!-- /* Change color of dropdown links on hover */
+<!-- .dropdown-content a:hover {background-color: #ddd;}
+<!-- 
+<!-- /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+<!-- .show {display:block;}
+<!-- </style>
+<!-- 
+<!-- 
+ -->
 
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-</style>
-
-<p><a href="/booklab/api/edtb/?code={{ book_data.code }}"><em> Editare materiale</a><br>
-<a href="/booklab/api/orgm/?code={{ book_data.code }}"></em> Sectiuni carte</a><br>
-<a href="/booklab/api/prvb/?code={{ book_data.code }}"><em> Vizualizare carte</a><br>
-<a href="/booklab/api/dplb/?code={{ book_data.code }}"></em> Asamblare carte</a></p>
-<p>___END OF PETRE COMMENT 
---&gt;</p>
+<p><a href="/booklab/api/newb/"><button>Creare carte</button></a></p>
+<p><a href="/booklab/api/edtb/?code={{ book_data.code }}"><button>Editare materiale</button></a></p>
+<p><a href="/booklab/api/orgm/?code={{ book_data.code }}"><button>Sectiuni carte</button></a></p>
+<p><a href="/booklab/api/prvb/?code={{ book_data.code }}"><button>Vizualizare carte</button></a></p>
+<p><a href="/booklab/api/dplb/?code={{ book_data.code }}"><button>Asamblare carte</button></a></p>
 <h2 id="help"><a href="../help/880.30-BSTATUS_usage.md">Help</a></h2>
 
   <hr>
@@ -944,7 +965,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 21, 2025</span>
       
     
   </small>

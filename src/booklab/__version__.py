@@ -5,6 +5,6 @@ NOTE: this module is imported and made "public" in `booklab._init__.py`
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
 
-__version__ = "0.5b2"
+__version__ = "0.5b3"
 
 

@@ -824,22 +824,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#toate-info" class="md-nav__link">
-    TOATE INFO:
+  <a href="#date-generale" class="md-nav__link">
+    Date generale
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#todo-things" class="md-nav__link">
-    TODO things
+  <a href="#date-de-stare-curenta" class="md-nav__link">
+    Date de stare curenta
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lista-cartilor" class="md-nav__link">
-    Lista cartilor
+  <a href="#date-volumetrice" class="md-nav__link">
+    Date volumetrice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optiuni-suplimentare" class="md-nav__link">
+    Optiuni suplimentare
   </a>
   
 </li>
@@ -867,76 +874,90 @@
 
 
 <h1 id="detalii-despre-carte">Detalii despre carte</h1>
-<p>Aici puteti consulta detaliile cartii <strong>example</strong>.</p>
-<h3 id="toate-info">TOATE INFO:</h3>
-<p>{&#39;id&#39;: 1, &#39;code&#39;: &#39;example&#39;, &#39;short_desc&#39;: &#39;short_desc - example record&#39;, &#39;description&#39;: &#39;description - example record&#39;, &#39;copyright&#39;: &#39;copyright - example record&#39;, &#39;site_author&#39;: &#39;author - example record&#39;, &#39;notes&#39;: &#39;notes - example record&#39;, &#39;created_date&#39;: &#39;1900-08-01&#39;, &#39;created_by&#39;: &#39;me-my-name-here&#39;, &#39;status&#39;: {&#39;location_dir&#39;: None, &#39;closed&#39;: None, &#39;published_location&#39;: None}}</p>
-<h3 id="todo-things">TODO things</h3>
+<p>Aici puteti consulta detaliile cartii <strong>Numele cartii (si al site-ului daca se publica in internet)</strong> (cod <em>TMPLT</em>).</p>
+<h2 id="date-generale">Date generale</h2>
 <ul>
-<li>... de adus coloanele din tavelul BCAT +</li>
-<li>... alte info gen:</li>
-<li>numar pagini</li>
-<li>locatia de stocare relativ la /docs (web root)</li>
-<li>...etc...</li>
+<li>Titlu: Numele cartii (si al site-ului daca se publica in internet)</li>
+<li>Descriere: Denumirea lunga a cartii asa cum va apare pe coperta</li>
+<li>Copyright: Copyright - Informatia ref detinatorul drepturilor de autor</li>
+<li>Autor: Autorul cartii</li>
+<li>Note: Inregistrare obligatorie de la instalare sistem. Non editabila.</li>
+<li>Creata de: system</li>
+<li>Creata la data: 2023-08-01</li>
 </ul>
-<p>SI PUI SI BUTOANE CU ALTE OPERATII din cele posibile din BCAT</p>
-<p>&lt;&lt;!--</p>
-<p>Petre@250917: comented to keep good parts &amp;update it</p>
-<h2 id="lista-cartilor">Lista cartilor</h2>
-<p><a href="/booklab/api/newb/">Creare carte</a></p>
-<!-- #NOTE dropdown commands button CSS -->
-<style>
-/* Dropdown Button */
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
+<h2 id="date-de-stare-curenta">Date de stare curenta</h2>
+<ul>
+<li>Ultima actualizare: None</li>
+<li>Ultima generare carte: None</li>
+<li>Locatia stocare: None</li>
+<li>Locatia publicare: None</li>
+<li>Carte inchisa editarii: True</li>
+</ul>
+<h2 id="date-volumetrice">Date volumetrice</h2>
+<ul>
+<li>Numar pagini fizice (fisiere): ...urmeaza... </li>
+<li>Numar pagini logice (intrari in meniu): ...urmeaza...</li>
+<li>Numar fisiere poze: ...urmeaza...</li>
+</ul>
+<h2 id="optiuni-suplimentare">Optiuni suplimentare</h2>
+<!-- 
+<!-- 
+<!-- <!-- #NOTE dropdown commands button CSS -->
+<!-- <style>
+<!-- /* Dropdown Button */
+<!-- .dropbtn {
+<!--   background-color: #3498DB;
+<!--   color: white;
+<!--   padding: 16px;
+<!--   font-size: 16px;
+<!--   border: none;
+<!--   cursor: pointer;
+<!-- }
+<!-- 
+<!-- /* Dropdown button on hover & focus */
+<!-- .dropbtn:hover, .dropbtn:focus {
+<!--   background-color: #2980B9;
+<!-- }
+<!-- 
+<!-- /* The container <div> - needed to position the dropdown content */
+<!-- .dropdown {
+<!--   position: relative;
+<!--   display: inline-block;
+<!-- }
+<!-- 
+<!-- /* Dropdown Content (Hidden by Default) */
+<!-- .dropdown-content {
+<!--   display: none;
+<!--   position: absolute;
+<!--   background-color: #f1f1f1;
+<!--   min-width: 160px;
+<!--   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+<!--   z-index: 1;
+<!-- }
+<!-- 
+<!-- /* Links inside the dropdown */
+<!-- .dropdown-content a {
+<!--   color: black;
+<!--   padding: 12px 16px;
+<!--   text-decoration: none;
+<!--   display: block;
+<!-- }
+<!-- 
+<!-- /* Change color of dropdown links on hover */
+<!-- .dropdown-content a:hover {background-color: #ddd;}
+<!-- 
+<!-- /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+<!-- .show {display:block;}
+<!-- </style>
+<!-- 
+<!-- 
+ -->
 
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-</style>
-
-<p><a href="/booklab/api/edtb/?code=example"><em> Editare materiale</a><br>
-<a href="/booklab/api/orgm/?code=example"></em> Sectiuni carte</a><br>
-<a href="/booklab/api/prvb/?code=example"><em> Vizualizare carte</a><br>
-<a href="/booklab/api/dplb/?code=example"></em> Asamblare carte</a></p>
-<p>___END OF PETRE COMMENT 
---&gt;</p>
+<p><a href="/booklab/api/newb/"><button>Creare carte</button></a></p>
+<p><a href="/booklab/api/edtb/?code=TMPLT"><button>Editare materiale</button></a></p>
+<p><a href="/booklab/api/orgm/?code=TMPLT"><button>Sectiuni carte</button></a></p>
+<p><a href="/booklab/api/prvb/?code=TMPLT"><button>Vizualizare carte</button></a></p>
+<p><a href="/booklab/api/dplb/?code=TMPLT"><button>Asamblare carte</button></a></p>
 <h2 id="help"><a href="../help/880.30-BSTATUS_usage.md">Help</a></h2>
 
   <hr>
@@ -944,7 +965,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 21, 2025</span>
       
     
   </small>

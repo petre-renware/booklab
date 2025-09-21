@@ -11,8 +11,10 @@
             "created_date": "2023-08-01",
             "created_by": "system",
             "status": {
+                "last_update_date": null,
+                "last_build_date": null,
                 "location_dir": null,
-                "closed": null,
+                "closed": true,
                 "published_location": null
             }
         },
@@ -27,8 +29,10 @@
             "created_date": "1900-08-01",
             "created_by": "me-my-name-here",
             "status": {
+                "last_update_date": null,
+                "last_build_date": null,
                 "location_dir": null,
-                "closed": null,
+                "closed": false,
                 "published_location": null
             }
         }
