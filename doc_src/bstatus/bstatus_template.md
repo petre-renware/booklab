@@ -6,16 +6,24 @@
 Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *{{ book_data.code }}*).
 
 
-## Datele de baza
+## Date generale
 
-* _Titlu:_ {{ book_data.short_desc }}
-* _Descriere:_ {{ book_data.description }}
-* _Copyright:_ {{ book_data.copyright }}
-* _Autor:_ {{ book_data.site_author }}
-* _Note:_ {{ book_data.notes }}
+* Titlu: {{ book_data.short_desc }}
+* Descriere: {{ book_data.description }}
+* Copyright: {{ book_data.copyright }}
+* Autor: {{ book_data.site_author }}
+* Note: {{ book_data.notes }}
+* Creata de: {{ book_data.created_by }}
+* Creata la data: {{ book_data.created_date }}
+
+## Date de stare curenta
+
+* Ultima actualizare: {{ book_data.status.last_update_date  }}
+* Ultima generare carte: {{ book_data.status.last_build_date }}
+
+* ... locatia relativ la /docs (si / my_books ?)
 * ... alte info gen:
-* numar pagini
-* locatia de stocare relativ la /docs/my_books/ 
+* ... numar pagini
 * ...etc...
 
 
@@ -36,15 +44,7 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *{{ bo
 <a href="/booklab/api/dplb/?code={{ book_data.code }}"><button>Asamblare carte</button></a>
 
 
-
-
-
 ## [Help](../help/880.30-BSTATUS_usage.md)
-
-
-
-### TOATE INFO:- ptr debug & de sters
-{{ book_data }}
 
 
 

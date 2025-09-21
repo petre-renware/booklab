@@ -12,7 +12,7 @@
             "created_by": "system",
             "status": {
                 "last_update_date": null,
-                "last_buid_date": null,
+                "last_build_date": null,
                 "location_dir": null,
                 "closed": null,
                 "published_location": null
@@ -30,7 +30,7 @@
             "created_by": "me-my-name-here",
             "status": {
                 "last_update_date": null,
-                "last_buid_date": null,
+                "last_build_date": null,
                 "location_dir": null,
                 "closed": null,
                 "published_location": null

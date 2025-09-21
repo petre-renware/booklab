@@ -690,47 +690,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Doc tehnica detaliata
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="810.05a-booklab_DLD_specs.html" class="md-nav__link md-nav__link--active">
         Doc tehnica detaliata
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data_root" class="md-nav__link">
-    DATA_ROOT
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conf_root" class="md-nav__link">
-    CONF_ROOT
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -875,28 +837,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data_root" class="md-nav__link">
-    DATA_ROOT
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conf_root" class="md-nav__link">
-    CONF_ROOT
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -918,19 +858,12 @@
 <li><code>booklab-cli</code> which is a CLI application to manage system</li>
 <li><code>booklabd</code> designed to serve <code>/api/.../</code> system routes that need database write access</li>
 </ul>
-<p>Despite these Python modules, there are other directories in package, the most relevant being:</p>
-<ul>
-<li><code>data/</code> containing the system data in JSON files</li>
-<li><code>conf/</code> containing configuration files for different system components including infrastructure ones like gunicorn or nginx</li>
-<li><code>doc-techical/</code> containing system usage documentation (aka api interface)</li>
-</ul>
+<p>Despite these Python modules, there are other directories in package, the most relevant being:
+xy
+- <code>data/</code> containing the system data in JSON files
+- <code>conf/</code> containing configuration files for different system components including infrastructure ones like gunicorn or nginx
+- <code>doc-techical/</code> containing system usage documentation (aka api interface)</p>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
-<p><a id="booklab.DATA_ROOT"></a></p>
-<h4 id="data_root">DATA_ROOT</h4>
-<p>database files directory</p>
-<p><a id="booklab.CONF_ROOT"></a></p>
-<h4 id="conf_root">CONF_ROOT</h4>
-<p>config files directory</p>
 <p><a id="booklab.gunicorn.conf"></a></p>
 <h1 id="booklabgunicornconf">booklab.gunicorn.conf</h1>
 <p>Configuration file for gunicorn in serving <code>booklabd</code> server application</p>
@@ -961,17 +894,13 @@ As consequence declare all assignements as valid Python code.</p>
 <p>This Python file contains external access URL information.
 By external access is understood all URL parts necessary to expose Booklab application:</p>
 <ul>
-<li>EXT_SERVER - the external exposed server name (example: "booklab.mydomain.ro")</li>
-<li>EXT_PORT - the external exposed server port; defaults to "80" if unspecified (example: "5002")</li>
-<li>EXT_PATH - the external exposed URL configured start locations through a LAN main proxy (example: "/booklab/" for a complete external URL like http://booklab.mydomain.ro:5002/booklab/)</li>
+<li>EXT_SERVER - the external exposed server name and port if diffrent than standard default (80 or 443) (example: "booklab.mydomain.ro")</li>
+<li>EXT_PATH - the external exposed URL of configured start locations through a LAN main proxy (example: "/booklab/" for a complete external URL like http://booklab.mydomain.ro:5002/booklab/)</li>
 </ul>
 <p><em>NOTE: all information are of string type</em></p>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.conf.booklab_ext_url.EXT_SERVER"></a></p>
 <h4 id="ext_server">EXT_SERVER</h4>
-<p>blank preserve source</p>
-<p><a id="booklab.conf.booklab_ext_url.EXT_PORT"></a></p>
-<h4 id="ext_port">EXT_PORT</h4>
 <p>blank preserve source</p>
 <p><a id="booklab.booklib.getBook"></a></p>
 <h1 id="booklabbooklibgetbook">booklab.booklib.getBook</h1>
@@ -1146,7 +1075,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 18, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 20, 2025</span>
       
     
   </small>

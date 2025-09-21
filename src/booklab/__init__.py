@@ -26,7 +26,7 @@ EXT_SERVER = booklab_ext_url.EXT_SERVER
 EXT_PATH = booklab_ext_url.EXT_PATH
 FULL_EXT_URL = booklab_ext_url.FULL_EXT_URL
 
-# projec6 paths
+# project paths
 PACKAGE_ROOT = pathlib.Path(__file__).parent.resolve()
 DATA_ROOT = PACKAGE_ROOT.joinpath("data")
 
