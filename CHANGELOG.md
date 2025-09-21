@@ -17,7 +17,10 @@
 Implement `bstatus` functionality
 * tbd... bstatus functionality
 * tbd... insert data/book_catalog.json in design document (see 0.5a0)
-* tbd... uodate all redirects using FULL_EXT_URL
+
+* ...wip [0.5rc0] ...
+    * ... update all redirects using FULL_EXT_URL
+    * bstatus_template.md increase "clarity" of cmd  buttons
 * [0.5b3] 250921
     * update bstatus_template to a presentable firm of information
     * import external URLs at booklab.__init__.py level
