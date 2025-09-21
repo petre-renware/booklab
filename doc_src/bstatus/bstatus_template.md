@@ -18,15 +18,17 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *{{ bo
 
 ## Date de stare curenta
 
-* Ultima actualizare: {{ book_data.status.last_update_date  }}
-* Ultima generare carte: {{ book_data.status.last_build_date }}
+* Ultima actualizare: {{book_data.status.last_update_date}}
+* Ultima generare carte: {{book_data.status.last_build_date}}
+* Locatia stocare: {{book_data.status.location_dir}}
+* Locatia publicare: {{book_data.status.published_location}}
+* Carte inchisa editarii: {{book_data.status.closed}}
 
-* ... locatia relativ la /docs (si / my_books ?)
-* ... alte info gen:
-* ... numar pagini
-* ...etc...
+## Date volumetrice
 
-
+* Numar pagini fizice (fisiere): ...urmeaza... 
+* Numar pagini logice (intrari in meniu): ...urmeaza...
+* Numar fisiere poze: ...urmeaza...
 
 
 ## Optiuni suplimentare

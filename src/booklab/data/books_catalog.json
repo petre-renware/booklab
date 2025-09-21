@@ -14,7 +14,7 @@
                 "last_update_date": null,
                 "last_build_date": null,
                 "location_dir": null,
-                "closed": null,
+                "closed": true,
                 "published_location": null
             }
         },
@@ -32,7 +32,7 @@
                 "last_update_date": null,
                 "last_build_date": null,
                 "location_dir": null,
-                "closed": null,
+                "closed": false,
                 "published_location": null
             }
         }

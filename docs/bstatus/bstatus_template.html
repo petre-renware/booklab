@@ -838,6 +838,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#date-volumetrice" class="md-nav__link">
+    Date volumetrice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#optiuni-suplimentare" class="md-nav__link">
     Optiuni suplimentare
   </a>
@@ -880,16 +887,17 @@
 </ul>
 <h2 id="date-de-stare-curenta">Date de stare curenta</h2>
 <ul>
-<li>Ultima actualizare: {{ book_data.status.last_update_date  }}</li>
-<li>
-<p>Ultima generare carte: {{ book_data.status.last_build_date }}</p>
-</li>
-<li>
-<p>... locatia relativ la /docs (si / my_books ?)</p>
-</li>
-<li>... alte info gen:</li>
-<li>... numar pagini</li>
-<li>...etc...</li>
+<li>Ultima actualizare: {{book_data.status.last_update_date}}</li>
+<li>Ultima generare carte: {{book_data.status.last_build_date}}</li>
+<li>Locatia stocare: {{book_data.status.location_dir}}</li>
+<li>Locatia publicare: {{book_data.status.published_location}}</li>
+<li>Carte inchisa editarii: {{book_data.status.closed}}</li>
+</ul>
+<h2 id="date-volumetrice">Date volumetrice</h2>
+<ul>
+<li>Numar pagini fizice (fisiere): ...urmeaza... </li>
+<li>Numar pagini logice (intrari in meniu): ...urmeaza...</li>
+<li>Numar fisiere poze: ...urmeaza...</li>
 </ul>
 <h2 id="optiuni-suplimentare">Optiuni suplimentare</h2>
 <!-- 
@@ -957,7 +965,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 19, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 21, 2025</span>
       
     
   </small>
