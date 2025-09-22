@@ -13,9 +13,8 @@
 
 
 
-## ... [0.5] - unreleased
+## [0.5] - 22.sep.2025
 Implement `bstatus` functionality
-* ...wip upd ver, build doc, build pack, rollout to development & master
 * [0.5rc1] make menu link in "technical area" to data/book_catalog.json (see 0.5a0)
 * [0.5rc0] 250922
     *  update all redirects using EXT_PATH
