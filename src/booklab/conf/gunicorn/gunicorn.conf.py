@@ -1,11 +1,11 @@
-#
-# Configuration file for gubicon in serving `booklabd` server application
-# Warning: this is a Python file that will be onclude in gunicorn run as external module.
-#.As consequence seclare all assignements as will be treated as Python code.
-#
-# Author: Petre Iordanescu (petre.iordanescu@gmail.com)
-# Created: Aug.2025
-#
+"""
+Configuration file for gunicorn in serving `booklabd` server application
+
+This is a Python file that will be executed by gunicorn at run-time.
+As consequence declare all assignements as valid Python code.
+
+Author: Petre Iordanescu (petre.iordanescu@gmail.com)
+"""
 
 reload = True
 user = "app"

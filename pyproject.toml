@@ -126,13 +126,14 @@ Devpage = "http://dev.renware.eu/booklab/"
 
 
 
-[tool.pdm.scripts]  # reference: `https://pdm-project.org/latest/usage/scripts/`
-# this cmd build the technical doc of booklab package & modules
-# ...ISSUES:
-#    1. address correct modules
-#    2. produce specs doc in a right place, addresable from `<pjroott>/docs/...`
+# reference: `https://pdm-project.org/latest/usage/scripts/`
+[tool.pdm.scripts]
 build_tech_doc = {shell = "pydoc-markdown -p booklab >./src/booklab/doc-technical/810.05a-booklab_DLD_specs.md"}  # build API Reference doc. NOTE: to render a TOC use pydoc option `--render-toc`
 build_site = {shell = "mkdocs build"}  # run `mkdocs` to build site with parameters defined in `mkdocs.yml`
+build_all_doc = { composite = [
+    "build_tech_doc",
+    "build_site"
+] }
 bklab_srv = {shell = "src/booklab/booklabd-run.sh"}  # run booklabd server
 
 

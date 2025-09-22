@@ -1,7 +1,8 @@
-"""**routes** module desined to assure exposion of all `booklabd` interface as HTTP routes
+"""module desined to assure exposion of all `booklabd` interface as HTTP routes
 
 Important variables:
-    - `booklab.boolabd.api_app` - web application object (aka Flask.app)
+
+- `booklab.boolabd.api_app`: web application object (aka Flask.app)
 
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
@@ -14,17 +15,25 @@ from flask import make_response
 from flask import request
 from flask import request
 from flask import abort
+from werkzeug.urls import quote as url_quote
 # booklab imports
+from booklab import EXT_PATH, FULL_EXT_URL
 from booklab.booklabd import PROJECT_ROOT
 from booklab.booklabd import api_app
 from booklab.booklabd import db_books
 from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
+from booklab.booklib.getBook import getBook
+
+
+# construct redirect path prefix (up to static site)
+redirect_prefix = url_quote(FULL_EXT_URL + api_app.static_url_path)
 
 
 @api_app.route("/api/newb/")
 def api_newb():
-    """**api_newb** serve creation of newb book functionality.
+    """serve **newb** book functionality.
+
     Query paraneters: none
     """
     book_code = request.args.get("code")
@@ -36,19 +45,39 @@ def api_newb():
 
 @api_app.route("/api/bstatus/")
 def api_bstatus():
-    """**api_bstatus** serve bstatus book functionality.
+    """serve **bstatus** book functionality.
+
     Query paraneters: book code
     """
+    ret_str = "nothing to say..."
     book_code = request.args.get("code")
-    ret_str = f"Page for <b>bstatus</b><br>"
-    ret_str += f"Request for book with code <b>{book_code}</b><br>"
-    #TODO  here should integrate wip static page
-    return ret_str
+    book_data = getBook(
+        db_books,
+        book_code
+    )
+    if not book_data:
+        abort(404, description = "Book not found")
+    else:
+        ret_str = f"Book {book_code} data is <br>{book_data}"
+    # render bstatus template and write it as html served from static site menu
+    rendered_str = render_template(
+        "bstatus/bstatus_template.html",
+        book_data = book_data
+    )
+    file_to_write = os.path.join(
+        PROJECT_ROOT,
+        "docs/bstatus/bstatus.html"
+    )
+    with open(file_to_write, "w") as file:
+        file.write(rendered_str)
+    redirect_path = url_quote(redirect_prefix + "/bstatus/bstatus.html")
+    return redirect(redirect_path)
 
 
 @api_app.route("/api/edtb/")
 def api_edtb():
-    """**api_edtb** serve edtb functionality.
+    """serve **edtb** book functionality.
+
     Query paraneters: book code
     """
     book_code = request.args.get("code")
@@ -60,7 +89,8 @@ def api_edtb():
 
 @api_app.route("/api/orgm/")
 def api_orgm():
-    """**api_orgm** serve  orgm book functionality.
+    """serve  **orgm** book functionality.
+
     Query paraneters: book code
     """
     book_code = request.args.get("code")
@@ -72,7 +102,8 @@ def api_orgm():
 
 @api_app.route("/api/prvb/")
 def api_prvb():
-    """**api_prvb** serve prvb book functionality.
+    """serve **prvb** book functionality.
+
     Query paraneters: book code
     """
     book_code = request.args.get("code")
@@ -84,7 +115,8 @@ def api_prvb():
 
 @api_app.route("/api/dplb/")
 def api_dplb():
-    """**api_dplb** serve dplb book functionality.
+    """serve **dplb** book functionality.
+
     Query paraneters: book code
     """
     book_code = request.args.get("code")
@@ -93,18 +125,17 @@ def api_dplb():
     #TODO  here should integrate wip static page
     return ret_str
 
-
+8
 @api_app.route("/api/bcat/")
 def api_bcat():
-    """**api_bcat** serve accessing books catalog functionality.
+    """serve accessing books catalog, **bcat** functionality.
     """
     # get list of book records ad list even 1rec
     bcat_records = None
     bcat_records = db_books.getAll()
     if not (type(bcat_records) == type(list())):
         bcat_records = list().append(bcat_records)  # make it list if is not (when just 1 record)
-
-    # render docs/bcat/bcat.html template
+    # render bcat template and write it as html served from static site menus
     rendered_str = render_template(
         "bcat/bcat_template.html",
         bcat_data = bcat_records
@@ -115,33 +146,14 @@ def api_bcat():
     )
     with open(file_to_write, "w") as file:
         file.write(rendered_str)
-    return redirect("/booklab/docs/bcat/bcat.html")
+    redirect_path = url_quote(redirect_prefix + "/bcat/bcat.html")
+    return redirect(redirect_path)
 
 
 @api_app.route("/")
-@api_app.route("/<path:any_path>/")
-def test(any_path: str = ...) -> str:
-    """**static_site** serve routes of static sote `/docs/...`
-
-    This function serve Booklab static site from booklabd server. 
-    This is provided to assure a right integration between pure _static site component_ which is the main entry in Booklab application and
-    and _dynamic site (api) component_ which deserve those pages the need to write on server (usually database files) - non GET routes which are starting with `/api/...` explicitelly defined in this component (routes.py file).
-
-    Return from this function vary depending on `any_path` value:
-    - if "" or None then the static site will be addressed
-    - for any other value that will be shown in a small HTML foe debugging purposrs
-    """
-    if any_path is not ...:
-        s1 = f"Received path is: <b>{any_path}</b> <br>"
-        s2 = f"Server name is <b>{api_app.config['SERVER_NAME']}</b> <br>"
-        s3 = f"External request location are:<br><b>{request.script_root=}</b><br><b>{request.url_root=}</b> <br>"
-        s4 = f"Code param is <b>{request.args.get('code')}</b>"
-        return str(s1 + s2 + s3 + s4)
-    if any_path is ...:
-        return redirect("/booklab/docs/index.html")
-    abort(404)
-
-
+def index():
+    redirect_path = url_quote(redirect_prefix + "/index.html")
+    return redirect(redirect_path)
 
 
 
