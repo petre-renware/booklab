@@ -1012,19 +1012,6 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <span class="k">def</span> <span class="nf">api_bcat</span><span class="p">()</span>
 </code></pre></div>
 <p>serve accessing books catalog, <strong>bcat</strong> functionality.</p>
-<p><a id="booklab.booklabd.routes.test"></a></p>
-<h4 id="test">test</h4>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">any_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
-</code></pre></div>
-<p>serve routes of static site <code>/docs/...</code></p>
-<p>This function serve Booklab static site from booklabd server. 
-This is provided to assure a right integration between pure <em>static site component</em> which is the main entry in Booklab application and
-and <em>dynamic site (api) component</em> which deserve those pages the need to write on server (usually database files) - non GET routes which are starting with <code>/api/...</code> explicitelly defined in this component (routes.py file).</p>
-<p>Return from this function vary depending on <code>any_path</code> value:</p>
-<ul>
-<li>if "" or None then the static site will be addressed</li>
-<li>for any other value that will be shown in a small HTML foe debugging purposrs</li>
-</ul>
 <p><a id="booklab.booklabd.app_init"></a></p>
 <h1 id="booklabbooklabdapp_init">booklab.booklabd.app_init</h1>
 <p><strong>app_init</strong> module that initialize <code>booklabd</code> application</p>
