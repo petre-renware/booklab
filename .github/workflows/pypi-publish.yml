@@ -1,0 +1,46 @@
+#
+# Petre Iordanescu @ 250922:
+#   - workflow to publish `booklab` on PyPi. Workflow is registered on PyPi.
+#   - PyPi registered project name: `booklab` with declared workflow: `pypi-publish.yml`
+#   - NOTE: PyPi publishing will be managed by PDM package manager
+#
+
+name: pypi-publish
+run-name: Automated publish `booklab` on PyPi (by Petre Iordanescu)
+on:
+  push:
+    branches:
+      - pypi-publish
+permissions:
+  contents: write
+jobs:
+  pypi-publish:
+    name: PyPi publish of Booklab
+    runs-on: ubuntu-latest
+    permissions:
+      # This permission is needed for private repositories.
+      contents: read
+      # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: PyPi publish of booklab package
+        run: |
+          python -m pip install --upgrade pip
+          pip install setuptools --upgrade
+
+          #   install PDM and build environment
+          python -m pip install pdm
+          python -m pdm install
+
+          #  publish existing built package
+          pdm publish --no-build

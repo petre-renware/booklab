@@ -15,6 +15,7 @@ from flask import make_response
 from flask import request
 from flask import request
 from flask import abort
+from werkzeug.urls import quote as url_quote
 # booklab imports
 from booklab import EXT_PATH, FULL_EXT_URL
 from booklab.booklabd import PROJECT_ROOT
@@ -24,6 +25,8 @@ from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
 from booklab.booklib.getBook import getBook
 
+# construct redirect path prefix (up to static site)
+redirect_prefix = url_quote(FULL_EXT_URL + api_app.static_url_path)
 
 
 
@@ -74,7 +77,8 @@ def api_bstatus():
     )
     with open(file_to_write, "w") as file:
         file.write(rendered_str)
-    return redirect("/booklab/docs/bstatus/bstatus.html")
+    redirect_path = url_quote(redirect_prefix + "/bstatus/bstatus.html")
+    return redirect(redirect_path)
 
 
 @api_app.route("/api/edtb/")
@@ -128,7 +132,7 @@ def api_dplb():
     #TODO  here should integrate wip static page
     return ret_str
 
-
+8
 @api_app.route("/api/bcat/")
 def api_bcat():
     """serve accessing books catalog, **bcat** functionality.
@@ -149,39 +153,15 @@ def api_bcat():
     )
     with open(file_to_write, "w") as file:
         file.write(rendered_str)
-    return redirect("/booklab/docs/bcat/bcat.html")
+    redirect_path = url_quote(redirect_prefix + "/bcat/bcat.html")
+    return redirect(redirect_path)
 
 
-@api_app.route("/")
+@api_app.route()
 def index():
-    return redirect("/booklab/docs/index.html")
 
-
-
-## 4dbg @ 250922 no more usable as route
-## @api_app.route("/<path:any_path>/")
-def test(any_path: str = ...) -> str:
-    """serve routes of static site `/docs/...`
-
-    This function serve Booklab static site from booklabd server. 
-    This is provided to assure a right integration between pure _static site component_ which is the main entry in Booklab application and
-    and _dynamic site (api) component_ which deserve those pages the need to write on server (usually database files) - non GET routes which are starting with `/api/...` explicitelly defined in this component (routes.py file).
-
-    Return from this function vary depending on `any_path` value:
-
-    - if "" or None then the static site will be addressed
-    - for any other value that will be shown in a small HTML foe debugging purposrs
-    """
-    if any_path is not ...:
-        s1 = f"Received path is: <b>{any_path}</b> <br>"
-        s2 = f"Server name is <b>{api_app.config['SERVER_NAME']}</b> <br>"
-        s3 = f"External request location are:<br><b>{request.script_root=}</b><br><b>{request.url_root=}</b> <br>"
-        s4 = f"Code param is <b>{request.args.get('code')}</b>"
-        return str(s1 + s2 + s3 + s4)
-    if any_path is ...:
-        return redirect("/booklab/docs/index.html")
-    abort(404)
-
+    redirect_path = url_quote(redirect_prefix + "/index.html")
+    return redirect(redirect_path)
 
 
 

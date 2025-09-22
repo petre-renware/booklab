@@ -35,15 +35,15 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *{{ bo
 
 <!-- {% include './local-page.css' %} -->
 
-<a href="/booklab/api/newb/"><button>Creare carte</button></a>
+<a href="/booklab/api/newb/">--- Creare carte</a>
 
-<a href="/booklab/api/edtb/?code={{ book_data.code }}"><button>Editare materiale</button></a>
+<a href="/booklab/api/edtb/?code={{ book_data.code }}">--- Editare materiale</a>
 
-<a href="/booklab/api/orgm/?code={{ book_data.code }}"><button>Sectiuni carte</button></a>
+<a href="/booklab/api/orgm/?code={{ book_data.code }}">--- Sectiuni carte</a>
 
-<a href="/booklab/api/prvb/?code={{ book_data.code }}"><button>Vizualizare carte</button></a>
+<a href="/booklab/api/prvb/?code={{ book_data.code }}">--- Vizualizare carte</a>
 
-<a href="/booklab/api/dplb/?code={{ book_data.code }}"><button>Asamblare carte</button></a>
+<a href="/booklab/api/dplb/?code={{ book_data.code }}">--- Asamblare carte</a>
 
 
 ## [Help](../help/880.30-BSTATUS_usage.md)

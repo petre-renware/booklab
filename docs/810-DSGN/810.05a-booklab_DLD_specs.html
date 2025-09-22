@@ -524,6 +524,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../help/books_catalog.json"" class="md-nav__link">
+        Baza de date "Catalogul cartilor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -533,17 +547,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
           Documentatia tehnica
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_4_4">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
           Documentatia tehnica
         </label>
@@ -899,9 +913,6 @@ By external access is understood all URL parts necessary to expose Booklab appli
 </ul>
 <p><em>NOTE: all information are of string type</em></p>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
-<p><a id="booklab.conf.booklab_ext_url.EXT_SERVER"></a></p>
-<h4 id="ext_server">EXT_SERVER</h4>
-<p>blank preserve source</p>
 <p><a id="booklab.booklib.getBook"></a></p>
 <h1 id="booklabbooklibgetbook">booklab.booklib.getBook</h1>
 <p><a id="booklab.booklib.getBook.getBook"></a></p>
@@ -1015,21 +1026,6 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <span class="k">def</span> <span class="nf">api_bcat</span><span class="p">()</span>
 </code></pre></div>
 <p>serve accessing books catalog, <strong>bcat</strong> functionality.</p>
-<p><a id="booklab.booklabd.routes.test"></a></p>
-<h4 id="test">test</h4>
-<div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
-<span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&lt;path:any_path&gt;/&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">any_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
-</code></pre></div>
-<p>serve routes of static site <code>/docs/...</code></p>
-<p>This function serve Booklab static site from booklabd server. 
-This is provided to assure a right integration between pure <em>static site component</em> which is the main entry in Booklab application and
-and <em>dynamic site (api) component</em> which deserve those pages the need to write on server (usually database files) - non GET routes which are starting with <code>/api/...</code> explicitelly defined in this component (routes.py file).</p>
-<p>Return from this function vary depending on <code>any_path</code> value:</p>
-<ul>
-<li>if "" or None then the static site will be addressed</li>
-<li>for any other value that will be shown in a small HTML foe debugging purposrs</li>
-</ul>
 <p><a id="booklab.booklabd.app_init"></a></p>
 <h1 id="booklabbooklabdapp_init">booklab.booklabd.app_init</h1>
 <p><strong>app_init</strong> module that initialize <code>booklabd</code> application</p>
@@ -1075,7 +1071,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 21, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 22, 2025</span>
       
     
   </small>
@@ -1101,7 +1097,7 @@ modules to be launched at package call with <code>-m</code> option</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright (c) RENware Software Systems
+      Freeware
     </div>
   
   

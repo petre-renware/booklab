@@ -12,8 +12,12 @@ Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 
 from urllib.parse import urljoin
 
+## let it blank (`""`) to preserve / inherit current request source
+## type: str
+EXT_SERVER = ""
 
-EXT_SERVER = ""  # blank preserve source
+## if start with `/` will be considered as absolute and FULL_EXT_URL will ignore EXT_SERVER
+## type: str
 EXT_PATH = "/booklab/"
 
 FULL_EXT_URL = urljoin(EXT_SERVER, EXT_PATH)

@@ -13,11 +13,13 @@
 
 
 
-## ... [0.5] - unreleased
+## [0.5] - 22.sep.2025
 Implement `bstatus` functionality
-* tbd... bstatus functionality
-* tbd... insert data/book_catalog.json in design document (see 0.5a0)
-* tbd... uodate all redirects using FULL_EXT_URL
+* [0.5rc1] make menu link in "technical area" to data/book_catalog.json (see 0.5a0)
+* [0.5rc0] 250922
+    *  update all redirects using EXT_PATH
+    * created gh-workflow to publish booklab package on PyPi
+    * bstatus_template.md increase "clarity" of cmd  buttons
 * [0.5b3] 250921
     * update bstatus_template to a presentable firm of information
     * import external URLs at booklab.__init__.py level
