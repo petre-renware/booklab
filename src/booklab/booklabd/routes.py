@@ -25,9 +25,9 @@ from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
 from booklab.booklib.getBook import getBook
 
+
 # construct redirect path prefix (up to static site)
 redirect_prefix = url_quote(FULL_EXT_URL + api_app.static_url_path)
-
 
 
 redirect_prefix = FULL_EXT_URL + api_app.static_url_path
@@ -159,7 +159,6 @@ def api_bcat():
 
 @api_app.route()
 def index():
-
     redirect_path = url_quote(redirect_prefix + "/index.html")
     return redirect(redirect_path)
 
