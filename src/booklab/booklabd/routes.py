@@ -16,12 +16,21 @@ from flask import request
 from flask import request
 from flask import abort
 # booklab imports
+from booklab import EXT_PATH, FULL_EXT_URL
 from booklab.booklabd import PROJECT_ROOT
 from booklab.booklabd import api_app
 from booklab.booklabd import db_books
 from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
 from booklab.booklib.getBook import getBook
+
+
+
+
+redirect_prefix = FULL_EXT_URL + api_app.static_url_path
+print(f"{redirect_prefix=}")
+
+
 
 
 
@@ -144,7 +153,13 @@ def api_bcat():
 
 
 @api_app.route("/")
-@api_app.route("/<path:any_path>/")
+def index():
+    return redirect("/booklab/docs/index.html")
+
+
+
+## 4dbg @ 250922 no more usable as route
+## @api_app.route("/<path:any_path>/")
 def test(any_path: str = ...) -> str:
     """serve routes of static site `/docs/...`
 
@@ -166,7 +181,6 @@ def test(any_path: str = ...) -> str:
     if any_path is ...:
         return redirect("/booklab/docs/index.html")
     abort(404)
-
 
 
 
