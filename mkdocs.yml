@@ -1,6 +1,6 @@
 site_name: BookLab
 site_author: 'Petre Iordanescu (petre.iordanescu@gmail.com)'
-copyright: 'Copyright (c) RENware Software Systems'
+copyright: Freeware
 
 
 
@@ -22,6 +22,7 @@ nav:
         - Manuale de configurare:
             - Indexul manuale ADMA: help/880.30-ADMA_catalog.md
             - Fisierul de configurare a cartii: help/880.30-TMPL_usage.md
+        - Baza de date "Catalogul cartilor: help/books_catalog.json"
         - Documentatia tehnica:
             - Arhitectura sistemului: 810-DSGN/810.02-System_Landscape.md
             - modul Initializare sistem (sysInit): 810-DSGN/810.05a-sysInit_System_Process.md
