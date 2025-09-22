@@ -29,6 +29,14 @@ from booklab.booklib.getBook import getBook
 redirect_prefix = url_quote(FULL_EXT_URL + api_app.static_url_path)
 
 
+
+redirect_prefix = FULL_EXT_URL + api_app.static_url_path
+print(f"{redirect_prefix=}")
+
+
+
+
+
 @api_app.route("/api/newb/")
 def api_newb():
     """serve **newb** book functionality.
@@ -149,11 +157,11 @@ def api_bcat():
     return redirect(redirect_path)
 
 
-@api_app.route("/")
+@api_app.route()
 def index():
+
     redirect_path = url_quote(redirect_prefix + "/index.html")
     return redirect(redirect_path)
-
 
 
 
