@@ -15,6 +15,7 @@ from flask import make_response
 from flask import request
 from flask import request
 from flask import abort
+from werkzeug.urls import quote as url_quote
 # booklab imports
 from booklab import EXT_PATH, FULL_EXT_URL
 from booklab.booklabd import PROJECT_ROOT
@@ -27,7 +28,7 @@ from booklab.booklib.getBook import getBook
 
 
 
-redirect_prefix = FULL_EXT_URL + api_app.static_url_path
+redirect_prefix = url_quote(FULL_EXT_URL + api_app.static_url_path)
 print(f"{redirect_prefix=}")
 
 
