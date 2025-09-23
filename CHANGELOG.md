@@ -14,16 +14,11 @@
 ## ...wip [0.6] - unreleased
 Implement `bnew` and `btmpl` functionalities:
 * tbd... review and update all command scrips from book template (btmpl)
-
-* ...wip [0.6a0] ...
-    * ... move static site inside booklab package. Keep name as `docs/`
-    * ... make a sym-link in project root directory to preseve publishing through GitHub
-    * ... move doc-src and mkdocs.yaml to make right compilation in new directory where moved
-    * ... uodate booklab code to use PACKAGE_ROOT instead of PROJECT_ROOT when define paths to static/docs
-
-
-
-
+* tbd... update booklab code to use PACKAGE_ROOT instead of PROJECT_ROOT when define paths to static/docs
+* [0.6a0] 250923
+    * move static site inside booklab package. Keep name as `docs/`
+    * make a sym-link in project root directory to preseve publishing through GitHub
+    * move doc-src and mkdocs.yaml to make right compilation in new directory where moved
 
 
 
