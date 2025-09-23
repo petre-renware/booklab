@@ -11,10 +11,22 @@
 
 
 
+## ...wip [0.6] - unreleased
+Implement `bnew` and `btmpl` functionalities:
+* tbd... review and update all command scrips from book template (btmpl)
+
+* ...wip [0.6a0] package static site as archive and store it inside boklab package for install it locally with package installation
+
+
+
+
+
+
+
 
 
 ## [0.5] - 22.sep.2025
-Implement `bstatus` functionality
+Implement `bstatus` functionality:
 * [0.5rc1] make menu link in "technical area" to data/book_catalog.json (see 0.5a0)
 * [0.5rc0] 250922
     *  update all redirects using EXT_PATH

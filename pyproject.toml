@@ -120,7 +120,7 @@ dev = [
 
 
 [project.urls]
-Homepage = "https://https://booklab.renware.eu"
+Homepage = "https://booklab.renware.eu/"
 Devpage = "http://dev.renware.eu/booklab/"
 
 
