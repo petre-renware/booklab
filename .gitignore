@@ -10,11 +10,11 @@ __pycache__/
 *.so
 
 
-# dynamically generated files at run-time
+# dynamically run-time generated files
 *.PID
 *.json.lock
-docs/bcat/bcat.html
-docs/bstatus/bstatus.html
+src/booklab/docs/bcat/bcat.html
+src/booklab/docs/bstatus/bstatus.html
 
 
 # Distribution / packaging
