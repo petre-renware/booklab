@@ -1,12 +1,10 @@
 """**booklab** main python package for Booklab system
 
-Consists of the following basic modules:
+Consists of the following modules:
 
 - `booklab-cli` which is a CLI application to manage system
 - `booklabd` designed to serve `/api/.../` system routes that need database write access
 - `booklib/` booklab system specific general library functions usable by all sub-modules
-Despite these Python modules, there are other directories in package, the most relevant being:
-xy
 - `data/` containing the system data in JSON files
 - `conf/` containing configuration files for different system components including infrastructure ones like gunicorn or nginx
 - `doc_src/` contains the source of static site directory as Markdown files
