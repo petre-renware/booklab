@@ -24,8 +24,8 @@ from booklab import STATIC_SITE_ROOT
 
 
 pjroot_location = os.path.abspath(PACKAGE_ROOT)
-static_dir = os.path.abspath("docs")
-templates_dir = os.path.abspath("docs")
+static_dir = "docs/"
+templates_dir = "docs/"
 # create web application object
 api_app = init_app(
     "booklabd",  # name set as this module, ie "booklabd"
