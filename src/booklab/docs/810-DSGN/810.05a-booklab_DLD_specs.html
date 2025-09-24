@@ -921,6 +921,22 @@
 <li><a href="#booklab.docs.book_tmpl.bkcmd_render_cfg_file.destination_config_file">destination_config_file</a></li>
 <li><a href="#booklab.docs.book_tmpl.bkcmd_render_cfg_file.bcat_jinja_tmpl">bcat_jinja_tmpl</a></li>
 <li><a href="#booklab.docs">booklab.docs</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl.bkcmd_gen_final_book">booklab.docs.docs.book_tmpl.bkcmd_gen_final_book</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl.bkcmd_start_book_preview">booklab.docs.docs.book_tmpl.bkcmd_start_book_preview</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl">booklab.docs.docs.book_tmpl</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file">booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.my_name">my_name</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.my_crt_dir">my_crt_dir</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.splitted_my_real_dir">splitted_my_real_dir</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.book_directory_name">book_directory_name</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.book_database_code">book_database_code</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.bcat_records">bcat_records</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.bcat_records">bcat_records</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.templates_root">templates_root</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.source_config_file">source_config_file</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.destination_config_file">destination_config_file</a></li>
+<li><a href="#booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.bcat_jinja_tmpl">bcat_jinja_tmpl</a></li>
+<li><a href="#booklab.docs.docs">booklab.docs.docs</a></li>
 <li><a href="#booklab.__main__">booklab.__main__</a></li>
 <li><a href="#booklab.data">booklab.data</a></li>
 </ul>
@@ -1201,6 +1217,49 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <p>load read file content as template</p>
 <p><a id="booklab.docs"></a></p>
 <h1 id="booklabdocs">booklab.docs</h1>
+<p><a id="booklab.docs.docs.book_tmpl.bkcmd_gen_final_book"></a></p>
+<h1 id="booklabdocsdocsbook_tmplbkcmd_gen_final_book">booklab.docs.docs.book_tmpl.bkcmd_gen_final_book</h1>
+<p><a id="booklab.docs.docs.book_tmpl.bkcmd_start_book_preview"></a></p>
+<h1 id="booklabdocsdocsbook_tmplbkcmd_start_book_preview">booklab.docs.docs.book_tmpl.bkcmd_start_book_preview</h1>
+<p><a id="booklab.docs.docs.book_tmpl"></a></p>
+<h1 id="booklabdocsdocsbook_tmpl">booklab.docs.docs.book_tmpl</h1>
+<p><a id="booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file"></a></p>
+<h1 id="booklabdocsdocsbook_tmplbkcmd_render_cfg_file">booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file</h1>
+<p><a id="booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.my_name"></a></p>
+<h4 id="my_name_2">my_name</h4>
+<p>use <code>__file__</code> attribute which guarantees the full pth-and-name of current python file (ATTN if is in a library !)</p>
+<p><a id="booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.my_crt_dir"></a></p>
+<h4 id="my_crt_dir_2">my_crt_dir</h4>
+<p>normally this should be the site root directory (in production <code>docs/</code> &amp; in dev <code>doc_src/</code>)</p>
+<p><a id="booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.splitted_my_real_dir"></a></p>
+<h4 id="splitted_my_real_dir_2">splitted_my_real_dir</h4>
+<p>split directory path in its parts</p>
+<p><a id="booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.book_directory_name"></a></p>
+<h4 id="book_directory_name_2">book_directory_name</h4>
+<p>get last list entry as being the book name where intend to obtain the book code (book dir name format: book_<code>)</p>
+<p><a id="booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.book_database_code"></a></p>
+<h4 id="book_database_code_2">book_database_code</h4>
+<p>keep only characters after <code>book_</code>, sufix name of directory ((book dir name format: book_<code>))</p>
+<p><a id="booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.bcat_records"></a></p>
+<h4 id="bcat_records_4">bcat_records</h4>
+<p>will return a list with all recorsd but allways keep only the first one as <code>code</code> key is UNIQUE</p>
+<p><a id="booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.bcat_records"></a></p>
+<h4 id="bcat_records_5">bcat_records</h4>
+<p>keep only the first one as <code>code</code> key is UNIQUE</p>
+<p><a id="booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.templates_root"></a></p>
+<h4 id="templates_root_2">templates_root</h4>
+<p>directory where the file is that need to be renderend (book_mkdocs.yml)</p>
+<p><a id="booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.source_config_file"></a></p>
+<h4 id="source_config_file_2">source_config_file</h4>
+<p>source file (JINJA)</p>
+<p><a id="booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.destination_config_file"></a></p>
+<h4 id="destination_config_file_2">destination_config_file</h4>
+<p>destination file (YAML)</p>
+<p><a id="booklab.docs.docs.book_tmpl.bkcmd_render_cfg_file.bcat_jinja_tmpl"></a></p>
+<h4 id="bcat_jinja_tmpl_2">bcat_jinja_tmpl</h4>
+<p>load read file content as template</p>
+<p><a id="booklab.docs.docs"></a></p>
+<h1 id="booklabdocsdocs">booklab.docs.docs</h1>
 <p><a id="booklab.__main__"></a></p>
 <h1 id="booklab__main__">booklab.__main__</h1>
 <p>... wip ...
@@ -1218,7 +1277,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 23, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2025</span>
       
     
   </small>
