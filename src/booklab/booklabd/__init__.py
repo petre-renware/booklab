@@ -23,7 +23,7 @@ from booklab import DATA_ROOT
 from booklab import STATIC_SITE_ROOT
 
 
-pjroot_location = os.path.abspath(PROJECT_ROOT)
+pjroot_location = os.path.abspath(PACKAGE_ROOT)
 static_dir = os.path.abspath("docs")
 templates_dir = os.path.abspath("docs")
 # create web application object
