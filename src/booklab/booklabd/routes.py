@@ -1,4 +1,5 @@
-"""module desined to assure exposion of all `booklabd` interface as HTTP routes
+"""
+Module that serve `booklabd` interface api-functions as HTTP routes
 
 Important variables:
 
@@ -16,8 +17,9 @@ from flask import request
 from flask import request
 from flask import abort
 from werkzeug.urls import quote as url_quote
-# booklab imports
-from booklab import EXT_PATH, FULL_EXT_URL
+from booklab import EXT_PATH
+from booklab import FULL_EXT_URL
+from booklab import STATIC_SITE_ROOT
 from booklab.booklabd import PROJECT_ROOT
 from booklab.booklabd import api_app
 from booklab.booklabd import db_books
@@ -28,6 +30,8 @@ from booklab.booklib.getBook import getBook
 
 # construct redirect path prefix (up to static site)
 redirect_prefix = url_quote(FULL_EXT_URL + api_app.static_url_path)
+# construct prefix path for docs (static site) directory
+docs_prefix = os.path.join(STATIC_SITE_ROOT)
 
 
 @api_app.route("/api/newb/")
@@ -65,8 +69,8 @@ def api_bstatus():
         book_data = book_data
     )
     file_to_write = os.path.join(
-        PROJECT_ROOT,
-        "docs/bstatus/bstatus.html"
+        docs_prefix,
+        "bstatus/bstatus.html"
     )
     with open(file_to_write, "w") as file:
         file.write(rendered_str)
@@ -141,8 +145,8 @@ def api_bcat():
         bcat_data = bcat_records
     )
     file_to_write = os.path.join(
-        PROJECT_ROOT,
-        "docs/bcat/bcat.html"
+        docs_prefix,
+        "bcat/bcat.html"
     )
     with open(file_to_write, "w") as file:
         file.write(rendered_str)

@@ -11,10 +11,19 @@
 
 
 
-## ...wip [0.6] - unreleased
+## ...wip [0.7] - unreleased
 Implement `bnew` and `btmpl` functionalities:
 * tbd... review and update all command scrips from book template (btmpl)
-* tbd ... update booklab code to change all hard-coded (in clear) file-path refs to `data/` with `api_app.static_path` variable
+
+
+
+
+
+
+
+## [0.6] - 24.sep.2025
+Refactor WSGI app (booklabd), move static site (docs/) from booklab project root to package root
+* [0.6b1] 250924 drop /<PROJECT ROOT>/docs/ dir & update booklab code to change all hard-coded (in clear) file-path refs to `data/` with `api_app.static_path` variable
 * [0.6b0] 250924
     * update booklab code to use PACKAGE_ROOT instead of PROJECT_ROOT when define paths to static/docs
     * update booklab.__init__.py STATIC_SITE_ROOT with new location under paxkage root
@@ -22,7 +31,6 @@ Implement `bnew` and `btmpl` functionalities:
     * move static site inside booklab package. Keep name as `docs/`
     * make a sym-link in project root directory to preseve publishing through GitHub
     * move doc-src and mkdocs.yaml to make right compilation in new directory where moved
-
 
 
 
