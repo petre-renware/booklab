@@ -17,7 +17,6 @@ from flask import request
 from flask import request
 from flask import abort
 from werkzeug.urls import quote as url_quote
-# booklab imports
 from booklab import EXT_PATH
 from booklab import FULL_EXT_URL
 from booklab import STATIC_SITE_ROOT
