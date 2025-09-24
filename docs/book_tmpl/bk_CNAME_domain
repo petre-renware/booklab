@@ -1,0 +1,4 @@
+#-#FIXME normally should be dropped as moved to `./doc_src/`
+#-#NOTE maybe to keep for metadata, but peobably this will be aggregated in a consolidated "book_info.json"
+
+# here will be the domain CNAME where book is intended to be published 

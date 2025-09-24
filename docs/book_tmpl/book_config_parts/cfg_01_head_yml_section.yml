@@ -1,0 +1,9 @@
+#NOTE HEAD SECTION - this is a generated section
+
+site_name: {{ book.short_desc }}
+site_author: {{ book.site_author }}
+copyright: {{ book.copyright }}
+
+
+
+

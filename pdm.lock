@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:554f9baa3409a38d19d295c0bdfc83b78d76c247478943fe4a18e4d7c027ab73"
+content_hash = "sha256:32a638f53e0a29bd63d661647bbc39309c57b9bce3c682a0fe3d88165b72f899"
 
 [[metadata.targets]]
 requires_python = ">=3.10,<3.13"
@@ -1044,6 +1044,15 @@ files = [
     {file = "pandas-2.1.0-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:70cf866af3ab346a10debba8ea78077cf3a8cd14bd5e4bed3d41555a3280041c"},
     {file = "pandas-2.1.0-cp311-cp311-win_amd64.whl", hash = "sha256:d53c8c1001f6a192ff1de1efe03b31a423d0eee2e9e855e69d004308e046e694"},
     {file = "pandas-2.1.0.tar.gz", hash = "sha256:62c24c7fc59e42b775ce0679cfa7b14a5f9bfb7643cfbe708c960699e05fb918"},
+]
+
+[[package]]
+name = "pango"
+version = "0.0.1"
+summary = "pango"
+groups = ["default"]
+files = [
+    {file = "pango-0.0.1.tar.gz", hash = "sha256:70843893a43933d33db2820832563c168ca3f3af0101248b9a58f079fb36fbe8"},
 ]
 
 [[package]]

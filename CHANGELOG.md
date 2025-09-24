@@ -14,10 +14,7 @@
 ## ...wip [0.7] - unreleased
 Implement `bnew` and `btmpl` functionalities:
 * tbd... review and update all command scrips from book template (btmpl)
-
-* ...wip [0.7b0] ... clean project and permanetly keep a copy of `.../src/booklab/docs/` in project root
-
-
+* [0.7b0] 250924 clean project and permanetly keep a copy of `.../src/booklab/docs/` in project root
 
 
 
