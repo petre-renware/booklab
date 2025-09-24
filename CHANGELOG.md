@@ -11,9 +11,12 @@
 
 
 
-## ...wip [0.6] - unreleased
+## ...wip [0.7] - unreleased
 Implement `bnew` and `btmpl` functionalities:
 * tbd... review and update all command scrips from book template (btmpl)
+
+
+
 
 
 
@@ -28,7 +31,6 @@ Refactor WSGI app (booklabd), move static site (docs/) from booklab project root
     * move static site inside booklab package. Keep name as `docs/`
     * make a sym-link in project root directory to preseve publishing through GitHub
     * move doc-src and mkdocs.yaml to make right compilation in new directory where moved
-
 
 
 
