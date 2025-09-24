@@ -14,7 +14,10 @@
 ## ...wip [0.6] - unreleased
 Implement `bnew` and `btmpl` functionalities:
 * tbd... review and update all command scrips from book template (btmpl)
-* tbd... update booklab code to use PACKAGE_ROOT instead of PROJECT_ROOT when define paths to static/docs
+* tbd ... update booklab code to change all hard-coded (in clear) file-path refs to `data/` with `api_app.static_path` variable
+* [0.6b0] 250924
+    * update booklab code to use PACKAGE_ROOT instead of PROJECT_ROOT when define paths to static/docs
+    * update booklab.__init__.py STATIC_SITE_ROOT with new location under paxkage root
 * [0.6a0] 250923
     * move static site inside booklab package. Keep name as `docs/`
     * make a sym-link in project root directory to preseve publishing through GitHub

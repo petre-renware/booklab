@@ -1,15 +1,15 @@
 """**booklab** main python package for Booklab system
 
-Consists of the following basic modules:
+Consists of the following sub-packages:
 
 - `booklab-cli` which is a CLI application to manage system
 - `booklabd` designed to serve `/api/.../` system routes that need database write access
-
-Despite these Python modules, there are other directories in package, the most relevant being:
-xy
-- `data/` containing the system data in JSON files
-- `conf/` containing configuration files for different system components including infrastructure ones like gunicorn or nginx
-- `doc-techical/` containing system usage documentation (aka api interface)
+- `booklib` booklab system specific general library functions usable by all sub-modules
+- `data` containing the system data in JSON files
+- `conf` containing configuration files for different system components including infrastructure ones like gunicorn or nginx
+- `doc_src` contains the source of static site directory as Markdown files
+- `docs/` contains rhe static site compiled and "ready to use as-is" with any standard HTTP server
+- `doc-techical` containing system usage documentation (aka api interface)
 
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
@@ -26,19 +26,15 @@ EXT_SERVER = booklab_ext_url.EXT_SERVER
 EXT_PATH = booklab_ext_url.EXT_PATH
 FULL_EXT_URL = booklab_ext_url.FULL_EXT_URL
 
-# project paths
+# file system paths
 PACKAGE_ROOT = pathlib.Path(__file__).parent.resolve()
-DATA_ROOT = PACKAGE_ROOT.joinpath("data")
-
-# database files directory
-CONF_ROOT = PACKAGE_ROOT.joinpath("conf")
-
-# config files directory
 PROJECT_ROOT = PACKAGE_ROOT.parent.resolve().parent.resolve()
-STATIC_SITE_ROOT = PROJECT_ROOT.joinpath("docs")
+DATA_ROOT = PACKAGE_ROOT.joinpath("data")
+CONF_ROOT = PACKAGE_ROOT.joinpath("conf")
+STATIC_SITE_ROOT = PACKAGE_ROOT.joinpath("docs")
 
-
-
+## 4dbg printouts
+# print(f"{PACKAGE_ROOT=}\n {PROJECT_ROOT=}\n {DATA_ROOT=}\n {CONF_ROOT=}\n {STATIC_SITE_ROOT=}\n")
 
 
 
