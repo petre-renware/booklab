@@ -8,11 +8,6 @@ nav:
     - Acasa: index.md
     - Catalog carti: bcat/ #NOTE will direct-fwd to `http://<crt_server_name>/bcat/`
     - Carte noua: newb/ #NOTE will direct-fwd to `http://<crt_server_name>/newb/`
-# petrei@250910 folliwing commented sections are no nore accessed from main menu but only from "Catalog carti" page
-#    - Editare materiale: edtm/ #NOTE will direct-fwd to `http://<crt_server_name>/edtm/`
-#    - Sectiuni carte: orgm/ #NOTE will direct-fwd to `http://<crt_server_name>/orgm/`
-#    - Previzualizare carte: prvb/ #NOTE will direct-fwd to `http://<crt_server_name>/prvb/`
-#    - Asamblare carte: dplb/ #NOTE will direct-fwd to `http://<crt_server_name>/dplb/`
     - Help:
         - Vedere de ansamblu: help/130.02-Overview.md
         - Manuale de utilizare:
@@ -93,12 +88,11 @@ extra_javascript:
 plugins:
     - search
     - include-markdown
-#    - same-dir  # plug in to access md files from own yaml root
     - table-reader #NOTE used for staic tables rendering from various sources (CSV, JSON, etc as available in Pandas)
     - macros #NOTE use external jinja variables and macros (see `https://mkdocs-macros-plugin.readthedocs.io/en/latest/`)
     - markdown-exec #NOTE Python execution inside markdown files (execution at build time, "compilation like" NOT dynamically NOT JavaScript)
     - git-revision-date-localized
-    # - pdf-export  #NOTE DO NOT USE this as does not render mermaid in PDF docs
+#    - pdf-export  #NOTE DO NOT USE this as does not render mermaid in PDF docs
 #    - print-site: #NOTE_IMPORTANT_#NOTE put `print-site` plug in BEFORE `pdf-with-js` in order to works the workaround wit a fake `print_page.md` that will determine generation of 'print_page.pdf' as any other page generated pdf by `pdf-with-js`; ingnore warning ` [mkdocs-print-site] 'print-site' should be defined as the *last* plugin,to ensure...`
         # add_to_navigation: true #NOTE not needed here
         # print_page_title: 'Complete BookLab Manual' #NOTE not needed here

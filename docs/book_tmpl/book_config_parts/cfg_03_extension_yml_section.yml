@@ -1,0 +1,144 @@
+
+#NOTE MKDOCS python EXTENSIONS SECTION - this is a generated section
+
+
+markdown_extensions:
+    - admonition
+    - tables
+    - pymdownx.details
+    - pymdownx.superfences:
+        custom_fences: #NOTE: [petre iordanescu]: is very important to respect syntax ref `-` character at beginning of items (otherwise not right JSON result !)
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_code_format
+    - footnotes
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
+    - def_list
+    - attr_list
+    - md_in_html
+    - pymdownx.tasklist:
+        custom_checkbox: true
+
+
+
+
+extra:
+    arint_version: "0.1"
+#  alternate: #NOTE language options - FUTURE FEATURE - should first have a translation...
+#    - name: English
+#      link: /
+#      lang: en
+#    - name: Romanian
+#      link: /ro/
+#      lang: ro
+
+
+
+
+#NOTE required to render `mermaid` diagrams
+extra_javascript:
+  - optionalConfig.js
+  - https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js
+  - extra-loader.js
+
+
+
+
+
+plugins:
+    - search
+    - include-markdown
+    - macros #NOTE use external jinja variables and macros (see `https://mkdocs-macros-plugin.readthedocs.io/en/latest/`)
+    - markdown-exec #NOTE Python execution inside markdown files (execution at build time, "compilation like" NOT dynamically NOT JavaScript)
+    - git-revision-date-localized
+    # - pdf-export #NOTE DO NOT USE this as does not render mermaid in PDF docs
+    - print-site: #NOTE_IMPORTANT_#NOTE put `print-site` plug in BEFORE `pdf-with-js` in order to works the workaround wit a fake `print_page.md` that will determine generation of 'print_page.pdf' as any other page generated pdf by `pdf-with-js`; ingnore warning ` [mkdocs-print-site] 'print-site' should be defined as the *last* plugin,to ensure...`
+        # add_to_navigation: true #NOTE not needed here
+        # print_page_title: 'Complete BookLab Manual' #NOTE not needed here
+        add_full_urls: true
+        add_table_of_contents: true
+    - pdf-with-js:
+        enable: true
+        #NOTE - all next are examples...
+        #author: #NOTE defaulted from site_author item
+        #copyright: #NOTE defaulted from copyright item
+        #cover: false
+        #back_cover: true
+        #cover_title: TITLE TEXT
+        #cover_subtitle: SUBTITLE TEXT
+        #custom_template_path: TEMPLATES PATH
+        #
+        #toc_title: TOC TITLE TEXT
+        #heading_shift: false
+        #toc_level: 3
+        #ordered_chapter_level: 2
+        #excludes_children:
+        #    - 'release-notes/:upgrading'
+        #    - 'release-notes/:changelog'
+        #
+        #exclude_pages:
+        #    - 'bugs/'
+        #    - 'appendix/contribute/'
+        #convert_iframe:
+        #    - src: IFRAME SRC
+        #      img: POSTER IMAGE URL
+        #      text: ALTERNATE TEXT
+        #    - src: ...
+        #two_columns_level: 3
+        #
+        #render_js: true
+        #headless_chrome_path: headless-chromium
+        #
+        #output_path: any-place/document.pdf
+        #enabled_if_env: ENABLE_PDF_EXPORT
+        #
+        #debug_html: true
+        #show_anchors: true
+        #verbose: true
+
+
+
+#NOTE provide material theme
+theme:
+    # language: en #NOTE FUTURE FEATURE - should first have a translation...
+    logo: pictures/booklab_logo.png
+    name: material
+    features:
+        - navigation.tabs # left navigation side bar, all level 1 will be shown as top navigation bar
+        - navigation.tracking
+        - navigation.tabs.sticky
+        - navigation.path
+        #- toc.integrate #NOTE integrates all navigation only in left nav bar
+    palette:
+        primary: black # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/ for other color options
+        accent: blue
+    icon:
+        admonition:
+            note: fontawesome/solid/note-sticky
+            abstract: fontawesome/solid/book
+            info: fontawesome/solid/circle-info
+            tip: fontawesome/solid/bullhorn
+            success: fontawesome/solid/check
+            question: fontawesome/solid/circle-question
+            warning: fontawesome/solid/triangle-exclamation
+            failure: fontawesome/solid/bomb
+            danger: fontawesome/solid/skull
+            bug: fontawesome/solid/robot
+            example: fontawesome/solid/flask
+            quote: fontawesome/solid/quote-left
+
+
+
+
+
+
+
+
+# or can use readthedocstheme
+# theme: readthedocs
+
+

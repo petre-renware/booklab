@@ -1,0 +1,20 @@
+
+#NOTE WORK DIRECTORIES SECTION - this is a generated section
+
+
+
+# directory where start to search or markdown sources
+docs_dir: './doc_src'
+
+# root directory where to be generated portal
+site_dir: './static_portal' #NOTE: [piu] this is the working directory; final is in `docs/`` which is published through GitHub (chk but @ 230706 petre-dev branch)
+
+# other useful configurations
+use_directory_urls: false # allow link between pages to work properly as static site an "callable" as `file:///...`
+
+
+# files, dirs to exclude at BookLab project creation --- #NOTE#FIXME temporary commented out up to clearing specs because it will not deply `bk_*/` directories
+#exclude_docs: |
+#  bk_*/
+
+
