@@ -25,8 +25,6 @@ Implement `bnew` and `btmpl` functionalities:
 
 
 
-
-
 ## [0.6] - 24.sep.2025
 Refactor WSGI app (booklabd), move static site (docs/) from booklab project root to package root
 * [0.6b1] 250924 drop /<PROJECT ROOT>/docs/ dir & update booklab code to change all hard-coded (in clear) file-path refs to `data/` with `api_app.static_path` variable
