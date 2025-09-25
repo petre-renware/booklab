@@ -867,7 +867,9 @@
 <h1 id="table-of-contents">Table of Contents</h1>
 <ul>
 <li><a href="#booklab">booklab</a></li>
+<li><a href="#booklab.book_template">booklab.book_template</a></li>
 <li><a href="#booklab.gunicorn.conf">booklab.gunicorn.conf</a></li>
+<li><a href="#booklab.booklab_cli">booklab.booklab_cli</a></li>
 <li><a href="#booklab.conf">booklab.conf</a></li>
 <li><a href="#booklab.conf.gunicorn.gunicorn.conf">booklab.conf.gunicorn.gunicorn.conf</a></li>
 <li><a href="#booklab.conf.booklab_ext_url">booklab.conf.booklab_ext_url</a></li>
@@ -876,7 +878,6 @@
 <li><a href="#booklab.booklib">booklab.booklib</a></li>
 <li><a href="#booklab.booklib.db_init">booklab.booklib.db_init</a></li>
 <li><a href="#booklab.booklib.db_init.init_db">init_db</a></li>
-<li><a href="#booklab.booklab-cli">booklab.booklab-cli</a></li>
 <li><a href="#booklab.doc_src.book_tmpl.bkcmd_gen_final_book">booklab.doc_src.book_tmpl.bkcmd_gen_final_book</a></li>
 <li><a href="#booklab.doc_src.book_tmpl.bkcmd_start_book_preview">booklab.doc_src.book_tmpl.bkcmd_start_book_preview</a></li>
 <li><a href="#booklab.doc_src.book_tmpl">booklab.doc_src.book_tmpl</a></li>
@@ -939,12 +940,21 @@
 <li><code>doc-techical</code> containing system usage documentation (aka api interface)</li>
 </ul>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.book_template"></a></p>
+<h1 id="booklabbook_template">booklab.book_template</h1>
+<p>Contains the book template used when create a new book (<code>newb</code> funxtion, <code>/api/newb/</code> booklabd route).</p>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.gunicorn.conf"></a></p>
 <h1 id="booklabgunicornconf">booklab.gunicorn.conf</h1>
 <p>Configuration file for gunicorn in serving <code>booklabd</code> server application</p>
 <p>This is a Python file that will be executed by gunicorn at run-time.
 As consequence declare all assignements as valid Python code.</p>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.booklab_cli"></a></p>
+<h1 id="booklabbooklab_cli">booklab.booklab_cli</h1>
+<p>CLI module to assure system operatins as command line.</p>
+<p>Architecture; Linux standard (POSIX) CLI</p>
+<p>Author; Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.conf"></a></p>
 <h1 id="booklabconf">booklab.conf</h1>
 <p>Cnfigurations component contains various system components configuration files:</p>
@@ -1021,11 +1031,6 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <p>Create db_books, db_system objects and return them as tuple</p>
 <p><strong>Returns</strong>:</p>
 <p><code>(db_books, db_system)</code> tuple of pysondb object</p>
-<p><a id="booklab.booklab-cli"></a></p>
-<h1 id="booklabbooklab-cli">booklab.booklab-cli</h1>
-<p>CLI module to assure system operatins as command line.</p>
-<p>Architecture; Linux standard (POSIX) CLI</p>
-<p>Author; Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.doc_src.book_tmpl.bkcmd_gen_final_book"></a></p>
 <h1 id="booklabdoc_srcbook_tmplbkcmd_gen_final_book">booklab.doc_src.book_tmpl.bkcmd_gen_final_book</h1>
 <p><a id="booklab.doc_src.book_tmpl.bkcmd_start_book_preview"></a></p>
