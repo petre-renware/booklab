@@ -14,8 +14,8 @@
 ## ...wip [0.7] - unreleased
 Implement `bnew` and `btmpl` functionalities:
 * tbd... review and update all command scrips from book template (btmpl)
-
-* ...wip [0.7b1] define and set a directory layout for `my_books/`directory in static site
+* tbd... [0.7b1] define and set directory layout for `my_books/`directory in static site
+* [0.7.dev0] create a new sub-package boooklab.book_template to be used for a new book creation as base template "decorated" with Jinja params
 * [0.7b0] 250924 clean project and permanetly keep a copy of `.../src/booklab/docs/` in project root
 
 
