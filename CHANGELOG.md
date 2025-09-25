@@ -13,14 +13,12 @@
 
 ## ...wip [0.7] - unreleased
 Implement `bnew` and `btmpl` functionalities:
-* tbd... review and update all command scrips from book template (btmpl)
-
-* ...wip [0.7b1] ...
-    * ... [0.7.dev4] set `preview` route for a book resulted static-site as route `/preview/` in nginx
-    * ... [0.7.dev3] configure nginx for /preview route/  
-    * [0.7.dev2] define and set directory layout for book TMPLT (ie, book `code` from books_catalog.json`) directory under package book_template. This will become the "structure" created for any new book
-    * [0.7.dev1] refactor sub-package `book_template` to sub-package `my_books` containig it
-
+* ... review and update all command scrips from book template (btmpl)
+* ... [0.7b1] test, build doc, build package, publish
+* ... [0.7.dev4] set `preview` route for a book resulted static-site as route `/preview/` in nginx
+* ... [0.7.dev3] configure nginx for /preview route/  
+* [0.7.dev2] define and set directory layout for book TMPLT (ie, book `code` from books_catalog.json`) directory under package book_template. This will become the "structure" created for any new book
+* [0.7.dev1] refactor sub-package `book_template` to sub-package `my_books` containig it
 * [0.7.dev0] create a new sub-package boooklab.book_template to be used for a new book creation as base template "decorated" with Jinja params
 * [0.7b0] 250924 clean project and permanetly keep a copy of `.../src/booklab/docs/` in project root
 
