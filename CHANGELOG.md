@@ -5,19 +5,22 @@
 
 # CHANGELOG
 
-## ... #TODO [unreleased] BCAT extend book command center (...wip...)
-* tbd... #TODO-ASAP__focus on Jupiter__
+## ... #TODO future things:
+* tbd... Jupiter Notebooks
 * tbd... ref command "Verificare" (code-name `bstatus`):
+For Implement `newb`, `build`
+    * tbd... review and update all command scrips from book template (btmpl)
+    * tbd... update my_book/book_template shell to build book
+    * tbd... update my_book/book_template/mkdocs.yml with Jinja fields to reflect current book at its creation
+
+
 
 
 
 ## ...wip [0.7] - unreleased
-Implement `bnew` and `btmpl` functionalities:
-* ... review and update all command scrips from book template (btmpl)
-* ... [0.7b1] test, build doc, build package, publish
-* ... routes.py: code preview route (`/api/prvb/`) for a book resulted static-site as route /preview/<my_book_code>/docs/
-* ... update my_book/book_template shell to build book
-* ... update my_book/book_template/mkdics.yml with Jinja fields to reflect current book at its creation
+Implement `prvb` and `book_template` (aka `btmpl`) functionalities:
+* ... [0.7rc0] test, build doc, build package, publish
+* ... [0.7b0] routes.py: code preview route (`/api/prvb/`) for a book resulted static-site as route /preview/<my_book_code>/docs/
 * [0.7.dev6] created in my_books/book_template shell `bk_build.sh` that build mkdocs site. Shell self-auto change directory to the book directory for which it exists assuring a correct building with mkdoks build cmd
 * [0.7.dev5] copy Booklab mkdocs.yml to make a test of my 1st book generation and manual preview of it
 * [0.7.dev4] my_books/: continue skeleton with directories `doc_src/`& `docs/` with minimum files to be kept on git and to be useful
