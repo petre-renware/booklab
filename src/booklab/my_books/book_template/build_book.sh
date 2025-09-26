@@ -4,7 +4,7 @@
 ##
 
 
-# ... mkdocs build ...
+# ...pdm run  mkdocs build ...
 
 
 
