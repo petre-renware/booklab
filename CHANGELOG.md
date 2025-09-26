@@ -21,8 +21,7 @@ For Implement `newb`, `build`
 Implement `prvb` and `book_template` (aka `btmpl`) functionalities:
 * tbd... [0.7rc0] test, build doc, build package, publish
 * tbd... [0.7rc0] routes.py: code preview route (`/api/prvb/`) for a book resulted static-site as route /preview/<my_book_code>/docs/
-
-* ...wip [0.7a0] bstatus_template: change Edit action, disable it for closed books
+* [0.7a0] bstatus_template: change Edit action, disable it for closed books && mk cmd link for build book
 * [0.7.dev6] created in my_books/book_template shell `bk_build.sh` that build mkdocs site. Shell self-auto change directory to the book directory for which it exists assuring a correct building with mkdoks build cmd
 * [0.7.dev5] copy Booklab mkdocs.yml to make a test of my 1st book generation and manual preview of it
 * [0.7.dev4] my_books/: continue skeleton with directories `doc_src/`& `docs/` with minimum files to be kept on git and to be useful

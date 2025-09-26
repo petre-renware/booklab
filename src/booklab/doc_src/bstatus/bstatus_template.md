@@ -39,7 +39,8 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *`{{ b
 * <a href="/booklab/api/edtb/?code={{ book_data.code }}">Editare materiale</a>
 * <a href="/booklab/api/orgm/?code={{ book_data.code }}">Sectiuni carte</a>
 * <a href="/booklab/api/prvb/?code={{ book_data.code }}">Vizualizare carte</a>
-* <a href="/booklab/api/dplb/?code={{ book_data.code }}">Asamblare carte</a>
+* <a href="/booklab/api/bbld/?code={{ book_data.code }}">Generare carte</a>
+* <a href="/booklab/api/dplb/?code={{ book_data.code }}">Livrare carte</a>
 
 
 ## [Help](../help/880.30-BSTATUS_usage.md)
