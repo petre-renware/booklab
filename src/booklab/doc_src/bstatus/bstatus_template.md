@@ -33,7 +33,7 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *`{{ b
 
 ## Optiuni suplimentare
 
-<!-- {% include './local-page.css' %} -->
+<!-- include './local-page.css' -->
 
 * <a href="/booklab/api/newb/">Creare carte</a>
 * <a href="/booklab/api/edtb/?code={{ book_data.code }}">Editare materiale</a>
