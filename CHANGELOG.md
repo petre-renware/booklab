@@ -18,6 +18,7 @@ Implement `bnew` and `btmpl` functionalities:
 * ... routes.py: code preview route (`/api/prvb/`) for a book resulted static-site as route /preview/<my_book_code>/docs/
 * ... update my_book/book_template shell to build book
 * ... update my_book/book_template/mkdics.yml with Jinja fields to reflect current book at its creation
+* [0.7.dev6] created in my_books/book_template shell `bk_build.sh` that build mkdocs site. Shell self-auto change directory to the book directory for which it exists assuring a correct building with mkdoks build cmd
 * [0.7.dev5] copy Booklab mkdocs.yml to make a test of my 1st book generation and manual preview of it
 * [0.7.dev4] my_books/: continue skeleton with directories `doc_src/`& `docs/` with minimum files to be kept on git and to be useful
 * [0.7.dev3] configure nginx for /preview route/ pointing to .../booklab/my_books/  

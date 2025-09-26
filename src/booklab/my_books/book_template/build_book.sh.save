@@ -5,7 +5,11 @@
 ##
 
 
-echo Start building book
+echo Start building book @ `date`
+
+BOOK_DIR=`dirname "$0"`
+echo Eunning from directory $BOOK_DIR
+
 
 pdm run mkdocs build
 
