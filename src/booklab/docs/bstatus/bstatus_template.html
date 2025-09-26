@@ -888,24 +888,24 @@
 
 
 <h1 id="detalii-despre-carte">Detalii despre carte</h1>
-<p>Aici puteti consulta detaliile cartii <strong>{{ book_data.short_desc }}</strong> (cod <em>{{ book_data.code }}</em>).</p>
+<p>Aici puteti consulta detaliile cartii <strong>{{ book_data.short_desc }}</strong> (cod <em><code>{{ book_data.code }}</code></em>).</p>
 <h2 id="date-generale">Date generale</h2>
 <ul>
-<li>Titlu: {{ book_data.short_desc }}</li>
-<li>Descriere: {{ book_data.description }}</li>
-<li>Copyright: {{ book_data.copyright }}</li>
-<li>Autor: {{ book_data.site_author }}</li>
-<li>Note: {{ book_data.notes }}</li>
-<li>Creata de: {{ book_data.created_by }}</li>
-<li>Creata la data: {{ book_data.created_date }}</li>
+<li>Titlu: <code>{{ book_data.short_desc }}</code></li>
+<li>Descriere: <code>{{ book_data.description }}</code></li>
+<li>Copyright: <code>{{ book_data.copyright }}</code></li>
+<li>Autor: <code>{{ book_data.site_author }}</code></li>
+<li>Note: <code>{{ book_data.notes }}</code></li>
+<li>Creata de: `{{ book_data.created_by }}</li>
+<li>Creata la data: <code>{{ book_data.created_date }}</code></li>
 </ul>
 <h2 id="date-de-stare-curenta">Date de stare curenta</h2>
 <ul>
-<li>Ultima actualizare: {{book_data.status.last_update_date}}</li>
-<li>Ultima generare carte: {{book_data.status.last_build_date}}</li>
-<li>Locatia stocare: {{book_data.status.location_dir}}</li>
-<li>Locatia publicare: {{book_data.status.published_location}}</li>
-<li>Carte inchisa editarii: {{book_data.status.closed}}</li>
+<li>Ultima actualizare: <code>{{book_data.status.last_update_date}}</code></li>
+<li>Ultima generare carte: <code>{{book_data.status.last_build_date}}</code></li>
+<li>Locatia stocare: <code>{{book_data.status.location_dir}}</code></li>
+<li>Locatia publicare: <code>{{book_data.status.published_location}}</code></li>
+<li>Carte inchisa editarii: <code>{{book_data.status.closed}}</code></li>
 </ul>
 <h2 id="date-volumetrice">Date volumetrice</h2>
 <ul>

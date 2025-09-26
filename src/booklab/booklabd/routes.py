@@ -114,6 +114,9 @@ def api_prvb():
     ret_str = f"Page for <b>prvb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO  here should integrate wip static page
+    #TODO preview will need to redirect to
+    #   .../preview/<my_book_code>/docs/
+    # (preview route points to my_books/)
     return ret_str
 
 

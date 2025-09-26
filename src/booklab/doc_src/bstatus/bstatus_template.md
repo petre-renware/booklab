@@ -3,26 +3,26 @@
 
 {% raw %}
 
-Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *{{ book_data.code }}*).
+Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *`{{ book_data.code }}`*).
 
 
 ## Date generale
 
-* Titlu: {{ book_data.short_desc }}
-* Descriere: {{ book_data.description }}
-* Copyright: {{ book_data.copyright }}
-* Autor: {{ book_data.site_author }}
-* Note: {{ book_data.notes }}
-* Creata de: {{ book_data.created_by }}
-* Creata la data: {{ book_data.created_date }}
+* Titlu: `{{ book_data.short_desc }}`
+* Descriere: `{{ book_data.description }}`
+* Copyright: `{{ book_data.copyright }}`
+* Autor: `{{ book_data.site_author }}`
+* Note: `{{ book_data.notes }}`
+* Creata de: `{{ book_data.created_by }}
+* Creata la data: `{{ book_data.created_date }}`
 
 ## Date de stare curenta
 
-* Ultima actualizare: {{book_data.status.last_update_date}}
-* Ultima generare carte: {{book_data.status.last_build_date}}
-* Locatia stocare: {{book_data.status.location_dir}}
-* Locatia publicare: {{book_data.status.published_location}}
-* Carte inchisa editarii: {{book_data.status.closed}}
+* Ultima actualizare: `{{book_data.status.last_update_date}}`
+* Ultima generare carte: `{{book_data.status.last_build_date}}`
+* Locatia stocare: `{{book_data.status.location_dir}}`
+* Locatia publicare: `{{book_data.status.published_location}}`
+* Carte inchisa editarii: `{{book_data.status.closed}}`
 
 ## Date volumetrice
 

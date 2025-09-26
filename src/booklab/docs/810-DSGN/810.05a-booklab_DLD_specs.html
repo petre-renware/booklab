@@ -867,7 +867,6 @@
 <h1 id="table-of-contents">Table of Contents</h1>
 <ul>
 <li><a href="#booklab">booklab</a></li>
-<li><a href="#booklab.book_template">booklab.book_template</a></li>
 <li><a href="#booklab.gunicorn.conf">booklab.gunicorn.conf</a></li>
 <li><a href="#booklab.booklab_cli">booklab.booklab_cli</a></li>
 <li><a href="#booklab.conf">booklab.conf</a></li>
@@ -878,6 +877,8 @@
 <li><a href="#booklab.booklib">booklab.booklib</a></li>
 <li><a href="#booklab.booklib.db_init">booklab.booklib.db_init</a></li>
 <li><a href="#booklab.booklib.db_init.init_db">init_db</a></li>
+<li><a href="#booklab.my_books.book_template">booklab.my_books.book_template</a></li>
+<li><a href="#booklab.my_books">booklab.my_books</a></li>
 <li><a href="#booklab.doc_src.book_tmpl.bkcmd_gen_final_book">booklab.doc_src.book_tmpl.bkcmd_gen_final_book</a></li>
 <li><a href="#booklab.doc_src.book_tmpl.bkcmd_start_book_preview">booklab.doc_src.book_tmpl.bkcmd_start_book_preview</a></li>
 <li><a href="#booklab.doc_src.book_tmpl">booklab.doc_src.book_tmpl</a></li>
@@ -939,10 +940,6 @@
 <li><code>docs/</code> contains rhe static site compiled and "ready to use as-is" with any standard HTTP server</li>
 <li><code>doc-techical</code> containing system usage documentation (aka api interface)</li>
 </ul>
-<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
-<p><a id="booklab.book_template"></a></p>
-<h1 id="booklabbook_template">booklab.book_template</h1>
-<p>Contains the book template used when create a new book (<code>newb</code> funxtion, <code>/api/newb/</code> booklabd route).</p>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.gunicorn.conf"></a></p>
 <h1 id="booklabgunicornconf">booklab.gunicorn.conf</h1>
@@ -1031,6 +1028,14 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <p>Create db_books, db_system objects and return them as tuple</p>
 <p><strong>Returns</strong>:</p>
 <p><code>(db_books, db_system)</code> tuple of pysondb object</p>
+<p><a id="booklab.my_books.book_template"></a></p>
+<h1 id="booklabmy_booksbook_template">booklab.my_books.book_template</h1>
+<p>Contains the book template used when create a new book (<code>newb</code> funxtion, <code>/api/newb/</code> booklabd route).</p>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.my_books"></a></p>
+<h1 id="booklabmy_books">booklab.my_books</h1>
+<p>This component contains all defined books as individual directories, each one with all definions initiated from <code>book_template/</code> directory</p>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.doc_src.book_tmpl.bkcmd_gen_final_book"></a></p>
 <h1 id="booklabdoc_srcbook_tmplbkcmd_gen_final_book">booklab.doc_src.book_tmpl.bkcmd_gen_final_book</h1>
 <p><a id="booklab.doc_src.book_tmpl.bkcmd_start_book_preview"></a></p>
@@ -1223,7 +1228,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 25, 2025</span>
       
     
   </small>
