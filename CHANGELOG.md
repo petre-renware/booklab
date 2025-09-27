@@ -24,7 +24,7 @@ Implement `prvb` and `book_template` (aka `btmpl`) functionalities:
 
 * ...wip [0.7a2] ... routes.py:
     * ... code for preview route (`/api/prvb/`) for a book resulted static-site as route /preview/<my_book_code>/docs/
-    * ... consider to make a new `prefix_URL_path` dedicated to `my_books` as **`<SERVER PREFIX URL>/preview/`**
+    * make a new `prefix_URL_path` dedicated to `my_books` as **`<SERVER PREFIX URL>/preview/`**
 * [0.7a1] routes.py: make route `/api/bbld/` as TODO-skeleton for book build (cmd mkdocs build)
 * [0.7a0] bstatus_template: change Edit action, disable it for closed books && mk cmd link for build book
 * [0.7.dev6] created in my_books/book_template shell `bk_build.sh` that build mkdocs site. Shell self-auto change directory to the book directory for which it exists assuring a correct building with mkdoks build cmd

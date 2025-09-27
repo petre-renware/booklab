@@ -28,10 +28,13 @@ from booklab.booklabd import pjroot_location
 from booklab.booklib.getBook import getBook
 
 
-# construct redirect path prefix (up to static site)
+# construct redirect url-path prefix (up to static site)
 redirect_prefix = url_quote(FULL_EXT_URL + api_app.static_url_path)
-# construct prefix path for docs (static site) directory
+# construct prefix file-path for docs (static site) directory
 docs_prefix = os.path.join(STATIC_SITE_ROOT)
+
+# construct redirect url-path prefix (up to my_books to point then to /<book code>/docs/)
+mybooks_redirect_prefix = url_quote(FULL_EXT_URL + "preview/")
 
 
 @api_app.route("/api/newb/")
