@@ -20,7 +20,7 @@ For Implement `newb`, `build`
 
 ## ...wip [0.7] - unreleased
 Implement `prvb` and `book_template` (aka `btmpl`) functionalities:
-* tbd... test, build doc, build package, publish
+* tbd... [0.7rc0] test, build doc, build package, publish
 * [0.7a2] 250927 routes.py:
     * code for preview route (`/api/prvb/`) for a book resulted static-site as route /preview/<my_book_code>/docs/
     * make a new `prefix_URL_path` dedicated to `my_books` as **`<SERVER PREFIX URL>/preview/`**
