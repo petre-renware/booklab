@@ -5,15 +5,34 @@
 
 # CHANGELOG
 
-## ... #TODO [unreleased] BCAT extend book command center (...wip...)
-* tbd... #TODO-ASAP__focus on Jupiter__
+## ... #TODO future things:
+* tbd... Jupiter Notebooks
 * tbd... ref command "Verificare" (code-name `bstatus`):
+For Implement `newb`, `build`
+    * tbd... review and update all command scrips from book template (btmpl)
+    * tbd... update my_book/book_template shell to build book
+    * tbd... update my_book/book_template/mkdocs.yml with Jinja fields to reflect current book at its creation
+    * tbd... when render mkdocs.yml chk if can render from a parent dir, ie `../my_books/<book_code>/docs/`
 
 
 
-## ...wip [0.7] - unreleased
-Implement `bnew` and `btmpl` functionalities:
-* tbd... review and update all command scrips from book template (btmpl)
+
+
+## [0.7] - 27.sep.2025
+Implement 250927 `prvb` and `book_template` (aka `btmpl`) functionalities:
+* [0.7rc0] test, build doc, build package, publish
+* [0.7a2] 250927 routes.py:
+    * code for preview route (`/api/prvb/`) for a book resulted static-site as route /preview/<my_book_code>/docs/
+    * make a new `prefix_URL_path` dedicated to `my_books` as **`<SERVER PREFIX URL>/preview/`**
+* [0.7a1] routes.py: make route `/api/bbld/` as TODO-skeleton for book build (cmd mkdocs build)
+* [0.7a0] bstatus_template: change Edit action, disable it for closed books && mk cmd link for build book
+* [0.7.dev6] created in my_books/book_template shell `bk_build.sh` that build mkdocs site. Shell self-auto change directory to the book directory for which it exists assuring a correct building with mkdoks build cmd
+* [0.7.dev5] copy Booklab mkdocs.yml to make a test of my 1st book generation and manual preview of it
+* [0.7.dev4] my_books/: continue skeleton with directories `doc_src/`& `docs/` with minimum files to be kept on git and to be useful
+* [0.7.dev3] configure nginx for /preview route/ pointing to .../booklab/my_books/  
+* [0.7.dev2] define and set directory layout for book TMPLT (ie, book `code` from books_catalog.json`) directory under package book_template. This will become the "structure" created for any new book
+* [0.7.dev1] refactor sub-package `book_template` to sub-package `my_books` containig it
+* [0.7.dev0] create a new sub-package boooklab.book_template to be used for a new book creation as base template "decorated" with Jinja params
 * [0.7b0] 250924 clean project and permanetly keep a copy of `.../src/booklab/docs/` in project root
 
 
