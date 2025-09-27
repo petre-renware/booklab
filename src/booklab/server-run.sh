@@ -1,10 +1,14 @@
 #!/usr/bin/bash
-# **boolabd-run** run web / http booklabd server
+
+#
+# run web / http booklabd server
 #
 # run gunicorn to serve web api app. Arg #1 state:
 #   - if == "d" then run as daemon
 #   - if "anything else" or missing run once for tests
-#   - ...tbd  if == "k": for kill process.
+#   - if == "k": for kill process.
+#   0 if "s" show running gunicorn processes
+#
 #     keep in mind that need to run gunicorn with
 #     `pid...` option to have process pid or
 #     or run `pgrep gunicorn >gunicorn.pid` to create one
@@ -13,8 +17,8 @@
 # config file: .../booklab/conf/conf/gunicorn.conf.py
 #
 # Author: Petre Iordanescu (petre.iordanescu@gmail.com)
-# Updated at: Sep.2025
 #
+
 
 case $1 in
     -d|--daemon)

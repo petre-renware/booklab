@@ -124,7 +124,7 @@ build_all_doc = { composite = [
     "build_tech_doc",
     "build_site"
 ] }
-bklab_srv = {shell = "src/booklab/booklabd-run.sh"}  # run booklabd server
+bklab_srv = {shell = "src/booklab/server-run.sh"}  # run booklabd wsgi server
 
 
 
