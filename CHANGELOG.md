@@ -8,18 +8,23 @@
 ## ... #TODO future things:
 * tbd... Jupiter Notebooks
 * tbd... ref command "Verificare" (code-name `bstatus`):
-For Implement `newb`, `build`
-    * tbd... review and update all command scrips from book template (btmpl)
-    * tbd... update my_book/book_template shell to build book
-    * tbd... update my_book/book_template/mkdocs.yml with Jinja fields to reflect current book at its creation
-    * tbd... when render mkdocs.yml chk if can render from a parent dir, ie `../my_books/<book_code>/docs/`
 
+
+
+
+
+
+## [0.8] - unreleased
+Implement `newb`, `bldb` and update `book_template` (aka `btmpl`) functionalities:
+* tbd... when render mkdocs.yml chk if can render from a parent dir, ie `../my_books/<book_code>/docs/`
+* tbd... update my_book/book_template/mkdocs.yml with Jinja fields to reflect current book at its creation
+* [0.8.dev0] review & plan-for all command scrips from book template (btmpl)
 
 
 
 
 ## [0.7] - 27.sep.2025
-Implement 250927 `prvb` and `book_template` (aka `btmpl`) functionalities:
+Implement  `prvb` and update `book_template` (aka `btmpl`) functionalities:
 * [0.7rc0] test, build doc, build package, publish
 * [0.7a2] 250927 routes.py:
     * code for preview route (`/api/prvb/`) for a book resulted static-site as route /preview/<my_book_code>/docs/
