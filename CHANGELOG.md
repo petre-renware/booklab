@@ -12,6 +12,7 @@ For Implement `newb`, `build`
     * tbd... review and update all command scrips from book template (btmpl)
     * tbd... update my_book/book_template shell to build book
     * tbd... update my_book/book_template/mkdocs.yml with Jinja fields to reflect current book at its creation
+    * tbd... when render mkdocs.yml chk if can render from a parent dir, ie `../my_books/<book_code>/docs/`
 
 
 
@@ -21,11 +22,9 @@ For Implement `newb`, `build`
 Implement `prvb` and `book_template` (aka `btmpl`) functionalities:
 * tbd... test, build doc, build package, publish
 
-* ...wip [0.7a2] ...
-    * ...routes.py: code preview route (`/api/prvb/`) for a book resulted static-site as route /preview/<my_book_code>/docs/
-    * ...  api_app: refactor template & static folder to `./` instead of actual  docs/`. Update all routes where used and URL prefix string.
-      IMP: test before doing if can render_template from `../my_books/...`
-
+* ...wip [0.7a2] ... routes.py:
+    * ... code for preview route (`/api/prvb/`) for a book resulted static-site as route /preview/<my_book_code>/docs/
+    * ... consider to make a new `prefix_URL_path` dedicated to `my_books` as **`<SERVER PREFIX URL>/preview/`**
 * [0.7a1] routes.py: make route `/api/bbld/` as TODO-skeleton for book build (cmd mkdocs build)
 * [0.7a0] bstatus_template: change Edit action, disable it for closed books && mk cmd link for build book
 * [0.7.dev6] created in my_books/book_template shell `bk_build.sh` that build mkdocs site. Shell self-auto change directory to the book directory for which it exists assuring a correct building with mkdoks build cmd
