@@ -21,7 +21,6 @@ EXT_SERVER = ""
 EXT_PATH = "/booklab/"
 
 FULL_EXT_URL = urljoin(EXT_SERVER, EXT_PATH)
-#4dbg... print(f"{FULL_EXT_URL=}")
 
 
 

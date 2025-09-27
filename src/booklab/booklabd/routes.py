@@ -29,12 +29,18 @@ from booklab.booklib.getBook import getBook
 
 
 # construct redirect url-path prefix (up to static site)
-redirect_prefix = url_quote(FULL_EXT_URL + api_app.static_url_path)
+redirect_prefix = url_quote(
+    FULL_EXT_URL +
+    api_app.static_url_path
+)
 # construct prefix file-path for docs (static site) directory
 docs_prefix = os.path.join(STATIC_SITE_ROOT)
 
 # construct redirect url-path prefix (up to my_books to point then to /<book code>/docs/)
-mybooks_redirect_prefix = url_quote(FULL_EXT_URL + "preview/")
+mybooks_redirect_prefix = url_quote(
+    FULL_EXT_URL +
+    "/preview/"
+)
 
 
 @api_app.route("/api/newb/")
@@ -119,13 +125,18 @@ def api_prvb(book_code = ...):
     """
     if book_code is ...:
         book_code = request.args.get("code")
-    ret_str = f"Page for <b>prvb</b><br>"
-    ret_str += f"Request for book with code <b>{book_code}</b><br>"
-    #TODO  here should integrate wip static page
-    #TODO preview will need to redirect to
-    #   .../preview/<my_book_code>/docs/
-    # (preview route points to my_books/)
-    return ret_str
+    book_data = getBook(
+        db_books,
+        book_code
+    )
+    if not book_data:
+        abort(404, description = "Book not found")
+    book_redirect_url = url_quote(
+        mybooks_redirect_prefix +
+        str(book_code) +
+        "/docs/"
+    )
+    return redirect(book_redirect_url)
 
 
 @api_app.route("/api/bbld/")
@@ -160,7 +171,6 @@ def api_dplb(book_code = ...):
 def api_bcat():
     """serve accessing **books catalog (bcat)** functionality.
     """
-    # get list of book records ad list even 1rec
     bcat_records = None
     bcat_records = db_books.getAll()
     if not (type(bcat_records) == type(list())):

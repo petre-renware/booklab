@@ -21,9 +21,8 @@ For Implement `newb`, `build`
 ## ...wip [0.7] - unreleased
 Implement `prvb` and `book_template` (aka `btmpl`) functionalities:
 * tbd... test, build doc, build package, publish
-
-* ...wip [0.7a2] ... routes.py:
-    * ... code for preview route (`/api/prvb/`) for a book resulted static-site as route /preview/<my_book_code>/docs/
+* [0.7a2] 250927 routes.py:
+    * code for preview route (`/api/prvb/`) for a book resulted static-site as route /preview/<my_book_code>/docs/
     * make a new `prefix_URL_path` dedicated to `my_books` as **`<SERVER PREFIX URL>/preview/`**
 * [0.7a1] routes.py: make route `/api/bbld/` as TODO-skeleton for book build (cmd mkdocs build)
 * [0.7a0] bstatus_template: change Edit action, disable it for closed books && mk cmd link for build book
