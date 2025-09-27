@@ -28,15 +28,24 @@ from booklab.booklabd import pjroot_location
 from booklab.booklib.getBook import getBook
 
 
-# construct redirect path prefix (up to static site)
-redirect_prefix = url_quote(FULL_EXT_URL + api_app.static_url_path)
-# construct prefix path for docs (static site) directory
+# construct redirect url-path prefix (up to static site)
+redirect_prefix = url_quote(
+    FULL_EXT_URL +
+    api_app.static_url_path
+)
+# construct prefix file-path for docs (static site) directory
 docs_prefix = os.path.join(STATIC_SITE_ROOT)
+
+# construct redirect url-path prefix (up to my_books to point then to /<book code>/docs/)
+mybooks_redirect_prefix = url_quote(
+    FULL_EXT_URL +
+    "/preview/"
+)
 
 
 @api_app.route("/api/newb/")
 def api_newb():
-    """serve **newb** book functionality.
+    """serve **New book (newb)** functionality.
 
     Query paraneters: none
     """
@@ -48,13 +57,14 @@ def api_newb():
 
 
 @api_app.route("/api/bstatus/")
-def api_bstatus():
-    """serve **bstatus** book functionality.
+def api_bstatus(book_code = ...):
+    """serve **Book status (bstatus)** functionality.
 
     Query paraneters: book code
     """
     ret_str = "nothing to say..."
-    book_code = request.args.get("code")
+    if book_code is ...:
+        book_code = request.args.get("code")
     book_data = getBook(
         db_books,
         book_code
@@ -79,12 +89,14 @@ def api_bstatus():
 
 
 @api_app.route("/api/edtb/")
-def api_edtb():
-    """serve **edtb** book functionality.
+def api_edtb(book_code = ...):
+    """serve **Book edit (edtb)** functionality.
 
     Query paraneters: book code
     """
-    book_code = request.args.get("code")
+    if book_code is ...:
+        book_code = request.args.get("code")
+    #TODO before getting book test if status.closed is true and if then return a 400 err "Book not editable"
     ret_str = f"Page for <b>edtb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO  here should integrate wip static page
@@ -92,12 +104,13 @@ def api_edtb():
 
 
 @api_app.route("/api/orgm/")
-def api_orgm():
-    """serve  **orgm** book functionality.
+def api_orgm(book_code = ...):
+    """serve  **Book structure organization (orgm:** functionality.
 
     Query paraneters: book code
     """
-    book_code = request.args.get("code")
+    if book_code is ...:
+        book_code = request.args.get("code")
     ret_str = f"Page for <b>orgm</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO  here should integrate wip static page
@@ -105,36 +118,59 @@ def api_orgm():
 
 
 @api_app.route("/api/prvb/")
-def api_prvb():
-    """serve **prvb** book functionality.
+def api_prvb(book_code = ...):
+    """serve **Book preview (prvb)** functionality.
 
     Query paraneters: book code
     """
-    book_code = request.args.get("code")
-    ret_str = f"Page for <b>prvb</b><br>"
+    if book_code is ...:
+        book_code = request.args.get("code")
+    book_data = getBook(
+        db_books,
+        book_code
+    )
+    if not book_data:
+        abort(404, description = "Book not found")
+    book_redirect_url = url_quote(
+        mybooks_redirect_prefix +
+        str(book_code) +
+        "/docs/"
+    )
+    return redirect(book_redirect_url)
+
+
+@api_app.route("/api/bbld/")
+def api_bbld(book_code = ...):
+    """serve **Book build (bbld)** functionality.
+
+    Query paraneters: book code
+    """
+    if book_code is ...:
+        book_code = request.args.get("code")
+    ret_str = f"Page for <b>bbld</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO  here should integrate wip static page
     return ret_str
 
 
 @api_app.route("/api/dplb/")
-def api_dplb():
-    """serve **dplb** book functionality.
+def api_dplb(book_code = ...):
+    """serve **Book delivery (dplb)** functionality.
 
     Query paraneters: book code
     """
-    book_code = request.args.get("code")
+    if book_code is ...:
+        book_code = request.args.get("code")
     ret_str = f"Page for <b>dplb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO  here should integrate wip static page
     return ret_str
 
-8
+
 @api_app.route("/api/bcat/")
 def api_bcat():
-    """serve accessing books catalog, **bcat** functionality.
+    """serve accessing **books catalog (bcat)** functionality.
     """
-    # get list of book records ad list even 1rec
     bcat_records = None
     bcat_records = db_books.getAll()
     if not (type(bcat_records) == type(list())):
@@ -156,6 +192,9 @@ def api_bcat():
 
 @api_app.route("/")
 def index():
+    """serve a cessing Home route.
+    This is an alternate (but those expected from an end user) way to access static site main / home page.
+    """
     redirect_path = url_quote(redirect_prefix + "/index.html")
     return redirect(redirect_path)
 

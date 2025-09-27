@@ -868,6 +868,7 @@
 <ul>
 <li><a href="#booklab">booklab</a></li>
 <li><a href="#booklab.gunicorn.conf">booklab.gunicorn.conf</a></li>
+<li><a href="#booklab.booklab_cli">booklab.booklab_cli</a></li>
 <li><a href="#booklab.conf">booklab.conf</a></li>
 <li><a href="#booklab.conf.gunicorn.gunicorn.conf">booklab.conf.gunicorn.gunicorn.conf</a></li>
 <li><a href="#booklab.conf.booklab_ext_url">booklab.conf.booklab_ext_url</a></li>
@@ -876,7 +877,8 @@
 <li><a href="#booklab.booklib">booklab.booklib</a></li>
 <li><a href="#booklab.booklib.db_init">booklab.booklib.db_init</a></li>
 <li><a href="#booklab.booklib.db_init.init_db">init_db</a></li>
-<li><a href="#booklab.booklab-cli">booklab.booklab-cli</a></li>
+<li><a href="#booklab.my_books.book_template">booklab.my_books.book_template</a></li>
+<li><a href="#booklab.my_books">booklab.my_books</a></li>
 <li><a href="#booklab.doc_src.book_tmpl.bkcmd_gen_final_book">booklab.doc_src.book_tmpl.bkcmd_gen_final_book</a></li>
 <li><a href="#booklab.doc_src.book_tmpl.bkcmd_start_book_preview">booklab.doc_src.book_tmpl.bkcmd_start_book_preview</a></li>
 <li><a href="#booklab.doc_src.book_tmpl">booklab.doc_src.book_tmpl</a></li>
@@ -900,8 +902,10 @@
 <li><a href="#booklab.booklabd.routes.api_edtb">api_edtb</a></li>
 <li><a href="#booklab.booklabd.routes.api_orgm">api_orgm</a></li>
 <li><a href="#booklab.booklabd.routes.api_prvb">api_prvb</a></li>
+<li><a href="#booklab.booklabd.routes.api_bbld">api_bbld</a></li>
 <li><a href="#booklab.booklabd.routes.api_dplb">api_dplb</a></li>
 <li><a href="#booklab.booklabd.routes.api_bcat">api_bcat</a></li>
+<li><a href="#booklab.booklabd.routes.index">index</a></li>
 <li><a href="#booklab.booklabd.app_init">booklab.booklabd.app_init</a></li>
 <li><a href="#booklab.booklabd.app_init.init_app">init_app</a></li>
 <li><a href="#booklab.booklabd">booklab.booklabd</a></li>
@@ -945,6 +949,11 @@
 <p>This is a Python file that will be executed by gunicorn at run-time.
 As consequence declare all assignements as valid Python code.</p>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.booklab_cli"></a></p>
+<h1 id="booklabbooklab_cli">booklab.booklab_cli</h1>
+<p>CLI module to assure system operatins as command line.</p>
+<p>Architecture; Linux standard (POSIX) CLI</p>
+<p>Author; Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.conf"></a></p>
 <h1 id="booklabconf">booklab.conf</h1>
 <p>Cnfigurations component contains various system components configuration files:</p>
@@ -1021,11 +1030,14 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <p>Create db_books, db_system objects and return them as tuple</p>
 <p><strong>Returns</strong>:</p>
 <p><code>(db_books, db_system)</code> tuple of pysondb object</p>
-<p><a id="booklab.booklab-cli"></a></p>
-<h1 id="booklabbooklab-cli">booklab.booklab-cli</h1>
-<p>CLI module to assure system operatins as command line.</p>
-<p>Architecture; Linux standard (POSIX) CLI</p>
-<p>Author; Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.my_books.book_template"></a></p>
+<h1 id="booklabmy_booksbook_template">booklab.my_books.book_template</h1>
+<p>Contains the book template used when create a new book (<code>newb</code> funxtion, <code>/api/newb/</code> booklabd route).</p>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.my_books"></a></p>
+<h1 id="booklabmy_books">booklab.my_books</h1>
+<p>This component contains all defined books as individual directories, each one with all definions initiated from <code>book_template/</code> directory</p>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.doc_src.book_tmpl.bkcmd_gen_final_book"></a></p>
 <h1 id="booklabdoc_srcbook_tmplbkcmd_gen_final_book">booklab.doc_src.book_tmpl.bkcmd_gen_final_book</h1>
 <p><a id="booklab.doc_src.book_tmpl.bkcmd_start_book_preview"></a></p>
@@ -1087,49 +1099,63 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/newb/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_newb</span><span class="p">()</span>
 </code></pre></div>
-<p>serve <strong>newb</strong> book functionality.</p>
+<p>serve <strong>New book (newb)</strong> functionality.</p>
 <p>Query paraneters: none</p>
 <p><a id="booklab.booklabd.routes.api_bstatus"></a></p>
 <h4 id="api_bstatus">api_bstatus</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/bstatus/&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">api_bstatus</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">api_bstatus</span><span class="p">(</span><span class="n">book_code</span><span class="o">=...</span><span class="p">)</span>
 </code></pre></div>
-<p>serve <strong>bstatus</strong> book functionality.</p>
+<p>serve <strong>Book status (bstatus)</strong> functionality.</p>
 <p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_edtb"></a></p>
 <h4 id="api_edtb">api_edtb</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/edtb/&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">api_edtb</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">api_edtb</span><span class="p">(</span><span class="n">book_code</span><span class="o">=...</span><span class="p">)</span>
 </code></pre></div>
-<p>serve <strong>edtb</strong> book functionality.</p>
+<p>serve <strong>Book edit (edtb)</strong> functionality.</p>
 <p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_orgm"></a></p>
 <h4 id="api_orgm">api_orgm</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/orgm/&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">api_orgm</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">api_orgm</span><span class="p">(</span><span class="n">book_code</span><span class="o">=...</span><span class="p">)</span>
 </code></pre></div>
-<p>serve  <strong>orgm</strong> book functionality.</p>
+<p>serve  <strong>Book structure organization (orgm:</strong> functionality.</p>
 <p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_prvb"></a></p>
 <h4 id="api_prvb">api_prvb</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/prvb/&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">api_prvb</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">api_prvb</span><span class="p">(</span><span class="n">book_code</span><span class="o">=...</span><span class="p">)</span>
 </code></pre></div>
-<p>serve <strong>prvb</strong> book functionality.</p>
+<p>serve <strong>Book preview (prvb)</strong> functionality.</p>
+<p>Query paraneters: book code</p>
+<p><a id="booklab.booklabd.routes.api_bbld"></a></p>
+<h4 id="api_bbld">api_bbld</h4>
+<div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/bbld/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">api_bbld</span><span class="p">(</span><span class="n">book_code</span><span class="o">=...</span><span class="p">)</span>
+</code></pre></div>
+<p>serve <strong>Book build (bbld)</strong> functionality.</p>
 <p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_dplb"></a></p>
 <h4 id="api_dplb">api_dplb</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/dplb/&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">api_dplb</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">api_dplb</span><span class="p">(</span><span class="n">book_code</span><span class="o">=...</span><span class="p">)</span>
 </code></pre></div>
-<p>serve <strong>dplb</strong> book functionality.</p>
+<p>serve <strong>Book delivery (dplb)</strong> functionality.</p>
 <p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_bcat"></a></p>
 <h4 id="api_bcat">api_bcat</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/bcat/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_bcat</span><span class="p">()</span>
 </code></pre></div>
-<p>serve accessing books catalog, <strong>bcat</strong> functionality.</p>
+<p>serve accessing <strong>books catalog (bcat)</strong> functionality.</p>
+<p><a id="booklab.booklabd.routes.index"></a></p>
+<h4 id="index">index</h4>
+<div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">()</span>
+</code></pre></div>
+<p>serve a cessing Home route.
+This is an alternate (but those expected from an end user) way to access static site main / home page.</p>
 <p><a id="booklab.booklabd.app_init"></a></p>
 <h1 id="booklabbooklabdapp_init">booklab.booklabd.app_init</h1>
 <p><strong>app_init</strong> module that initialize <code>booklabd</code> application</p>
@@ -1218,7 +1244,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 27, 2025</span>
       
     
   </small>

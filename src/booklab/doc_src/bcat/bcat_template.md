@@ -39,10 +39,15 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
             <td>{{ book.created_date }}</td>
             <td>
                     <a href="/booklab/api/bstatus/?code={{ book.code }}">* Starea cartii</a>
+            {% if book.status.closed is sameas true %}
+                <br>--- Ne-Editabila
+            {% else %}
                 <br><a href="/booklab/api/edtb/?code={{ book.code }}">* Editare materiale</a>
+            {% endif %}
                 <br><a href="/booklab/api/orgm/?code={{ book.code }}">* Sectiuni carte</a>
                 <br><a href="/booklab/api/prvb/?code={{ book.code }}">* Vizualizare carte</a>
-                <br><a href="/booklab/api/dplb/?code={{ book.code }}">* Asamblare carte</a>
+                <br><a href="/booklab/api/bbld/?code={{ book.code }}">* Generare carte</a>
+                <br><a href="/booklab/api/dplb/?code={{ book.code }}">* Livrare carte</a>
             </td>
         </tr>
         {% endfor %}

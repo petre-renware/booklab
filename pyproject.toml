@@ -105,28 +105,18 @@ dependencies = [
     "pydoc-markdown>=4.8.2",
     "pathlib>=1.0.1",
     "gunicorn>=23.0.0",
+    "pango>=0.0.1",
 ]
 
 
 
 
-[tool.pdm.dev-dependencies]  # dependencies used in develeopment stage. NOTE: Attn these are NOT transfered in built package
-dev = [
-# does not work
-#    "-e file:///$[PROJECT_ROOT]/src/booklab"
-]
+[tool.pdm]
+distribution = true
 
 
 
 
-[project.urls]
-HomePage = "http://booklab.renware.eu/"
-DevPage = "http://dev.renware.eu/booklab/"
-
-
-
-
-# reference: `https://pdm-project.org/latest/usage/scripts/`
 [tool.pdm.scripts]
 build_tech_doc = {shell = "pydoc-markdown --render-toc -p booklab >./src/booklab/doc-technical/810.05a-booklab_DLD_specs.md"}
 build_site = {shell = "mkdocs build -f src/booklab/mkdocs.yml"}  # run `mkdocs` to build site with parameters defined in `mkdocs.yml`
@@ -139,14 +129,16 @@ bklab_srv = {shell = "src/booklab/booklabd-run.sh"}  # run booklabd server
 
 
 
-[tool.pdm]
-distribution = true
-
-
-
 [tool.pdm.version]
 source = "file"
 path = "src/booklab/__version__.py"
+
+
+
+[project.urls]
+HomePage = "http://booklab.renware.eu/"
+DevPage = "http://dev.renware.eu/booklab/"
+
 
 
 
@@ -155,3 +147,13 @@ requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
 
+
+
+[dependency-groups]
+test = [
+    "pytest>=8.4.2",
+]
+dev = [
+# does not work
+#    "-e file:///$[PROJECT_ROOT]/src/booklab"
+]
