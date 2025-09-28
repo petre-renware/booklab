@@ -18,6 +18,7 @@
 Implement `newb`, `bldb` and update `book_template` (aka `btmpl`) functionalities:
 * tbd... when render `mkdocs_template.yml` --> `mkdocs.yml` chk if can render from a parent dir (ie `../my_books/<book_code>/docs/`)
 
+* [0.8a0] create script `src/booklab/master_site_build.sh/` to mkdocs-build the Booklab static site and hard-link resulted docs/ ditectory to project root (to be published  by GitHub on its servers)
 * [0.8.dev3] enhance booklab/data/books_catalog.json book navigation structure with a right dict usable in nav section generation of mkdocs.yml
 * [0.8.dev2] update booklab/data/books_catalog.json with a section dedicated to book navigation structure (orgm functionality) targeted to go in book configuration file (mkd9ks.yml)
 * [0.8.dev1] create and update booklab/my_books/book_template/mkdocs_template.yml with Jinja fields to reflect current book config by rendering it at book build

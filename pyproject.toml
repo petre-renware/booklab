@@ -119,7 +119,7 @@ distribution = true
 
 [tool.pdm.scripts]
 build_tech_doc = {shell = "pydoc-markdown --render-toc -p booklab >./src/booklab/doc-technical/810.05a-booklab_DLD_specs.md"}
-build_site = {shell = "mkdocs build -f src/booklab/mkdocs.yml"}  # run `mkdocs` to build site with parameters defined in `mkdocs.yml`
+build_site = {shell = "src//booklab/master_site_build.sh"}
 build_all_doc = { composite = [
     "build_tech_doc",
     "build_site"
