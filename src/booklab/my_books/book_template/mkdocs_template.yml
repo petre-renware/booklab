@@ -1,13 +1,13 @@
-site_name: Book Template  # Jinja subject
-site_author: 'Petre Iordanescu (petre.iordanescu@gmail.com)'  # Jinja subject
-copyright: Freeware  # Jinja subject
+site_name: {{ book_data.short_desc }}
+site_author: {{ book_data.site_author }}
+copyright: {{ book_data.copyright }}
 
 
 
 nav:
     - Acasa: index.md
-    - Ghid configurare: guides/how_organize_book.md
-
+#TODO nav structure is subject of more Jinja fields
+#TODO obtained in "book structure & organization" functionality
 
 
 

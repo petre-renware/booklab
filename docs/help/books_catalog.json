@@ -2,21 +2,31 @@
     "data": [
         {
             "id": 0,
-            "code": "TMPLT",
+            "code": "book_template",
             "short_desc": "Numele cartii (si al site-ului daca se publica in internet)",
             "description": "Denumirea lunga a cartii asa cum va apare pe coperta",
             "copyright": "Copyright - Informatia ref detinatorul drepturilor de autor",
             "site_author": "Autorul cartii",
             "notes": "Inregistrare obligatorie de la instalare sistem. Non editabila.",
-            "created_date": "2023-08-01",
+            "created_date": "2025-09-26",
             "created_by": "system",
             "status": {
-                "last_update_date": null,
+                "last_update_date": "2025-09-26",
                 "last_build_date": null,
-                "location_dir": null,
+                "location_dir": "my_books/book_template/",
                 "closed": true,
                 "published_location": null
-            }
+            },
+            "navigation": [
+                {
+                    "title": "guide_page",
+                    "anchor": "guides/how_organize_book.md"
+                },
+                {
+                    "title": "nav_item_2",
+                    "anchor": "nav_path"
+                }
+            ]
         },
         {
             "id": 1,
@@ -34,7 +44,17 @@
                 "location_dir": null,
                 "closed": false,
                 "published_location": null
-            }
+            },
+            "navigation": [
+                {
+                    "title": "guide_page",
+                    "anchor": "guides/how_organize_book.md"
+                },
+                {
+                    "title": "nav_item_2",
+                    "anchor": "nav_path"
+                }
+            ]
         }
     ]
 }
