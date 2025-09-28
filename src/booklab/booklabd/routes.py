@@ -17,6 +17,7 @@ from flask import request
 from flask import request
 from flask import abort
 from werkzeug.urls import quote as url_quote
+from booklab.__version__ import __version__
 from booklab import EXT_PATH
 from booklab import FULL_EXT_URL
 from booklab import STATIC_SITE_ROOT
@@ -197,6 +198,24 @@ def index():
     """
     redirect_path = url_quote(redirect_prefix + "/index.html")
     return redirect(redirect_path)
+
+
+@api_app.route("/api/about/")
+def about():
+    rendered_str = render_template(
+        "about/about_template.html",
+        version = __version__
+    )
+    file_to_write = os.path.join(
+        docs_prefix,
+        "about/about.html"
+    )
+    with open(file_to_write, "w") as file:
+        file.write(rendered_str)
+    redirect_path = url_quote(redirect_prefix + "/about/about.html")
+    return redirect(redirect_path)
+
+
 
 
 
