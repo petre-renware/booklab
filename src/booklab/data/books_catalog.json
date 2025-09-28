@@ -46,9 +46,14 @@
                 "published_location": null
             },
             "navigation": [
-                {"guide_page": "guides/how_organize_book.md"},
-                {"nav_item_1": "nav_path"},
-                {"nav_item_2": "nav_path"}
+                {
+                    "title": "guide_page",
+                    "anchor": "guides/how_organize_book.md"
+                },
+                {
+                    "title": "nav_item_2",
+                    "anchor": "nav_path"
+                }
             ]
         }
     ]
