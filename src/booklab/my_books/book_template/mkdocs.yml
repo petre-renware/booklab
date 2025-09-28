@@ -6,6 +6,7 @@ copyright: Freeware  # Jinja subject
 
 nav:
     - Acasa: index.md
+    - Ghid configurare: guides/how_organize_book.md
 
 
 
