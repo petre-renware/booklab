@@ -17,6 +17,8 @@
 ## [0.8] - unreleased
 Implement `newb`, `bldb` and update `book_template` (aka `btmpl`) functionalities:
 * tbd... when render `mkdocs_template.yml` --> `mkdocs.yml` chk if can render from a parent dir (ie `../my_books/<book_code>/docs/`)
+
+* ... [0.8.dev2] update booklab/data/books_catalog.json with a section dedicated to book navigation structure (orgm functionality) targeted to go in book configuration file (mkd9ks.yml)
 * [0.8.dev1] create and update booklab/my_books/book_template/mkdocs_template.yml with Jinja fields to reflect current book config by rendering it at book build
 * [0.8.dev0] review & plan-for all command scrips from book template (btmpl)
 
