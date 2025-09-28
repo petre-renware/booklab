@@ -1,0 +1,9 @@
+*** DO NOT DROP ME !!!
+
+This file serve just as refrence @ compilation tine.
+It will be dynamically replaced in running by rendering ./`bcat_template.htm` and providing
+right content combined with database data.
+
+
+
+

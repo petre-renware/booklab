@@ -30,11 +30,9 @@ nav:
             - Baza de date "Catalogul cartilor: help/books_catalog.json"
             - Doc tehnica detaliata: 810-DSGN/810.05a-booklab_DLD_specs.md
     - About:
-        - Licenta mea: wip.md #TODO tbd... este un http catre o ruta dinamica din produs
         - Suport: https://www.renware.eu/support.html
         - Contact: https://www.renware.eu/contact.html
-        - Cum cumpar: https://www.renware.eu/resources.html#how-to-buy-from-renware
-        - Despre BookLab: wip.md #TODO `about.md` eventual cu README din pj root, echipa, etc, ce ar tb sa fie acolo...
+        - Despre BookLab: about/
 
 
 
