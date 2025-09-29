@@ -10,6 +10,7 @@ Consists of the following sub-packages:
 - `doc_src` contains the source of static site directory as Markdown files
 - `docs/` contains rhe static site compiled and "ready to use as-is" with any standard HTTP server
 - `doc-techical` containing system usage documentation (aka api interface)
+- `my_books` contains the end user created & generated books
 
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """

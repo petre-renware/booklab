@@ -17,7 +17,9 @@
 ## [0.8] - unreleased
 Implement `newb`, `bldb` and update `book_template` (aka `btmpl`) functionalities:
 * tbd... when render `mkdocs_template.yml` --> `mkdocs.yml` chk if can render from a parent dir (ie `../my_books/<book_code>/docs/`)
+* tbd... mkdocs_template: upd nav secrion with Jinja data-items
 
+* [0.8a2] make a script that generate API doc (ref PDM scripts) the append str "[TOC]" at the beginning (script "booklab/gen-api-doc.sh")
 * [0.8a1] static site: review "About menu", clean it and make a page "About Booklab" with version, licence, author(s)
 * [0.8a0] create script `src/booklab/master_site_build.sh/` to mkdocs-build the Booklab static site and hard-link resulted docs/ ditectory to project root (to be published  by GitHub on its servers)
 * [0.8.dev3] enhance booklab/data/books_catalog.json book navigation structure with a right dict usable in nav section generation of mkdocs.yml

@@ -151,6 +151,8 @@ def api_bbld(book_code = ...):
     ret_str = f"Page for <b>bbld</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO  here should integrate wip static page
+    ...
+    #TODO update books_catalog ref `last build / update date`
     return ret_str
 
 

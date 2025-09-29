@@ -118,11 +118,11 @@ distribution = true
 
 
 [tool.pdm.scripts]
-build_tech_doc = {shell = "pydoc-markdown --render-toc -p booklab >./src/booklab/doc-technical/810.05a-booklab_DLD_specs.md"}
-build_site = {shell = "src//booklab/master_site_build.sh"}
+gen_tech_doc = {shell = "src/booklab/gen-api-doc.sh"}
+gen_static_site = {shell = "src/booklab/master_site_build.sh"}
 build_all_doc = { composite = [
-    "build_tech_doc",
-    "build_site"
+    "gen_tech_doc",
+    "gen_static_site"
 ] }
 bklab_srv = {shell = "src/booklab/server-run.sh"}  # run booklabd wsgi server
 
