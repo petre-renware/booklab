@@ -16,17 +16,7 @@
                 "location_dir": "my_books/book_template/",
                 "closed": true,
                 "published_location": null
-            },
-            "navigation": [
-                {
-                    "title": "guide_page",
-                    "anchor": "guides/how_organize_book.md"
-                },
-                {
-                    "title": "nav_item_2",
-                    "anchor": "nav_path"
-                }
-            ]
+            }
         },
         {
             "id": 1,
@@ -44,17 +34,7 @@
                 "location_dir": null,
                 "closed": false,
                 "published_location": null
-            },
-            "navigation": [
-                {
-                    "title": "guide_page",
-                    "anchor": "guides/how_organize_book.md"
-                },
-                {
-                    "title": "nav_item_2",
-                    "anchor": "nav_path"
-                }
-            ]
+            }
         }
     ]
 }
