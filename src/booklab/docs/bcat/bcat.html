@@ -861,7 +861,7 @@
 <h1 id="catalogul-cartilor">Catalogul cartilor</h1>
 <p>Bine ati venit la <em>Catalogul cartilor dumneavoastra</em>. Aici puteti vizualiza cartile create de dumneavoastra si stadiul acestora, sa efectuati operatii asupra lor sau sa creati o carte noua.</p>
 <h2 id="lista-cartilor">Lista cartilor</h2>
-<p><a href="/booklab/api/newb/">Creare carte</a></p>
+<p><a href="/booklab/api/newb/">Creare carte noua</a></p>
 <!-- #NOTE dropdown commands button CSS -->
 <style>
 /* Dropdown Button */
@@ -922,7 +922,6 @@
             <th>Note</th>
             <th>creata de</th>
             <th>data creare</th>
-            <th>actiuni</th>
         </tr>
     </thead>
     <tbody>
@@ -930,7 +929,9 @@
         
         <tr>
             <td>0</td>
-            <td>book_template</td>
+            <td>
+                <a href="/booklab/api/bstatus/?code=book_template">book_template</a>
+            </td>
             <td>Numele cartii (si al site-ului daca se publica in internet)</td>
             <td>Denumirea lunga a cartii asa cum va apare pe coperta</td>
             <td>Copyright - Informatia ref detinatorul drepturilor de autor</td>
@@ -938,21 +939,13 @@
             <td>Inregistrare obligatorie de la instalare sistem. Non editabila.</td>
             <td>system</td>
             <td>2025-09-26</td>
-            <td>
-                    <a href="/booklab/api/bstatus/?code=book_template">* Starea cartii</a>
-            
-                <br>--- Ne-Editabila
-            
-                <br><a href="/booklab/api/orgm/?code=book_template">* Sectiuni carte</a>
-                <br><a href="/booklab/api/prvb/?code=book_template">* Vizualizare carte</a>
-                <br><a href="/booklab/api/bbld/?code=book_template">* Generare carte</a>
-                <br><a href="/booklab/api/dplb/?code=book_template">* Livrare carte</a>
-            </td>
         </tr>
         
         <tr>
             <td>1</td>
-            <td>example</td>
+            <td>
+                <a href="/booklab/api/bstatus/?code=example">example</a>
+            </td>
             <td>short_desc - example record</td>
             <td>description - example record</td>
             <td>copyright - example record</td>
@@ -960,16 +953,6 @@
             <td>notes - example record</td>
             <td>me-my-name-here</td>
             <td>1900-08-01</td>
-            <td>
-                    <a href="/booklab/api/bstatus/?code=example">* Starea cartii</a>
-            
-                <br><a href="/booklab/api/edtb/?code=example">* Editare materiale</a>
-            
-                <br><a href="/booklab/api/orgm/?code=example">* Sectiuni carte</a>
-                <br><a href="/booklab/api/prvb/?code=example">* Vizualizare carte</a>
-                <br><a href="/booklab/api/bbld/?code=example">* Generare carte</a>
-                <br><a href="/booklab/api/dplb/?code=example">* Livrare carte</a>
-            </td>
         </tr>
         
 

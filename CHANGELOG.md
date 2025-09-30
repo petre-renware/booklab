@@ -15,10 +15,13 @@
 
 
 ## [0.8] - unreleased
-Implement `newb`, `bldb` and update `book_template` (aka `btmpl`) functionalities:
+Implement `bldb` and update `book_template` (aka `btmpl`) functionalities:
 * tbd... when render `mkdocs_template.yml` --> `mkdocs.yml` chk if can render from a parent dir (ie `../my_books/<book_code>/docs/`)
 * tbd... mkdocs_template: upd nav secrion with Jinja data-items
 
+* [0.8a6] Booklab static-site bcat_template.html
+    * drop column ref actions
+    * column book_code value, make as link to existing bcat_status
 * [0.8.dev5] fixed 0.8.dev4 ref server-run.sh bug at restart option, PID file location
 * [0.8.dev4] updated booklab/server-run.sh to run and load config file regardless of crt dir where is launchrd
 * [0.8a2] make a script that generate API doc (ref PDM scripts) the append str "[TOC]" at the beginning (script "booklab/gen-api-doc.sh")

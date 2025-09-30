@@ -851,8 +851,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#optiuni-suplimentare" class="md-nav__link">
-    Optiuni suplimentare
+  <a href="#actiuni" class="md-nav__link">
+    Actiuni
   </a>
   
 </li>
@@ -880,9 +880,10 @@
 
 
 <h1 id="detalii-despre-carte">Detalii despre carte</h1>
-<p>Aici puteti consulta detaliile cartii <strong>{{ book_data.short_desc }}</strong> (cod <em><code>{{ book_data.code }}</code></em>).</p>
+<p>Aici puteti consulta detaliile cartii <strong>{{ book_data.short_desc }}</strong> (cod <code>{{ book_data.code }}</code>).</p>
 <h2 id="date-generale">Date generale</h2>
 <ul>
+<li>Cod: <strong><code>{{ book_data.code }}</code></strong></li>
 <li>Titlu: <code>{{ book_data.short_desc }}</code></li>
 <li>Descriere: <code>{{ book_data.description }}</code></li>
 <li>Copyright: <code>{{ book_data.copyright }}</code></li>
@@ -905,11 +906,11 @@
 <li>Numar pagini logice (intrari in meniu): ...urmeaza...</li>
 <li>Numar fisiere poze: ...urmeaza...</li>
 </ul>
-<h2 id="optiuni-suplimentare">Optiuni suplimentare</h2>
+<h2 id="actiuni">Actiuni</h2>
 <!-- include './local-page.css' -->
 
 <ul>
-<li><a href="/booklab/api/newb/">Creare carte</a></li>
+<li><a href="/booklab/api/newb/">Creare carte noua</a></li>
 <li><a href="/booklab/api/edtb/?code={{ book_data.code }}">Editare materiale</a></li>
 <li><a href="/booklab/api/orgm/?code={{ book_data.code }}">Sectiuni carte</a></li>
 <li><a href="/booklab/api/prvb/?code={{ book_data.code }}">Vizualizare carte</a></li>
