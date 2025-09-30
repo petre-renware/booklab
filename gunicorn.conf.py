@@ -1,1 +1,0 @@
-src/booklab/conf/gunicorn/gunicorn.conf.py

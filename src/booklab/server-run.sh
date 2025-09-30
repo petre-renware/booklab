@@ -19,16 +19,15 @@
 # Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 #
 
-
 case $1 in
     -d|--daemon)
         echo Start gunicorn as daemon... Running PIDs are:
-        gunicorn -c gunicorn.conf.py -p ./run/gunicorn.PID -D
+        pdm run gunicorn -c `dirname $0`/conf/gunicorn/gunicorn.conf.py -p /tmp/gunicorn.PID -D
         ps -A | grep gunicorn
         ;;
     -k|--kill)
         echo Stop gunicorn...
-        kill `cat ./run/gunicorn.PID`
+        kill `cat /tmp/gunicorn.PID`
         ;;
     -s|--status)
         echo PIDs of gunicorn running proceses:
@@ -36,15 +35,15 @@ case $1 in
         ;;
     -r|--restart)
         echo Stop gunicorn...
-        kill `cat ./run/gunicorn.PID`
+        kill `cat /tmp/gunicorn.PID`
         sleep 1
         echo Start gunicorn as daemon... Running PIDs are:
-        gunicorn -c gunicorn.conf.py -p ./run/gunicorn.PID -D
+        pdm run gunicorn -c `dirname $0`/conf/gunicorn/gunicorn.conf.py -p /tmp/gunicorn.PID -D
         ps -A | grep gunicorn
         ;;
     *)
         echo Run gunicorn as foreground...
-        gunicorn -c gunicorn.conf.py
+        pdm run gunicorn -c `dirname $0`/conf/gunicorn/gunicorn.conf.py
         ;;
 esac
 

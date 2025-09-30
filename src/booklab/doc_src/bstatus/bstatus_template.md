@@ -3,11 +3,12 @@
 
 {% raw %}
 
-Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *`{{ book_data.code }}`*).
+Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ book_data.code }}`).
 
 
 ## Date generale
 
+* Cod: **`{{ book_data.code }}`**
 * Titlu: `{{ book_data.short_desc }}`
 * Descriere: `{{ book_data.description }}`
 * Copyright: `{{ book_data.copyright }}`
@@ -31,11 +32,11 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod *`{{ b
 * Numar fisiere poze: ...urmeaza...
 
 
-## Optiuni suplimentare
+## Actiuni
 
 <!-- include './local-page.css' -->
 
-* <a href="/booklab/api/newb/">Creare carte</a>
+* <a href="/booklab/api/newb/">Creare carte noua</a>
 * <a href="/booklab/api/edtb/?code={{ book_data.code }}">Editare materiale</a>
 * <a href="/booklab/api/orgm/?code={{ book_data.code }}">Sectiuni carte</a>
 * <a href="/booklab/api/prvb/?code={{ book_data.code }}">Vizualizare carte</a>
