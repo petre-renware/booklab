@@ -20,6 +20,7 @@ Implement `bldb` and update `book_template` (aka `btmpl`) functionalities:
 * tbd... mkdocs_template: upd nav secrion with Jinja data-items
 * tbd... I think all scripts are rdy to be mvd in a scrpts/ directory
 
+* [0.8.dev10] server-run.sh chg PID dir to /var/run/user/1001/ and set tis in config file
 * [0.8.dev9] server-run.sh. upd loading config file to load it as Python module
 * [0.8.dev8] server-run.sh: upd config file name and location + get at its load the PACKAGE_ROOT
 * [0.8a7] booklab data & template: move "navigation" item entierly into a new JSON in book_template --> `book_navigation.json`

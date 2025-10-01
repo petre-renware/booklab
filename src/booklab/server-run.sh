@@ -5,9 +5,9 @@
 #
 # run gunicorn to serve web api app. Arg #1 state:
 #   - if == "d" then run as daemon
-#   - if "anything else" or missing run once for tests
+#   - if == "anything else" or missing run once for tests
 #   - if == "k": for kill process.
-#   0 if "s" show running gunicorn processes
+#   0 if == "s" show running gunicorn processes
 #
 #     keep in mind that need to run gunicorn with
 #     `pid...` option to have process pid or
@@ -22,12 +22,12 @@
 case $1 in
     -d|--daemon)
         echo Start gunicorn as daemon... Running PIDs are:
-        pdm run gunicorn -c python:booklab.conf.gunicorn_config -p /tmp/gunicorn.PID -D
+        pdm run gunicorn -c python:booklab.conf.gunicorn_config -p /var/run/user/1001/gunicorn.PID -D
         ps -A | grep gunicorn
         ;;
     -k|--kill)
         echo Stop gunicorn...
-        kill `cat /tmp/gunicorn.PID`
+        kill `cat /var/run/user/1001/gunicorn.PID`
         ;;
     -s|--status)
         echo PIDs of gunicorn running proceses:
@@ -35,10 +35,10 @@ case $1 in
         ;;
     -r|--restart)
         echo Stop gunicorn...
-        kill `cat /tmp/gunicorn.PID`
+        kill `cat /var/run/user/1001/gunicorn.PID`
         sleep 1
         echo Start gunicorn as daemon... Running PIDs are:
-        pdm run gunicorn -c python:booklab.conf.gunicorn_config -p /tmp/gunicorn.PID -D
+        pdm run gunicorn -c python:booklab.conf.gunicorn_config -p /var/run/user/1001/gunicorn.PID -D
         ps -A | grep gunicorn
         ;;
     *)
