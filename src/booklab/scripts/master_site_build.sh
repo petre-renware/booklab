@@ -5,13 +5,17 @@
 ##
 
 echo Start building Booklab master static site @ `date`
-BOOK_DIR=`pwd`/`dirname $0`
-cd $BOOK_DIR
-echo Building directory  `pwd`
+# ATTN: script is located in .../booklab/scripts/ dir
+cd `dirname $0`
+cd ..
+
 pdm run mkdocs build
-# remove project roit docs/ directory and copy the fresh built one
+
+# remove project root docs/ directory and copy the fresh built one
 rm -r ../../docs/
-cp -lR ./docs/ ../../docs/
+
+
+cp -lR docs/ ../../docs/
 echo End of building Booklab master static site  @ `date`
 
 
