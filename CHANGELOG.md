@@ -19,6 +19,7 @@ Implement `bldb` and update `book_template` (aka `btmpl`) functionalities:
 * tbd... when render `mkdocs_template.yml` --> `mkdocs.yml` chk if can render from a parent dir (ie `../my_books/<book_code>/docs/`)
 * tbd... mkdocs_template: upd nav secrion with Jinja data-items
 
+* [0.8.dev8] server-run.sh: upd config file name and location + get at its load the PACKAGE_ROOT
 * [0.8a7] booklab data & template: move "navigation" item entierly into a new JSON in book_template --> `book_navigation.json`
 * [0.8a6] booklab static-site bcat_template.html
     * drop column ref actions

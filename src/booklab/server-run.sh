@@ -22,7 +22,7 @@
 case $1 in
     -d|--daemon)
         echo Start gunicorn as daemon... Running PIDs are:
-        pdm run gunicorn -c `dirname $0`/conf/gunicorn/gunicorn.conf.py -p /tmp/gunicorn.PID -D
+        pdm run gunicorn -c `dirname $0`/conf/gunicorn_config.py -p /tmp/gunicorn.PID -D
         ps -A | grep gunicorn
         ;;
     -k|--kill)
@@ -38,12 +38,12 @@ case $1 in
         kill `cat /tmp/gunicorn.PID`
         sleep 1
         echo Start gunicorn as daemon... Running PIDs are:
-        pdm run gunicorn -c `dirname $0`/conf/gunicorn/gunicorn.conf.py -p /tmp/gunicorn.PID -D
+        pdm run gunicorn -c `dirname $0`/conf/gunicorn_config.py -p /tmp/gunicorn.PID -D
         ps -A | grep gunicorn
         ;;
     *)
         echo Run gunicorn as foreground...
-        pdm run gunicorn -c `dirname $0`/conf/gunicorn/gunicorn.conf.py
+        pdm run gunicorn -c `dirname $0`/conf/gunicorn_config.py
         ;;
 esac
 
