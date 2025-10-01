@@ -11,6 +11,7 @@ Consists of the following sub-packages:
 - `docs/` contains rhe static site compiled and "ready to use as-is" with any standard HTTP server
 - `doc-techical` containing system usage documentation (aka api interface)
 - `my_books` contains the end user created & generated books
+- `scripts/` contains various scrpts usefull in system administrarion (install, maintain, confifure, etc)
 
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
