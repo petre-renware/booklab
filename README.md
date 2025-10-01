@@ -17,6 +17,6 @@ Booklab este o aplicatie destinata creari de manuale / documentatii in format el
 * [0.4] 2023-Sep-17
 * [0.5] 2025-Sep-23
 * [0.6] 2025-Sep-24
-
+* [0.7] 2025-Sep-27
 
 
