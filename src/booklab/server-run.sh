@@ -22,12 +22,12 @@
 case $1 in
     -d|--daemon)
         echo Start gunicorn as daemon... Running PIDs are:
-        pdm run gunicorn -c python:booklab.conf.gunicorn_config -p /var/run/user/1001/gunicorn.PID -D
+        pdm run gunicorn -c python:booklab.conf.gunicorn_config -p /tmp/gunicorn.PID -D
         ps -A | grep gunicorn
         ;;
     -k|--kill)
         echo Stop gunicorn...
-        kill `cat /var/run/user/1001/gunicorn.PID`
+        kill `cat /tmp/gunicorn.PID`
         ;;
     -s|--status)
         echo PIDs of gunicorn running proceses:
@@ -35,10 +35,10 @@ case $1 in
         ;;
     -r|--restart)
         echo Stop gunicorn...
-        kill `cat /var/run/user/1001/gunicorn.PID`
+        kill `cat /tmp/gunicorn.PID`
         sleep 1
         echo Start gunicorn as daemon... Running PIDs are:
-        pdm run gunicorn -c python:booklab.conf.gunicorn_config -p /var/run/user/1001/gunicorn.PID -D
+        pdm run gunicorn -c python:booklab.conf.gunicorn_config -p /tmp/gunicorn.PID -D
         ps -A | grep gunicorn
         ;;
     *)
