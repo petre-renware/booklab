@@ -873,6 +873,7 @@
 <li><a href="#booklabbooklibmybook">booklab.booklib.myBook</a><ul>
 <li><a href="#mybook-objects">MyBook Objects</a><ul>
 <li><a href="#__init__">__init__</a></li>
+<li><a href="#getbook_1">getBook</a></li>
 </ul>
 </li>
 </ul>
@@ -1022,6 +1023,22 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">flask_app</span><span class="p">:</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
 </code></pre></div>
 <p>Init an instance of class MyBook</p>
+<p><a id="booklab.booklib.myBook.MyBook.getBook"></a></p>
+<h4 id="getbook_1">getBook</h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">getBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Check for a given book code:</p>
+<ul>
+<li>test if book code is not None</li>
+<li>test if book code exists in database and is exactly 1 record</li>
+<li>if both conditions return that record as Dict</li>
+<li>if not any condition return None</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<ul>
+<li><code>dict</code> with found record</li>
+<li><code>None</code> if any condition is not met</li>
+</ul>
 <p><a id="booklab.my_books.book_template"></a></p>
 <h1 id="booklabmy_booksbook_template">booklab.my_books.book_template</h1>
 <p>Contains the book template used when create a new book (<code>newb</code> funxtion, <code>/api/newb/</code> booklabd route).</p>

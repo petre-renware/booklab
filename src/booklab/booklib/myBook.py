@@ -29,45 +29,38 @@ class MyBook:
         """Init an instance of class MyBook
         """
         self.book_code = book_code
-        self.flask_app = flask.app
+        self.flask_app = flask_app
         self.db = db
-        ...  #TODO to be continued :..
 
 
-
-
-
-
-
-
-
-
-'''
-#TODO this code to become method of MyBook class
-# code was already indented to "fit" a class property
-#
-    def getBook() -> dict | None:
+    def getBook(self) -> dict | None:
         """Check for a given book code:
 
-        * test if book code is not None
-        * test if book code exists in database and is exactly 1 record
-        * if both conditions return that record as Dict
-        * if not any condition return None
+        - test if book code is not None
+        - test if book code exists in database and is exactly 1 record
+        - if both conditions return that record as Dict
+        - if not any condition return None
 
         Return:
 
-        * `dict` with found record
-        * `None` if any condition is not met
+        - `dict` with found record
+        - `None` if any condition is not met
         """
 
-        if not book_code or not isinstance(book_code, str):
+        if not self.book_code or not isinstance(self.book_code, str):
             return None # exit because not satisfying basic requirements
         # check to see if record exists and if then just select first got
         bk_rec = None
-        bk_rec = db.getBy({"code":book_code})
-        if bk_rec and isinstance(bk_rec, list):
+        bk_rec = self.db.getBy({"code": self.book_code})
+        if bk_rec and isinstance(bk_rec, list):  # list means thare is more than 1 record
             return bk_rec[0]
         return None
-'''
+
+
+
+
+
+
+
 
 
