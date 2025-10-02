@@ -16,7 +16,7 @@ class MyBook:
     """
 
     book_code: str
-    flask_app: Flask
+    web_app: Flask
     db: pysondb
 
 
@@ -29,27 +29,20 @@ class MyBook:
         """Init an instance of class MyBook
         """
         self.book_code = book_code
-        self.flask_app = flask_app
+        self.web_app = flask_app
         self.db = db
 
 
     def getBook(self) -> dict | None:
-        """Check for a given book code:
-
-        - test if book code is not None
-        - test if book code exists in database and is exactly 1 record
-        - if both conditions return that record as Dict
-        - if not any condition return None
+        """Check for a given book code that is not None, exists in database and is exactly 1 record
 
         Return:
 
-        - `dict` with found record
-        - `None` if any condition is not met
+        - `dict` with found record or `None` if any of conditiona is not met
         """
-
         if not self.book_code or not isinstance(self.book_code, str):
-            return None # exit because not satisfying basic requirements
-        # check to see if record exists and if then just select first got
+            return None
+        # check if record exists and is only one
         bk_rec = None
         bk_rec = self.db.getBy({"code": self.book_code})
         if bk_rec and isinstance(bk_rec, list):  # list means thare is more than 1 record
