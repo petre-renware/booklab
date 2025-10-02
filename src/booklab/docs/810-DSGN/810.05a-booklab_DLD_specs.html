@@ -870,6 +870,13 @@
 <li><a href="#init_db">init_db</a></li>
 </ul>
 </li>
+<li><a href="#booklabbooklibmybook">booklab.booklib.myBook</a><ul>
+<li><a href="#mybook-objects">MyBook Objects</a><ul>
+<li><a href="#__init__">__init__</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#booklabmy_booksbook_template">booklab.my_books.book_template</a></li>
 <li><a href="#booklabmy_books">booklab.my_books</a></li>
 <li><a href="#booklabdoc_src">booklab.doc_src</a></li>
@@ -911,6 +918,7 @@
 <li><code>docs/</code> contains rhe static site compiled and "ready to use as-is" with any standard HTTP server</li>
 <li><code>doc-techical</code> containing system usage documentation (aka api interface)</li>
 <li><code>my_books</code> contains the end user created &amp; generated books</li>
+<li><code>scripts/</code> contains various scrpts usefull in system administrarion (install, maintain, confifure, etc)</li>
 </ul>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.booklab_cli"></a></p>
@@ -994,6 +1002,31 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <p>Create db_books, db_system objects and return them as tuple</p>
 <p><strong>Returns</strong>:</p>
 <p><code>(db_books, db_system)</code> tuple of pysondb object</p>
+<p><a id="booklab.booklib.myBook"></a></p>
+<h1 id="booklabbooklibmybook">booklab.booklib.myBook</h1>
+<p>Class that manage my created books:</p>
+<ul>
+<li>get a book data (JSON data)</li>
+<li>get the HTML rendered my book to expose it over http</li>
+<li>build a book (compile HTML static site)</li>
+<li>build book definition (<code>mkdocs.yml</code>) replacing Jinja codes with soecific book values</li>
+<li>get book navigation items</li>
+<li>...</li>
+</ul>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.booklib.myBook.MyBook"></a></p>
+<h2 id="mybook-objects">MyBook Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyBook</span><span class="p">()</span>
+</code></pre></div>
+<p><a id="booklab.booklib.myBook.MyBook.__init__"></a></p>
+<h4 id="__init__">__init__</h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">flask_app</span><span class="p">:</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
+</code></pre></div>
+<p>Init an instance of class MyBook getting:</p>
+<ul>
+<li>in-subject book code</li>
+<li>Flask application object that is intended to use instance</li>
+</ul>
 <p><a id="booklab.my_books.book_template"></a></p>
 <h1 id="booklabmy_booksbook_template">booklab.my_books.book_template</h1>
 <p>Contains the book template used when create a new book (<code>newb</code> funxtion, <code>/api/newb/</code> booklabd route).</p>

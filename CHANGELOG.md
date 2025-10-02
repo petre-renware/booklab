@@ -23,10 +23,9 @@ Implement `bldb` and update `book_template` (aka `btmpl`) functionalities:
     * ... test all, upd site, publish it  and mk package + publish it
     * ... create a classmethod rhet return MY_BOOKS_ROOT as root (path) of my_books/ directory
     * ... upd `/api/prvb/` ro use this method instrad of function getBook
-    * ... move actual function `getBook` as method of class Book
+    * ... move actual function `getBook` as method of class myBook
     * ... another init param must be `Flask app` object "in-subject" that will be used as context in all class operations (ie, `with app_context do sometging...`)
-    * ... boklib: create Book class that manage my books. At init get a book code and set it as class variable
-
+    * boklib: create myBook.MyBook class that manage my books. At init get a book code, Flak application that will use object and set them as class variables
 * [0.8a11] all scripts moved from booklab/ in booklab/scrpts/ directory
 * [0.8.dev10] server-run.sh: upd PID save dir from /tmp to ~ and make file hidden
 * [0.8.dev9] server-run.sh. upd loading config file to load it as Python module
