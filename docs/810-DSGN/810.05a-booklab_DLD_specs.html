@@ -1004,6 +1004,10 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <p><code>(db_books, db_system)</code> tuple of pysondb object</p>
 <p><a id="booklab.booklib.myBook"></a></p>
 <h1 id="booklabbooklibmybook">booklab.booklib.myBook</h1>
+<p><a id="booklab.booklib.myBook.MyBook"></a></p>
+<h2 id="mybook-objects">MyBook Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyBook</span><span class="p">()</span>
+</code></pre></div>
 <p>Class that manage my created books:</p>
 <ul>
 <li>get a book data (JSON data)</li>
@@ -1011,22 +1015,17 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <li>build a book (compile HTML static site)</li>
 <li>build book definition (<code>mkdocs.yml</code>) replacing Jinja codes with soecific book values</li>
 <li>get book navigation items</li>
-<li>...</li>
 </ul>
+<p>Instance variables:</p>
+<p><code>book_code</code>: str
+<code>flask_app</code>: Flask
+<code>db</code>: pysondb</p>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
-<p><a id="booklab.booklib.myBook.MyBook"></a></p>
-<h2 id="mybook-objects">MyBook Objects</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyBook</span><span class="p">()</span>
-</code></pre></div>
 <p><a id="booklab.booklib.myBook.MyBook.__init__"></a></p>
 <h4 id="__init__">__init__</h4>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">flask_app</span><span class="p">:</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">flask_app</span><span class="p">:</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
 </code></pre></div>
-<p>Init an instance of class MyBook getting:</p>
-<ul>
-<li>in-subject book code</li>
-<li>Flask application object that is intended to use instance</li>
-</ul>
+<p>Init an instance of class MyBook</p>
 <p><a id="booklab.my_books.book_template"></a></p>
 <h1 id="booklabmy_booksbook_template">booklab.my_books.book_template</h1>
 <p>Contains the book template used when create a new book (<code>newb</code> funxtion, <code>/api/newb/</code> booklabd route).</p>
@@ -1175,7 +1174,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 1, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 2, 2025</span>
       
     
   </small>
