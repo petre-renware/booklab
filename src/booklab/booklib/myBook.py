@@ -12,14 +12,12 @@ class MyBook:
     - build book definition (`mkdocs.yml`) replacing Jinja codes with soecific book values
     - get book navigation items
 
-    Instance variables:
-
-    `book_code`: str
-    `flask_app`: Flask
-    `db`: pysondb
-
     Author: Petre Iordanescu (petre.iordanescu@gmail.com)
     """
+
+    book_code: str
+    flask_app: Flask
+    db: pysondb
 
 
     def __init__(
@@ -53,7 +51,7 @@ class MyBook:
 
         * test if book code is not None
         * test if book code exists in database and is exactly 1 record
-        * if both conditions return that record as List[Dict]
+        * if both conditions return that record as Dict
         * if not any condition return None
 
         Return:
