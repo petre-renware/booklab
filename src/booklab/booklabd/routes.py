@@ -26,6 +26,8 @@ from booklab.booklabd import api_app
 from booklab.booklabd import db_books
 from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
+from booklab.booklib.my_books import MyBook
+#TODO drop nxt import after update /api/prvb/ route
 from booklab.booklib.getBook import getBook
 
 

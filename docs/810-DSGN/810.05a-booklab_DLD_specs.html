@@ -866,16 +866,16 @@
 </ul>
 </li>
 <li><a href="#booklabbooklib">booklab.booklib</a></li>
-<li><a href="#booklabbooklibdb_init">booklab.booklib.db_init</a><ul>
-<li><a href="#init_db">init_db</a></li>
-</ul>
-</li>
-<li><a href="#booklabbooklibmybook">booklab.booklib.myBook</a><ul>
+<li><a href="#booklabbooklibmy_books">booklab.booklib.my_books</a><ul>
 <li><a href="#mybook-objects">MyBook Objects</a><ul>
 <li><a href="#__init__">__init__</a></li>
 <li><a href="#getbook_1">getBook</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#booklabbooklibdb_init">booklab.booklib.db_init</a><ul>
+<li><a href="#init_db">init_db</a></li>
 </ul>
 </li>
 <li><a href="#booklabmy_booksbook_template">booklab.my_books.book_template</a></li>
@@ -991,21 +991,9 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 </li>
 </ul>
 <p>Author: Petre Iordanescu (petre.iordanescu@gnail.com)</p>
-<p><a id="booklab.booklib.db_init"></a></p>
-<h1 id="booklabbooklibdb_init">booklab.booklib.db_init</h1>
-<p>Module that initialize <code>booklabd</code> database (more JSON files)</p>
-<p>This module is designed to initialize database objects <code>db_books</code> and <code>db_system</code>.</p>
-<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
-<p><a id="booklab.booklib.db_init.init_db"></a></p>
-<h4 id="init_db">init_db</h4>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">init_db</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">pysondb</span><span class="p">]</span>
-</code></pre></div>
-<p>Create db_books, db_system objects and return them as tuple</p>
-<p><strong>Returns</strong>:</p>
-<p><code>(db_books, db_system)</code> tuple of pysondb object</p>
-<p><a id="booklab.booklib.myBook"></a></p>
-<h1 id="booklabbooklibmybook">booklab.booklib.myBook</h1>
-<p><a id="booklab.booklib.myBook.MyBook"></a></p>
+<p><a id="booklab.booklib.my_books"></a></p>
+<h1 id="booklabbooklibmy_books">booklab.booklib.my_books</h1>
+<p><a id="booklab.booklib.my_books.MyBook"></a></p>
 <h2 id="mybook-objects">MyBook Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyBook</span><span class="p">()</span>
 </code></pre></div>
@@ -1018,27 +1006,32 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <li>get book navigation items</li>
 </ul>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
-<p><a id="booklab.booklib.myBook.MyBook.__init__"></a></p>
+<p><a id="booklab.booklib.my_books.MyBook.__init__"></a></p>
 <h4 id="__init__">__init__</h4>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">flask_app</span><span class="p">:</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
 </code></pre></div>
 <p>Init an instance of class MyBook</p>
-<p><a id="booklab.booklib.myBook.MyBook.getBook"></a></p>
+<p><a id="booklab.booklib.my_books.MyBook.getBook"></a></p>
 <h4 id="getbook_1">getBook</h4>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">getBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span>
 </code></pre></div>
-<p>Check for a given book code:</p>
-<ul>
-<li>test if book code is not None</li>
-<li>test if book code exists in database and is exactly 1 record</li>
-<li>if both conditions return that record as Dict</li>
-<li>if not any condition return None</li>
-</ul>
+<p>Check for a given book code that is not None, exists in database and is exactly 1 record</p>
 <p><strong>Returns</strong>:</p>
 <ul>
-<li><code>dict</code> with found record</li>
-<li><code>None</code> if any condition is not met</li>
+<li><code>dict</code> with found record or <code>None</code> if any of conditiona is not met</li>
 </ul>
+<p><a id="booklab.booklib.db_init"></a></p>
+<h1 id="booklabbooklibdb_init">booklab.booklib.db_init</h1>
+<p>Module that initialize <code>booklabd</code> database (more JSON files)</p>
+<p>This module is designed to initialize database objects <code>db_books</code> and <code>db_system</code>.</p>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.booklib.db_init.init_db"></a></p>
+<h4 id="init_db">init_db</h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">init_db</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">pysondb</span><span class="p">]</span>
+</code></pre></div>
+<p>Create db_books, db_system objects and return them as tuple</p>
+<p><strong>Returns</strong>:</p>
+<p><code>(db_books, db_system)</code> tuple of pysondb object</p>
 <p><a id="booklab.my_books.book_template"></a></p>
 <h1 id="booklabmy_booksbook_template">booklab.my_books.book_template</h1>
 <p>Contains the book template used when create a new book (<code>newb</code> funxtion, <code>/api/newb/</code> booklabd route).</p>
