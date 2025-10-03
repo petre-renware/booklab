@@ -27,8 +27,6 @@ from booklab.booklabd import db_books
 from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
 from booklab.booklib.my_books import MyBook
-#TODO drop nxt import after update /api/prvb/ route
-from booklab.booklib.getBook import getBook
 
 
 # construct redirect url-path prefix (up to static site)
@@ -68,10 +66,12 @@ def api_bstatus(book_code = ...):
     ret_str = "nothing to say..."
     if book_code is ...:
         book_code = request.args.get("code")
-    book_data = getBook(
-        db_books,
-        book_code
+    my_book = MyBook(
+        flask_app = api_app,
+        db = db_books,
+        book_code = book_code
     )
+    book_data = my_book.getBook()
     if not book_data:
         abort(404, description = "Book not found")
     else:
@@ -128,10 +128,12 @@ def api_prvb(book_code = ...):
     """
     if book_code is ...:
         book_code = request.args.get("code")
-    book_data = getBook(
-        db_books,
-        book_code
+    my_book = MyBook(
+        flask_app = api_app,
+        db = db_books,
+        book_code = book_code
     )
+    book_data = my_book.getBook()
     if not book_data:
         abort(404, description = "Book not found")
     book_redirect_url = url_quote(

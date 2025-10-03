@@ -24,8 +24,7 @@ Implement `bldb` and update `book_template` (aka `btmpl`) functionalities:
 * ...wip [0.8b12] my_books:
     * ... test all, upd site, publish it  and mk package + publish it
     * ... create a class method that return MY_BOOKS_ROOT as root (path) of my_books/ directory
-    * ... chk & upd book_status & bcat the drop `getBook.py` and all references to it
-    * ... upd `/api/prvb/` to use MyBook.getBook method instrad of function getBook
+    * upd `/api/bstatus/` & `/api/prvb/` to use MyBook.getBook method instrad of function getBook
     * move actual function `getBook` as method of class myBook
     * add class var `db` to have web app initialized database objec6
     * boklib: create my_books.MyBook class that manage my books. At init get a book code, Flak application that will use object and set them as instance variables
