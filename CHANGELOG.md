@@ -19,11 +19,15 @@ Implement `bldb` and update `book_template` (aka `btmpl`) functionalities:
 * tbd... MyBook method to render `mkdocs_template.yml` --> `mkdocs.yml`
     chk if can render from a parent dir, ie `../my_books/<book_code>/docs/`
     or render from string by reading file
+
 * tbd... mkdocs_template: upd nav secrion with Jinja data-items
+* tbd... ref up iss, create MyBook class that render its mkdocs.yml
+* tbd... create MyBook class methods that return paths and urls:
+    * MY_BOOK_PATH as root (path) of a book directory
+    * MY_BOOK_URL full url where can be redirect to see a book site
 
 * ...wip [0.8b12] my_books:
     * ... test all, upd site, publish it  and mk package + publish it
-    * ... create a class method that return MY_BOOKS_ROOT as root (path) of my_books/ directory
     * upd `/api/bstatus/` & `/api/prvb/` to use MyBook.getBook method instrad of function getBook
     * move actual function `getBook` as method of class myBook
     * add class var `db` to have web app initialized database objec6
