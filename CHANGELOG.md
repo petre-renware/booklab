@@ -25,8 +25,7 @@ Implement `bldb` and update `book_template` (aka `btmpl`) functionalities:
     * MY_BOOK_PATH as root (path) of a book directory
     * MY_BOOK_URL full url where can be redirect to see a book site
 
-* ... [0.8.dev13] booklab: create MY_BOOKS_ROOT pointing to location where end user books location: .../src/booklab/my_books/
-
+* [0.8.dev13] booklab: MY_BOOKS_ROOT pointing to location where end user books location: .../src/booklab/my_books/
 * [0.8b12] my_books:
     * fixed bstatus page with small formatting / display inconsistency between same info groups
     * upd `/api/bstatus/` & `/api/prvb/` to use MyBook.getBook method instrad of function getBook
