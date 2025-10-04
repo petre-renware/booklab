@@ -21,9 +21,11 @@ Implement `bldb` and update `book_template` (aka `btmpl`) functionalities:
     or render from string by reading file
 * tbd... mkdocs_template: upd nav secrion with Jinja data-items
 * tbd... ref up iss, create MyBook class that render its mkdocs.yml
-* tbd... create MyBook class methods that return paths and urls:
-    * MY_BOOK_PATH as root (path) of a book directory
-    * MY_BOOK_URL full url where can be redirect to see a book site
+
+* ... [0.8.dev14] create MyBook class methods that return paths and urls:
+    * ... method `getPreviewUrl` to construct URL to view the book site (MY_BOOK_URL)
+    * ... MY_BOOK_PATH as root (path) of a book directory
+    * ... ?_really_need_it_as_is_for_no op_? MY_BOOK_URL full url where can be redirect to see a book site (FULL_URL_PREFIX + /my_book/)
 
 * [0.8.dev13] booklab: MY_BOOKS_ROOT pointing to location where end user books location: .../src/booklab/my_books/
 * [0.8b12] my_books:
