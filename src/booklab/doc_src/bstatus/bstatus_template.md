@@ -14,7 +14,7 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ bo
 * Copyright: `{{ book_data.copyright }}`
 * Autor: `{{ book_data.site_author }}`
 * Note: `{{ book_data.notes }}`
-* Creata de: `{{ book_data.created_by }}
+* Creata de: `{{ book_data.created_by }}`
 * Creata la data: `{{ book_data.created_date }}`
 
 ## Date de stare curenta

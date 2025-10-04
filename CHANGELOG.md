@@ -16,9 +16,20 @@
 
 ## [0.8] - unreleased
 Implement `bldb` and update `book_template` (aka `btmpl`) functionalities:
-* tbd... when render `mkdocs_template.yml` --> `mkdocs.yml` chk if can render from a parent dir (ie `../my_books/<book_code>/docs/`)
+* tbd... MyBook method to render `mkdocs_template.yml` --> `mkdocs.yml`
+    chk if can render from a parent dir, ie `../my_books/<book_code>/docs/`
+    or render from string by reading file
 * tbd... mkdocs_template: upd nav secrion with Jinja data-items
-
+* tbd... ref up iss, create MyBook class that render its mkdocs.yml
+* tbd... create MyBook class methods that return paths and urls:
+    * MY_BOOK_PATH as root (path) of a book directory
+    * MY_BOOK_URL full url where can be redirect to see a book site
+* [0.8b12] my_books:
+    * fixed bstatus page with small formatting / display inconsistency between same info groups
+    * upd `/api/bstatus/` & `/api/prvb/` to use MyBook.getBook method instrad of function getBook
+    * move actual function `getBook` as method of class myBook
+    * add class var `db` to have web app initialized database objec6
+    * boklib: create my_books.MyBook class that manage my books. At init get a book code, Flak application that will use object and set them as instance variables
 * [0.8a11] all scripts moved from booklab/ in booklab/scrpts/ directory
 * [0.8.dev10] server-run.sh: upd PID save dir from /tmp to ~ and make file hidden
 * [0.8.dev9] server-run.sh. upd loading config file to load it as Python module

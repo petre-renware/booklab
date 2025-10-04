@@ -861,11 +861,15 @@
 <li><a href="#booklabconf">booklab.conf</a></li>
 <li><a href="#booklabconfgunicorn_config">booklab.conf.gunicorn_config</a></li>
 <li><a href="#booklabconfbooklab_ext_url">booklab.conf.booklab_ext_url</a></li>
-<li><a href="#booklabbooklibgetbook">booklab.booklib.getBook</a><ul>
+<li><a href="#booklabbooklib">booklab.booklib</a></li>
+<li><a href="#booklabbooklibmy_books">booklab.booklib.my_books</a><ul>
+<li><a href="#mybook-objects">MyBook Objects</a><ul>
+<li><a href="#__init__">__init__</a></li>
 <li><a href="#getbook">getBook</a></li>
 </ul>
 </li>
-<li><a href="#booklabbooklib">booklab.booklib</a></li>
+</ul>
+</li>
 <li><a href="#booklabbooklibdb_init">booklab.booklib.db_init</a><ul>
 <li><a href="#init_db">init_db</a></li>
 </ul>
@@ -911,6 +915,7 @@
 <li><code>docs/</code> contains rhe static site compiled and "ready to use as-is" with any standard HTTP server</li>
 <li><code>doc-techical</code> containing system usage documentation (aka api interface)</li>
 <li><code>my_books</code> contains the end user created &amp; generated books</li>
+<li><code>scripts/</code> contains various scrpts usefull in system administrarion (install, maintain, confifure, etc)</li>
 </ul>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.booklab_cli"></a></p>
@@ -947,24 +952,6 @@ By external access is understood all URL parts necessary to expose Booklab appli
 </ul>
 <p><em>NOTE: all information are of string type</em></p>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
-<p><a id="booklab.booklib.getBook"></a></p>
-<h1 id="booklabbooklibgetbook">booklab.booklib.getBook</h1>
-<p><a id="booklab.booklib.getBook.getBook"></a></p>
-<h4 id="getbook">getBook</h4>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">getBook</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span>
-</code></pre></div>
-<p>Check for a given book code:</p>
-<ul>
-<li>test if book code is not None</li>
-<li>test if book code exists in database and is exactly 1 record</li>
-<li>if both conditions return that record as List[Dict]</li>
-<li>if not any condition return None</li>
-</ul>
-<p><strong>Returns</strong>:</p>
-<ul>
-<li><code>dict(pysondb)</code> with found record</li>
-<li><code>None</code> if any condition is not met</li>
-</ul>
 <p><a id="booklab.booklib"></a></p>
 <h1 id="booklabbooklib">booklab.booklib</h1>
 <p>Module aimed for <code>booklab</code> general purpose functions usable across all its (sub)modules.</p>
@@ -982,6 +969,35 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 </li>
 </ul>
 <p>Author: Petre Iordanescu (petre.iordanescu@gnail.com)</p>
+<p><a id="booklab.booklib.my_books"></a></p>
+<h1 id="booklabbooklibmy_books">booklab.booklib.my_books</h1>
+<p><a id="booklab.booklib.my_books.MyBook"></a></p>
+<h2 id="mybook-objects">MyBook Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyBook</span><span class="p">()</span>
+</code></pre></div>
+<p>Class that manage my created books:</p>
+<ul>
+<li>get a book data (JSON data)</li>
+<li>get the HTML rendered my book to expose it over http</li>
+<li>build a book (compile HTML static site)</li>
+<li>build book definition (<code>mkdocs.yml</code>) replacing Jinja codes with soecific book values</li>
+<li>get book navigation items</li>
+</ul>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.booklib.my_books.MyBook.__init__"></a></p>
+<h4 id="__init__">__init__</h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">flask_app</span><span class="p">:</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
+</code></pre></div>
+<p>Init an instance of class MyBook</p>
+<p><a id="booklab.booklib.my_books.MyBook.getBook"></a></p>
+<h4 id="getbook">getBook</h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">getBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Check for a given book code that is not None, exists in database and is exactly 1 record</p>
+<p><strong>Returns</strong>:</p>
+<ul>
+<li><code>dict</code> with found record or <code>None</code> if any of conditiona is not met</li>
+</ul>
 <p><a id="booklab.booklib.db_init"></a></p>
 <h1 id="booklabbooklibdb_init">booklab.booklib.db_init</h1>
 <p>Module that initialize <code>booklabd</code> database (more JSON files)</p>
@@ -1142,7 +1158,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 1, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 3, 2025</span>
       
     
   </small>
