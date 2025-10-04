@@ -33,10 +33,12 @@ PACKAGE_ROOT = pathlib.Path(__file__).parent.resolve()
 PROJECT_ROOT = PACKAGE_ROOT.parent.resolve().parent.resolve()
 DATA_ROOT = PACKAGE_ROOT.joinpath("data")
 CONF_ROOT = PACKAGE_ROOT.joinpath("conf")
+#TODO wip... in 9.8.dev13
+MY_BOOKS_ROOT = ...
+print(f"{MY_BOOKS_ROOT=}") #4dbg
 STATIC_SITE_ROOT = PACKAGE_ROOT.joinpath("docs")
 
-## 4dbg printouts
-# print(f"{PACKAGE_ROOT=}\n {PROJECT_ROOT=}\n {DATA_ROOT=}\n {CONF_ROOT=}\n {STATIC_SITE_ROOT=}\n")
+#4dbg print(f"{PACKAGE_ROOT=}\n {PROJECT_ROOT=}\n {DATA_ROOT=}\n {CONF_ROOT=}\n {STATIC_SITE_ROOT=}\n")
 
 
 
