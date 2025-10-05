@@ -9,6 +9,8 @@ Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
 
 import os
+import w3lib.url
+
 from flask import render_template
 from flask import redirect
 from flask import url_for
@@ -17,15 +19,18 @@ from flask import request
 from flask import request
 from flask import abort
 from werkzeug.urls import quote as url_quote
+
 from booklab.__version__ import __version__
 from booklab import EXT_PATH
 from booklab import FULL_EXT_URL
 from booklab import STATIC_SITE_ROOT
+
 from booklab.booklabd import PROJECT_ROOT
 from booklab.booklabd import api_app
 from booklab.booklabd import db_books
 from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
+
 from booklab.booklib.my_books import MyBook
 
 
@@ -36,12 +41,6 @@ redirect_prefix = url_quote(
 )
 # construct prefix file-path for docs (static site) directory
 docs_prefix = os.path.join(STATIC_SITE_ROOT)
-
-# construct redirect url-path prefix (up to my_books to point then to /<book code>/docs/)
-mybooks_redirect_prefix = url_quote(
-    FULL_EXT_URL +
-    "/preview/"
-)
 
 
 @api_app.route("/api/newb/")
@@ -135,12 +134,8 @@ def api_prvb(book_code = ...):
     )
     book_data = my_book.getBook()
     if not book_data:
-        abort(404, description = "Book not found")
-    book_redirect_url = url_quote(
-        mybooks_redirect_prefix +
-        str(book_code) +
-        "/docs/"
-    )
+        abort(404, description = "Book not found' Possible was not yet built.")
+    book_redirect_url = my_book.MY_BOOK_URL
     return redirect(book_redirect_url)
 
 
@@ -202,7 +197,9 @@ def index():
     """serve a cessing Home route.
     This is an alternate (but those expected from an end user) way to access static site main / home page.
     """
-    redirect_path = url_quote(redirect_prefix + "/index.html")
+    redirect_path = w3lib.url.canonicalize_url(
+        url_quote(redirect_prefix + "/index.html")
+    )
     return redirect(redirect_path)
 
 
@@ -218,7 +215,9 @@ def about():
     )
     with open(file_to_write, "w") as file:
         file.write(rendered_str)
-    redirect_path = url_quote(redirect_prefix + "/about/about.html")
+    redirect_path = w3lib.url.canonicalize_url(
+        url_quote(redirect_prefix + "/about/about.html")
+    )
     return redirect(redirect_path)
 
 

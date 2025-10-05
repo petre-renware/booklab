@@ -14,16 +14,24 @@
 
 
 
-## [0.8] - unreleased
-Implement `bldb` and update `book_template` (aka `btmpl`) functionalities:
+## ... [0.8] - unreleased Implement `bldb` and
+update `book_template` (aka `btmpl`) functionalities:
 * tbd... MyBook method to render `mkdocs_template.yml` --> `mkdocs.yml`
-    chk if can render from a parent dir, ie `../my_books/<book_code>/docs/`
+   chk if can render from a parent dir, ie `../my_books/<book_code>/docs/`
     or render from string by reading file
 * tbd... mkdocs_template: upd nav secrion with Jinja data-items
 * tbd... ref up iss, create MyBook class that render its mkdocs.yml
-* tbd... create MyBook class methods that return paths and urls:
+
+* [0.8b16] create MyBook class methods that return paths and urls:
+    * build doc + package + publish them
+    * [0.8a16] use MyBoook property MY_BOOK_URL in routes.py on route /api/prvb/ (ie, book preview) to redirect to book site
+    * [0.8.dev16] MY_BOOK_URL for root url to current book `EXTERNAL-<SERVER_NAME>/external-prefix_path/my-books/<book-code>/docs/`
+* [0.8.dev15] clean project and improve adresability:
+    * use `w3lib.url` to normalize urls at their construction in booklabd/routes.py
+    * rollback commut [0.8.dev14] but replace /preview/ eith /my-books/
     * MY_BOOK_PATH as root (path) of a book directory
-    * MY_BOOK_URL full url where can be redirect to see a book site
+* [0.8.dev14] upd nginx config, let just /api/ location (but, in fact,is not needed)
+* [0.8.dev13] booklab: MY_BOOKS_ROOT pointing to location where end user books location: .../src/booklab/my_books/
 * [0.8b12] my_books:
     * fixed bstatus page with small formatting / display inconsistency between same info groups
     * upd `/api/bstatus/` & `/api/prvb/` to use MyBook.getBook method instrad of function getBook

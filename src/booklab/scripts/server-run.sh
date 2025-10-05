@@ -7,14 +7,7 @@
 #   - if == "d" then run as daemon
 #   - if == "anything else" or missing run once for tests
 #   - if == "k": for kill process.
-#   0 if == "s" show running gunicorn processes
-#
-#     keep in mind that need to run gunicorn with
-#     `pid...` option to have process pid or
-#     or run `pgrep gunicorn >gunicorn.pid` to create one
-#
-# config file (or a symlink to) should be present in directory where from this script is run
-# config file: .../booklab/conf/conf/gunicorn.conf.py
+#   - if == "s" show running gunicorn processes
 #
 # Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 #

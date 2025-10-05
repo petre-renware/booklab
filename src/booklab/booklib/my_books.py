@@ -1,5 +1,10 @@
 import pysondb
+import w3lib.url
 from flask import Flask
+from werkzeug.urls import quote as url_quote
+from booklab import MY_BOOKS_ROOT
+from booklab import EXT_PATH
+from booklab import FULL_EXT_URL
 
 
 class MyBook:
@@ -12,9 +17,16 @@ class MyBook:
     - build book definition (`mkdocs.yml`) replacing Jinja codes with soecific book values
     - get book navigation items
 
+    **Important properties:**
+
+    - `MY_BOOK_URL`: url to redirect to access book static site (preview book)
+    - `MY_BOOK_PATH`: file-parh to book root location
+
     Author: Petre Iordanescu (petre.iordanescu@gmail.com)
     """
-
+    _MY_BOOKS_URL_prefix = "/my-books/"
+    MY_BOOK_URL: str
+    MY_BOOKS_PATH: str
     book_code: str
     web_app: Flask
     db: pysondb
@@ -28,9 +40,18 @@ class MyBook:
     ):
         """Init an instance of class MyBook
         """
+        MyBook.MY_BOOKS_PATH = MY_BOOKS_ROOT
         self.book_code = book_code
         self.web_app = flask_app
         self.db = db
+        self.MY_BOOK_URL = w3lib.url.canonicalize_url(
+            url_quote(
+                FULL_EXT_URL +
+                MyBook._MY_BOOKS_URL_prefix +
+                self.book_code +
+                "/docs/"
+            )
+        )
 
 
     def getBook(self) -> dict | None:
@@ -50,8 +71,25 @@ class MyBook:
         return None
 
 
+    def getBookPath(self) -> str:
+        """Get absolute path of current book root directory.
+        """
+        pass
 
 
+    def getBookPreviewURL(self) -> str:
+        """Get preview URL (redirectable as is) for current book_code.
+        """
+        pass
+
+
+    def renderBookConfig(
+        self,
+        out_file: str = "mkdocs.yml"
+    ) -> bool:
+        """Render current book configuration file used in static site generation.
+        """
+        pass
 
 
 

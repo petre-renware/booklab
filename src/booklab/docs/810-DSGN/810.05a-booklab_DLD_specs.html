@@ -866,6 +866,9 @@
 <li><a href="#mybook-objects">MyBook Objects</a><ul>
 <li><a href="#__init__">__init__</a></li>
 <li><a href="#getbook">getBook</a></li>
+<li><a href="#getbookpath">getBookPath</a></li>
+<li><a href="#getbookpreviewurl">getBookPreviewURL</a></li>
+<li><a href="#renderbookconfig">renderBookConfig</a></li>
 </ul>
 </li>
 </ul>
@@ -983,6 +986,11 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <li>build book definition (<code>mkdocs.yml</code>) replacing Jinja codes with soecific book values</li>
 <li>get book navigation items</li>
 </ul>
+<p><strong>Important properties:</strong></p>
+<ul>
+<li><code>MY_BOOK_URL</code>: url to redirect to access book static site (preview book)</li>
+<li><code>MY_BOOK_PATH</code>: file-parh to book root location</li>
+</ul>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.booklib.my_books.MyBook.__init__"></a></p>
 <h4 id="__init__">__init__</h4>
@@ -998,6 +1006,21 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <ul>
 <li><code>dict</code> with found record or <code>None</code> if any of conditiona is not met</li>
 </ul>
+<p><a id="booklab.booklib.my_books.MyBook.getBookPath"></a></p>
+<h4 id="getbookpath">getBookPath</h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">getBookPath</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+<p>Get absolute path of current book root directory.</p>
+<p><a id="booklab.booklib.my_books.MyBook.getBookPreviewURL"></a></p>
+<h4 id="getbookpreviewurl">getBookPreviewURL</h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">getBookPreviewURL</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+<p>Get preview URL (redirectable as is) for current book_code.</p>
+<p><a id="booklab.booklib.my_books.MyBook.renderBookConfig"></a></p>
+<h4 id="renderbookconfig">renderBookConfig</h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">renderBookConfig</span><span class="p">(</span><span class="n">out_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;mkdocs.yml&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+</code></pre></div>
+<p>Render current book configuration file used in static site generation.</p>
 <p><a id="booklab.booklib.db_init"></a></p>
 <h1 id="booklabbooklibdb_init">booklab.booklib.db_init</h1>
 <p>Module that initialize <code>booklabd</code> database (more JSON files)</p>
@@ -1158,7 +1181,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 3, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 4, 2025</span>
       
     
   </small>

@@ -5,7 +5,7 @@
 groups = ["default", "dev", "test"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:5f98b9281e9a21aedfb7e503fb636b2349a08d96264448925ddc228e446a758f"
+content_hash = "sha256:fb31f630d352c628ad3b67d751f1ddeb975f2fe984b2974ab408b1e214412005"
 
 [[metadata.targets]]
 requires_python = ">=3.10,<3.13"
@@ -1733,6 +1733,17 @@ dependencies = [
 files = [
     {file = "urllib3-2.0.4-py3-none-any.whl", hash = "sha256:de7df1803967d2c2a98e4b11bb7d6bd9210474c46e8a0401514e3a42a75ebde4"},
     {file = "urllib3-2.0.4.tar.gz", hash = "sha256:8d22f86aae8ef5e410d4f539fde9ce6b2113a001bb4d189e0aed70642d602b11"},
+]
+
+[[package]]
+name = "w3lib"
+version = "2.3.1"
+requires_python = ">=3.9"
+summary = "Library of web-related functions"
+groups = ["default"]
+files = [
+    {file = "w3lib-2.3.1-py3-none-any.whl", hash = "sha256:9ccd2ae10c8c41c7279cd8ad4fe65f834be894fe7bfdd7304b991fd69325847b"},
+    {file = "w3lib-2.3.1.tar.gz", hash = "sha256:5c8ac02a3027576174c2b61eb9a2170ba1b197cae767080771b6f1febda249a4"},
 ]
 
 [[package]]
