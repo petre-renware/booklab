@@ -23,8 +23,10 @@ update `book_template` (aka `btmpl`) functionalities:
 * tbd... ref up iss, create MyBook method that render its mkdocs.yml
 
 * ... [0.8b... ?]
-* tbd... update api_bstatus() to use MyBook. getBookIRL() to show url path where book can be seen
+* tbd... update api_bstatus() to use MyBook.getBookURL() to show url path where book can be seen
 * tbd... update api_bstatus() to use MyBook.getBookPath() to show location and drop that info from data/book_catalog.json
+
+* [0.8.dev21] updateded project README.md with installation steps
 * [0.8.dev20] fix db_init.py to return None for db_ystem (was dropped) to remain for future use and. Move this file to booklab root
 * [0.8a19] MyBook.getBookPath() to chk if directory exists and if not return None
 * [0.8.dev18] reorg project: drop dir data/ and mv books_catalog.json to my_books/. Update booklab.__init__.py for DATA_ROOT directory and db_init
