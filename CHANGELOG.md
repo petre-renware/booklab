@@ -20,8 +20,9 @@ update `book_template` (aka `btmpl`) functionalities:
    chk if can render from a parent dir, ie `../my_books/<book_code>/docs/`
     or render from string by reading file
 * tbd... mkdocs_template: upd nav secrion with Jinja data-items
-* tbd... ref up iss, create MyBook class that render its mkdocs.yml
+* tbd... ref up iss, create MyBook method that render its mkdocs.yml
 
+* [0.8b17] MyBook: method `getBookURL()` to return MY_BOOK_URL and update routes.py function api_prvb()
 * [0.8b16] create MyBook class methods that return paths and urls:
     * build doc + package + publish them
     * [0.8a16] use MyBoook property MY_BOOK_URL in routes.py on route /api/prvb/ (ie, book preview) to redirect to book site

@@ -135,7 +135,7 @@ def api_prvb(book_code = ...):
     book_data = my_book.getBook()
     if not book_data:
         abort(404, description = "Book not found' Possible was not yet built.")
-    book_redirect_url = my_book.MY_BOOK_URL
+    book_redirect_url = my_book.getBookURL()
     return redirect(book_redirect_url)
 
 

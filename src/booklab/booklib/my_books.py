@@ -1,3 +1,4 @@
+import os
 import pysondb
 import w3lib.url
 from flask import Flask
@@ -74,13 +75,19 @@ class MyBook:
     def getBookPath(self) -> str:
         """Get absolute path of current book root directory.
         """
-        pass
+        my_book_path = os.path.abspath(
+            os.path.join(
+                self.MY_BOOKS_PATH,
+                self.book_code
+            )
+        )
+        return my_book_path
 
 
-    def getBookPreviewURL(self) -> str:
+    def getBookURL(self) -> str:
         """Get preview URL (redirectable as is) for current book_code.
         """
-        pass
+        return self.MY_BOOK_URL
 
 
     def renderBookConfig(
@@ -89,6 +96,7 @@ class MyBook:
     ) -> bool:
         """Render current book configuration file used in static site generation.
         """
+        #TODO ...
         pass
 
 
