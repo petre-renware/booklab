@@ -22,6 +22,11 @@ update `book_template` (aka `btmpl`) functionalities:
 * tbd... mkdocs_template: upd nav secrion with Jinja data-items
 * tbd... ref up iss, create MyBook method that render its mkdocs.yml
 
+* ... [0.8b...]
+    * ... 
+    * ... [0.8:dev19] update api_bstatus() to use MyBook.getBookPath() to show location and drop that info from data/book_catalog.json
+    * ... [0.8.dev18] MyBook.getBookPath() to chk if directory exists and if not return None
+
 * [0.8b17] MyBook: method `getBookURL()` to return MY_BOOK_URL and update routes.py function api_prvb()
 * [0.8b16] create MyBook class methods that return paths and urls:
     * build doc + package + publish them
