@@ -81,7 +81,10 @@ class MyBook:
                 self.book_code
             )
         )
-        return my_book_path
+        if os.path.isdir(my_book_path):
+            return my_book_path
+        else:
+            return None
 
 
     def getBookURL(self) -> str:
