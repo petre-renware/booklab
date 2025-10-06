@@ -901,7 +901,6 @@
 <li><a href="#booklabbooklabd">booklab.booklabd</a></li>
 <li><a href="#booklabdocs">booklab.docs</a></li>
 <li><a href="#booklab__main__">booklab.__main__</a></li>
-<li><a href="#booklabdata">booklab.data</a></li>
 </ul>
 </div>
 <p>booklab"&gt;</a></p>
@@ -912,13 +911,16 @@
 <li><code>booklab-cli</code> which is a CLI application to manage system</li>
 <li><code>booklabd</code> designed to serve <code>/api/.../</code> system routes that need database write access</li>
 <li><code>booklib</code> booklab system specific general library functions usable by all sub-modules</li>
-<li><code>data</code> containing the system data in JSON files</li>
 <li><code>conf</code> containing configuration files for different system components including infrastructure ones like gunicorn or nginx</li>
 <li><code>doc_src</code> contains the source of static site directory as Markdown files</li>
 <li><code>docs/</code> contains rhe static site compiled and "ready to use as-is" with any standard HTTP server</li>
 <li><code>doc-techical</code> containing system usage documentation (aka api interface)</li>
-<li><code>my_books</code> contains the end user created &amp; generated books</li>
-<li><code>scripts/</code> contains various scrpts usefull in system administrarion (install, maintain, confifure, etc)</li>
+<li>
+<p><code>my_books</code> contains the end user created &amp; generated books and <code>books_catalog.json</code> with info about all user books</p>
+</li>
+<li>
+<p><code>scripts/</code> contains various scrpts usefull in system administrarion (install, maintain, confifure, etc)</p>
+</li>
 </ul>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.booklab_cli"></a></p>
@@ -1168,20 +1170,13 @@ This is an alternate (but those expected from an end user) way to access static 
 <h1 id="booklab__main__">booklab.__main__</h1>
 <p>... wip ...
 modules to be launched at package call with <code>-m</code> option</p>
-<p><a id="booklab.data"></a></p>
-<h1 id="booklabdata">booklab.data</h1>
-<p><strong>data</strong> component contains the application database as JSON files:</p>
-<ul>
-<li>a books database (<code>books_catalog.json</code>) containing all created books and detailed information about each one</li>
-<li>a system database (<code>app_info.json</code>) containing information about installed application</li>
-</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 5, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 6, 2025</span>
       
     
   </small>
