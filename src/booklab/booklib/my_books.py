@@ -1,8 +1,10 @@
 import os
 import pysondb
 import w3lib.url
+
 from flask import Flask
 from werkzeug.urls import quote as url_quote
+
 from booklab import MY_BOOKS_ROOT
 from booklab import EXT_PATH
 from booklab import FULL_EXT_URL
@@ -10,13 +12,7 @@ from booklab import FULL_EXT_URL
 
 class MyBook:
     """
-    Class that manage my created books:
-
-    - get a book data (JSON data)
-    - get the HTML rendered my book to expose it over http
-    - build a book (compile HTML static site)
-    - build book definition (`mkdocs.yml`) replacing Jinja codes with soecific book values
-    - get book navigation items
+    Class that manage end user books.
 
     **Important properties:**
 
@@ -47,9 +43,9 @@ class MyBook:
         self.db = db
         self.MY_BOOK_URL = w3lib.url.canonicalize_url(
             url_quote(
-                FULL_EXT_URL +
-                MyBook._MY_BOOKS_URL_prefix +
-                self.book_code +
+                str(FULL_EXT_URL) +
+                str(MyBook._MY_BOOKS_URL_prefix) +
+                str(self.book_code) +
                 "/docs/"
             )
         )
@@ -67,12 +63,22 @@ class MyBook:
         # check if record exists and is only one
         bk_rec = None
         bk_rec = self.db.getBy({"code": self.book_code})
-        if bk_rec and isinstance(bk_rec, list):  # list means thare is more than 1 record
-            # fill key "store_location"
-            bk_rec[0]["store_location"] = self.getBookPath()
-            if bk_rec[0]["store_location"]:
-                bk_rec[0]["store_location"] += "/"
-            return bk_rec[0]
+        if bk_rec:
+            if isinstance(bk_rec, list):
+                # there is more than 1 record and keep only the first one
+                bk_rec = bk_rec[0]
+            elif isinstance(bk_rec, dict):
+                # do nothing, record is in right format
+                pass
+            else:
+                # unknown record type so exit with None
+                return None
+            # update key "store_location"
+            bk_rec["store_location"] = self.getBookPath()
+            # when location exists appent `/`to ckear state it as directory otherwise let it unchanged
+            if bk_rec["store_location"]:
+               bk_rec["store_location"] += "/"
+            return bk_rec
         else:
             return None
 
