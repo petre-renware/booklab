@@ -20,10 +20,7 @@ def init_db() -> tuple[pysondb]:
     """
     file = os.path.join(DATA_ROOT, "books_catalog.json")
     db_books = pysondb.db.getDb(file)
-
-    file = os.path.join(DATA_ROOT, "app_info.json")
-    db_system = pysondb.db.getDb(file)
-
+    db_system = None
     return (db_books, db_system)
 
 

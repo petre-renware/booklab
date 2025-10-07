@@ -19,11 +19,11 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ bo
 
 ## Date de stare curenta
 
-* Ultima actualizare: `{{book_data.status.last_update_date}}`
-* Ultima generare carte: `{{book_data.status.last_build_date}}`
-* Locatia stocare: `{{book_data.status.location_dir}}`
-* Locatia publicare: `{{book_data.status.published_location}}`
-* Carte inchisa editarii: `{{book_data.status.closed}}`
+* Ultima actualizare: `{{book_data.last_update_date}}`
+* Ultima generare carte: `{{book_data.last_build_date}}`
+* Locatia stocare: `{{book_data.store_location}}`
+* Locatia publicare: `{{book_data.published_location}}`
+* Carte inchisa editarii: `{{book_data.closed}}`
 
 ## Date volumetrice
 

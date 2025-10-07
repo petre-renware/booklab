@@ -68,8 +68,13 @@ class MyBook:
         bk_rec = None
         bk_rec = self.db.getBy({"code": self.book_code})
         if bk_rec and isinstance(bk_rec, list):  # list means thare is more than 1 record
+            # fill key "store_location"
+            bk_rec[0]["store_location"] = self.getBookPath()
+            if bk_rec[0]["store_location"]:
+                bk_rec[0]["store_location"] += "/"
             return bk_rec[0]
-        return None
+        else:
+            return None
 
 
     def getBookPath(self) -> str:

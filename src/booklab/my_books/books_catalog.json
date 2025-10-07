@@ -10,13 +10,11 @@
             "notes": "Inregistrare obligatorie de la instalare sistem. Non editabila.",
             "created_date": "2025-09-26",
             "created_by": "system",
-            "status": {
-                "last_update_date": "2025-09-26",
-                "last_build_date": null,
-                "location_dir": "my_books/book_template/",
-                "closed": true,
-                "published_location": null
-            }
+            "last_update_date": "2025-09-26",
+            "last_build_date": null,
+            "closed": true,
+            "store_location": "... USE MyBook.getBookPath() instead",
+            "published_location": null
         },
         {
             "id": 1,
@@ -28,13 +26,11 @@
             "notes": "notes - example record",
             "created_date": "1900-08-01",
             "created_by": "me-my-name-here",
-            "status": {
-                "last_update_date": null,
-                "last_build_date": null,
-                "location_dir": null,
-                "closed": false,
-                "published_location": null
-            }
+            "last_update_date": null,
+            "last_build_date": null,
+            "closed": false,
+            "store_location": "... USE MyBook.getBookPath() instead",
+            "published_location": null
         }
     ]
 }

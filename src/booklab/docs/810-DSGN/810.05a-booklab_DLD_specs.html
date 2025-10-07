@@ -873,10 +873,6 @@
 </li>
 </ul>
 </li>
-<li><a href="#booklabbooklibdb_init">booklab.booklib.db_init</a><ul>
-<li><a href="#init_db">init_db</a></li>
-</ul>
-</li>
 <li><a href="#booklabmy_booksbook_template">booklab.my_books.book_template</a></li>
 <li><a href="#booklabmy_books">booklab.my_books</a></li>
 <li><a href="#booklabdoc_src">booklab.doc_src</a></li>
@@ -901,6 +897,10 @@
 <li><a href="#booklabbooklabd">booklab.booklabd</a></li>
 <li><a href="#booklabdocs">booklab.docs</a></li>
 <li><a href="#booklab__main__">booklab.__main__</a></li>
+<li><a href="#booklabdb_init">booklab.db_init</a><ul>
+<li><a href="#init_db">init_db</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <p>booklab"&gt;</a></p>
@@ -1023,18 +1023,6 @@ In cases where a context is needed this will be <em>trasparent</em> applied loca
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">renderBookConfig</span><span class="p">(</span><span class="n">out_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;mkdocs.yml&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </code></pre></div>
 <p>Render current book configuration file used in static site generation.</p>
-<p><a id="booklab.booklib.db_init"></a></p>
-<h1 id="booklabbooklibdb_init">booklab.booklib.db_init</h1>
-<p>Module that initialize <code>booklabd</code> database (more JSON files)</p>
-<p>This module is designed to initialize database objects <code>db_books</code> and <code>db_system</code>.</p>
-<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
-<p><a id="booklab.booklib.db_init.init_db"></a></p>
-<h4 id="init_db">init_db</h4>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">init_db</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">pysondb</span><span class="p">]</span>
-</code></pre></div>
-<p>Create db_books, db_system objects and return them as tuple</p>
-<p><strong>Returns</strong>:</p>
-<p><code>(db_books, db_system)</code> tuple of pysondb object</p>
 <p><a id="booklab.my_books.book_template"></a></p>
 <h1 id="booklabmy_booksbook_template">booklab.my_books.book_template</h1>
 <p>Contains the book template used when create a new book (<code>newb</code> funxtion, <code>/api/newb/</code> booklabd route).</p>
@@ -1170,6 +1158,18 @@ This is an alternate (but those expected from an end user) way to access static 
 <h1 id="booklab__main__">booklab.__main__</h1>
 <p>... wip ...
 modules to be launched at package call with <code>-m</code> option</p>
+<p><a id="booklab.db_init"></a></p>
+<h1 id="booklabdb_init">booklab.db_init</h1>
+<p>Module that initialize <code>booklabd</code> database (more JSON files)</p>
+<p>This module is designed to initialize database objects <code>db_books</code> and <code>db_system</code>.</p>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.db_init.init_db"></a></p>
+<h4 id="init_db">init_db</h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">init_db</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">pysondb</span><span class="p">]</span>
+</code></pre></div>
+<p>Create db_books, db_system objects and return them as tuple</p>
+<p><strong>Returns</strong>:</p>
+<p><code>(db_books, db_system)</code> tuple of pysondb object</p>
 
   <hr>
 <div class="md-source-file">
