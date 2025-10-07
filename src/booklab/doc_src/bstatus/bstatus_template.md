@@ -21,7 +21,7 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ bo
 
 * Ultima actualizare: `{{book_data.last_update_date}}`
 * Ultima generare carte: `{{book_data.last_build_date}}`
-* Locatia stocare: `... ... to be get from MyBook class`
+* Locatia stocare: `{{book_data.store_location}}`
 * Locatia publicare: `{{book_data.published_location}}`
 * Carte inchisa editarii: `{{book_data.closed}}`
 

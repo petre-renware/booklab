@@ -13,6 +13,7 @@
             "last_update_date": "2025-09-26",
             "last_build_date": null,
             "closed": true,
+            "store_location": "... USE MyBook.getBookPath() instead",
             "published_location": null
         },
         {
@@ -28,6 +29,7 @@
             "last_update_date": null,
             "last_build_date": null,
             "closed": false,
+            "store_location": "... USE MyBook.getBookPath() instead",
             "published_location": null
         }
     ]

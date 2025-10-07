@@ -28,8 +28,8 @@ update `book_template` (aka `btmpl`) functionalities:
 ## ... [0.8] - unreleased
 * tbd... update api_bstatus() to use MyBook.getBookURL() to show url path where book can be seen
 * tbd... update api_bstatus() to use MyBook.getBookPath() to show location and drop that info from data/book_catalog.json
-
-* [0.7.dev22] update my_books/books_catalog.json making full flat structure: drop "status" key and move its keys one level up + drop "location" key that will be obtained through MyBook class
+* [0.8a23] update my_books/books_catalog.json for "store_location" key and upd MyBook.getBook() method to fill in this key "on the fly" (not update of source json data)
+* [0.8.dev22] update my_books/books_catalog.json making full flat structure: drop "status" key and move its keys one level up + "location" key that will be obtained through MyBook class
 * [0.8.dev21] updateded project README.md with installation steps
 * [0.8.dev20] fix db_init.py to return None for db_ystem (was dropped) to remain for future use and. Move this file to booklab root
 * [0.8a19] MyBook.getBookPath() to chk if directory exists and if not return None
