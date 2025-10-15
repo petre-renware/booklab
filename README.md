@@ -32,7 +32,7 @@ Descarcati fisierul de definire a proiectului `pypriject.toml` astfel:
 ```shell
 booklab setup --get-project-definition
 ```
-comanda care va aduce in directorul creat de dvs fisierul `pyproject.toml` care va fi utilizat de PDM pentru a continua instalarea. Apoi rulati
+comanda care va aduce in directorul creat de dvs fisierul `pyproject.toml` care va fi utilizat de PDM pentru a continua instalarea. Apoi rulati:
 ```shell
 pdm install
 ```
@@ -40,11 +40,32 @@ pdm install
 comanda care va crea un mediu virtual (python virtual environnent) cu toate dependentele necesare si cu versiunea de Python care permite rularea corecta a aplicatiei.
 
 
+## Pornirea si oprirea serverului Booklab
+
+Pentru a avea acces dun interfata UI (browser) trebuie pornit serverul de aplicatie astefe:
+```shell
+booklab server run
+```
+
+Pentru oprirea sau repornirea serverului se va folosi una din comenzile urmatoare:
+```shell
+booklab server stop
+booklab server restart
+```
+
+**NOTE:**
+
+* Serverul odata pornit va rula pina la oprirea explicita sau repornirea masinii hardware
+* Pentru pornirea automata (la restart masina hardware) se poate folosi orice metoda standard Linux disponibila pe versiunea folosita de dvs.
+  De exemplu prin internediul `cron` sau `systemd`sau chiar folosind alte instrumente dedicate cum ar fi `supervisor`. 
 
 
 ## Log modificari
 
-[CHANGELOG](./CHANGELOG.md)
+
+* [CHANGELOG - last stable version](https://github.com/petre-renware/booklab/blob/master/CHANGELOG.md)
+
+* [CHANGELOG - develo=ment version](https://github.com/petre-renware/booklab/blob/development/CHANGELOG.md)
 
 
 

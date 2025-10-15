@@ -7,8 +7,17 @@ Usage:
     booklab setup <options>
     booklab init <options>
     booklab server (run|stop|restart)
-    booklab book (new|build|preview|deploy|edit)
-    booklab catalog [book] <-ls>
+    booklab catalog
+    booklab status <my-book>
+    booklab new
+    booklab build <my-book>
+    booklab preview <my-book>
+    booklab deploy <my-book>
+    booklab page-edit <my-book>
+    booklab page-upload <my-book>
+    booklab page-upload <my-book>
+    vooklab edit-nav[igation] <my-book>
+    booklab pack <my-book>
 
 Options:
 

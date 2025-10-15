@@ -858,6 +858,8 @@
 <ul>
 <li><a href="#booklab">booklab</a></li>
 <li><a href="#booklabbooklab_cli">booklab.booklab_cli</a></li>
+<li><a href="#booklabbooklab_clicmd_xxx">booklab.booklab_cli.cmd_xxx</a></li>
+<li><a href="#booklabbooklab_cliparam_types">booklab.booklab_cli.param_types</a></li>
 <li><a href="#booklabconf">booklab.conf</a></li>
 <li><a href="#booklabconfgunicorn_config">booklab.conf.gunicorn_config</a></li>
 <li><a href="#booklabconfbooklab_ext_url">booklab.conf.booklab_ext_url</a></li>
@@ -941,8 +943,17 @@
 booklab setup &lt;options&gt;
 booklab init &lt;options&gt;
 booklab server (run|stop|restart)
-booklab book (new|build|preview|deploy|edit)
-booklab catalog [book] &lt;-ls&gt;
+booklab catalog
+booklab status &lt;my-book&gt;
+booklab new
+booklab build &lt;my-book&gt;
+booklab preview &lt;my-book&gt;
+booklab deploy &lt;my-book&gt;
+booklab page-edit &lt;my-book&gt;
+booklab page-upload &lt;my-book&gt;
+booklab page-upload &lt;my-book&gt;
+vooklab edit-nav[igation] &lt;my-book&gt;
+booklab pack &lt;my-book&gt;
 </code></pre>
 <p>Options:</p>
 <pre><code>-l, --list    List books catalog
@@ -951,6 +962,15 @@ booklab catalog [book] &lt;-ls&gt;
 </code></pre>
 <p>Architecture; Linux standard (POSIX) CLI</p>
 <p>Author; Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.booklab_cli.cmd_xxx"></a></p>
+<h1 id="booklabbooklab_clicmd_xxx">booklab.booklab_cli.cmd_xxx</h1>
+<p>Command xxx definition.</p>
+<p><a id="booklab.booklab_cli.param_types"></a></p>
+<h1 id="booklabbooklab_cliparam_types">booklab.booklab_cli.param_types</h1>
+<p>Define parameters used by CLI app.</p>
+<p>Parameters definition as used by
+<code>Typer</code> framework in parameters definition
+and described through <code>Annotated</code> class.</p>
 <p><a id="booklab.conf"></a></p>
 <h1 id="booklabconf">booklab.conf</h1>
 <p>Cnfigurations component contains various system components configuration files:</p>
@@ -1202,7 +1222,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 14, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 15, 2025</span>
       
     
   </small>

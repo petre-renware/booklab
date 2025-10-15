@@ -14,14 +14,16 @@
 
 ## tbd... [0.9] - unreleased
 Implement `bbld`, book config and update `book_template` functionalities:
-* tbd... rendder book config (mkdocs.yml)
+* tbd... render book config (mkdocs.yml)
   render from ../my_books/... and if not
   render from string
 
 * tbd... mkdocs_template.yml, book_navigation.json: review and upd nav section with Jinja data-items
   HINT: as test entry use the guide form entry (this entry will not be accesible from end user menu)
 
-* tbd... create booklab-cli.__init__.py specs using docopt
+* [0.9a1] `booklab_cli` create a skeleton of modules
+* [0.9.dev0] update README.md file to differentiate for changelog link entries. Make an entry for stable version and one for dev version, both getting file from GitHib
+
 
 
 
