@@ -1,3 +1,7 @@
+###########
+## WARNING: do nit manually edit this file.
+###########
+
 site_name: Book Template  # Jinja subject
 site_author: 'Petre Iordanescu (petre.iordanescu@gmail.com)'  # Jinja subject
 copyright: Freeware  # Jinja subject
@@ -6,6 +10,7 @@ copyright: Freeware  # Jinja subject
 
 nav:
     - Acasa: index.md
+    - Ghid configurare: guides/how_organize_book.md
 
 
 

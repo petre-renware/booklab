@@ -13,8 +13,8 @@ __pycache__/
 # dynamically run-time generated files
 *.PID
 *.json.lock
-src/booklab/docs/bcat/bcat.htm*
-src/booklab/docs/bstatus/bstatus.htm*
+
+
 
 
 # Distribution / packaging

@@ -1,0 +1,1 @@
+src/booklab/scripts/activate-venv.cmd

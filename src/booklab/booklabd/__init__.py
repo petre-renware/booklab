@@ -14,7 +14,7 @@ Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 import os
 import pysondb
 from booklab.booklabd.app_init import init_app
-from booklab.booklib.db_init import init_db
+from booklab.db_init import init_db
 from booklab import PROJECT_ROOT
 from booklab import PACKAGE_ROOT
 from booklab import CONF_ROOT

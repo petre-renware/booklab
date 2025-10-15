@@ -8,18 +8,95 @@
 ## ... #TODO future things:
 * tbd... Jupiter Notebooks
 * tbd... ref command "Verificare" (code-name `bstatus`):
-For Implement `newb`, `build`
-    * tbd... review and update all command scrips from book template (btmpl)
-    * tbd... update my_book/book_template shell to build book
-    * tbd... update my_book/book_template/mkdocs.yml with Jinja fields to reflect current book at its creation
-    * tbd... when render mkdocs.yml chk if can render from a parent dir, ie `../my_books/<book_code>/docs/`
 
 
 
+
+## tbd... [0.9] - unreleased
+Implement `bbld`, book config and update `book_template` functionalities:
+* tbd... rendder book config (mkdocs.yml)
+  render from ../my_books/... and if not
+  render from string
+
+* tbd... mkdocs_template.yml, book_navigation.json: review and upd nav section with Jinja data-items
+  HINT: as test entry use the guide form entry (this entry will not be accesible from end user menu)
+
+* tbd... create booklab-cli.__init__.py specs using docopt
+
+
+
+
+
+## [0.8] - 15.oct.2025
+Update `my_book` config, `book_template` functionalities:
+* [0.8a34] clean project structure and test package
+* [0.8a33] enhance 0.8a932 err page with console output of execution (stdout + stderr).
+    - Jinja variable `console_out`
+    - plus symlinked pyproject.toml in/to booklab package root
+* [0.8a32] create in static site an entry dedicated to display a errors page with a list of errors. SPECS:
+    - entry: `/errors/errors_template.md`
+    - Jinja variable: `errors: list`
+* [0.8.dev31] create a minimal struct of `book_template` containig:
+    - ck "not-edit" files for warning-comment inside
+    - book guide entry in book_navigation.json
+    - doc_src/assets/pictures/wip.jpg picture
+    - review & upd all materials for typing errors
+* [0.8.dev30] review & update `mkdocs_template.yml`, create 2 variables with data:
+     - `book_data` to keep data from books_catalog.json
+     - `book_nav` to keep data from boik_navigation.json
+* [0.8.dev29] mv `booklab/booklib/my_books.py` to `booklab/books_manager.py`
+* [0.8.dev28] admin prj improve scrips/ module
+* [0.8.dev27] created in book directory (`bk-pages-pool/`) a "place" where to upload files (book pages) and latter use to move in book (doc_src/)
+* [0.8.dev26] clean bstatus_template keeping only books-relevant info
+* [0.8b25] update bstatus_template and books_catalog.json
+    - [0.8a25] test & prep to publish
+    - [0.8.dev25] update doc_src/bstatus_template.md & MyBook.getBook() to show new field
+    - [0.8.dev24] insert key "preview_url" to  data/book_catalog.json (like "store_location" key)
+* [0.8b23] test & fix [0.8a23]
+* [0.8a23] update my_books/books_catalog.json for "store_location" key and upd MyBook.getBook() method to fill in this key "on the fly" (not update of source json data)
+* [0.8.dev22] update my_books/books_catalog.json making full flat structure: drop "status" key and move its keys one level up + "location" key that will be obtained through MyBook class
+* [0.8.dev21] updateded project README.md with installation steps
+* [0.8.dev20] fix db_init.py to return None for db_ystem (was dropped) to remain for future use and. Move this file to booklab root
+* [0.8a19] MyBook.getBookPath() to chk if directory exists and if not return None
+* [0.8.dev18] reorg project: drop dir data/ and mv books_catalog.json to my_books/. Update booklab.__init__.py for DATA_ROOT directory and db_init
+* [0.8b17] MyBook: method `getBookURL()` to return MY_BOOK_URL and update routes.py function api_prvb()
+* [0.8b16] create MyBook class methods that return paths and urls:
+    - build doc + package + publish them
+    - [0.8a16] use MyBoook property MY_BOOK_URL in routes.py on route /api/prvb/ (ie, book preview) to redirect to book site
+    - [0.8.dev16] MY_BOOK_URL for root url to current book `EXTERNAL-<SERVER_NAME>/external-prefix_path/my-books/<book-code>/docs/`
+* [0.8.dev15] clean project and improve adresability:
+    - use `w3lib.url` to normalize urls at their construction in booklabd/routes.py
+    - rollback commut [0.8.dev14] but replace /preview/ eith /my-books/
+    - MY_BOOK_PATH as root (path) of a book directory
+* [0.8.dev14] upd nginx config, let just /api/ location (but, in fact,is not needed)
+* [0.8.dev13] booklab: MY_BOOKS_ROOT pointing to location where end user books location: .../src/booklab/my_books/
+* [0.8b12] my_books:
+    - fixed bstatus page with small formatting / display inconsistency between same info groups
+    - upd `/api/bstatus/` & `/api/prvb/` to use MyBook.getBook method instrad of function getBook
+    - move actual function `getBook` as method of class myBook
+    - add class var `db` to have web app initialized database objec6
+    - boklib: create my_books.MyBook class that manage my books. At init get a book code, Flak application that will use object and set them as instance variables
+* [0.8a11] all scripts moved from booklab/ in booklab/scrpts/ directory
+* [0.8.dev10] server-run.sh: upd PID save dir from /tmp to ~ and make file hidden
+* [0.8.dev9] server-run.sh. upd loading config file to load it as Python module
+* [0.8.dev8] server-run.sh: upd config file name and location + get at its load the PACKAGE_ROOT
+* [0.8a7] booklab data & template: move "navigation" item entierly into a new JSON in book_template --> `book_navigation.json`
+* [0.8a6] booklab static-site bcat_template.html
+    - drop column ref actions
+    - column book_code value, make as link to existing bcat_status
+* [0.8.dev5] fixed 0.8.dev4 ref server-run.sh bug at restart option, PID file location
+* [0.8.dev4] updated booklab/server-run.sh to run and load config file regardless of crt dir where is launchrd
+* [0.8a2] make a script that generate API doc (ref PDM scripts) the append str "[TOC]" at the beginning (script "booklab/gen-api-doc.sh")
+* [0.8a1] static site: review "About menu", clean it and make a page "About Booklab" with version, licence, author(s)
+* [0.8a0] create script `src/booklab/master_site_build.sh/` to mkdocs-build the Booklab static site and hard-link resulted docs/ ditectory to project root (to be published  by GitHub on its servers)
+* [0.8.dev3] enhance booklab/data/books_catalog.json book navigation structure with a right dict usable in nav section generation of mkdocs.yml
+* [0.8.dev2] update booklab/data/books_catalog.json with a section dedicated to book navigation structure (orgm functionality) targeted to go in book configuration file (mkd9ks.yml)
+* [0.8.dev1] create and update booklab/my_books/book_template/mkdocs_template.yml with Jinja fields to reflect current book config by rendering it at book build
+* [0.8.dev0] review & plan-for all command scrips from book template (btmpl)
 
 
 ## [0.7] - 27.sep.2025
-Implement 250927 `prvb` and `book_template` (aka `btmpl`) functionalities:
+Implement  `prvb` and update `book_template` (aka `btmpl`) functionalities:
 * [0.7rc0] test, build doc, build package, publish
 * [0.7a2] 250927 routes.py:
     * code for preview route (`/api/prvb/`) for a book resulted static-site as route /preview/<my_book_code>/docs/
@@ -36,8 +113,6 @@ Implement 250927 `prvb` and `book_template` (aka `btmpl`) functionalities:
 * [0.7b0] 250924 clean project and permanetly keep a copy of `.../src/booklab/docs/` in project root
 
 
-
-
 ## [0.6] - 24.sep.2025
 Refactor WSGI app (booklabd), move static site (docs/) from booklab project root to package root
 * [0.6b1] 250924 drop /<PROJECT ROOT>/docs/ dir & update booklab code to change all hard-coded (in clear) file-path refs to `data/` with `api_app.static_path` variable
@@ -48,8 +123,6 @@ Refactor WSGI app (booklabd), move static site (docs/) from booklab project root
     * move static site inside booklab package. Keep name as `docs/`
     * make a sym-link in project root directory to preseve publishing through GitHub
     * move doc-src and mkdocs.yaml to make right compilation in new directory where moved
-
-
 
 
 ## [0.5] - 22.sep.2025
@@ -77,8 +150,6 @@ Implement `bstatus` functionality:
 * [0.5.dev2] 250916 update `books_catalog.json` with data requured by `bstatus` functionality
 * [0.5.dev1] 250916 clean prj docstrings and dirs & files
 * [0.5.dev0] 250916 init 0.5 version
-
-
 
 
 ## [0.4] - 16.sep.2025
@@ -118,8 +189,6 @@ First booklabd as Flask web app to serve `/api/.../` routes:
 * 250901-b update version string and set Flask root directory as project dir (to be able to address docs/ dir as template dir)
 
 
-
-
 ## |0.4b2] - 01.sep.2025
 Create database (aka `db*`) objects for JSON files and a test `/api/bcat` route:
 * 250901-a a test route for /api/bcat/ to write sone data in books catalog
@@ -131,8 +200,6 @@ Create database (aka `db*`) objects for JSON files and a test `/api/bcat` route:
 * 250831-a `booklab.__init__` create constants: PACKAGE _ROOT, DATA_ROOT, CONF_ROOT
 * 250830-b make gunicorn config python module in `booklab.conf` module (as new one)
 * 250830-a config for for gunicorn in serving `booklabd` server web app. file is symlinked to project root to be correct executed with pdm run as tool script
-
-
 
 
 ## [0.4b1] - 29.aug.2025
@@ -149,8 +216,6 @@ Update Flask structure to be able to have exposed basic objects (app, db, ...l a
 * 250826-a booklabd/routes.py created a route for /api/bcat/. Run OK. Need test efective route exec in browser
 
 
-
-
 ## [0.4a1] - 25.aug.2025
 Create basic Flask structure:
 * 250825 tested pyproject.toml PDM run script `build_doc` created to generate booklab technical documentation
@@ -160,15 +225,11 @@ Create basic Flask structure:
 * 250824 upd version and import req packages for Flask and old CGI structure (to access JSON files as a database)
 
 
-
-
 ## [0.3a1] - 24.aug.2025
 Create raw structure of booklab package:
 * 250824 created basic Flask dirs in `.../booklabd/`
 * 250823 created  `.../booklabd/templates` directory for Flask/Quart rendering with files as symlinks to static site from `docs/` (genetated by mkdocs)
 * 250823 release 0.3.dev2 into development branch and update version to 0.3a1
-
-
 
 
 ## [0.3.dev2] - 23.aug.2025
@@ -185,8 +246,6 @@ Restructure and clean project for PDM package management:
 * 250820 switched project on PDM management
 
 
-
-
 ## [0.3.1] - 03.oct.2023
 BCAT group commands:
 * 231023piu_b updated `RELNOTE.md` and published site
@@ -197,12 +256,8 @@ BCAT group commands:
 * 231021piu_a small fixes in 'bcat.md`
 
 
-
-
 ## [0.2] - sep.2023
 First version of BCAT (book catalog) and TMPL (book template)
-
-
 
 
 ## [0.1] - aug.2023

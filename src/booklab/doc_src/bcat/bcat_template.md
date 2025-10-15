@@ -5,7 +5,7 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 ## Lista cartilor
 
-[Creare carte](/booklab/api/newb/)
+[Creare carte noua](/booklab/api/newb/)
 
 {% include './local-page.css' %}
 
@@ -21,7 +21,6 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
             <th>Note</th>
             <th>creata de</th>
             <th>data creare</th>
-            <th>actiuni</th>
         </tr>
     </thead>
     <tbody>
@@ -29,7 +28,9 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
         {% for book in bcat_data %}
         <tr>
             <td>{{ book.id }}</td>
-            <td>{{ book.code }}</td>
+            <td>
+                <a href="/booklab/api/bstatus/?code={{ book.code }}">{{ book.code }}</a>
+            </td>
             <td>{{ book.short_desc }}</td>
             <td>{{ book.description }}</td>
             <td>{{ book.copyright }}</td>
@@ -37,18 +38,6 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
             <td>{{ book.notes }}</td>
             <td>{{ book.created_by }}</td>
             <td>{{ book.created_date }}</td>
-            <td>
-                    <a href="/booklab/api/bstatus/?code={{ book.code }}">* Starea cartii</a>
-            {% if book.status.closed is sameas true %}
-                <br>--- Ne-Editabila
-            {% else %}
-                <br><a href="/booklab/api/edtb/?code={{ book.code }}">* Editare materiale</a>
-            {% endif %}
-                <br><a href="/booklab/api/orgm/?code={{ book.code }}">* Sectiuni carte</a>
-                <br><a href="/booklab/api/prvb/?code={{ book.code }}">* Vizualizare carte</a>
-                <br><a href="/booklab/api/bbld/?code={{ book.code }}">* Generare carte</a>
-                <br><a href="/booklab/api/dplb/?code={{ book.code }}">* Livrare carte</a>
-            </td>
         </tr>
         {% endfor %}
         {% endraw %}
