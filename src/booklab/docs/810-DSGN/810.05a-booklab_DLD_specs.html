@@ -279,7 +279,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="https://www.renware.eu/support.html" class="md-tabs__link">
+      <a href="https://www.renware.eu/contact.html" class="md-tabs__link">
         About
       </a>
     </li>
@@ -779,20 +779,6 @@
   
   
     <li class="md-nav__item">
-      <a href="https://www.renware.eu/support.html" class="md-nav__link">
-        Suport
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="https://www.renware.eu/contact.html" class="md-nav__link">
         Contact
       </a>
@@ -809,6 +795,20 @@
     <li class="md-nav__item">
       <a href="../about/" class="md-nav__link">
         Despre BookLab
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/booklab/api/version/" class="md-nav__link">
+        Versiunea
       </a>
     </li>
   
@@ -888,7 +888,9 @@
 <li><a href="#api_bbld">api_bbld</a></li>
 <li><a href="#api_dplb">api_dplb</a></li>
 <li><a href="#api_bcat">api_bcat</a></li>
+<li><a href="#version">version</a></li>
 <li><a href="#index">index</a></li>
+<li><a href="#about">about</a></li>
 </ul>
 </li>
 <li><a href="#booklabbooklabdapp_init">booklab.booklabd.app_init</a><ul>
@@ -1080,63 +1082,75 @@ By external access is understood all URL parts necessary to expose Booklab appli
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/newb/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_newb</span><span class="p">()</span>
 </code></pre></div>
-<p>serve <strong>New book (newb)</strong> functionality.</p>
+<p>Serve <strong>New book (newb)</strong> functionality.</p>
 <p>Query paraneters: none</p>
 <p><a id="booklab.booklabd.routes.api_bstatus"></a></p>
 <h4 id="api_bstatus">api_bstatus</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/bstatus/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_bstatus</span><span class="p">(</span><span class="n">book_code</span><span class="o">=...</span><span class="p">)</span>
 </code></pre></div>
-<p>serve <strong>Book status (bstatus)</strong> functionality.</p>
+<p>Serve <strong>Book status (bstatus)</strong> functionality.</p>
 <p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_edtb"></a></p>
 <h4 id="api_edtb">api_edtb</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/edtb/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_edtb</span><span class="p">(</span><span class="n">book_code</span><span class="o">=...</span><span class="p">)</span>
 </code></pre></div>
-<p>serve <strong>Book edit (edtb)</strong> functionality.</p>
+<p>Serve <strong>Book edit (edtb)</strong> functionality.</p>
 <p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_orgm"></a></p>
 <h4 id="api_orgm">api_orgm</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/orgm/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_orgm</span><span class="p">(</span><span class="n">book_code</span><span class="o">=...</span><span class="p">)</span>
 </code></pre></div>
-<p>serve  <strong>Book structure organization (orgm:</strong> functionality.</p>
+<p>Serve <strong>Book structure organization (orgm:</strong> functionality.</p>
 <p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_prvb"></a></p>
 <h4 id="api_prvb">api_prvb</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/prvb/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_prvb</span><span class="p">(</span><span class="n">book_code</span><span class="o">=...</span><span class="p">)</span>
 </code></pre></div>
-<p>serve <strong>Book preview (prvb)</strong> functionality.</p>
+<p>Serve <strong>Book preview (prvb)</strong> functionality.</p>
 <p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_bbld"></a></p>
 <h4 id="api_bbld">api_bbld</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/bbld/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_bbld</span><span class="p">(</span><span class="n">book_code</span><span class="o">=...</span><span class="p">)</span>
 </code></pre></div>
-<p>serve <strong>Book build (bbld)</strong> functionality.</p>
+<p>Serve <strong>Book build (bbld)</strong> functionality.</p>
 <p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_dplb"></a></p>
 <h4 id="api_dplb">api_dplb</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/dplb/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_dplb</span><span class="p">(</span><span class="n">book_code</span><span class="o">=...</span><span class="p">)</span>
 </code></pre></div>
-<p>serve <strong>Book delivery (dplb)</strong> functionality.</p>
+<p>Serve <strong>Book delivery (dplb)</strong> functionality.</p>
 <p>Query paraneters: book code</p>
 <p><a id="booklab.booklabd.routes.api_bcat"></a></p>
 <h4 id="api_bcat">api_bcat</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/bcat/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">api_bcat</span><span class="p">()</span>
 </code></pre></div>
-<p>serve accessing <strong>books catalog (bcat)</strong> functionality.</p>
+<p>Serve accessing <strong>books catalog (bcat)</strong> functionality.</p>
+<p><a id="booklab.booklabd.routes.version"></a></p>
+<h4 id="version">version</h4>
+<div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/version/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">version</span><span class="p">()</span>
+</code></pre></div>
+<p>Return Vooklab application version as pure plain raw text (no html).</p>
 <p><a id="booklab.booklabd.routes.index"></a></p>
 <h4 id="index">index</h4>
 <div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">index</span><span class="p">()</span>
 </code></pre></div>
-<p>serve a cessing Home route.
+<p>Serve a cessing Home route.
 This is an alternate (but those expected from an end user) way to access static site main / home page.</p>
+<p><a id="booklab.booklabd.routes.about"></a></p>
+<h4 id="about">about</h4>
+<div class="highlight"><pre><span></span><code><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/about/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">about</span><span class="p">()</span>
+</code></pre></div>
+<p>Construct "About Booklab" page.</p>
 <p><a id="booklab.booklabd.app_init"></a></p>
 <h1 id="booklabbooklabdapp_init">booklab.booklabd.app_init</h1>
 <p><strong>app_init</strong> module that initialize <code>booklabd</code> application</p>

@@ -30,9 +30,9 @@ nav:
             - Baza de date "Catalogul cartilor: help/books_catalog.json"
             - Doc tehnica detaliata: 810-DSGN/810.05a-booklab_DLD_specs.md
     - About:
-        - Suport: https://www.renware.eu/support.html
         - Contact: https://www.renware.eu/contact.html
         - Despre BookLab: about/
+        - Versiunea: /booklab/api/version/
 
 
 

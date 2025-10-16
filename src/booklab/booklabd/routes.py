@@ -45,20 +45,20 @@ docs_prefix = os.path.join(STATIC_SITE_ROOT)
 
 @api_app.route("/api/newb/")
 def api_newb():
-    """serve **New book (newb)** functionality.
+    """Serve **New book (newb)** functionality.
 
     Query paraneters: none
     """
     book_code = request.args.get("code")
     ret_str = f"Page for <b>newb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
-    #TODO  here should integrate wip static page
+    #TODO here should integrate wip static page
     return ret_str
 
 
 @api_app.route("/api/bstatus/")
 def api_bstatus(book_code = ...):
-    """serve **Book status (bstatus)** functionality.
+    """Serve **Book status (bstatus)** functionality.
 
     Query paraneters: book code
     """
@@ -92,7 +92,7 @@ def api_bstatus(book_code = ...):
 
 @api_app.route("/api/edtb/")
 def api_edtb(book_code = ...):
-    """serve **Book edit (edtb)** functionality.
+    """Serve **Book edit (edtb)** functionality.
 
     Query paraneters: book code
     """
@@ -101,13 +101,13 @@ def api_edtb(book_code = ...):
     #TODO before getting book test if status.closed is true and if then return a 400 err "Book not editable"
     ret_str = f"Page for <b>edtb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
-    #TODO  here should integrate wip static page
+    #TODO here should integrate wip static page
     return ret_str
 
 
 @api_app.route("/api/orgm/")
 def api_orgm(book_code = ...):
-    """serve  **Book structure organization (orgm:** functionality.
+    """Serve **Book structure organization (orgm:** functionality.
 
     Query paraneters: book code
     """
@@ -115,13 +115,13 @@ def api_orgm(book_code = ...):
         book_code = request.args.get("code")
     ret_str = f"Page for <b>orgm</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
-    #TODO  here should integrate wip static page
+    #TODO here should integrate wip static page
     return ret_str
 
 
 @api_app.route("/api/prvb/")
 def api_prvb(book_code = ...):
-    """serve **Book preview (prvb)** functionality.
+    """Serve **Book preview (prvb)** functionality.
 
     Query paraneters: book code
     """
@@ -141,7 +141,7 @@ def api_prvb(book_code = ...):
 
 @api_app.route("/api/bbld/")
 def api_bbld(book_code = ...):
-    """serve **Book build (bbld)** functionality.
+    """Serve **Book build (bbld)** functionality.
 
     Query paraneters: book code
     """
@@ -149,7 +149,7 @@ def api_bbld(book_code = ...):
         book_code = request.args.get("code")
     ret_str = f"Page for <b>bbld</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
-    #TODO  here should integrate wip static page
+    #TODO here should integrate wip static page
     ...
     #TODO update books_catalog ref `last build / update date`
     return ret_str
@@ -157,7 +157,7 @@ def api_bbld(book_code = ...):
 
 @api_app.route("/api/dplb/")
 def api_dplb(book_code = ...):
-    """serve **Book delivery (dplb)** functionality.
+    """Serve **Book delivery (dplb)** functionality.
 
     Query paraneters: book code
     """
@@ -165,13 +165,13 @@ def api_dplb(book_code = ...):
         book_code = request.args.get("code")
     ret_str = f"Page for <b>dplb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
-    #TODO  here should integrate wip static page
+    #TODO here should integrate wip static page
     return ret_str
 
 
 @api_app.route("/api/bcat/")
 def api_bcat():
-    """serve accessing **books catalog (bcat)** functionality.
+    """Serve accessing **books catalog (bcat)** functionality.
     """
     bcat_records = None
     bcat_records = db_books.getAll()
@@ -192,9 +192,18 @@ def api_bcat():
     return redirect(redirect_path)
 
 
+@api_app.route("/api/version/")
+def version():
+    """ Return Vooklab application version as pure plain raw text (no html).
+    """
+    response = make_response(__version__, 200)
+    response.mimetype = "text/plain"
+    return response
+
+
 @api_app.route("/")
 def index():
-    """serve a cessing Home route.
+    """Serve a cessing Home route.
     This is an alternate (but those expected from an end user) way to access static site main / home page.
     """
     redirect_path = w3lib.url.canonicalize_url(
@@ -205,6 +214,8 @@ def index():
 
 @api_app.route("/api/about/")
 def about():
+    """Construct "About Booklab" page.
+    """
     rendered_str = render_template(
         "about/about_template.html",
         version = __version__
