@@ -5,7 +5,7 @@ description = "A books manager. For any kind of documentation can dream about."
 authors = [
     {name = "Petre Iordanescu", email = "petre.iordanescu@gmail.com"},
 ]
-requires-python = ">=3.10"
+requires-python = "<3.13,>=3.10"
 readme = "README.md"
 license = {text = "GNU"}
 
@@ -106,20 +106,27 @@ dependencies = [
     "gunicorn>=23.0.0",
     "pango>=0.0.1",
     "w3lib>=2.3.1",
+    "rich>=14.2.0",
+    "pylibyaml>=0.1.0",
 ]
 
 
+[project.urls]
+HomePage = "http://booklab.renware.eu/"
+DevPage = "http://dev.renware.eu/booklab/"
 
 
 [tool.pdm]
 distribution = true
 
 
-
-
 [tool.pdm.scripts]
 gen_tech_doc = {shell = "src/booklab/scripts/gen-api-doc.sh"}
 gen_static_site = {shell = "src/booklab/scripts/master_site_build.sh"}
+build_site = { composite = [
+    "gen_tech_doc",
+    "gen_static_site"
+] }
 build_all = { composite = [
     "gen_tech_doc",
     "gen_static_site",
@@ -128,26 +135,14 @@ build_all = { composite = [
 bklab_srv = {shell = "src/booklab/scripts/server-run.sh"}  # run booklabd wsgi server
 
 
-
-
 [tool.pdm.version]
 source = "file"
 path = "src/booklab/__version__.py"
 
 
-
-[project.urls]
-HomePage = "http://booklab.renware.eu/"
-DevPage = "http://dev.renware.eu/booklab/"
-
-
-
-
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
-
-
 
 
 [dependency-groups]
@@ -157,4 +152,5 @@ test = [
 dev = [
     "pydoc-markdown>=4.8.2",
     "docopt>=0.6.2",
+    "python-dotenv>=1.1.1",
 ]

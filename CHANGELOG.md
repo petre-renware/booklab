@@ -17,12 +17,23 @@ Implement `bbld`, book config and update `book_template` functionalities:
 * tbd... render book config (mkdocs.yml)
   render from ../my_books/... and if not
   render from string
-
 * tbd... mkdocs_template.yml, book_navigation.json: review and upd nav section with Jinja data-items
   HINT: as test entry use the guide form entry (this entry will not be accesible from end user menu)
+* tbd... `static site` list all system routes in "About Booklab" page
+* tbd... display nav data as yaml, json somewhere in bstatus page
 
-* [0.9a4] test.ok 0.9.dev3
-* [0.9.dev3] `booklabd` mk route `/api/version/` that return Booklab-app version as pute plain text, no HTML as found 9n booklab.__version__ variable
+* [0.9a15] `MyBook` navigation structure
+    - [0.9.dev14] `MyBook` update method `getBookNav(format)` to get data as YAML
+    - [0.9.dev13] `MyBook` update method `getBookNav(format)` to get data as JSON
+    - [0.9.dev12] `MyBook.getBookNav(...)` add conditions to return according to `format` parameter
+    - [0.9.dev11] clean code and start use rich lib for debug prints
+    - [0.9.dev10] `MyBook` update method `getBookNav(format)` to get  data as dict
+    - [0.9.dev9] `MyBook` add skeleton for method `getBookNav(format)` to get navigation data as json & yaml format to use AS-IS for Jinja corresponding param in "mkdocs_template.yml"
+    - [0.9.dev8] add python-dotenv support and .flaskenv file
+    - [0.9.dev7] review & update "book_navigation.json" to be pysodb c0mpliant
+    - [0.9.dev6] clean code of [0.9.dev3]
+    - [0.9.dev5]`MyBook` add property to keep pysondb reference to "book_navigation.json"
+* [0.9a4] `booklabd` mk route `/api/version/` that return Booklab-app version as pute plain text, no HTML as found 9n booklab.__version__ variable
 * [0.9a2] static site updated about_template.html for links to application refrences and with a new section for displayng http endpoints
 * [0.9a1] `booklab_cli` create a skeleton of modules
 * [0.9.dev0] update README.md file to differentiate for changelog link entries. Make an entry for stable version and one for dev version, both getting file from GitHib

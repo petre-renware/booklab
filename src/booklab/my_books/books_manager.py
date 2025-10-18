@@ -1,6 +1,11 @@
 import os
 import pysondb
 import w3lib.url
+import json
+import pylibyaml
+import yaml  # mandatory to import after pylibyank
+from rich import print as rprint
+# from pathlib import Path
 
 from flask import Flask
 from werkzeug.urls import quote as url_quote
@@ -19,14 +24,16 @@ class MyBook:
     - `MY_BOOK_URL`: url to redirect to access book static site (preview book)
     - `MY_BOOK_PATH`: file-parh to book root location
 
-    Author: Petre Iordanescu (petre.iordanescu@gmail.com)
+    author: Petre Iordanescu (petre.iordanescu@gmail.com)
     """
     _MY_BOOKS_URL_prefix = "/my-books/"
     MY_BOOK_URL: str
     MY_BOOKS_PATH: str
+    book_path: str
     book_code: str
     web_app: Flask
-    db: pysondb
+    db_books_catalog: pysondb
+    db_book_nav: pysondb
 
 
     def __init__(
@@ -40,7 +47,7 @@ class MyBook:
         MyBook.MY_BOOKS_PATH = MY_BOOKS_ROOT
         self.book_code = book_code
         self.web_app = flask_app
-        self.db = db
+        self.db_books_catalog = db
         self.MY_BOOK_URL = w3lib.url.canonicalize_url(
             url_quote(
                 str(FULL_EXT_URL) +
@@ -49,10 +56,18 @@ class MyBook:
                 "/docs/"
             )
         )
+        if (this_bk_path := self.getBookPath()):
+            file_dbnav = os.path.join(
+                this_bk_path,
+                "book_navigation.json"
+            )
+            self.db_book_nav = pysondb.db.getDb(file_dbnav)
+        else:
+            self.db_book_nav = None
 
 
     def getBook(self) -> dict | None:
-        """Check for a given book code that is not None, exists in database and is exactly 1 record
+        """Check for a given book code that is not None, exists in database and is exactly 1 record.
 
         Return:
 
@@ -62,7 +77,7 @@ class MyBook:
             return None
         # check if record exists and is only one
         bk_rec = None
-        bk_rec = self.db.getBy({"code": self.book_code})
+        bk_rec = self.db_books_catalog.getBy({"code": self.book_code})
         if bk_rec:
             if isinstance(bk_rec, list):
                 # there is more than 1 record and keep only the first one
@@ -84,6 +99,44 @@ class MyBook:
             return bk_rec
         else:
             return None
+
+
+    def getBookNav(
+        self,
+        format = None
+    ) -> None | dict | str:
+        """Get book navigation.
+
+        Navigation info is retrieved from `book_navigation.json` data-file
+        identified by `self.db_book_nav` pysondb handler.
+
+        Return:
+
+        - `python dict` using `format = "dict"` (default option)
+        - `JSON str` using `format = "json"`
+        - `YAML str` using `format = "yaml"`
+        - `None` if not known format
+        """
+        bk_nav_raw_data = self.db_book_nav.getAll()
+        bk_nav_data = dict()
+        bk_nav_data["nav"] = bk_nav_raw_data
+        # check format param and return accordingly
+        if not format or format is ...:
+            format = "dict"  # degault value if not specified or set as None
+        if format == "dict":
+            return bk_nav_data
+        if format == "json":
+            json_nav_data = json.dumps(
+                bk_nav_data,
+                indent = 4
+            )
+            return json_nav_data
+        if format == "yaml":
+            yaml_nav_data = yaml.safe_dump(
+                bk_nav_data
+            )
+            return yaml_nav_data
+        return None  # if get here its a bug due to logic error
 
 
     def getBookPath(self) -> str:

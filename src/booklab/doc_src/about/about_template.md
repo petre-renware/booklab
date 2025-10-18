@@ -3,7 +3,7 @@
 
 {% raw %}
 
-* Versiunea aplicatiei **{{ version }}**
+* Versiunea aplicatiei: **{{ version }}**
 * Autor: Petre Iordanescu (petre.iordanescu@gmail.com)
 * Copyright: RENware Software Systems (http://www.renware.eu)
 * Licenta: GNU, freeware

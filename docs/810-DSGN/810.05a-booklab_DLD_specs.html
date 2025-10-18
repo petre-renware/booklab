@@ -869,6 +869,7 @@
 <li><a href="#mybook-objects">MyBook Objects</a><ul>
 <li><a href="#__init__">__init__</a></li>
 <li><a href="#getbook">getBook</a></li>
+<li><a href="#getbooknav">getBookNav</a></li>
 <li><a href="#getbookpath">getBookPath</a></li>
 <li><a href="#getbookurl">getBookURL</a></li>
 <li><a href="#renderbookconfig">renderBookConfig</a></li>
@@ -1022,7 +1023,7 @@ By external access is understood all URL parts necessary to expose Booklab appli
 <li><code>MY_BOOK_URL</code>: url to redirect to access book static site (preview book)</li>
 <li><code>MY_BOOK_PATH</code>: file-parh to book root location</li>
 </ul>
-<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p>author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.my_books.books_manager.MyBook.__init__"></a></p>
 <h4 id="__init__">__init__</h4>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">flask_app</span><span class="p">:</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
@@ -1032,10 +1033,24 @@ By external access is understood all URL parts necessary to expose Booklab appli
 <h4 id="getbook">getBook</h4>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">getBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span>
 </code></pre></div>
-<p>Check for a given book code that is not None, exists in database and is exactly 1 record</p>
+<p>Check for a given book code that is not None, exists in database and is exactly 1 record.</p>
 <p><strong>Returns</strong>:</p>
 <ul>
 <li><code>dict</code> with found record or <code>None</code> if any of conditiona is not met</li>
+</ul>
+<p><a id="booklab.my_books.books_manager.MyBook.getBookNav"></a></p>
+<h4 id="getbooknav">getBookNav</h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">getBookNav</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">dict</span> <span class="o">|</span> <span class="nb">str</span>
+</code></pre></div>
+<p>Get book navigation.</p>
+<p>Navigation info is retrieved from <code>book_navigation.json</code> data-file
+identified by <code>self.db_book_nav</code> pysondb handler.</p>
+<p><strong>Returns</strong>:</p>
+<ul>
+<li><code>python dict</code> using <code>format = "dict"</code> (default option)</li>
+<li><code>JSON str</code> using <code>format = "json"</code></li>
+<li><code>YAML str</code> using <code>format = "yaml"</code></li>
+<li><code>None</code> if not known format</li>
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBook.getBookPath"></a></p>
 <h4 id="getbookpath">getBookPath</h4>
@@ -1236,7 +1251,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 15, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2025</span>
       
     
   </small>
