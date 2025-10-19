@@ -13,14 +13,18 @@
 
 
 ## tbd... [0.9] - unreleased
-Implement `bbld`, book config and update `book_template` functionalities:
+Implement `bbld` and update `book_template`:
+
 * tbd... render book config (mkdocs.yml)
   render from ../my_books/... and if not
   render from string
-* tbd... mkdocs_template.yml, book_navigation.json: review and upd nav section with Jinja data-items
-  HINT: as test entry use the guide form entry (this entry will not be accesible from end user menu)
+
 * tbd... `static site` list all system routes in "About Booklab" page
 * tbd... display nav data as yaml, json somewhere in bstatus page
+
+* tbd... review mkdocs_template.yml, book_navigation.json, mkdocs_nav_section.yml:
+  review and upd nav section with Jinja data-items
+  HINT: as test entry use the guide form entry (this entry will not be accesible from end user menu)
 
 * ... [0.9a_?_] `my_books/book_template`
 *   - ... generate mkdocs_nav_section.yml from `/api/bbld/`
