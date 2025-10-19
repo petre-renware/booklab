@@ -22,7 +22,9 @@ Implement `bbld`, book config and update `book_template` functionalities:
 * tbd... `static site` list all system routes in "About Booklab" page
 * tbd... display nav data as yaml, json somewhere in bstatus page
 
-* ... [0.9.dev16] `my_books/book_template` update mkdocs_template.yml ref nav section rendering from external dedicated file
+* ... [0.9a_?_] `my_books/book_template`
+*   - ... generate mkdocs_nav_section.yml from `/api/bbld/`
+    - ... [0.9.dev16] `my_books/book_template` update mkdocs_template.yml ref nav section rendering from external dedicated file
 
 * [0.9a15] `MyBook` navigation structure
     - [0.9.dev14] `MyBook` update method `getBookNav(format)` to get data as YAML
