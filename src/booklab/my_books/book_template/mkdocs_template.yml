@@ -7,13 +7,15 @@ site_author: {{ book_data.site_author }}
 copyright: {{ book_data.copyright }}
 
 
-
+### section nodel based on rendering item-by-item nav section
 # nav:
 #     - Acasa: index.md  # this item is present in all books and can be removed only by manual update of this file
 #     {% for nav_item in book_nav %}
 #     #TODO tst if nav_item[nav_item] is list and let key lvl1 and val switch to lvl 2
 #     - {{ nav_item }}: {{ nav_item[nav_item] }}
 #     {% endfor %}
+### NEW section nodel based on rendering nav section from dedicated file
+% include 'mkdocs_nav_section.yml' %}
 
 
 
