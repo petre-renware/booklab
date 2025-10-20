@@ -7,13 +7,18 @@ site_author: {{ book_data.site_author }}
 copyright: {{ book_data.copyright }}
 
 
+###---DROP IT AFYER TESTS
+### section nodel based on rendering item-by-item nav section
+# nav:
+#     - Acasa: index.md  # this item is present in all books and can be removed only by manual update of this file
+#     {% for nav_item in book_nav %}
+#     #TODO tst if nav_item[nav_item] is list and let key lvl1 and val switch to lvl 2
+#     - {{ nav_item }}: {{ nav_item[nav_item] }}
+#     {% endfor %}
+###---END.OF.TO.DROP
 
-nav:
-    - Acasa: index.md  # this item is present in all books and can be removed only by manual update of this file
-    {% for nav_item in book_nav %}
-    #TODO tst if nav_item[nav_item] is list and let key lvl1 and val switch to lvl 2
-    - {{ nav_item }}: {{ nav_item[nav_item] }}
-    {% endfor %}
+# book navigation
+{% include 'book_navigation.yml' %}
 
 
 

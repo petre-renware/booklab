@@ -870,6 +870,7 @@
 <li><a href="#__init__">__init__</a></li>
 <li><a href="#getbook">getBook</a></li>
 <li><a href="#getbooknav">getBookNav</a></li>
+<li><a href="#wrbooknav">wrBookNav</a></li>
 <li><a href="#getbookpath">getBookPath</a></li>
 <li><a href="#getbookurl">getBookURL</a></li>
 <li><a href="#renderbookconfig">renderBookConfig</a></li>
@@ -1051,6 +1052,16 @@ identified by <code>self.db_book_nav</code> pysondb handler.</p>
 <li><code>JSON str</code> using <code>format = "json"</code></li>
 <li><code>YAML str</code> using <code>format = "yaml"</code></li>
 <li><code>None</code> if not known format</li>
+</ul>
+<p><a id="booklab.my_books.books_manager.MyBook.wrBookNav"></a></p>
+<h4 id="wrbooknav">wrBookNav</h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">wrBookNav</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+</code></pre></div>
+<p>Write out file "book_navigation.yml"</p>
+<p><strong>Returns</strong>:</p>
+<ul>
+<li><code>True</code> if file was written</li>
+<li><code>False</code> if file was not written doesn't matter why (usual problem is source file)</li>
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBook.getBookPath"></a></p>
 <h4 id="getbookpath">getBookPath</h4>
@@ -1251,7 +1262,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 19, 2025</span>
       
     
   </small>

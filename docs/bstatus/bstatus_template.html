@@ -837,8 +837,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#date-de-stare-curenta" class="md-nav__link">
-    Date de stare curenta
+  <a href="#date-de-stare" class="md-nav__link">
+    Date de stare
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-locatii" class="md-nav__link">
+    Date locatii
   </a>
   
 </li>
@@ -886,23 +893,26 @@
 <li>Cod: <strong><code>{{ book_data.code }}</code></strong></li>
 <li>Titlu: <code>{{ book_data.short_desc }}</code></li>
 <li>Descriere: <code>{{ book_data.description }}</code></li>
+<li>Note: <code>{{ book_data.notes }}</code></li>
 <li>Copyright: <code>{{ book_data.copyright }}</code></li>
 <li>Autor: <code>{{ book_data.site_author }}</code></li>
-<li>Note: <code>{{ book_data.notes }}</code></li>
+</ul>
+<h2 id="date-de-stare">Date de stare</h2>
+<ul>
+<li><strong>Carte inchisa editarii: <code>{{book_data.closed}}</code></strong></li>
 <li>Creata de: <code>{{ book_data.created_by }}</code></li>
 <li>Creata la data: <code>{{ book_data.created_date }}</code></li>
-</ul>
-<h2 id="date-de-stare-curenta">Date de stare curenta</h2>
-<ul>
 <li>Ultima actualizare: <code>{{book_data.last_update_date}}</code></li>
 <li>Ultima generare carte: <code>{{book_data.last_build_date}}</code></li>
-<li>Locatia stocare: <code>{{book_data.store_location}}</code></li>
-<li>Locatia previzualizare: <code>{{book_data.preview_url}}</code><ul>
-<li><a class="md-button md-button--primary" href="/booklab/api/prvb/?code={{ book_data.code }}">Previzualizare carte</a></li>
 </ul>
-</li>
+<h2 id="date-locatii">Date locatii</h2>
+<ul>
+<li>Locatia stocare: <code>{{book_data.store_location}}</code></li>
+<li>Locatia previzualizare: <code>{{book_data.preview_url}}</code>
+  <a href="/booklab/api/prvb/?code={{ book_data.code }}">(<em>Previzualizare</em>)</a></li>
 <li>Locatia publicare: <code>{{book_data.published_location}}</code></li>
-<li>Carte inchisa editarii: <code>{{book_data.closed}}</code></li>
+<li>Sectiunea de navigare in carte: <code>{{book_data.nav_file_location}}</code>
+  <a href="...">(<em>Vizualizare date</em>)</a></li>
 </ul>
 <h2 id="date-volumetrice">Date volumetrice</h2>
 <ul>
@@ -913,7 +923,8 @@
 <h2 id="actiuni">Actiuni</h2>
 <!-- include './local-page.css' -->
 
-<p><a class="md-button md-button--primary" href="/booklab/api/newb/">Creare carte noua</a></p>
+<p><a class="md-button md-button--primary" href="/booklab/api/newb/">Creare carte noua</a>
+<a class="md-button md-button--primary" href="/booklab/api/prvb/?code={{ book_data.code }}">Previzualizare</a></p>
 <p><a class="md-button md-button--primary" href="/booklab/api/edtb/?code={{ book_data.code }}">Editare materiale</a>
 <a class="md-button md-button--primary" href="/booklab/api/orgm/?code={{ book_data.code }}">Sectiuni carte</a></p>
 <p><a class="md-button md-button--primary" href="/booklab/api/bbld/?code={{ book_data.code }}">Generare carte</a>
@@ -925,7 +936,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 15, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 20, 2025</span>
       
     
   </small>

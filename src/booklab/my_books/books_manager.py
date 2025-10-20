@@ -5,7 +5,7 @@ import json
 import pylibyaml
 import yaml  # mandatory to import after pylibyank
 from rich import print as rprint
-# from pathlib import Path
+from pathlib import Path
 
 from flask import Flask
 from werkzeug.urls import quote as url_quote
@@ -95,6 +95,11 @@ class MyBook:
                bk_rec["store_location"] += "/"
             # upd key "preview_url"
             bk_rec["preview_url"] = self.getBookURL()
+            if self.db_book_nav:  # ck if nav definition exisys (as json data-file)
+                nav_file = self.db_book_nav.filename
+                bk_rec["nav_file_location"] = nav_file
+            else:
+                bk_rec["nav_file_location"] = None
             # return updayed record
             return bk_rec
         else:
@@ -137,6 +142,25 @@ class MyBook:
             )
             return yaml_nav_data
         return None  # if get here its a bug due to logic error
+
+
+    def wrBookNav(self) -> bool:
+        """Write out file "book_navigation.yml"
+
+        Return:
+
+        - `True` if file was written
+        - `False` if file was not written doesn't matter why (usual problem is source file)
+        """
+        out_file = self.db_book_nav.filename
+        out_file = out_file.replace(".json", ".yml")
+        out_file = Path(out_file)
+        WARNING_CONTENT = "# `nav` section AUTO GENERATED @run-time. DO NOT MODIFY it.\n"
+        yaml_content= self.getBookNav(format = "yaml")
+        yaml_content = WARNING_CONTENT + yaml_content
+        if not out_file.write_text(yaml_content):
+            return False
+        return True
 
 
     def getBookPath(self) -> str:

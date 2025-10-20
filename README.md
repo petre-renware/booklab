@@ -63,9 +63,8 @@ booklab server restart
 ## Log modificari
 
 
-* [CHANGELOG - last stable version](https://github.com/petre-renware/booklab/blob/master/CHANGELOG.md)
-
-* [CHANGELOG - develo=ment version](https://github.com/petre-renware/booklab/blob/development/CHANGELOG.md)
+* [CHANGELOG - last stable version](http://github.com/petre-renware/booklab/blob/master/CHANGELOG.md)
+* [CHANGELOG - development version](http://github.com/petre-renware/booklab/blob/development/CHANGELOG.md)
 
 
 

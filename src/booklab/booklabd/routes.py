@@ -72,7 +72,7 @@ def api_bstatus(book_code = ...):
     )
     book_data = my_book.getBook()
     if not book_data:
-        abort(404, description = "Book not found")
+        abort(404, description = "Book not found, does not physically exist.")
     else:
         ret_str = f"Book {book_code} data is <br>{book_data}"
     # render bstatus template and write it as html served from static site menu

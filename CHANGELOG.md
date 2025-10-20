@@ -1,4 +1,4 @@
-**BookLab by RENware Software Systems**
+8**BookLab by RENware Software Systems**
 
 [TOC]
 
@@ -13,15 +13,27 @@
 
 
 ## tbd... [0.9] - unreleased
-Implement `bbld`, book config and update `book_template` functionalities:
+Implement `bbld` and update `book_template`:
+
 * tbd... render book config (mkdocs.yml)
   render from ../my_books/... and if not
   render from string
-* tbd... mkdocs_template.yml, book_navigation.json: review and upd nav section with Jinja data-items
-  HINT: as test entry use the guide form entry (this entry will not be accesible from end user menu)
+
 * tbd... `static site` list all system routes in "About Booklab" page
 * tbd... display nav data as yaml, json somewhere in bstatus page
 
+* tbd... review mkdocs_template.yml, book_navigation.json, mkdocs_nav_section.yml:
+  review and upd nav section with Jinja data-items
+  HINT: as test entry use the guide form entry (this entry will not be accesible from end user menu)
+
+* tbd... make skeleton of route `/api/bbld/`
+  upd bcat ref last update date
+
+* [0.9a20] `my_books/book_template` book navigation YAML and bstatus info
+    - [0.9.dev19] `bstatus`update  with book_navigation.json location. Upd MyBook.getBook() set nav_file_location key
+    - [0.9.dev18] new method `MyBBook.wrBookNav()` to write "book_navigation.yml" in same dir where is "book_navigation.json"
+    - [0.9.dev17] fix errs in mkdocs_template.yml ref Jinja include statement
+    - [0.9.dev16] `my_books/book_template` update mkdocs_template.yml ref nav section rendering from external dedicated file
 * [0.9a15] `MyBook` navigation structure
     - [0.9.dev14] `MyBook` update method `getBookNav(format)` to get data as YAML
     - [0.9.dev13] `MyBook` update method `getBookNav(format)` to get data as JSON

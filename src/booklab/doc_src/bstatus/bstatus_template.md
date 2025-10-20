@@ -11,21 +11,27 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ bo
 * Cod: **`{{ book_data.code }}`**
 * Titlu: `{{ book_data.short_desc }}`
 * Descriere: `{{ book_data.description }}`
+* Note: `{{ book_data.notes }}`
 * Copyright: `{{ book_data.copyright }}`
 * Autor: `{{ book_data.site_author }}`
-* Note: `{{ book_data.notes }}`
+
+
+## Date de stare
+
+* **Carte inchisa editarii: `{{book_data.closed}}`**
 * Creata de: `{{ book_data.created_by }}`
 * Creata la data: `{{ book_data.created_date }}`
-
-## Date de stare curenta
-
 * Ultima actualizare: `{{book_data.last_update_date}}`
 * Ultima generare carte: `{{book_data.last_build_date}}`
+
+## Date locatii
+
 * Locatia stocare: `{{book_data.store_location}}`
 * Locatia previzualizare: `{{book_data.preview_url}}`
-    * [Previzualizare carte](/booklab/api/prvb/?code={{ book_data.code }}){ .md-button .md-button--primary }
+  [(_Previzualizare_)](/booklab/api/prvb/?code={{ book_data.code }})
 * Locatia publicare: `{{book_data.published_location}}`
-* Carte inchisa editarii: `{{book_data.closed}}`
+* Sectiunea de navigare in carte: `{{book_data.nav_file_location}}`
+  [(_Vizualizare date_)](...)
 
 ## Date volumetrice
 
@@ -39,7 +45,8 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ bo
 <!-- include './local-page.css' -->
 
 [Creare carte noua](/booklab/api/newb/){ .md-button .md-button--primary }
-
+[Previzualizare](/booklab/api/prvb/?code={{ book_data.code }}){ .md-button .md-button--primary }
+    
 [Editare materiale](/booklab/api/edtb/?code={{ book_data.code }}){ .md-button .md-button--primary }
 [Sectiuni carte](/booklab/api/orgm/?code={{ book_data.code }}){ .md-button .md-button--primary }
 
