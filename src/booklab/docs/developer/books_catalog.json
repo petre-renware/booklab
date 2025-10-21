@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "id": 0,
+            "code": "book_template",
+            "short_desc": "Numele cartii (si al site-ului daca se publica in internet)",
+            "description": "Denumirea lunga a cartii asa cum va apare pe coperta",
+            "copyright": "Copyright - Informatia ref detinatorul drepturilor de autor",
+            "site_author": "Autorul cartii",
+            "notes": "Inregistrare obligatorie de la instalare sistem. Non editabila.",
+            "created_date": "2025-09-26",
+            "created_by": "system",
+            "last_update_date": "2025-09-26",
+            "last_build_date": null,
+            "closed": true,
+            "store_location": "... USE MyBook.getBookPath() instead",
+            "preview_url": "... USE MyBook.getBookURL() instead",
+            "published_location": null,
+            "nav_file_location": "... USE MyBook.getBookNav() instead"
+        },
+        {
+            "id": 1,
+            "code": "example",
+            "short_desc": "short_desc - example record",
+            "description": "description - example record",
+            "copyright": "copyright - example record",
+            "site_author": "author - example record",
+            "notes": "notes - example record",
+            "created_date": "1900-08-01",
+            "created_by": "me-my-name-here",
+            "last_update_date": null,
+            "last_build_date": null,
+            "closed": false,
+            "store_location": "... USE MyBook.getBookPath() instead",
+            "preview_url": "... USE MyBook.getBookURL() instead",
+            "published_location": null,
+            "nav_file_location": "... USE MyBook.getBookNav() instead"
+        }
+    ]
+}
+
+
+
+

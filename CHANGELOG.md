@@ -29,6 +29,9 @@ Implement `bbld` and update `book_template`:
 * tbd... make skeleton of route `/api/bbld/`
   upd bcat ref last update date
 
+* [0.9a23] static site refactor nacigation
+    - [0.9.dev22] create /developer page and and move from /help all specific files
+    - [0.9.dev21] static site: refactor "Help" entry move all tech info to a new top entry "Pentru Dezvoptatori"
 * [0.9a20] `my_books/book_template` book navigation YAML and bstatus info
     - [0.9.dev19] `bstatus`update  with book_navigation.json location. Upd MyBook.getBook() set nav_file_location key
     - [0.9.dev18] new method `MyBBook.wrBookNav()` to write "book_navigation.yml" in same dir where is "book_navigation.json"
