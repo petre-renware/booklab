@@ -894,6 +894,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#catalogul-in-format-json" class="md-nav__link">
+    Catalogul in format JSON
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -997,6 +1004,49 @@
 </table>
 
 <h2 id="help"><a href="../help/880.30-BCAT_usage.html">Help</a></h2>
+<h2 id="catalogul-in-format-json">Catalogul in format JSON</h2>
+<p>Mai jos este prezentat catalogul cartilor in forma sa bruta (fisier-date json):</p>
+<div class="copy highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;book_template&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;short_desc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Numele cartii (si al site-ului daca se publica in internet)&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Denumirea lunga a cartii asa cum va apare pe coperta&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;copyright&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Copyright - Informatia ref detinatorul drepturilor de autor&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;site_author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Autorul cartii&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Inregistrare obligatorie de la instalare sistem. Non editabila.&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;created_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-09-26&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;created_by&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;system&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;last_update_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-09-26&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;last_build_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;closed&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;store_location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;... USE MyBook.getBookPath() instead&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;preview_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;... USE MyBook.getBookURL() instead&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;published_location&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;nav_file_location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;... USE MyBook.getBookNav() instead&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;short_desc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;short_desc - example record&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;description - example record&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;copyright&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;copyright - example record&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;site_author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;author - example record&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;notes - example record&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;created_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1900-08-01&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;created_by&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;me-my-name-here&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;last_update_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;last_build_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;closed&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;store_location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;... USE MyBook.getBookPath() instead&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;preview_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;... USE MyBook.getBookURL() instead&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;published_location&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;nav_file_location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;... USE MyBook.getBookNav() instead&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
@@ -1049,7 +1099,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tracking", "navigation.tabs.sticky", "navigation.path"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tracking", "navigation.tabs.sticky", "navigation.path", "content.code.copy"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>

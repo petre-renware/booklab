@@ -113,6 +113,8 @@ theme:
         - navigation.tabs.sticky
         - navigation.path
         #- toc.integrate #NOTE integrates all navigation only in left nav bar
+        - content.code.copy
+
     palette:
         primary: black # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/ for other color options
         accent: blue

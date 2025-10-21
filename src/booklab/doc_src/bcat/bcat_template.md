@@ -48,6 +48,11 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 ## [Help](../help/880.30-BCAT_usage.md)
 
 
+## Catalogul in format JSON
 
+Mai jos este prezentat catalogul cartilor in forma sa bruta (fisier-date json):
 
+``` { .json .copy }
+{% include '../developer/books_catalog.json' %}
+```
 
