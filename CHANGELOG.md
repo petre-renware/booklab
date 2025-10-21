@@ -20,14 +20,17 @@ Implement `bbld` and update `book_template`:
   render from string
 
 * tbd... `static site` list all system routes in "About Booklab" page
-* tbd... display nav data as yaml, json somewhere in bstatus page
 
-* tbd... review mkdocs_template.yml, book_navigation.json, mkdocs_nav_section.yml:
-  review and upd nav section with Jinja data-items
-  HINT: as test entry use the guide form entry (this entry will not be accesible from end user menu)
+* tbd... display nav data as yaml, json somewhere in bstatus page
 
 * tbd... make skeleton of route `/api/bbld/`
   upd bcat ref last update date
+  for edit file try GoogleDocs
+
+* ...to.start... [0.9a ??] build my book mkdoks.yml
+    - ... review mkdocs_template.yml, book_navigation.json, mkdocs_nav_section.yml:
+      review and upd nav section with Jinja data-items
+      HINT: as test entry use the guide form entry (this entry will not be accesible from end user menu)
 
 * [0.9a23] static site refactor nacigation
     - [0.9.dev22] create /developer page and and move from /help all specific files
