@@ -13,9 +13,9 @@ __pycache__/
 # dynamically run-time generated files
 *.PID
 *.json.lock
-*docs/bcat/bcat.html
-*docs/bstatus/bstatus.html
-*docs/about/about.html
+src/docs/bcat/bcat.html
+src/docs/bstatus/bstatus.html
+src/docs/about/about.html
 
 
 # Distribution / packaging
