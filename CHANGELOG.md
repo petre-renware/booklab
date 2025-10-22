@@ -30,9 +30,9 @@ Implement `bbld` and update `book_template`:
 * ... [0.9a ??] build my book mkdoks.yml
     - ... review MyBook.getBookURL(), NEED IT ANYMORE ?
     - ... upd MyBook.renderBookConfig() as wrBookNav() + render mkdocs_template.yml + bk_build.sh
-    - ... review mkdocs_template.yml, book_navigation.json, mkdocs_nav_section.yml:
+      HINT: as test entry use the "Bo-k guide nav entry
+    - ... [0.9.dev25] review mkdocs_template.yml, book_navigation.json, mkdocs_nav_section.yml:
       review and upd nav section with Jinja data-items
-      HINT: as test entry use the guide form entry (this entry will not be accesible from end user menu)
     - [0.9.dev24] bcat show catalog as JSON view in bottom of page for "advanced users"
 
 * [0.9a23] static site refactor nacigation
