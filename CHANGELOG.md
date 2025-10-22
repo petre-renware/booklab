@@ -28,7 +28,6 @@ Implement `bbld` and update `book_template`:
   for edit file try GoogleDocs
 
 * ... [0.9a ??] build my book mkdoks.yml
-    - ... review MyBook.getBookURL(), NEED IT ANYMORE ?
     - ... upd MyBook.renderBookConfig() as wrBookNav() + render mkdocs_template.yml + bk_build.sh
       HINT: as test entry use the "Bo-k guide nav entry
     - ... [0.9.dev25] review mkdocs_template.yml, book_navigation.json, mkdocs_nav_section.yml:
@@ -36,7 +35,7 @@ Implement `bbld` and update `book_template`:
     - [0.9.dev24] bcat show catalog as JSON view in bottom of page for "advanced users"
 
 * [0.9a23] static site refactor nacigation
-    - [0.9.dev22] create /developer page and and move from /help all specific files
+    - [0.9.dev22] new `/developer` page and and move from /help all specific files
     - [0.9.dev21] static site: refactor "Help" entry move all tech info to a new top entry "Pentru Dezvoptatori"
 * [0.9a20] `my_books/book_template` book navigation YAML and bstatus info
     - [0.9.dev19] `bstatus`update  with book_navigation.json location. Upd MyBook.getBook() set nav_file_location key
@@ -44,11 +43,11 @@ Implement `bbld` and update `book_template`:
     - [0.9.dev17] fix errs in mkdocs_template.yml ref Jinja include statement
     - [0.9.dev16] `my_books/book_template` update mkdocs_template.yml ref nav section rendering from external dedicated file
 * [0.9a15] `MyBook` navigation structure
-    - [0.9.dev14] `MyBook` update method `getBookNav(format)` to get data as YAML
-    - [0.9.dev13] `MyBook` update method `getBookNav(format)` to get data as JSON
-    - [0.9.dev12] `MyBook.getBookNav(...)` add conditions to return according to `format` parameter
+    - [0.9.dev14] `MyBook.getBookNav(format)` upd to get data as YAML
+    - [0.9.dev13] `MyBook.getBookNav(format)` upd to get data as JSON
+    - [0.9.dev12] `MyBook.getBookNav(format)` add conditions to return according to `format` parameter
     - [0.9.dev11] clean code and start use rich lib for debug prints
-    - [0.9.dev10] `MyBook` update method `getBookNav(format)` to get  data as dict
+    - [0.9.dev10] `MyBook.getBookNav(format)` upd to get  data as dict
     - [0.9.dev9] `MyBook` add skeleton for method `getBookNav(format)` to get navigation data as json & yaml format to use AS-IS for Jinja corresponding param in "mkdocs_template.yml"
     - [0.9.dev8] add python-dotenv support and .flaskenv file
     - [0.9.dev7] review & update "book_navigation.json" to be pysodb c0mpliant
