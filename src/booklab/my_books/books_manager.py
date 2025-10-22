@@ -94,7 +94,7 @@ class MyBook:
             if bk_rec["store_location"]:
                bk_rec["store_location"] += "/"
             # upd key "preview_url"
-            bk_rec["preview_url"] = self.getBookURL()
+            bk_rec["preview_url"] = self.getBookPreviewURL()
             if self.db_book_nav:  # ck if nav definition exisys (as json data-file)
                 nav_file = self.db_book_nav.filename
                 bk_rec["nav_file_location"] = nav_file
@@ -178,7 +178,7 @@ class MyBook:
             return None
 
 
-    def getBookURL(self) -> str:
+    def getBookPreviewURL(self) -> str:
         """Get preview URL (redirectable as is) for current book_code.
         """
         return self.MY_BOOK_URL

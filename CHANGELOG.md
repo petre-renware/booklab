@@ -30,10 +30,10 @@ Implement `bbld` and update `book_template`:
 * ... [0.9a ??] build my book mkdoks.yml
     - ... upd MyBook.renderBookConfig() as wrBookNav() + render mkdocs_template.yml + bk_build.sh
       HINT: as test entry use the "Bo-k guide nav entry
-    - ... [0.9.dev25] review mkdocs_template.yml, book_navigation.json, mkdocs_nav_section.yml:
+    - ...tbinit... [0.9.dev26] review mkdocs_template.yml, book_navigation.json, mkdocs_nav_section.yml:
       review and upd nav section with Jinja data-items
+    - [0.9.dev25] `MyBook.getBookURL()` refactor to `getBookPreviewURL()` 
     - [0.9.dev24] bcat show catalog as JSON view in bottom of page for "advanced users"
-
 * [0.9a23] static site refactor nacigation
     - [0.9.dev22] new `/developer` page and and move from /help all specific files
     - [0.9.dev21] static site: refactor "Help" entry move all tech info to a new top entry "Pentru Dezvoptatori"
@@ -91,7 +91,7 @@ Update `my_book` config, `book_template` functionalities:
 * [0.8.dev20] fix db_init.py to return None for db_ystem (was dropped) to remain for future use and. Move this file to booklab root
 * [0.8a19] MyBook.getBookPath() to chk if directory exists and if not return None
 * [0.8.dev18] reorg project: drop dir data/ and mv books_catalog.json to my_books/. Update booklab.__init__.py for DATA_ROOT directory and db_init
-* [0.8b17] MyBook: method `getBookURL()` to return MY_BOOK_URL and update routes.py function api_prvb()
+* [0.8b17] MyBook: method `getBookPreviewURL()` to return MY_BOOK_URL and update routes.py function api_prvb()
 * [0.8b16] create MyBook class methods that return paths and urls:
     - build doc + package + publish them
     - [0.8a16] use MyBoook property MY_BOOK_URL in routes.py on route /api/prvb/ (ie, book preview) to redirect to book site
