@@ -2,7 +2,7 @@
 # It is not intended for manual editing.
 
 [metadata]
-groups = ["default", "d3v", "dev", "test"]
+groups = ["default", "dev", "test"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
 content_hash = "sha256:3e312abcc417b21e7d2b9a018b57e31fd37eebabc749d34bcf7b42e15a813b83"
@@ -1821,7 +1821,7 @@ files = [
 
 [[package]]
 name = "typeapi"
-version = "2.2.4"
+version = "2.3.0"
 requires_python = ">=3.8"
 summary = ""
 groups = ["dev"]
@@ -1829,8 +1829,8 @@ dependencies = [
     "typing-extensions>=3.0.0",
 ]
 files = [
-    {file = "typeapi-2.2.4-py3-none-any.whl", hash = "sha256:bd6d5e5907fa47e0303bf254e7cc8712d4be4eb26d7ffaedb67c9e7844c53bb8"},
-    {file = "typeapi-2.2.4.tar.gz", hash = "sha256:daa80767520c0957a320577e4f729c0ba6921c708def31f4c6fd8d611908fd7b"},
+    {file = "typeapi-2.3.0-py3-none-any.whl", hash = "sha256:576b7dcb94412e91c5cae107a393674f8f99c10a24beb8be2302e3fed21d5cc2"},
+    {file = "typeapi-2.3.0.tar.gz", hash = "sha256:a60d11f72c5ec27338cfd1c807f035b0b16ed2e3b798fb1c1d34fc5589f544be"},
 ]
 
 [[package]]

@@ -35,12 +35,13 @@ Implement `bbld` and update `book_template`:
       + bk_build.sh
       HINT: as test entry use the "Book guide nav entry
 
-    - ... [0.9.dev27] review & upd: 
+    - ... review & upd: 
       mkdocs_template.yml, 
       book_navigation.json, 
       book_navigation.yml, 
-      bk_build.sh (- when launched you can set `cwd` fr-m code -)
-
+      bk_build.sh (- when launched you can set `cwd` fr-m code -
+    
+    - ... [0.9.dev27] static site bstatus add TOC & change the 2 advanced view titles from bold to headind 3 to be cvisible on TOC
     - [0.9.dev26] static site bstatus add book_navigation as json & yaml views in page, 
     - [0.9.dev25] `MyBook.getBookURL()` refactor to `getBookPreviewURL()` 
     - [0.9.dev24] bcat show catalog as JSON view in bottom of page for "advanced users"
