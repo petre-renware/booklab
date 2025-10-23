@@ -92,7 +92,7 @@ class MyBook:
             bk_rec["store_location"] = self.getBookPath()
             # when location exists appent `/`to ckear state it as directory otherwise let it unchanged
             if bk_rec["store_location"]:
-               bk_rec["store_location"] += "/"
+                bk_rec["store_location"] += "/"
             # upd key "preview_url"
             bk_rec["preview_url"] = self.getBookPreviewURL()
             if self.db_book_nav:  # ck if nav definition exisys (as json data-file)

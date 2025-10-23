@@ -153,4 +153,6 @@ dev = [
     "pydoc-markdown>=4.8.2",
     "docopt>=0.6.2",
     "python-dotenv>=1.1.1",
+    "pylint>=4.0.2",
+    "black>=25.9.0",
 ]
