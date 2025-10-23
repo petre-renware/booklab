@@ -41,9 +41,8 @@ Implement `bbld` and update `book_template`:
       book_navigation.yml, 
       bk_build.sh (- when launched you can set `cwd` fr-m code -
     
-    - ... [0.9.dev28] static site upd mkdocs.yml with super fences for code blocks syntax highlighting
-      TODO: if ok mv also in book_template mkdocs_template.yml
-
+    - [0.9.dev28] static site upd mkdocs.yml with super fences for code blocks syntax highlighting
+      + apply to my_books/book_template/mkdocs_template.yml
     - [0.9.dev27] static site bstatus add TOC & change the 2 advanced view titles from bold to headind 3 to be cvisible on TOC
     - [0.9.dev26] static site bstatus add book_navigation as json & yaml views in page, 
     - [0.9.dev25] `MyBook.getBookURL()` refactor to `getBookPreviewURL()` 

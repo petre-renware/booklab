@@ -63,6 +63,7 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ bo
 
 ```
 {{ nav.fjson }}
+
 ```
 
 ### Format YAML
