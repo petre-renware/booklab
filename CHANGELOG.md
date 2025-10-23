@@ -28,12 +28,22 @@ Implement `bbld` and update `book_template`:
   for edit file try GoogleDocs
 
 * ... [0.9a ??] build my book mkdoks.yml
-    - ... upd MyBook.renderBookConfig() as wrBookNav() + render mkdocs_template.yml + bk_build.sh
+
+    - ... upd `MyBook.renderBookConfig()` as:
+      wrBookNav() - ?refactor getBookNav()
+      + render mkdocs_template.yml 
+      + bk_build.sh
       HINT: as test entry use the "Bo-k guide nav entry
-    - ... [0.9.dev26] review mkdocs_template.yml, book_navigation.json, mkdocs_nav_section.yml:
-      review and upd nav section with Jinja data-items
+
+    - ... [0.9.dev26] review & upd: 
+      mkdocs_template.yml, 
+      book_navigation.json, 
+      book_navigation.yml, 
+      bk_build.sh (- when launched you can set `cwd` fr-m code -)
+
     - [0.9.dev25] `MyBook.getBookURL()` refactor to `getBookPreviewURL()` 
     - [0.9.dev24] bcat show catalog as JSON view in bottom of page for "advanced users"
+
 * [0.9a23] static site refactor nacigation
     - [0.9.dev22] new `/developer` page and and move from /help all specific files
     - [0.9.dev21] static site: refactor "Help" entry move all tech info to a new top entry "Pentru Dezvoptatori"
@@ -57,6 +67,14 @@ Implement `bbld` and update `book_template`:
 * [0.9a2] static site updated about_template.html for links to application refrences and with a new section for displayng http endpoints
 * [0.9a1] `booklab_cli` create a skeleton of modules
 * [0.9.dev0] update README.md file to differentiate for changelog link entries. Make an entry for stable version and one for dev version, both getting file from GitHib
+
+
+
+
+
+
+
+
 
 
 ## [0.8] - 15.oct.2025
