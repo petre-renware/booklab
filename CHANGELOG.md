@@ -33,9 +33,10 @@ Implement `bbld` and update `book_template`:
       wrBookNav() - ?refactor getBookNav()
       + render mkdocs_template.yml 
       + bk_build.sh
-      HINT: as test entry use the "Bo-k guide nav entry
+      HINT: as test entry use the "Book guide nav entry
 
     - ... [0.9.dev26] review & upd: 
+      doc_src/bstatus/ to add b-ok_navigation json & yaml views in page, 
       mkdocs_template.yml, 
       book_navigation.json, 
       book_navigation.yml, 
