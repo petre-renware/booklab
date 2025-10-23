@@ -922,6 +922,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vedere-avansata-sectiunea-nevigare" class="md-nav__link">
+    Vedere avansata sectiunea nevigare
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -963,7 +970,7 @@
   <a href="/booklab/api/prvb/?code={{ book_data.code }}">(<em>Previzualizare</em>)</a></li>
 <li>Locatia publicare: <code>{{book_data.published_location}}</code></li>
 <li>Sectiunea de navigare in carte: <code>{{book_data.nav_file_location}}</code>
-  <a href="...">(<em>Vizualizare date</em>)</a></li>
+  (<em>Vizualizare date format KSON YAMLmai jos</em>)</li>
 </ul>
 <h2 id="date-volumetrice">Date volumetrice</h2>
 <ul>
@@ -981,6 +988,13 @@
 <p><a class="md-button md-button--primary" href="/booklab/api/bbld/?code={{ book_data.code }}">Generare carte</a>
 <a class="md-button md-button--primary" href="/booklab/api/dplb/?code={{ book_data.code }}">Livrare carte</a></p>
 <h2 id="help"><a href="../help/880.30-BSTATUS_usage.md">Help</a></h2>
+<h2 id="vedere-avansata-sectiunea-nevigare">Vedere avansata sectiunea nevigare</h2>
+<p><strong>Format JSON:</strong></p>
+<div class="highlight"><pre><span></span><code>{{ nav.fjson }}
+</code></pre></div>
+<p><strong>Format YAML:</strong></p>
+<div class="highlight"><pre><span></span><code>{{ nav.fyaml }}
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">

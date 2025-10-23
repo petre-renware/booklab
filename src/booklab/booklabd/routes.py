@@ -75,10 +75,16 @@ def api_bstatus(book_code = ...):
         abort(404, description = "Book not found, does not physically exist.")
     else:
         ret_str = f"Book {book_code} data is <br>{book_data}"
+    # create Jinja patams with JSON & YAML navigation section
+    nav = {
+        "fjson": my_book.getBookNav(format = "json"),
+        "fyaml": my_book.getBookNav(format = "yaml")
+    }
     # render bstatus template and write it as html served from static site menu
     rendered_str = render_template(
         "bstatus/bstatus_template.html",
-        book_data = book_data
+        book_data = book_data,
+        nav = nav
     )
     file_to_write = os.path.join(
         docs_prefix,

@@ -122,6 +122,9 @@ class MyBook:
         - `YAML str` using `format = "yaml"`
         - `None` if not known format
         """
+        if not self.db_book_nav:  # if data-file not exists...
+            return None
+        #
         bk_nav_raw_data = self.db_book_nav.getAll()
         bk_nav_data = dict()
         bk_nav_data["nav"] = bk_nav_raw_data

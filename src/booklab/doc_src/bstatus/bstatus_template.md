@@ -31,7 +31,7 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ bo
   [(_Previzualizare_)](/booklab/api/prvb/?code={{ book_data.code }})
 * Locatia publicare: `{{book_data.published_location}}`
 * Sectiunea de navigare in carte: `{{book_data.nav_file_location}}`
-  [(_Vizualizare date_)](...)
+  (_Vizualizare date format KSON YAMLmai jos_)
 
 ## Date volumetrice
 
@@ -57,7 +57,25 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ bo
 ## [Help](../help/880.30-BSTATUS_usage.md)
 
 
+## Vedere avansata sectiunea nevigare
+
+**Format JSON:**
+
+```
+{{ nav.fjson }}
+```
+
+**Format YAML:**
+
+```
+{{ nav.fyaml }}
+```
+
+
+
 
 {% endraw %}
+
+
 
 
