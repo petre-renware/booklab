@@ -23,7 +23,7 @@ nav:
     - Pentru Dezvoltatori:
         - Arhitectura sistemului: 810-DSGN/810.02-System_Landscape.md
         - Catalogul cartilor format JSON: developer/books_catalog.json
-        - Doc tehnica detaliata: developer/810.05a-booklab_DLD_specs.md
+        - Doc API packet booklab: developer/810.05a-booklab_DLD_specs.md
         - Versiunea in format text: /booklab/api/version/
         - Design detaliat module:
             - modul Initializare sistem (sysInit): 810-DSGN/810.05a-sysInit_System_Process.md
@@ -58,6 +58,14 @@ markdown_extensions:
     - md_in_html
     - pymdownx.tasklist:
         custom_checkbox: true
+    # super fences for code bloks syntax highlight
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
 
 
 
@@ -113,6 +121,8 @@ theme:
         - navigation.tabs.sticky
         - navigation.path
         #- toc.integrate #NOTE integrates all navigation only in left nav bar
+        - content.code.copy
+
     palette:
         primary: black # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/ for other color options
         accent: blue

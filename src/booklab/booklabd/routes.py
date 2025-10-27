@@ -46,8 +46,6 @@ docs_prefix = os.path.join(STATIC_SITE_ROOT)
 @api_app.route("/api/newb/")
 def api_newb():
     """Serve **New book (newb)** functionality.
-
-    Query paraneters: none
     """
     book_code = request.args.get("code")
     ret_str = f"Page for <b>newb</b><br>"
@@ -57,13 +55,13 @@ def api_newb():
 
 
 @api_app.route("/api/bstatus/")
-def api_bstatus(book_code = ...):
+def api_bstatus(book_code: str = ...):
     """Serve **Book status (bstatus)** functionality.
 
-    Query paraneters: book code
+    **Query parameters:** `code` for database `boook_code`
     """
     ret_str = "nothing to say..."
-    if book_code is ...:
+    if (book_code is ...) or (book_code is None):
         book_code = request.args.get("code")
     my_book = MyBook(
         flask_app = api_app,
@@ -75,10 +73,18 @@ def api_bstatus(book_code = ...):
         abort(404, description = "Book not found, does not physically exist.")
     else:
         ret_str = f"Book {book_code} data is <br>{book_data}"
+    # create Jinja patams with JSON & YAML navigation section
+    nav_json = my_book.getBookNav(format = "json")
+    nav_yaml = my_book.getBookNav(format = "yaml")
+    nav = {
+        "fjson": f"{nav_json}",
+        "fyaml": f"{nav_yaml}"
+    }
     # render bstatus template and write it as html served from static site menu
     rendered_str = render_template(
         "bstatus/bstatus_template.html",
-        book_data = book_data
+        book_data = book_data,
+        nav = nav
     )
     file_to_write = os.path.join(
         docs_prefix,
@@ -91,12 +97,12 @@ def api_bstatus(book_code = ...):
 
 
 @api_app.route("/api/edtb/")
-def api_edtb(book_code = ...):
+def api_edtb(book_code: str = ...):
     """Serve **Book edit (edtb)** functionality.
 
-    Query paraneters: book code
+    **Query parameters:** `code` for database `boook_code`
     """
-    if book_code is ...:
+    if (book_code is ...) or (book_code is None):
         book_code = request.args.get("code")
     #TODO before getting book test if status.closed is true and if then return a 400 err "Book not editable"
     ret_str = f"Page for <b>edtb</b><br>"
@@ -106,12 +112,12 @@ def api_edtb(book_code = ...):
 
 
 @api_app.route("/api/orgm/")
-def api_orgm(book_code = ...):
+def api_orgm(book_code: str = ...):
     """Serve **Book structure organization (orgm:** functionality.
 
-    Query paraneters: book code
+    **Query parameters:** `code` for database `boook_code`
     """
-    if book_code is ...:
+    if (book_code is ...) or (book_code is None):
         book_code = request.args.get("code")
     ret_str = f"Page for <b>orgm</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
@@ -120,12 +126,12 @@ def api_orgm(book_code = ...):
 
 
 @api_app.route("/api/prvb/")
-def api_prvb(book_code = ...):
+def api_prvb(book_code: str = ...):
     """Serve **Book preview (prvb)** functionality.
 
-    Query paraneters: book code
+    **Query parameters:** `code` for database `boook_code`
     """
-    if book_code is ...:
+    if (book_code is ...) or (book_code is None):
         book_code = request.args.get("code")
     my_book = MyBook(
         flask_app = api_app,
@@ -135,17 +141,17 @@ def api_prvb(book_code = ...):
     book_data = my_book.getBook()
     if not book_data:
         abort(404, description = "Book not found' Possible was not yet built.")
-    book_redirect_url = my_book.getBookURL()
+    book_redirect_url = my_book.getBookPreviewURL()
     return redirect(book_redirect_url)
 
 
 @api_app.route("/api/bbld/")
-def api_bbld(book_code = ...):
+def api_bbld(book_code: str = ...):
     """Serve **Book build (bbld)** functionality.
 
-    Query paraneters: book code
+    **Query parameters:** `code` for database `boook_code`
     """
-    if book_code is ...:
+    if (book_code is ...) or (book_code is None):
         book_code = request.args.get("code")
     ret_str = f"Page for <b>bbld</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
@@ -156,12 +162,12 @@ def api_bbld(book_code = ...):
 
 
 @api_app.route("/api/dplb/")
-def api_dplb(book_code = ...):
+def api_dplb(book_code: str = ...):
     """Serve **Book delivery (dplb)** functionality.
 
-    Query paraneters: book code
+    **Query parameters:** `code` for database `boook_code`
     """
-    if book_code is ...:
+    if (book_code is ...) or (book_code is None):
         book_code = request.args.get("code")
     ret_str = f"Page for <b>dplb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
@@ -194,7 +200,7 @@ def api_bcat():
 
 @api_app.route("/api/version/")
 def version():
-    """ Return Vooklab application version as pure plain raw text (no html).
+    """ Return Booklab application version as pure plain raw text (no html).
     """
     response = make_response(__version__, 200)
     response.mimetype = "text/plain"
@@ -203,8 +209,8 @@ def version():
 
 @api_app.route("/")
 def index():
-    """Serve a cessing Home route.
-    This is an alternate (but those expected from an end user) way to access static site main / home page.
+    """Serve accessing Home route.
+    This route is an alternate option way (but usually the expected one from an end user) to access static site main / home page.
     """
     redirect_path = w3lib.url.canonicalize_url(
         url_quote(redirect_prefix + "/index.html")
@@ -214,7 +220,7 @@ def index():
 
 @api_app.route("/api/about/")
 def about():
-    """Construct "About Booklab" page.
+    """Construct and request for "About Booklab" page.
     """
     rendered_str = render_template(
         "about/about_template.html",

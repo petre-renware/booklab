@@ -1,3 +1,4 @@
+[TOC]
 
 # Detalii despre carte
 
@@ -26,12 +27,11 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ bo
 
 ## Date locatii
 
-* Locatia stocare: `{{book_data.store_location}}`
+* **Locatia stocare: `{{book_data.store_location}}`**
 * Locatia previzualizare: `{{book_data.preview_url}}`
   [(_Previzualizare_)](/booklab/api/prvb/?code={{ book_data.code }})
 * Locatia publicare: `{{book_data.published_location}}`
 * Sectiunea de navigare in carte: `{{book_data.nav_file_location}}`
-  [(_Vizualizare date_)](...)
 
 ## Date volumetrice
 
@@ -42,11 +42,9 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ bo
 
 ## Actiuni
 
-<!-- include './local-page.css' -->
-
 [Creare carte noua](/booklab/api/newb/){ .md-button .md-button--primary }
 [Previzualizare](/booklab/api/prvb/?code={{ book_data.code }}){ .md-button .md-button--primary }
-    
+
 [Editare materiale](/booklab/api/edtb/?code={{ book_data.code }}){ .md-button .md-button--primary }
 [Sectiuni carte](/booklab/api/orgm/?code={{ book_data.code }}){ .md-button .md-button--primary }
 
@@ -57,7 +55,30 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ bo
 ## [Help](../help/880.30-BSTATUS_usage.md)
 
 
+## Vedere avansata sectiunea nevigare
+
+### Format JSON
+
+
+```
+{{ nav.fjson }}
+
+```
+
+### Format YAML
+
+***NOTA:*** Acest fisier este generat automat in timpul executiei sistemului din 
+fisierul JSON (de mai sus) care este considerat "primar / master".
+
+```
+{{ nav.fyaml }}
+```
+
+
+
 
 {% endraw %}
+
+
 
 
