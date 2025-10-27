@@ -27,10 +27,13 @@ Implement `bbld` and update `book_template`:
 
 
 * ... [0.9a ??] build my book mkdoks.yml
-    - ... upd `MyBook.renderBookConfig()` final code
+    - ...ini.vers... [0.9.dev37] upd `MyBook.renderBookConfig()` final code
 
 
 
+* [0:9a35.post0] bugfixes
+    - [0.9.dev37] `MyVook.getBook()` fix bug when book nav JSON file is missing (use case: book does not physicallt exists)
+    - [0.9.dev36] review & upd `MyBooks.renderBookConfig()` logic
 * [0.9a35] enhance, clean & improve `MyBooks` & `booklabd` components
     - [0.9.dev34] review & upd mkdocs_template.yml
     - [0.9.dev33] `MyBook.getNavData()` upd to assure returning of unicode string

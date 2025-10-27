@@ -923,7 +923,7 @@
 <li><a href="#getbooknav">getBookNav</a></li>
 <li><a href="#wrbooknav">wrBookNav</a></li>
 <li><a href="#getbookpath">getBookPath</a></li>
-<li><a href="#getbookpreviewurl">getBookPreviewURL</a></li>
+<li><a href="#getbookurl">getBookURL</a></li>
 <li><a href="#renderbookconfig">renderBookConfig</a></li>
 </ul>
 </li>
@@ -1123,21 +1123,16 @@ identified by <code>self.db_book_nav</code> pysondb handler.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">getBookPath</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </span></code></pre></div>
 <p>Get absolute path of current book root directory.</p>
-<p><a id="booklab.my_books.books_manager.MyBook.getBookPreviewURL"></a></p>
-<h4 id="getbookpreviewurl">getBookPreviewURL</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">getBookPreviewURL</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+<p><a id="booklab.my_books.books_manager.MyBook.getBookURL"></a></p>
+<h4 id="getbookurl">getBookURL</h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">getBookURL</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </span></code></pre></div>
 <p>Get preview URL (redirectable as is) for current book_code.</p>
 <p><a id="booklab.my_books.books_manager.MyBook.renderBookConfig"></a></p>
 <h4 id="renderbookconfig">renderBookConfig</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">renderBookConfig</span><span class="p">(</span><span class="n">out_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;mkdocs.yml&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">renderBookConfig</span><span class="p">(</span><span class="n">out_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;mkdocs.yml&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </span></code></pre></div>
 <p>Render current book configuration file used in static site generation.</p>
-<p><strong>Returns</strong>:</p>
-<p><code>tuple</code> with execution results items:
-  - <code>index[0]</code> with <em>exit_code</em>
-  - <code>index[1]</code> with <em>stdout</em>
-  - <code>index[2]</code> with <em>stderr</em></p>
 <p><a id="booklab.doc_src"></a></p>
 <h1 id="booklabdoc_src">booklab.doc_src</h1>
 <p>Booklab master static site:</p>
@@ -1337,7 +1332,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 26, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2025</span>
       
     
   </small>

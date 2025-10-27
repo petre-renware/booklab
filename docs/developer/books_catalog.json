@@ -14,7 +14,7 @@
             "last_build_date": null,
             "closed": true,
             "store_location": "... USE MyBook.getBookPath() instead",
-            "preview_url": "... USE MyBook.getBookPreviewURL() instead",
+            "preview_url": "... USE MyBook.getBookURL() instead",
             "published_location": null,
             "nav_file_location": "... USE MyBook.getBookNav() instead"
         },
@@ -32,7 +32,7 @@
             "last_build_date": null,
             "closed": false,
             "store_location": "... USE MyBook.getBookPath() instead",
-            "preview_url": "... USE MyBook.getBookPreviewURL() instead",
+            "preview_url": "... USE MyBook.getBookURL() instead",
             "published_location": null,
             "nav_file_location": "... USE MyBook.getBookNav() instead"
         }
