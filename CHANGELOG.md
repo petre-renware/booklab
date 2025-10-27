@@ -27,9 +27,7 @@ Implement `bbld` and update `book_template`:
 
 
 * ... [0.9a ??] build my book mkdoks.yml
-    - ...ini.vers... [0.9.dev37] upd `MyBook.renderBookConfig()` final code
-
-
+    - ... [0.9.dev38] upd `MyBook.renderBookConfig()` final code
 
 * [0:9a35.post0] bugfixes
     - [0.9.dev37] `MyVook.getBook()` fix bug when book nav JSON file is missing (use case: book does not physicallt exists)
