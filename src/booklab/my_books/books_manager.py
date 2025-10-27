@@ -4,6 +4,7 @@ import w3lib.url
 import json
 import pylibyaml
 import yaml  # mandatory to import after pylibyank
+import rich
 from rich import print as rprint
 from pathlib import Path
 
@@ -122,24 +123,28 @@ class MyBook:
         - `YAML str` using `format = "yaml"`
         - `None` if not known format
         """
+        if not self.db_book_nav:
+            return None
         bk_nav_raw_data = self.db_book_nav.getAll()
         bk_nav_data = dict()
         bk_nav_data["nav"] = bk_nav_raw_data
         # check format param and return accordingly
         if not format or format is ...:
-            format = "dict"  # degault value if not specified or set as None
+            format = "dict"  # default value if not specified or set as None
         if format == "dict":
             return bk_nav_data
         if format == "json":
             json_nav_data = json.dumps(
                 bk_nav_data,
-                indent = 4
+                indent = 2
             )
+            json_nav_data = f"{json_nav_data}"
             return json_nav_data
         if format == "yaml":
             yaml_nav_data = yaml.safe_dump(
                 bk_nav_data
             )
+            yaml_nav_data = f"{yaml_nav_data}"
             return yaml_nav_data
         return None  # if get here its a bug due to logic error
 
@@ -190,10 +195,15 @@ class MyBook:
     ) -> bool:
         """Render current book configuration file used in static site generation.
         """
-        #TODO ...
+        ## 1. create YAML for nav section
+        #TODO ... exit_code_s1 = self.wrBoookNav()
+        ## 2. render mkdocs_template.yml
+        #TODO ... exit_code_s2 = ...
+        ## 3. run build.sh & keep exit_code
+        #TODO .:: exit_code_s3 = os..:run...
+        ## final return & exit
+        #TODO return exit_code_s1 |  exit_code_s2 |  exit_code_s3
         pass
-
-
 
 
 
