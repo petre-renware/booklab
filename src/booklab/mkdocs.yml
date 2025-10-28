@@ -17,8 +17,15 @@ nav:
         - Manuale de configurare:
             - Indexul manuale ADMA: help/880.30-ADMA_catalog.md
             - Fisierul de configurare a cartii: help/880.30-TMPL_usage.md
-        - Documentatia tehnica:
-            - Arhitectura sistemului: 810-DSGN/810.02-System_Landscape.md
+    - About:
+        - Despre BookLab: about/
+        - Contact: https://www.renware.eu/contact.html
+    - Pentru Dezvoltatori:
+        - Arhitectura sistemului: 810-DSGN/810.02-System_Landscape.md
+        - Catalogul cartilor format JSON: developer/books_catalog.json
+        - Doc API packet booklab: developer/810.05a-booklab_DLD_specs.md
+        - Versiunea in format text: /booklab/api/version/
+        - Design detaliat module:
             - modul Initializare sistem (sysInit): 810-DSGN/810.05a-sysInit_System_Process.md
             - modul Catalog Carti (BCAT): 810-DSGN/810.05a-bcat_System_Process.md
             - modul Sablon Carti (TMPL): 810-DSGN/810.05a-btmpl_System_Process.md
@@ -27,12 +34,6 @@ nav:
             - modul Organizare Carte (ORGM): 810-DSGN/810.05a-orgm_System_Process.md
             - modul Previzualizare Carte (PRVB): 810-DSGN/810.05a-prvb_System_Process.md
             - modul Generare Carte (DPLB): 810-DSGN/810.05a-dplb_System_Process.md
-            - Baza de date "Catalogul cartilor: help/books_catalog.json"
-            - Doc tehnica detaliata: 810-DSGN/810.05a-booklab_DLD_specs.md
-    - About:
-        - Suport: https://www.renware.eu/support.html
-        - Contact: https://www.renware.eu/contact.html
-        - Despre BookLab: about/
 
 
 
@@ -57,6 +58,14 @@ markdown_extensions:
     - md_in_html
     - pymdownx.tasklist:
         custom_checkbox: true
+    # super fences for code bloks syntax highlight
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
 
 
 
@@ -112,6 +121,8 @@ theme:
         - navigation.tabs.sticky
         - navigation.path
         #- toc.integrate #NOTE integrates all navigation only in left nav bar
+        - content.code.copy
+
     palette:
         primary: black # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/ for other color options
         accent: blue

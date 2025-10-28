@@ -7,12 +7,18 @@ site_author: {{ book_data.site_author }}
 copyright: {{ book_data.copyright }}
 
 
+###---DROP IT AFYER TESTS
+### section nodel based on rendering item-by-item nav section
+# nav:
+#     - Acasa: index.md  # this item is present in all books and can be removed only by manual update of this file
+#     {% for nav_item in book_nav %}
+#     #TODO tst if nav_item[nav_item] is list and let key lvl1 and val switch to lvl 2
+#     - {{ nav_item }}: {{ nav_item[nav_item] }}
+#     {% endfor %}
+###---END.OF.TO.DROP
 
-nav:
-    - Acasa: index.md  # this item is present in all books and can be removed only by manual update of this file
-    {% for nav_item in book_nav %}
-    - {{ nav_item.title }}: {{ nav_item.anchor }}
-    {% endfor %}
+# book navigation
+{% include 'book_navigation.yml' %}
 
 
 
@@ -36,6 +42,14 @@ markdown_extensions:
     - md_in_html
     - pymdownx.tasklist:
         custom_checkbox: true
+    # super fences for code bloks syntax highlight
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
 
 
 

@@ -5,7 +5,7 @@
 ##
 
 echo Start building Booklab master static site @ `date`
-
+$(pdm venv activate)
 cd `dirname $0`
 cd ..
 
@@ -19,4 +19,4 @@ rm -r ../../docs/
 cp -lR docs/ ../../docs/
 echo End of building Booklab master static site  @ `date`
 
-
+deactivate

@@ -12,6 +12,7 @@
 # Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 #
 
+$(pdm venv activate)
 case $1 in
     -d|--daemon)
         echo Start gunicorn as daemon... Running PIDs are:

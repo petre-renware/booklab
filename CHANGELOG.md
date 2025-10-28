@@ -1,4 +1,4 @@
-**BookLab by RENware Software Systems**
+8**BookLab by RENware Software Systems**
 
 [TOC]
 
@@ -12,19 +12,71 @@
 
 
 
-## tbd... [0.9] - unreleased
-Implement `bbld`, book config and update `book_template` functionalities:
-* tbd... rendder book config (mkdocs.yml)
+## tbd... [0.10] - unreleased
+Implement `bbld` and update `book_template`:
+
+* tbd... render book config (mkdocs.yml)
   render from ../my_books/... and if not
   render from string
 
-* tbd... mkdocs_template.yml, book_navigation.json: review and upd nav section with Jinja data-items
-  HINT: as test entry use the guide form entry (this entry will not be accesible from end user menu)
+* tbd... `static site` list all system routes in "About Booklab" page
 
-* tbd... create booklab-cli.__init__.py specs using docopt
+* tbd... route `/api/bbld/`:
+  - upd bcat ref last update date
+  - for edit file try GoogleDocs
+
+
+* ... [0.10a ??] build my book mkdoks.yml
+    - ... upd `MyBook.renderBookConfig()` final code
 
 
 
+
+
+
+
+## [0.9] - 28.oct.2025
+FIX bugs ref implement `bbld` and update `book_template`:
+    - [0.9.dev38] `routes.py` fix bugs in /api/prvb/ ref MyBook.getBookURL() merhod name
+* [0:9a35.post0] bugfixes
+    - [0.9.dev37] `MyVook.getBook()` fix bug when book nav JSON file is missing (use case: book does not physicallt exists)
+    - [0.9.dev36] review & upd `MyBooks.renderBookConfig()` logic
+* [0.9a35] enhance, clean & improve `MyBooks` & `booklabd` components
+    - [0.9.dev34] review & upd mkdocs_template.yml
+    - [0.9.dev33] `MyBook.getNavData()` upd to assure returning of unicode string
+    - [0.9.dev32] `booklabd.routes.publisher.py` 3rd party module to use view functions normal args and extract them from reqiest query params if exists (similar to route parameters)
+    - [0.9.dev31] `MyBook.renderBookConfig()` skeleton
+    - [0.9.dev30] upd all package scripts to activate venv using/with  PDM (ie run result of "pdm venv activate")
+    - [0.9.dev29] review & upd: book_navigation.json, book_navigation.yml
+    - [0.9.dev28] static site upd mkdocs.yml with super fences for code blocks syntax highlighting
+      & apply to my_books/book_template/mkdocs_template.yml
+    - [0.9.dev27] static site bstatus add TOC & change the 2 advanced view titles from bold to headind 3 to be cvisible on TOC
+    - [0.9.dev26] static site bstatus add book_navigation as json & yaml views in page, 
+    - [0.9.dev25] `MyBook.getBookURL()` refactor to `getBookPreviewURL()` 
+    - [0.9.dev24] bcat show catalog as JSON view in bottom of page for "advanced users"
+* [0.9a23] static site refactor nacigation
+    - [0.9.dev22] new `/developer` page and and move from /help all specific files
+    - [0.9.dev21] static site: refactor "Help" entry move all tech info to a new top entry "Pentru Dezvoptatori"
+* [0.9a20] `my_books/book_template` book navigation YAML and bstatus info
+    - [0.9.dev19] `bstatus`update  with book_navigation.json location. Upd MyBook.getBook() set nav_file_location key
+    - [0.9.dev18] new method `MyBBook.wrBookNav()` to write "book_navigation.yml" in same dir where is "book_navigation.json"
+    - [0.9.dev17] fix errs in mkdocs_template.yml ref Jinja include statement
+    - [0.9.dev16] `my_books/book_template` update mkdocs_template.yml ref nav section rendering from external dedicated file
+* [0.9a15] `MyBook` navigation structure
+    - [0.9.dev14] `MyBook.getBookNav(format)` upd to get data as YAML
+    - [0.9.dev13] `MyBook.getBookNav(format)` upd to get data as JSON
+    - [0.9.dev12] `MyBook.getBookNav(format)` add conditions to return according to `format` parameter
+    - [0.9.dev11] clean code and start use rich lib for debug prints
+    - [0.9.dev10] `MyBook.getBookNav(format)` upd to get  data as dict
+    - [0.9.dev9] `MyBook` add skeleton for method `getBookNav(format)` to get navigation data as json & yaml format to use AS-IS for Jinja corresponding param in "mkdocs_template.yml"
+    - [0.9.dev8] add python-dotenv support and .flaskenv file
+    - [0.9.dev7] review & update "book_navigation.json" to be pysodb c0mpliant
+    - [0.9.dev6] clean code of [0.9.dev3]
+    - [0.9.dev5]`MyBook` add property to keep pysondb reference to "book_navigation.json"
+* [0.9a4] `booklabd` mk route `/api/version/` that return Booklab-app version as pute plain text, no HTML as found 9n booklab.__version__ variable
+* [0.9a2] static site updated about_template.html for links to application refrences and with a new section for displayng http endpoints
+* [0.9a1] `booklab_cli` create a skeleton of modules
+* [0.9.dev0] update README.md file to differentiate for changelog link entries. Make an entry for stable version and one for dev version, both getting file from GitHib
 
 
 ## [0.8] - 15.oct.2025
@@ -59,7 +111,7 @@ Update `my_book` config, `book_template` functionalities:
 * [0.8.dev20] fix db_init.py to return None for db_ystem (was dropped) to remain for future use and. Move this file to booklab root
 * [0.8a19] MyBook.getBookPath() to chk if directory exists and if not return None
 * [0.8.dev18] reorg project: drop dir data/ and mv books_catalog.json to my_books/. Update booklab.__init__.py for DATA_ROOT directory and db_init
-* [0.8b17] MyBook: method `getBookURL()` to return MY_BOOK_URL and update routes.py function api_prvb()
+* [0.8b17] MyBook: method `getBookPreviewURL()` to return MY_BOOK_URL and update routes.py function api_prvb()
 * [0.8b16] create MyBook class methods that return paths and urls:
     - build doc + package + publish them
     - [0.8a16] use MyBoook property MY_BOOK_URL in routes.py on route /api/prvb/ (ie, book preview) to redirect to book site

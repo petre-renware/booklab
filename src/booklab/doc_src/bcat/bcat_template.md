@@ -7,8 +7,6 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 [Creare carte noua](/booklab/api/newb/)
 
-{% include './local-page.css' %}
-
 <table>
     <thead>
         <tr>
@@ -48,6 +46,11 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 ## [Help](../help/880.30-BCAT_usage.md)
 
 
+## Catalogul in format JSON
 
+Mai jos este prezentat catalogul cartilor in forma sa "bruta" de fisier-date JSON:
 
+```json
+{% include '../developer/books_catalog.json' %}
+```
 

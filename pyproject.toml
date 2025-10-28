@@ -44,7 +44,7 @@ dependencies = [
     "mergedeep==1.3.4",
     "mkdocs==1.5.2",
     "mkdocs-git-revision-date-localized-plugin==1.2.0",
-    "mkdocs-include-markdown-plugin==6.0.0",
+    "mkdocs-include-markdown-plugin==7.2.0",
     "mkdocs-macros-plugin==1.0.4",
     "mkdocs-material==9.1.21",
     "mkdocs-material-extensions==1.1.1",
@@ -106,20 +106,27 @@ dependencies = [
     "gunicorn>=23.0.0",
     "pango>=0.0.1",
     "w3lib>=2.3.1",
+    "rich>=14.2.0",
+    "pylibyaml>=0.1.0",
 ]
 
 
+[project.urls]
+HomePage = "http://booklab.renware.eu/"
+DevPage = "http://dev.renware.eu/booklab/"
 
 
 [tool.pdm]
 distribution = true
 
 
-
-
 [tool.pdm.scripts]
 gen_tech_doc = {shell = "src/booklab/scripts/gen-api-doc.sh"}
 gen_static_site = {shell = "src/booklab/scripts/master_site_build.sh"}
+build_site = { composite = [
+    "gen_tech_doc",
+    "gen_static_site"
+] }
 build_all = { composite = [
     "gen_tech_doc",
     "gen_static_site",
@@ -128,26 +135,14 @@ build_all = { composite = [
 bklab_srv = {shell = "src/booklab/scripts/server-run.sh"}  # run booklabd wsgi server
 
 
-
-
 [tool.pdm.version]
 source = "file"
 path = "src/booklab/__version__.py"
 
 
-
-[project.urls]
-HomePage = "http://booklab.renware.eu/"
-DevPage = "http://dev.renware.eu/booklab/"
-
-
-
-
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
-
-
 
 
 [dependency-groups]
@@ -157,4 +152,7 @@ test = [
 dev = [
     "pydoc-markdown>=4.8.2",
     "docopt>=0.6.2",
+    "python-dotenv>=1.1.1",
+    "pylint>=4.0.2",
+    "black>=25.9.0",
 ]

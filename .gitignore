@@ -13,8 +13,9 @@ __pycache__/
 # dynamically run-time generated files
 *.PID
 *.json.lock
-
-
+src/booklab/docs/bcat/bcat.html
+src/booklab/docs/bstatus/bstatus.html
+src/booklab/docs/about/about.html
 
 
 # Distribution / packaging
@@ -97,22 +98,13 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
-.env
-.venv
-.lenv
-.wenv
-
+.env/
+.venv/
 env/
 venv/
-lenv/
-wenv/
 
 env.bak/
 venv.bak/
-
-# #NOTE BookLabb application environments
-doc_src/pyenv/
-docs/pyenv/
 
 
 
