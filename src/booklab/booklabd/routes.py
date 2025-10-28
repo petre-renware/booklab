@@ -73,6 +73,7 @@ def api_bstatus(book_code: str = ...):
         abort(404, description = "Book not found, does not physically exist.")
     else:
         ret_str = f"Book {book_code} data is <br>{book_data}"
+        #...4dbg... return ret_str
     # create Jinja patams with JSON & YAML navigation section
     nav_json = my_book.getBookNav(format = "json")
     nav_yaml = my_book.getBookNav(format = "yaml")
@@ -141,7 +142,7 @@ def api_prvb(book_code: str = ...):
     book_data = my_book.getBook()
     if not book_data:
         abort(404, description = "Book not found' Possible was not yet built.")
-    book_redirect_url = my_book.getBookPreviewURL()
+    book_redirect_url = my_book.getBookURL()
     return redirect(book_redirect_url)
 
 
