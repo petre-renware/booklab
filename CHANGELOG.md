@@ -12,7 +12,7 @@
 
 
 
-## tbd... [0.9] - unreleased
+## tbd... [0.10] - unreleased
 Implement `bbld` and update `book_template`:
 
 * tbd... render book config (mkdocs.yml)
@@ -26,10 +26,18 @@ Implement `bbld` and update `book_template`:
   - for edit file try GoogleDocs
 
 
-* ... [0.9a ??] build my book mkdoks.yml
+* ... [0.10a ??] build my book mkdoks.yml
     - ... upd `MyBook.renderBookConfig()` final code
-    - [0.9.dev38] `routes.py` fix bugs in /api/prvb/ ref MyBook.getBookURL() merhod name
 
+
+
+
+
+
+
+## [0.9] - 28.oct.2025
+FIX bugs ref implement `bbld` and update `book_template`:
+    - [0.9.dev38] `routes.py` fix bugs in /api/prvb/ ref MyBook.getBookURL() merhod name
 * [0:9a35.post0] bugfixes
     - [0.9.dev37] `MyVook.getBook()` fix bug when book nav JSON file is missing (use case: book does not physicallt exists)
     - [0.9.dev36] review & upd `MyBooks.renderBookConfig()` logic
@@ -69,14 +77,6 @@ Implement `bbld` and update `book_template`:
 * [0.9a2] static site updated about_template.html for links to application refrences and with a new section for displayng http endpoints
 * [0.9a1] `booklab_cli` create a skeleton of modules
 * [0.9.dev0] update README.md file to differentiate for changelog link entries. Make an entry for stable version and one for dev version, both getting file from GitHib
-
-
-
-
-
-
-
-
 
 
 ## [0.8] - 15.oct.2025

@@ -45,7 +45,7 @@ docs_prefix = os.path.join(STATIC_SITE_ROOT)
 
 @api_app.route("/api/newb/")
 def api_newb():
-    """Serve **New book (newb)** functionality.
+    """Serve _New book (newb)_ functionality.
     """
     book_code = request.args.get("code")
     ret_str = f"Page for <b>newb</b><br>"
@@ -56,7 +56,7 @@ def api_newb():
 
 @api_app.route("/api/bstatus/")
 def api_bstatus(book_code: str = ...):
-    """Serve **Book status (bstatus)** functionality.
+    """Serve _Book status (bstatus)_ functionality.
 
     **Query parameters:** `code` for database `boook_code`
     """
@@ -71,9 +71,7 @@ def api_bstatus(book_code: str = ...):
     book_data = my_book.getBook()
     if not book_data:
         abort(404, description = "Book not found, does not physically exist.")
-    else:
-        ret_str = f"Book {book_code} data is <br>{book_data}"
-        #...4dbg... return ret_str
+        return
     # create Jinja patams with JSON & YAML navigation section
     nav_json = my_book.getBookNav(format = "json")
     nav_yaml = my_book.getBookNav(format = "yaml")
@@ -99,7 +97,7 @@ def api_bstatus(book_code: str = ...):
 
 @api_app.route("/api/edtb/")
 def api_edtb(book_code: str = ...):
-    """Serve **Book edit (edtb)** functionality.
+    """Serve _Book edit (edtb)_ functionality.
 
     **Query parameters:** `code` for database `boook_code`
     """
@@ -114,7 +112,7 @@ def api_edtb(book_code: str = ...):
 
 @api_app.route("/api/orgm/")
 def api_orgm(book_code: str = ...):
-    """Serve **Book structure organization (orgm:** functionality.
+    """Serve _Book structure & navigation organization (orgm)_ functionality.
 
     **Query parameters:** `code` for database `boook_code`
     """
@@ -128,7 +126,7 @@ def api_orgm(book_code: str = ...):
 
 @api_app.route("/api/prvb/")
 def api_prvb(book_code: str = ...):
-    """Serve **Book preview (prvb)** functionality.
+    """Serve _Book preview (prvb)_ functionality.
 
     **Query parameters:** `code` for database `boook_code`
     """
@@ -148,7 +146,7 @@ def api_prvb(book_code: str = ...):
 
 @api_app.route("/api/bbld/")
 def api_bbld(book_code: str = ...):
-    """Serve **Book build (bbld)** functionality.
+    """Serve _Book build (bbld)_ functionality.
 
     **Query parameters:** `code` for database `boook_code`
     """
@@ -164,7 +162,7 @@ def api_bbld(book_code: str = ...):
 
 @api_app.route("/api/dplb/")
 def api_dplb(book_code: str = ...):
-    """Serve **Book delivery (dplb)** functionality.
+    """Serve _Book delivery (dplb)_ functionality.
 
     **Query parameters:** `code` for database `boook_code`
     """
@@ -178,7 +176,7 @@ def api_dplb(book_code: str = ...):
 
 @api_app.route("/api/bcat/")
 def api_bcat():
-    """Serve accessing **books catalog (bcat)** functionality.
+    """Serve _Books catalog (bcat)_ functionality.
     """
     bcat_records = None
     bcat_records = db_books.getAll()
