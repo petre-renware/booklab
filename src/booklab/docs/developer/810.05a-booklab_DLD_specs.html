@@ -1118,9 +1118,21 @@ identified by <code>self.db_book_nav</code> pysondb handler.</p>
 <p>Get preview URL (redirectable as is) for current book_code.</p>
 <p><a id="booklab.my_books.books_manager.MyBook.renderBookConfig"></a></p>
 <h4 id="renderbookconfig">renderBookConfig</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">renderBookConfig</span><span class="p">(</span><span class="n">out_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;mkdocs.yml&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">renderBookConfig</span><span class="p">(</span><span class="n">start_from</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span>
 </span></code></pre></div>
-<p>Render current book configuration file used in static site generation.</p>
+<p>Render current book configuration file.
+Produce a <code>mkdocs.yml</code> file as being the configuration file to build the book.
+File is writen in book root directory.</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>start_from</code> the step where to START from.
+  Valid values are <code>int</code> in range <code>[1, 3]</code>.
+  A value <em>out of valid range</em> is interpreted as <code>1</code> (execute all steps).</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<ul>
+<li><code>(exit_code, stdout + stderr)</code></li>
+</ul>
 <p><a id="booklab.doc_src"></a></p>
 <h1 id="booklabdoc_src">booklab.doc_src</h1>
 <p>Booklab master static site:</p>
@@ -1293,7 +1305,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 28, 2025</span>
       
     
   </small>

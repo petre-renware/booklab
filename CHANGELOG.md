@@ -28,7 +28,7 @@ Implement `bbld` and update `book_template`:
 
 * ... [0.10a ??] build my book mkdoks.yml
     - ... upd `MyBook.renderBookConfig()` final code
-
+* [0.10a11] `MyBook.renderBookConfig()` step 1 finished
 
 
 
