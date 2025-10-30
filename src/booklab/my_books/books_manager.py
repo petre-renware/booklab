@@ -36,7 +36,6 @@ class MyBook:
     db_books_catalog: pysondb
     db_book_nav: pysondb
 
-
     def __init__(
         self,
         flask_app: Flask,
@@ -157,13 +156,18 @@ class MyBook:
         - `True` if file was written
         - `False` if file was not written doesn't matter why (usual problem is source file)
         """
+        if not self.db_book_nav:
+            return False
         out_file = self.db_book_nav.filename
         out_file = out_file.replace(".json", ".yml")
         out_file = Path(out_file)
         WARNING_CONTENT = "# `nav` section AUTO GENERATED @run-time. DO NOT MODIFY it.\n"
-        yaml_content= self.getBookNav(format = "yaml")
+        if not (yaml_content := self.getBookNav(format = "yaml")):
+            return False
         yaml_content = WARNING_CONTENT + yaml_content
-        if not out_file.write_text(yaml_content):
+        try:
+            out_file.write_text(yaml_content)
+        except:
             return False
         return True
 
@@ -191,19 +195,79 @@ class MyBook:
 
     def renderBookConfig(
         self,
-        out_file: str = "mkdocs.yml"
-    ) -> bool:
-        """Render current book configuration file used in static site generation.
+        start_from: int = 1
+    ) -> tuple:
+        """Render current book configuration file.
+        Produce a `mkdocs.yml` file as being the configuration file to build the book.
+        File is writen in book root directory.
+
+        Arguments:
+
+        - `start_from` the step where to START from. 
+          Valid values are `int` in range `[1, 3]`. 
+          A value _out of valid range_ is interpreted as `1` (execute all steps).
+
+        Return:
+
+        - `(exit_code, stdout + stderr)`
         """
+        if not self.db_book_nav:
+            # if book nav does not exists force exit
+            return (False, "EROARE: Cartea nu are navigarea definita (fisier JSON)")
+        if (start_from is None)\
+           or (type(start_from) is not int)\
+           or (start_from < 1)\
+           or (start_from > 3)\
+        :
+            start_from = 1
+        s1_exec = False
+        s2_exec = False
+        s3_exec = False
+        rslt_s1 = ""
+        rslt_s2 = ""
+        rslt_s3 = ""
         ## 1. create YAML for nav section
-        #TODO ... exit_code_s1 = self.wrBoookNav()
+        if start_from <= 1:
+            exit_code_s1 = self.wrBookNav()
+            rslt_s1 = "executat" if exit_code_s1 else "NE-executat"
+            rslt_s1 = f"\nCreare fisier YAML din JSON: {rslt_s1}"
+            if not exit_code_s1:
+                return (
+                    False,
+                    rslt_s1
+                )
+            s1_exec = True
         ## 2. render mkdocs_template.yml
-        #TODO ... exit_code_s2 = ...
+        if start_from <= 2:
+            #TODO ...
+            exit_code_s2 = ...
+            rslt_s2 = ... # + stdout + stderr of prev run)
+            rslt_s2 = f"\nRandare Jinja: {rslt_s2}"
+            if not exit_code_s2:
+                return (
+                    False,
+                    rslt_s1 + rslt_s2
+                )
+            s2_exec = True
         ## 3. run build.sh & keep exit_code
-        #TODO .:: exit_code_s3 = os..:run...
-        ## final return & exit
-        #TODO return exit_code_s1 |  exit_code_s2 |  exit_code_s3
-        pass
+        if start_from <= 3:
+            #TODO ... exit_code_s3 = os..:run...
+            exit_code_s3 = ...
+            rslt_s3 = ... # self._render_config_stack.append(stdout + stderr of prev ruv)
+            rslt_s3 = f"\nRulare build carte cu mkdocs: {rslt_s3}"
+            if not exit_code_s3:
+                return (
+                    False,
+                    rslt_s1 + rslt_s2 + rslt_s3
+                )
+            s3_exec = True
+        ## 4. everithing was ok here so return True and all result outputs
+        if s1_exec or s2_exec or s3_exec:
+            return (
+                True,
+                rslt_s1 + rslt_s2 + rslt_s3
+            )
+
 
 
 
