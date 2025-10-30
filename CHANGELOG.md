@@ -26,8 +26,11 @@ Implement `bbld` and update `book_template`:
   - for edit file try GoogleDocs
 
 
-* ... [0.10a ??] build my book mkdoks.yml
-    - ... upd `MyBook.renderBookConfig()` final code
+* ... [0.10a_??] build my book mkdoks.yml
+    - ... `MyBook.renderBookConfig()` final code
+    - ... `MyBook.renderBookConfig()` steo 3
+    - ... `MyBook.renderBookConfig()` steo 2
+    - ... [0.10.dev12] `MyBook.wrBookNav()` tst before finish if UAML file exists and return accordingly
 * [0.10a11] `MyBook.renderBookConfig()` step 1 finished
 
 
