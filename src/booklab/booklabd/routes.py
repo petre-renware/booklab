@@ -64,7 +64,6 @@ def api_bstatus(book_code: str = ...):
     if (book_code is ...) or (book_code is None):
         book_code = request.args.get("code")
     my_book = MyBook(
-        flask_app = api_app,
         db = db_books,
         book_code = book_code
     )
@@ -133,7 +132,6 @@ def api_prvb(book_code: str = ...):
     if (book_code is ...) or (book_code is None):
         book_code = request.args.get("code")
     my_book = MyBook(
-        flask_app = api_app,
         db = db_books,
         book_code = book_code
     )

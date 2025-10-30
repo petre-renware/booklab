@@ -30,7 +30,8 @@ Implement `bbld` and update `book_template`:
     - ... `MyBook.renderBookConfig()` final code
     - ... `MyBook.renderBookConfig()` steo 3
     - ... `MyBook.renderBookConfig()` steo 2
-    - ... [0.10.dev12] `MyBook.wrBookNav()` tst before finish if UAML file exists and return accordingly
+    - ... `MyBook.wrBookNav()` tst before finish if YAML file can be open for read and return accordingly
+    - [0.10.dev12] `MyBook` refactored to drop "Flask app" attribute. Updated routes.py all MyBook calls.
 * [0.10a11] `MyBook.renderBookConfig()` step 1 finished
 
 

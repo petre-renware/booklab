@@ -1,5 +1,4 @@
-# *nav section* AUTO GENERATED @run-time. DO NOT MODIFY it.
-# YAML generated at  October 26, 2025 11:49:48 
+# `nav` section AUTO GENERATED @run-time. DO NOT MODIFY it.
 nav:
 - Acasa-Home: index.md
 - Ghid configurare: guides/how_organize_book.md

@@ -32,13 +32,11 @@ class MyBook:
     MY_BOOKS_PATH: str
     book_path: str
     book_code: str
-    web_app: Flask
     db_books_catalog: pysondb
     db_book_nav: pysondb
 
     def __init__(
         self,
-        flask_app: Flask,
         db: pysondb,
         book_code: str
     ):
@@ -46,7 +44,6 @@ class MyBook:
         """
         MyBook.MY_BOOKS_PATH = MY_BOOKS_ROOT
         self.book_code = book_code
-        self.web_app = flask_app
         self.db_books_catalog = db
         self.MY_BOOK_URL = w3lib.url.canonicalize_url(
             url_quote(
@@ -90,7 +87,7 @@ class MyBook:
                 return None
             # upd key "store_location"
             bk_rec["store_location"] = self.getBookPath()
-            # when location exists appent `/`to ckear state it as directory otherwise let it unchanged
+            # when location exists append `/`to ckear state it as directory otherwise let it unchanged
             if bk_rec["store_location"]:
                bk_rec["store_location"] += "/"
             # upd key "preview_url"
@@ -253,7 +250,7 @@ class MyBook:
         if start_from <= 3:
             #TODO ... exit_code_s3 = os..:run...
             exit_code_s3 = ...
-            rslt_s3 = ... # self._render_config_stack.append(stdout + stderr of prev ruv)
+            rslt_s3 = ... 
             rslt_s3 = f"\nRulare build carte cu mkdocs: {rslt_s3}"
             if not exit_code_s3:
                 return (
