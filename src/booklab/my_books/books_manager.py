@@ -151,7 +151,7 @@ class MyBook:
         Return:
 
         - `True` if file was written
-        - `False` if file was not written doesn't matter why (usual problem is source file)
+        - `False` if file was not written or cannot be read regardless why (usual problem is source file)
         """
         if not self.db_book_nav:
             return False
@@ -162,8 +162,14 @@ class MyBook:
         if not (yaml_content := self.getBookNav(format = "yaml")):
             return False
         yaml_content = WARNING_CONTENT + yaml_content
-        try:
+        try:  # write file
             out_file.write_text(yaml_content)
+        except:
+            return False
+        try:  # test if file can be read
+            with out_file.open("r") as f:
+                _c = f.read()
+            return True
         except:
             return False
         return True
