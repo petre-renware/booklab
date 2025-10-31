@@ -26,8 +26,12 @@ Implement `bbld` and update `book_template`:
   - for edit file try GoogleDocs
 
 
-* ... [0.10a ??] build my book mkdoks.yml
-    - ... upd `MyBook.renderBookConfig()` final code
+* ... [0.10a_??] build my book mkdoks.yml
+    - ... `MyBook.renderBookConfig()` final code
+    - ... `MyBook.renderBookConfig()` steo 3
+    - ... `MyBook.renderBookConfig()` steo 2
+    - ... `MyBook.wrBookNav()` tst before finish if YAML file can be open for read and return accordingly
+* [0.10a12] `MyBook` refactored to drop "Flask app" attribute. Updated routes.py all MyBook calls.
 * [0.10a11] `MyBook.renderBookConfig()` step 1 finished
 
 
