@@ -15,22 +15,17 @@
 ## tbd... [0.10] - unreleased
 Implement `bbld` and update `book_template`:
 
-* tbd... render book config (mkdocs.yml)
-  render from ../my_books/... and if not
-  render from string
-
 * tbd... `static site` list all system routes in "About Booklab" page
 
 * tbd... route `/api/bbld/`:
   - upd bcat ref last update date
   - for edit file try GoogleDocs
 
-
 * ... [0.10a_??] build my book mkdoks.yml
     - ... `MyBook.renderBookConfig()` final code
     - ... `MyBook.renderBookConfig()` steo 3
     - ... `MyBook.renderBookConfig()` steo 2
-    - ... `MyBook.wrBookNav()` tst before finish if YAML file can be open for read and return accordingly
+    - ... [0.10.dev13] `MyBook.wrBookNav()` tst before finish if YAML file can be open for read and return accordingly
 * [0.10a12] `MyBook` refactored to drop "Flask app" attribute. Updated routes.py all MyBook calls.
 * [0.10a11] `MyBook.renderBookConfig()` step 1 finished
 
