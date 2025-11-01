@@ -20,11 +20,6 @@ class MyBook:
     """
     Class that manage end user books.
 
-    **Important properties:**
-
-    - `MY_BOOK_URL`: url to redirect to access book static site (preview book)
-    - `MY_BOOK_PATH`: file-parh to book root location
-
     **Mandatory requirements:**
 
     - any Jinja renderings will be made "from string" (ie, ising Flask render_from_string() which is included) or by creating a local Jinja environment.
@@ -33,7 +28,7 @@ class MyBook:
     """
     _MY_BOOKS_URL_prefix = "/my-books/"
     MY_BOOK_URL: str
-    MY_BOOKS_PATH: str
+    MY_BOOKS_PATH: str = MY_BOOKS_ROOT
     book_code: str
     db_books_catalog: pysondb
     db_book_nav: pysondb
@@ -45,7 +40,7 @@ class MyBook:
     ):
         """Init an instance of class MyBook
         """
-        MyBook.MY_BOOKS_PATH = MY_BOOKS_ROOT
+        self.MY_BOOKS_PATH = MY_BOOKS_ROOT
         self.book_code = book_code
         self.db_books_catalog = db
         self.MY_BOOK_URL = w3lib.url.canonicalize_url(

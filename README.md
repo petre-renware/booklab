@@ -8,7 +8,7 @@ Booklab este o aplicatie destinata creari de manuale / documentatii in format el
 ## Site-uri web dedicate:
 - [Demo site, ultima versiune stabila](http://booklab.renware.eu)
 - [Demo site, ultima versiune in development](http://dev.renware.eu/booklab/)
-- [GitHub in devekopment](https://github.com/petre-renware/booklab/)
+- [GitHub in development](https://github.com/petre-renware/booklab/)
 - [GitHub versiune stabila](https://github.com/petre-renware/booklab/tree/master)
 
 

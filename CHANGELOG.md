@@ -26,7 +26,8 @@ Implement `bbld` and update `book_template`:
     - ... `MyBook.renderBookConfig()` steo 3
 * ... [0.10a___] `MyBook.renderBookConfig()` steo 2
     - ...
-    - ...to.init... [0.10.dev16] read mkdocs_template.yml to render from string
+    - ... read mkdocs_template.yml to render from string
+    - [0.10.dev16] `MyBook` clean MY_BOOKS_PATH attribute and make it equal to MY_BOOKS_ROOT created on booklabd init
     - [0.10.dev15] `MyBook` drop "book_path" attribute because exists mwthod `getBookPath()` that do that
 * [0.10a14] upd README.md with pj GitHub
 * [0.10a13] `MyBook.wrBookNav()` tst before finish if YAML file can be open for read and return accordingly
