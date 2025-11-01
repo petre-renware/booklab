@@ -34,7 +34,6 @@ class MyBook:
     _MY_BOOKS_URL_prefix = "/my-books/"
     MY_BOOK_URL: str
     MY_BOOKS_PATH: str
-    book_path: str
     book_code: str
     db_books_catalog: pysondb
     db_book_nav: pysondb
