@@ -25,9 +25,7 @@ Implement `bbld` and update `book_template`:
     - ... `MyBook.renderBookConfig()` final code
     - ... `MyBook.renderBookConfig()` steo 3
     - ... `MyBook.renderBookConfig()` steo 2
-    - ... upd READE.md with pj GitHub:
-      https://github.com/petre-renware/booklab/
-      https://github.com/petre-renware/booklab/tree/master
+* [0.10a14] upd READE.md with pj GitHub
 * [0.10a13] `MyBook.wrBookNav()` tst before finish if YAML file can be open for read and return accordingly
 * [0.10a12] `MyBook` refactored to drop "Flask app" attribute. Updated routes.py all MyBook calls.
 * [0.10a11] `MyBook.renderBookConfig()` step 1 finished
