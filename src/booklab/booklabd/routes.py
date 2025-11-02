@@ -31,7 +31,7 @@ from booklab.booklabd import db_books
 from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
 
-from booklab.my_books.books_manager import MyBook
+from booklab.my_books.books_manager import MyBooks
 
 
 # construct redirect url-path prefix (up to static site)
@@ -63,7 +63,7 @@ def api_bstatus(book_code: str = ...):
     ret_str = "nothing to say..."
     if (book_code is ...) or (book_code is None):
         book_code = request.args.get("code")
-    my_book = MyBook(
+    my_book = MyBooks(
         db = db_books,
         book_code = book_code
     )
@@ -131,7 +131,7 @@ def api_prvb(book_code: str = ...):
     """
     if (book_code is ...) or (book_code is None):
         book_code = request.args.get("code")
-    my_book = MyBook(
+    my_book = MyBooks(
         db = db_books,
         book_code = book_code
     )
