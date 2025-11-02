@@ -16,43 +16,38 @@ from booklab import EXT_PATH
 from booklab import FULL_EXT_URL
 
 
-class MyBook:
+class MyBooks:
     """
     Class that manage end user books.
 
-    **Important properties:**
-
-    - `MY_BOOK_URL`: url to redirect to access book static site (preview book)
-    - `MY_BOOK_PATH`: file-parh to book root location
-
     **Mandatory requirements:**
 
-    - any Jinja renderings will be made "from string" (ie, ising Flask render_from_string() which is included) or by creating a local Jinja environment.
+    - any Jinja renderings will be made "from string" (ie, using 
+    Flask `render_from_string()` which is included) or by creating a local Jinja environment.
 
     author: Petre Iordanescu (petre.iordanescu@gmail.com)
     """
-    _MY_BOOKS_URL_prefix = "/my-books/"
-    MY_BOOK_URL: str
-    MY_BOOKS_PATH: str
-    book_path: str
-    book_code: str
-    db_books_catalog: pysondb
-    db_book_nav: pysondb
+    MY_BOOKS_URL_prefix: str = "/my-books/"  # URL prefix to add when accesing a book local (generated) site
+    MY_BOOK_URL: str = None  # instantiated book URL to local (generated) site
+    MY_BOOKS_ROOT: str = MY_BOOKS_ROOT  # confusing name ? just duplicate the global one in class namespace
+    book_code: str = None  # instanciated book code
+    db_books_catalog: pysondb = None  # books catalog data controller
+    db_book_nav: pysondb = None  # books navigation data controller
 
     def __init__(
         self,
         db: pysondb,
         book_code: str
     ):
-        """Init an instance of class MyBook
+        """Init an instance of class MyBooks
         """
-        MyBook.MY_BOOKS_PATH = MY_BOOKS_ROOT
+        self.MY_BOOKS_ROOT = MY_BOOKS_ROOT  # confusing name ? just duplicate the global one in class namespace
         self.book_code = book_code
         self.db_books_catalog = db
         self.MY_BOOK_URL = w3lib.url.canonicalize_url(
             url_quote(
                 str(FULL_EXT_URL) +
-                str(MyBook._MY_BOOKS_URL_prefix) +
+                str(MyBooks.MY_BOOKS_URL_prefix) +
                 str(self.book_code) +
                 "/docs/"
             )
@@ -184,7 +179,7 @@ class MyBook:
         """
         my_book_path = os.path.abspath(
             os.path.join(
-                self.MY_BOOKS_PATH,
+                self.MY_BOOKS_ROOT,
                 self.book_code
             )
         )
