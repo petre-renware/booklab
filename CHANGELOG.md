@@ -25,9 +25,8 @@ Implement `bbld` and update `book_template`:
     - ... `MyBook.renderBookConfig()` final code
     - ... `MyBook.renderBookConfig()` steo 3
 * ... [0.10a___] `MyBook.renderBookConfig()` steo 2
-    - ...
     - ... read mkdocs_template.yml to render from string
-* ... [0.10a...[ ...
+* [0.10a19] `MyBooks` object clean
     - [0.10.dev18] rename `MyBook` to `MyBooks`
     - [0.10.dev17] `MyBook` rename MY_BOOKS_PATH attribute to MY_BOOKS_ROOT and comment all class variables
     - [0.10.dev16] `MyBook` clean MY_BOOKS_PATH attribute and make it equal to MY_BOOKS_ROOT created on booklabd init
