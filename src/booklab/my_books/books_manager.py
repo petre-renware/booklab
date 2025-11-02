@@ -16,7 +16,7 @@ from booklab import EXT_PATH
 from booklab import FULL_EXT_URL
 
 
-class MyBook:
+class MyBooks:
     """
     Class that manage end user books.
 
@@ -39,7 +39,7 @@ class MyBook:
         db: pysondb,
         book_code: str
     ):
-        """Init an instance of class MyBook
+        """Init an instance of class MyBooks
         """
         self.MY_BOOKS_ROOT = MY_BOOKS_ROOT  # confusing name ? just duplicate the global one in class namespace
         self.book_code = book_code
@@ -47,7 +47,7 @@ class MyBook:
         self.MY_BOOK_URL = w3lib.url.canonicalize_url(
             url_quote(
                 str(FULL_EXT_URL) +
-                str(MyBook.MY_BOOKS_URL_prefix) +
+                str(MyBooks.MY_BOOKS_URL_prefix) +
                 str(self.book_code) +
                 "/docs/"
             )
