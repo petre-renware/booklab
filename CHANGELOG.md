@@ -26,6 +26,8 @@ Implement `bbld` and update `book_template`:
     - ... `MyBook.renderBookConfig()` steo 3
 * ... [0.10a___] `MyBook.renderBookConfig()` steo 2
     - ... read mkdocs_template.yml to render from string
+    - ... `MyBooks.renderBookConfig()` repl in step 1 "wrBookNav" with "getBookNav" and keep a local variable with YAML data for render step
+    - ... `MyBooks.renderBookConfig()` drop step start param, elininate step 3 (will be subject of other method) and steps execution mechanism (exec all or nothing9)
 * [0.10a19] `MyBooks` object clean
     - [0.10.dev18] rename `MyBook` to `MyBooks`
     - [0.10.dev17] `MyBook` rename MY_BOOKS_PATH attribute to MY_BOOKS_ROOT and comment all class variables
@@ -35,10 +37,6 @@ Implement `bbld` and update `book_template`:
 * [0.10a13] `MyBook.wrBookNav()` tst before finish if YAML file can be open for read and return accordingly
 * [0.10a12] `MyBook` refactored to drop "Flask app" attribute. Updated routes.py all MyBook calls.
 * [0.10a11] `MyBook.renderBookConfig()` step 1 finished
-
-
-
-
 
 
 ## [0.9] - 28.oct.2025
