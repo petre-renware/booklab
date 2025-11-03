@@ -27,7 +27,9 @@ Implement `bbld` and update `book_template`:
 * ... [0.10a___] `MyBook.renderBookConfig()` steo 2
     - ... read mkdocs_template.yml to render from string
     - ... `MyBooks.renderBookConfig()` repl in step 1 "wrBookNav" with "getBookNav" and keep a local variable with YAML data for render step
-    - ... `MyBooks.renderBookConfig()` drop step start param, elininate step 3 (will be subject of other method) and steps execution mechanism (exec all or nothing9)
+    - ... `MyBooks.renderBookConfig()` drop step start parameter
+    - ... `MyBooks.renderBookConfig()` drop steps execution mechanism (exec all or nothing)
+    - [0.10.dev20] eliminate step 3 (will be subject of other method) 
 * [0.10a19] `MyBooks` object clean
     - [0.10.dev18] rename `MyBook` to `MyBooks`
     - [0.10.dev17] `MyBook` rename MY_BOOKS_PATH attribute to MY_BOOKS_ROOT and comment all class variables

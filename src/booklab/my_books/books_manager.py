@@ -206,8 +206,8 @@ class MyBooks:
         Arguments:
 
         - `start_from` the step where to START from. 
-          Valid values are `int` in range `[1, 3]`. 
-          A value _out of valid range_ is interpreted as `1` (execute all steps).
+          Valid values are `int 1 or 2`.
+          An _invalid value_ is interpreted as `1` (execute all steps).
 
         Return:
 
@@ -219,15 +219,13 @@ class MyBooks:
         if (start_from is None)\
            or (type(start_from) is not int)\
            or (start_from < 1)\
-           or (start_from > 3)\
+           or (start_from > 2)\
         :
             start_from = 1
         s1_exec = False
         s2_exec = False
-        s3_exec = False
         rslt_s1 = ""
         rslt_s2 = ""
-        rslt_s3 = ""
         ## 1. create YAML for nav section
         if start_from <= 1:
             exit_code_s1 = self.wrBookNav()
@@ -251,23 +249,11 @@ class MyBooks:
                     rslt_s1 + rslt_s2
                 )
             s2_exec = True
-        ## 3. run build.sh & keep exit_code
-        if start_from <= 3:
-            #TODO ... exit_code_s3 = os..:run...
-            exit_code_s3 = ...
-            rslt_s3 = ... 
-            rslt_s3 = f"\nRulare build carte cu mkdocs: {rslt_s3}"
-            if not exit_code_s3:
-                return (
-                    False,
-                    rslt_s1 + rslt_s2 + rslt_s3
-                )
-            s3_exec = True
-        ## 4. everithing was ok here so return True and all result outputs
+        ## everithing was ok here so return True and all result outputs
         if s1_exec or s2_exec or s3_exec:
             return (
                 True,
-                rslt_s1 + rslt_s2 + rslt_s3
+                rslt_s1 + rslt_s2
             )
 
 
