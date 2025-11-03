@@ -195,19 +195,10 @@ class MyBooks:
         return self.MY_BOOK_URL
 
 
-    def renderBookConfig(
-        self,
-        start_from: int = 1
-    ) -> tuple:
+    def renderBookConfig(self) -> tuple:
         """Render current book configuration file.
-        Produce a `mkdocs.yml` file as being the configuration file to build the book.
+        Produce file `mkdocs.yml` as being the configuration file to build the book.
         File is writen in book root directory.
-
-        Arguments:
-
-        - `start_from` the step where to START from. 
-          Valid values are `int 1 or 2`.
-          An _invalid value_ is interpreted as `1` (execute all steps).
 
         Return:
 
@@ -216,45 +207,32 @@ class MyBooks:
         if not self.db_book_nav:
             # if book nav does not exists force exit
             return (False, "EROARE: Cartea nu are navigarea definita (fisier JSON)")
-        if (start_from is None)\
-           or (type(start_from) is not int)\
-           or (start_from < 1)\
-           or (start_from > 2)\
-        :
-            start_from = 1
-        s1_exec = False
-        s2_exec = False
         rslt_s1 = ""
         rslt_s2 = ""
         ## 1. create YAML for nav section
-        if start_from <= 1:
-            exit_code_s1 = self.wrBookNav()
-            rslt_s1 = "executat" if exit_code_s1 else "NE-executat"
-            rslt_s1 = f"\nCreare fisier YAML din JSON: {rslt_s1}"
-            if not exit_code_s1:
-                return (
-                    False,
-                    rslt_s1
-                )
-            s1_exec = True
-        ## 2. render mkdocs_template.yml
-        if start_from <= 2:
-            #TODO ...
-            exit_code_s2 = ...
-            rslt_s2 = ... # + stdout + stderr of prev run)
-            rslt_s2 = f"\nRandare Jinja: {rslt_s2}"
-            if not exit_code_s2:
-                return (
-                    False,
-                    rslt_s1 + rslt_s2
-                )
-            s2_exec = True
-        ## everithing was ok here so return True and all result outputs
-        if s1_exec or s2_exec or s3_exec:
+        exit_code_s1 = self.wrBookNav()
+        rslt_s1 = "executat" if exit_code_s1 else "NE-executat"
+        rslt_s1 = f"\nCreare fisier YAML din JSON: {rslt_s1}"
+        if not exit_code_s1:
             return (
-                True,
+                False,
+                rslt_s1
+            )
+        ## 2. render mkdocs_template.yml
+        #TODO ...
+        exit_code_s2 = True #... supose exec until finisf step ...
+        rslt_s2 = ... # + stdout + stderr of prev run)
+        rslt_s2 = f"\nRandare Jinja: {rslt_s2}"
+        if not exit_code_s2:
+            return (
+                False,
                 rslt_s1 + rslt_s2
             )
+        ## if got here, everithing was ok so return True and all result outputs
+        return (
+            True,
+            rslt_s1 + rslt_s2
+        )
 
 
 
