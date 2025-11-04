@@ -27,22 +27,22 @@ Implement `bbld` and update `book_template`:
       - 1) read mkdocs_template.yml to render from string
       - 2) "render_from_string()"
       - 3) write out "mkdocs.yml" file
-* ... [0.10a___] `MyBook.renderBookConfig()` clean and improve:
+* ... [0.10a___] `MyBooks.renderBookConfig()` clean and improve:
     - ... step-1 "wrBookNav()" with "getBookNav(format="yaml")"
       and keep a local variable with YAML data for render step
     - ... step-1 use "getBookData()" to bring all oth req data for render "mkdocs_template.yml"
     - [0.10.dev22] review `mkdocs_template.yml` upd Jinja code for nav section with a complete YAML str as returned by getBookNav("yaml") method
     - [0.10.dev21] drop steps execution mechanism (exec all or nothing) and drop step start parameter
     - [0.10.dev20] eliminate step 3 (will be subject of other method) 
-* [0.10a19] `MyBooks` object clean
-    - [0.10.dev18] rename `MyBook` to `MyBooks`
-    - [0.10.dev17] `MyBook` rename MY_BOOKS_PATH attribute to MY_BOOKS_ROOT and comment all class variables
-    - [0.10.dev16] `MyBook` clean MY_BOOKS_PATH attribute and make it equal to MY_BOOKS_ROOT created on booklabd init
-    - [0.10.dev15] `MyBook` drop "book_path" attribute because exists mwthod `getBookPath()` that do that
+* [0.10a19] `MyBookss` object clean
+    - [0.10.dev18] rename `MyBooks` to `MyBooks`
+    - [0.10.dev17] `MyBooks` rename MY_BOOKS_PATH attribute to MY_BOOKS_ROOT and comment all class variables
+    - [0.10.dev16] `MyBooks` clean MY_BOOKS_PATH attribute and make it equal to MY_BOOKS_ROOT created on booklabd init
+    - [0.10.dev15] `MyBooks` drop "book_path" attribute because exists mwthod `getBookPath()` that do that
 * [0.10a14] upd README.md with pj GitHub
-* [0.10a13] `MyBook.wrBookNav()` tst before finish if YAML file can be open for read and return accordingly
-* [0.10a12] `MyBook` refactored to drop "Flask app" attribute. Updated routes.py all MyBook calls.
-* [0.10a11] `MyBook.renderBookConfig()` step 1 finished
+* [0.10a13] `MyBooks.wrBookNav()` tst before finish if YAML file can be open for read and return accordingly
+* [0.10a12] `MyBooks` refactored to drop "Flask app" attribute. Updated routes.py all MyBook calls.
+* [0.10a11] `MyBooks.renderBookConfig()` step 1 finished
 
 
 ## [0.9] - 28.oct.2025
