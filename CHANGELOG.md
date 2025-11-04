@@ -21,14 +21,18 @@ Implement `bbld` and update `book_template`:
   - upd bcat ref last update date
   - for edit file try GoogleDocs
 
-* ... [0.10a_??] build my book mkdoks.yml
-    - ... `MyBook.renderBookConfig()` final code
-    - ... `MyBook.renderBookConfig()` steo 3
-* ... [0.10a___] `MyBook.renderBookConfig()` step 2
+* ... [0.10a_??] `MyBooks.buildBook()` new method to mkdocs-build book
+* ... [0.10a___] `MyBooks.renderBookConfig()` step 2
+    - ... step-2 break logic in:
+      - 1) read mkdocs_template.yml to render from string
+      - 2) "render_from_string()"
+      - 3) write out "mkdocs.yml" file
 * ... [0.10a___] `MyBook.renderBookConfig()` clean and improve:
-    - ... read mkdocs_template.yml to render from string
-    - ... repl in step 1 "wrBookNav" with "getBookNav" and keep a local variable with YAML data for render step
-    - ... review `mkdocs_template.yml`
+    - ... step-1 "wrBookNav()" with "getBookNav(format="yaml")"
+      and keep a local variable with YAML data for render step
+    - ... step-1 use "getBookData()" to bring all oth req data for render "mkdocs_template.yml"
+    - ... review `mkdocs_template.yml` upd Jinja code for nav section with a complete YAML str as returned by getBookNav("yaml") method
+      HINT: use same "book_data" dict with a new key entry for "nav" that will create on "remderBookNav()" method
     - [0.10.dev21] drop steps execution mechanism (exec all or nothing) and drop step start parameter
     - [0.10.dev20] eliminate step 3 (will be subject of other method) 
 * [0.10a19] `MyBooks` object clean
