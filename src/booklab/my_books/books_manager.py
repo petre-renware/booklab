@@ -209,8 +209,13 @@ class MyBooks:
             return (False, "EROARE: Cartea nu are navigarea definita (fisier JSON)")
         rslt_s1 = ""
         rslt_s2 = ""
-        ## 1. create YAML for nav section
-        exit_code_s1 = self.wrBookNav()
+        ## 1. get book data for rendering
+        book_data = dict()
+        #TODO...
+        #... getBookData() to fill all codes ;like in bstatus route)
+        #TODO... swith to getBookNav and save to book_data["nav"]
+        exit_code_s1 = self.wrBookNav() 
+        #... review nx lines of sect 1
         rslt_s1 = "executat" if exit_code_s1 else "NE-executat"
         rslt_s1 = f"\nCreare fisier YAML din JSON: {rslt_s1}"
         if not exit_code_s1:
