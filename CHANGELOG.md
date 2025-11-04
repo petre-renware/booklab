@@ -27,9 +27,9 @@ Implement `bbld` and update `book_template`:
       - 1) read mkdocs_template.yml to render from string
       - 2) "render_from_string()"
       - 3) write out "mkdocs.yml" file
-* ... [0.10a___] `MyBooks.renderBookConfig()` clean and improve:
-    - ... step-1 "wrBookNav()" with "getBookNav(format="yaml")"
-      and keep a local variable with YAML data for render step
+* ... [0.10a___] `MyBooks.renderBookConfig()` clean and improve step 1:
+    - ... clean code
+    - ... step-1 chg "wrBookNav()" with "getBookNav(format="yaml")" and copy it to book_data["nav"]
     - [0.10.dev23] step-1 use "getBookData()" to bring all oth req data for render "mkdocs_template.yml"
     - [0.10.dev22] review `mkdocs_template.yml` upd Jinja code for nav section with a complete YAML str as returned by getBookNav("yaml") method
     - [0.10.dev21] drop steps execution mechanism (exec all or nothing) and drop step start parameter
