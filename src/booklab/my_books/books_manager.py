@@ -209,14 +209,18 @@ class MyBooks:
             return (False, "EROARE: Cartea nu are navigarea definita (fisier JSON)")
         rslt_s1 = ""
         rslt_s2 = ""
+        book_data = None
         ## 1. get book data for rendering
-        book_data = dict()
-        #TODO...
-        #... getBookData() to fill all codes ;like in bstatus route)
+        book_data = self.getBook()
+        if not book_data:
+            return (False, "EROARE: Cartea nu exista in catalog")
+        rslt_s1 = "\nDate generale incarcate din catalog."
+        #4dbg... rprint(book_data)
         #TODO... swith to getBookNav and save to book_data["nav"]
         exit_code_s1 = self.wrBookNav() 
-        #... review nx lines of sect 1
-        rslt_s1 = "executat" if exit_code_s1 else "NE-executat"
+        #...create book_data["nav"] key
+        #...review nx lines of sect 1
+        rslt_s1 += "\nDate navigare incarcate." if exit_code_s1 else "NE-executat"
         rslt_s1 = f"\nCreare fisier YAML din JSON: {rslt_s1}"
         if not exit_code_s1:
             return (
