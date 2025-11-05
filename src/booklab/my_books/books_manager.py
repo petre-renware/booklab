@@ -7,9 +7,12 @@ import yaml  # mandatory to import after pylibyank
 import rich
 from rich import print as rprint
 from pathlib import Path
-from jinja2 import Environment
-from jinja2 import PackageLoader
-from jinja2 import select_autoescape
+import jinja2 as j2  # see dtl nxt comment
+# important objects from jinja package:
+#    Environment
+#    PackageLoader
+#    select_autoescape
+
 
 from flask import Flask
 from werkzeug.urls import quote as url_quote
@@ -41,6 +44,8 @@ class MyBooks:
     book_code: str = None  # instanciated book code
     db_books_catalog: pysondb = None  # books catalog data controller
     db_book_nav: pysondb = None  # books navigation data controller
+    jinja_env = None  # Jinja environment usable for my_books rendering needs
+
 
     def __init__(self, db: pysondb, book_code: str):
         """Init an instance of class MyBooks"""
@@ -60,6 +65,14 @@ class MyBooks:
             self.db_book_nav = pysondb.db.getDb(file_dbnav)
         else:
             self.db_book_nav = None
+        self.jinja_env = j2.Environment(
+            loader = j2.PackageLoader(
+                package_name = "booklab.my_books",
+                package_path = "."
+            ),
+            autoescape = j2.select_autoescape()
+        )
+
 
     def getBook(self) -> dict | None:
         """Check for a given book code that is not None, exists in database and is exactly 1 record.
@@ -206,7 +219,8 @@ class MyBooks:
         if not exit_code_s1:
             return (False, rslt_s1)
         ## 2. render mkdocs_template.yml
-        # TODO ...
+        # TODO ... use
+        # self.jinja_env
         exit_code_s2 = True  # ... supose exec until finisf step ...
         rslt_s2 = ...  # + stdout + stderr of prev run)
         rslt_s2 = f"\nRandare Jinja: {rslt_s2}"

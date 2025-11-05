@@ -30,9 +30,7 @@ Implement `bbld` and update `book_template`:
 * ... [0.10a___] `MyBooks.renderBookConfig()` clean and improve step 1:
     - ... clean code
     - ... step-1 chg "wrBookNav()" with "getBookNav(format="yaml")" and copy it to book_data["nav"]
-    - ... `MyBooks.__init()__` class Jinja environment with:
-      loader = PackageLoader(package_name = `booklab.my_books`, package_path = './')
-      [see doc @](https://jinja.palletsprojects.com/en/stable/api/#basics)
+    - [0.10.dev25] `MyBooks` add new attribute for  Jinja environment with rendering path in my books root
     - [0.10.dev24] add packaga `jinja2` dependency
     - [0.10.dev23] step-1 use "getBookData()" to bring all oth req data for render "mkdocs_template.yml"
     - [0.10.dev22] review `mkdocs_template.yml` upd Jinja code for nav section with a complete YAML str as returned by getBookNav("yaml") method
