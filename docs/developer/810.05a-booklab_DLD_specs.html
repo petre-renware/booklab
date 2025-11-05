@@ -918,9 +918,7 @@
 <li><a href="#booklabmy_books">booklab.my_books</a></li>
 <li><a href="#booklabmy_booksbooks_manager">booklab.my_books.books_manager</a><ul>
 <li><a href="#mybooks-objects">MyBooks Objects</a><ul>
-<li><a href="#my_books_url_prefix">MY_BOOKS_URL_prefix</a></li>
 <li><a href="#my_book_url">MY_BOOK_URL</a></li>
-<li><a href="#my_books_root">MY_BOOKS_ROOT</a></li>
 <li><a href="#book_code">book_code</a></li>
 <li><a href="#db_books_catalog">db_books_catalog</a></li>
 <li><a href="#db_book_nav">db_book_nav</a></li>
@@ -1070,19 +1068,13 @@ By external access is understood all URL parts necessary to expose Booklab appli
 <p>Class that manage end user books.</p>
 <p><strong>Mandatory requirements:</strong></p>
 <ul>
-<li>any Jinja renderings will be made "from string" (ie, using 
+<li>any Jinja renderings will be made "from string" (ie, using
 Flask <code>render_from_string()</code> which is included) or by creating a local Jinja environment.</li>
 </ul>
 <p>author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
-<p><a id="booklab.my_books.books_manager.MyBooks.MY_BOOKS_URL_prefix"></a></p>
-<h4 id="my_books_url_prefix">MY_BOOKS_URL_prefix</h4>
-<p>URL prefix to add when accesing a book local (generated) site</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.MY_BOOK_URL"></a></p>
 <h4 id="my_book_url">MY_BOOK_URL</h4>
 <p>instantiated book URL to local (generated) site</p>
-<p><a id="booklab.my_books.books_manager.MyBooks.MY_BOOKS_ROOT"></a></p>
-<h4 id="my_books_root">MY_BOOKS_ROOT</h4>
-<p>confusing name ? just duplicate the global one in class namespace</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.book_code"></a></p>
 <h4 id="book_code">book_code</h4>
 <p>instanciated book code</p>

@@ -33,6 +33,7 @@ Implement `bbld` and update `book_template`:
     - ... `MyBooks.__init()__` class Jinja environment with:
       loader = PackageLoader(package_name = `booklab.my_books`, package_path = './')
       [see doc @](https://jinja.palletsprojects.com/en/stable/api/#basics)
+    - [0.10.dev24] add packaga `jinja2` dependency
     - [0.10.dev23] step-1 use "getBookData()" to bring all oth req data for render "mkdocs_template.yml"
     - [0.10.dev22] review `mkdocs_template.yml` upd Jinja code for nav section with a complete YAML str as returned by getBookNav("yaml") method
     - [0.10.dev21] drop steps execution mechanism (exec all or nothing) and drop step start parameter
