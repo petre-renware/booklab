@@ -113,7 +113,10 @@ class MyBooks:
         else:
             return None
 
-    def getBookNav(self, format=None) -> None | dict | str:
+    def getBookNav(
+        self,
+        format: str = None
+    ) -> None | dict | str:
         """Get book navigation.
 
         Navigation info is retrieved from `book_navigation.json` data-file
@@ -209,9 +212,9 @@ class MyBooks:
         if not book_data:
             return (False, "EROARE: Cartea nu exista in catalog")
         rslt_s1 = "\nDate generale incarcate din catalog."
-        # 4dbg... rprint(book_data)
-        # TODO... swith to getBookNav and save to book_data["nav"]
-        exit_code_s1 = self.wrBookNav()
+        # TODO...
+        book_data["nav"] = self.getBookNav(format = "yaml")
+        rprint(book_data) # 4dbg...
         # ...create book_data["nav"] key
         # ...review nx lines of sect 1
         rslt_s1 += "\nDate navigare incarcate." if exit_code_s1 else "NE-executat"

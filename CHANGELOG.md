@@ -29,7 +29,8 @@ Implement `bbld` and update `book_template`:
       - 3) write out "mkdocs.yml" file
 * ... [0.10a___] `MyBooks.renderBookConfig()` clean and improve step 1:
     - ... clean code
-    - ... step-1 chg "wrBookNav()" with "getBookNav(format="yaml")" and copy it to book_data["nav"]
+    - ... local book_data["nav"] insert a warn9ng comment like in wrBookNav()
+    - [0.10.dev26] chg "wrBookNav()" with "getBookNav(format="yaml")" and copy it to book_data["nav"]
     - [0.10.dev25] `MyBooks` add new attribute for  Jinja environment with rendering path in my books root
     - [0.10.dev24] add packaga `jinja2` dependency
     - [0.10.dev23] step-1 use "getBookData()" to bring all oth req data for render "mkdocs_template.yml"
