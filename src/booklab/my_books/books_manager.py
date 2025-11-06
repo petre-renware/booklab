@@ -12,8 +12,6 @@ import jinja2 as j2  # see dtl nxt comment
 #    Environment
 #    PackageLoader
 #    select_autoescape
-
-
 from flask import Flask
 from werkzeug.urls import quote as url_quote
 
