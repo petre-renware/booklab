@@ -17,8 +17,8 @@ copyright: {{ book_data.copyright }}
 #     {% endfor %}
 ###---END.OF.TO.DROP
 
-# book navigation
-{% include 'book_navigation.yml' %}
+# book navigation section
+{{ book_data.nav }}
 
 
 

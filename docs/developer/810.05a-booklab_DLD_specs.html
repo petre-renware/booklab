@@ -21,7 +21,7 @@
     
     
       
-        <title>Doc API packet booklab - BookLab</title>
+        <title>API packet booklab - BookLab</title>
       
     
     
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Doc API packet booklab
+              API packet booklab
             
           </span>
         </div>
@@ -698,7 +698,7 @@
       
       
       <a href="810.05a-booklab_DLD_specs.html" class="md-nav__link md-nav__link--active">
-        Doc API packet booklab
+        API packet booklab
       </a>
       
     </li>
@@ -918,12 +918,11 @@
 <li><a href="#booklabmy_books">booklab.my_books</a></li>
 <li><a href="#booklabmy_booksbooks_manager">booklab.my_books.books_manager</a><ul>
 <li><a href="#mybooks-objects">MyBooks Objects</a><ul>
-<li><a href="#my_books_url_prefix">MY_BOOKS_URL_prefix</a></li>
 <li><a href="#my_book_url">MY_BOOK_URL</a></li>
-<li><a href="#my_books_root">MY_BOOKS_ROOT</a></li>
 <li><a href="#book_code">book_code</a></li>
 <li><a href="#db_books_catalog">db_books_catalog</a></li>
 <li><a href="#db_book_nav">db_book_nav</a></li>
+<li><a href="#jinja_env">jinja_env</a></li>
 <li><a href="#__init__">__init__</a></li>
 <li><a href="#getbook">getBook</a></li>
 <li><a href="#getbooknav">getBookNav</a></li>
@@ -1070,19 +1069,13 @@ By external access is understood all URL parts necessary to expose Booklab appli
 <p>Class that manage end user books.</p>
 <p><strong>Mandatory requirements:</strong></p>
 <ul>
-<li>any Jinja renderings will be made "from string" (ie, using 
+<li>any Jinja renderings will be made "from string" (ie, using
 Flask <code>render_from_string()</code> which is included) or by creating a local Jinja environment.</li>
 </ul>
 <p>author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
-<p><a id="booklab.my_books.books_manager.MyBooks.MY_BOOKS_URL_prefix"></a></p>
-<h4 id="my_books_url_prefix">MY_BOOKS_URL_prefix</h4>
-<p>URL prefix to add when accesing a book local (generated) site</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.MY_BOOK_URL"></a></p>
 <h4 id="my_book_url">MY_BOOK_URL</h4>
 <p>instantiated book URL to local (generated) site</p>
-<p><a id="booklab.my_books.books_manager.MyBooks.MY_BOOKS_ROOT"></a></p>
-<h4 id="my_books_root">MY_BOOKS_ROOT</h4>
-<p>confusing name ? just duplicate the global one in class namespace</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.book_code"></a></p>
 <h4 id="book_code">book_code</h4>
 <p>instanciated book code</p>
@@ -1092,6 +1085,9 @@ Flask <code>render_from_string()</code> which is included) or by creating a loca
 <p><a id="booklab.my_books.books_manager.MyBooks.db_book_nav"></a></p>
 <h4 id="db_book_nav">db_book_nav</h4>
 <p>books navigation data controller</p>
+<p><a id="booklab.my_books.books_manager.MyBooks.jinja_env"></a></p>
+<h4 id="jinja_env">jinja_env</h4>
+<p>Jinja environment usable for my_books rendering needs</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.__init__"></a></p>
 <h4 id="__init__">__init__</h4>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
@@ -1108,7 +1104,7 @@ Flask <code>render_from_string()</code> which is included) or by creating a loca
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.getBookNav"></a></p>
 <h4 id="getbooknav">getBookNav</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">getBookNav</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">dict</span> <span class="o">|</span> <span class="nb">str</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">getBookNav</span><span class="p">(</span><span class="nb">format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">dict</span> <span class="o">|</span> <span class="nb">str</span>
 </span></code></pre></div>
 <p>Get book navigation.</p>
 <p>Navigation info is retrieved from <code>book_navigation.json</code> data-file
@@ -1142,17 +1138,11 @@ identified by <code>self.db_book_nav</code> pysondb handler.</p>
 <p>Get preview URL (redirectable as is) for current book_code.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.renderBookConfig"></a></p>
 <h4 id="renderbookconfig">renderBookConfig</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">renderBookConfig</span><span class="p">(</span><span class="n">start_from</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">renderBookConfig</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">tuple</span>
 </span></code></pre></div>
 <p>Render current book configuration file.
-Produce a <code>mkdocs.yml</code> file as being the configuration file to build the book.
+Produce file <code>mkdocs.yml</code> as being the configuration file to build the book.
 File is writen in book root directory.</p>
-<p><strong>Arguments</strong>:</p>
-<ul>
-<li><code>start_from</code> the step where to START from.
-  Valid values are <code>int</code> in range <code>[1, 3]</code>.
-  A value <em>out of valid range</em> is interpreted as <code>1</code> (execute all steps).</li>
-</ul>
 <p><strong>Returns</strong>:</p>
 <ul>
 <li><code>(exit_code, stdout + stderr)</code></li>
@@ -1329,7 +1319,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 2, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 6, 2025</span>
       
     
   </small>
