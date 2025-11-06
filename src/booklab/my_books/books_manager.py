@@ -213,12 +213,15 @@ class MyBooks:
             return (False, "EROARE: Cartea nu exista in catalog")
         rslt_s1 = "\nDate generale incarcate din catalog."
         # TODO...
+
+        book_data["nav"] = None
         book_data["nav"] = self.getBookNav(format = "yaml")
-        rprint(book_data) # 4dbg...
-        # ...create book_data["nav"] key
-        # ...review nx lines of sect 1
+        exit_code_s1 = bool(book_data["nav"])
+        WARNING_CONTENT = "# `nav` section AUTO GENERATED @run-time. DO NOT MODIFY it.\n"
+        book_data["nav"] = \
+            WARNING_CONTENT \
+            + book_data["nav"]
         rslt_s1 += "\nDate navigare incarcate." if exit_code_s1 else "NE-executat"
-        rslt_s1 = f"\nCreare fisier YAML din JSON: {rslt_s1}"
         if not exit_code_s1:
             return (False, rslt_s1)
         ## 2. render mkdocs_template.yml
