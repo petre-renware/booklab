@@ -223,10 +223,20 @@ class MyBooks:
             return (False, rslt_s1)
         # render mkdocs_template.yml
         to_render_file = self.book_code + "/mkdocs_template.yml"
-        rprint("TEST DBG INFO") #...4dbg
-        rprint(to_render_file) #...4dbg
-        # TODO ... use
-        # self.jinja_env
+        out_file = os.path.join(
+            self.getBookPath(),
+            "mkdocs.yml",
+        )
+        out_file = Path(out_file)
+        book_cfg = self.jinja_env.get_template(to_render_file)
+        book_cfg = book_cfg.render(book_data = book_data)
+        #...4dbg print("************") #...4dbg
+        #...4dbg rprint("TEST DBG INFO") #...4dbg
+        #...4dbg rprint(f"{to_render_file=}") #...4dbg
+        #...4dbg rprint(f"{out_file=}")
+        #...4dbg rprint(f"{book_cfg=}")
+        #...4dbg print("************") #...4dbg
+        # TODO ...write book_cfg to out_file
         exit_code_s2 = True  # ... supose exec until finisf step ...
         rslt_s2 = ...  # + stdout + stderr of prev run)
         rslt_s2 = f"\nRandare Jinja: {rslt_s2}"
