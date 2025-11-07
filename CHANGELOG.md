@@ -25,9 +25,9 @@ Implement `bbld` and update `book_template`:
 * ... [0.10a___] `MyBooks.renderBookConfig()` step 2
     - ... chk resulted file
     - ... write out file
-    - ... render_template using dedicated env
-    - ... [0.10.dev31] set out file as self.getBookPath() os.join "mkdoks.yml"
-      and transform -> Path()
+    - [0.10.dev31]:
+        - render_template using dedicated env
+        - set out file as self.getBookPath() os.join "mkdoks.yml" and transform -> Path()
     - [0.10.dev30] set tmplate as "book_code/mkdocs_template.yml"
     - [0.10.dev29] make a copy of "book_template/mkdocs.yml"
 * [0.10a28] `MyBooks.renderBookConfig()` clean and improve step 1:
