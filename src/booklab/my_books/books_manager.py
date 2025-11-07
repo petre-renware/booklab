@@ -222,6 +222,7 @@ class MyBooks:
         if not exit_code_s1:
             return (False, rslt_s1)
         # render mkdocs_template.yml
+        rslt_s2 = "\nEroare randare temmplate configurate carte"
         to_render_file = self.book_code + "/mkdocs_template.yml"
         out_file = os.path.join(
             self.getBookPath(),
@@ -229,7 +230,14 @@ class MyBooks:
         )
         out_file = Path(out_file)
         book_cfg = self.jinja_env.get_template(to_render_file)
-        book_cfg = book_cfg.render(book_data = book_data)
+        exit_code_s2 = False
+        try:
+            book_cfg = book_cfg.render(book_data = book_data)
+        except:
+            return(False, rslt_s2)
+        else:  # try block executed correctly
+            rslt_s2 = f"\nRandare template configurare carte executata"
+            exit_code_s2 = True
         #...4dbg print("************") #...4dbg
         #...4dbg rprint("TEST DBG INFO") #...4dbg
         #...4dbg rprint(f"{to_render_file=}") #...4dbg
@@ -237,7 +245,7 @@ class MyBooks:
         #...4dbg rprint(f"{book_cfg=}")
         #...4dbg print("************") #...4dbg
         # TODO ...write book_cfg to out_file
-        exit_code_s2 = True  # ... supose exec until finisf step ...
+        exit_code_s2 = True
         rslt_s2 = ...  # + stdout + stderr of prev run)
         rslt_s2 = f"\nRandare Jinja: {rslt_s2}"
         if not exit_code_s2:
