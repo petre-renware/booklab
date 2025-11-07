@@ -205,13 +205,12 @@ class MyBooks:
         rslt_s1 = ""
         rslt_s2 = ""
         book_data = None
-        ## 1. get book data for rendering
+        # get book data for rendering
         book_data = self.getBook()
         if not book_data:
             return (False, "EROARE: Cartea nu exista in catalog")
         rslt_s1 = "\nDate generale incarcate din catalog."
-        # TODO...
-
+        # prepare nav(igation) confuguration
         book_data["nav"] = None
         book_data["nav"] = self.getBookNav(format = "yaml")
         exit_code_s1 = bool(book_data["nav"])
@@ -222,7 +221,10 @@ class MyBooks:
         rslt_s1 += "\nDate navigare incarcate." if exit_code_s1 else "NE-executat"
         if not exit_code_s1:
             return (False, rslt_s1)
-        ## 2. render mkdocs_template.yml
+        # render mkdocs_template.yml
+        to_render_file = self.book_code + "/mkdocs_template.yml"
+        rprint("TEST DBG INFO") #...4dbg
+        rprint(to_render_file) #...4dbg
         # TODO ... use
         # self.jinja_env
         exit_code_s2 = True  # ... supose exec until finisf step ...

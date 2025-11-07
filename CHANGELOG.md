@@ -28,9 +28,8 @@ Implement `bbld` and update `book_template`:
     - ... render_template using dedicated env
     - ... set out file as self.getBookPath() os.join "mkdoks.yml"
       and transform -> Path()
-    - ... set tmplate as "book_code/mkdocs_template.yml"
+    - [0.10.dev30] set tmplate as "book_code/mkdocs_template.yml"
     - [0.10.dev29] make a copy of "book_template/mkdocs.yml"
-
 * [0.10a28] `MyBooks.renderBookConfig()` clean and improve step 1:
     - [0.10.dev27] local book_data["nav"] insert a warning comment like in wrBookNav()
     - [0.10.dev26] chg "wrBookNav()" with "getBookNav(format="yaml")" and copy it to book_data["nav"]
