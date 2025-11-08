@@ -223,11 +223,22 @@ class MyBooks:
             return (False, rslt_s1)
         # render mkdocs_template.yml
         rslt_s2 = "\nEroare randare temmplate configurate carte"
-        to_render_file = self.book_code + "/mkdocs_template.yml"
+        template_cfg_file = "mkdocs_template.yml"
+        to_render_file = self.book_code + "/" + template_cfg_file
+        #---TST if template file exists
+        _tst1 = os.path.isfile(
+            os.path.join(
+                self.getBookPath(),
+                template_cfg_file
+            )
+        )
+        if not _tst1:
+            return (False, "EROARE: Template configurare carte inexistent (mkdocs_template.yml).")
         out_file = os.path.join(
             self.getBookPath(),
             "mkdocs.yml",
         )
+        #---EOF ck config template existance. Can continue safe.
         out_file = Path(out_file)
         book_cfg = self.jinja_env.get_template(to_render_file)
         exit_code_s2 = False
