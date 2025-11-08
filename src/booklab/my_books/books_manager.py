@@ -234,11 +234,11 @@ class MyBooks:
         )
         if not _tst1:
             return (False, "EROARE: Template configurare carte inexistent (mkdocs_template.yml).")
+        #---EOF ck config template existance. Can continue safe.
         out_file = os.path.join(
             self.getBookPath(),
             "mkdocs.yml",
         )
-        #---EOF ck config template existance. Can continue safe.
         out_file = Path(out_file)
         book_cfg = self.jinja_env.get_template(to_render_file)
         exit_code_s2 = False
