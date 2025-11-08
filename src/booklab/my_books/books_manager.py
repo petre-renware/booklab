@@ -50,6 +50,7 @@ class MyBooks:
         self.MY_BOOKS_ROOT = MY_BOOKS_ROOT  # confusing name ? just duplicate the global one in class namespace
         self.book_code = book_code
         self.db_books_catalog = db
+        #
         self.MY_BOOK_URL = w3lib.url.canonicalize_url(
             url_quote(
                 str(FULL_EXT_URL)
@@ -58,11 +59,13 @@ class MyBooks:
                 + "/docs/"
             )
         )
+        #
+        self.db_book_nav = None
         if (_this_bk_path := self.getBookPath()):
             file_dbnav = os.path.join(_this_bk_path, "book_navigation.json")
-            self.db_book_nav = pysondb.db.getDb(file_dbnav)
-        else:
-            self.db_book_nav = None
+            if os.path.isfile(file_dbnav):
+                self.db_book_nav = pysondb.db.getDb(file_dbnav)
+        #
         self.jinja_env = j2.Environment(
             loader = j2.PackageLoader(
                 package_name = "booklab.my_books",
