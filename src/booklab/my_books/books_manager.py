@@ -212,15 +212,17 @@ class MyBooks:
         rslt_s1 = "\nDate generale incarcate din catalog."
         # prepare nav(igation) confuguration
         book_data["nav"] = None
-        book_data["nav"] = self.getBookNav(format = "yaml")
-        exit_code_s1 = bool(book_data["nav"])
+        exit_code_s1 = self.getBookNav(format = "yaml")
+        if exit_code_s1 is False:  # orherwise can contain an empty dict which is True
+            return (False, "EROARE: Cartea nu are navigare definita (book_navigation.json).")
+        else:
+            book_data["nav"] = exit_code_s1  # contains data if bot False
+            exit_code_s1 = True
         WARNING_CONTENT = "# `nav` section AUTO GENERATED @run-time. DO NOT MODIFY it.\n"
         book_data["nav"] = \
             WARNING_CONTENT \
             + book_data["nav"]
-        rslt_s1 += "\nDate navigare incarcate." if exit_code_s1 else "NE-executat"
-        if not exit_code_s1:
-            return (False, rslt_s1)
+        rslt_s1 += "\nDate navigare incarcate."
         # render mkdocs_template.yml
         rslt_s2 = "\nEroare randare temmplate configurate carte"
         template_cfg_file = "mkdocs_template.yml"
