@@ -25,6 +25,7 @@ Implement `bbld` and update `book_template`:
 * ... [0.10a___] `MyBooks.renderBookConfig()` step 2
     - ... chk and clean code in scope
     - ... write out mkdocs.yml file
+    - [0.10.dev35] bugfix __init()__ @ self.db_book_nav and tst with False in renderBookConfig()
     - [0.10.dev34] chk and clean code in scope
     - [0.10.dev33] protect for config template file miising
     - [0.10.dev32] protect written code against rendering errors that will not print from web app bu will block app with a vague msg

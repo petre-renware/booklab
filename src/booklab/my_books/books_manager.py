@@ -58,8 +58,8 @@ class MyBooks:
                 + "/docs/"
             )
         )
-        if this_bk_path := self.getBookPath():
-            file_dbnav = os.path.join(this_bk_path, "book_navigation.json")
+        if (_this_bk_path := self.getBookPath()):
+            file_dbnav = os.path.join(_this_bk_path, "book_navigation.json")
             self.db_book_nav = pysondb.db.getDb(file_dbnav)
         else:
             self.db_book_nav = None
@@ -213,10 +213,11 @@ class MyBooks:
         # prepare nav(igation) confuguration
         book_data["nav"] = None
         exit_code_s1 = self.getBookNav(format = "yaml")
-        if exit_code_s1 is False:  # orherwise can contain an empty dict which is True
+        if not exit_code_s1:
             return (False, "EROARE: Cartea nu are navigare definita (book_navigation.json).")
         else:
-            book_data["nav"] = exit_code_s1  # contains data if bot False
+            # rationale: ret of getBookNav() can be None or got value
+            book_data["nav"] = exit_code_s1
             exit_code_s1 = True
         WARNING_CONTENT = "# `nav` section AUTO GENERATED @run-time. DO NOT MODIFY it.\n"
         book_data["nav"] = \
