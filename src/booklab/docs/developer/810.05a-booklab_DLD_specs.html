@@ -1092,7 +1092,7 @@ Flask <code>render_from_string()</code> which is included) or by creating a loca
 <h4 id="__init__">__init__</h4>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
 </span></code></pre></div>
-<p>Init an instance of class MyBooks</p>
+<p>Init an instance of class MyBooks.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.getBook"></a></p>
 <h4 id="getbook">getBook</h4>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="nf">getBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span>
@@ -1100,7 +1100,8 @@ Flask <code>render_from_string()</code> which is included) or by creating a loca
 <p>Check for a given book code that is not None, exists in database and is exactly 1 record.</p>
 <p><strong>Returns</strong>:</p>
 <ul>
-<li><code>dict</code> with found record or <code>None</code> if any of conditiona is not met</li>
+<li><code>dict</code> with found record or</li>
+<li><code>None</code> if any of conditiona is not met</li>
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.getBookNav"></a></p>
 <h4 id="getbooknav">getBookNav</h4>
@@ -1108,7 +1109,7 @@ Flask <code>render_from_string()</code> which is included) or by creating a loca
 </span></code></pre></div>
 <p>Get book navigation.</p>
 <p>Navigation info is retrieved from <code>book_navigation.json</code> data-file
-identified by <code>self.db_book_nav</code> pysondb handler.</p>
+and is identified by <code>self.db_book_nav</code> pysondb handler.</p>
 <p><strong>Returns</strong>:</p>
 <ul>
 <li><code>python dict</code> using <code>format = "dict"</code> (default option)</li>
@@ -1120,7 +1121,7 @@ identified by <code>self.db_book_nav</code> pysondb handler.</p>
 <h4 id="wrbooknav">wrBookNav</h4>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">wrBookNav</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </span></code></pre></div>
-<p>Write out file "book_navigation.yml"</p>
+<p>Write out file "book_navigation.yml".</p>
 <p><strong>Returns</strong>:</p>
 <ul>
 <li><code>True</code> if file was written</li>

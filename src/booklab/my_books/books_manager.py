@@ -12,6 +12,7 @@ import jinja2 as j2  # see dtl nxt comment
 #    Environment
 #    PackageLoader
 #    select_autoescape
+import datetime
 from flask import Flask
 from werkzeug.urls import quote as url_quote
 
@@ -232,7 +233,8 @@ class MyBooks:
             # rationale: ret of getBookNav() can be None or got value
             book_data["nav"] = exit_code_s1
             exit_code_s1 = True
-        WARNING_CONTENT = "# `nav` section AUTO GENERATED @run-time. DO NOT MODIFY it.\n"
+            _crtdt = datetime.datetime.now()
+        WARNING_CONTENT = f"# nav section AUTO GENERATED @{_crtdt:%Y-%m-%d %H:%M:%S}. DO NOT MODIFY it.\n"
         book_data["nav"] = \
             WARNING_CONTENT \
             + book_data["nav"]
@@ -269,6 +271,7 @@ class MyBooks:
         #...4dbg rprint("TEST DBG INFO") #...4dbg
         #...4dbg rprint(f"{to_render_file=}") #...4dbg
         #...4dbg rprint(f"{out_file=}")
+        #...4dbg rprint(f"{book_data['nav']=}")
         #...4dbg rprint(f"{book_cfg=}")
         #...4dbg print("************") #...4dbg
         # TODO ...write book_cfg to out_file

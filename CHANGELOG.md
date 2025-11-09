@@ -25,6 +25,7 @@ Implement `bbld` and update `book_template`:
 * ... [0.10a___] `MyBooks.renderBookConfig()` step 2
     - ... chk and clean code in scope
     - ... write out mkdocs.yml file
+    - [0.10.dev37] upd warning line of nav section with server current datetime
     - [0.10.dev36] MyBooks.__init()__ test if navigation file exists
     - [0.10.dev35] bugfix MyBooks.__init()__ @ self.db_book_nav and tst with False in renderBookConfig()
     - [0.10.dev34] chk and clean code in scope
