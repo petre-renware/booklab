@@ -7,13 +7,8 @@ import yaml  # mandatory to import after pylibyank
 import rich
 from rich import print as rprint
 from pathlib import Path
-import jinja2 as j2  # see dtl nxt comment
-# important objects from jinja package:
-#    Environment
-#    PackageLoader
-#    select_autoescape
-
-
+import jinja2 as j2
+import datetime
 from flask import Flask
 from werkzeug.urls import quote as url_quote
 
@@ -33,7 +28,6 @@ class MyBooks:
 
     author: Petre Iordanescu (petre.iordanescu@gmail.com)
     """
-
     MY_BOOKS_URL_prefix: str = (
         "/my-books/"  # URL prefix to add when accesing a book local (generated) site
     )
@@ -47,11 +41,16 @@ class MyBooks:
     jinja_env = None  # Jinja environment usable for my_books rendering needs
 
 
-    def __init__(self, db: pysondb, book_code: str):
-        """Init an instance of class MyBooks"""
-        self.MY_BOOKS_ROOT = MY_BOOKS_ROOT  # confusing name ? just duplicate the global one in class namespace
+    def __init__(
+        self, db: pysondb,
+        book_code: str
+    ):
+        """Init an instance of class MyBooks.
+        """
+        self.MY_BOOKS_ROOT = MY_BOOKS_ROOT  # Confusing name ? just duplicate the global one in class namespace
         self.book_code = book_code
         self.db_books_catalog = db
+        #
         self.MY_BOOK_URL = w3lib.url.canonicalize_url(
             url_quote(
                 str(FULL_EXT_URL)
@@ -60,11 +59,13 @@ class MyBooks:
                 + "/docs/"
             )
         )
-        if this_bk_path := self.getBookPath():
-            file_dbnav = os.path.join(this_bk_path, "book_navigation.json")
-            self.db_book_nav = pysondb.db.getDb(file_dbnav)
-        else:
-            self.db_book_nav = None
+        #
+        self.db_book_nav = None
+        if (_this_bk_path := self.getBookPath()):
+            file_dbnav = os.path.join(_this_bk_path, "book_navigation.json")
+            if os.path.isfile(file_dbnav):
+                self.db_book_nav = pysondb.db.getDb(file_dbnav)
+        #
         self.jinja_env = j2.Environment(
             loader = j2.PackageLoader(
                 package_name = "booklab.my_books",
@@ -79,7 +80,8 @@ class MyBooks:
 
         Return:
 
-        - `dict` with found record or `None` if any of conditiona is not met
+        - `dict` with found record or 
+        - `None` if any of conditiona is not met
         """
         if not self.book_code or not isinstance(self.book_code, str):
             return None
@@ -113,6 +115,7 @@ class MyBooks:
         else:
             return None
 
+
     def getBookNav(
         self,
         format: str = None
@@ -120,7 +123,7 @@ class MyBooks:
         """Get book navigation.
 
         Navigation info is retrieved from `book_navigation.json` data-file
-        identified by `self.db_book_nav` pysondb handler.
+        and is identified by `self.db_book_nav` pysondb handler.
 
         Return:
 
@@ -149,8 +152,9 @@ class MyBooks:
             return yaml_nav_data
         return None  # if get here its a bug due to logic error
 
+
     def wrBookNav(self) -> bool:
-        """Write out file "book_navigation.yml"
+        """Write out file "book_navigation.yml".
 
         Return:
 
@@ -180,17 +184,22 @@ class MyBooks:
             return False
         return True
 
+
     def getBookPath(self) -> str:
-        """Get absolute path of current book root directory."""
+        """Get absolute path of current book root directory.
+        """
         my_book_path = os.path.abspath(os.path.join(self.MY_BOOKS_ROOT, self.book_code))
         if os.path.isdir(my_book_path):
             return my_book_path
         else:
             return None
 
+
     def getBookURL(self) -> str:
-        """Get preview URL (redirectable as is) for current book_code."""
+        """Get preview URL (redirectable as is) for current book_code.
+        """
         return self.MY_BOOK_URL
+
 
     def renderBookConfig(self) -> tuple:
         """Render current book configuration file.
@@ -201,36 +210,83 @@ class MyBooks:
 
         - `(exit_code, stdout + stderr)`
         """
-        if not self.db_book_nav:
-            # if book nav does not exists force exit
-            return (False, "EROARE: Cartea nu are navigarea definita (fisier JSON)")
+        if not self.db_book_nav:  # if book nav does not exists force exit
+            return (False, "EROARE: Cartea nu are navigarea definita (book_navigation.json).")
         rslt_s1 = ""
         rslt_s2 = ""
         book_data = None
-        ## 1. get book data for rendering
+        # get book data for rendering
         book_data = self.getBook()
-        if not book_data:
+        if not book_data:  # if book is not present in catalog force exit
             return (False, "EROARE: Cartea nu exista in catalog")
         rslt_s1 = "\nDate generale incarcate din catalog."
-        # TODO...
-
+        # prepare nav(igation) confuguration
         book_data["nav"] = None
-        book_data["nav"] = self.getBookNav(format = "yaml")
-        exit_code_s1 = bool(book_data["nav"])
-        WARNING_CONTENT = "# `nav` section AUTO GENERATED @run-time. DO NOT MODIFY it.\n"
+        exit_code_s1 = self.getBookNav(format = "yaml")
+        if not exit_code_s1:  # if nav config cannot be obtained as YAML then force exit
+            return (False, "EROARE: Cartea nu are navigare definita (book_navigation.json).")
+        else:
+            # rationale: ret of getBookNav() can be None or got value
+            book_data["nav"] = exit_code_s1
+            exit_code_s1 = True
+            _crtdt = datetime.datetime.now()
+        WARNING_CONTENT = f"# nav section AUTO GENERATED @{_crtdt:%Y-%m-%d %H:%M:%S}. DO NOT MODIFY it.\n"
         book_data["nav"] = \
             WARNING_CONTENT \
             + book_data["nav"]
-        rslt_s1 += "\nDate navigare incarcate." if exit_code_s1 else "NE-executat"
-        if not exit_code_s1:
-            return (False, rslt_s1)
-        ## 2. render mkdocs_template.yml
-        # TODO ... use
-        # self.jinja_env
-        exit_code_s2 = True  # ... supose exec until finisf step ...
-        rslt_s2 = ...  # + stdout + stderr of prev run)
-        rslt_s2 = f"\nRandare Jinja: {rslt_s2}"
-        if not exit_code_s2:
-            return (False, rslt_s1 + rslt_s2)
+        rslt_s1 += "\nDate navigare incarcate."
+        # render mkdocs_template.yml
+        rslt_s2 = "\nEroare randare temmplate configurate carte"
+        template_cfg_file = "mkdocs_template.yml"
+        to_render_file = self.book_code + "/" + template_cfg_file
+        #---TST if template file exists
+        _tst1 = os.path.isfile(
+            os.path.join(
+                self.getBookPath(),
+                template_cfg_file
+            )
+        )
+        if not _tst1:
+            return (False, "EROARE: Template configurare carte inexistent (mkdocs_template.yml).")
+        #---EOF ck config template existance. Can continue safe.
+        out_file = os.path.join(
+            self.getBookPath(),
+            "mkdocs.yml",
+        )
+        out_file = Path(out_file)
+        book_cfg = self.jinja_env.get_template(to_render_file)
+        exit_code_s2 = False
+        try:
+            book_cfg = book_cfg.render(book_data = book_data)
+        except:
+            return(False, "EROARE: randarea mkdocs_template.yml esuata.")
+        else:  # try block executed correctly
+            rslt_s2 = f"\nRandare template configurare carte executata"
+            exit_code_s2 = True
+        exit_code_s2 = False
+        rslt_s2 = "\nScrierea fisierului mkdocs.yml ESUATA"  # suppose writing will fail
+        try:
+            out_file.write_text(book_cfg)
+        except:
+            return(False, "EROARE: scrierea fisierului mkdocs.yml esuata.")
+        else:  # try block executed correctly
+            rslt_s2 = f"\nScrierea fisierului mkdocs.yml executata."
+            exit_code_s2 = True
         ## if got here, everithing was ok so return True and all result outputs
         return (True, rslt_s1 + rslt_s2)
+
+
+    def buildBook(self) -> bool:
+        """Build (mkdocs build) current boook.
+        """
+        #TODO ...
+        pass
+
+
+    def createPhysicalBook(self) -> bool:
+        """Create physical book directory as copy of "book_template".
+        """
+        #TODO ...
+        pass
+
+
