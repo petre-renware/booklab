@@ -1,17 +1,22 @@
-###########
-## WARNING: do nit manually edit this file.
-###########
+##################
+# WARNING: do not manually edit this file.
+##################
 
-site_name: Book Template  # Jinja subject
-site_author: 'Petre Iordanescu (petre.iordanescu@gmail.com)'  # Jinja subject
-copyright: Freeware  # Jinja subject
+site_name: Numele cartii (si al site-ului daca se publica in internet)
+site_author: Autorul cartii
+copyright: Copyright - Informatia ref detinatorul drepturilor de autor
 
 
 
+# book navigation section
+# nav section AUTO GENERATED @2025-11-10 11:23:06. DO NOT MODIFY it.
 nav:
-    - Acasa: index.md
-    - Ghid configurare: guides/how_organize_book.md
-
+- Acasa-Home: index.md
+- Ghid configurare: guides/how_organize_book.md
+- nav item 1 lvl 1: anchor
+- nav item 2 lvl 1 --> 2:
+  - nav item 1 lvl 2: anchor
+  - nav item 2 lvl 2: anchor
 
 
 
@@ -36,7 +41,6 @@ markdown_extensions:
     - md_in_html
     - pymdownx.tasklist:
         custom_checkbox: true
-    
     # super fences for code bloks syntax highlight
     - pymdownx.highlight:
           anchor_linenums: true
@@ -142,5 +146,4 @@ use_directory_urls: false # allow link between pages to work properly as static 
 #NOTE dirs to exclude at BookLab project creation
 exclude_docs: |
   pyenv/
-
 

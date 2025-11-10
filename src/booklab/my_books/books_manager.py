@@ -263,22 +263,26 @@ class MyBooks:
         try:
             book_cfg = book_cfg.render(book_data = book_data)
         except:
-            return(False, rslt_s2)
+            return(False, "EROARE: randarea mkdocs_template.yml esuata.")
         else:  # try block executed correctly
             rslt_s2 = f"\nRandare template configurare carte executata"
             exit_code_s2 = True
-        #...4dbg print("************") #...4dbg
-        #...4dbg rprint("TEST DBG INFO") #...4dbg
-        #...4dbg rprint(f"{to_render_file=}") #...4dbg
-        #...4dbg rprint(f"{out_file=}")
-        #...4dbg rprint(f"{book_data['nav']=}")
-        #...4dbg rprint(f"{book_cfg=}")
-        #...4dbg print("************") #...4dbg
-        # TODO ...write book_cfg to out_file
-        exit_code_s2 = True
-        rslt_s2 = ...  # + stdout + stderr of prev run)
-        rslt_s2 = f"\nRandare Jinja: {rslt_s2}"
-        if not exit_code_s2:
-            return (False, rslt_s1 + rslt_s2)
+        exit_code_s2 = False
+        rslt_s2 = "\nScrierea fisierului mkdocs.yml ESUATA"  # suppose writing will fail
+        try:
+            out_file.write_text(book_cfg)
+        except:
+            return(False, "EROARE: scrierea fisierului mkdocs.yml esuata.")
+        else:  # try block executed correctly
+            rslt_s2 = f"\nScrierea fisierului mkdocs.yml executata."
+            exit_code_s2 = True
         ## if got here, everithing was ok so return True and all result outputs
         return (True, rslt_s1 + rslt_s2)
+
+
+    def buildBook(self) -> bool:
+        """Build (mkdocs build) current boook.
+        """
+        #TODO ...tbd method...
+        pass
+
