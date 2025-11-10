@@ -1,4 +1,4 @@
-8**BookLab by RENware Software Systems**
+**BookLab**
 
 [TOC]
 
@@ -18,12 +18,11 @@ Implement `bbld` and update `book_template`:
 * tbd... `static site` list all system routes in "About Booklab" page
 
 * tbd... route `/api/bbld/`:
-  - upd bcat ref last update date
+  - upd bcat ref last update date in catalog DB
   - for edit file try GoogleDocs
 
 * ... [0.10a_??] `MyBooks.buildBook()` new method to mkdocs-build book
 * ... [0.10a___] `MyBooks.renderBookConfig()` step 2
-    - ... chk and clean code in scope
     - ... write out mkdocs.yml file
     - [0.10.dev37] upd warning line of nav section with server current datetime
     - [0.10.dev36] MyBooks.__init()__ test if navigation file exists

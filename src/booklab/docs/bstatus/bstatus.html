@@ -983,31 +983,31 @@
 </ul>
 </div>
 <h1 id="detalii-despre-carte">Detalii despre carte</h1>
-<p>Aici puteti consulta detaliile cartii <strong>Numele cartii (si al site-ului daca se publica in internet)</strong> (cod <code>book_template</code>).</p>
+<p>Aici puteti consulta detaliile cartii <strong>short_desc - example record</strong> (cod <code>example</code>).</p>
 <h2 id="date-generale">Date generale</h2>
 <ul>
-<li>Cod: <strong><code>book_template</code></strong></li>
-<li>Titlu: <code>Numele cartii (si al site-ului daca se publica in internet)</code></li>
-<li>Descriere: <code>Denumirea lunga a cartii asa cum va apare pe coperta</code></li>
-<li>Note: <code>Inregistrare obligatorie de la instalare sistem. Non editabila.</code></li>
-<li>Copyright: <code>Copyright - Informatia ref detinatorul drepturilor de autor</code></li>
-<li>Autor: <code>Autorul cartii</code></li>
+<li>Cod: <strong><code>example</code></strong></li>
+<li>Titlu: <code>short_desc - example record</code></li>
+<li>Descriere: <code>description - example record</code></li>
+<li>Note: <code>notes - example record</code></li>
+<li>Copyright: <code>copyright - example record</code></li>
+<li>Autor: <code>author - example record</code></li>
 </ul>
 <h2 id="date-de-stare">Date de stare</h2>
 <ul>
-<li><strong>Carte inchisa editarii: <code>True</code></strong></li>
-<li>Creata de: <code>system</code></li>
-<li>Creata la data: <code>2025-09-26</code></li>
-<li>Ultima actualizare: <code>2025-09-26</code></li>
+<li><strong>Carte inchisa editarii: <code>False</code></strong></li>
+<li>Creata de: <code>me-my-name-here</code></li>
+<li>Creata la data: <code>1900-08-01</code></li>
+<li>Ultima actualizare: <code>None</code></li>
 <li>Ultima generare carte: <code>None</code></li>
 </ul>
 <h2 id="date-locatii">Date locatii</h2>
 <ul>
-<li><strong>Locatia stocare: <code>/projects/booklab/src/booklab/my_books/book_template/</code></strong></li>
-<li>Locatia previzualizare: <code>/booklab//my-books/book_template/docs/</code>
-  <a href="/booklab/api/prvb/?code=book_template">(<em>Previzualizare</em>)</a></li>
+<li><strong>Locatia stocare: <code>None</code></strong></li>
+<li>Locatia previzualizare: <code>/booklab//my-books/example/docs/</code>
+  <a href="/booklab/api/prvb/?code=example">(<em>Previzualizare</em>)</a></li>
 <li>Locatia publicare: <code>None</code></li>
-<li>Sectiunea de navigare in carte: <code>/projects/booklab/src/booklab/my_books/book_template/book_navigation.json</code></li>
+<li>Sectiunea de navigare in carte: <code>None</code></li>
 </ul>
 <h2 id="date-volumetrice">Date volumetrice</h2>
 <ul>
@@ -1017,49 +1017,20 @@
 </ul>
 <h2 id="actiuni">Actiuni</h2>
 <p><a class="md-button md-button--primary" href="/booklab/api/newb/">Creare carte noua</a>
-<a class="md-button md-button--primary" href="/booklab/api/prvb/?code=book_template">Previzualizare</a></p>
-<p><a class="md-button md-button--primary" href="/booklab/api/edtb/?code=book_template">Editare materiale</a>
-<a class="md-button md-button--primary" href="/booklab/api/orgm/?code=book_template">Sectiuni carte</a></p>
-<p><a class="md-button md-button--primary" href="/booklab/api/bbld/?code=book_template">Generare carte</a>
-<a class="md-button md-button--primary" href="/booklab/api/dplb/?code=book_template">Livrare carte</a></p>
+<a class="md-button md-button--primary" href="/booklab/api/prvb/?code=example">Previzualizare</a></p>
+<p><a class="md-button md-button--primary" href="/booklab/api/edtb/?code=example">Editare materiale</a>
+<a class="md-button md-button--primary" href="/booklab/api/orgm/?code=example">Sectiuni carte</a></p>
+<p><a class="md-button md-button--primary" href="/booklab/api/bbld/?code=example">Generare carte</a>
+<a class="md-button md-button--primary" href="/booklab/api/dplb/?code=example">Livrare carte</a></p>
 <h2 id="help"><a href="../help/880.30-BSTATUS_usage.md">Help</a></h2>
 <h2 id="vedere-avansata-sectiunea-nevigare">Vedere avansata sectiunea nevigare</h2>
 <h3 id="format-json">Format JSON</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
-  &#34;nav&#34;: [
-    {
-      &#34;Acasa-Home&#34;: &#34;index.md&#34;
-    },
-    {
-      &#34;Ghid configurare&#34;: &#34;guides/how_organize_book.md&#34;
-    },
-    {
-      &#34;nav item 1 lvl 1&#34;: &#34;anchor&#34;
-    },
-    {
-      &#34;nav item 2 lvl 1 --&gt; 2&#34;: [
-        {
-          &#34;nav item 1 lvl 2&#34;: &#34;anchor&#34;
-        },
-        {
-          &#34;nav item 2 lvl 2&#34;: &#34;anchor&#34;
-        }
-      ]
-    }
-  ]
-}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>None
 </span></code></pre></div>
 <h3 id="format-yaml">Format YAML</h3>
 <p><strong><em>NOTA:</em></strong> Acest fisier este generat automat in timpul executiei sistemului din 
 fisierul JSON (de mai sus) care este considerat "primar / master".</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nav:
-- Acasa-Home: index.md
-- Ghid configurare: guides/how_organize_book.md
-- nav item 1 lvl 1: anchor
-- nav item 2 lvl 1 --&gt; 2:
-  - nav item 1 lvl 2: anchor
-  - nav item 2 lvl 2: anchor
-
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>None
 </span></code></pre></div>
 
   <hr>
