@@ -7,11 +7,7 @@ import yaml  # mandatory to import after pylibyank
 import rich
 from rich import print as rprint
 from pathlib import Path
-import jinja2 as j2  # see dtl nxt comment
-# important objects from jinja package:
-#    Environment
-#    PackageLoader
-#    select_autoescape
+import jinja2 as j2
 import datetime
 from flask import Flask
 from werkzeug.urls import quote as url_quote
@@ -283,6 +279,14 @@ class MyBooks:
     def buildBook(self) -> bool:
         """Build (mkdocs build) current boook.
         """
-        #TODO ...tbd method...
+        #TODO ...
         pass
+
+
+    def createPhysicalBook(self) -> bool:
+        """Create physical book directory as copy of "book_template".
+        """
+        #TODO ...
+        pass
+
 
