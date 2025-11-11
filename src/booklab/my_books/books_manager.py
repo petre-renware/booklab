@@ -276,11 +276,20 @@ class MyBooks:
         return (True, rslt_s1 + rslt_s2)
 
 
-    def buildBook(self) -> bool:
+    def buildBook(self) -> None | str:
         """Build (mkdocs build) current boook.
+
+        Build current book (ie, `mkdocs build`) in its own directory.
+        Method suppose that mkdocs.yml file is good and book content directory (doc_src/) content is ok and "as-expected",
+        that meaning the method just run nkdocs build process, collect output and return it.
+
+        Return:
+
+        - `str` stdout + stderr of runned process
+        - `None` if process exit with fatal err (standard baah return 1)
         """
         #TODO ...
-        pass
+        return "Not yet implented. WIP @ method..."
 
 
     def createPhysicalBook(self) -> bool:

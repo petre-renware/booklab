@@ -23,8 +23,9 @@ Implement `bbld` and update `book_template`:
 
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
 
-* ... [0.10a_??] `MyBooks.buildBook()` new method to mkdocs-build book
+* ... [0.10a_??] `MyBooks.buildBook()` code
     - ...
+    - [0.10.dev41] review & update method signature and docstring
     - [0.10.dev40] `MyBooks` module clean and upd documentation after 0.10a39
 * [0.10a39] `MyBooks.renderBookConfig()` and generate mkdoks.yml (step 2)
     - [0.10.dev38] write out mkdocs.yml file
