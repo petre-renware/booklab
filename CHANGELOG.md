@@ -25,7 +25,7 @@ Implement `bbld` and update `book_template`:
 
 * ... [0.10a_??] `MyBooks.buildBook()` code
     - ...
-    - ... [0.10.dev42] `MyBooks.renderBookConfig()` clean and upd docatring and make text output result more clear ref error message details
+    - [0.10.dev42] `MyBooks.renderBookConfig()` clean and upd docatring and make text output result more clear ref error message details
     - [0.10.dev41] review & update method signature and docstring
     - [0.10.dev40] `booklab` package upd docstring after 0.10a39
 * [0.10a39] `MyBooks.renderBookConfig()` and generate mkdoks.yml (step 2)
