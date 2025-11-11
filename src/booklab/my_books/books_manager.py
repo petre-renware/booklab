@@ -210,21 +210,23 @@ class MyBooks:
 
         - `(exit_code, stdout + stderr)`
         """
+        exit_text = "*** Start book configuration file (mkdocs.yml) rendering"
         if not self.db_book_nav:  # if book nav does not exists force exit
-            return (False, "EROARE: Cartea nu are navigarea definita (book_navigation.json).")
-        rslt_s1 = ""
-        rslt_s2 = ""
+            exit_text += "EROARE: Cartea nu are navigarea definita (book_navigation.json)."
+            return (False, exit_text)
         book_data = None
         # get book data for rendering
         book_data = self.getBook()
         if not book_data:  # if book is not present in catalog force exit
-            return (False, "EROARE: Cartea nu exista in catalog")
-        rslt_s1 = "\nDate generale incarcate din catalog."
+            exit_text += "EROARE: Cartea nu exista in catalog"
+            return (False, exit_text)
+        exit_text += "\nDate generale incarcate din catalog."
         # prepare nav(igation) confuguration
         book_data["nav"] = None
         exit_code_s1 = self.getBookNav(format = "yaml")
         if not exit_code_s1:  # if nav config cannot be obtained as YAML then force exit
-            return (False, "EROARE: Cartea nu are navigare definita (book_navigation.json).")
+            exit_text += "EROARE: Cartea nu are navigare definita (book_navigation.json)."
+            return (False, exit_text)
         else:
             # rationale: ret of getBookNav() can be None or got value
             book_data["nav"] = exit_code_s1
@@ -234,9 +236,9 @@ class MyBooks:
         book_data["nav"] = \
             WARNING_CONTENT \
             + book_data["nav"]
-        rslt_s1 += "\nDate navigare incarcate."
+        exit_text += "\nDate navigare incarcate."
         # render mkdocs_template.yml
-        rslt_s2 = "\nEroare randare temmplate configurate carte"
+        exit_text += "\nRandare temmplate configurate carte"
         template_cfg_file = "mkdocs_template.yml"
         to_render_file = self.book_code + "/" + template_cfg_file
         #---TST if template file exists
@@ -247,7 +249,8 @@ class MyBooks:
             )
         )
         if not _tst1:
-            return (False, "EROARE: Template configurare carte inexistent (mkdocs_template.yml).")
+            exit_text += "EROARE: Template configurare carte inexistent (mkdocs_template.yml)."
+            return (False, exit_text)
         #---EOF ck config template existance. Can continue safe.
         out_file = os.path.join(
             self.getBookPath(),
@@ -259,21 +262,23 @@ class MyBooks:
         try:
             book_cfg = book_cfg.render(book_data = book_data)
         except:
-            return(False, "EROARE: randarea mkdocs_template.yml esuata.")
+            exit_text += "EROARE: randarea mkdocs_template.yml esuata."
+            return (False, exit_text)
         else:  # try block executed correctly
-            rslt_s2 = f"\nRandare template configurare carte executata"
+            exit_text += f"\nRandare template configurare carte executata"
             exit_code_s2 = True
         exit_code_s2 = False
-        rslt_s2 = "\nScrierea fisierului mkdocs.yml ESUATA"  # suppose writing will fail
+        exit_text += "\nScrierea fisierului mkdocs.yml."
         try:
             out_file.write_text(book_cfg)
         except:
-            return(False, "EROARE: scrierea fisierului mkdocs.yml esuata.")
+            exit_text += "EROARE: scrierea fisierului mkdocs.yml esuata."
+            return (False, exit_text)
         else:  # try block executed correctly
-            rslt_s2 = f"\nScrierea fisierului mkdocs.yml executata."
+            exit_text += f"\nScrierea fisierului mkdocs.yml executata."
             exit_code_s2 = True
         ## if got here, everithing was ok so return True and all result outputs
-        return (True, rslt_s1 + rslt_s2)
+        return (True, exit_text)
 
 
     def buildBook(self) -> None | str:
