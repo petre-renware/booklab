@@ -972,23 +972,20 @@
 </div>
 <p>booklab"&gt;</a></p>
 <h1 id="booklab">booklab</h1>
-<p><strong>booklab</strong> main python package for Booklab system</p>
+<p>Main python package for Booklab system.</p>
 <p>Consists of the following sub-packages:</p>
 <ul>
-<li><code>booklab-cli</code> which is a CLI application to manage system</li>
-<li><code>booklabd</code> designed to serve <code>/api/.../</code> system routes that need database write access</li>
-<li><code>conf</code> containing configuration files for different system components including infrastructure ones like gunicorn or nginx</li>
-<li><code>doc_src</code> contains the source of static site directory as Markdown files</li>
-<li><code>docs/</code> contains rhe static site compiled and "ready to use as-is" with any standard HTTP server</li>
-<li><code>doc-techical</code> containing system usage documentation (aka api interface)</li>
-<li>
-<p><code>my_books</code> contains the end user created &amp; generated books and <code>books_catalog.json</code> with info about all user books</p>
-</li>
-<li>
-<p><code>scripts/</code> contains various scrpts usefull in system administrarion (install, maintain, confifure, etc)</p>
-</li>
+<li><code>booklab_cli</code> main CLI application to operate the system</li>
+<li><code>booklabd</code> designed to serve <code>/api/.../</code> routes used by all functionalities that need write / update and POST operations</li>
+<li><code>conf</code> contain configuration files for different system components including infrastructure ones like gunicorn or nginx</li>
+<li><code>doc_src</code> contain the source of static site directory as Markdown files</li>
+<li><code>docs</code> contain rhe static site compiled and "ready to use as-is" with any standard HTTP server</li>
+<li><code>my_books</code> contain the end user created &amp; generated books and <code>books_catalog.json</code> with info about all user books</li>
+<li><code>scripts</code> contain diffrent scrpts usefull in system administrarion (install, maintain, configure, in-house development and customizations)</li>
 </ul>
-<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p>Package is compliant with Python PEP packaging specificatios and published on PyPi under <code>booklab</code> name.
+Package is open source licenced and available as source package on GitHub under <code>booklab</code> name and author repositories.</p>
+<p>author: Petre Iordanescu (<em>mail:</em> petre.iordanescu@gmail.com, <em>GitHub:</em> petre-renware)</p>
 <p><a id="booklab.booklab_cli"></a></p>
 <h1 id="booklabbooklab_cli">booklab.booklab_cli</h1>
 <p>Booklab CLI module to assure system operatins as command line.</p>
