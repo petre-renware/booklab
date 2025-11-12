@@ -160,6 +160,10 @@ class MyBooks:
 
         - `True` if file was written
         - `False` if file was not written or cannot be read regardless why (usual problem is source file)
+
+        _Lateral effects:_
+
+        - on disk create / update current book navigation definition file in YAML format (`book_navigation.yml`).
         """
         if not self.db_book_nav:
             return False
@@ -209,6 +213,10 @@ class MyBooks:
         Return:
 
         - `(exit_code, stdout + stderr)`
+
+        _Lateral effects:_
+
+        - on disk update current book configuration file (`mkdocs.yml`).
         """
         exit_text = "*** Start book configuration file (mkdocs.yml) rendering"
         if not self.db_book_nav:  # if book nav does not exists force exit
@@ -292,13 +300,21 @@ class MyBooks:
 
         - `str` stdout + stderr of runned process
         - `None` if process exit with fatal err (standard baah return 1)
+
+        _Lateral effects:_
+
+        - on disk create / update current book static site directory (usual `docs/`).
         """
         #TODO ...
-        return "Not yet implented. WIP @ method..."
+        pass
 
 
     def createPhysicalBook(self) -> bool:
         """Create physical book directory as copy of "book_template".
+
+        _Lateral effects:_
+
+        - creates new directory & filrs on disk represing current book physical location.
         """
         #TODO ...
         pass

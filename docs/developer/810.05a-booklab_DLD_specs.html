@@ -1126,6 +1126,10 @@ and is identified by <code>self.db_book_nav</code> pysondb handler.</p>
 <li><code>True</code> if file was written</li>
 <li><code>False</code> if file was not written or cannot be read regardless why (usual problem is source file)</li>
 </ul>
+<p><em>Lateral effects:</em></p>
+<ul>
+<li>on disk create / update current book navigation definition file in YAML format (<code>book_navigation.yml</code>).</li>
+</ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.getBookPath"></a></p>
 <h4 id="getbookpath">getBookPath</h4>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">getBookPath</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
@@ -1147,6 +1151,10 @@ File is writen in book root directory.</p>
 <ul>
 <li><code>(exit_code, stdout + stderr)</code></li>
 </ul>
+<p><em>Lateral effects:</em></p>
+<ul>
+<li>on disk update current book configuration file (<code>mkdocs.yml</code>).</li>
+</ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.buildBook"></a></p>
 <h4 id="buildbook">buildBook</h4>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">buildBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">str</span>
@@ -1160,11 +1168,19 @@ that meaning the method just run nkdocs build process, collect output and return
 <li><code>str</code> stdout + stderr of runned process</li>
 <li><code>None</code> if process exit with fatal err (standard baah return 1)</li>
 </ul>
+<p><em>Lateral effects:</em></p>
+<ul>
+<li>on disk create / update current book static site directory (usual <code>docs/</code>).</li>
+</ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.createPhysicalBook"></a></p>
 <h4 id="createphysicalbook">createPhysicalBook</h4>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">createPhysicalBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </span></code></pre></div>
 <p>Create physical book directory as copy of "book_template".</p>
+<p><em>Lateral effects:</em></p>
+<ul>
+<li>creates new directory &amp; filrs on disk represing current book physical location.</li>
+</ul>
 <p><a id="booklab.doc_src"></a></p>
 <h1 id="booklabdoc_src">booklab.doc_src</h1>
 <p>Booklab master static site:</p>
