@@ -22,9 +22,13 @@ Implement `bbld` and update `book_template`:
   - for edit file try GoogleDocs
 
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
-
 * ... [0.10a_??] `MyBooks.buildBook()` code
+
+* ... [0.10a_??] `MyBooks` clean & upd code +
+  make a "results from process" dataclass to be used by all methods that need to return at least POSIX pattern like (exit code, stdout, stderr)
     - ...
+    - ... [0.19.dev44] create `Results` dataclass as type in module "books_manager" and
+      use it as "MyBook" instance & class variable with None default values
     - [0.10.dev43] `MyBooks` upd all docstr to apecifi latteral effects of some methods (for ex updating files)
     - [0.10.dev42] `MyBooks.renderBookConfig()` clean and upd docatring and make text output result more clear ref error message details
     - [0.10.dev41] review & update method signature and docstring
