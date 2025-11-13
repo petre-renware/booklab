@@ -9,6 +9,7 @@ from rich import print as rprint
 from pathlib import Path
 import jinja2 as j2
 import datetime
+from dataclasses import dataclass
 from flask import Flask
 from werkzeug.urls import quote as url_quote
 
@@ -318,5 +319,17 @@ class MyBooks:
         """
         #TODO ...
         pass
+
+
+@dataclass
+class Results:
+    """Define a result model (type) frequently used as return set by MyBook methods.
+    """
+    ... #TODO 0.10.dev44 issue ...
+    pass
+
+
+
+
 
 
