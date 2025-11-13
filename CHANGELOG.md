@@ -67,7 +67,7 @@ Implement `bbld` and update `book_template`:
 ## [0.9] - 28.oct.2025
 FIX bugs ref implement `bbld` and update `book_template`:
     - [0.9.dev38] `routes.py` fix bugs in /api/prvb/ ref MyBook.getBookURL() merhod name
-* [0:9a35.post0] bugfixes
+* [0.9a35.post0] bugfixes
     - [0.9.dev37] `MyVook.getBook()` fix bug when book nav JSON file is missing (use case: book does not physicallt exists)
     - [0.9.dev36] review & upd `MyBooks.renderBookConfig()` logic
 * [0.9a35] enhance, clean & improve `MyBooks` & `booklabd` components

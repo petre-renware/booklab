@@ -30,24 +30,21 @@ class MyBooks:
     author: Petre Iordanescu (petre.iordanescu@gmail.com)
     """
     MY_BOOKS_URL_prefix: str = (
-        "/my-books/"  # URL prefix to add when accesing a book local (generated) site
+        "/my-books/"  # URL prefix to add when accesing a book local (generated) site.
     )
-    MY_BOOK_URL: str = None  # instantiated book URL to local (generated) site
+    MY_BOOK_URL: str = None  # Instantiated book URL to local (generated) site.
     MY_BOOKS_ROOT: str = (
-        MY_BOOKS_ROOT  # confusing name ? just duplicate the global one in class namespace
+        MY_BOOKS_ROOT  # Confusing name ? just duplicate the global one in class namespace.
     )
-    book_code: str = None  # instanciated book code
-    db_books_catalog: pysondb = None  # books catalog data controller
-    db_book_nav: pysondb = None  # books navigation data controller
-    jinja_env = None  # Jinja environment usable for my_books rendering needs
-
+    book_code: str = None  # Instanciated book code.
+    db_books_catalog: pysondb = None  # Books catalog data controller.
+    db_book_nav: pysondb = None  # Books navigation data controller.
+    jinja_env = None  # Jinja environment usable for my_books rendering needs.
 
     def __init__(
-        self, db: pysondb,
-        book_code: str
-    ):
-        """Init an instance of class MyBooks.
-        """
+            self, db: pysondb,
+            book_code: str):
+        """Init an instance of class MyBooks."""
         self.MY_BOOKS_ROOT = MY_BOOKS_ROOT  # Confusing name ? just duplicate the global one in class namespace
         self.book_code = book_code
         self.db_books_catalog = db
@@ -75,7 +72,6 @@ class MyBooks:
             autoescape = j2.select_autoescape()
         )
 
-
     def getBook(self) -> dict | None:
         """Check for a given book code that is not None, exists in database and is exactly 1 record.
 
@@ -86,41 +82,39 @@ class MyBooks:
         """
         if not self.book_code or not isinstance(self.book_code, str):
             return None
-        # check if record exists and is only one
+        # Check if record exists and is only one.
         bk_rec = None
         bk_rec = self.db_books_catalog.getBy({"code": self.book_code})
         if bk_rec:
             if isinstance(bk_rec, list):
-                # there is more than 1 record and keep only the first one
+                # There is more than 1 record and keep only the first one.
                 bk_rec = bk_rec[0]
             elif isinstance(bk_rec, dict):
-                # do nothing, record is in right format
+                # Do nothing, record is in right format.
                 pass
             else:
-                # unknown record type so exit with None
+                # Unknown record type so exit with None.
                 return None
-            # upd key "store_location"
+            # Upd key "store_location".
             bk_rec["store_location"] = self.getBookPath()
-            # when location exists append `/`to ckear state it as directory otherwise let it unchanged
+            # When location exists append `/`to ckear state it as directory otherwise let it unchanged.
             if bk_rec["store_location"]:
                 bk_rec["store_location"] += "/"
-            # upd key "preview_url"
+            # Upd key "preview_url".
             bk_rec["preview_url"] = self.getBookURL()
-            if self.db_book_nav:  # ck if nav definition exisys (as json data-file)
+            if self.db_book_nav:  # Chk if nav definition exisys (as json data-file).
                 nav_file = self.db_book_nav.filename
                 bk_rec["nav_file_location"] = nav_file
             else:
                 bk_rec["nav_file_location"] = None
-            # return updayed record
+            # Return updated record.
             return bk_rec
         else:
             return None
 
-
     def getBookNav(
-        self,
-        format: str = None
-    ) -> None | dict | str:
+            self,
+            format: str = None) -> None | dict | str:
         """Get book navigation.
 
         Navigation info is retrieved from `book_navigation.json` data-file
@@ -138,9 +132,9 @@ class MyBooks:
         bk_nav_raw_data = self.db_book_nav.getAll()
         bk_nav_data = dict()
         bk_nav_data["nav"] = bk_nav_raw_data
-        # check format param and return accordingly
+        # Check format param and return accordingly.
         if not format or format is ...:
-            format = "dict"  # default value if not specified or set as None
+            format = "dict"  # Default value if not specified or set as None.
         if format == "dict":
             return bk_nav_data
         if format == "json":
@@ -151,8 +145,7 @@ class MyBooks:
             yaml_nav_data = yaml.safe_dump(bk_nav_data)
             yaml_nav_data = f"{yaml_nav_data}"
             return yaml_nav_data
-        return None  # if get here its a bug due to logic error
-
+        return None  # If get here its a bug due to logic error.
 
     def wrBookNav(self) -> bool:
         """Write out file "book_navigation.yml".
@@ -177,11 +170,11 @@ class MyBooks:
         if not (yaml_content := self.getBookNav(format="yaml")):
             return False
         yaml_content = WARNING_CONTENT + yaml_content
-        try:  # write file
+        try:  # Write file.
             out_file.write_text(yaml_content)
         except:
             return False
-        try:  # test if file can be read
+        try:  # Test if file can be read.
             with out_file.open("r") as f:
                 _c = f.read()
             return True
@@ -189,22 +182,17 @@ class MyBooks:
             return False
         return True
 
-
     def getBookPath(self) -> str:
-        """Get absolute path of current book root directory.
-        """
+        """Get absolute path of current book root directory."""
         my_book_path = os.path.abspath(os.path.join(self.MY_BOOKS_ROOT, self.book_code))
         if os.path.isdir(my_book_path):
             return my_book_path
         else:
             return None
 
-
     def getBookURL(self) -> str:
-        """Get preview URL (redirectable as is) for current book_code.
-        """
+        """Get preview URL (redirectable as is) for current book_code."""
         return self.MY_BOOK_URL
-
 
     def renderBookConfig(self) -> tuple:
         """Render current book configuration file.
@@ -220,24 +208,24 @@ class MyBooks:
         - on disk update current book configuration file (`mkdocs.yml`).
         """
         exit_text = "*** Start book configuration file (mkdocs.yml) rendering"
-        if not self.db_book_nav:  # if book nav does not exists force exit
+        if not self.db_book_nav:  # If book nav does not exists force exit.
             exit_text += "EROARE: Cartea nu are navigarea definita (book_navigation.json)."
             return (False, exit_text)
         book_data = None
-        # get book data for rendering
+        # Get book data for rendering.
         book_data = self.getBook()
-        if not book_data:  # if book is not present in catalog force exit
+        if not book_data:  # If book is not present in catalog force exit.
             exit_text += "EROARE: Cartea nu exista in catalog"
             return (False, exit_text)
         exit_text += "\nDate generale incarcate din catalog."
-        # prepare nav(igation) confuguration
+        # Prepare nav(igation) confuguration.
         book_data["nav"] = None
         exit_code_s1 = self.getBookNav(format = "yaml")
-        if not exit_code_s1:  # if nav config cannot be obtained as YAML then force exit
+        if not exit_code_s1:  # If nav config cannot be obtained as YAML then force exit.
             exit_text += "EROARE: Cartea nu are navigare definita (book_navigation.json)."
             return (False, exit_text)
         else:
-            # rationale: ret of getBookNav() can be None or got value
+            # Rationale: ret of getBookNav() can be None or got value.
             book_data["nav"] = exit_code_s1
             exit_code_s1 = True
             _crtdt = datetime.datetime.now()
@@ -246,11 +234,11 @@ class MyBooks:
             WARNING_CONTENT \
             + book_data["nav"]
         exit_text += "\nDate navigare incarcate."
-        # render mkdocs_template.yml
+        # Render mkdocs_template.yml.
         exit_text += "\nRandare temmplate configurate carte"
         template_cfg_file = "mkdocs_template.yml"
         to_render_file = self.book_code + "/" + template_cfg_file
-        #---TST if template file exists
+        #---TST if template file exists.
         _tst1 = os.path.isfile(
             os.path.join(
                 self.getBookPath(),
@@ -273,7 +261,7 @@ class MyBooks:
         except:
             exit_text += "EROARE: randarea mkdocs_template.yml esuata."
             return (False, exit_text)
-        else:  # try block executed correctly
+        else:  # Try block executed correctly.
             exit_text += f"\nRandare template configurare carte executata"
             exit_code_s2 = True
         exit_code_s2 = False
@@ -283,12 +271,11 @@ class MyBooks:
         except:
             exit_text += "EROARE: scrierea fisierului mkdocs.yml esuata."
             return (False, exit_text)
-        else:  # try block executed correctly
+        else:  # Try block executed correctly.
             exit_text += f"\nScrierea fisierului mkdocs.yml executata."
             exit_code_s2 = True
-        ## if got here, everithing was ok so return True and all result outputs
+        ## If got here, everithing was ok so return True and all result outputs.
         return (True, exit_text)
-
 
     def buildBook(self) -> None | str:
         """Build (mkdocs build) current boook.
@@ -299,7 +286,7 @@ class MyBooks:
 
         Return:
 
-        - `str` stdout + stderr of runned process
+        - `str` stdout + stderr of run process
         - `None` if process exit with fatal err (standard baah return 1)
 
         _Lateral effects:_
@@ -308,7 +295,6 @@ class MyBooks:
         """
         #TODO ...
         pass
-
 
     def createPhysicalBook(self) -> bool:
         """Create physical book directory as copy of "book_template".
@@ -323,11 +309,10 @@ class MyBooks:
 
 @dataclass
 class Results:
-    """Define a result model (type) frequently used as return set by MyBook methods.
-    """
+    """Define a result model (type) frequently used as return set by MyBook methods."""
+    exit_code: bool = None  # Exit code of run method. Usual is the same as method returns.
+    exit_text: str = None  # Outpit text of last run method (equivalent of stdout when run a console process).
     ... #TODO 0.10.dev44 issue ...
-    pass
-
 
 
 

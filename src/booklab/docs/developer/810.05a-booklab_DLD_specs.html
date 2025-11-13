@@ -934,7 +934,11 @@
 <li><a href="#createphysicalbook">createPhysicalBook</a></li>
 </ul>
 </li>
-<li><a href="#results-objects">Results Objects</a></li>
+<li><a href="#results-objects">Results Objects</a><ul>
+<li><a href="#exit_code">exit_code</a></li>
+<li><a href="#exit_text">exit_text</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#booklabdoc_src">booklab.doc_src</a></li>
@@ -1075,19 +1079,19 @@ Flask <code>render_from_string()</code> which is included) or by creating a loca
 <p>author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.MY_BOOK_URL"></a></p>
 <h4 id="my_book_url">MY_BOOK_URL</h4>
-<p>instantiated book URL to local (generated) site</p>
+<p>Instantiated book URL to local (generated) site.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.book_code"></a></p>
 <h4 id="book_code">book_code</h4>
-<p>instanciated book code</p>
+<p>Instanciated book code.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.db_books_catalog"></a></p>
 <h4 id="db_books_catalog">db_books_catalog</h4>
-<p>books catalog data controller</p>
+<p>Books catalog data controller.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.db_book_nav"></a></p>
 <h4 id="db_book_nav">db_book_nav</h4>
-<p>books navigation data controller</p>
+<p>Books navigation data controller.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.jinja_env"></a></p>
 <h4 id="jinja_env">jinja_env</h4>
-<p>Jinja environment usable for my_books rendering needs</p>
+<p>Jinja environment usable for my_books rendering needs.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.__init__"></a></p>
 <h4 id="__init__">__init__</h4>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
@@ -1166,7 +1170,7 @@ Method suppose that mkdocs.yml file is good and book content directory (doc_src/
 that meaning the method just run nkdocs build process, collect output and return it.</p>
 <p><strong>Returns</strong>:</p>
 <ul>
-<li><code>str</code> stdout + stderr of runned process</li>
+<li><code>str</code> stdout + stderr of run process</li>
 <li><code>None</code> if process exit with fatal err (standard baah return 1)</li>
 </ul>
 <p><em>Lateral effects:</em></p>
@@ -1188,6 +1192,12 @@ that meaning the method just run nkdocs build process, collect output and return
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">class</span> <span class="nc">Results</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Define a result model (type) frequently used as return set by MyBook methods.</p>
+<p><a id="booklab.my_books.books_manager.Results.exit_code"></a></p>
+<h4 id="exit_code">exit_code</h4>
+<p>Exit code of run method. Usual is the same as method returns.</p>
+<p><a id="booklab.my_books.books_manager.Results.exit_text"></a></p>
+<h4 id="exit_text">exit_text</h4>
+<p>Outpit text of last run method (equivalent of stdout when run a console process).</p>
 <p><a id="booklab.doc_src"></a></p>
 <h1 id="booklabdoc_src">booklab.doc_src</h1>
 <p>Booklab master static site:</p>
@@ -1360,7 +1370,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 12, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 13, 2025</span>
       
     
   </small>
