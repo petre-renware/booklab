@@ -3,7 +3,7 @@ import pysondb
 import w3lib.url
 import json
 import pylibyaml
-import yaml  # mandatory to import after pylibyank
+import yaml  # NOTE: mandatory to import after pylibyank
 import rich
 from rich import print as rprint
 from pathlib import Path
@@ -11,7 +11,6 @@ import jinja2 as j2
 import datetime
 from dataclasses import dataclass
 from typing import Type
-
 from flask import Flask
 from werkzeug.urls import quote as url_quote
 
@@ -173,7 +172,7 @@ class MyBooks:
 
         _*Lateral effects:*_
 
-        - on disk create / update current book navigation definition file in YAML format (`book_navigation.yml`).
+        - on disk: create / update current book navigation definition file in YAML format (`book_navigation.yml`).
         """
         if not self.db_book_nav:
             return False
@@ -221,7 +220,7 @@ class MyBooks:
 
         _*Lateral effects:*_
 
-        - on disk update current book configuration file (`mkdocs.yml`).
+        - on disk: update current book configuration file (`mkdocs.yml`).
         """
         exit_text = "*** Start book configuration file (mkdocs.yml) rendering"
         if not self.db_book_nav:  # If book nav does not exists force exit.
@@ -243,10 +242,8 @@ class MyBooks:
         if not exit_code:  # If nav config cannot be obtained as YAML then force exit.
             exit_text += "EROARE: Cartea nu are navigare definita (book_navigation.json)."
             return (False, exit_text)
-        else:
-            # Rationale: ret of getBookNav() can be None or got value.
+        else:  # Rationale: ret of getBookNav() can be None or got value.
             book_data["nav"] = exit_code
-            exit_code = True
             _crtdt = datetime.datetime.now()
         WARNING_CONTENT = f"# nav section AUTO GENERATED @{_crtdt:%Y-%m-%d %H:%M:%S}. DO NOT MODIFY it.\n"
         book_data["nav"] = \
@@ -274,7 +271,6 @@ class MyBooks:
         )
         out_file = Path(out_file)
         book_cfg = self.jinja_env.get_template(to_render_file)
-        exit_code = False
         try:
             book_cfg = book_cfg.render(book_data = book_data)
         except:
@@ -282,9 +278,7 @@ class MyBooks:
             return (False, exit_text)
         else:  # Try block executed correctly.
             exit_text += f"\nRandare template configurare carte executata"
-            exit_code = True
         #
-        exit_code = False
         exit_text += "\nScrierea fisierului mkdocs.yml."
         try:
             out_file.write_text(book_cfg)
@@ -293,7 +287,6 @@ class MyBooks:
             return (False, exit_text)
         else:  # Try block executed correctly.
             exit_text += f"\nScrierea fisierului mkdocs.yml executata."
-            exit_code = True
         ## If got here, everithing was ok so return True and all result outputs.
         return (True, exit_text)
 
@@ -309,9 +302,9 @@ class MyBooks:
         - `str` stdout + stderr of run process
         - `None` if process exit with fatal err (standard baah return 1)
 
-        _Lateral effects:_
+        _*Lateral effects:*_
 
-        - on disk create / update current book static site directory (usual `docs/`).
+        - on disk: create / update current book static site directory (usual `docs/`).
         """
         #TODO ...
         pass
@@ -319,9 +312,9 @@ class MyBooks:
     def createPhysicalBook(self) -> bool:
         """Create physical book directory as copy of "book_template".
 
-        _Lateral effects:_
+        _*Lateral effects:*_
 
-        - creates new directory & filrs on disk represing current book physical location.
+        - on disk: creates new directory & filrs on disk represing current book physical location.
         """
         #TODO ...
         pass
