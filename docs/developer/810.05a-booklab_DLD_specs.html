@@ -923,7 +923,9 @@
 </ul>
 </li>
 <li><a href="#mybooks-objects">MyBooks Objects</a><ul>
+<li><a href="#my_books_url_prefix">MY_BOOKS_URL_prefix</a></li>
 <li><a href="#my_book_url">MY_BOOK_URL</a></li>
+<li><a href="#my_books_root">MY_BOOKS_ROOT</a></li>
 <li><a href="#book_code">book_code</a></li>
 <li><a href="#db_books_catalog">db_books_catalog</a></li>
 <li><a href="#db_book_nav">db_book_nav</a></li>
@@ -1090,9 +1092,15 @@ By external access is understood all URL parts necessary to expose Booklab appli
 Flask <code>render_from_string()</code> which is included) or by creating a local Jinja environment.</li>
 </ul>
 <p>author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.my_books.books_manager.MyBooks.MY_BOOKS_URL_prefix"></a></p>
+<h4 id="my_books_url_prefix">MY_BOOKS_URL_prefix</h4>
+<p>URL prefix to add when accesing a book local (generated) site.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.MY_BOOK_URL"></a></p>
 <h4 id="my_book_url">MY_BOOK_URL</h4>
 <p>Instantiated book URL to local (generated) site.</p>
+<p><a id="booklab.my_books.books_manager.MyBooks.MY_BOOKS_ROOT"></a></p>
+<h4 id="my_books_root">MY_BOOKS_ROOT</h4>
+<p>Confusing name ? just duplicate the global one in class namespace.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.book_code"></a></p>
 <h4 id="book_code">book_code</h4>
 <p>Instanciated book code.</p>
@@ -1163,15 +1171,14 @@ and is identified by <code>self.db_book_nav</code> pysondb handler.</p>
 <p>Get preview URL (redirectable as is) for current book_code.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.renderBookConfig"></a></p>
 <h4 id="renderbookconfig">renderBookConfig</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">renderBookConfig</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">tuple</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">renderBookConfig</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">Results</span><span class="p">]</span>
 </span></code></pre></div>
 <p>Render current book configuration file.
 Produce file <code>mkdocs.yml</code> as being the configuration file to build the book.
 File is writen in book root directory.</p>
 <p><strong>Returns</strong>:</p>
-<ul>
-<li><code>(exit_code, stdout + stderr)</code></li>
-</ul>
+<p><code>TODO..</code>. iss 0.10.dev45 ...
+  - <code>Results object</code> reference to <code>self.results</code></p>
 <p><em>Lateral effects:</em></p>
 <ul>
 <li>on disk update current book configuration file (<code>mkdocs.yml</code>).</li>

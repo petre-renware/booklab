@@ -39,17 +39,16 @@ class MyBooks:
     author: Petre Iordanescu (petre.iordanescu@gmail.com)
     """
     MY_BOOKS_URL_prefix: str = (
-        "/my-books/"  # URL prefix to add when accesing a book local (generated) site.
-    )
+        "/my-books/")  # URL prefix to add when accesing a book local (generated) site.
     MY_BOOK_URL: str = None  # Instantiated book URL to local (generated) site.
-    MY_BOOKS_ROOT: str = (
-        MY_BOOKS_ROOT  # Confusing name ? just duplicate the global one in class namespace.
-    )
+    MY_BOOKS_ROOT: str = MY_BOOKS_ROOT  # Confusing name ? just duplicate the global one in class namespace.
     book_code: str = None  # Instanciated book code.
     db_books_catalog: pysondb = None  # Books catalog data controller.
     db_book_nav: pysondb = None  # Books navigation data controller.
     jinja_env = None  # Jinja environment usable for my_books rendering needs.
-    results: Type[Results] = None  # Keep result of last run method (for methods that should return composite result).
+    results: Type[Results] = Results(
+        exit_code = None,
+        exit_text = None)  # Keep result of last run method (for methods that should return composite result).
 
     def __init__(
             self, db: pysondb,
@@ -81,11 +80,11 @@ class MyBooks:
             ),
             autoescape = j2.select_autoescape()
         )
-        #TODO 0.10.dev45 issue ...
-        #...self.results = Results(
-        #...   exit_code = None,
-        #...   exit_text - None
-        #...)
+        #
+        self.results = Results(
+            exit_code = None,
+            exit_text = None
+        )
 
 
     def getBook(self) -> dict | None:
@@ -210,14 +209,16 @@ class MyBooks:
         """Get preview URL (redirectable as is) for current book_code."""
         return self.MY_BOOK_URL
 
-    def renderBookConfig(self) -> tuple:
+    #TODO... iss 0.10.dev45 ...
+    def renderBookConfig(self) -> Type[Results]:
         """Render current book configuration file.
         Produce file `mkdocs.yml` as being the configuration file to build the book.
         File is writen in book root directory.
 
         Return:
 
-        - `(exit_code, stdout + stderr)`
+        #TODO... iss 0.10.dev45 ...
+        - `Results object` reference to `self.results`
 
         _Lateral effects:_
 
