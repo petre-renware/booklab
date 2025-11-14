@@ -917,12 +917,18 @@
 <li><a href="#booklabmy_booksbook_template">booklab.my_books.book_template</a></li>
 <li><a href="#booklabmy_books">booklab.my_books</a></li>
 <li><a href="#booklabmy_booksbooks_manager">booklab.my_books.books_manager</a><ul>
+<li><a href="#results-objects">Results Objects</a><ul>
+<li><a href="#exit_code">exit_code</a></li>
+<li><a href="#exit_text">exit_text</a></li>
+</ul>
+</li>
 <li><a href="#mybooks-objects">MyBooks Objects</a><ul>
 <li><a href="#my_book_url">MY_BOOK_URL</a></li>
 <li><a href="#book_code">book_code</a></li>
 <li><a href="#db_books_catalog">db_books_catalog</a></li>
 <li><a href="#db_book_nav">db_book_nav</a></li>
 <li><a href="#jinja_env">jinja_env</a></li>
+<li><a href="#results">results</a></li>
 <li><a href="#__init__">__init__</a></li>
 <li><a href="#getbook">getBook</a></li>
 <li><a href="#getbooknav">getBookNav</a></li>
@@ -932,11 +938,6 @@
 <li><a href="#renderbookconfig">renderBookConfig</a></li>
 <li><a href="#buildbook">buildBook</a></li>
 <li><a href="#createphysicalbook">createPhysicalBook</a></li>
-</ul>
-</li>
-<li><a href="#results-objects">Results Objects</a><ul>
-<li><a href="#exit_code">exit_code</a></li>
-<li><a href="#exit_text">exit_text</a></li>
 </ul>
 </li>
 </ul>
@@ -1066,9 +1067,21 @@ By external access is understood all URL parts necessary to expose Booklab appli
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.my_books.books_manager"></a></p>
 <h1 id="booklabmy_booksbooks_manager">booklab.my_books.books_manager</h1>
+<p><a id="booklab.my_books.books_manager.Results"></a></p>
+<h2 id="results-objects">Results Objects</h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@dataclass</span><span class="p">()</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">class</span> <span class="nc">Results</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Define a result model (type) frequently used as return set by MyBook methods.</p>
+<p><a id="booklab.my_books.books_manager.Results.exit_code"></a></p>
+<h4 id="exit_code">exit_code</h4>
+<p>Exit code of run method. Usual is the same as method returns.</p>
+<p><a id="booklab.my_books.books_manager.Results.exit_text"></a></p>
+<h4 id="exit_text">exit_text</h4>
+<p>Outpit text of last run method (equivalent of stdout when run a console process).</p>
 <p><a id="booklab.my_books.books_manager.MyBooks"></a></p>
 <h2 id="mybooks-objects">MyBooks Objects</h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">MyBooks</span><span class="p">()</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">class</span> <span class="nc">MyBooks</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Class that manage end user books.</p>
 <p><strong>Mandatory requirements:</strong></p>
@@ -1092,14 +1105,17 @@ Flask <code>render_from_string()</code> which is included) or by creating a loca
 <p><a id="booklab.my_books.books_manager.MyBooks.jinja_env"></a></p>
 <h4 id="jinja_env">jinja_env</h4>
 <p>Jinja environment usable for my_books rendering needs.</p>
+<p><a id="booklab.my_books.books_manager.MyBooks.results"></a></p>
+<h4 id="results">results</h4>
+<p>Keep result of last run method (for methods that should return composite result).</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.__init__"></a></p>
 <h4 id="__init__">__init__</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Init an instance of class MyBooks.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.getBook"></a></p>
 <h4 id="getbook">getBook</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="nf">getBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">getBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span>
 </span></code></pre></div>
 <p>Check for a given book code that is not None, exists in database and is exactly 1 record.</p>
 <p><strong>Returns</strong>:</p>
@@ -1109,7 +1125,7 @@ Flask <code>render_from_string()</code> which is included) or by creating a loca
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.getBookNav"></a></p>
 <h4 id="getbooknav">getBookNav</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">getBookNav</span><span class="p">(</span><span class="nb">format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">dict</span> <span class="o">|</span> <span class="nb">str</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">getBookNav</span><span class="p">(</span><span class="nb">format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">dict</span> <span class="o">|</span> <span class="nb">str</span>
 </span></code></pre></div>
 <p>Get book navigation.</p>
 <p>Navigation info is retrieved from <code>book_navigation.json</code> data-file
@@ -1123,7 +1139,7 @@ and is identified by <code>self.db_book_nav</code> pysondb handler.</p>
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.wrBookNav"></a></p>
 <h4 id="wrbooknav">wrBookNav</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">wrBookNav</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">wrBookNav</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </span></code></pre></div>
 <p>Write out file "book_navigation.yml".</p>
 <p><strong>Returns</strong>:</p>
@@ -1137,17 +1153,17 @@ and is identified by <code>self.db_book_nav</code> pysondb handler.</p>
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.getBookPath"></a></p>
 <h4 id="getbookpath">getBookPath</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">getBookPath</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">getBookPath</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </span></code></pre></div>
 <p>Get absolute path of current book root directory.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.getBookURL"></a></p>
 <h4 id="getbookurl">getBookURL</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">getBookURL</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">getBookURL</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </span></code></pre></div>
 <p>Get preview URL (redirectable as is) for current book_code.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.renderBookConfig"></a></p>
 <h4 id="renderbookconfig">renderBookConfig</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">renderBookConfig</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">tuple</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">renderBookConfig</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">tuple</span>
 </span></code></pre></div>
 <p>Render current book configuration file.
 Produce file <code>mkdocs.yml</code> as being the configuration file to build the book.
@@ -1162,7 +1178,7 @@ File is writen in book root directory.</p>
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.buildBook"></a></p>
 <h4 id="buildbook">buildBook</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">buildBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">str</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">buildBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">str</span>
 </span></code></pre></div>
 <p>Build (mkdocs build) current boook.</p>
 <p>Build current book (ie, <code>mkdocs build</code>) in its own directory.
@@ -1179,25 +1195,13 @@ that meaning the method just run nkdocs build process, collect output and return
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.createPhysicalBook"></a></p>
 <h4 id="createphysicalbook">createPhysicalBook</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">createPhysicalBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">createPhysicalBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </span></code></pre></div>
 <p>Create physical book directory as copy of "book_template".</p>
 <p><em>Lateral effects:</em></p>
 <ul>
 <li>creates new directory &amp; filrs on disk represing current book physical location.</li>
 </ul>
-<p><a id="booklab.my_books.books_manager.Results"></a></p>
-<h2 id="results-objects">Results Objects</h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nd">@dataclass</span><span class="p">()</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">class</span> <span class="nc">Results</span><span class="p">()</span>
-</span></code></pre></div>
-<p>Define a result model (type) frequently used as return set by MyBook methods.</p>
-<p><a id="booklab.my_books.books_manager.Results.exit_code"></a></p>
-<h4 id="exit_code">exit_code</h4>
-<p>Exit code of run method. Usual is the same as method returns.</p>
-<p><a id="booklab.my_books.books_manager.Results.exit_text"></a></p>
-<h4 id="exit_text">exit_text</h4>
-<p>Outpit text of last run method (equivalent of stdout when run a console process).</p>
 <p><a id="booklab.doc_src"></a></p>
 <h1 id="booklabdoc_src">booklab.doc_src</h1>
 <p>Booklab master static site:</p>
@@ -1370,7 +1374,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 13, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 14, 2025</span>
       
     
   </small>

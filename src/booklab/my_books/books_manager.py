@@ -10,12 +10,21 @@ from pathlib import Path
 import jinja2 as j2
 import datetime
 from dataclasses import dataclass
+from typing import Type
+
 from flask import Flask
 from werkzeug.urls import quote as url_quote
 
 from booklab import MY_BOOKS_ROOT
 from booklab import EXT_PATH
 from booklab import FULL_EXT_URL
+
+
+@dataclass()
+class Results:
+    """Define a result model (type) frequently used as return set by MyBook methods."""
+    exit_code: bool = None  # Exit code of run method. Usual is the same as method returns.
+    exit_text: str = None  # Outpit text of last run method (equivalent of stdout when run a console process).
 
 
 class MyBooks:
@@ -40,8 +49,7 @@ class MyBooks:
     db_books_catalog: pysondb = None  # Books catalog data controller.
     db_book_nav: pysondb = None  # Books navigation data controller.
     jinja_env = None  # Jinja environment usable for my_books rendering needs.
-    ... #TODO 0.10.dev45 issue ...
-    ... # result = Results()
+    results: Type[Results] = None  # Keep result of last run method (for methods that should return composite result).
 
     def __init__(
             self, db: pysondb,
@@ -73,6 +81,12 @@ class MyBooks:
             ),
             autoescape = j2.select_autoescape()
         )
+        #TODO 0.10.dev45 issue ...
+        #...self.results = Results(
+        #...   exit_code = None,
+        #...   exit_text - None
+        #...)
+
 
     def getBook(self) -> dict | None:
         """Check for a given book code that is not None, exists in database and is exactly 1 record.
@@ -307,13 +321,6 @@ class MyBooks:
         """
         #TODO ...
         pass
-
-
-@dataclass()
-class Results:
-    """Define a result model (type) frequently used as return set by MyBook methods."""
-    exit_code: bool = None  # Exit code of run method. Usual is the same as method returns.
-    exit_text: str = None  # Outpit text of last run method (equivalent of stdout when run a console process).
 
 
 
