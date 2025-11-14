@@ -1086,7 +1086,7 @@ By external access is understood all URL parts necessary to expose Booklab appli
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">class</span> <span class="nc">MyBooks</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Class that manage end user books.</p>
-<p><strong>Mandatory requirements:</strong></p>
+<p><em><em>Mandatory requirements:</em></em></p>
 <ul>
 <li>any Jinja renderings will be made "from string" (ie, using
 Flask <code>render_from_string()</code> which is included) or by creating a local Jinja environment.</li>
@@ -1118,7 +1118,7 @@ Flask <code>render_from_string()</code> which is included) or by creating a loca
 <p>Keep result of last run method (for methods that should return composite result).</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.__init__"></a></p>
 <h4 id="__init__">__init__</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">pysondb</span><span class="p">,</span> <span class="n">book_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </span></code></pre></div>
 <p>Init an instance of class MyBooks.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks.getBook"></a></p>
@@ -1155,9 +1155,9 @@ and is identified by <code>self.db_book_nav</code> pysondb handler.</p>
 <li><code>True</code> if file was written</li>
 <li><code>False</code> if file was not written or cannot be read regardless why (usual problem is source file)</li>
 </ul>
-<p><em>Lateral effects:</em></p>
+<p><em><em>Lateral effects:</em></em></p>
 <ul>
-<li>on disk create / update current book navigation definition file in YAML format (<code>book_navigation.yml</code>).</li>
+<li>on disk: create / update current book navigation definition file in YAML format (<code>book_navigation.yml</code>).</li>
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.getBookPath"></a></p>
 <h4 id="getbookpath">getBookPath</h4>
@@ -1180,9 +1180,9 @@ File is writen in book root directory.</p>
 <ul>
 <li><code>Results object</code> reference to <code>self.results</code></li>
 </ul>
-<p><em>Lateral effects:</em></p>
+<p><em><em>Lateral effects:</em></em></p>
 <ul>
-<li>on disk update current book configuration file (<code>mkdocs.yml</code>).</li>
+<li>on disk: update current book configuration file (<code>mkdocs.yml</code>).</li>
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.buildBook"></a></p>
 <h4 id="buildbook">buildBook</h4>
@@ -1197,18 +1197,18 @@ that meaning the method just run nkdocs build process, collect output and return
 <li><code>str</code> stdout + stderr of run process</li>
 <li><code>None</code> if process exit with fatal err (standard baah return 1)</li>
 </ul>
-<p><em>Lateral effects:</em></p>
+<p><em><em>Lateral effects:</em></em></p>
 <ul>
-<li>on disk create / update current book static site directory (usual <code>docs/</code>).</li>
+<li>on disk: create / update current book static site directory (usual <code>docs/</code>).</li>
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.createPhysicalBook"></a></p>
 <h4 id="createphysicalbook">createPhysicalBook</h4>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">createPhysicalBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </span></code></pre></div>
 <p>Create physical book directory as copy of "book_template".</p>
-<p><em>Lateral effects:</em></p>
+<p><em><em>Lateral effects:</em></em></p>
 <ul>
-<li>creates new directory &amp; filrs on disk represing current book physical location.</li>
+<li>on disk: creates new directory &amp; filrs on disk represing current book physical location.</li>
 </ul>
 <p><a id="booklab.doc_src"></a></p>
 <h1 id="booklabdoc_src">booklab.doc_src</h1>
