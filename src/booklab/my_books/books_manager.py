@@ -40,6 +40,8 @@ class MyBooks:
     db_books_catalog: pysondb = None  # Books catalog data controller.
     db_book_nav: pysondb = None  # Books navigation data controller.
     jinja_env = None  # Jinja environment usable for my_books rendering needs.
+    ... #TODO 0.10.dev45 issue ...
+    ... # result = Results()
 
     def __init__(
             self, db: pysondb,
@@ -307,12 +309,11 @@ class MyBooks:
         pass
 
 
-@dataclass
+@dataclass()
 class Results:
     """Define a result model (type) frequently used as return set by MyBook methods."""
     exit_code: bool = None  # Exit code of run method. Usual is the same as method returns.
     exit_text: str = None  # Outpit text of last run method (equivalent of stdout when run a console process).
-    ... #TODO 0.10.dev44 issue ...
 
 
 
