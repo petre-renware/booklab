@@ -27,7 +27,7 @@ Implement `bbld` and update `book_template`:
 * ... [0.10a_??] `MyBooks` clean & upd code +
   make a "results from process" dataclass to be used by all methods that need to return at least POSIX pattern like (exit code, stdout, stderr)
     - ...
-    - ...toini... [0.10.dev46] upd "renderBookConfig()" method to use Results instance variable (`self.results`)
+    - ... [0.10.dev46] upd "renderBookConfig()" method to use Results instance variable (`self.results`)
     - [0.10.dev45] use "Results()" in "MyBook" as instance & class variable `results` with None default values
     - [0.10.dev44] create `Results` dataclass as type in module "books_manager"
     - [0.10.dev43] `MyBooks` upd all docstr to apecifi latteral effects of some methods (for ex updating files)

@@ -23,8 +23,8 @@ from booklab import FULL_EXT_URL
 @dataclass()
 class Results:
     """Define a result model (type) frequently used as return set by MyBook methods."""
-    exit_code: bool = None  # Exit code of run method. Usual is the same as method returns.
-    exit_text: str = None  # Outpit text of last run method (equivalent of stdout when run a console process).
+    exit_code: None | bool = False  # Exit code of run method. Usual is the same as method returns.
+    exit_text: None | str = "*** NO OUTPUT AVAILABLE."  # Outpit text of last run method (equivalent of stdout when run a console process).
 
 
 class MyBooks:
@@ -209,7 +209,6 @@ class MyBooks:
         """Get preview URL (redirectable as is) for current book_code."""
         return self.MY_BOOK_URL
 
-    #TODO... iss 0.10.dev45 ...
     def renderBookConfig(self) -> Type[Results]:
         """Render current book configuration file.
         Produce file `mkdocs.yml` as being the configuration file to build the book.
@@ -217,7 +216,6 @@ class MyBooks:
 
         Return:
 
-        #TODO... iss 0.10.dev45 ...
         - `Results object` reference to `self.results`
 
         _Lateral effects:_
@@ -226,8 +224,11 @@ class MyBooks:
         """
         exit_text = "*** Start book configuration file (mkdocs.yml) rendering"
         if not self.db_book_nav:  # If book nav does not exists force exit.
-            exit_text += "EROARE: Cartea nu are navigarea definita (book_navigation.json)."
-            return (False, exit_text)
+            exit_text += "\nEROARE: Cartea nu are navigarea definita (book_navigation.json)."
+            self.results.exit_code = False
+            self.results.exit_text = exit_text
+            return self.results
+        #TODO... iss 0.10.dev46 ...
         book_data = None
         # Get book data for rendering.
         book_data = self.getBook()
