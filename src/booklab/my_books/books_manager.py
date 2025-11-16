@@ -19,7 +19,7 @@ from booklab import EXT_PATH
 from booklab import FULL_EXT_URL
 
 
-@dataclass()
+@dataclass(frozen=True)
 class Results:
     """Define a result model (type) frequently used as return set by MyBook methods."""
     exit_code: None | bool = False  # Exit code of run method. Usual is the same as method returns.
@@ -225,8 +225,10 @@ class MyBooks:
         exit_text = "*** Start book configuration file (mkdocs.yml) rendering"
         if not self.db_book_nav:  # If book nav does not exists force exit.
             exit_text += "\nEROARE: Cartea nu are navigarea definita (book_navigation.json)."
-            self.results.exit_code = False
-            self.results.exit_text = exit_text
+            self.results = Results(
+                exit_code = False,
+                exit_text = exit_text
+            )
             return self.results
         #TODO... iss 0.10.dev46 ...
         book_data = None
