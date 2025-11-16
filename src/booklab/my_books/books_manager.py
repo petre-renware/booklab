@@ -227,7 +227,7 @@ class MyBooks:
         # Get book data for rendering.
         book_data = self.getBook()
         if not book_data:  # If book is not present in catalog force exit.
-            exit_text += "EROARE: Cartea nu exista in catalog"
+            exit_text += "\nEROARE: Cartea nu exista in catalog"
             self.results = Results(
                 exit_code = False,
                 exit_text = exit_text
@@ -241,15 +241,18 @@ class MyBooks:
                 exit_text = exit_text
             )
             return self.results
-
-        #TODO... iss 0.10.dev46 ...
+        #
         exit_text += "\nDate generale incarcate din catalog."
         # Prepare nav(igation) confuguration.
         book_data["nav"] = None
         exit_code = self.getBookNav(format = "yaml")
         if not exit_code:  # If nav config cannot be obtained as YAML then force exit.
-            exit_text += "EROARE: Cartea nu are navigare definita (book_navigation.json)."
-            return (False, exit_text)
+            exit_text += "\nEROARE: Cartea nu are navigare definita (book_navigation.json)."
+            self.results = Results(
+                exit_code = False,
+                exit_text = exit_text
+            )
+            return self.results
         else:  # Rationale: ret of getBookNav() can be None or got value.
             book_data["nav"] = exit_code
             _crtdt = datetime.datetime.now()
@@ -270,6 +273,7 @@ class MyBooks:
             )
         )
         if not _tst1:
+            #TODO... iss 0.10.dev46 ...
             exit_text += "EROARE: Template configurare carte inexistent (mkdocs_template.yml)."
             return (False, exit_text)
         #---EOF ck config template existance. Can continue safe.
