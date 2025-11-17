@@ -21,7 +21,12 @@ from booklab import FULL_EXT_URL
 
 @dataclass(frozen = True)
 class Results:
-    """Define a result model (type) frequently used as return set by MyBook methods."""
+    """Define a result model (type) frequently used as return set by MyBook methods.
+
+    Class as data type (model) is defined _frozen_ as protection to change
+    its instances once created. This is usefull when used as member in other
+    objects to protect them to be altered outside the object.
+    """
     exit_code: None | bool = False  # Exit code of run method. Usual is the same as method returns.
     exit_text: None | str = "*** NO OUTPUT AVAILABLE."  # Outpit text of last run method (equivalent of stdout when run a console process).
 
@@ -53,7 +58,8 @@ class MyBooks:
             self, db: pysondb,
             book_code: str
     ) -> None:
-        """Init an instance of class MyBooks."""
+        """Init an instance of class MyBooks.
+        """
         self.MY_BOOKS_ROOT = MY_BOOKS_ROOT  # Confusing name ? just duplicate the global one in class namespace
         self.book_code = book_code
         self.db_books_catalog = db
@@ -198,7 +204,8 @@ class MyBooks:
         return True
 
     def getBookPath(self) -> str:
-        """Get absolute path of current book root directory."""
+        """Get absolute path of current book root directory.
+        """
         my_book_path = os.path.abspath(os.path.join(self.MY_BOOKS_ROOT, self.book_code))
         if os.path.isdir(my_book_path):
             return my_book_path
@@ -206,7 +213,8 @@ class MyBooks:
             return None
 
     def getBookURL(self) -> str:
-        """Get preview URL (redirectable as is) for current book_code."""
+        """Get preview URL (redirectable as is) for current book_code.
+        """
         return self.MY_BOOK_URL
 
     def renderBookConfig(self) -> Type[Results]:
@@ -241,9 +249,8 @@ class MyBooks:
                 exit_text = exit_text
             )
             return self.results
-        #
-        exit_text += "\nDate generale incarcate din catalog."
         # Prepare nav(igation) confuguration.
+        exit_text += "\nDate generale incarcate din catalog."
         book_data["nav"] = None
         exit_code = self.getBookNav(format = "yaml")
         if not exit_code:  # If nav config cannot be obtained as YAML then force exit.
@@ -273,9 +280,13 @@ class MyBooks:
             )
         )
         if not _tst1:
-            #TODO... iss 0.10.dev46 ...
-            exit_text += "EROARE: Template configurare carte inexistent (mkdocs_template.yml)."
-            return (False, exit_text)
+            
+            exit_text += "\nEROARE: Template configurare carte inexistent (mkdocs_template.yml)."
+            self.results = Results(
+                exit_code = False,
+                exit_text = exit_text
+            )
+            return self.results
         #---EOF ck config template existance. Can continue safe.
         out_file = os.path.join(
             self.getBookPath(),
@@ -286,6 +297,7 @@ class MyBooks:
         try:
             book_cfg = book_cfg.render(book_data = book_data)
         except:
+            #TODO... iss 0.10.dev46 ...
             exit_text += "EROARE: randarea mkdocs_template.yml esuata."
             return (False, exit_text)
         else:  # Try block executed correctly.

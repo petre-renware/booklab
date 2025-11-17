@@ -1071,10 +1071,13 @@ By external access is understood all URL parts necessary to expose Booklab appli
 <h1 id="booklabmy_booksbooks_manager">booklab.my_books.books_manager</h1>
 <p><a id="booklab.my_books.books_manager.Results"></a></p>
 <h2 id="results-objects">Results Objects</h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">class</span> <span class="nc">Results</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Define a result model (type) frequently used as return set by MyBook methods.</p>
+<p>Class as data type (model) is defined <em>frozen</em> as protection to change
+its instances once created. This is usefull when used as member in other
+objects to protect them to be altered outside the object.</p>
 <p><a id="booklab.my_books.books_manager.Results.exit_code"></a></p>
 <h4 id="exit_code">exit_code</h4>
 <p>Exit code of run method. Usual is the same as method returns.</p>
@@ -1382,7 +1385,7 @@ modules to be launched at package call with <code>-m</code> option</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 14, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 16, 2025</span>
       
     
   </small>
