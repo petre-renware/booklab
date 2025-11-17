@@ -3,12 +3,14 @@ import pysondb
 import w3lib.url
 import json
 import pylibyaml
-import yaml  # mandatory to import after pylibyank
+import yaml  # NOTE: mandatory to import after pylibyank
 import rich
 from rich import print as rprint
 from pathlib import Path
 import jinja2 as j2
 import datetime
+from dataclasses import dataclass
+from typing import Type
 from flask import Flask
 from werkzeug.urls import quote as url_quote
 
@@ -17,34 +19,45 @@ from booklab import EXT_PATH
 from booklab import FULL_EXT_URL
 
 
+@dataclass(frozen = True)
+class Results:
+    """Define a result model (type) frequently used as return set by MyBook methods.
+
+    Class as data type (model) is defined _frozen_ as protection to change
+    its instances once created. This is usefull when used as member in other
+    objects to protect them to be altered outside the object.
+    """
+    exit_code: None | bool = False  # Exit code of run method. Usual is the same as method returns.
+    exit_text: None | str = "*** NO OUTPUT AVAILABLE."  # Outpit text of last run method (equivalent of stdout when run a console process).
+
+
 class MyBooks:
     """
     Class that manage end user books.
 
-    **Mandatory requirements:**
+    _*Mandatory requirements:*_
 
     - any Jinja renderings will be made "from string" (ie, using
     Flask `render_from_string()` which is included) or by creating a local Jinja environment.
 
     author: Petre Iordanescu (petre.iordanescu@gmail.com)
     """
-    MY_BOOKS_URL_prefix: str = (
-        "/my-books/"  # URL prefix to add when accesing a book local (generated) site
-    )
-    MY_BOOK_URL: str = None  # instantiated book URL to local (generated) site
-    MY_BOOKS_ROOT: str = (
-        MY_BOOKS_ROOT  # confusing name ? just duplicate the global one in class namespace
-    )
-    book_code: str = None  # instanciated book code
-    db_books_catalog: pysondb = None  # books catalog data controller
-    db_book_nav: pysondb = None  # books navigation data controller
-    jinja_env = None  # Jinja environment usable for my_books rendering needs
-
+    MY_BOOKS_URL_prefix: str = "/my-books/"  # URL prefix to add when accesing a book local (generated) site.
+    MY_BOOK_URL: str = None  # Instantiated book URL to local (generated) site.
+    MY_BOOKS_ROOT: str = MY_BOOKS_ROOT  # Confusing name ? just duplicate the global one in class namespace.
+    book_code: str = None  # Instanciated book code.
+    db_books_catalog: pysondb = None  # Books catalog data controller.
+    db_book_nav: pysondb = None  # Books navigation data controller.
+    jinja_env = None  # Jinja environment usable for my_books rendering needs.
+    results: Type[Results] = Results(
+        exit_code = None,
+        exit_text = None
+    )  # Keep result of last run method (for methods that should return composite result).
 
     def __init__(
-        self, db: pysondb,
-        book_code: str
-    ):
+            self, db: pysondb,
+            book_code: str
+    ) -> None:
         """Init an instance of class MyBooks.
         """
         self.MY_BOOKS_ROOT = MY_BOOKS_ROOT  # Confusing name ? just duplicate the global one in class namespace
@@ -73,7 +86,11 @@ class MyBooks:
             ),
             autoescape = j2.select_autoescape()
         )
-
+        #
+        self.results = Results(
+            exit_code = None,
+            exit_text = None
+        )
 
     def getBook(self) -> dict | None:
         """Check for a given book code that is not None, exists in database and is exactly 1 record.
@@ -85,40 +102,39 @@ class MyBooks:
         """
         if not self.book_code or not isinstance(self.book_code, str):
             return None
-        # check if record exists and is only one
+        # Check if record exists and is only one.
         bk_rec = None
         bk_rec = self.db_books_catalog.getBy({"code": self.book_code})
         if bk_rec:
             if isinstance(bk_rec, list):
-                # there is more than 1 record and keep only the first one
+                # There is more than 1 record and keep only the first one.
                 bk_rec = bk_rec[0]
             elif isinstance(bk_rec, dict):
-                # do nothing, record is in right format
+                # Do nothing, record is in right format.
                 pass
             else:
-                # unknown record type so exit with None
+                # Unknown record type so exit with None.
                 return None
-            # upd key "store_location"
+            # Upd key "store_location".
             bk_rec["store_location"] = self.getBookPath()
-            # when location exists append `/`to ckear state it as directory otherwise let it unchanged
+            # When location exists append `/`to ckear state it as directory otherwise let it unchanged.
             if bk_rec["store_location"]:
                 bk_rec["store_location"] += "/"
-            # upd key "preview_url"
+            # Upd key "preview_url".
             bk_rec["preview_url"] = self.getBookURL()
-            if self.db_book_nav:  # ck if nav definition exisys (as json data-file)
+            if self.db_book_nav:  # Chk if nav definition exisys (as json data-file).
                 nav_file = self.db_book_nav.filename
                 bk_rec["nav_file_location"] = nav_file
             else:
                 bk_rec["nav_file_location"] = None
-            # return updayed record
+            # Return updated record.
             return bk_rec
         else:
             return None
 
-
     def getBookNav(
-        self,
-        format: str = None
+            self,
+            format: str = None
     ) -> None | dict | str:
         """Get book navigation.
 
@@ -137,9 +153,9 @@ class MyBooks:
         bk_nav_raw_data = self.db_book_nav.getAll()
         bk_nav_data = dict()
         bk_nav_data["nav"] = bk_nav_raw_data
-        # check format param and return accordingly
+        # Check format param and return accordingly.
         if not format or format is ...:
-            format = "dict"  # default value if not specified or set as None
+            format = "dict"  # Default value if not specified or set as None.
         if format == "dict":
             return bk_nav_data
         if format == "json":
@@ -150,8 +166,7 @@ class MyBooks:
             yaml_nav_data = yaml.safe_dump(bk_nav_data)
             yaml_nav_data = f"{yaml_nav_data}"
             return yaml_nav_data
-        return None  # if get here its a bug due to logic error
-
+        return None  # If get here its a bug due to logic error.
 
     def wrBookNav(self) -> bool:
         """Write out file "book_navigation.yml".
@@ -160,6 +175,10 @@ class MyBooks:
 
         - `True` if file was written
         - `False` if file was not written or cannot be read regardless why (usual problem is source file)
+
+        _*Lateral effects:*_
+
+        - on disk: create / update current book navigation definition file in YAML format (`book_navigation.yml`).
         """
         if not self.db_book_nav:
             return False
@@ -172,18 +191,17 @@ class MyBooks:
         if not (yaml_content := self.getBookNav(format="yaml")):
             return False
         yaml_content = WARNING_CONTENT + yaml_content
-        try:  # write file
+        try:  # Write file.
             out_file.write_text(yaml_content)
         except:
             return False
-        try:  # test if file can be read
+        try:  # Test if file can be read.
             with out_file.open("r") as f:
                 _c = f.read()
             return True
         except:
             return False
         return True
-
 
     def getBookPath(self) -> str:
         """Get absolute path of current book root directory.
@@ -194,52 +212,67 @@ class MyBooks:
         else:
             return None
 
-
     def getBookURL(self) -> str:
         """Get preview URL (redirectable as is) for current book_code.
         """
         return self.MY_BOOK_URL
 
-
-    def renderBookConfig(self) -> tuple:
+    def renderBookConfig(self) -> Results:
         """Render current book configuration file.
         Produce file `mkdocs.yml` as being the configuration file to build the book.
         File is writen in book root directory.
 
         Return:
 
-        - `(exit_code, stdout + stderr)`
+        - `Results object` reference to `self.results`
+
+        _*Lateral effects:*_
+
+        - on disk: update current book configuration file (`mkdocs.yml`).
         """
-        if not self.db_book_nav:  # if book nav does not exists force exit
-            return (False, "EROARE: Cartea nu are navigarea definita (book_navigation.json).")
-        rslt_s1 = ""
-        rslt_s2 = ""
+        exit_text = "*** Start book configuration file (mkdocs.yml) rendering"
         book_data = None
-        # get book data for rendering
+        # Get book data for rendering.
         book_data = self.getBook()
-        if not book_data:  # if book is not present in catalog force exit
-            return (False, "EROARE: Cartea nu exista in catalog")
-        rslt_s1 = "\nDate generale incarcate din catalog."
-        # prepare nav(igation) confuguration
+        if not book_data:  # If book is not present in catalog force exit.
+            exit_text += "\nEROARE: Cartea nu exista in catalog"
+            self.results = Results(
+                exit_code = False,
+                exit_text = exit_text
+            )
+            return self.results
+        # Get book navigation d2finition / configuration
+        if not self.db_book_nav:  # If book nav does not exists force exit.
+            exit_text += "\nEROARE: Cartea nu are navigarea definita (book_navigation.json)."
+            self.results = Results(
+                exit_code = False,
+                exit_text = exit_text
+            )
+            return self.results
+        # Prepare nav(igation) confuguration.
+        exit_text += "\nDate generale incarcate din catalog."
         book_data["nav"] = None
-        exit_code_s1 = self.getBookNav(format = "yaml")
-        if not exit_code_s1:  # if nav config cannot be obtained as YAML then force exit
-            return (False, "EROARE: Cartea nu are navigare definita (book_navigation.json).")
-        else:
-            # rationale: ret of getBookNav() can be None or got value
-            book_data["nav"] = exit_code_s1
-            exit_code_s1 = True
+        exit_code = self.getBookNav(format = "yaml")
+        if not exit_code:  # If nav config cannot be obtained as YAML then force exit.
+            exit_text += "\nEROARE: Cartea nu are navigare definita (book_navigation.json)."
+            self.results = Results(
+                exit_code = False,
+                exit_text = exit_text
+            )
+            return self.results
+        else:  # Rationale: ret of getBookNav() can be None or got value.
+            book_data["nav"] = exit_code
             _crtdt = datetime.datetime.now()
         WARNING_CONTENT = f"# nav section AUTO GENERATED @{_crtdt:%Y-%m-%d %H:%M:%S}. DO NOT MODIFY it.\n"
         book_data["nav"] = \
             WARNING_CONTENT \
             + book_data["nav"]
-        rslt_s1 += "\nDate navigare incarcate."
-        # render mkdocs_template.yml
-        rslt_s2 = "\nEroare randare temmplate configurate carte"
+        exit_text += "\nDate navigare incarcate."
+        # Render mkdocs_template.yml.
+        exit_text += "\nRandare temmplate configurate carte"
         template_cfg_file = "mkdocs_template.yml"
         to_render_file = self.book_code + "/" + template_cfg_file
-        #---TST if template file exists
+        #---TST if template file exists.
         _tst1 = os.path.isfile(
             os.path.join(
                 self.getBookPath(),
@@ -247,7 +280,12 @@ class MyBooks:
             )
         )
         if not _tst1:
-            return (False, "EROARE: Template configurare carte inexistent (mkdocs_template.yml).")
+            exit_text += "\nEROARE: Template configurare carte inexistent (mkdocs_template.yml)."
+            self.results = Results(
+                exit_code = False,
+                exit_text = exit_text
+            )
+            return self.results
         #---EOF ck config template existance. Can continue safe.
         out_file = os.path.join(
             self.getBookPath(),
@@ -255,38 +293,67 @@ class MyBooks:
         )
         out_file = Path(out_file)
         book_cfg = self.jinja_env.get_template(to_render_file)
-        exit_code_s2 = False
         try:
             book_cfg = book_cfg.render(book_data = book_data)
         except:
-            return(False, "EROARE: randarea mkdocs_template.yml esuata.")
-        else:  # try block executed correctly
-            rslt_s2 = f"\nRandare template configurare carte executata"
-            exit_code_s2 = True
-        exit_code_s2 = False
-        rslt_s2 = "\nScrierea fisierului mkdocs.yml ESUATA"  # suppose writing will fail
+            exit_text += "\nEROARE: randarea mkdocs_template.yml esuata."
+            self.results = Results(
+                exit_code = False,
+                exit_text = exit_text
+            )
+            return self.results
+        else:  # Try block executed correctly.
+            exit_text += f"\nRandare template configurare carte executata"
+        #
+        exit_text += "\nScrierea fisierului mkdocs.yml."
         try:
             out_file.write_text(book_cfg)
         except:
-            return(False, "EROARE: scrierea fisierului mkdocs.yml esuata.")
-        else:  # try block executed correctly
-            rslt_s2 = f"\nScrierea fisierului mkdocs.yml executata."
-            exit_code_s2 = True
-        ## if got here, everithing was ok so return True and all result outputs
-        return (True, rslt_s1 + rslt_s2)
+            exit_text += "EROARE: scrierea fisierului mkdocs.yml esuata."
+            self.results = Results(
+                exit_code = False,
+                exit_text = exit_text
+            )
+            return self.results
+        else:  # Try block executed correctly.
+            exit_text += f"\nScrierea fisierului mkdocs.yml executata."
+        ## If got here, everithing was ok so return True and all result outputs.
+        self.results = Results(
+            exit_code = True,
+            exit_text = exit_text
+        )
+        return self.results
 
-
-    def buildBook(self) -> bool:
+    def buildBook(self) -> None | str:
         """Build (mkdocs build) current boook.
+
+        Build current book (ie, `mkdocs build`) in its own directory.
+        Method suppose that mkdocs.yml file is good and book content directory (doc_src/) content is ok and "as-expected",
+        that meaning the method just run nkdocs build process, collect output and return it.
+
+        Return:
+
+        - `str` stdout + stderr of run process
+        - `None` if process exit with fatal err (standard baah return 1)
+
+        _*Lateral effects:*_
+
+        - on disk: create / update current book static site directory (usual `docs/`).
         """
         #TODO ...
         pass
-
 
     def createPhysicalBook(self) -> bool:
         """Create physical book directory as copy of "book_template".
+
+        _*Lateral effects:*_
+
+        - on disk: creates new directory & filrs on disk represing current book physical location.
         """
         #TODO ...
         pass
+
+
+
 
 

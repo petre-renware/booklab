@@ -22,7 +22,19 @@ Implement `bbld` and update `book_template`:
   - for edit file try GoogleDocs
 
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
-* ... [0.10a_??] `MyBooks.buildBook()` new method to mkdocs-build book
+* ... [0.10a_??] `MyBooks.buildBook()` code
+
+
+
+* [0.10a47] `MyBooks` clean & upd code +
+  make a "results from process" dataclass to be used by all methods that need to return at least POSIX pattern like (exit code, stdout, stderr)
+    - [0.10.dev46] upd "renderBookConfig()" method to use Results instance variable (`self.results`)
+    - [0.10.dev45] use "Results()" in "MyBook" as instance & class variable `results` with None default values
+    - [0.10.dev44] create `Results` dataclass as type in module "books_manager"
+    - [0.10.dev43] `MyBooks` upd all docstr to apecifi latteral effects of some methods (for ex updating files)
+    - [0.10.dev42] `MyBooks.renderBookConfig()` clean and upd docatring and make text output result more clear ref error message details
+    - [0.10.dev41] review & update method signature and docstring
+    - [0.10.dev40] `booklab` package upd docstring after 0.10a39
 * [0.10a39] `MyBooks.renderBookConfig()` and generate mkdoks.yml (step 2)
     - [0.10.dev38] write out mkdocs.yml file
     - [0.10.dev37] upd warning line of nav section with server current datetime
@@ -57,7 +69,7 @@ Implement `bbld` and update `book_template`:
 ## [0.9] - 28.oct.2025
 FIX bugs ref implement `bbld` and update `book_template`:
     - [0.9.dev38] `routes.py` fix bugs in /api/prvb/ ref MyBook.getBookURL() merhod name
-* [0:9a35.post0] bugfixes
+* [0.9a35.post0] bugfixes
     - [0.9.dev37] `MyVook.getBook()` fix bug when book nav JSON file is missing (use case: book does not physicallt exists)
     - [0.9.dev36] review & upd `MyBooks.renderBookConfig()` logic
 * [0.9a35] enhance, clean & improve `MyBooks` & `booklabd` components

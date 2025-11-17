@@ -16,6 +16,9 @@ __pycache__/
 src/booklab/docs/bcat/bcat.html
 src/booklab/docs/bstatus/bstatus.html
 src/booklab/docs/about/about.html
+*.bcat/bcat.html
+*.bstatus/bstatus.html
+*.about/about.html
 
 
 # Distribution / packaging
