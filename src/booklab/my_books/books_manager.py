@@ -280,7 +280,6 @@ class MyBooks:
             )
         )
         if not _tst1:
-            
             exit_text += "\nEROARE: Template configurare carte inexistent (mkdocs_template.yml)."
             self.results = Results(
                 exit_code = False,
@@ -297,7 +296,6 @@ class MyBooks:
         try:
             book_cfg = book_cfg.render(book_data = book_data)
         except:
-            #TODO... iss 0.10.dev46 ...
             exit_text += "EROARE: randarea mkdocs_template.yml esuata."
             return (False, exit_text)
         else:  # Try block executed correctly.
@@ -308,11 +306,20 @@ class MyBooks:
             out_file.write_text(book_cfg)
         except:
             exit_text += "EROARE: scrierea fisierului mkdocs.yml esuata."
-            return (False, exit_text)
+            self.results = Results(
+                exit_code = False,
+                exit_text = exit_text
+            )
+            return self.results
         else:  # Try block executed correctly.
             exit_text += f"\nScrierea fisierului mkdocs.yml executata."
         ## If got here, everithing was ok so return True and all result outputs.
-        return (True, exit_text)
+        self.results = Results(
+            exit_code = True,
+            exit_text = exit_text
+        )
+        return self.results
+    #TODO 0.10a47 ... ck.all.and.rlse
 
     def buildBook(self) -> None | str:
         """Build (mkdocs build) current boook.
