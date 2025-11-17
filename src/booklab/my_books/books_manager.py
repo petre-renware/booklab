@@ -217,7 +217,7 @@ class MyBooks:
         """
         return self.MY_BOOK_URL
 
-    def renderBookConfig(self) -> Type[Results]:
+    def renderBookConfig(self) -> Results:
         """Render current book configuration file.
         Produce file `mkdocs.yml` as being the configuration file to build the book.
         File is writen in book root directory.
@@ -296,8 +296,12 @@ class MyBooks:
         try:
             book_cfg = book_cfg.render(book_data = book_data)
         except:
-            exit_text += "EROARE: randarea mkdocs_template.yml esuata."
-            return (False, exit_text)
+            exit_text += "\nEROARE: randarea mkdocs_template.yml esuata."
+            self.results = Results(
+                exit_code = False,
+                exit_text = exit_text
+            )
+            return self.results
         else:  # Try block executed correctly.
             exit_text += f"\nRandare template configurare carte executata"
         #
@@ -319,7 +323,6 @@ class MyBooks:
             exit_text = exit_text
         )
         return self.results
-    #TODO 0.10a47 ... ck.all.and.rlse
 
     def buildBook(self) -> None | str:
         """Build (mkdocs build) current boook.

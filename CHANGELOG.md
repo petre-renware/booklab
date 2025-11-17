@@ -24,9 +24,10 @@ Implement `bbld` and update `book_template`:
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
 * ... [0.10a_??] `MyBooks.buildBook()` code
 
-* ... [0.10a_??] `MyBooks` clean & upd code +
+
+
+* [0.10a47] `MyBooks` clean & upd code +
   make a "results from process" dataclass to be used by all methods that need to return at least POSIX pattern like (exit code, stdout, stderr)
-    - ... final revw, gen all, gen PyPi rlse
     - [0.10.dev46] upd "renderBookConfig()" method to use Results instance variable (`self.results`)
     - [0.10.dev45] use "Results()" in "MyBook" as instance & class variable `results` with None default values
     - [0.10.dev44] create `Results` dataclass as type in module "books_manager"
