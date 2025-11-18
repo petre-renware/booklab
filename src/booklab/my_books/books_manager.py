@@ -31,9 +31,14 @@ class Results:
 
     exit_code: None | bool = None  # Exit code of run method. Usual is the same as method returns.
     exit_text: None | str = None  # Outpit text of last run method (equivalent of stdout when run a console process).
-    #TODO iss 0.10.dev48
-    exit_html: None | str = None  # Calculated field with output text in HTML format.
-    #... @property ...
+
+    @property
+    def exit_html(self) -> None | str:
+        """Getter to convert `exit_text` to HTML format.
+        """
+        #TODO iss 0.10.dev48
+        _value = self.exit_text #TODO to be changed
+        return _value
 
 
 class MyBooks:
