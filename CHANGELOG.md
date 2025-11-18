@@ -28,6 +28,7 @@ Implement `bbld` and update `book_template`:
 
 * ... [0.10a___] `Results` add a `exit_html` field + property that construct it from "exit_text" using rich HTML transformer
     - ...
+    - [0.10'dev50] prepare "exit_html" to create a markdown result ad code-block (ie, using ``` tag)
     - [0.10.dev49] make skeleton for propeety "exit_html" just as getter
     - [0.10.dev48] import rich library in class Results to make it "independent" of `my_books.books_manager` module
 * [0.10a47] `MyBooks` clean & upd code +

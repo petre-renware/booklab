@@ -6,6 +6,8 @@ import pylibyaml
 import yaml  # NOTE: mandatory to import after pylibyank
 import rich
 from rich import print as rprint
+from rich.console import Console as rConsole
+from rich.markdown import Markdown as rMarkdown
 from pathlib import Path
 import jinja2 as j2
 import datetime
@@ -34,8 +36,19 @@ class Results:
     def exit_html(self) -> None | str:
         """Getter for `exit_text` to HTML format.
         """
-        #TODO iss 0.10.dev48
-        _value = self.exit_text #TODO to be changed
+        from rich.console import Console as rConsole
+        from rich.markdown import Markdown as rMarkdown
+        _console = rConsole()
+        _md_blk = "```"
+        _value = rMarkdown(
+            _md_blk +
+            " console\n" +
+            self.exit_text +
+            "\n" +
+            _md_blk
+        )
+        _console.print(_value)
+        #TODO to save print use expory oh Console objec5
         return _value
 
 
