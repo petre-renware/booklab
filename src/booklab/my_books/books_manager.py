@@ -27,8 +27,13 @@ class Results:
     its instances once created. This is usefull when used as member in other
     objects to protect them to be altered outside the object.
     """
-    exit_code: None | bool = False  # Exit code of run method. Usual is the same as method returns.
-    exit_text: None | str = "*** NO OUTPUT AVAILABLE."  # Outpit text of last run method (equivalent of stdout when run a console process).
+    import rich
+
+    exit_code: None | bool = None  # Exit code of run method. Usual is the same as method returns.
+    exit_text: None | str = None  # Outpit text of last run method (equivalent of stdout when run a console process).
+    #TODO iss 0.10.dev48
+    exit_html: None | str = None  # Calculated field with output text in HTML format.
+    #... @property ...
 
 
 class MyBooks:
@@ -51,7 +56,8 @@ class MyBooks:
     jinja_env = None  # Jinja environment usable for my_books rendering needs.
     results: Type[Results] = Results(
         exit_code = None,
-        exit_text = None
+        exit_text = None,
+        #TODO need an exit_html ?
     )  # Keep result of last run method (for methods that should return composite result).
 
     def __init__(
