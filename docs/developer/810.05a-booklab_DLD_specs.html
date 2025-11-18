@@ -1076,21 +1076,21 @@ By external access is understood all URL parts necessary to expose Booklab appli
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">class</span> <span class="nc">Results</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Define a result model (type) frequently used as return set by MyBook methods.</p>
-<p>Class as data type (model) is defined <em>frozen</em> as protection to change
-its instances once created. This is usefull when used as member in other
+<p>Class as data type (model) is defined <em>frozen</em> to protect change its instance
+attribites once created. This is usefull when used as member in other
 objects to protect them to be altered outside the object.</p>
 <p><a id="booklab.my_books.books_manager.Results.exit_code"></a></p>
 <h4 id="exit_code">exit_code</h4>
 <p>Exit code of run method. Usual is the same as method returns.</p>
 <p><a id="booklab.my_books.books_manager.Results.exit_text"></a></p>
 <h4 id="exit_text">exit_text</h4>
-<p>Outpit text of last run method (equivalent of stdout when run a console process).</p>
+<p>Output text of last run method (equivalent of stdout when run a console process).</p>
 <p><a id="booklab.my_books.books_manager.Results.exit_html"></a></p>
 <h4 id="exit_html">exit_html</h4>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nd">@property</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">def</span> <span class="nf">exit_html</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">str</span>
 </span></code></pre></div>
-<p>Getter to convert <code>exit_text</code> to HTML format.</p>
+<p>Getter for <code>exit_text</code> to HTML format.</p>
 <p><a id="booklab.my_books.books_manager.MyBooks"></a></p>
 <h2 id="mybooks-objects">MyBooks Objects</h2>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">MyBooks</span><span class="p">()</span>

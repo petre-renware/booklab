@@ -23,18 +23,16 @@ from booklab import FULL_EXT_URL
 class Results:
     """Define a result model (type) frequently used as return set by MyBook methods.
 
-    Class as data type (model) is defined _frozen_ as protection to change
-    its instances once created. This is usefull when used as member in other
+    Class as data type (model) is defined _frozen_ to protect change its instance
+    attribites once created. This is usefull when used as member in other
     objects to protect them to be altered outside the object.
     """
-    import rich
-
     exit_code: None | bool = None  # Exit code of run method. Usual is the same as method returns.
-    exit_text: None | str = None  # Outpit text of last run method (equivalent of stdout when run a console process).
+    exit_text: None | str = None  # Output text of last run method (equivalent of stdout when run a console process).
 
     @property
     def exit_html(self) -> None | str:
-        """Getter to convert `exit_text` to HTML format.
+        """Getter for `exit_text` to HTML format.
         """
         #TODO iss 0.10.dev48
         _value = self.exit_text #TODO to be changed
