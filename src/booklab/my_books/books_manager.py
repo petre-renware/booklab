@@ -41,11 +41,9 @@ class Results:
         _console = rConsole()
         _md_blk = "```"
         _value = rMarkdown(
-            _md_blk +
-            " console\n" +
+            "``` console\n" +
             self.exit_text +
-            "\n" +
-            _md_blk
+            "\n````"
         )
         #TODO to save print use expory oh Console objec5
         _console.print(_value)
