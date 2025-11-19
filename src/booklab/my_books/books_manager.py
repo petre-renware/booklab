@@ -39,16 +39,13 @@ class Results:
         from rich.console import Console as rConsole
         from rich.markdown import Markdown as rMarkdown
         _console = rConsole()
-        _md_blk = "```"
         _value = rMarkdown(
-            _md_blk +
-            " console\n" +
+            "```console\n" +
             self.exit_text +
-            "\n" +
-            _md_blk
+            "\n```"
         )
         _console.print(_value)
-        #TODO to save print use expory oh Console objec5
+        #TODO use Console capture contest
         return _value
 
 
