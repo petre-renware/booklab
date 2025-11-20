@@ -6,6 +6,8 @@ import pylibyaml
 import yaml  # NOTE: mandatory to import after pylibyank
 import rich
 from rich import print as rprint
+from rich.console import Console as rConsole
+from rich.markdown import Markdown as rMarkdown
 from pathlib import Path
 import jinja2 as j2
 import datetime
@@ -23,12 +25,29 @@ from booklab import FULL_EXT_URL
 class Results:
     """Define a result model (type) frequently used as return set by MyBook methods.
 
-    Class as data type (model) is defined _frozen_ as protection to change
-    its instances once created. This is usefull when used as member in other
+    Class as data type (model) is defined _frozen_ to protect change its instance
+    attribites once created. This is usefull when used as member in other
     objects to protect them to be altered outside the object.
     """
-    exit_code: None | bool = False  # Exit code of run method. Usual is the same as method returns.
-    exit_text: None | str = "*** NO OUTPUT AVAILABLE."  # Outpit text of last run method (equivalent of stdout when run a console process).
+    exit_code: None | bool = None  # Exit code of run method. Usual is the same as method returns.
+    exit_text: None | str = None  # Output text of last run method (equivalent of stdout when run a console process).
+
+    @property
+    def console_out(self) -> None | str:
+        """Return `exit_text` converted to console format on a dumb terminal.
+        """
+        from rich.console import Console as rConsole
+        from rich.markdown import Markdown as rMarkdown
+        _console = rConsole()
+        _value = rMarkdown(
+            "``` console\n" +
+            self.exit_text +
+            "\n````"
+        )
+        with _console.capture() as _capture:
+            _console.print(_value)
+        _value = _capture.get()
+        return _value
 
 
 class MyBooks:
@@ -51,7 +70,8 @@ class MyBooks:
     jinja_env = None  # Jinja environment usable for my_books rendering needs.
     results: Type[Results] = Results(
         exit_code = None,
-        exit_text = None
+        exit_text = None,
+        #TODO need an exit_html ?
     )  # Keep result of last run method (for methods that should return composite result).
 
     def __init__(

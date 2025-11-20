@@ -26,8 +26,14 @@ Implement `bbld` and update `book_template`:
 
 
 
+* [0.10a53] `Results` add a `console_out` field + getter that construct it from "exit_text"
+    - [0.10.dev52] capture console print to console_out
+    - [0.10.dev51] rename "exit_html" to "console_out"
+    - [0.10'dev50] prepare "exit_html" to create a markdown result ad code-block (ie, using ``` tag)
+    - [0.10.dev49] make skeleton for propeety "exit_html" just as getter
+    - [0.10.dev48] import rich library in class Results to make it "independent" of `my_books.books_manager` module
 * [0.10a47] `MyBooks` clean & upd code +
-  make a "results from process" dataclass to be used by all methods that need to return at least POSIX pattern like (exit code, stdout, stderr)
+    make a "results from process" dataclass to be used by all methods that need to return at least POSIX pattern like (exit code, stdout, stderr)
     - [0.10.dev46] upd "renderBookConfig()" method to use Results instance variable (`self.results`)
     - [0.10.dev45] use "Results()" in "MyBook" as instance & class variable `results` with None default values
     - [0.10.dev44] create `Results` dataclass as type in module "books_manager"
