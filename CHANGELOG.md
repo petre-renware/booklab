@@ -5,6 +5,22 @@
 
 # CHANGELOG
 
+<!-- release template
+## tbd... [0.xx] - unreleased
+### FEATURES
+* ...required...
+### FIXED BUGS
+* ...optional...
+### DEPERECATED
+* ...optional...
+### REMOVED
+* ...optional...
+### CHANGELOG
+* ...required
+-->
+
+
+
 ## ... #TODO future things:
 * tbd... Jupiter Notebooks
 * tbd... ref command "Verificare" (code-name `bstatus`):
@@ -13,10 +29,11 @@
 
 
 ## tbd... [0.10] - unreleased
-Implement `bbld` and update `book_template`:
-
-* tbd... `static site` list all system routes in "About Booklab" page
-
+### FEATURES
+* Implement Book build (`bbld`) functionality
+* Update `book_template` for book configuration template (mkdocs_template.yml)
+* Implement core part of `booklab_cli` submodules __init()__ & parameter_types
+### CHANGELOG
 * tbd... route `/api/bbld/`:
   - upd bcat ref last update date in catalog DB
   - for edit file try GoogleDocs
@@ -25,7 +42,22 @@ Implement `bbld` and update `book_template`:
 * ... [0.10a_??] `MyBooks.buildBook()` code
 
 
-
+* [0.10a68] `booklab` clean code & documentation.
+  Improve site technical info for own development, extend, customize purposes.
+    - [0.10.dev67] `static site` create nav entry for routes-map doc (developer/810.05a-booklab_app_routes.md)
+    - [0.10.dev66]  make routes gen script pdm call for it
+    - [0.10.dev65] `static site` made script that list all system routes 
+    - [0.10.dev64] install `pex` & activate `zipapp` Python standard PEX packaging  utilities as dev-environment and create a draft `src/booklab.pyz` as first proof of concept
+    - [0.10.dev63] `booklab_cli.parameter_types` finalize and "fix" skeleton
+    - [0.10.dev62] `booklab_cli.parameter_types` enhaced skeleton with "Annotate" params in Typer style
+    - [0.10.dev61] `booklab_cli.parameter_types` document skeleton
+    - [0.10.dev60] `booklab_cli.parameter_types` defined skeleton
+    - [0.10.dev59] `booklab_cli` define core part of submodule __init()__
+    - [0.10.dev58] `booklabd.routes` protect all routes request args with arg type and for invalid inputs in URI
+    - [0.10.dev57] `conf.gunicorn_config` document variables and add a dictionary with all of then (to be used in code to load them)
+    - [0.10.dev56] `pyproject.tonl` define package entry point and project.scripts section
+    - [0.10.dev55] `pyproject.toml` and other project management / admin
+    - [0.10.dev54] `my_books.books_manager` module
 * [0.10a53] `Results` add a `console_out` field + getter that construct it from "exit_text"
     - [0.10.dev52] capture console print to console_out
     - [0.10.dev51] rename "exit_html" to "console_out"
@@ -73,10 +105,14 @@ Implement `bbld` and update `book_template`:
 
 
 ## [0.9] - 28.oct.2025
-FIX bugs ref implement `bbld` and update `book_template`:
-    - [0.9.dev38] `routes.py` fix bugs in /api/prvb/ ref MyBook.getBookURL() merhod name
+### FEATURES
+* Update `book_template`
+### FIXED BUGS
+* @ [0.9a35.post0]
+### CHANGELOG
+* [0.9.dev38] `routes.py` fix bugs in /api/prvb/ ref MyBook.getBookURL() merhod name
 * [0.9a35.post0] bugfixes
-    - [0.9.dev37] `MyVook.getBook()` fix bug when book nav JSON file is missing (use case: book does not physicallt exists)
+    - [0.9.dev37] `MyBook.getBook()` fix bug when book nav JSON file is missing (use case: book does not physicallt exists)
     - [0.9.dev36] review & upd `MyBooks.renderBookConfig()` logic
 * [0.9a35] enhance, clean & improve `MyBooks` & `booklabd` components
     - [0.9.dev34] review & upd mkdocs_template.yml
@@ -91,7 +127,7 @@ FIX bugs ref implement `bbld` and update `book_template`:
     - [0.9.dev26] static site bstatus add book_navigation as json & yaml views in page, 
     - [0.9.dev25] `MyBook.getBookURL()` refactor to `getBookPreviewURL()` 
     - [0.9.dev24] bcat show catalog as JSON view in bottom of page for "advanced users"
-* [0.9a23] static site refactor nacigation
+* [0.9a23] static site refactor navigation
     - [0.9.dev22] new `/developer` page and and move from /help all specific files
     - [0.9.dev21] static site: refactor "Help" entry move all tech info to a new top entry "Pentru Dezvoptatori"
 * [0.9a20] `my_books/book_template` book navigation YAML and bstatus info

@@ -108,7 +108,8 @@ dependencies = [
     "w3lib>=2.3.1",
     "rich>=14.2.0",
     "pylibyaml>=0.1.0",
-]
+    "typer>=0.20.0",
+    ]
 
 
 [project.urls]
@@ -116,22 +117,25 @@ HomePage = "http://booklab.renware.eu/"
 DevPage = "http://dev.renware.eu/booklab/"
 
 
+
 [tool.pdm]
 distribution = true
 
-
 [tool.pdm.scripts]
 gen_tech_doc = {shell = "src/booklab/scripts/gen-api-doc.sh"}
+gen_app_routes = {shell = "src/booklab/scripts/gen-app-routes.sh"}
 gen_static_site = {shell = "src/booklab/scripts/master_site_build.sh"}
 build_site = { composite = [
     "gen_tech_doc",
+    "gen_app_routes",
     "gen_static_site"
-] }
+    ] }
 build_all = { composite = [
     "gen_tech_doc",
+    "gen_app_routes",
     "gen_static_site",
     "pdm build"
-] }
+    ] }
 bklab_srv = {shell = "src/booklab/scripts/server-run.sh"}  # run booklabd wsgi server
 
 
@@ -140,19 +144,25 @@ source = "file"
 path = "src/booklab/__version__.py"
 
 
+[project.scripts]
+booklab = "booklab.__main__:main"
+
+
 [build-system]
-requires = ["pdm-backend"]
+requires = ["pdm-backend >= 2.4.0"]
 build-backend = "pdm.backend"
 
 
 [dependency-groups]
 test = [
     "pytest>=8.4.2",
-]
+    ]
 dev = [
     "pydoc-markdown>=4.8.2",
     "docopt>=0.6.2",
     "python-dotenv>=1.1.1",
     "pylint>=4.0.2",
     "black>=25.9.0",
+    "bpython>=0.26",
+    "pex>=2.0.3",
 ]

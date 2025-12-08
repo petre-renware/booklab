@@ -62,7 +62,10 @@ def api_bstatus(book_code: str = ...):
     """
     ret_str = "nothing to say..."
     if (book_code is ...) or (book_code is None):
-        book_code = request.args.get("code")
+        book_code = request.args.get("code", type = str)
+        if not book_code:
+            abort(404, description = "No Book specified.")
+            return
     my_book = MyBooks(
         db = db_books,
         book_code = book_code
@@ -101,7 +104,10 @@ def api_edtb(book_code: str = ...):
     **Query parameters:** `code` for database `boook_code`
     """
     if (book_code is ...) or (book_code is None):
-        book_code = request.args.get("code")
+        book_code = request.args.get("code", type = str)
+        if not book_code:
+            abort(404, description = "No Book specified.")
+            return
     #TODO before getting book test if status.closed is true and if then return a 400 err "Book not editable"
     ret_str = f"Page for <b>edtb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
@@ -116,7 +122,10 @@ def api_orgm(book_code: str = ...):
     **Query parameters:** `code` for database `boook_code`
     """
     if (book_code is ...) or (book_code is None):
-        book_code = request.args.get("code")
+        book_code = request.args.get("code", type = str)
+        if not book_code:
+            abort(404, description = "No Book specified.")
+            return
     ret_str = f"Page for <b>orgm</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO here should integrate wip static page
@@ -130,7 +139,10 @@ def api_prvb(book_code: str = ...):
     **Query parameters:** `code` for database `boook_code`
     """
     if (book_code is ...) or (book_code is None):
-        book_code = request.args.get("code")
+        book_code = request.args.get("code", type = str)
+        if not book_code:
+            abort(404, description = "No Book specified.")
+            return
     my_book = MyBooks(
         db = db_books,
         book_code = book_code
@@ -149,7 +161,10 @@ def api_bbld(book_code: str = ...):
     **Query parameters:** `code` for database `boook_code`
     """
     if (book_code is ...) or (book_code is None):
-        book_code = request.args.get("code")
+        book_code = request.args.get("code", type = str)
+        if not book_code:
+            abort(404, description = "No Book specified.")
+            return
     ret_str = f"Page for <b>bbld</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO here should integrate wip static page
@@ -165,7 +180,10 @@ def api_dplb(book_code: str = ...):
     **Query parameters:** `code` for database `boook_code`
     """
     if (book_code is ...) or (book_code is None):
-        book_code = request.args.get("code")
+        book_code = request.args.get("code", type = str)
+        if not book_code:
+            abort(404, description = "No Book specified.")
+            return
     ret_str = f"Page for <b>dplb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO here should integrate wip static page

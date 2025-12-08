@@ -1,6 +1,6 @@
 site_name: BookLab
 site_author: 'Petre Iordanescu (petre.iordanescu@gmail.com)'
-copyright: Freeware
+copyright: RENware Software Systems as open source release
 
 
 
@@ -24,6 +24,7 @@ nav:
         - Arhitectura sistemului: 810-DSGN/810.02-System_Landscape.md
         - Catalogul cartilor format JSON: developer/books_catalog.json
         - API packet booklab: developer/810.05a-booklab_DLD_specs.md
+        - Harta rutelor booklabd: developer/810.05a-booklab_app_routes.md
         - Versiunea in format text: /booklab/api/version/
         - Design detaliat module:
             - modul Initializare sistem (sysInit): 810-DSGN/810.05a-sysInit_System_Process.md

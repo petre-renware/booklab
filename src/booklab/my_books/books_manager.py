@@ -34,7 +34,7 @@ class Results:
 
     @property
     def console_out(self) -> None | str:
-        """Return `exit_text` converted to console format on a dumb terminal.
+        """Return `exit_text` rendered to console format as printed on a simple usual / dumb terminal.
         """
         from rich.console import Console as rConsole
         from rich.markdown import Markdown as rMarkdown
@@ -54,12 +54,10 @@ class MyBooks:
     """
     Class that manage end user books.
 
-    _*Mandatory requirements:*_
-
-    - any Jinja renderings will be made "from string" (ie, using
-    Flask `render_from_string()` which is included) or by creating a local Jinja environment.
-
-    author: Petre Iordanescu (petre.iordanescu@gmail.com)
+    - _Mandatory requirements:_
+        - _rendering:_ any Jinja renderings will be made 
+          "from string" (ie, using Flask `render_from_string()` which is included)
+          or by creating a local Jinja environment.
     """
     MY_BOOKS_URL_prefix: str = "/my-books/"  # URL prefix to add when accesing a book local (generated) site.
     MY_BOOK_URL: str = None  # Instantiated book URL to local (generated) site.
@@ -71,7 +69,6 @@ class MyBooks:
     results: Type[Results] = Results(
         exit_code = None,
         exit_text = None,
-        #TODO need an exit_html ?
     )  # Keep result of last run method (for methods that should return composite result).
 
     def __init__(
@@ -116,9 +113,8 @@ class MyBooks:
         """Check for a given book code that is not None, exists in database and is exactly 1 record.
 
         Return:
-
-        - `dict` with found record or 
-        - `None` if any of conditiona is not met
+            dict: with found record or 
+            None: if any of conditiona is not met
         """
         if not self.book_code or not isinstance(self.book_code, str):
             return None
@@ -162,11 +158,10 @@ class MyBooks:
         and is identified by `self.db_book_nav` pysondb handler.
 
         Return:
-
-        - `python dict` using `format = "dict"` (default option)
-        - `JSON str` using `format = "json"`
-        - `YAML str` using `format = "yaml"`
-        - `None` if not known format
+            dict: using `format = "dict"` (default option)
+            str: JSON string using `format = "json"`
+            str: YAML string using `format = "yaml"`
+            None: if not known format
         """
         if not self.db_book_nav:
             return None
@@ -192,13 +187,12 @@ class MyBooks:
         """Write out file "book_navigation.yml".
 
         Return:
+            True: if file was written
+            False: if file was not written or cannot be read regardless why (usual problem is source file)
 
-        - `True` if file was written
-        - `False` if file was not written or cannot be read regardless why (usual problem is source file)
+        _Lateral effects:_
 
-        _*Lateral effects:*_
-
-        - on disk: create / update current book navigation definition file in YAML format (`book_navigation.yml`).
+        - _on disk:_ create / update current book navigation definition file in YAML format (`book_navigation.yml`).
         """
         if not self.db_book_nav:
             return False
@@ -246,9 +240,9 @@ class MyBooks:
 
         - `Results object` reference to `self.results`
 
-        _*Lateral effects:*_
+        _Lateral effects:_
 
-        - on disk: update current book configuration file (`mkdocs.yml`).
+        - _on disk:_ update current book configuration file (`mkdocs.yml`).
         """
         exit_text = "*** Start book configuration file (mkdocs.yml) rendering"
         book_data = None
@@ -356,9 +350,9 @@ class MyBooks:
         - `str` stdout + stderr of run process
         - `None` if process exit with fatal err (standard baah return 1)
 
-        _*Lateral effects:*_
+        _Lateral effects:_
 
-        - on disk: create / update current book static site directory (usual `docs/`).
+        - _on disk:_ create / update current book static site directory (usual `docs/`).
         """
         #TODO ...
         pass
@@ -366,9 +360,9 @@ class MyBooks:
     def createPhysicalBook(self) -> bool:
         """Create physical book directory as copy of "book_template".
 
-        _*Lateral effects:*_
+        _Lateral effects:_
 
-        - on disk: creates new directory & filrs on disk represing current book physical location.
+        - _on disk:_ creates new directory & filrs on disk represing current book physical location.
         """
         #TODO ...
         pass

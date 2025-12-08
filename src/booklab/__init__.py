@@ -1,6 +1,6 @@
 """Main python package for Booklab system.
 
-Consists of the following sub-packages:
+Consists of the following components:
 
 - `booklab_cli` main CLI application to operate the system
 - `booklabd` designed to serve `/api/.../` routes used by all functionalities that need write / update and POST operations
@@ -9,6 +9,7 @@ Consists of the following sub-packages:
 - `docs` contain rhe static site compiled and "ready to use as-is" with any standard HTTP server
 - `my_books` contain the end user created & generated books and `books_catalog.json` with info about all user books
 - `scripts` contain diffrent scrpts usefull in system administrarion (install, maintain, configure, in-house development and customizations)
+- `booklab.pyz`as standard Python PEX package
 
 Package is compliant with Python PEP packaging specificatios and published on PyPi under `booklab` name.
 Package is open source licenced and available as source package on GitHub under `booklab` name and author repositories.
