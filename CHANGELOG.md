@@ -40,7 +40,7 @@
 
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
 * ... [0.10a_??] `MyBooks.buildBook()` code
-
+    - ... [0.10.dev69] ...see what TODO
 
 * [0.10a68] `booklab` clean code & documentation.
   Improve site technical info for own development, extend, customize purposes.

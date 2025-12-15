@@ -355,6 +355,9 @@ class MyBooks:
         - _on disk:_ create / update current book static site directory (usual `docs/`).
         """
         #TODO ...
+        #-1 prep stdout & stderr to be captured
+        #-2 call  subprocess_run()
+        #-3 save run  results
         pass
 
     def createPhysicalBook(self) -> bool:
