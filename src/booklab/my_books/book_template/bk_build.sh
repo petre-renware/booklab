@@ -10,7 +10,7 @@ BOOK_DIR=`pwd`/`dirname $0`
 cd $BOOK_DIR
 echo Working directory is $(pwd)
 
-mkdocs build > ./builds/$(date +%Y_%m_%d_%H_%M).stdout.txt
+mkdocs build &>./builds/$(date +%Y_%m_%d_%H_%M).stdout.txt
 
 deactivate
 echo End of building book @ `date`
