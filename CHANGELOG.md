@@ -40,6 +40,8 @@
 
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
 * ... [0.10a_??] `MyBooks.buildBook()` code
+    - ... [0.10.dev...] update `bk_build.sh` to call an url to notify fin9sh of build
+    - ... [0.10.dev...] create a page to show builds (and manage them)
     - [0.10.dev72] updated `bk_build.sh` to redirect stdout & srderr to `./builds/<date_time_hh_mm.stdout.txt>` final solution
     - [0.10.dev71] updated `bk_build.sh` to redirect stdout to `./builds/<date-time>.stdout.txt` - 1st attempt
     - [0.10.dev70] create book `builds/` directory to keep book builds stdout output files
