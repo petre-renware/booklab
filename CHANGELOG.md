@@ -42,7 +42,8 @@
 * ... [0.10a_??] `MyBooks.buildBook()` code
     - ... [0.10.dev...] update `bk_build.sh` to call an url to notify fin9sh of build
     - ... [0.10.dev...] create a page to show builds (and manage them)
-    - [0.10.dev74] updated `bk_buikd.sh` to return the exit c-de of mkdocs run
+    - [0.10.dev75] updated `bk_build.sh` to write nkdocs exit code to a file with the same name as console out but with extention `.excode.txt`
+    - [0.10.dev74] updated `bk_buikd.sh` to return the exit code of mkdocs run
     - [0.10.dev73] updated `bk_build.sh` console output file name to `<yymmdd>h<hhmm>.out.txt`
     - [0.10.dev72] updated `bk_build.sh` to redirect stdout & srderr to `./builds/<date_time_hh_mm.stdout.txt>` final solution
     - [0.10.dev71] updated `bk_build.sh` to redirect stdout to `./builds/<date-time>.stdout.txt` - 1st attempt

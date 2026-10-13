@@ -10,10 +10,14 @@ BOOK_DIR=`pwd`/`dirname $0`
 cd $BOOK_DIR
 echo Working directory is $(pwd)
 
-mkdocs build &>./builds/$(date +%Y%m%dh%H%M).out.txt
-exit_code=$?
-echo mkdocs finished with code $exit_code
 
+OUT_FILENAME=$(date +%Y%m%dh%H%M)
+
+mkdocs build &>./builds/$OUT_FILENAME.out.txt
+exit_code=$?
+
+echo mkdocs finished with code $exit_code
+echo $exit_code >./builds/$OUT_FILENAME.excode.txt
 
 
 deactivate
