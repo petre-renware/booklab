@@ -42,6 +42,9 @@
 * ... [0.10a_??] `MyBooks.buildBook()` code
     - ... [0.10.dev...] update `bk_build.sh` to call an url to notify fin9sh of build
     - ... [0.10.dev...] create a page to show builds (and manage them)
+    - ... [0.10:dev...] updated bk_build at end call url `/booklab/build/finish?code=<bk-code>`
+    - ... [0.10:dev...] updated bk_build after run mkdocs if exit_code is 1, create an tar.gz archive from own docs site and write in builds/ using the sane filenane as previously stated
+    - [0.10.dev76] documented builds/ directory with a short REAMDE.txt file and updated action plan as TODOs in bk_build.sh and here
     - [0.10.dev75] updated `bk_build.sh` to write nkdocs exit code to a file with the same name as console out but with extention `.excode.txt`
     - [0.10.dev74] updated `bk_buikd.sh` to return the exit code of mkdocs run
     - [0.10.dev73] updated `bk_build.sh` console output file name to `<yymmdd>h<hhmm>.out.txt`

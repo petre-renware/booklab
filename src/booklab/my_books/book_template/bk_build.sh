@@ -19,6 +19,12 @@ exit_code=$?
 echo mkdocs finished with code $exit_code
 echo $exit_code >./builds/$OUT_FILENAME.excode.txt
 
+#TODO create a tar archive with generated book (docs/ dir)
+# ...
+
+#TODO call url /booklab/finish ?code=<book-code>
+# ...
+
 
 deactivate
 echo End of building book @ `date`
