@@ -8,8 +8,10 @@ echo Start building book @ `date`
 $(pdm venv activate)
 BOOK_DIR=`pwd`/`dirname $0`
 cd $BOOK_DIR
-echo Working directory is $(pwd)
+BOOK_CODE=$(basename `pwd`)
 
+echo Working directory is $(pwd)
+echo Book code is: $BOOK_CODE
 
 OUT_FILENAME=$(date +%Y%m%dh%H%M)
 
@@ -23,7 +25,7 @@ if [ $exit_code -eq 0 ]; then
   tar -cvf ./builds/$OUT_FILENAME.site.tar ./docs/
 fi
 
-#TODO call url /booklab/finish ?code=<book-code>
+#TODO call url /booklab/bbld/finish ?code=$BOOK_CODE
 # ...
 
 
