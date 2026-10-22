@@ -173,6 +173,25 @@ def api_bbld(book_code: str = ...):
     return ret_str
 
 
+@api_app.route("/api/finbld/")
+def api_finbld(book_code: str = ...):
+    """Callback after a book build launched aaync finish. Assure persisting and notification.
+
+    **Query parameters:** `code` for database `boook_code`
+    """
+    if (book_code is ...) or (book_code is None):
+        book_code = request.args.get("code", type = str)
+        if not book_code:
+            abort(404, description = "No Book specified.")
+            return
+    ret_str = f"Page for <b>bbld</b><br>"
+    ret_str += f"Request for book with code <b>{book_code}</b><br>"
+    #TODO here should integrate wip static page
+    ...
+    #TODO update books_catalog ref `last build / update date`
+    return ret_str
+
+
 @api_app.route("/api/dplb/")
 def api_dplb(book_code: str = ...):
     """Serve _Book delivery (dplb)_ functionality.

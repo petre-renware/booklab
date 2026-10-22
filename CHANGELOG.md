@@ -44,6 +44,7 @@
     - ... [0.10.dev...] create a page to show builds (and manage them)
     - ... [0.10.dev...] updated bk_build at end call url `/booklab/api/finbld/ ?code=<bk-code>`
     - ... [0.10.dev...] clean & close bk_build.sh
+    - [0.10.dev79] upd `booklbd` created skeleton for route `/api/finbld/`
     - [0.10.dev78] updated bk_build.sh created variable <BOOK_CODE> with book code to be use ib url callings
     - [0.10.dev77] updated bk_build.sh after run mkdocs if exit_code is 1, create a tar archive from own docs site and write in builds/ using the same filename as previously stated abd extension `.site.tar`
     - [0.10.dev76] documented builds/ directory with a short REAMDE.txt file and updated action plan as TODOs in bk_build.sh and here
