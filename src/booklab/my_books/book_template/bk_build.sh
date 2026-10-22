@@ -25,7 +25,7 @@ if [ $exit_code -eq 0 ]; then
   tar -cvf ./builds/$OUT_FILENAME.site.tar ./docs/
 fi
 
-#TODO call url /booklab/bbld/finish ?code=$BOOK_CODE
+#TODO call url /booklab/api/finbld ?code=$BOOK_CODE
 # ...
 
 
