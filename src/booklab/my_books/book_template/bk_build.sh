@@ -28,8 +28,7 @@ if [ $exit_code -eq 0 ]; then
 fi
 
 # call calpback url
-#...ERROR bad url forkat
-# curl "/booklab/api/finbld/?code="$BOOK_CODE",exit_code="$exit_code
+curl -G "booklab/api/finbld/" -d code=$BOOK_CODE -d exit_code=$exit_code
 
 
 
