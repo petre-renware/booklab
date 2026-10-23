@@ -18,15 +18,19 @@ OUT_FILENAME=$(date +%Y%m%dh%H%M)
 mkdocs build &>./builds/$OUT_FILENAME.out.txt
 exit_code=$?
 
+# notify some info at console
 echo mkdocs finished with code $exit_code
 echo $exit_code >./builds/$OUT_FILENAME.excode.txt
+
 # create a tar archive with generated book (docs/)
 if [ $exit_code -eq 0 ]; then
   tar -cvf ./builds/$OUT_FILENAME.site.tar ./docs/
 fi
 
-#TODO call url /booklab/api/finbld ?code=$BOOK_CODE
-# ...
+# call calpback url
+#...ERROR bad url forkat
+# curl "/booklab/api/finbld/?code="$BOOK_CODE",exit_code="$exit_code
+
 
 
 deactivate
