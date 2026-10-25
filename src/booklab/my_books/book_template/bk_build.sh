@@ -13,7 +13,10 @@ BOOK_CODE=$(basename `pwd`)
 echo Working directory is $(pwd)
 echo Book code is: $BOOK_CODE
 
-OUT_FILENAME=$(date +%Y%m%dh%H%M)
+# variant.w.filename.as.datetime
+#OUT_FILENAME=$(date +%Y%m%dh%H%M)
+# variant.w.filename.as.book_code
+OUT_FILENAME=$BOOK_CODE
 
 mkdocs build &>./builds/$OUT_FILENAME.out.txt
 exit_code=$?
@@ -28,8 +31,7 @@ if [ $exit_code -eq 0 ]; then
 fi
 
 # call calpback url
-curl -G "booklab/api/finbld/" -d code=$BOOK_CODE -d exit_code=$exit_code
-
+curl -G http://localhost:5002/api/finbld/ -d code=$BOOK_CODE -d exit_code=$exit_code
 
 
 deactivate

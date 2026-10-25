@@ -40,10 +40,11 @@
 
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
 * ... [0.10a_??] `MyBooks.buildBook()` code
-    - ... [0.10.dev...] update `bk_build.sh` to call an url to notify fin9sh of build
     - ... [0.10.dev...] create a page to show builds (and manage them)
-    - ... [0.10.dev...] clean & close bk_build.sh
-    - [0.10.dev81] f9nal updated bk_build at end call url `/booklab/api/finbld/?code=<bk-code>`,exit_code=<exit code>
+    - ... [0.10.dev...] update booklabd/routes.py for `/api/finbld`: 
+          code and add query param exit_code
+    - [0.10.dev82] clean, upd to filename as book_code  & close bk_build.sh
+    - [0.10.dev81] final updated bk_build at end call url `/booklab/api/finbld/?code=<bk-code>`,exit_code=<exit code>
     - [0.10.dev80] partial updated bk_build at end call url `/booklab/api/finbld/?code=<bk-code>`,exit_code=<exit code>
     - [0.10.dev79] upd `booklbd` created skeleton for route `/api/finbld/`
     - [0.10.dev78] updated bk_build.sh created variable <BOOK_CODE> with book code to be use ib url callings
