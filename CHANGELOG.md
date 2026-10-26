@@ -32,6 +32,7 @@
 ### FEATURES
 * Implement Book build (`bbld`) functionality
 * Update `book_template` for book configuration template (mkdocs_template.yml)
+* Disppay data from last build (console out, exit code, date of build)
 * Implement core part of `booklab_cli` submodules __init()__ & parameter_types
 ### CHANGELOG
 * tbd... route `/api/bbld/`:
@@ -40,9 +41,11 @@
 
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
 * ... [0.10a_??] `MyBooks.buildBook()` code
-    - ... [0.10.dev...] create a page to show builds (and manage them)
-    - ... [0.10.dev...] update booklabd/routes.py for `/api/finbld`: 
-          code and add query param exit_code
+    - ... [0.10.dev...] update booklabd/routes.py for `/api/finbld/`: 
+        code and add query param exit_code
+    - ... [0.10.dev...] create a page 
+        to show last build and
+        a butt to start a build in background
     - [0.10.dev82] clean, upd to filename as book_code  & close bk_build.sh
     - [0.10.dev81] final updated bk_build at end call url `/booklab/api/finbld/?code=<bk-code>`,exit_code=<exit code>
     - [0.10.dev80] partial updated bk_build at end call url `/booklab/api/finbld/?code=<bk-code>`,exit_code=<exit code>
