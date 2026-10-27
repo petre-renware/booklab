@@ -46,6 +46,8 @@
     - ... [0.10.dev...] create a page 
         to show last build and
         a butt to start a build in background
+    - [0.10.dev83] prepared static site directory `bbld/` for book build.
+      File `bbld_template.md` need to be upd for buiod functionality
     - [0.10.dev82] clean, upd to filename as book_code  & close bk_build.sh
     - [0.10.dev81] final updated bk_build at end call url `/booklab/api/finbld/?code=<bk-code>`,exit_code=<exit code>
     - [0.10.dev80] partial updated bk_build at end call url `/booklab/api/finbld/?code=<bk-code>`,exit_code=<exit code>
