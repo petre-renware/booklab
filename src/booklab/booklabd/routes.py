@@ -155,41 +155,48 @@ def api_prvb(book_code: str = ...):
 
 
 @api_app.route("/api/bbld/")
-def api_bbld(book_code: str = ...):
+@api_app.route("/api/bbld/<string:operation>/")
+def api_bbld(
+        operation: str = ...,
+        book_code: str = ...,
+        exit_code: int = ...
+    ):
     """Serve _Book build (bbld)_ functionality.
 
-    **Query parameters:** `code` for database `boook_code`
+    **Query parameters:**
+      - `operation` fot build exact operation as:
+        - "" display main building page
+        - "startbld" start a build process in backgroud
+        - "finbld" callbak when build process ends
+      - `code` for database `boook_code`
+      - `exit_code` exit code of buildind process when calkback in called
     """
     if (book_code is ...) or (book_code is None):
         book_code = request.args.get("code", type = str)
         if not book_code:
             abort(404, description = "No Book specified.")
             return
+#    if (book_code is ...) or (book_code is None):
+#        book_code = request.args.get("code", type = str)
+#        if not book_code:
+#            abort(404, description = "No Book specified.")
+#            return
+#    if (book_code is ...) or (book_code is None):
+#        book_code = request.args.get("code", type = str)
+#        if not book_code:
+#            abort(404, description = "No Book specified.")
+#            return
     ret_str = f"Page for <b>bbld</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
+    ret_str += f" operation = {operation}"
     #TODO here should integrate wip static page
     ...
     #TODO update books_catalog ref `last build / update date`
     return ret_str
 
 
-@api_app.route("/api/finbld/")
-def api_finbld(book_code: str = ...):
-    """Callback after a book build launched aaync finish. Assure persisting and notification.
-
-    **Query parameters:** `code` for database `boook_code`
-    """
-    if (book_code is ...) or (book_code is None):
-        book_code = request.args.get("code", type = str)
-        if not book_code:
-            abort(404, description = "No Book specified.")
-            return
-    ret_str = f"Page for <b>bbld</b><br>"
-    ret_str += f"Request for book with code <b>{book_code}</b><br>"
-    #TODO here should integrate wip static page
-    ...
-    #TODO update books_catalog ref `last build / update date`
-    return ret_str
+#INFO: this route is deprecated as covered by bbld route with parameter
+# @api_app.route("/api/finbld/")
 
 
 @api_app.route("/api/dplb/")

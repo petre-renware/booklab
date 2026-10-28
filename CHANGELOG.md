@@ -46,8 +46,13 @@
     - ... [0.10.dev...] create a page 
         to show last build and
         a butt to start a build in background
+    - [0.10.dev84] skeleton for  routes.py for route `/api/bbld/` make parameter `<string: operation>` to indicate build operation desired as:
+      - "" indicate to show Buiod functionality main page
+      - "startbld" to launch a build process in backgroud
+      - "finbld" callback when buildin process finish
+      ...tb.finishednxt.ver...
     - [0.10.dev83] prepared static site directory `bbld/` for book build.
-      File `bbld_template.md` need to be upd for buiod functionality
+                   File `bbld_template.md` need to be upd for build functionality
     - [0.10.dev82] clean, upd to filename as book_code  & close bk_build.sh
     - [0.10.dev81] final updated bk_build at end call url `/booklab/api/finbld/?code=<bk-code>`,exit_code=<exit code>
     - [0.10.dev80] partial updated bk_build at end call url `/booklab/api/finbld/?code=<bk-code>`,exit_code=<exit code>
