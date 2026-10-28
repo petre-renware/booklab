@@ -31,7 +31,7 @@ if [ $exit_code -eq 0 ]; then
 fi
 
 # call calpback url
-curl -G http://localhost:5002/api/finbld/ -d code=$BOOK_CODE -d exit_code=$exit_code
+curl -G http://localhost:5002/api/bbld/finbld/ -d code=$BOOK_CODE -d exit_code=$exit_code
 
 
 deactivate

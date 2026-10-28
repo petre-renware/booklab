@@ -1,10 +1,11 @@
 [TOC]
 
-# Detalii despre carte
+# Generare carte
 
 {% raw %}
 
-Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ book_data.code }}`).
+Aici puteti genera siteul cartii **{{ book_data.short_desc }}** (cod `{{ book_data.code }}`).
+...#tbd... restul trebuie updated ...
 
 
 ## Date generale

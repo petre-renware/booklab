@@ -157,45 +157,57 @@ def api_prvb(book_code: str = ...):
 @api_app.route("/api/bbld/")
 @api_app.route("/api/bbld/<string:operation>/")
 def api_bbld(
-        operation: str = ...,
-        book_code: str = ...,
-        exit_code: int = ...
-    ):
+    operation: str = ...,
+    book_code: str = ...,
+    exit_code: int = ...
+) -> str:
     """Serve _Book build (bbld)_ functionality.
 
     **Query parameters:**
-      - `operation` fot build exact operation as:
-        - "" display main building page
-        - "startbld" start a build process in backgroud
-        - "finbld" callbak when build process ends
-      - `code` for database `boook_code`
-      - `exit_code` exit code of buildind process when calkback in called
+
+    - `operation` fot build exact operation as:
+      - "" display main building page
+      - "startbld" start a build process in backgroud
+      - "finbld" callbak when build process ends
+    - `code` for database `boook_code`
+    - `exit_code` exit code of buildind process when calkback in called
     """
     if (book_code is ...) or (book_code is None):
         book_code = request.args.get("code", type = str)
         if not book_code:
             abort(404, description = "No Book specified.")
             return
-#    if (book_code is ...) or (book_code is None):
-#        book_code = request.args.get("code", type = str)
-#        if not book_code:
-#            abort(404, description = "No Book specified.")
-#            return
-#    if (book_code is ...) or (book_code is None):
-#        book_code = request.args.get("code", type = str)
-#        if not book_code:
-#            abort(404, description = "No Book specified.")
-#            return
+    if (exit_code is ...) or (exit_code is None):
+        exit_code = request.args.get("exit_code", type = int)
+        if not exit_code:
+            exit_code = 1  #  suposing faulted execution (ubix standard)
+    if (operation is ...) or (operation is None) or (operation == ""):
+        operation = "showbld"
     ret_str = f"Page for <b>bbld</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
-    ret_str += f" operation = {operation}"
-    #TODO here should integrate wip static page
-    ...
-    #TODO update books_catalog ref `last build / update date`
-    return ret_str
+    ret_str += f" operation = {operation}<br>"
+    ret_str += f" exit code = {exit_code}<br>"
+    # here stsrt the active |6 core code
+    if operation == "showbld":
+        # display build page case
+        ...
+        #TODO ...
+        return ret_str  #...upd.me
+    if operation == "finbld":
+        # callback for build finish case
+        ...
+        #TODO .::
+        return ret_str  #...upd.me
+    if operation == "startbld":
+        # start a build 9n background (call `bk_build.sh &` for this book)
+        ...
+        #TODO ...
+        return ret_str  #...upd.me
+    abort(404, description = "Operation unknown.")
+    return
 
 
-#INFO: this route is deprecated as covered by bbld route with parameter
+#INFO: route is deprecated as covered by bbld route with parameter
 # @api_app.route("/api/finbld/")
 
 
