@@ -360,8 +360,15 @@ class MyBooks:
         #-3 save run  results
         pass
 
-    def finishAfterBuild(self) -> None:
+    def finishAfterBuild(self,
+        build_date: str,
+        exit_code: int
+    ) -> None:
         """Update JSON books database after a build.
+
+        _Lateral effects:_
+
+        - _on disk:_ update current books catalog file (`books_catalog.jsob`).
         """
         # get JSON record
         book_data = self.getBook()
@@ -372,7 +379,7 @@ class MyBooks:
                 exit_text = exit_text
             )
             return self.results
-        ... # 2. upd it w/crt UTC date
+        ... # 2. upd built date,exit code, files location
         ... # 3. persist data
         return
 
