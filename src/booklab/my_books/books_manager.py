@@ -360,6 +360,22 @@ class MyBooks:
         #-3 save run  results
         pass
 
+    def finishAfterBuild(self) -> None:
+        """Update JSON books database after a build.
+        """
+        # get JSON record
+        book_data = self.getBook()
+        if not book_data:  # If book is not present in catalog force exit.
+            exit_text += "\nEROARE: Cartea nu exista in catalog"
+            self.results = Results(
+                exit_code = False,
+                exit_text = exit_text
+            )
+            return self.results
+        ... # 2. upd it w/crt UTC date
+        ... # 3. persist data
+        return
+
     def createPhysicalBook(self) -> bool:
         """Create physical book directory as copy of "book_template".
 

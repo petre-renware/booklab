@@ -41,12 +41,13 @@
 
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
 * ... [0.10a_??] `MyBooks.buildBook()` code
-    - ... [0.10.dev...] update booklabd/routes.py for `/api/finbld/`: 
-        code and add query param exit_code
     - ... [0.10.dev...] create a page 
         to show last build and
         a butt to start a build in background
-    - ...here.u.are...
+    - ... [0.10.dev...] upd boklabd, route `.../bblab/finbld/` to update darabase ;JSON file)
+    - [... 0.10.dev85] review & upd my_books/book_manager.py for finish a book build
+        * [a] create skeleton for method `f0nishAfterBuild()
+        * [b] ...
     - [0.10.dev84] backbone (not fully functional) for  routes.py for route `/api/bbld/` make parameter `<string: operation>` to indicate build operation desired as:
       - "" indicate to show Buiod functionality main page
       - "startbld" to launch a build process in backgroud
