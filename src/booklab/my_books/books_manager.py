@@ -389,8 +389,6 @@ class MyBooks:
             book_data["id"],
             data_to_wr
         )
-        ... #...hereuare...
-        #... need to return something ?
         return
 
     def createPhysicalBook(self) -> bool:
