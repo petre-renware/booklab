@@ -48,6 +48,8 @@
     - [... 0.10.dev85] review & upd my_books/book_manager.py for finish a book build
         * [a] create skeleton for method `f0nishAfterBuild()
         * [b] updatebooks_catalog.JSON add keys for last build: exit_code, location
+        * [c] wr JSON db with data from [b]
+        * [...d] review & clean books_manager.py code
         * [...]
     - [0.10.dev84] backbone (not fully functional) for  routes.py for route `/api/bbld/` make parameter `<string: operation>` to indicate build operation desired as:
       - "" indicate to show Buiod functionality main page

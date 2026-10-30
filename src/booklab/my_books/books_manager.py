@@ -363,7 +363,7 @@ class MyBooks:
     def finishAfterBuild(self,
         build_date: str,
         exit_code: int
-    ) -> None:
+    ):
         """Update JSON books database after a build.
 
         _Lateral effects:_
@@ -379,8 +379,18 @@ class MyBooks:
                 exit_text = exit_text
             )
             return self.results
-        ... # 2. upd built date,exit code, files location
-        ... # 3. persist data
+        # construct dixt with data tb.updated
+        data_to_wr = {
+            "last_build_date": build_date,
+            "last_build_exit_code": exit_code,
+            "last_build_location": self.getBookPath() + "/builds/"
+        }
+        self.db_books_catalog.updateById(
+            book_data["id"],
+            data_to_wr
+        )
+        ... #...hereuare...
+        #... need to return something ?
         return
 
     def createPhysicalBook(self) -> bool:
