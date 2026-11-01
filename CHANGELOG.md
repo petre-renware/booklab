@@ -44,7 +44,7 @@
     - ... [0.10.dev...] create a page 
         to show last build and
         a butt to start a build in background
-    - ... [0.10.dev...] upd boklabd, route `.../bblab/finbld/` to update darabase ;JSON file)
+    - [0.10.dev88] upd boklabd, route `.../bblab/finbld/` to update darabase ;JSON file)
     - [0.10.dev87] fix bstatus display format bugs
     - [0.10.dev86] upd bstatus for new build fields
     - [0.10.dev85] review & upd my_books/book_manager.py for finish a book build (method `finishAfterBuild()`)

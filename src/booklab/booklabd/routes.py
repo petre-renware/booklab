@@ -10,6 +10,7 @@ Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 
 import os
 import w3lib.url
+from datetime import datetime
 
 from flask import render_template
 from flask import redirect
@@ -187,7 +188,16 @@ def api_bbld(
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     ret_str += f" operation = {operation}<br>"
     ret_str += f" exit code = {exit_code}<br>"
-    # here stsrt the active |6 core code
+    # create an instance of MyBooks
+    my_book = MyBooks(
+        db = db_books,
+        book_code = book_code
+    )
+    book_data = my_book.getBook()
+    if not book_data:
+        abort(404, description = "Book not found, does not physically exist.")
+        return
+    # here stsrt the active core code
     if operation == "showbld":
         # display build page case
         ...
@@ -195,9 +205,12 @@ def api_bbld(
         return ret_str  #...upd.me
     if operation == "finbld":
         # callback for build finish case
-        ...
-        #TODO .::
-        return ret_str  #...upd.me
+        _build_date = str(datetime.utcnow().strftime("%Y-%m-%d"))
+        my_book.finishAfterBuild(
+            build_date = _build_date,
+            exit_code = exit_code
+        )
+        return ret_str
     if operation == "startbld":
         # start a build 9n background (call `bk_build.sh &` for this book)
         ...
