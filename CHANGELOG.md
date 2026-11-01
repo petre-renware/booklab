@@ -45,7 +45,7 @@
         to show last build and
         a butt to start a build in background
     - ... [0.10.dev...] upd boklabd, route `.../bblab/finbld/` to update darabase ;JSON file)
-    - ... [0.10.dev...] upd bstatus for new build fields
+    - [0.10.dev86] upd bstatus for new build fields
     - [0.10.dev85] review & upd my_books/book_manager.py for finish a book build (method `finishAfterBuild()`)
         * [a] create skeleton for method `f0nishAfterBuild()
         * [b] updatebooks_catalog.JSON add keys for last build: exit_code, location
