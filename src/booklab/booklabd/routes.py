@@ -11,6 +11,7 @@ Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 import os
 import w3lib.url
 from datetime import datetime
+from pathlib import Path
 
 from flask import render_template
 from flask import redirect
@@ -170,6 +171,7 @@ def api_bbld(
       - "" display main building page
       - "startbld" start a build process in backgroud
       - "finbld" callbak when build process ends
+    Next parameters are valid only for "finbld" operation otherwise has no determined / g9aranteed value.
     - `code` for database `boook_code`
     - `exit_code` exit code of buildind process when calkback in called
     """
@@ -197,22 +199,59 @@ def api_bbld(
     if not book_data:
         abort(404, description = "Book not found, does not physically exist.")
         return
+    #
     # here stsrt the active core code
-    if operation == "showbld":
-        # display build page case
-        ...
-        #TODO ...
-        return ret_str  #...upd.me
-    if operation == "finbld":
-        # callback for build finish case
+    if operation == "showbld":  # display build page case
+        # get console out of last build
+        _file = book_data["last_build_location"]
+        if _file is None:
+            abort(404)
+        _file += "/" + book_code + ".out.txt"
+        console_out = None
+        try:
+            console_out = Path(_file).read_text()
+        except:
+            console_out = None
+        if not console_out:
+            ret_str += "<br><br>No build done ..."
+        # get exit code 0f last build
+        _file = book_data["last_build_location"]
+        _file += "/" + book_code + ".excode.txt"
+        excode = None
+        try:
+            excode = Path(_file).read_text()
+        except:
+            excode = None
+        if not excode:
+            ret_str += "<br><br>No build done ...."
+        excode = int(str(excode))
+        ret_str += f"<br><br>{excode=}"
+        """ #TODO...
+        # render bstatus template and write it as html served from static site menu
+        rendered_str = render_template(
+            "bbld/bbld_template.html",
+            book_data = book_data, @...*)
+            nav = nav
+        )
+        file_to_write = os.path.join(
+            docs_prefix,
+            "bstatus/bstatus.html"
+        )
+        with open(file_to_write, "w") as file:
+            file.write(rendered_str)
+        redirect_path = url_quote(redirect_prefix + "/bstatus/bstatus.html")
+        return redirect(redirect_path)
+
+        """
+        return ret_str
+    if operation == "finbld":  # callback for build finish case
         _build_date = str(datetime.utcnow().strftime("%Y-%m-%d"))
         my_book.finishAfterBuild(
             build_date = _build_date,
             exit_code = exit_code
         )
         return ret_str
-    if operation == "startbld":
-        # start a build 9n background (call `bk_build.sh &` for this book)
+    if operation == "startbld":  # start a build 9n background (call `bk_build.sh &` for this book)
         ...
         #TODO ...
         return ret_str  #...upd.me
