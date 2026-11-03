@@ -205,29 +205,35 @@ def api_bbld(
         # get console out of last build
         _file = book_data["last_build_location"]
         if _file is None:
-            abort(404)
-        _file += "/" + book_code + ".out.txt"
-        console_out = None
-        try:
-            console_out = Path(_file).read_text()
-        except:
+            #TODO... aici se vor genera defaulturi pentru datele de randare bbld tmpl
+            console_out = "Nu exista inca date"
+            excode = "Nu exista inca date"
+            abort(404) #...tb.drop...
+        else:
+            _file += "/" + book_code + ".out.txt"
             console_out = None
-        if not console_out:
-            ret_str += "<br><br>No build done ..."
-        # get exit code 0f last build
-        _file = book_data["last_build_location"]
-        _file += "/" + book_code + ".excode.txt"
-        excode = None
-        try:
-            excode = Path(_file).read_text()
-        except:
+            try:
+                console_out = Path(_file).read_text()
+            except:
+                console_out = None
+            if not console_out:
+                ret_str += "<br><br>No build done ..."
+            # get exit code 0f last build
+            _file = book_data["last_build_location"]
+            _file += "/" + book_code + ".excode.txt"
             excode = None
-        if not excode:
-            ret_str += "<br><br>No build done ...."
-        excode = int(str(excode))
-        ret_str += f"<br><br>{excode=}"
+            try:
+                excode = Path(_file).read_text()
+            except:
+                excode = None
+            if not excode:
+                ret_str += "<br><br>No build done ...."
+            excode = int(str(excode))
+        # add new fields to dict with data used 9n render9ng temolate
+        book_data["console_out"] = console_out
+        book_data["excode"] = excode
         """ #TODO...
-        # render bstatus template and write it as html served from static site menu
+        # render bbld_template and write it as html served from static site menu
         rendered_str = render_template(
             "bbld/bbld_template.html",
             book_data = book_data, @...*)

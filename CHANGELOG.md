@@ -45,9 +45,10 @@
         to show last build and
         a butt to start a build in background
         * [a] 1st draft routes.py for page rendering
-        * [... b] final `...doc_src/bbld_template.md`
-        * [...]
-    - [0.10.dev88] upd boklabd, route `.../bblab/finbld/` to update darabase ;JSON file)
+        * [b] a test draft of `...doc_src/bbld_template.md`
+        * [...] review & clean routes.py regarding case when no buils exiats anynore
+        * [...] final of `.../doc_src/bbld_template.md`
+    - [0.10.dev88] upd boklabd route `.../bblab/finbld/` to update darabase ;JSON file)
     - [0.10.dev87] fix bstatus display format bugs
     - [0.10.dev86] upd bstatus for new build fields
     - [0.10.dev85] review & upd my_books/book_manager.py for finish a book build (method `finishAfterBuild()`)
