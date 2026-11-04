@@ -46,7 +46,7 @@
         a butt to start a build in background
         * [a] 1st draft routes.py for page rendering
         * [b] a test draft of `...doc_src/bbld_template.md`
-        * [...] review & clean routes.py regarding case when no buils exiats anynore
+        * [c] review & clean routes.py regarding case when no buils exiats anynore
         * [...] final of `.../doc_src/bbld_template.md`
     - [0.10.dev88] upd boklabd route `.../bblab/finbld/` to update darabase ;JSON file)
     - [0.10.dev87] fix bstatus display format bugs

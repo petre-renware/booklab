@@ -171,9 +171,9 @@ def api_bbld(
       - "" display main building page
       - "startbld" start a build process in backgroud
       - "finbld" callbak when build process ends
-    Next parameters are valid only for "finbld" operation otherwise has no determined / g9aranteed value.
-    - `code` for database `boook_code`
-    - `exit_code` exit code of buildind process when calkback in called
+    - Next parameters are relevant only for "finbld" operation (otherwise are ignored):
+      - `code` for database `boook_code`
+      - `exit_code` exit code of buildind process when calkback in called
     """
     if (book_code is ...) or (book_code is None):
         book_code = request.args.get("code", type = str)
@@ -198,17 +198,15 @@ def api_bbld(
     book_data = my_book.getBook()
     if not book_data:
         abort(404, description = "Book not found, does not physically exist.")
-        return
+        return # this is not reachable but is left for evidence
     #
     # here stsrt the active core code
     if operation == "showbld":  # display build page case
         # get console out of last build
         _file = book_data["last_build_location"]
         if _file is None:
-            #TODO... aici se vor genera defaulturi pentru datele de randare bbld tmpl
             console_out = "Nu exista inca date"
             excode = "Nu exista inca date"
-            abort(404) #...tb.drop...
         else:
             _file += "/" + book_code + ".out.txt"
             console_out = None
@@ -218,7 +216,7 @@ def api_bbld(
                 console_out = None
             if not console_out:
                 ret_str += "<br><br>No build done ..."
-            # get exit code 0f last build
+            # get exit code of last build
             _file = book_data["last_build_location"]
             _file += "/" + book_code + ".excode.txt"
             excode = None
@@ -232,24 +230,19 @@ def api_bbld(
         # add new fields to dict with data used 9n render9ng temolate
         book_data["console_out"] = console_out
         book_data["excode"] = excode
-        """ #TODO...
         # render bbld_template and write it as html served from static site menu
         rendered_str = render_template(
             "bbld/bbld_template.html",
-            book_data = book_data, @...*)
-            nav = nav
+            book_data = book_data
         )
         file_to_write = os.path.join(
             docs_prefix,
-            "bstatus/bstatus.html"
+            "bbld/bbld.html"
         )
         with open(file_to_write, "w") as file:
             file.write(rendered_str)
-        redirect_path = url_quote(redirect_prefix + "/bstatus/bstatus.html")
+        redirect_path = url_quote(redirect_prefix + "/bbld/bbld.html")
         return redirect(redirect_path)
-
-        """
-        return ret_str
     if operation == "finbld":  # callback for build finish case
         _build_date = str(datetime.utcnow().strftime("%Y-%m-%d"))
         my_book.finishAfterBuild(

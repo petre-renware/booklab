@@ -51,7 +51,7 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ bo
 [Editare materiale](/booklab/api/edtb/?code={{ book_data.code }}){ .md-button .md-button--primary }
 [Sectiuni carte](/booklab/api/orgm/?code={{ book_data.code }}){ .md-button .md-button--primary }
 
-[Generare carte](/booklab/api/bbld/?code={{ book_data.code }}){ .md-button .md-button--primary }
+[Pagina Generare carte](/booklab/api/bbld/showbld/?code={{ book_data.code }}){ .md-button .md-button--primary }
 [Livrare carte](/booklab/api/dplb/?code={{ book_data.code }}){ .md-button .md-button--primary }
 
 
