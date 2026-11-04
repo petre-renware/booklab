@@ -926,7 +926,7 @@
 <h1 id="generare-carte">Generare carte</h1>
 <p>Aici puteti gestiona siteul cartii <strong>{{ book_data.short_desc }}</strong> (cod <code>{{ book_data.code }}</code>):</p>
 <ul>
-<li>sa generati acest site (cartea in format ekectronic internet)</li>
+<li>sa generati acest site (cartea in format electronic internet)</li>
 <li>sa vedeti rezultatule ultimei generari de carte facuta</li>
 </ul>
 <p><a class="md-button md-button--primary" href="/booklab/api/bbld/startbld/?code={{ book_data.code }}">Generare carte</a></p>
@@ -934,18 +934,18 @@
 <ul>
 <li>Ultima generare de carte facuta in data: <strong><code>{{ book_data.last_build_date }}</code></strong></li>
 <li>Proces terminat cu codul: <strong>{{ book_data.excode }}</strong></li>
+<li>Arhiva site static cu ultima generare carte: <strong><code>{{ book_data.last_build_location }}{{book_data.code}}.site.tar</code></strong></li>
 </ul>
 <h2 id="consola-rezultata-in-urma-executiei">Consola rezultata in urma executiei:</h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{{ book_data.console_out }}
 </span></code></pre></div>
-<p>...#tbd... restul trebuie updated ...</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 3, 2026</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 4, 2026</span>
       
     
   </small>

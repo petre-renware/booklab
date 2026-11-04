@@ -41,13 +41,12 @@
 
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
 * ... [0.10a_??] `MyBooks.buildBook()` code
-    - [... 0.10.dev89] create a page 
+    - [0.10.dev89] create a page 
         to show last build and
         a butt to start a build in background
         * [a] 1st draft routes.py for page rendering
         * [b] a test draft of `...doc_src/bbld_template.md`
         * [c] review & clean routes.py regarding case when no buils exiats anynore
-        * [...] final of `.../doc_src/bbld_template.md`
     - [0.10.dev88] upd boklabd route `.../bblab/finbld/` to update darabase ;JSON file)
     - [0.10.dev87] fix bstatus display format bugs
     - [0.10.dev86] upd bstatus for new build fields
