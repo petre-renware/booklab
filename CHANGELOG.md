@@ -39,10 +39,8 @@
 
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
     - ... [0.10a_??] mk route ...bbld/startbld/
-    - [0.10.dev90] `MyBooks.buildBook()`
-    - [0.10.dev89] create a page 
-        to show last build and
-        a butt to start a build in background
+    - [0.10.dev90] mk `MyBooks.buildBook()`
+    - [0.10.dev89] create a page to show last build and a butt to start a build in background
         * [a] 1st draft routes.py for page rendering
         * [b] a test draft of `...doc_src/bbld_template.md`
         * [c] review & clean routes.py regarding case when no buils exiats anynore
