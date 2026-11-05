@@ -355,7 +355,7 @@ class MyBooks:
         - _on disk:_ create / update current book static site directory ...my_books/...//builds/`).
         """
         _cmd_path = str(MY_BOOKS_ROOT) + "/" + str(self.book_code) + "/"
-        _cmd = _cmd_path + "bk_build.sh"
+        _cmd = _cmd_path + "bk_build.sh &"
         subprocess.run(
             _cmd,
             shell = "True",
