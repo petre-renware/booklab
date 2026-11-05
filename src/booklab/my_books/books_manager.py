@@ -15,6 +15,7 @@ from dataclasses import dataclass
 from typing import Type
 from flask import Flask
 from werkzeug.urls import quote as url_quote
+import subprocess
 
 from booklab import MY_BOOKS_ROOT
 from booklab import EXT_PATH
@@ -338,27 +339,28 @@ class MyBooks:
         )
         return self.results
 
-    def buildBook(self) -> None | str:
+    def buildBook(self) -> None:
         """Build (mkdocs build) current boook.
 
         Build current book (ie, `mkdocs build`) in its own directory.
-        Method suppose that mkdocs.yml file is good and book content directory (doc_src/) content is ok and "as-expected",
-        that meaning the method just run nkdocs build process, collect output and return it.
+        Method suppose that mkdocs.yml file is good / clear and book content directory (doc_src/) documents are ok and "as-expected",
+        that meaning the method just need to run `mkdocs build`, collect output and return.
 
-        Return:
-
-        - `str` stdout + stderr of run process
-        - `None` if process exit with fatal err (standard baah return 1)
+        Building process will be done through `bk_build.sh` script located in book root directory.
+        Script is launched in background and at finish will self-request
+        route `/api/bbld/finbld/ ..:` sending all neccesary query parameters.
 
         _Lateral effects:_
 
-        - _on disk:_ create / update current book static site directory (usual `docs/`).
+        - _on disk:_ create / update current book static site directory ...my_books/...//builds/`).
         """
-        #TODO ...
-        #-1 prep stdout & stderr to be captured
-        #-2 call  subprocess_run()
-        #-3 save run  results
-        pass
+        _cmd_path = str(MY_BOOKS_ROOT) + "/" + str(self.book_code) + "/"
+        _cmd = _cmd_path + "bk_build.sh"
+        subprocess.run(
+            _cmd,
+            shell = "True",
+            cwd = _cmd_path)
+        return
 
     def finishAfterBuild(self,
         build_date: str,

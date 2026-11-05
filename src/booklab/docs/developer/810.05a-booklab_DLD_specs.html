@@ -1253,20 +1253,18 @@ File is writen in book root directory.</p>
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.buildBook"></a></p>
 <h4 id="buildbook">buildBook</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">buildBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">str</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">buildBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </span></code></pre></div>
 <p>Build (mkdocs build) current boook.</p>
 <p>Build current book (ie, <code>mkdocs build</code>) in its own directory.
-Method suppose that mkdocs.yml file is good and book content directory (doc_src/) content is ok and "as-expected",
-that meaning the method just run nkdocs build process, collect output and return it.</p>
-<p><strong>Returns</strong>:</p>
-<ul>
-<li><code>str</code> stdout + stderr of run process</li>
-<li><code>None</code> if process exit with fatal err (standard baah return 1)</li>
-</ul>
+Method suppose that mkdocs.yml file is good / clear and book content directory (doc_src/) documents are ok and "as-expected",
+that meaning the method just need to run <code>mkdocs build</code>, collect output and return.</p>
+<p>Building process will be done through <code>bk_build.sh</code> script located in book root directory.
+Script is launched in background and at finish will self-request
+route <code>/api/bbld/finbld/ ..:</code> sending all neccesary query parameters.</p>
 <p><em>Lateral effects:</em></p>
 <ul>
-<li><em>on disk:</em> create / update current book static site directory (usual <code>docs/</code>).</li>
+<li><em>on disk:</em> create / update current book static site directory ...my_books/...//builds/`).</li>
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.finishAfterBuild"></a></p>
 <h4 id="finishafterbuild">finishAfterBuild</h4>

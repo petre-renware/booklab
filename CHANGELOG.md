@@ -35,12 +35,11 @@
 * Disppay data from last build (console out, exit code, date of build)
 * Implement core part of `booklab_cli` submodules __init()__ & parameter_types
 ### CHANGELOG
-* tbd... route `/api/bbld/`:
-  - upd bcat ref last update date in catalog DB
-  - for edit file try GoogleDocs
+- for edit file try GoogleDocs
 
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
-* ... [0.10a_??] `MyBooks.buildBook()` code
+    - ... [0.10a_??] mk route ...bbld/startbld/
+    - [0.10.dev90] `MyBooks.buildBook()`
     - [0.10.dev89] create a page 
         to show last build and
         a butt to start a build in background
