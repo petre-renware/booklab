@@ -9,11 +9,11 @@ Aici puteti gestiona siteul cartii **{{ book_data.short_desc }}** (cod `{{ book_
 
 [Generare carte](/booklab/api/bbld/startbld/?code={{ book_data.code }}){ .md-button .md-button--primary }
 
-## Date generale:
+## Date generale despre ultima generare:
 
-- Ultima generare de carte facuta in data: **`{{ book_data.last_build_date }}`**
+- Ultima generare de carte facuta in data: **`{{ book_data.last_build_date if book_data.last_build_date is not none else 'Nu exista inca date' }}`**
 - Proces terminat cu codul: **{{ book_data.excode }}**
-- Arhiva site static cu ultima generare carte: **`{{ book_data.last_build_location }}{{book_data.code}}.site.tar`**
+- Arhiva site static cu ultima generare carte: **`{{ book_data.last_build_location }}{{ book_data.code }}.site.tar`**
 
 ## Consola rezultata in urma executiei:
 

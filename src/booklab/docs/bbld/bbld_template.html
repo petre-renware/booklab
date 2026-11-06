@@ -895,8 +895,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#date-generale" class="md-nav__link">
-    Date generale:
+  <a href="#date-generale-despre-ultima-generare" class="md-nav__link">
+    Date generale despre ultima generare:
   </a>
   
 </li>
@@ -930,11 +930,11 @@
 <li>sa vedeti rezultatule ultimei generari de carte facuta</li>
 </ul>
 <p><a class="md-button md-button--primary" href="/booklab/api/bbld/startbld/?code={{ book_data.code }}">Generare carte</a></p>
-<h2 id="date-generale">Date generale:</h2>
+<h2 id="date-generale-despre-ultima-generare">Date generale despre ultima generare:</h2>
 <ul>
-<li>Ultima generare de carte facuta in data: <strong><code>{{ book_data.last_build_date }}</code></strong></li>
+<li>Ultima generare de carte facuta in data: <strong><code>{{ book_data.last_build_date if book_data.last_build_date is not none else 'Nu exista inca date' }}</code></strong></li>
 <li>Proces terminat cu codul: <strong>{{ book_data.excode }}</strong></li>
-<li>Arhiva site static cu ultima generare carte: <strong><code>{{ book_data.last_build_location }}{{book_data.code}}.site.tar</code></strong></li>
+<li>Arhiva site static cu ultima generare carte: <strong><code>{{ book_data.last_build_location }}{{ book_data.code }}.site.tar</code></strong></li>
 </ul>
 <h2 id="consola-rezultata-in-urma-executiei">Consola rezultata in urma executiei:</h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{{ book_data.console_out }}

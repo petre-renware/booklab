@@ -39,6 +39,7 @@
 
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
     - ... [0.10a_??] mk route ...bbld/startbld/
+    - [0.10.dev92] upd bbld/bbld_template.md to show human data when is no build
     - [0.10.dev91] upd `MyBooks.buildBook()` set to run cmd in background
     - [0.10.dev90] mk `MyBooks.buildBook()`
     - [0.10.dev89] create a page to show last build and a butt to start a build in background
