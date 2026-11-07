@@ -232,6 +232,18 @@ class MyBooks:
         """
         return self.MY_BOOK_URL
 
+    def getBookSitePackagePath(self) -> str:
+        """Get book site archive full absolute path.
+        """
+        _bk_site_arch_file = self.getBookPath()
+        if _bk_site_arch_file:
+            _bk_site_arch_file += "/" + self.book_code + ".site.tar"
+        else:
+            return None
+        if os.path.isfile(_bk_site_arch_file):  # chk if fike exists
+            return None
+        return _bk_site_arch_file
+
     def renderBookConfig(self) -> Results:
         """Render current book configuration file.
         Produce file `mkdocs.yml` as being the configuration file to build the book.

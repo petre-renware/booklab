@@ -39,6 +39,8 @@
 
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
     - ... [0.10a_??] mk route ...bbld/startbld/
+    - [0.10.dev93] finalize upd bbld/bbld_template.md to show human data when there is no build
+        * [a] upd My_Books class create method getBookSitePackagePath() to return physical full absolute path to book site archive
     - [0.10.dev92] upd bbld/bbld_template.md to show human data when there is no build
     - [0.10.dev91] upd `MyBooks.buildBook()` upd to run command in background
     - [0.10.dev90] mk `MyBooks.buildBook()`

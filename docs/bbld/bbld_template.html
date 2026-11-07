@@ -933,8 +933,8 @@
 <h2 id="date-generale-despre-ultima-generare">Date generale despre ultima generare:</h2>
 <ul>
 <li>Ultima generare de carte facuta in data: <strong><code>{{ book_data.last_build_date if book_data.last_build_date is not none else 'Nu exista inca date' }}</code></strong></li>
-<li>Proces terminat cu codul: <strong>{{ book_data.excode }}</strong></li>
-<li>Arhiva site static cu ultima generare carte: <strong><code>{{ book_data.last_build_location }}{{ book_data.code }}.site.tar</code></strong></li>
+<li>Proces terminat cu codul: <strong><code>{{ book_data.excode }}</code></strong></li>
+<li>Arhiva site static cu ultima generare carte: <strong><code>{{ book_data.site_archive_file if book_data.site_archive_file is not none else 'Nu exista inca date.' }}</code></strong></li>
 </ul>
 <h2 id="consola-rezultata-in-urma-executiei">Consola rezultata in urma executiei:</h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{{ book_data.console_out }}
@@ -945,7 +945,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 4, 2026</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 6, 2026</span>
       
     
   </small>

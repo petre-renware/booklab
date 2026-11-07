@@ -12,8 +12,8 @@ Aici puteti gestiona siteul cartii **{{ book_data.short_desc }}** (cod `{{ book_
 ## Date generale despre ultima generare:
 
 - Ultima generare de carte facuta in data: **`{{ book_data.last_build_date if book_data.last_build_date is not none else 'Nu exista inca date' }}`**
-- Proces terminat cu codul: **{{ book_data.excode }}**
-- Arhiva site static cu ultima generare carte: **`{{ book_data.last_build_location }}{{ book_data.code }}.site.tar`**
+- Proces terminat cu codul: **`{{ book_data.excode }}`**
+- Arhiva site static cu ultima generare carte: **`{{ book_data.site_archive_file if book_data.site_archive_file is not none else 'Nu exista inca date.' }}`**
 
 ## Consola rezultata in urma executiei:
 

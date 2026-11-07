@@ -230,6 +230,7 @@ def api_bbld(
         # add new fields to dict with data used 9n render9ng temolate
         book_data["console_out"] = console_out
         book_data["excode"] = excode
+        book_data["site_archive_file"] = my_book.getBookSitePackagePath()
         # render bbld_template and write it as html served from static site menu
         rendered_str = render_template(
             "bbld/bbld_template.html",
