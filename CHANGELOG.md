@@ -37,8 +37,8 @@
 ### CHANGELOG
 - for edit file try GoogleDocs
 
-* ... [0.10a_??] `booklabd.routes` create operation "build book"
-    - ... [0.10a_??] mk route ...bbld/startbld/
+* ... [0.10b95] clean project and generate all deliverables for 0.10 version
+    - [0.10.dev94] upd booklabd/routes.py mk route api/bbld/startbld/
     - [0.10.dev93] finalize upd bbld/bbld_template.md to show human data when there is no build
         * [a] upd My_Books class create method getBookSitePackagePath() to return physical full absolute path to book site archive
     - [0.10.dev92] upd bbld/bbld_template.md to show human data when there is no build
@@ -76,7 +76,6 @@
     - [0.10.dev71] updated `bk_build.sh` to redirect stdout to `./builds/<date-time>.stdout.txt` - 1st attempt
     - [0.10.dev70] create book `builds/` directory to keep book builds stdout output files
     - [0.10.69] removed `pex` package
-
 * [0.10a68] `booklab` clean code & documentation.
   Improve site technical info for own development, extend, customize purposes.
     - [0.10.dev67] `static site` create nav entry for routes-map doc (developer/810.05a-booklab_app_routes.md)

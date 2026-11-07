@@ -226,7 +226,7 @@ def api_bbld(
                 excode = None
             if not excode:
                 ret_str += "<br><br>No build done ...."
-            excode = int(str(excode))
+            excode = int(str(excode)) if excode is not None else None
         # add new fields to dict with data used 9n render9ng temolate
         book_data["console_out"] = console_out
         book_data["excode"] = excode
@@ -252,9 +252,9 @@ def api_bbld(
         )
         return ret_str
     if operation == "startbld":  # start a build 9n background (call `bk_build.sh &` for this book)
-        ...
-        #TODO ...
-        return ret_str  #...upd.me
+        my_book.buildBook()
+        redirect_path = url_quote(redirect_prefix + "/bbld/bbld_notification.html")
+        return redirect(redirect_path)
     abort(404, description = "Operation unknown.")
     return
 

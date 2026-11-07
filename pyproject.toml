@@ -136,7 +136,7 @@ build_all = { composite = [
     "gen_static_site",
     "pdm build"
     ] }
-bklab_srv = {shell = "src/booklab/scripts/server-run.sh"}  # run booklabd wsgi server
+booklabd = {shell = "src/booklab/scripts/server-run.sh"}  # run booklabd wsgi server
 
 
 [tool.pdm.version]
