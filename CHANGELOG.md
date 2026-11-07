@@ -39,25 +39,25 @@
 
 * ... [0.10a_??] `booklabd.routes` create operation "build book"
     - ... [0.10a_??] mk route ...bbld/startbld/
-    - [0.10.dev92] upd bbld/bbld_template.md to show human data when is no build
-    - [0.10.dev91] upd `MyBooks.buildBook()` set to run cmd in background
+    - [0.10.dev92] upd bbld/bbld_template.md to show human data when there is no build
+    - [0.10.dev91] upd `MyBooks.buildBook()` upd to run command in background
     - [0.10.dev90] mk `MyBooks.buildBook()`
     - [0.10.dev89] create a page to show last build and a butt to start a build in background
         * [a] 1st draft routes.py for page rendering
         * [b] a test draft of `...doc_src/bbld_template.md`
-        * [c] review & clean routes.py regarding case when no buils exiats anynore
-    - [0.10.dev88] upd boklabd route `.../bblab/finbld/` to update darabase ;JSON file)
-    - [0.10.dev87] fix bstatus display format bugs
+        * [c] review & clean routes.py regarding case when no buils exiats anymore
+    - [0.10.dev88] upd boklabd route `.../bblab/finbld/` to update database ;JSON file)
+    - [0.10.dev87] fix bstatus page for display format bugs
     - [0.10.dev86] upd bstatus for new build fields
     - [0.10.dev85] review & upd my_books/book_manager.py for finish a book build (method `finishAfterBuild()`)
         * [a] create skeleton for method `f0nishAfterBuild()
-        * [b] updatebooks_catalog.JSON add keys for last build: exit_code, location
+        * [b] update `books_catalog.JSON` add keys for last build: date, exit_code, location
         * [c] wr JSON db with data from [b]
         * [d] review & clean books_manager.py code
-    - [0.10.dev84] backbone (not fully functional) for  routes.py for route `/api/bbld/` make parameter `<string: operation>` to indicate build operation desired as:
-      - "" indicate to show Buiod functionality main page
-      - "startbld" to launch a build process in backgroud
-      - "finbld" callback when buildin process finish
+    - [0.10.dev84] backbone (partially functional) for routes.py for route `/api/bbld/` make parameter `<string: operation>` to indicate build operation desired as:
+      - `""`, `"showbld"` indicate to show Buiod functionality main page
+      - `"startbld"` to launch a build process in backgroud
+      - `"finbld"` callback when buildin process finish
     - [0.10.dev83] prepared static site directory `bbld/` for book build.
                    File `bbld_template.md` need to be upd for build functionality
     - [0.10.dev82] clean, upd to filename as book_code  & close bk_build.sh
