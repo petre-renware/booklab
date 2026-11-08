@@ -681,7 +681,21 @@
   
     <li class="md-nav__item">
       <a href="../developer/810.05a-booklab_DLD_specs.html" class="md-nav__link">
-        Doc API packet booklab
+        API packet booklab
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer/810.05a-booklab_app_routes.html" class="md-nav__link">
+        Harta rutelor booklabd
       </a>
     </li>
   
@@ -713,17 +727,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6" >
       
       
       
-        <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
           Design detaliat module
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_7_5">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7_6">
           <span class="md-nav__icon md-icon"></span>
           Design detaliat module
         </label>
@@ -999,7 +1013,12 @@
 <li>Creata de: <code>{{ book_data.created_by }}</code></li>
 <li>Creata la data: <code>{{ book_data.created_date }}</code></li>
 <li>Ultima actualizare: <code>{{book_data.last_update_date}}</code></li>
+<li>Date despre ultima generare a carti (build):<ul>
 <li>Ultima generare carte: <code>{{book_data.last_build_date}}</code></li>
+<li>Codul de terminare a procesului: <code>{{book_data.last_build_exit_code}}</code></li>
+<li>Locatia fisierelor rezultate: <code>{{book_data.last_build_location}}</code></li>
+</ul>
+</li>
 </ul>
 <h2 id="date-locatii">Date locatii</h2>
 <ul>
@@ -1020,7 +1039,7 @@
 <a class="md-button md-button--primary" href="/booklab/api/prvb/?code={{ book_data.code }}">Previzualizare</a></p>
 <p><a class="md-button md-button--primary" href="/booklab/api/edtb/?code={{ book_data.code }}">Editare materiale</a>
 <a class="md-button md-button--primary" href="/booklab/api/orgm/?code={{ book_data.code }}">Sectiuni carte</a></p>
-<p><a class="md-button md-button--primary" href="/booklab/api/bbld/?code={{ book_data.code }}">Generare carte</a>
+<p><a class="md-button md-button--primary" href="/booklab/api/bbld/showbld/?code={{ book_data.code }}">Pagina Generare carte</a>
 <a class="md-button md-button--primary" href="/booklab/api/dplb/?code={{ book_data.code }}">Livrare carte</a></p>
 <h2 id="help"><a href="../help/880.30-BSTATUS_usage.md">Help</a></h2>
 <h2 id="vedere-avansata-sectiunea-nevigare">Vedere avansata sectiunea nevigare</h2>
@@ -1038,7 +1057,7 @@ fisierul JSON (de mai sus) care este considerat "primar / master".</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 4, 2026</span>
       
     
   </small>
@@ -1064,7 +1083,7 @@ fisierul JSON (de mai sus) care este considerat "primar / master".</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Freeware
+      RENware Software Systems as open source release
     </div>
   
   

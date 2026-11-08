@@ -1,9 +1,25 @@
-8**BookLab by RENware Software Systems**
+**BookLab**
 
 [TOC]
 
 
 # CHANGELOG
+
+<!-- release template
+## tbd... [0.xx] - unreleased
+### FEATURES
+* ...required...
+### FIXED BUGS
+* ...optional...
+### DEPERECATED
+* ...optional...
+### REMOVED
+* ...optional...
+### CHANGELOG
+* ...required
+-->
+
+
 
 ## ... #TODO future things:
 * tbd... Jupiter Notebooks
@@ -12,34 +28,127 @@
 
 
 
-## tbd... [0.10] - unreleased
-Implement `bbld` and update `book_template`:
-
-* tbd... render book config (mkdocs.yml)
-  render from ../my_books/... and if not
-  render from string
-
-* tbd... `static site` list all system routes in "About Booklab" page
-
-* tbd... route `/api/bbld/`:
-  - upd bcat ref last update date
-  - for edit file try GoogleDocs
-
-
-* ... [0.10a ??] build my book mkdoks.yml
-    - ... upd `MyBook.renderBookConfig()` final code
 
 
 
 
 
+## [0.10] - 08.nov.2026
+### FEATURES
+* Implement Book build (`bbld`) functionality
+* Update `book_template` for book configuration template (mkdocs_template.yml)
+* Disppay data from last build (console out, exit code, date of build)
+* Implement core part of `booklab_cli` submodules __init()__ & parameter_types
+### CHANGELOG
+* [0.10b95] clean project and generate all deliverables for 0.10 version
+    - [0.10.dev94] upd booklabd/routes.py mk route api/bbld/startbld/
+    - [0.10.dev93] finalize upd bbld/bbld_template.md to show human data when there is no build
+        * [a] upd My_Books class create method getBookSitePackagePath() to return physical full absolute path to book site archive
+    - [0.10.dev92] upd bbld/bbld_template.md to show human data when there is no build
+    - [0.10.dev91] upd `MyBooks.buildBook()` upd to run command in background
+    - [0.10.dev90] mk `MyBooks.buildBook()`
+    - [0.10.dev89] create a page to show last build and a butt to start a build in background
+        * [a] 1st draft routes.py for page rendering
+        * [b] a test draft of `...doc_src/bbld_template.md`
+        * [c] review & clean routes.py regarding case when no buils exiats anymore
+    - [0.10.dev88] upd boklabd route `.../bblab/finbld/` to update database ;JSON file)
+    - [0.10.dev87] fix bstatus page for display format bugs
+    - [0.10.dev86] upd bstatus for new build fields
+    - [0.10.dev85] review & upd my_books/book_manager.py for finish a book build (method `finishAfterBuild()`)
+        * [a] create skeleton for method `f0nishAfterBuild()
+        * [b] update `books_catalog.JSON` add keys for last build: date, exit_code, location
+        * [c] wr JSON db with data from [b]
+        * [d] review & clean books_manager.py code
+    - [0.10.dev84] backbone (partially functional) for routes.py for route `/api/bbld/` make parameter `<string: operation>` to indicate build operation desired as:
+        * `""`, `"showbld"` indicate to show Buiod functionality main page
+        * `"startbld"` to launch a build process in backgroud
+        * `"finbld"` callback when buildin process finish
+    - [0.10.dev83] prepared static site directory `bbld/` for book build. File `bbld_template.md` need to be upd for build functionality
+    - [0.10.dev82] clean, upd to filename as book_code  & close bk_build.sh
+    - [0.10.dev81] final updated bk_build at end call url `/booklab/api/finbld/?code=<bk-code>`,exit_code=<exit code>
+    - [0.10.dev80] partial updated bk_build at end call url `/booklab/api/finbld/?code=<bk-code>`,exit_code=<exit code>
+    - [0.10.dev79] upd `booklbd` created skeleton for route `/api/finbld/`
+    - [0.10.dev78] updated bk_build.sh created variable <BOOK_CODE> with book code to be use ib url callings
+    - [0.10.dev77] updated bk_build.sh after run mkdocs if exit_code is 1, create a tar archive from own docs site and write in builds/ using the same filename as previously stated abd extension `.site.tar`
+    - [0.10.dev76] documented builds/ directory with a short REAMDE.txt file and updated action plan as TODOs in bk_build.sh and here
+    - [0.10.dev75] updated `bk_build.sh` to write nkdocs exit code to a file with the same name as console out but with extention `.excode.txt`
+    - [0.10.dev74] updated `bk_buikd.sh` to return the exit code of mkdocs run
+    - [0.10.dev73] updated `bk_build.sh` console output file name to `<yymmdd>h<hhmm>.out.txt`
+    - [0.10.dev72] updated `bk_build.sh` to redirect stdout & srderr to `./builds/<date_time_hh_mm.stdout.txt>` final solution
+    - [0.10.dev71] updated `bk_build.sh` to redirect stdout to `./builds/<date-time>.stdout.txt` - 1st attempt
+    - [0.10.dev70] create book `builds/` directory to keep book builds stdout output files
+    - [0.10.69] removed `pex` package
+* [0.10a68] `booklab` clean code & documentation.
+  Improve site technical info for own development, extend, customize purposes.
+    - [0.10.dev67] `static site` create nav entry for routes-map doc (developer/810.05a-booklab_app_routes.md)
+    - [0.10.dev66]  make routes gen script pdm call for it
+    - [0.10.dev65] `static site` made script that list all system routes 
+    - [0.10.dev64] install `pex` & activate `zipapp` Python standard PEX packaging  utilities as dev-environment and create a draft `src/booklab.pyz` as first proof of concept
+    - [0.10.dev63] `booklab_cli.parameter_types` finalize and "fix" skeleton
+    - [0.10.dev62] `booklab_cli.parameter_types` enhaced skeleton with "Annotate" params in Typer style
+    - [0.10.dev61] `booklab_cli.parameter_types` document skeleton
+    - [0.10.dev60] `booklab_cli.parameter_types` defined skeleton
+    - [0.10.dev59] `booklab_cli` define core part of submodule __init()__
+    - [0.10.dev58] `booklabd.routes` protect all routes request args with arg type and for invalid inputs in URI
+    - [0.10.dev57] `conf.gunicorn_config` document variables and add a dictionary with all of then (to be used in code to load them)
+    - [0.10.dev56] `pyproject.tonl` define package entry point and project.scripts section
+    - [0.10.dev55] `pyproject.toml` and other project management / admin
+    - [0.10.dev54] `my_books.books_manager` module
+* [0.10a53] `Results` add a `console_out` field + getter that construct it from "exit_text"
+    - [0.10.dev52] capture console print to console_out
+    - [0.10.dev51] rename "exit_html" to "console_out"
+    - [0.10'dev50] prepare "exit_html" to create a markdown result ad code-block (ie, using ``` tag)
+    - [0.10.dev49] make skeleton for propeety "exit_html" just as getter
+    - [0.10.dev48] import rich library in class Results to make it "independent" of `my_books.books_manager` module
+* [0.10a47] `MyBooks` clean & upd code +
+    make a "results from process" dataclass to be used by all methods that need to return at least POSIX pattern like (exit code, stdout, stderr)
+    - [0.10.dev46] upd "renderBookConfig()" method to use Results instance variable (`self.results`)
+    - [0.10.dev45] use "Results()" in "MyBook" as instance & class variable `results` with None default values
+    - [0.10.dev44] create `Results` dataclass as type in module "books_manager"
+    - [0.10.dev43] `MyBooks` upd all docstr to apecifi latteral effects of some methods (for ex updating files)
+    - [0.10.dev42] `MyBooks.renderBookConfig()` clean and upd docatring and make text output result more clear ref error message details
+    - [0.10.dev41] review & update method signature and docstring
+    - [0.10.dev40] `booklab` package upd docstring after 0.10a39
+* [0.10a39] `MyBooks.renderBookConfig()` and generate mkdoks.yml (step 2)
+    - [0.10.dev38] write out mkdocs.yml file
+    - [0.10.dev37] upd warning line of nav section with server current datetime
+    - [0.10.dev36] MyBooks.__init()__ test if navigation file exists
+    - [0.10.dev35] bugfix MyBooks.__init()__ @ self.db_book_nav and tst with False in renderBookConfig()
+    - [0.10.dev34] chk and clean code in scope
+    - [0.10.dev33] protect for config template file miising
+    - [0.10.dev32] protect written code against rendering errors that will not print from web app bu will block app with a vague msg
+    - [0.10.dev31] render_template using dedicated env (set out file as self.getBookPath() os.join "mkdoks.yml" and transform -> Path())
+    - [0.10.dev30] set tmplate as "book_code/mkdocs_template.yml"
+    - [0.10.dev29] make a copy of "book_template/mkdocs.yml"
+* [0.10a28] `MyBooks.renderBookConfig()` clean and improve step 1:
+    - [0.10.dev27] local book_data["nav"] insert a warning comment like in wrBookNav()
+    - [0.10.dev26] chg "wrBookNav()" with "getBookNav(format="yaml")" and copy it to book_data["nav"]
+    - [0.10.dev25] `MyBooks` add new attribute for  Jinja environment with rendering path in my books root
+    - [0.10.dev24] add packaga `jinja2` dependency
+    - [0.10.dev23] step-1 use "getBookData()" to bring all oth req data for render "mkdocs_template.yml"
+    - [0.10.dev22] review `mkdocs_template.yml` upd Jinja code for nav section with a complete YAML str as returned by getBookNav("yaml") method
+    - [0.10.dev21] drop steps execution mechanism (exec all or nothing) and drop step start parameter
+    - [0.10.dev20] eliminate step 3 (will be subject of other method) 
+* [0.10a19] `MyBookss` object clean
+    - [0.10.dev18] rename `MyBooks` to `MyBooks`
+    - [0.10.dev17] `MyBooks` rename MY_BOOKS_PATH attribute to MY_BOOKS_ROOT and comment all class variables
+    - [0.10.dev16] `MyBooks` clean MY_BOOKS_PATH attribute and make it equal to MY_BOOKS_ROOT created on booklabd init
+    - [0.10.dev15] `MyBooks` drop "book_path" attribute because exists mwthod `getBookPath()` that do that
+* [0.10a14] upd README.md with pj GitHub
+* [0.10a13] `MyBooks.wrBookNav()` tst before finish if YAML file can be open for read and return accordingly
+* [0.10a12] `MyBooks` refactored to drop "Flask app" attribute. Updated routes.py all MyBook calls.
+* [0.10a11] `MyBooks.renderBookConfig()` step 1 finished
 
 
 ## [0.9] - 28.oct.2025
-FIX bugs ref implement `bbld` and update `book_template`:
-    - [0.9.dev38] `routes.py` fix bugs in /api/prvb/ ref MyBook.getBookURL() merhod name
-* [0:9a35.post0] bugfixes
-    - [0.9.dev37] `MyVook.getBook()` fix bug when book nav JSON file is missing (use case: book does not physicallt exists)
+### FEATURES
+* Update `book_template`
+### FIXED BUGS
+* @ [0.9a35.post0]
+### CHANGELOG
+* [0.9.dev38] `routes.py` fix bugs in /api/prvb/ ref MyBook.getBookURL() merhod name
+* [0.9a35.post0] bugfixes
+    - [0.9.dev37] `MyBook.getBook()` fix bug when book nav JSON file is missing (use case: book does not physicallt exists)
     - [0.9.dev36] review & upd `MyBooks.renderBookConfig()` logic
 * [0.9a35] enhance, clean & improve `MyBooks` & `booklabd` components
     - [0.9.dev34] review & upd mkdocs_template.yml
@@ -54,7 +163,7 @@ FIX bugs ref implement `bbld` and update `book_template`:
     - [0.9.dev26] static site bstatus add book_navigation as json & yaml views in page, 
     - [0.9.dev25] `MyBook.getBookURL()` refactor to `getBookPreviewURL()` 
     - [0.9.dev24] bcat show catalog as JSON view in bottom of page for "advanced users"
-* [0.9a23] static site refactor nacigation
+* [0.9a23] static site refactor navigation
     - [0.9.dev22] new `/developer` page and and move from /help all specific files
     - [0.9.dev21] static site: refactor "Help" entry move all tech info to a new top entry "Pentru Dezvoptatori"
 * [0.9a20] `my_books/book_template` book navigation YAML and bstatus info

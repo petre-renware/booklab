@@ -23,7 +23,10 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ bo
 * Creata de: `{{ book_data.created_by }}`
 * Creata la data: `{{ book_data.created_date }}`
 * Ultima actualizare: `{{book_data.last_update_date}}`
-* Ultima generare carte: `{{book_data.last_build_date}}`
+* Date despre ultima generare a carti (build):
+    * Ultima generare carte: `{{book_data.last_build_date}}`
+    * Codul de terminare a procesului: `{{book_data.last_build_exit_code}}`
+    * Locatia fisierelor rezultate: `{{book_data.last_build_location}}`
 
 ## Date locatii
 
@@ -48,7 +51,7 @@ Aici puteti consulta detaliile cartii **{{ book_data.short_desc }}** (cod `{{ bo
 [Editare materiale](/booklab/api/edtb/?code={{ book_data.code }}){ .md-button .md-button--primary }
 [Sectiuni carte](/booklab/api/orgm/?code={{ book_data.code }}){ .md-button .md-button--primary }
 
-[Generare carte](/booklab/api/bbld/?code={{ book_data.code }}){ .md-button .md-button--primary }
+[Pagina Generare carte](/booklab/api/bbld/showbld/?code={{ book_data.code }}){ .md-button .md-button--primary }
 [Livrare carte](/booklab/api/dplb/?code={{ book_data.code }}){ .md-button .md-button--primary }
 
 

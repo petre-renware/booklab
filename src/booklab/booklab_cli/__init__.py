@@ -25,14 +25,27 @@ Options:
     -s, --status  Display detailes about a book
     -v, --version Display booklab application version
 
+Architecture; Linux standard (POSIX) CLI implemented over "Typer" framework.
 
-
-
-Architecture; Linux standard (POSIX) CLI
-
-Author; Petre Iordanescu (petre.iordanescu@gmail.com)
+Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
 
+from booklab import __version__
+from booklab.booklabd import api_app
+import booklab.booklabd.routes as bksrv
+import booklab.my_books.books_manager as mybkmgr
+#TODO.dbg... nxt is just an exampla with a fake oaram
+from .param_types import param_x
+from .param_types import UserId  # param ... used for ...
 
 
+#... test 4dbg
+a: param_x = f"Test of param_x"
+print(f"{a=} which is of {type(a)=}")
 
+
+#TODO when use param UserId (TupeNew) 
+#TODO is important to:
+#    with api_app.app_context():
+#  in order to use functions mapped on api/xxx/ routes
+#  call as bksrv.<func(...)>

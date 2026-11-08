@@ -10,6 +10,8 @@ Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 
 import os
 import w3lib.url
+from datetime import datetime
+from pathlib import Path
 
 from flask import render_template
 from flask import redirect
@@ -31,7 +33,7 @@ from booklab.booklabd import db_books
 from booklab.booklabd import db_system
 from booklab.booklabd import pjroot_location
 
-from booklab.my_books.books_manager import MyBook
+from booklab.my_books.books_manager import MyBooks
 
 
 # construct redirect url-path prefix (up to static site)
@@ -62,9 +64,11 @@ def api_bstatus(book_code: str = ...):
     """
     ret_str = "nothing to say..."
     if (book_code is ...) or (book_code is None):
-        book_code = request.args.get("code")
-    my_book = MyBook(
-        flask_app = api_app,
+        book_code = request.args.get("code", type = str)
+        if not book_code:
+            abort(404, description = "No Book specified.")
+            return
+    my_book = MyBooks(
         db = db_books,
         book_code = book_code
     )
@@ -102,7 +106,10 @@ def api_edtb(book_code: str = ...):
     **Query parameters:** `code` for database `boook_code`
     """
     if (book_code is ...) or (book_code is None):
-        book_code = request.args.get("code")
+        book_code = request.args.get("code", type = str)
+        if not book_code:
+            abort(404, description = "No Book specified.")
+            return
     #TODO before getting book test if status.closed is true and if then return a 400 err "Book not editable"
     ret_str = f"Page for <b>edtb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
@@ -117,7 +124,10 @@ def api_orgm(book_code: str = ...):
     **Query parameters:** `code` for database `boook_code`
     """
     if (book_code is ...) or (book_code is None):
-        book_code = request.args.get("code")
+        book_code = request.args.get("code", type = str)
+        if not book_code:
+            abort(404, description = "No Book specified.")
+            return
     ret_str = f"Page for <b>orgm</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO here should integrate wip static page
@@ -131,9 +141,11 @@ def api_prvb(book_code: str = ...):
     **Query parameters:** `code` for database `boook_code`
     """
     if (book_code is ...) or (book_code is None):
-        book_code = request.args.get("code")
-    my_book = MyBook(
-        flask_app = api_app,
+        book_code = request.args.get("code", type = str)
+        if not book_code:
+            abort(404, description = "No Book specified.")
+            return
+    my_book = MyBooks(
         db = db_books,
         book_code = book_code
     )
@@ -145,19 +157,110 @@ def api_prvb(book_code: str = ...):
 
 
 @api_app.route("/api/bbld/")
-def api_bbld(book_code: str = ...):
+@api_app.route("/api/bbld/<string:operation>/")
+def api_bbld(
+    operation: str = ...,
+    book_code: str = ...,
+    exit_code: int = ...
+) -> str:
     """Serve _Book build (bbld)_ functionality.
 
-    **Query parameters:** `code` for database `boook_code`
+    **Query parameters:**
+
+    - `operation` fot build exact operation as:
+      - "" display main building page
+      - "startbld" start a build process in backgroud
+      - "finbld" callbak when build process ends
+    - Next parameters are relevant only for "finbld" operation (otherwise are ignored):
+      - `code` for database `boook_code`
+      - `exit_code` exit code of buildind process when calkback in called
     """
     if (book_code is ...) or (book_code is None):
-        book_code = request.args.get("code")
+        book_code = request.args.get("code", type = str)
+        if not book_code:
+            abort(404, description = "No Book specified.")
+            return
+    if (exit_code is ...) or (exit_code is None):
+        exit_code = request.args.get("exit_code", type = int)
+        if not exit_code:
+            exit_code = 1  #  suposing faulted execution (ubix standard)
+    if (operation is ...) or (operation is None) or (operation == ""):
+        operation = "showbld"
     ret_str = f"Page for <b>bbld</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
-    #TODO here should integrate wip static page
-    ...
-    #TODO update books_catalog ref `last build / update date`
-    return ret_str
+    ret_str += f" operation = {operation}<br>"
+    ret_str += f" exit code = {exit_code}<br>"
+    # create an instance of MyBooks
+    my_book = MyBooks(
+        db = db_books,
+        book_code = book_code
+    )
+    book_data = my_book.getBook()
+    if not book_data:
+        abort(404, description = "Book not found, does not physically exist.")
+        return # this is not reachable but is left for evidence
+    #
+    # here stsrt the active core code
+    if operation == "showbld":  # display build page case
+        # get console out of last build
+        _file = book_data["last_build_location"]
+        if _file is None:
+            console_out = "Nu exista inca date"
+            excode = "Nu exista inca date"
+        else:
+            _file += "/" + book_code + ".out.txt"
+            console_out = None
+            try:
+                console_out = Path(_file).read_text()
+            except:
+                console_out = None
+            if not console_out:
+                ret_str += "<br><br>No build done ..."
+            # get exit code of last build
+            _file = book_data["last_build_location"]
+            _file += "/" + book_code + ".excode.txt"
+            excode = None
+            try:
+                excode = Path(_file).read_text()
+            except:
+                excode = None
+            if not excode:
+                ret_str += "<br><br>No build done ...."
+            excode = int(str(excode)) if excode is not None else None
+        # add new fields to dict with data used 9n render9ng temolate
+        book_data["console_out"] = console_out
+        book_data["excode"] = excode
+        book_data["site_archive_file"] = my_book.getBookSitePackagePath()
+        # render bbld_template and write it as html served from static site menu
+        rendered_str = render_template(
+            "bbld/bbld_template.html",
+            book_data = book_data
+        )
+        file_to_write = os.path.join(
+            docs_prefix,
+            "bbld/bbld.html"
+        )
+        with open(file_to_write, "w") as file:
+            file.write(rendered_str)
+        redirect_path = url_quote(redirect_prefix + "/bbld/bbld.html")
+        return redirect(redirect_path)
+    if operation == "finbld":  # callback for build finish case
+        _build_date = str(datetime.utcnow().strftime("%Y-%m-%d"))
+        my_book.finishAfterBuild(
+            build_date = _build_date,
+            exit_code = exit_code
+        )
+        return ret_str
+    if operation == "startbld":  # start a build 9n background (call `bk_build.sh &` for this book)
+        my_book.buildBook()
+        redirect_path = url_quote(redirect_prefix + "/bbld/bbld_notification.html")
+        return redirect(redirect_path)
+    abort(404, description = "Operation unknown.")
+    return
+
+
+#INFO: route is deprecated as covered by bbld route with parameter
+# @api_app.route("/api/finbld/")
 
 
 @api_app.route("/api/dplb/")
@@ -167,7 +270,10 @@ def api_dplb(book_code: str = ...):
     **Query parameters:** `code` for database `boook_code`
     """
     if (book_code is ...) or (book_code is None):
-        book_code = request.args.get("code")
+        book_code = request.args.get("code", type = str)
+        if not book_code:
+            abort(404, description = "No Book specified.")
+            return
     ret_str = f"Page for <b>dplb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO here should integrate wip static page

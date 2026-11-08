@@ -5,19 +5,16 @@ Booklab este o aplicatie destinata creari de manuale / documentatii in format el
 * p/n: `000-0163`
 * start date: 2023-Aug-29
 
-## Site web dedicat:
-- [Ultima versiune stabila](http://booklab.renware.eu)
-- [Ultima versiune in development](http://dev.renware.eu/booklab/)
+## Site-uri web dedicate:
+- [Demo site, ultima versiune stabila](http://booklab.renware.eu)
+- [Demo site, ultima versiune in development](http://dev.renware.eu/booklab/)
+- [GitHub in development](https://github.com/petre-renware/booklab/)
+- [GitHub versiune stabila](https://github.com/petre-renware/booklab/tree/master)
 
 
 ## Installation
 
 **IMPORTANT:** Creati un director distinct unde veti instala sistemul Booklab.
-
-Primul pas este instalarea Booklab care se face din siteul oficial Python pentru biblioteci (PyPi):
-```shell
-pip install booklab
-````
 
 Trebuie sa va asigurati inainte de instalare ca aveti instalat `python3` si `pip` si acestea pot fi rulate.
 Nu va faceti griji privind versiunea de Python ci doar sa fie *Python 3*.
@@ -27,6 +24,16 @@ Pentru a face acest lucru cit mai automat si cu minim de efort va recomandan sa 
 ```shell
 pip install pdm
 ```
+
+Primul pas este instalarea Booklab care se face din siteul oficial Python pentru biblioteci (PyPi):
+```shell
+pdm add booklab
+````
+
+_**NOTA:**_ Daca nu doriti instalarea componentei de management PDM atunci puteti face
+instalarea in mod "clasic" utilizind `pip inztall booklab` dar cade in sarcina
+dvs de a crea mediu de izolare (python environment si sa asigurati activarea acestuia.
+
 
 Descarcati fisierul de definire a proiectului `pypriject.toml` astfel:
 ```shell
