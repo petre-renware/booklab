@@ -37,7 +37,8 @@
 ### CHANGELOG
 - for edit file try GoogleDocs
 
-* ... [0.10b95] clean project and generate all deliverables for 0.10 version
+* ... [0.10b..] clean project and generate all deliverables for 0.10 version
+    - [0.10.dev95] test & clean project
     - [0.10.dev94] upd booklabd/routes.py mk route api/bbld/startbld/
     - [0.10.dev93] finalize upd bbld/bbld_template.md to show human data when there is no build
         * [a] upd My_Books class create method getBookSitePackagePath() to return physical full absolute path to book site archive
@@ -57,11 +58,10 @@
         * [c] wr JSON db with data from [b]
         * [d] review & clean books_manager.py code
     - [0.10.dev84] backbone (partially functional) for routes.py for route `/api/bbld/` make parameter `<string: operation>` to indicate build operation desired as:
-      - `""`, `"showbld"` indicate to show Buiod functionality main page
-      - `"startbld"` to launch a build process in backgroud
-      - `"finbld"` callback when buildin process finish
-    - [0.10.dev83] prepared static site directory `bbld/` for book build.
-                   File `bbld_template.md` need to be upd for build functionality
+        * `""`, `"showbld"` indicate to show Buiod functionality main page
+        * `"startbld"` to launch a build process in backgroud
+        * `"finbld"` callback when buildin process finish
+    - [0.10.dev83] prepared static site directory `bbld/` for book build. File `bbld_template.md` need to be upd for build functionality
     - [0.10.dev82] clean, upd to filename as book_code  & close bk_build.sh
     - [0.10.dev81] final updated bk_build at end call url `/booklab/api/finbld/?code=<bk-code>`,exit_code=<exit code>
     - [0.10.dev80] partial updated bk_build at end call url `/booklab/api/finbld/?code=<bk-code>`,exit_code=<exit code>
