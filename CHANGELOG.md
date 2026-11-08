@@ -28,17 +28,19 @@
 
 
 
-## tbd... [0.10] - unreleased
+
+
+
+
+
+## [0.10] - 08.nov.2026
 ### FEATURES
 * Implement Book build (`bbld`) functionality
 * Update `book_template` for book configuration template (mkdocs_template.yml)
 * Disppay data from last build (console out, exit code, date of build)
 * Implement core part of `booklab_cli` submodules __init()__ & parameter_types
 ### CHANGELOG
-- for edit file try GoogleDocs
-
-* ... [0.10b..] clean project and generate all deliverables for 0.10 version
-    - [0.10.dev95] test & clean project
+* [0.10b95] clean project and generate all deliverables for 0.10 version
     - [0.10.dev94] upd booklabd/routes.py mk route api/bbld/startbld/
     - [0.10.dev93] finalize upd bbld/bbld_template.md to show human data when there is no build
         * [a] upd My_Books class create method getBookSitePackagePath() to return physical full absolute path to book site archive
