@@ -1,0 +1,6 @@
+
+--- ATENTIE: NU REDENUMITI SAU MODIFICATI MANUAL ACEST DIRECTOR.
+Riscati sa il desincronizati din baza de date cu carti si sa pierdeti informatiile deja introduse.
+
+--- WARNING: DO NOT MANUALLY RENAME OR CHANGE THIS DIRECTORY.
+Doing so will create the risk to loose any book entered and saved data.

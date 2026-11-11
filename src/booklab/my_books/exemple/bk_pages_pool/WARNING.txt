@@ -1,0 +1,8 @@
+WARNING / ATENTIONARE:
+
+- nu stergeti / editati manual acest director si nici fisiere din el
+- acest director si toate fisierele din el sunt intretinute automat de sistem
+- ALTERAREA MANUALA POATE CONDUCE LA SITUATII DE HAZARD NEPREVAZUTE
+
+
+

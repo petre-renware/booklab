@@ -1,0 +1,14 @@
+{
+    "data": [
+        {"Acasa-Home": "index.md"},
+        {"Ghid configurare": "guides/how_organize_book.md"},
+        {"nav item 1 lvl 1": "anchor"},
+        {"nav item 2 lvl 1 --> 2": [
+            {"nav item 1 lvl 2": "anchor"},
+            {"nav item 2 lvl 2": "anchor"}
+        ]}
+    ]
+}
+
+
+

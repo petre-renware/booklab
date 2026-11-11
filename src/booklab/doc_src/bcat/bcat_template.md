@@ -5,6 +5,8 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 
 ## Lista cartilor
 
+{% raw %}
+
 [Creare carte noua](/booklab/api/newb/)
 
 <table>
@@ -22,7 +24,6 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
         </tr>
     </thead>
     <tbody>
-        {% raw %}
         {% for book in bcat_data %}
         <tr>
             <td>{{ book.id }}</td>
@@ -38,7 +39,6 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
             <td>{{ book.created_date }}</td>
         </tr>
         {% endfor %}
-        {% endraw %}
     </tbody>
 </table>
 
@@ -51,6 +51,8 @@ Bine ati venit la *Catalogul cartilor dumneavoastra*. Aici puteti vizualiza cart
 Mai jos este prezentat catalogul cartilor in forma sa "bruta" de fisier-date JSON:
 
 ```json
-{% include '../developer/books_catalog.json' %}
+{% include '../../my_books/books_catalog.json' %}
 ```
+
+{% endraw %}
 

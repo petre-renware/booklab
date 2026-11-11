@@ -1,0 +1,149 @@
+##################
+# WARNING: do not manually edit this file.
+##################
+
+site_name: Numele cartii (si al site-ului daca se publica in internet)
+site_author: Autorul cartii
+copyright: Copyright - Informatia ref detinatorul drepturilor de autor
+
+
+
+# book navigation section
+# nav section AUTO GENERATED @2025-11-21 04:08:53. DO NOT MODIFY it.
+nav:
+- Acasa-Home: index.md
+- Ghid configurare: guides/how_organize_book.md
+- nav item 1 lvl 1: anchor
+- nav item 2 lvl 1 --> 2:
+  - nav item 1 lvl 2: anchor
+  - nav item 2 lvl 2: anchor
+
+
+
+
+markdown_extensions:
+    - admonition
+    - tables
+    - pymdownx.details
+    - pymdownx.superfences:
+        custom_fences: #NOTE: [petre iordanescu]: is very important to respect syntax ref `-` character at beginning of items (otherwise not right JSON result !)
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_code_format
+    - footnotes
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
+    - def_list
+    - attr_list
+    - md_in_html
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    # super fences for code bloks syntax highlight
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+
+
+
+
+# extra:
+#  alternate: #NOTE language options - FUTURE FEATURE - should first have a translation...
+#    - name: English
+#      link: /
+#      lang: en
+#    - name: Romanian
+#      link: /ro/
+#      lang: ro
+
+
+
+
+#NOTE required to render `mermaid` diagrams
+extra_javascript:
+  - optionalConfig.js
+  - https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js
+  - extra-loader.js
+
+
+
+
+
+plugins:
+    - search
+    - include-markdown
+    - table-reader #NOTE used for staic tables rendering from various sources (CSV, JSON, etc as available in Pandas)
+    - macros #NOTE use external jinja variables and macros (see `https://mkdocs-macros-plugin.readthedocs.io/en/latest/`)
+    - markdown-exec #NOTE Python execution inside markdown files (execution at build time, "compilation like" NOT dynamically NOT JavaScript)
+    - git-revision-date-localized
+#    - pdf-export  #NOTE DO NOT USE this as does not render mermaid in PDF docs
+#    - print-site: #NOTE_IMPORTANT_#NOTE put `print-site` plug in BEFORE `pdf-with-js` in order to works the workaround wit a fake `print_page.md` that will determine generation of 'print_page.pdf' as any other page generated pdf by `pdf-with-js`; ingnore warning ` [mkdocs-print-site] 'print-site' should be defined as the *last* plugin,to ensure...`
+        # add_to_navigation: true #NOTE not needed here
+        # print_page_title: 'Complete BookLab Manual' #NOTE not needed here
+#        add_full_urls: true
+#        add_table_of_contents: true
+#    - pdf-with-js:
+#        enable: true
+
+
+
+#NOTE provide material theme
+theme:
+    # language: en #NOTE FUTURE FEATURE - should first have a translation...
+    logo: pictures/booklab_logo.png
+    name: material
+    features:
+        - navigation.tabs # left navigation side bar, all level 1 will be shown as top navigation bar
+        - navigation.tracking
+        - navigation.tabs.sticky
+        - navigation.path
+        #- toc.integrate #NOTE integrates all navigation only in left nav bar
+    palette:
+        primary: blue # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/ for other color options
+        accent: blue
+    icon:
+        admonition:
+            note: fontawesome/solid/note-sticky
+            abstract: fontawesome/solid/book
+            info: fontawesome/solid/circle-info
+            tip: fontawesome/solid/bullhorn
+            success: fontawesome/solid/check
+            question: fontawesome/solid/circle-question
+            warning: fontawesome/solid/triangle-exclamation
+            failure: fontawesome/solid/bomb
+            danger: fontawesome/solid/skull
+            bug: fontawesome/solid/robot
+            example: fontawesome/solid/flask
+            quote: fontawesome/solid/quote-left
+
+
+
+
+
+
+
+
+# or can use readthedocstheme
+# theme: readthedocs
+
+
+# directory where start to search or markdown sources
+docs_dir: './doc_src'
+
+# root directory where to be generated portal
+site_dir: './docs'
+
+# other useful configurations
+use_directory_urls: false # allow link between pages to work properly as static site an "callable" as `file:///...`
+
+
+#NOTE dirs to exclude at BookLab project creation
+exclude_docs: |
+  pyenv/
+

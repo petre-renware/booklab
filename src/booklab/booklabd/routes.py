@@ -200,7 +200,6 @@ def api_bbld(
         abort(404, description = "Book not found, does not physically exist.")
         return # this is not reachable but is left for evidence
     #
-    # here stsrt the active core code
     if operation == "showbld":  # display build page case
         # get console out of last build
         _file = book_data["last_build_location"]
@@ -244,13 +243,15 @@ def api_bbld(
             file.write(rendered_str)
         redirect_path = url_quote(redirect_prefix + "/bbld/bbld.html")
         return redirect(redirect_path)
+    #
     if operation == "finbld":  # callback for build finish case
-        _build_date = str(datetime.utcnow().strftime("%Y-%m-%d"))
+        _build_date = str(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"))
         my_book.finishAfterBuild(
             build_date = _build_date,
             exit_code = exit_code
         )
         return ret_str
+    #
     if operation == "startbld":  # start a build 9n background (call `bk_build.sh &` for this book)
         my_book.buildBook()
         redirect_path = url_quote(redirect_prefix + "/bbld/bbld_notification.html")
