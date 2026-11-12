@@ -1,0 +1,1 @@
+{% include '../../my_books/books_catalog.json' %}

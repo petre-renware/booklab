@@ -24,6 +24,7 @@ nav:
         - Arhitectura sistemului: 810-DSGN/810.02-System_Landscape.md
         - API packet booklab: developer/810.05a-booklab_DLD_specs.md
         - Harta rutelor booklabd: developer/810.05a-booklab_app_routes.md
+        - Catalogul cartilor format JSON: developer/bcat_json.md
         - Versiunea in format text: /booklab/api/version/
         - Design detaliat module:
             - modul Initializare sistem (sysInit): 810-DSGN/810.05a-sysInit_System_Process.md
