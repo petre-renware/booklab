@@ -34,6 +34,7 @@
 * [... 0.11b...] ...???...
     - ... [0.11.dev...] upd MyBooks mk checkDirStructure() method
     - ... [0.11.dev...] upd MyBooks with directory structure as a list for new checkDirStructure() method
+    - [0.11.dev7] install Flask WTF package
     - [0.11.dev6] new route for developers that returns catalog as JSON
 * [0.11a5] prepare environment
     - [0.11.dev4] clean book_tenplate/ and my_books/
