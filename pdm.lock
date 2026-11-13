@@ -5,7 +5,7 @@
 groups = ["default", "dev", "test"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:2f929755493888c93189f0557945c17f7d1957b07c43b5ac67cedde58d8e2701"
+content_hash = "sha256:2ca8760d6e9672313c3a69c227bc630f541a5f7785392df6936d650254b3cbf7"
 
 [[metadata.targets]]
 requires_python = ">=3.10"
@@ -182,20 +182,6 @@ groups = ["default"]
 files = [
     {file = "blinker-1.9.0-py3-none-any.whl", hash = "sha256:ba0efaa9080b619ff2f3459d1d500c57bddea4a6b424b60a91141db6fd2f08bc"},
     {file = "blinker-1.9.0.tar.gz", hash = "sha256:b4ce2265a7abece45e7cc896e98dbebe6cead56bcf805a3d23136d145f5445bf"},
-]
-
-[[package]]
-name = "bootstrap-flask"
-version = "2.6.0"
-summary = "Bootstrap 4 & 5 helper for your Flask projects."
-groups = ["default"]
-dependencies = [
-    "Flask",
-    "WTForms",
-]
-files = [
-    {file = "bootstrap_flask-2.6.0-py3-none-any.whl", hash = "sha256:2a0ff1df295b143020743949419c955de23ffc3465518f4bf5bac32f90deaa52"},
-    {file = "bootstrap_flask-2.6.0.tar.gz", hash = "sha256:2b0849f77a743e117716a75406b0312f0783658589519b0e922054bfb3102b9f"},
 ]
 
 [[package]]
