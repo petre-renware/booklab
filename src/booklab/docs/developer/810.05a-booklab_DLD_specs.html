@@ -974,10 +974,11 @@
 </li>
 </ul>
 </li>
-<li><a href="#booklabmy_booksexemple">booklab.my_books.exemple</a></li>
+<li><a href="#booklabmy_booksexample">booklab.my_books.example</a></li>
 <li><a href="#booklabdoc_src">booklab.doc_src</a></li>
 <li><a href="#booklabscripts">booklab.scripts</a></li>
 <li><a href="#booklab__version__">booklab.__version__</a></li>
+<li><a href="#booklabbooklabdbook_form">booklab.booklabd.book_form</a></li>
 <li><a href="#booklabbooklabdroutes">booklab.booklabd.routes</a><ul>
 <li><a href="#api_newb">api_newb</a></li>
 <li><a href="#api_bstatus">api_bstatus</a></li>
@@ -1287,8 +1288,8 @@ route <code>/api/bbld/finbld/ ..:</code> sending all neccesary query parameters.
 <ul>
 <li><em>on disk:</em> creates new directory &amp; filrs on disk represing current book physical location.</li>
 </ul>
-<p><a id="booklab.my_books.exemple"></a></p>
-<h1 id="booklabmy_booksexemple">booklab.my_books.exemple</h1>
+<p><a id="booklab.my_books.example"></a></p>
+<h1 id="booklabmy_booksexample">booklab.my_books.example</h1>
 <p>Contains the book template used when create a new book (<code>newb</code> funxtion, <code>/api/newb/</code> booklabd route).</p>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.doc_src"></a></p>
@@ -1308,12 +1309,16 @@ route <code>/api/bbld/finbld/ ..:</code> sending all neccesary query parameters.
 <p><strong><strong>version</strong>.py</strong> module that contains Booklab aplication version number.</p>
 <p>NOTE: this module is imported and made "public" in <code>booklab._init__.py</code></p>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
+<p><a id="booklab.booklabd.book_form"></a></p>
+<h1 id="booklabbooklabdbook_form">booklab.booklabd.book_form</h1>
+<p>Module for description of book data as fields (name, type, valudation rules) to be used in HTML forms.</p>
+<p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.booklabd.routes"></a></p>
 <h1 id="booklabbooklabdroutes">booklab.booklabd.routes</h1>
 <p>Module that serve <code>booklabd</code> interface api-functions as HTTP routes</p>
 <p>Important variables:</p>
 <ul>
-<li><code>booklab.boolabd.api_app</code>: web application object (aka Flask.app)</li>
+<li><code>booklab.booklabd.api_app</code>: web application object (aka Flask.app)</li>
 </ul>
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.booklabd.routes.api_newb"></a></p>
