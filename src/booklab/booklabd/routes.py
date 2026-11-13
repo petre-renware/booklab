@@ -3,7 +3,7 @@ Module that serve `booklabd` interface api-functions as HTTP routes
 
 Important variables:
 
-- `booklab.boolabd.api_app`: web application object (aka Flask.app)
+- `booklab.booklabd.api_app`: web application object (aka Flask.app)
 
 Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 """
