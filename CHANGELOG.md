@@ -36,8 +36,9 @@
 * [... 0.11b...] ...???...
     - ... [0.11.dev...] upd MyBooks mk checkDirStructure() method
     - ... [0.11.dev...] upd MyBooks with directory structure as a list for new checkDirStructure() method
-* [... 0.11b...] form to coplect book general metadata
-    - [... 0.11.dev...] finalize `book_form.py`
+* [... 0.11b...] form to colect book general metadata
+    - [0.11.dev...] ... 
+    - [0.11.dev10] mk 1st `book_form.py`
     - [0.11.dev9] fix bug with example book name wrong typed
     - [0.11.dev8] 1st booklabd module book_form.py containing book fields and rules to collect info
     - [0.11.dev7] install Flask WTF package

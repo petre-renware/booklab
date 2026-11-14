@@ -1,6 +1,5 @@
 INFO    -  [macros] - Macros arguments: {'module_name': 'main', 'modules': [], 'render_by_default': True, 'include_dir': '', 'include_yaml': [], 'j2_block_start_string': '', 'j2_block_end_string': '', 'j2_variable_start_string': '', 'j2_variable_end_string': '', 'on_undefined': 'keep', 'on_error_fail': False, 'verbose': False}
 INFO    -  [macros] - Extra filters (module): ['pretty']
-WARNING -  [git-revision-date-localized-plugin] '/projects/booklab/src/booklab/my_books/example/doc_src' has no git logs, using current timestamp
 INFO    -  Cleaning site directory
 INFO    -  Building documentation to directory: /projects/booklab/src/booklab/my_books/example/docs
 INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
@@ -8,7 +7,4 @@ INFO    -  The following pages exist in the docs directory, but are not included
 WARNING -  A relative path to 'anchor' is included in the 'nav' configuration, which is not found in the documentation files.
 WARNING -  A relative path to 'anchor' is included in the 'nav' configuration, which is not found in the documentation files.
 WARNING -  A relative path to 'anchor' is included in the 'nav' configuration, which is not found in the documentation files.
-WARNING -  [git-revision-date-localized-plugin] '/projects/booklab/src/booklab/my_books/example/doc_src/index.md' has no git logs, using current timestamp
-WARNING -  [git-revision-date-localized-plugin] '/projects/booklab/src/booklab/my_books/example/doc_src/guides/how_organize_book.md' has no git logs, using current timestamp
-WARNING -  [git-revision-date-localized-plugin] '/projects/booklab/src/booklab/my_books/example/doc_src/guides/wip.md' has no git logs, using current timestamp
-INFO    -  Documentation built in 1.08 seconds
+INFO    -  Documentation built in 0.79 seconds

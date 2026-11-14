@@ -22,7 +22,6 @@ from booklab.__version__ import __version__
 from booklab import EXT_PATH
 from booklab import FULL_EXT_URL
 from booklab import STATIC_SITE_ROOT
-''' #TODO end of <what keep...>
 
 from booklab.booklabd import PROJECT_ROOT
 from booklab.booklabd import api_app
@@ -32,6 +31,8 @@ from booklab.booklabd import pjroot_location
 
 from booklab.my_books.books_manager import MyBooks
 
+from wtforms import Form, BooleanField, StringField, validators
+
 
 # construct redirect url-path prefix (up to static site)
 redirect_prefix = url_quote(
@@ -40,7 +41,25 @@ redirect_prefix = url_quote(
 )
 # construct prefix file-path for docs (static site) directory
 docs_prefix = os.path.join(STATIC_SITE_ROOT)
+''' #TODO end of: what see 0f keep...
 
 
-#TODO ...code from here...
+from wtforms import Form, BooleanField, StringField, validators
+
+
+class BookInfo(Form):
+    username = StringField(
+        "Username",
+        [validators.Length(min=4, max=25)]
+    )
+    email = StringField(
+        "Email Address",
+        [validators.Length(min=6, max=35)]
+    )
+    accept_rules = BooleanField(
+        "I accept the site rules",
+        [validators.InputRequired()]
+    )
+
+
 
