@@ -30,16 +30,20 @@
 ## [... 0.11] - not released
 ### FEATURES
 * Implement New Book (`newb`) functionality
+### F9X3D BUGS
+* `example` book with wrong saved name and not build book
 ### CHANGELOG
 * [... 0.11b...] ...???...
     - ... [0.11.dev...] upd MyBooks mk checkDirStructure() method
     - ... [0.11.dev...] upd MyBooks with directory structure as a list for new checkDirStructure() method
+* [... 0.11b...] form to coplect book general metadata
+    - [... 0.11.dev...] finalize `book_form.py`
     - [0.11.dev9] fix bug with example book name wrong typed
     - [0.11.dev8] 1st booklabd module book_form.py containing book fields and rules to collect info
     - [0.11.dev7] install Flask WTF package
     - [0.11.dev6] new route for developers that returns catalog as JSON
 * [0.11a5] prepare environment
-    - [0.11.dev4] clean book_tenplate/ and my_books/
+    - [0.11.dev4] clean book_template/ and my_books/
     - [0.11.dev3] clean static site for obsolete data
     - [0.11.dev2] upd routes.bbld/finbld/ route to add to finish date hour min and sec>
     - [0.11.dev1] upd bk_build.sh to create directory /builds if not exits

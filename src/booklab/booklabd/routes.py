@@ -18,7 +18,6 @@ from flask import redirect
 from flask import url_for
 from flask import make_response
 from flask import request
-from flask import request
 from flask import abort
 from werkzeug.urls import quote as url_quote
 

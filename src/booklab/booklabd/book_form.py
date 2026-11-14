@@ -9,11 +9,11 @@ import w3lib.url
 from datetime import datetime
 from pathlib import Path
 
+''' #TODO chk what keep
 from flask import render_template
 from flask import redirect
 from flask import url_for
 from flask import make_response
-from flask import request
 from flask import request
 from flask import abort
 from werkzeug.urls import quote as url_quote
@@ -22,6 +22,7 @@ from booklab.__version__ import __version__
 from booklab import EXT_PATH
 from booklab import FULL_EXT_URL
 from booklab import STATIC_SITE_ROOT
+''' #TODO end of <what keep...>
 
 from booklab.booklabd import PROJECT_ROOT
 from booklab.booklabd import api_app
