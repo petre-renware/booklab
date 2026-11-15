@@ -39,7 +39,7 @@
 * [... 0.11b...] form to colect book general metadata
     - ... [0.11.dev...]
     - ... [0.11.dev...]
-    - ... [0.11.dev...]
+    - [0.11.dev12] mi 3rd `book_form.py` by adding realneccesary book fields
     - [0.11.dev11] mk 2nd `book_form.py` by adding import for nrwfield types (TextAreaField, DateTimeField)
     - [0.11.dev10] mk 1st `book_form.py`
     - [0.11.dev9] fix bug with example book name wrong typed
