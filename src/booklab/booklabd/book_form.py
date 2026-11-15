@@ -44,7 +44,8 @@ docs_prefix = os.path.join(STATIC_SITE_ROOT)
 ''' #TODO end of: what see 0f keep...
 
 
-from wtforms import Form, BooleanField, StringField, validators
+from wtforms import Form, validators
+from wtforms import StringField, DateTimeField, TextAreaField, BooleanField
 
 
 class BookInfo(Form):
