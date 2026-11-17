@@ -38,6 +38,7 @@
     - ... [0.11.dev...] upd MyBooks with directory structure as a list for new checkDirStructure() method
 * [... 0.11b...] form to colect book general metadata
     - ... [0.11.dev...]
+    - [0.11.dev14] fix `form_macro.jinja`
     - [0.11.dev13] `form_macro.jinja` Jinja macro for form fields in ...doc_src/developers/
     - [0.11.dev12] mi 3rd `book_form.py` by adding realneccesary book fields
     - [0.11.dev11] mk 2nd `book_form.py` by adding import for nrwfield types (TextAreaField, DateTimeField)
