@@ -45,7 +45,7 @@ docs_prefix = os.path.join(STATIC_SITE_ROOT)
 
 
 from wtforms import Form, validators
-from wtforms import StringField, DateTimeField, TextAreaField, BooleanField
+from wtforms import StringField, DateTimeField, TextAreaField, BooleanField, SubmitField
 
 
 class BookInfo(Form):
@@ -56,4 +56,4 @@ class BookInfo(Form):
     notes = StringField("Note", [validators.length(min = 6, max = 250)])
     closed = BooleanField("Editabila", [validators.InputRequired()])
     # NOTE: all other book_catalog fields are calculated by system
-
+    save = SubmitField("Submit")
