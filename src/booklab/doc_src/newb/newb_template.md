@@ -1,4 +1,6 @@
 
+{% raw %}
+
 {% from "../developer/form_macro.jinja" import render_field %}
 
 <form method=post>
@@ -12,3 +14,6 @@
   </dl>
   <p><input type=submit value=Save>
 </form>
+
+{% endraw %}
+

@@ -3,6 +3,8 @@
 ## Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 ##
 
+{% raw %}
+
 {% macro render_field(field) %} 
   <dt>{{ field.label }}</dt>
   <dd>{{ field(**kwargs)|safe }}
@@ -16,4 +18,4 @@
   </dd>
 {% endmacro %}
 
-
+{% endraw %}
