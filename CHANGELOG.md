@@ -38,6 +38,7 @@
     - ... [0.11.dev...] upd MyBooks with directory structure as a list for new checkDirStructure() method
 * [... 0.11b...] form to colect book general metadata
     - ... [0.11.dev...]
+    - ... [0.11.dev18] logic  of newb/ route
     - [0.11.dev17] protect `bnew` markbown files with raw-endraw escape seqfir first mkdocs compilation
     - [0.11.dev16] mk HTML form for new book (doc_src/newb/newb_template.md)
     - [0.11.dev15] book_form.py add a Submit / Save button

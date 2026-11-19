@@ -45,14 +45,24 @@ redirect_prefix = url_quote(
 docs_prefix = os.path.join(STATIC_SITE_ROOT)
 
 
-@api_app.route("/api/newb/")
+@api_app.route("/api/newb/", methods=["GET", "POST"])
 def api_newb():
     """Serve _New book (newb)_ functionality.
     """
     book_code = request.args.get("code")
+    # ... seems useles butkept for future edit book info extension
     ret_str = f"Page for <b>newb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
-    #TODO here should integrate wip static page
+    #TODO logic start here ...
+    #    init a Form inst with data from request.form
+    ...  #TODO wip here
+    #    chk if method is POST and form.validate
+    #    ...logic for true
+    #        save data from form.<field>.data
+    ...
+    #    ...logic for false
+    #        render newb_template and return it
+    ...
     return ret_str
 
 

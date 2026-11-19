@@ -1323,7 +1323,7 @@ route <code>/api/bbld/finbld/ ..:</code> sending all neccesary query parameters.
 <p>Author: Petre Iordanescu (petre.iordanescu@gmail.com)</p>
 <p><a id="booklab.booklabd.routes.api_newb"></a></p>
 <h4 id="api_newb">api_newb</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/newb/&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nd">@api_app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/api/newb/&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;POST&quot;</span><span class="p">])</span>
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">def</span> <span class="nf">api_newb</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Serve <em>New book (newb)</em> functionality.</p>
