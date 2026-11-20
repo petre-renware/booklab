@@ -55,15 +55,27 @@ def api_newb():
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     #TODO logic start here ...
     #    init a Form inst with data from request.form
-    ...  #TODO wip here
-    #    chk if method is POST and form.validate
+    form = bkf.BookInfo(request.form)
+    if request.method == "POST" and form.validate():
+        ...  #TODO wip here
     #    ...logic for true
     #        save data from form.<field>.data
     ...
     #    ...logic for false
     #        render newb_template and return it
-    ...
-    return ret_str
+    rendered_str = render_template(
+        "newb/newb_template.html",
+        form = form
+    )
+    file_to_write = os.path.join(
+        docs_prefix,
+        "newb/newb.html"
+    )
+    with open(file_to_write, "w") as file:
+        file.write(rendered_str)
+    redirect_path = url_quote(redirect_prefix + "/newb/newb.html")
+    return redirect(redirect_path)
+    #...tst... return ret_str
 
 
 @api_app.route("/api/bstatus/")

@@ -896,7 +896,7 @@
 
   <h1>Newb template</h1>
 
-<p>{% from "../developer/form_macro.jinja" import render_field %}</p>
+<p>{% from "/developer/form_macro.jinja" import render_field %}</p>
 <form method=post>
   <dl>
     {{ render_field(form.short_desc) }}

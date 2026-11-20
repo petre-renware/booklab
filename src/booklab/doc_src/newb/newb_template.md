@@ -1,7 +1,7 @@
 
 {% raw %}
 
-{% from "../developer/form_macro.jinja" import render_field %}
+{% from "/developer/form_macro.jinja" import render_field %}
 
 <form method=post>
   <dl>
