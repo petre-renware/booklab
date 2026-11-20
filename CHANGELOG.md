@@ -36,12 +36,16 @@
 * [... 0.11b...] ...???...
     - ... [0.11.dev...] upd MyBooks mk checkDirStructure() method
     - ... [0.11.dev...] upd MyBooks with directory structure as a list for new checkDirStructure() method
+    - ... [0.11.dev...] upd MyBooks method create physical book
+          cpy tmpl ok disk
+          get book data using ptev route
+          adjust phy disk
 * [... 0.11b...] form to colect book general metadata
     - ... [0.11.dev...]
     - ... [0.11.dev...] newb/ make save / submit butt
     - [0.11.dev19] 1st newb/ route coding
     - [0.11.dev18] logic of newb/ route
-    - [0.11.dev17] protect `bnew` markbown files with raw-endraw escape seqfir first mkdocs compilation
+    - [0.11.dev17] protect `bnew` markdown files with raw-endraw escape seqfir first mkdocs compilation
     - [0.11.dev16] mk HTML form for new book (doc_src/newb/newb_template.md)
     - [0.11.dev15] book_form.py add a Submit / Save button
     - [0.11.dev14] fix `form_macro.jinja`
