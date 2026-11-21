@@ -1281,9 +1281,11 @@ route <code>/api/bbld/finbld/ ..:</code> sending all neccesary query parameters.
 </ul>
 <p><a id="booklab.my_books.books_manager.MyBooks.createPhysicalBook"></a></p>
 <h4 id="createphysicalbook">createPhysicalBook</h4>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span> <span class="nf">createPhysicalBook</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span> <span class="nf">createPhysicalBook</span><span class="p">(</span><span class="n">book_info</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </span></code></pre></div>
 <p>Create physical book directory as copy of "book_template".</p>
+<p><strong>Arguments</strong>:</p>
+<p><code>book_info</code> contains book info aquired by web or cli app</p>
 <p><em>Lateral effects:</em></p>
 <ul>
 <li><em>on disk:</em> creates new directory &amp; filrs on disk represing current book physical location.</li>

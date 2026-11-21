@@ -405,14 +405,27 @@ class MyBooks:
         )
         return
 
-    def createPhysicalBook(self) -> bool:
+    def createPhysicalBook(self,
+        book_info: dict
+    ) -> bool:
         """Create physical book directory as copy of "book_template".
+
+        Arguments:
+
+        `book_info` contains book info aquired by web or cli app
 
         _Lateral effects:_
 
         - _on disk:_ creates new directory & filrs on disk represing current book physical location.
         """
         #TODO ...
+        #... both paths BOTH ENDED w /
+        _source = ... # as book_template pate
+        _target = ... # from book_info short description
+        # cp -R _source _target
+        # update books_catalog.json
+        ...
+
         pass
 
 

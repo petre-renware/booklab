@@ -57,9 +57,12 @@ def api_newb():
     #    init a Form inst with data from request.form
     form = bkf.BookInfo(request.form)
     if request.method == "POST" and form.validate():
-        ...  #TODO wip here
+        ... #TODO wip here
     #    ...logic for true
-    #        save data from form.<field>.data
+    #            prep a dictbook_data with new( aquired info
+    #            call MyBooks copy phy book_tenplate
+    #        here oin MyBooks ?
+    #            save data from form.<field>.data
     ...
     #    ...logic for false
     #        render newb_template and return it
