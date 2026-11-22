@@ -44,6 +44,7 @@
     - ... [0.11.dev...]
     - ... [0.11.dev...] newb/ make save / submit button
     - ... [0.11.dev...]
+    - [0.11.dev22] fix newb book form for misspelling errs
     - [0.11.dev21] new_template.md fix presentation errors
     - [0.11.dev20] MyBooks and routes.py enhance logic comments
     - [0.11.dev19] 1st newb/ route coding

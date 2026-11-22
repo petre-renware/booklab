@@ -1,5 +1,5 @@
 
-## Carte noua
+# Carte noua
 
 Introduceti mai jos informatiile despre carte.
 
@@ -15,6 +15,7 @@ Introduceti mai jos informatiile despre carte.
     {{ render_field(form.site_author) }}
     {{ render_field(form.notes) }}
     {{ render_field(form.closed) }}
+    {{ render_field(form.save) }}  
   </dl>
   <p><input type=submit value=Save>
 </form>
