@@ -1,4 +1,8 @@
 
+## Carte noua
+
+Introduceti mai jos informatiile despre carte.
+
 {% raw %}
 
 {% from "/developer/form_macro.jinja" import render_field %}

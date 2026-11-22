@@ -43,6 +43,8 @@
 * [... 0.11b...] form to colect book general metadata
     - ... [0.11.dev...]
     - ... [0.11.dev...] newb/ make save / submit button
+    - ... [0.11.dev...]
+    - [0.11.dev21] new_template.md fix presentation errors
     - [0.11.dev20] MyBooks and routes.py enhance logic comments
     - [0.11.dev19] 1st newb/ route coding
     - [0.11.dev18] logic of newb/ route
