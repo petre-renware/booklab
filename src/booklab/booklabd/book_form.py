@@ -49,11 +49,11 @@ from wtforms import StringField, DateTimeField, TextAreaField, BooleanField, Sub
 
 
 class BookInfo(Form):
-    short_desc = StringField("Titlu", [validators.length(min = 6, max = 20)])
+    short_desc = StringField("Titlu", [validators.length(min = 4, max = 20)])
     description = StringField("Descriere", [validators.length(min = 6, max = 250)])
-    copyright = StringField("Copyright", [validators.length(min = 6, max = 20)])
-    site_author = StringField("Autor", [validators.length(min = 6, max = 20)])
-    notes = StringField("Note", [validators.length(min = 6, max = 250)])
+    copyright = StringField("Copyright", [validators.length(min = 4, max = 20)])
+    site_author = StringField("Autor", [validators.length(min = 4, max = 20)])
+    notes = StringField("Note", [validators.length(min = 0, max = 250)])
     closed = BooleanField("Editabila", [validators.InputRequired()])
     # NOTE: all other book_catalog fields are calculated by system
-    save = SubmitField("Submit")
+
