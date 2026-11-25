@@ -50,22 +50,17 @@ def api_newb():
     """Serve _New book (newb)_ functionality.
     """
     book_code = request.args.get("code")
-    # ... seems useles butkept for future edit book info extension
+    #TODO... seems useles butkept for future edit book info extension
     ret_str = f"Page for <b>newb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
-    #TODO logic start here ...
-    #    init a Form inst with data from request.form
+    # init a Form inst with data from request.form
     form = bkf.BookInfo(request.form)
     if request.method == "POST" and form.validate():
         ... #TODO wip here
-    #    ...logic for true
-    #            prep a dictbook_data with new( aquired info
-    #            call MyBooks copy phy book_tenplate
-    #        here oin MyBooks ?
-    #            save data from form.<field>.data
-    ...
-    #    ...logic for false
-    #        render newb_template and return it
+        # prep a dictbook_data with new( aquired info
+        # call MyBooks for copy phy book_template
+        # here or in MyBooks ?
+    # render newb_template and return it
     rendered_str = render_template(
         "newb/newb_template.html",
         form = form
@@ -78,7 +73,6 @@ def api_newb():
         file.write(rendered_str)
     redirect_path = url_quote(redirect_prefix + "/newb/newb.html")
     return redirect(redirect_path)
-    #...tst... return ret_str
 
 
 @api_app.route("/api/bstatus/")

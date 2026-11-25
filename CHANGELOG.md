@@ -43,7 +43,8 @@
 * [... 0.11b...] form to colect book general metadata
     - ... [0.11.dev...]
     - ... [0.11.dev...] newb/ make save / submit button
-    - [0.11.dev3] finalize book form and close it
+    - [0.11.dev24] clean routes.py code
+    - [0.11.dev23] finalize book form and close it
     - [0.11.dev22] fix newb book form for misspelling errs
     - [0.11.dev21] new_template.md fix presentation errors
     - [0.11.dev20] MyBooks and routes.py enhance logic comments
