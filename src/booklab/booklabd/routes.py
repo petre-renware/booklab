@@ -46,15 +46,30 @@ docs_prefix = os.path.join(STATIC_SITE_ROOT)
 
 
 @api_app.route("/api/newb/", methods=["GET", "POST"])
-def api_newb():
+def api_newb(book_code: str = ...):
     """Serve _New book (newb)_ functionality.
+
+    **Query parameters:** `book_code` when supplied serve for edit info for an existing book:
     """
-    book_code = request.args.get("code")
-    #TODO... seems useles butkept for future edit book info extension
+    if (book_code is ...) or (book_code is None):
+        book_code = request.args.get("book_code")
     ret_str = f"Page for <b>newb</b><br>"
     ret_str += f"Request for book with code <b>{book_code}</b><br>"
     # init a Form inst with data from request.form
     form = bkf.BookInfo(request.form)
+    # if book_code supplied, load form data from existing book
+    book_data = None
+    if (book_code != "") \
+    and (book_code is not None) \
+    and (book_code is not ...):
+        my_book = MyBooks(
+            db = db_books,
+            book_code = book_code
+        )
+        book_data = my_book.getBook()
+    if book_data:
+        ... #TODO load form with book_data like: ...
+        # form.<field>.data
     if request.method == "POST" and form.validate():
         ... #TODO wip here
         # prep a dictbook_data with new( aquired info
