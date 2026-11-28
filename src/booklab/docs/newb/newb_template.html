@@ -904,7 +904,9 @@
 <h1 id="carte-noua">Carte noua</h1>
 <p>Introduceti mai jos informatiile despre carte.</p>
 <p>{% from "/developer/form_macro.jinja" import render_field %}</p>
-<form method=post>
+<form method='POST'>
+  {{ form.csrf_token }}
+  {{ form.hidden_tag() }}
   <dl>
     {{ render_field(form.short_desc) }}
     {{ render_field(form.description) }}

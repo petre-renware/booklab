@@ -44,11 +44,12 @@ docs_prefix = os.path.join(STATIC_SITE_ROOT)
 ''' #TODO end of: what see 0f keep...
 
 
-from wtforms import Form, validators
+from flask_wtf import FlaskForm
+from wtforms import validators
 from wtforms import StringField, DateTimeField, TextAreaField, BooleanField, SubmitField
 
 
-class BookInfo(Form):
+class BookInfo(FlaskForm):
     short_desc = StringField(
         "Titlu",
         [validators.length(min = 4, max = 20),

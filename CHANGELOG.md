@@ -42,7 +42,9 @@
           adjust phy disk
 * [... 0.11b...] form to colect book general metadata
     - ... [0.11.dev...]
-    - ... [0.11.dev...] newb/ make save / submit button
+    - ... [0.11.dev27] newb/ code save / submit button
+        * ... [b]
+        * [a] ERR: does not enter in POST
     - [0.11.dev26] review & upd book_form.py fields for validatord 
     - [0.11.dev25] upd routes.py with skeleton for edit book info
     - [0.11.dev24] clean routes.py code

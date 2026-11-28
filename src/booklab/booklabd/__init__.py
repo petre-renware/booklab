@@ -13,6 +13,8 @@ Author: Petre Iordanescu (petre.iordanescu@gmail.com)
 # general imports
 import os
 import pysondb
+import secrets
+
 from booklab.booklabd.app_init import init_app
 from booklab.db_init import init_db
 from booklab import PROJECT_ROOT
@@ -38,6 +40,7 @@ api_app.config["DATA_ROOT"] = DATA_ROOT
 api_app.config["CONF_ROOT"] = CONF_ROOT
 api_app.config["PACKAGE_ROOT"] = PACKAGE_ROOT
 api_app.config["PROJECT_ROOT"] = PROJECT_ROOT
+api_app.config["SECRET_KEY"] = secrets.token_hex(32)
 
 # create database object by opening JSON files
 db_books, db_system = init_db()

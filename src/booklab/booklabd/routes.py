@@ -51,10 +51,25 @@ def api_newb():
     """
     ret_str = f"Page for <b>newb</b><br>"
     # init a Form instance with data from request.form
-    form = bkf.BookInfo(request.form)
+    #...old... form = bkf.BookInfo(request.form)
+    form = bkf.BookInfo()
+    print(request.method) #...tst...
+    print(form.errors) #...tst...
+    #... if form.validate_on_submit(): #...tst...
+    #...    print("***** validate on submit *****")
+    #...tst.up...
     if request.method == "POST" and form.validate():
-        ... #TODO wip here
-        # prep a dictbook_data with new( aquired info
+        # prep a dictbook_data with new entred info
+        bk_info = {
+            "short_desc": form.short_description.value,
+            "description": form.description.value,
+            "copyright": form.copyright.value,
+            "site_author": form.site_author.value,
+            "notes": form.notes.value,
+            "closed": form.closed.value
+        } #TODO ...wip.here ck.bk_info
+        print(bk_info) #...tst...
+        ... #TODO does not get here ...
         # call MyBooks for copy phy book_template
         # here or in MyBooks ?
     # render newb_template and return it

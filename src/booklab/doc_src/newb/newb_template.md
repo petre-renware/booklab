@@ -7,7 +7,9 @@ Introduceti mai jos informatiile despre carte.
 
 {% from "/developer/form_macro.jinja" import render_field %}
 
-<form method=post>
+<form method='POST'>
+  {{ form.csrf_token }}
+  {{ form.hidden_tag() }}
   <dl>
     {{ render_field(form.short_desc) }}
     {{ render_field(form.description) }}
